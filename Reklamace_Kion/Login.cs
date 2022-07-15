@@ -60,8 +60,9 @@ namespace Reklamace_Kion
                     StringBuilder stringBuilder = new StringBuilder();
 
                     foreach (byte b in PassByte)
+                    {
                         stringBuilder.AppendFormat("{0:X2}", b);
-
+                    }
                     string hashString = stringBuilder.ToString();
 
                     if (hashString == Pass)
