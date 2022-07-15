@@ -66,7 +66,12 @@ namespace Reklamace_Kion
 
                     if (hashString == Pass)
                     {
-                        MessageBox.Show("OK");
+                        // Correct name and password, continue code...
+
+                        this.Hide();
+                        Main MainForm = new Main();
+                        MainForm.Show();
+
                     }else
                     {
                         MessageBox.Show("Špatné heslo.");
