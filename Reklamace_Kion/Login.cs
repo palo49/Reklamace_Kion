@@ -71,6 +71,9 @@ namespace Reklamace_Kion
 
                         this.Hide();
                         Main MainForm = new Main();
+
+                        MainForm.MyName = Name;
+
                         MainForm.Show();
 
                     }else
