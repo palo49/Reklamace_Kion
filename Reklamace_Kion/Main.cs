@@ -51,16 +51,41 @@ namespace Reklamace_Kion
 
                 if (Level != string.Empty)
                 {
-                    if (Level == "100") lblLevel.Text = "Administrátor";
-                    if (Level == "20") lblLevel.Text = "Technik";
-                    if (Level == "10") lblLevel.Text = "Příjem";
-                    if (Level == "5") lblLevel.Text = "Opravář";
-                    if (Level == "1") lblLevel.Text = "Pouze čtení";
-                }
+                    if (Level == "100")
+                    {
+                        lblLevel.Text = "Administrátor";
+                        dataGrid1.DataSource = GetTableDataMain(conn);
+                        AddTabControl();
+                        dataGridOpravy.DataSource = GetTableDataRepairs(conn);
 
-                dataGrid1.DataSource = GetTableDataMain(conn);
-                AddTabControl();
-                dataGridOpravy.DataSource = GetTableDataRepairs(conn);
+                        btnUsers.Visible = true;
+                    }
+                    else if (Level == "20")
+                    {
+                        lblLevel.Text = "Technik";
+                        dataGrid1.DataSource = GetTableDataMain(conn);
+                        AddTabControl();
+                        dataGridOpravy.DataSource = GetTableDataRepairs(conn);
+                    }
+                    else if (Level == "10")
+                    {
+                        lblLevel.Text = "Příjem";
+                        dataGrid1.DataSource = GetTableDataMain(conn);
+                    }
+                    else if (Level == "5")
+                    {
+                        lblLevel.Text = "Opravář";
+                        tabControl1.TabPages[0].Text = "Opravy";
+                        dataGrid1.DataSource = GetTableDataRepairs(conn);
+                    }
+                    else if (Level == "1")
+                    {
+                        lblLevel.Text = "Pouze čtení";
+                        dataGrid1.DataSource = GetTableDataMain(conn);
+                        AddTabControl();
+                        dataGridOpravy.DataSource = GetTableDataRepairs(conn);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -145,6 +170,13 @@ namespace Reklamace_Kion
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            Users UserForm = new Users();
+
+            UserForm.Show();
         }
     }
 }

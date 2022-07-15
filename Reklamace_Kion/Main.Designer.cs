@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -36,15 +37,19 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddData = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(13, 29);
+            this.lblFirstName.Location = new System.Drawing.Point(13, 45);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(69, 16);
@@ -54,7 +59,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(13, 45);
+            this.lblLastName.Location = new System.Drawing.Point(13, 61);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(69, 16);
@@ -64,7 +69,7 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(13, 61);
+            this.lblLevel.Location = new System.Drawing.Point(13, 29);
             this.lblLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(40, 16);
@@ -82,6 +87,7 @@
             // 
             // btnReloadData
             // 
+            this.btnReloadData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReloadData.Location = new System.Drawing.Point(12, 108);
             this.btnReloadData.Name = "btnReloadData";
             this.btnReloadData.Size = new System.Drawing.Size(148, 39);
@@ -127,12 +133,50 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(30, 638);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAddData
+            // 
+            this.btnAddData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddData.Location = new System.Drawing.Point(12, 153);
+            this.btnAddData.Name = "btnAddData";
+            this.btnAddData.Size = new System.Drawing.Size(148, 39);
+            this.btnAddData.TabIndex = 3;
+            this.btnAddData.Text = "Přidat";
+            this.btnAddData.UseVisualStyleBackColor = true;
+            this.btnAddData.Click += new System.EventHandler(this.btnReloadData_Click);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsers.Location = new System.Drawing.Point(12, 593);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(148, 39);
+            this.btnUsers.TabIndex = 3;
+            this.btnUsers.Text = "Uživatelé";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Visible = false;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 689);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btnUsers);
+            this.Controls.Add(this.btnAddData);
             this.Controls.Add(this.btnReloadData);
             this.Controls.Add(this.lblLoggedIn);
             this.Controls.Add(this.lblLevel);
@@ -150,6 +194,7 @@
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +210,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGrid1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAddData;
+        private System.Windows.Forms.Button btnUsers;
     }
 }
