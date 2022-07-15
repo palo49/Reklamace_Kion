@@ -43,11 +43,35 @@ namespace Reklamace_Kion
                     lblLevel.Text = reader.GetString(2);
                 }
                 conn.Close();
+
+                dataGrid1.DataSource = GetTableDataMain(conn);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public static DataTable GetTableDataMain(SqlConnection connection)
+        {
+            connection.Open();
+            SqlCommand getDataMain = new SqlCommand("SELECT * FROM DataMain", connection);
+            SqlDataAdapter daDataMain = new SqlDataAdapter(getDataMain);
+
+            DataTable DataMain = new DataTable();
+
+            try
+            {
+                daDataMain.Fill(DataMain);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            connection.Close();
+
+            return DataMain;
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
