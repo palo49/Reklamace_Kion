@@ -69,6 +69,10 @@ namespace Reklamace_Kion
                     {
                         // Correct name and password, continue code...
 
+                        Properties.Settings.Default.Name = Name;
+
+                        Properties.Settings.Default.Save();
+
                         this.Hide();
                         Main MainForm = new Main();
 
@@ -91,6 +95,11 @@ namespace Reklamace_Kion
             }
             
             conn.Close();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtName.Text = Properties.Settings.Default.Name;
         }
     }
 }
