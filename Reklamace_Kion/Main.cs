@@ -15,6 +15,10 @@ namespace Reklamace_Kion
     {
         public string MyName { get; set; }
 
+        string FirstName = string.Empty;
+        string LastName = string.Empty;
+        string Level = string.Empty;
+
         SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
 
         public Main()
@@ -24,7 +28,26 @@ namespace Reklamace_Kion
 
         private void Main_Load(object sender, EventArgs e)
         {
-            lblMyName.Text = MyName;
+            SqlCommand getUserData = new SqlCommand("SELECT FirstName, LastName, Level FROM Users WHERE Name='" + MyName + "'", conn);
+            SqlDataAdapter da = new SqlDataAdapter(getUserData);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = getUserData.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    lblFirstName.Text = reader.GetString(0);
+                    lblLastName.Text = reader.GetString(1);
+                    lblLevel.Text = reader.GetString(2);
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
