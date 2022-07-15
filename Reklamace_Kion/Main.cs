@@ -29,18 +29,6 @@ namespace Reklamace_Kion
             InitializeComponent();
 
             tabControl1.TabPages[0].Text = "Data";
-            tabControl1.TabPages.Add(pageDataMain);
-
-            pageDataMain.SuspendLayout();
-            pageDataMain.Controls.Add(dataGridOpravy);
-            pageDataMain.ResumeLayout();
-
-            dataGridOpravy.Parent = pageDataMain;
-            dataGridOpravy.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom);
-            dataGridOpravy.Size = new Size(822, 635);
-            dataGridOpravy.ReadOnly = true;
-            dataGridOpravy.AllowUserToAddRows = false;
-            dataGridOpravy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -71,12 +59,29 @@ namespace Reklamace_Kion
                 }
 
                 dataGrid1.DataSource = GetTableDataMain(conn);
+                AddTabControl();
                 dataGridOpravy.DataSource = GetTableDataRepairs(conn);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public void AddTabControl()
+        {
+            tabControl1.TabPages.Add(pageDataMain);
+
+            pageDataMain.SuspendLayout();
+            pageDataMain.Controls.Add(dataGridOpravy);
+            pageDataMain.ResumeLayout();
+
+            dataGridOpravy.Parent = pageDataMain;
+            dataGridOpravy.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom);
+            dataGridOpravy.Size = new Size(822, 635);
+            dataGridOpravy.ReadOnly = true;
+            dataGridOpravy.AllowUserToAddRows = false;
+            dataGridOpravy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         public static DataTable GetTableDataMain(SqlConnection connection)
