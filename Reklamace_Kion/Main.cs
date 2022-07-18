@@ -188,6 +188,13 @@ namespace Reklamace_Kion
             UserForm.Show();
         }
 
+        private void btnAddData_Click(object sender, EventArgs e)
+        {
+            AddData addForm = new AddData();
+            addForm.MyLevel = Level;
+            addForm.Show();
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
