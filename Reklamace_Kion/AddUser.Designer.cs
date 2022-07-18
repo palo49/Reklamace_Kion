@@ -107,6 +107,7 @@
             // 
             // cmbLevel
             // 
+            this.cmbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLevel.FormattingEnabled = true;
             this.cmbLevel.Items.AddRange(new object[] {
             "Pouze čtení",
@@ -145,6 +146,7 @@
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Uložit";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // pictureBox1
             // 

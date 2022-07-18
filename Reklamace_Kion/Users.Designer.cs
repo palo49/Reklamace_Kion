@@ -28,22 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             this.dataGridUsers = new System.Windows.Forms.DataGridView();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDelUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridUsers
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridUsers.Location = new System.Drawing.Point(153, 12);
             this.dataGridUsers.Name = "dataGridUsers";
+            this.dataGridUsers.ReadOnly = true;
+            this.dataGridUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridUsers.Size = new System.Drawing.Size(709, 437);
             this.dataGridUsers.TabIndex = 0;
             // 
@@ -69,12 +75,24 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // btnDelUser
+            // 
+            this.btnDelUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelUser.Location = new System.Drawing.Point(12, 55);
+            this.btnDelUser.Name = "btnDelUser";
+            this.btnDelUser.Size = new System.Drawing.Size(135, 37);
+            this.btnDelUser.TabIndex = 1;
+            this.btnDelUser.Text = "Smazat";
+            this.btnDelUser.UseVisualStyleBackColor = true;
+            this.btnDelUser.Click += new System.EventHandler(this.btnDelUser_Click);
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 461);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnDelUser);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.dataGridUsers);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -95,5 +113,6 @@
         private System.Windows.Forms.DataGridView dataGridUsers;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDelUser;
     }
 }

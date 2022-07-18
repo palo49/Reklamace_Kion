@@ -16,26 +16,20 @@ namespace Reklamace_Kion
 
         SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
 
+        public string MyName { get; set; }
+
+        private static Users form = null;
         public Users()
         {
             InitializeComponent();
+            form = this;
         }
 
         private void AddUser_Load(object sender, EventArgs e)
         {
             try
             {
-                conn.Open();
-                SqlCommand getUserDataEdit = new SqlCommand("SELECT UserId, Name, FirstName, LastName, Level FROM Users", conn);
-                SqlDataAdapter daEdit = new SqlDataAdapter(getUserDataEdit);
-
-                DataTable DataUsersEdit = new DataTable();
-
-                daEdit.Fill(DataUsersEdit);
-
-                conn.Close();
-
-                dataGridUsers.DataSource = DataUsersEdit;
+                RefData.RefreshData(conn);
             }
             catch (Exception ex)
             {
@@ -47,6 +41,47 @@ namespace Reklamace_Kion
         {
             AddUser AddUserForm = new AddUser();
             AddUserForm.Show();
+        }
+
+        public class RefData
+        {
+            public static void RefreshData(SqlConnection connection)
+            {
+                connection.Open();
+                SqlCommand getUserDataEdit = new SqlCommand("SELECT UserId, Name, FirstName, LastName, Level FROM Users", connection);
+                SqlDataAdapter daEdit = new SqlDataAdapter(getUserDataEdit);
+
+                DataTable DataUsersEdit = new DataTable();
+
+                daEdit.Fill(DataUsersEdit);
+
+                connection.Close();
+
+                form.dataGridUsers.DataSource = DataUsersEdit;
+            }
+        }
+
+        private void btnDelUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int UserId = (int)dataGridUsers.CurrentRow.Cells[0].Value;
+                string UserName = (string)dataGridUsers.CurrentRow.Cells[1].Value;
+
+                DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat uživatele " + UserName + "?", "Smazat uživatele", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    conn.Open();
+                    SqlCommand delUser = new SqlCommand("DELETE FROM Users WHERE UserId="+UserId+"", conn);
+                    delUser.ExecuteNonQuery();
+                    conn.Close();
+                    RefData.RefreshData(conn);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

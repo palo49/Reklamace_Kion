@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -35,14 +37,14 @@
             this.lblLoggedIn = new System.Windows.Forms.Label();
             this.btnReloadData = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dataGrid1 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGrid1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAddData = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,20 +110,6 @@
             this.tabControl1.Size = new System.Drawing.Size(830, 664);
             this.tabControl1.TabIndex = 4;
             // 
-            // dataGrid1
-            // 
-            this.dataGrid1.AllowUserToAddRows = false;
-            this.dataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid1.Location = new System.Drawing.Point(0, 0);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.ReadOnly = true;
-            this.dataGrid1.Size = new System.Drawing.Size(822, 635);
-            this.dataGrid1.TabIndex = 2;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dataGrid1);
@@ -132,6 +120,31 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGrid1
+            // 
+            this.dataGrid1.AllowUserToAddRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid1.Location = new System.Drawing.Point(0, 0);
+            this.dataGrid1.Name = "dataGrid1";
+            this.dataGrid1.ReadOnly = true;
+            this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGrid1.Size = new System.Drawing.Size(822, 635);
+            this.dataGrid1.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -183,17 +196,18 @@
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1024, 728);
             this.Name = "Main";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reklamace Kion - Hlavní okno";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

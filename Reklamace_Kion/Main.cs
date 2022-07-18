@@ -176,6 +176,8 @@ namespace Reklamace_Kion
         {
             Users UserForm = new Users();
 
+            UserForm.MyName = MyName;
+
             UserForm.Show();
         }
     }
