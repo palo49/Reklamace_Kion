@@ -40,6 +40,7 @@ namespace Reklamace_Kion
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             AddUser AddUserForm = new AddUser();
+            AddUserForm.MyName = MyName;
             AddUserForm.Show();
         }
 
@@ -71,11 +72,17 @@ namespace Reklamace_Kion
                 DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat uživatele " + UserName + "?", "Smazat uživatele", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    conn.Open();
-                    SqlCommand delUser = new SqlCommand("DELETE FROM Users WHERE UserId="+UserId+"", conn);
-                    delUser.ExecuteNonQuery();
-                    conn.Close();
-                    RefData.RefreshData(conn);
+                    if (UserName != MyName)
+                    {
+                        conn.Open();
+                        SqlCommand delUser = new SqlCommand("DELETE FROM Users WHERE UserId=" + UserId + "", conn);
+                        delUser.ExecuteNonQuery();
+                        conn.Close();
+                        RefData.RefreshData(conn);
+                    }else
+                    {
+                        MessageBox.Show("Nemůžete smazat sami sebe.");
+                    }
                 }
             }
             catch (Exception ex)

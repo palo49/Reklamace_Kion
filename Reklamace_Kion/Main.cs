@@ -14,6 +14,7 @@ namespace Reklamace_Kion
     public partial class Main : Form
     {
         public string MyName { get; set; }
+        public bool DisableExit { get; set; }
 
         string FirstName = string.Empty;
         string LastName = string.Empty;
@@ -29,6 +30,17 @@ namespace Reklamace_Kion
             InitializeComponent();
 
             tabControl1.TabPages[0].Text = "Data";
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -167,11 +179,6 @@ namespace Reklamace_Kion
             }
         }
 
-        private void Main_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Users UserForm = new Users();
@@ -179,6 +186,11 @@ namespace Reklamace_Kion
             UserForm.MyName = MyName;
 
             UserForm.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
