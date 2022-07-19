@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,87 @@ namespace Reklamace_Kion
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string CLM = txtCLM.Text;
+            string Status = cmbState.Text;
+            string CustomerRequire = txtCustomerRequest.Text;
+            string DateOfCustomerSendVal = DateOfCustomerSend.Value.ToString();
+            string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToString();
+            string DateOfRepairVal = DateOfRepair.Value.ToString();
+            string DateOfSaftSendVal = DateOfSaftSend.Value.ToString();
+            string ClaimedComponent = cmbClaimedComponent.Text;
+            string Type = txtType.Text;
+            string SerialNumber = txtSerialNumber.Text;
+            string Fault = txtFault.Text;
+            string CW = cmbCW.Text;
+            string DefectBMS = txtDefectBMS.Text;
+            string LocationOfBattery = txtLocationOfBattery.Text;
+            string ReplacementSend = cmbReplacementSend.Text;
+            string DateOfSendReplacement = DateOfReplacementSend.Value.ToString();
+            string Result = cmbResult.Text;
+            string ResultDescription = txtResultDescription.Text;
+            string Price = txtCostOfRepair.Text;
+            string Contact = txtContact.Text;
+
+            if ((CLM != string.Empty) && (Status != string.Empty))
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
+                    string sqlData = "SELECT COUNT(*) from DataMain where CLM like '"+CLM+"'";
+                    SqlCommand cmdCount = new SqlCommand(sqlData, conn);
+
+                    conn.Open();
+                    int dataCount = (int)cmdCount.ExecuteScalar();
+                    conn.Close();
+
+                    if (dataCount == 0)
+                    {
+                        string sqlInsert = "INSERT INTO DataMain values('" + CLM + "','" + Status + "','" + CustomerRequire + "','" + DateOfCustomerSendVal + "','" + DateOfSaftAcceptanceVal + "'," +
+                            "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + ClaimedComponent + "','" + Type + "','" + SerialNumber + "'," +
+                            "'" + Fault + "','" + CW + "','" + DefectBMS + "','" + LocationOfBattery + "','" + ReplacementSend + "'," +
+                            "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Price + "','" + Contact + "')";
+
+                        SqlCommand cmdInsert = new SqlCommand(sqlInsert, conn);
+                        conn.Open();
+                        cmdInsert.ExecuteNonQuery();
+                        conn.Close();
+                        
+                        Main.GetTableDataMain(conn);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data s tímto CLM již existují.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("CLM a Status jsou povinná pole.");
+            }
+        }
+
+        private void txtCostOfRepair_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verify that the pressed key isn't CTRL or any non-numeric digit
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // If you want, you can allow decimal (float) numbers
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

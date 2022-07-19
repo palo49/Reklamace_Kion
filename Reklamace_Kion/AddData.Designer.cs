@@ -78,9 +78,9 @@
             this.lblClm.Location = new System.Drawing.Point(14, 10);
             this.lblClm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClm.Name = "lblClm";
-            this.lblClm.Size = new System.Drawing.Size(33, 15);
+            this.lblClm.Size = new System.Drawing.Size(38, 15);
             this.lblClm.TabIndex = 0;
-            this.lblClm.Text = "CLM";
+            this.lblClm.Text = "CLM*";
             // 
             // txtCLM
             // 
@@ -96,9 +96,9 @@
             this.lblState.Location = new System.Drawing.Point(13, 61);
             this.lblState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(41, 15);
+            this.lblState.Size = new System.Drawing.Size(46, 15);
             this.lblState.TabIndex = 0;
-            this.lblState.Text = "Status";
+            this.lblState.Text = "Status*";
             // 
             // cmbState
             // 
@@ -164,7 +164,7 @@
             this.DateOfSaftAcceptance.Location = new System.Drawing.Point(18, 285);
             this.DateOfSaftAcceptance.Name = "DateOfSaftAcceptance";
             this.DateOfSaftAcceptance.Size = new System.Drawing.Size(311, 21);
-            this.DateOfSaftAcceptance.TabIndex = 4;
+            this.DateOfSaftAcceptance.TabIndex = 5;
             // 
             // lblDateOfRepair
             // 
@@ -182,7 +182,7 @@
             this.DateOfRepair.Location = new System.Drawing.Point(18, 337);
             this.DateOfRepair.Name = "DateOfRepair";
             this.DateOfRepair.Size = new System.Drawing.Size(311, 21);
-            this.DateOfRepair.TabIndex = 4;
+            this.DateOfRepair.TabIndex = 6;
             // 
             // lblDateOfSaftSend
             // 
@@ -200,7 +200,7 @@
             this.DateOfSaftSend.Location = new System.Drawing.Point(363, 28);
             this.DateOfSaftSend.Name = "DateOfSaftSend";
             this.DateOfSaftSend.Size = new System.Drawing.Size(311, 21);
-            this.DateOfSaftSend.TabIndex = 4;
+            this.DateOfSaftSend.TabIndex = 7;
             // 
             // lblFault
             // 
@@ -218,7 +218,7 @@
             this.txtFault.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFault.Name = "txtFault";
             this.txtFault.Size = new System.Drawing.Size(311, 21);
-            this.txtFault.TabIndex = 1;
+            this.txtFault.TabIndex = 11;
             // 
             // lblCW
             // 
@@ -246,7 +246,7 @@
             this.txtDefectBMS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDefectBMS.Name = "txtDefectBMS";
             this.txtDefectBMS.Size = new System.Drawing.Size(311, 21);
-            this.txtDefectBMS.TabIndex = 1;
+            this.txtDefectBMS.TabIndex = 13;
             // 
             // lblLocationOfBattery
             // 
@@ -264,7 +264,7 @@
             this.txtLocationOfBattery.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLocationOfBattery.Name = "txtLocationOfBattery";
             this.txtLocationOfBattery.Size = new System.Drawing.Size(311, 21);
-            this.txtLocationOfBattery.TabIndex = 1;
+            this.txtLocationOfBattery.TabIndex = 14;
             // 
             // lblClaimedComponent
             // 
@@ -287,7 +287,7 @@
             this.cmbClaimedComponent.Location = new System.Drawing.Point(365, 79);
             this.cmbClaimedComponent.Name = "cmbClaimedComponent";
             this.cmbClaimedComponent.Size = new System.Drawing.Size(311, 23);
-            this.cmbClaimedComponent.TabIndex = 2;
+            this.cmbClaimedComponent.TabIndex = 8;
             // 
             // lblType
             // 
@@ -305,7 +305,7 @@
             this.txtType.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(311, 21);
-            this.txtType.TabIndex = 1;
+            this.txtType.TabIndex = 9;
             // 
             // lblSN
             // 
@@ -323,7 +323,7 @@
             this.txtSerialNumber.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSerialNumber.Name = "txtSerialNumber";
             this.txtSerialNumber.Size = new System.Drawing.Size(311, 21);
-            this.txtSerialNumber.TabIndex = 1;
+            this.txtSerialNumber.TabIndex = 10;
             // 
             // lblReplacementSend
             // 
@@ -345,7 +345,7 @@
             this.cmbReplacementSend.Location = new System.Drawing.Point(709, 79);
             this.cmbReplacementSend.Name = "cmbReplacementSend";
             this.cmbReplacementSend.Size = new System.Drawing.Size(311, 23);
-            this.cmbReplacementSend.TabIndex = 2;
+            this.cmbReplacementSend.TabIndex = 15;
             // 
             // lblDateOfReplacementSend
             // 
@@ -363,7 +363,7 @@
             this.DateOfReplacementSend.Location = new System.Drawing.Point(709, 130);
             this.DateOfReplacementSend.Name = "DateOfReplacementSend";
             this.DateOfReplacementSend.Size = new System.Drawing.Size(311, 21);
-            this.DateOfReplacementSend.TabIndex = 4;
+            this.DateOfReplacementSend.TabIndex = 16;
             // 
             // lblResult
             // 
@@ -385,7 +385,7 @@
             this.cmbResult.Location = new System.Drawing.Point(709, 182);
             this.cmbResult.Name = "cmbResult";
             this.cmbResult.Size = new System.Drawing.Size(311, 23);
-            this.cmbResult.TabIndex = 2;
+            this.cmbResult.TabIndex = 17;
             // 
             // lblResultDescription
             // 
@@ -403,7 +403,7 @@
             this.txtResultDescription.Multiline = true;
             this.txtResultDescription.Name = "txtResultDescription";
             this.txtResultDescription.Size = new System.Drawing.Size(311, 72);
-            this.txtResultDescription.TabIndex = 3;
+            this.txtResultDescription.TabIndex = 18;
             // 
             // lblCostOfRepair
             // 
@@ -421,7 +421,8 @@
             this.txtCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCostOfRepair.Name = "txtCostOfRepair";
             this.txtCostOfRepair.Size = new System.Drawing.Size(311, 21);
-            this.txtCostOfRepair.TabIndex = 1;
+            this.txtCostOfRepair.TabIndex = 19;
+            this.txtCostOfRepair.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostOfRepair_KeyPress);
             // 
             // cmbCW
             // 
@@ -433,7 +434,7 @@
             this.cmbCW.Location = new System.Drawing.Point(369, 285);
             this.cmbCW.Name = "cmbCW";
             this.cmbCW.Size = new System.Drawing.Size(311, 23);
-            this.cmbCW.TabIndex = 2;
+            this.cmbCW.TabIndex = 12;
             // 
             // lblContact
             // 
@@ -451,7 +452,7 @@
             this.txtContact.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(311, 21);
-            this.txtContact.TabIndex = 1;
+            this.txtContact.TabIndex = 20;
             // 
             // btnCancel
             // 
@@ -459,7 +460,7 @@
             this.btnCancel.Location = new System.Drawing.Point(16, 450);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(114, 43);
-            this.btnCancel.TabIndex = 5;
+            this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Zrušit";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -470,9 +471,10 @@
             this.btnSave.Location = new System.Drawing.Point(919, 450);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 43);
-            this.btnSave.TabIndex = 5;
+            this.btnSave.TabIndex = 21;
             this.btnSave.Text = "Uložit";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AddData
             // 

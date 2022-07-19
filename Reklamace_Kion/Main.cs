@@ -25,11 +25,15 @@ namespace Reklamace_Kion
         TabPage pageDataMain = new TabPage("Opravy");
         DataGridView dataGridOpravy = new DataGridView();
 
+        private static Main form = null;
+
         public Main()
         {
             InitializeComponent();
 
             tabControl1.TabPages[0].Text = "Data";
+
+            form = this;
         }
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
@@ -66,36 +70,36 @@ namespace Reklamace_Kion
                     if (Level == "100")
                     {
                         lblLevel.Text = "Administrátor";
-                        dataGrid1.DataSource = GetTableDataMain(conn);
+                        GetTableDataMain(conn);
                         AddTabControl();
-                        dataGridOpravy.DataSource = GetTableDataRepairs(conn);
+                        GetTableDataRepairs(conn);
 
                         btnUsers.Visible = true;
                     }
                     else if (Level == "20")
                     {
                         lblLevel.Text = "Technik";
-                        dataGrid1.DataSource = GetTableDataMain(conn);
+                        GetTableDataMain(conn);
                         AddTabControl();
-                        dataGridOpravy.DataSource = GetTableDataRepairs(conn);
+                        GetTableDataRepairs(conn);
                     }
                     else if (Level == "10")
                     {
                         lblLevel.Text = "Příjem";
-                        dataGrid1.DataSource = GetTableDataMain(conn);
+                        GetTableDataMain(conn);
                     }
                     else if (Level == "5")
                     {
                         lblLevel.Text = "Opravář";
                         tabControl1.TabPages[0].Text = "Opravy";
-                        dataGrid1.DataSource = GetTableDataRepairs(conn);
+                        GetTableDataRepairs(conn);
                     }
                     else if (Level == "1")
                     {
                         lblLevel.Text = "Pouze čtení";
-                        dataGrid1.DataSource = GetTableDataMain(conn);
+                        GetTableDataMain(conn);
                         AddTabControl();
-                        dataGridOpravy.DataSource = GetTableDataRepairs(conn);
+                        GetTableDataRepairs(conn);
                     }
                 }
             }
@@ -114,14 +118,14 @@ namespace Reklamace_Kion
             pageDataMain.ResumeLayout();
 
             dataGridOpravy.Parent = pageDataMain;
-            dataGridOpravy.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom);
             dataGridOpravy.Size = new Size(822, 635);
+            dataGridOpravy.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom);
             dataGridOpravy.ReadOnly = true;
             dataGridOpravy.AllowUserToAddRows = false;
             dataGridOpravy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
-        public static DataTable GetTableDataMain(SqlConnection connection)
+        public static void GetTableDataMain(SqlConnection connection)
         {
             DataTable DataMain = new DataTable();
 
@@ -134,16 +138,16 @@ namespace Reklamace_Kion
                 daDataMain.Fill(DataMain);
 
                 connection.Close();
+
+                form.dataGrid1.DataSource = DataMain;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            return DataMain;
         }
 
-        public static DataTable GetTableDataRepairs(SqlConnection connection)
+        public static void GetTableDataRepairs(SqlConnection connection)
         {
             DataTable DataRepairs = new DataTable();
 
@@ -156,22 +160,22 @@ namespace Reklamace_Kion
                 daDataRepairs.Fill(DataRepairs);
 
                 connection.Close();
+
+                form.dataGridOpravy.DataSource = DataRepairs;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            return DataRepairs;
         }
 
         private void btnReloadData_Click(object sender, EventArgs e)
         {
             try
             {
-                if ((Level == "100") || (Level == "20") || (Level == "1")) dataGrid1.DataSource = GetTableDataMain(conn); dataGridOpravy.DataSource = GetTableDataRepairs(conn);
-                if (Level == "10") dataGrid1.DataSource = GetTableDataMain(conn);
-                if (Level == "5") dataGridOpravy.DataSource = GetTableDataRepairs(conn);
+                if ((Level == "100") || (Level == "20") || (Level == "1")) GetTableDataMain(conn); GetTableDataRepairs(conn);
+                if (Level == "10") GetTableDataMain(conn);
+                if (Level == "5") GetTableDataRepairs(conn);
             }
             catch (Exception ex)
             {

@@ -77,7 +77,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(12, 80);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(391, 21);
-            this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.TabIndex = 2;
             // 
             // lblLastName
             // 
@@ -94,7 +94,7 @@
             this.txtLastName.Location = new System.Drawing.Point(12, 138);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(391, 21);
-            this.txtLastName.TabIndex = 1;
+            this.txtLastName.TabIndex = 3;
             // 
             // label1
             // 
@@ -119,7 +119,7 @@
             this.cmbLevel.Location = new System.Drawing.Point(12, 196);
             this.cmbLevel.Name = "cmbLevel";
             this.cmbLevel.Size = new System.Drawing.Size(391, 23);
-            this.cmbLevel.TabIndex = 2;
+            this.cmbLevel.TabIndex = 4;
             // 
             // lblPass
             // 
@@ -137,14 +137,14 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(391, 21);
-            this.txtPass.TabIndex = 1;
+            this.txtPass.TabIndex = 5;
             // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(294, 437);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(109, 40);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Uložit";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -164,7 +164,7 @@
             this.btnCancel.Location = new System.Drawing.Point(12, 437);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 40);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Zrušit";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -173,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 489);
+            this.ClientSize = new System.Drawing.Size(411, 485);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancel);
