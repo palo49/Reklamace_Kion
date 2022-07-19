@@ -33,6 +33,8 @@ namespace Reklamace_Kion
 
             tabControl1.TabPages[0].Text = "Data";
 
+            btnAddData.Visible = false;
+
             form = this;
         }
 
@@ -75,6 +77,7 @@ namespace Reklamace_Kion
                         GetTableDataRepairs(conn);
 
                         btnUsers.Visible = true;
+                        btnAddData.Visible = true;
                     }
                     else if (Level == "20")
                     {
@@ -82,16 +85,21 @@ namespace Reklamace_Kion
                         GetTableDataMain(conn);
                         AddTabControl();
                         GetTableDataRepairs(conn);
+
+                        btnAddData.Visible = true;
                     }
                     else if (Level == "10")
                     {
                         lblLevel.Text = "Příjem";
+                        AddTabControl();
                         GetTableDataMain(conn);
+
+                        btnAddData.Visible = true;
                     }
                     else if (Level == "5")
                     {
                         lblLevel.Text = "Opravář";
-                        tabControl1.TabPages[0].Text = "Opravy";
+                        AddTabControl();
                         GetTableDataRepairs(conn);
                     }
                     else if (Level == "1")
