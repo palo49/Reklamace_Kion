@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -45,16 +46,21 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDelData = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.změnitHesloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(13, 45);
+            this.lblFirstName.Location = new System.Drawing.Point(12, 59);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(69, 16);
@@ -64,7 +70,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(13, 61);
+            this.lblLastName.Location = new System.Drawing.Point(12, 75);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(69, 16);
@@ -74,7 +80,7 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(13, 29);
+            this.lblLevel.Location = new System.Drawing.Point(12, 43);
             this.lblLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(40, 16);
@@ -84,7 +90,7 @@
             // lblLoggedIn
             // 
             this.lblLoggedIn.AutoSize = true;
-            this.lblLoggedIn.Location = new System.Drawing.Point(13, 13);
+            this.lblLoggedIn.Location = new System.Drawing.Point(12, 27);
             this.lblLoggedIn.Name = "lblLoggedIn";
             this.lblLoggedIn.Size = new System.Drawing.Size(66, 16);
             this.lblLoggedIn.TabIndex = 1;
@@ -107,10 +113,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(166, 13);
+            this.tabControl1.Location = new System.Drawing.Point(166, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(830, 664);
+            this.tabControl1.Size = new System.Drawing.Size(830, 650);
             this.tabControl1.TabIndex = 4;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -120,7 +126,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(822, 635);
+            this.tabPage1.Size = new System.Drawing.Size(822, 621);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -128,26 +134,26 @@
             // dataGrid1
             // 
             this.dataGrid1.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid1.Location = new System.Drawing.Point(0, 0);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.ReadOnly = true;
             this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid1.Size = new System.Drawing.Size(822, 635);
+            this.dataGrid1.Size = new System.Drawing.Size(822, 621);
             this.dataGrid1.TabIndex = 2;
             // 
             // pictureBox1
@@ -164,7 +170,7 @@
             // btnAddData
             // 
             this.btnAddData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddData.Location = new System.Drawing.Point(12, 153);
+            this.btnAddData.Location = new System.Drawing.Point(12, 195);
             this.btnAddData.Name = "btnAddData";
             this.btnAddData.Size = new System.Drawing.Size(148, 39);
             this.btnAddData.TabIndex = 3;
@@ -200,7 +206,7 @@
             // btnDelData
             // 
             this.btnDelData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelData.Location = new System.Drawing.Point(12, 198);
+            this.btnDelData.Location = new System.Drawing.Point(12, 240);
             this.btnDelData.Name = "btnDelData";
             this.btnDelData.Size = new System.Drawing.Size(148, 39);
             this.btnDelData.TabIndex = 3;
@@ -210,13 +216,43 @@
             // 
             // btnExport
             // 
-            this.btnExport.Location = new System.Drawing.Point(12, 314);
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExport.Location = new System.Drawing.Point(12, 153);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(148, 36);
             this.btnExport.TabIndex = 6;
             this.btnExport.Text = "Export";
+            this.toolTip1.SetToolTip(this.btnExport, "Exportuje právě aktivní tabulku do excelu.");
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SettingsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // SettingsToolStripMenuItem
+            // 
+            this.SettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.změnitHesloToolStripMenuItem});
+            this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.SettingsToolStripMenuItem.Text = "Nastavení";
+            // 
+            // změnitHesloToolStripMenuItem
+            // 
+            this.změnitHesloToolStripMenuItem.Name = "změnitHesloToolStripMenuItem";
+            this.změnitHesloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.změnitHesloToolStripMenuItem.Text = "Změnit heslo";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipTitle = "Info";
             // 
             // Main
             // 
@@ -235,7 +271,9 @@
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1024, 728);
             this.Name = "Main";
@@ -247,6 +285,8 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +308,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDelData;
         private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem SettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem změnitHesloToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

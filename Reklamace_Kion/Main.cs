@@ -118,7 +118,8 @@ namespace Reklamace_Kion
                         lblLevel.Text = "Opravář";
                         AddTabControl();
                         GetTableDataRepairs(conn);
-                        btnDelData.Visible = true; 
+                        btnDelData.Visible = true;
+                        btnAddData.Visible = true;
                     }
                     else if (Level == "1")
                     {
@@ -144,7 +145,7 @@ namespace Reklamace_Kion
             pageDataMain.ResumeLayout();
 
             dataGridOpravy.Parent = pageDataMain;
-            dataGridOpravy.Size = new Size(822, 635);
+            dataGridOpravy.Size = new Size(822, 621);
             dataGridOpravy.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom);
             dataGridOpravy.ReadOnly = true;
             dataGridOpravy.AllowUserToAddRows = false;
@@ -315,15 +316,19 @@ namespace Reklamace_Kion
             string exportName = string.Empty;
             DataGridView tabulka = new DataGridView();
 
-            if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10")))
+            if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "1")))
             {
                 exportName = "DataMain_export_";
                 tabulka = dataGrid1;
             }
-            else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "5")))
+            else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "5") || (Level == "1")))
             {
                 exportName = "DataRepairs_export_";
                 tabulka = dataGridOpravy;
+            }
+            else
+            {
+                return;
             }
 
             string fileName = exportName + DateTime.Now.ToString("H:mm:ss") + ".xlsx";
@@ -338,35 +343,35 @@ namespace Reklamace_Kion
             if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(SaveFileExport.SelectedPath))
             {
                 filePath = SaveFileExport.SelectedPath + "\\" + fileName;
-            }
 
-            SaveInfo saveDialog = new SaveInfo();
-            saveDialog.Show();
- 
-            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application(); 
-            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-            app.Visible = false;
-            worksheet = workbook.ActiveSheet;
-            worksheet.Name = exportName;
-            
-            for (int i = 1; i < tabulka.Columns.Count + 1; i++)
-            {
-                worksheet.Cells[1, i] = tabulka.Columns[i - 1].HeaderText;
-            }
+                SaveInfo saveDialog = new SaveInfo();
+                saveDialog.Show();
 
-            for (int i = 0; i < tabulka.Rows.Count; i++)
-            {
-                for (int j = 0; j < tabulka.Columns.Count; j++)
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                app.Visible = false;
+                worksheet = workbook.ActiveSheet;
+                worksheet.Name = exportName;
+
+                for (int i = 1; i < tabulka.Columns.Count + 1; i++)
                 {
-                    worksheet.Cells[i + 2, j + 1] = tabulka.Rows[i].Cells[j].Value.ToString();
+                    worksheet.Cells[1, i] = tabulka.Columns[i - 1].HeaderText;
                 }
-            }
- 
-            workbook.SaveAs(filePath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing); 
-            app.Quit();
 
-            saveDialog.Hide();
+                for (int i = 0; i < tabulka.Rows.Count; i++)
+                {
+                    for (int j = 0; j < tabulka.Columns.Count; j++)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = tabulka.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                workbook.SaveAs(filePath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                app.Quit();
+
+                saveDialog.Hide();
+            }
         }
     }
 }
