@@ -43,6 +43,7 @@
             this.btnAddData = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnDelData = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -194,6 +195,17 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnDelData
+            // 
+            this.btnDelData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelData.Location = new System.Drawing.Point(12, 198);
+            this.btnDelData.Name = "btnDelData";
+            this.btnDelData.Size = new System.Drawing.Size(148, 39);
+            this.btnDelData.TabIndex = 3;
+            this.btnDelData.Text = "Smazat";
+            this.btnDelData.UseVisualStyleBackColor = true;
+            this.btnDelData.Click += new System.EventHandler(this.btnDelData_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,6 +214,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnDelData);
             this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.btnAddData);
             this.Controls.Add(this.btnReloadData);
@@ -240,5 +253,6 @@
         private System.Windows.Forms.Button btnAddData;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnDelData;
     }
 }

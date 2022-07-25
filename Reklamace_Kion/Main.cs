@@ -34,6 +34,7 @@ namespace Reklamace_Kion
             tabControl1.TabPages[0].Text = "Data";
 
             btnAddData.Visible = false;
+            btnDelData.Visible = false;
 
             form = this;
         }
@@ -78,6 +79,7 @@ namespace Reklamace_Kion
 
                         btnUsers.Visible = true;
                         btnAddData.Visible = true;
+                        btnDelData.Visible = true;
                     }
                     else if (Level == "20")
                     {
@@ -87,6 +89,7 @@ namespace Reklamace_Kion
                         GetTableDataRepairs(conn);
 
                         btnAddData.Visible = true;
+                        btnDelData.Visible = true;
                     }
                     else if (Level == "10")
                     {
@@ -95,12 +98,14 @@ namespace Reklamace_Kion
                         GetTableDataMain(conn);
 
                         btnAddData.Visible = true;
+                        btnDelData.Visible = true;
                     }
                     else if (Level == "5")
                     {
                         lblLevel.Text = "Opravář";
                         AddTabControl();
                         GetTableDataRepairs(conn);
+                        btnDelData.Visible = true;
                     }
                     else if (Level == "1")
                     {
@@ -210,6 +215,29 @@ namespace Reklamace_Kion
         private void btnExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btnDelData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int DataIdTab = (int)dataGrid1.CurrentRow.Cells[0].Value;
+                string CLM = (string)dataGrid1.CurrentRow.Cells[1].Value;
+
+                DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam " + CLM + "?", "Smazat záznam", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    conn.Open();
+                    SqlCommand delData = new SqlCommand("DELETE FROM DataMain WHERE DataId=" + DataIdTab + "", conn);
+                    delData.ExecuteNonQuery();
+                    conn.Close();
+                    GetTableDataMain(conn);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
