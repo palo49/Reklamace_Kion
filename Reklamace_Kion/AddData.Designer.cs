@@ -480,7 +480,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 505);
+            this.ClientSize = new System.Drawing.Size(1045, 528);
             this.ControlBox = false;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
@@ -527,12 +527,13 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1061, 728);
-            this.MinimumSize = new System.Drawing.Size(1061, 544);
+            this.MaximumSize = new System.Drawing.Size(1061, 567);
+            this.MinimumSize = new System.Drawing.Size(1061, 567);
             this.Name = "AddData";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Přidej data";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.AddData_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

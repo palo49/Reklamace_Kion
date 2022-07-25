@@ -20,6 +20,8 @@ namespace Reklamace_Kion
         string LastName = string.Empty;
         string Level = string.Empty;
 
+        int curTab = 0;
+
         SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
 
         TabPage pageDataMain = new TabPage("Opravy");
@@ -105,7 +107,7 @@ namespace Reklamace_Kion
                         lblLevel.Text = "Opravář";
                         AddTabControl();
                         GetTableDataRepairs(conn);
-                        btnDelData.Visible = true;
+                        btnDelData.Visible = true; 
                     }
                     else if (Level == "1")
                     {
@@ -207,9 +209,18 @@ namespace Reklamace_Kion
 
         private void btnAddData_Click(object sender, EventArgs e)
         {
-            AddData addForm = new AddData();
-            addForm.MyLevel = Level;
-            addForm.Show();
+            if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10")))
+            {
+                AddData addForm = new AddData();
+                addForm.MyLevel = Level;
+                addForm.Show();
+            }
+            else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "5")))
+            {
+                AddRepair repairForm = new AddRepair();
+                repairForm.MyLevel = Level;
+                repairForm.Show();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -219,24 +230,61 @@ namespace Reklamace_Kion
 
         private void btnDelData_Click(object sender, EventArgs e)
         {
-            try
+            if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10")))
             {
-                int DataIdTab = (int)dataGrid1.CurrentRow.Cells[0].Value;
-                string CLM = (string)dataGrid1.CurrentRow.Cells[1].Value;
-
-                DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam " + CLM + "?", "Smazat záznam", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                try
                 {
-                    conn.Open();
-                    SqlCommand delData = new SqlCommand("DELETE FROM DataMain WHERE DataId=" + DataIdTab + "", conn);
-                    delData.ExecuteNonQuery();
-                    conn.Close();
-                    GetTableDataMain(conn);
+                    int DataIdTab = (int)dataGrid1.CurrentRow.Cells[0].Value;
+                    string CLM = (string)dataGrid1.CurrentRow.Cells[1].Value;
+
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam " + CLM + "?", "Smazat záznam", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand delData = new SqlCommand("DELETE FROM DataMain WHERE DataId=" + DataIdTab + "", conn);
+                        delData.ExecuteNonQuery();
+                        conn.Close();
+                        GetTableDataMain(conn);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch (Exception ex)
+            else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "5")))
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    int RepairIdTab = (int)dataGridOpravy.CurrentRow.Cells[0].Value;
+
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s ID " + RepairIdTab + "?", "Smazat záznam", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand delData = new SqlCommand("DELETE FROM DataRepairs WHERE RepairId=" + RepairIdTab + "", conn);
+                        delData.ExecuteNonQuery();
+                        conn.Close();
+                        GetTableDataRepairs(conn);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControl1.SelectedIndex)
+            {
+                case 0:
+                    curTab = 0;
+                    break;
+                case 1:
+                    curTab = 1;
+                    break;
             }
         }
     }

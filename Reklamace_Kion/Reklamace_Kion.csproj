@@ -52,6 +52,12 @@
     <Compile Include="AddData.Designer.cs">
       <DependentUpon>AddData.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRepair.Designer.cs">
+      <DependentUpon>AddRepair.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddData.resx">
       <DependentUpon>AddData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRepair.resx">
+      <DependentUpon>AddRepair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
