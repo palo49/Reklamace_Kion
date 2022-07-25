@@ -95,5 +95,35 @@ namespace Reklamace_Kion
         {
             this.Close();
         }
+
+        private void dataGridUsers_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            string CommandText = string.Empty;
+            string columnName = dataGridUsers.Columns[e.ColumnIndex].Name;
+            int rowId = Convert.ToInt32(dataGridUsers[0, e.RowIndex].Value);
+            string newValue = dataGridUsers[e.ColumnIndex, e.RowIndex].Value.ToString();
+
+            if (columnName == "Name") { CommandText = "UPDATE Users SET Name = @newval WHERE UserId = @id"; }
+            else if (columnName == "FirstName") { CommandText = "UPDATE Users SET FirstName = @newval WHERE UserId = @id"; }
+            else if (columnName == "LastName") { CommandText = "UPDATE Users SET LastName = @newval WHERE UserId = @id"; }
+            else if (columnName == "Level") { CommandText = "UPDATE Users SET Level = @newval WHERE UserId = @id"; }
+
+            //MessageBox.Show("id "+rowId.ToString()+"\ncolumn name "+columnName+"\nnew data "+newValue);
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(CommandText, conn);
+                cmd.Parameters.AddWithValue("@newval", newValue);
+                cmd.Parameters.AddWithValue("@id", rowId);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                RefData.RefreshData(conn);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

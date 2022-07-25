@@ -145,7 +145,7 @@ namespace Reklamace_Kion
             pageDataMain.ResumeLayout();
 
             dataGridOpravy.Parent = pageDataMain;
-            dataGridOpravy.Size = new Size(822, 621);
+            dataGridOpravy.Size = new Size(822, 586);
             dataGridOpravy.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom);
             dataGridOpravy.ReadOnly = true;
             dataGridOpravy.AllowUserToAddRows = false;
@@ -166,6 +166,8 @@ namespace Reklamace_Kion
         public static void GetTableDataMain(SqlConnection connection)
         {
             DataTable DataMain = new DataTable();
+
+            
 
             try
             {
@@ -372,6 +374,11 @@ namespace Reklamace_Kion
 
                 saveDialog.Hide();
             }
+        }
+
+        private void cmbFilterState_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
