@@ -280,7 +280,6 @@
             // 
             // numCapacity
             // 
-            this.numCapacity.DecimalPlaces = 3;
             this.numCapacity.Location = new System.Drawing.Point(18, 403);
             this.numCapacity.Maximum = new decimal(new int[] {
             999999999,
@@ -290,7 +289,6 @@
             this.numCapacity.Name = "numCapacity";
             this.numCapacity.Size = new System.Drawing.Size(146, 21);
             this.numCapacity.TabIndex = 15;
-            this.numCapacity.ThousandsSeparator = true;
             // 
             // label3
             // 

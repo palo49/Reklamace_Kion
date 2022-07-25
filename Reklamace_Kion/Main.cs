@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using System.Reflection;
 
 namespace Reklamace_Kion
 {
@@ -37,6 +39,15 @@ namespace Reklamace_Kion
 
             btnAddData.Visible = false;
             btnDelData.Visible = false;
+
+            // Double buffering can make DGV slow in remote desktop
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type dgvType = dataGrid1.GetType();
+                PropertyInfo pi = dgvType.GetProperty("DoubleBuffered",
+                  BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(dataGrid1, true, null);
+            }
 
             form = this;
         }
@@ -141,6 +152,14 @@ namespace Reklamace_Kion
 
             dataGridOpravy.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridOpravy.AllowUserToDeleteRows = false;
+
+            if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                Type dgvType2 = dataGridOpravy.GetType();
+                PropertyInfo pi = dgvType2.GetProperty("DoubleBuffered",
+                  BindingFlags.Instance | BindingFlags.NonPublic);
+                pi.SetValue(dataGridOpravy, true, null);
+            }
         }
 
         public static void GetTableDataMain(SqlConnection connection)
@@ -289,6 +308,65 @@ namespace Reklamace_Kion
                     curTab = 1;
                     break;
             }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            string exportName = string.Empty;
+            DataGridView tabulka = new DataGridView();
+
+            if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10")))
+            {
+                exportName = "DataMain_export_";
+                tabulka = dataGrid1;
+            }
+            else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "5")))
+            {
+                exportName = "DataRepairs_export_";
+                tabulka = dataGridOpravy;
+            }
+
+            string fileName = exportName + DateTime.Now.ToString("H:mm:ss") + ".xlsx";
+
+            string filePath = string.Empty;
+
+            FolderBrowserDialog SaveFileExport = new FolderBrowserDialog();
+
+            fileName = fileName.Replace(":", "_");
+
+            DialogResult result = SaveFileExport.ShowDialog();
+            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(SaveFileExport.SelectedPath))
+            {
+                filePath = SaveFileExport.SelectedPath + "\\" + fileName;
+            }
+
+            SaveInfo saveDialog = new SaveInfo();
+            saveDialog.Show();
+ 
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application(); 
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            app.Visible = false;
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = exportName;
+            
+            for (int i = 1; i < tabulka.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = tabulka.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < tabulka.Rows.Count; i++)
+            {
+                for (int j = 0; j < tabulka.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = tabulka.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+ 
+            workbook.SaveAs(filePath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing); 
+            app.Quit();
+
+            saveDialog.Hide();
         }
     }
 }

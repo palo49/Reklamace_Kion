@@ -51,7 +51,7 @@ namespace Reklamace_Kion
             string TypeOfPalette = cmbTypeOfPalette.Text;
             string DateOfExp = dateExpExp.Value.ToShortDateString();
             int SOH = trackBarSOH.Value;
-            float Capacity = (float) numCapacity.Value;
+            double Capacity = Convert.ToDouble(numCapacity.Value);
 
             if (Brand != string.Empty)
             {
@@ -69,9 +69,11 @@ namespace Reklamace_Kion
                     {
                         string sqlInsert = "INSERT INTO DataRepairs values('" + Brand + "','" + WD + "','" + BB + "','" + ZD + "','" + SW + "'," +
                             "'" + PD + "','" + Test + "','" + Charging + "','" + SetBrandId + "','" + PrtScr + "'," +
-                            "'" + Label + "','" + TypeOfPalette + "','" + DateOfExp + "','" + SOH + "','" + Capacity + "')";
+                            "'" + Label + "','" + TypeOfPalette + "','" + DateOfExp + "','" + SOH + "',@Capacity)";
 
                         SqlCommand cmdInsert = new SqlCommand(sqlInsert, conn);
+                        cmdInsert.CommandType = System.Data.CommandType.Text;
+                        cmdInsert.Parameters.Add("@Capacity", SqlDbType.Float).Value = Capacity;
                         conn.Open();
                         cmdInsert.ExecuteNonQuery();
                         conn.Close();
