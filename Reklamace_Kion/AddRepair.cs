@@ -49,7 +49,7 @@ namespace Reklamace_Kion
             bool PrtScr = chckPrtscr.Checked;
             bool Label = chckLabel.Checked;
             string TypeOfPalette = cmbTypeOfPalette.Text;
-            string DateOfExp = dateExpExp.Value.ToString();
+            string DateOfExp = dateExpExp.Value.ToShortDateString();
             int SOH = trackBarSOH.Value;
             float Capacity = (float) numCapacity.Value;
 

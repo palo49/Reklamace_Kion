@@ -35,10 +35,10 @@ namespace Reklamace_Kion
             string CLM = txtCLM.Text;
             string Status = cmbState.Text;
             string CustomerRequire = txtCustomerRequest.Text;
-            string DateOfCustomerSendVal = DateOfCustomerSend.Value.ToString();
-            string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToString();
-            string DateOfRepairVal = DateOfRepair.Value.ToString();
-            string DateOfSaftSendVal = DateOfSaftSend.Value.ToString();
+            string DateOfCustomerSendVal = DateOfCustomerSend.Value.ToShortDateString();
+            string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToShortDateString();
+            string DateOfRepairVal = DateOfRepair.Value.ToShortDateString();
+            string DateOfSaftSendVal = DateOfSaftSend.Value.ToShortDateString();
             string ClaimedComponent = cmbClaimedComponent.Text;
             string Type = txtType.Text;
             string SerialNumber = txtSerialNumber.Text;
@@ -47,7 +47,7 @@ namespace Reklamace_Kion
             string DefectBMS = txtDefectBMS.Text;
             string LocationOfBattery = txtLocationOfBattery.Text;
             string ReplacementSend = cmbReplacementSend.Text;
-            string DateOfSendReplacement = DateOfReplacementSend.Value.ToString();
+            string DateOfSendReplacement = DateOfReplacementSend.Value.ToShortDateString();
             string Result = cmbResult.Text;
             string ResultDescription = txtResultDescription.Text;
             string Price = txtCostOfRepair.Text;

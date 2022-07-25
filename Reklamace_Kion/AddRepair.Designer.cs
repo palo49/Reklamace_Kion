@@ -85,7 +85,7 @@
             this.txtBrand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(181, 21);
-            this.txtBrand.TabIndex = 2;
+            this.txtBrand.TabIndex = 1;
             // 
             // chckWD
             // 
@@ -94,7 +94,7 @@
             this.chckWD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckWD.Name = "chckWD";
             this.chckWD.Size = new System.Drawing.Size(46, 19);
-            this.chckWD.TabIndex = 3;
+            this.chckWD.TabIndex = 2;
             this.chckWD.Text = "WD";
             this.chckWD.UseVisualStyleBackColor = true;
             // 
@@ -116,7 +116,7 @@
             this.chckZD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckZD.Name = "chckZD";
             this.chckZD.Size = new System.Drawing.Size(42, 19);
-            this.chckZD.TabIndex = 3;
+            this.chckZD.TabIndex = 4;
             this.chckZD.Text = "ZD";
             this.chckZD.UseVisualStyleBackColor = true;
             // 
@@ -127,7 +127,7 @@
             this.chckSW.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckSW.Name = "chckSW";
             this.chckSW.Size = new System.Drawing.Size(45, 19);
-            this.chckSW.TabIndex = 3;
+            this.chckSW.TabIndex = 5;
             this.chckSW.Text = "SW";
             this.chckSW.UseVisualStyleBackColor = true;
             // 
@@ -138,7 +138,7 @@
             this.chckPD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckPD.Name = "chckPD";
             this.chckPD.Size = new System.Drawing.Size(43, 19);
-            this.chckPD.TabIndex = 3;
+            this.chckPD.TabIndex = 6;
             this.chckPD.Text = "PD";
             this.chckPD.UseVisualStyleBackColor = true;
             // 
@@ -149,7 +149,7 @@
             this.chckTest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckTest.Name = "chckTest";
             this.chckTest.Size = new System.Drawing.Size(49, 19);
-            this.chckTest.TabIndex = 3;
+            this.chckTest.TabIndex = 7;
             this.chckTest.Text = "Test";
             this.chckTest.UseVisualStyleBackColor = true;
             // 
@@ -160,7 +160,7 @@
             this.chckCharging.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckCharging.Name = "chckCharging";
             this.chckCharging.Size = new System.Drawing.Size(76, 19);
-            this.chckCharging.TabIndex = 3;
+            this.chckCharging.TabIndex = 8;
             this.chckCharging.Text = "Charging";
             this.chckCharging.UseVisualStyleBackColor = true;
             // 
@@ -171,7 +171,7 @@
             this.chckSetBrandId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckSetBrandId.Name = "chckSetBrandId";
             this.chckSetBrandId.Size = new System.Drawing.Size(94, 19);
-            this.chckSetBrandId.TabIndex = 3;
+            this.chckSetBrandId.TabIndex = 9;
             this.chckSetBrandId.Text = "Set brand ID";
             this.chckSetBrandId.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +182,7 @@
             this.chckPrtscr.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckPrtscr.Name = "chckPrtscr";
             this.chckPrtscr.Size = new System.Drawing.Size(91, 19);
-            this.chckPrtscr.TabIndex = 3;
+            this.chckPrtscr.TabIndex = 10;
             this.chckPrtscr.Text = "Print screen";
             this.chckPrtscr.UseVisualStyleBackColor = true;
             // 
@@ -193,7 +193,7 @@
             this.chckLabel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckLabel.Name = "chckLabel";
             this.chckLabel.Size = new System.Drawing.Size(57, 19);
-            this.chckLabel.TabIndex = 3;
+            this.chckLabel.TabIndex = 11;
             this.chckLabel.Text = "Label";
             this.chckLabel.UseVisualStyleBackColor = true;
             // 
@@ -217,7 +217,7 @@
             this.cmbTypeOfPalette.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbTypeOfPalette.Name = "cmbTypeOfPalette";
             this.cmbTypeOfPalette.Size = new System.Drawing.Size(181, 23);
-            this.cmbTypeOfPalette.TabIndex = 4;
+            this.cmbTypeOfPalette.TabIndex = 12;
             // 
             // dateExpExp
             // 
@@ -227,7 +227,8 @@
             this.dateExpExp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateExpExp.Name = "dateExpExp";
             this.dateExpExp.Size = new System.Drawing.Size(181, 21);
-            this.dateExpExp.TabIndex = 5;
+            this.dateExpExp.TabIndex = 13;
+            this.dateExpExp.Value = new System.DateTime(2022, 7, 25, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -264,7 +265,7 @@
             this.numSOH.Location = new System.Drawing.Point(18, 349);
             this.numSOH.Name = "numSOH";
             this.numSOH.Size = new System.Drawing.Size(146, 21);
-            this.numSOH.TabIndex = 7;
+            this.numSOH.TabIndex = 14;
             this.numSOH.ValueChanged += new System.EventHandler(this.numSOH_ValueChanged);
             // 
             // label2
@@ -288,7 +289,7 @@
             0});
             this.numCapacity.Name = "numCapacity";
             this.numCapacity.Size = new System.Drawing.Size(146, 21);
-            this.numCapacity.TabIndex = 7;
+            this.numCapacity.TabIndex = 15;
             this.numCapacity.ThousandsSeparator = true;
             // 
             // label3

@@ -138,6 +138,9 @@ namespace Reklamace_Kion
             dataGridOpravy.ReadOnly = true;
             dataGridOpravy.AllowUserToAddRows = false;
             dataGridOpravy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataGridOpravy.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridOpravy.AllowUserToDeleteRows = false;
         }
 
         public static void GetTableDataMain(SqlConnection connection)
