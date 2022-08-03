@@ -51,49 +51,61 @@ namespace Reklamace_Kion
             }
 
             SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace"); // making connection
-            SqlCommand cmd = new SqlCommand("select Password from Users where Name='" + MyName + "'", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-
+            SqlCommand cmdR = new SqlCommand("select Password from Users where Name='" + MyName + "'", conn);
 
             try
             {
                 conn.Open();
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlDataReader readerPass = cmdR.ExecuteReader())
                 {
-                    byte[] PassByte = (byte[])reader[0];
-
-                    StringBuilder stringBuilder = new StringBuilder();
-
-                    foreach (byte b in PassByte)
+                    if (readerPass.Read())
                     {
-                        stringBuilder.AppendFormat("{0:X2}", b);
-                    }
-                    string hashString = stringBuilder.ToString();
+                        byte[] PassByte = (byte[])readerPass[0];
 
-                    if (hashString == oldPass)
-                    {
-                        // Correct name and password, continue code...
+                        StringBuilder stringBuilder = new StringBuilder();
 
-                        if ((newPass != string.Empty) && (newPass == newPassAgain))
+                        foreach (byte b in PassByte)
                         {
-                            MessageBox.Show("Změnit heslo...");
+                            stringBuilder.AppendFormat("{0:X2}", b);
+                        }
+                        string hashString = stringBuilder.ToString();
+
+                        if (hashString == oldPass)
+                        {
+                            // Correct name and password, continue code...
+
+                            if ((newPass != string.Empty) && (newPassAgain != string.Empty) && (oldPass != string.Empty))
+                            {
+                                if (newPass != newPassAgain)
+                                {
+                                    MessageBox.Show("Hesla se neshodují.");
+                                }
+                                else
+                                {
+                                    readerPass.Close();
+                                    SqlCommand updatePass = new SqlCommand("UPDATE Users SET Password = HASHBYTES('SHA2_256', '" + newPass + "') WHERE Name = '" + MyName + "'", conn);
+                                    updatePass.ExecuteNonQuery();
+                                    conn.Close();
+
+                                    this.Close();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Vyplňte všechna pole.");
+                            }
+
                         }
                         else
                         {
-                            MessageBox.Show("Vyplňte všechna pole.");
+                            MessageBox.Show("Špatné heslo.");
                         }
-
                     }
                     else
                     {
-                        MessageBox.Show("Špatné heslo.");
+                        MessageBox.Show("Uživatel nenalezen.");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Uživatel nenalezen.");
                 }
             }
             catch (Exception ex)

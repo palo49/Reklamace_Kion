@@ -81,68 +81,66 @@ namespace Reklamace_Kion
                 conn.Open();
                 SqlCommand getUserData = new SqlCommand("SELECT FirstName, LastName, Level FROM Users WHERE Name='" + MyName + "'", conn);
                 SqlDataAdapter da = new SqlDataAdapter(getUserData);
-                SqlDataReader reader = getUserData.ExecuteReader();
 
-                while (reader.Read())
+                using (SqlDataReader reader = getUserData.ExecuteReader())
                 {
-                    lblFirstName.Text = reader.GetString(0);
-                    lblLastName.Text = reader.GetString(1);
-                    Level = reader.GetString(2);
-                }
-
-                conn.Close();
-
-                if (Level != string.Empty)
-                {
-                    if (Level == "100")
+                    while (reader.Read())
                     {
-                        lblLevel.Text = "Administrátor";
-                        dataGrid1.DataSource = GetTableDataMain(conn, DataMain, bindMainData);
-                        dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
-
-                        btnUsers.Visible = true;
-                        btnAddData.Visible = true;
-                        btnDelData.Visible = true;
-
-                        dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = false;
+                        lblFirstName.Text = reader.GetString(0);
+                        lblLastName.Text = reader.GetString(1);
+                        Level = reader.GetString(2);
                     }
-                    else if (Level == "20")
+
+                    conn.Close();
+
+                    dataGrid1.DataSource = GetTableDataMain(conn, DataMain, bindMainData);
+                    dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+
+                    if (Level != string.Empty)
                     {
-                        lblLevel.Text = "Technik";
-                        dataGrid1.DataSource = GetTableDataMain(conn, DataMain, bindMainData);
-                        dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+                        if (Level == "100")
+                        {
+                            lblLevel.Text = "Administrátor";
 
-                        btnAddData.Visible = true;
-                        btnDelData.Visible = true;
+                            btnUsers.Visible = true;
+                            btnAddData.Visible = true;
+                            btnDelData.Visible = true;
 
-                        dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = false;
+                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = false;
+                        }
+                        else if (Level == "20")
+                        {
+                            lblLevel.Text = "Technik";
+
+                            btnAddData.Visible = true;
+                            btnDelData.Visible = true;
+
+                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = false;
+                        }
+                        else if (Level == "10")
+                        {
+                            lblLevel.Text = "Příjem";
+
+                            btnAddData.Visible = true;
+                            btnDelData.Visible = true;
+
+                            dataGrid1.ReadOnly = false;
+                        }
+                        else if (Level == "5")
+                        {
+                            lblLevel.Text = "Opravář";
+
+                            btnDelData.Visible = true;
+                            btnAddData.Visible = true;
+
+                            dataGridOpravy.ReadOnly = false;
+                        }
+                        else if (Level == "1")
+                        {
+                            lblLevel.Text = "Pouze čtení";
+                        }
                     }
-                    else if (Level == "10")
-                    {
-                        lblLevel.Text = "Příjem";
-                        dataGrid1.DataSource = GetTableDataMain(conn, DataMain, bindMainData);
-
-                        btnAddData.Visible = true;
-                        btnDelData.Visible = true;
-
-                        dataGrid1.ReadOnly = false;
-                    }
-                    else if (Level == "5")
-                    {
-                        lblLevel.Text = "Opravář";
-                        dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
-                        btnDelData.Visible = true;
-                        btnAddData.Visible = true;
-
-                        dataGridOpravy.ReadOnly = false;
-                    }
-                    else if (Level == "1")
-                    {
-                        lblLevel.Text = "Pouze čtení";
-                        dataGrid1.DataSource = GetTableDataMain(conn, DataMain, bindMainData);
-                        dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
-                    }
-                }
+                }  
             }
             catch (Exception ex)
             {

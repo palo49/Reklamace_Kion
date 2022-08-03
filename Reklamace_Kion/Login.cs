@@ -52,42 +52,46 @@ namespace Reklamace_Kion
             {
                 conn.Open();
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    byte[] PassByte = (byte[])reader[0];
-
-                    StringBuilder stringBuilder = new StringBuilder();
-
-                    foreach (byte b in PassByte)
+                    if (reader.Read())
                     {
-                        stringBuilder.AppendFormat("{0:X2}", b);
+                        byte[] PassByte = (byte[])reader[0];
+
+                        StringBuilder stringBuilder = new StringBuilder();
+
+                        foreach (byte b in PassByte)
+                        {
+                            stringBuilder.AppendFormat("{0:X2}", b);
+                        }
+                        string hashString = stringBuilder.ToString();
+
+                        if (hashString == Pass)
+                        {
+                            // Correct name and password, continue code...
+
+                            Properties.Settings.Default.Name = Name;
+
+                            Properties.Settings.Default.Save();
+
+                            this.Hide();
+                            Main MainForm = new Main();
+
+                            MainForm.MyName = Name;
+                            MainForm.DisableExit = false;
+
+                            MainForm.Show();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Špatné heslo.");
+                        }
                     }
-                    string hashString = stringBuilder.ToString();
-
-                    if (hashString == Pass)
+                    else
                     {
-                        // Correct name and password, continue code...
-
-                        Properties.Settings.Default.Name = Name;
-
-                        Properties.Settings.Default.Save();
-
-                        this.Hide();
-                        Main MainForm = new Main();
-
-                        MainForm.MyName = Name;
-                        MainForm.DisableExit = false;
-                        
-                        MainForm.Show();
-
-                    }else
-                    {
-                        MessageBox.Show("Špatné heslo.");
+                        MessageBox.Show("Uživatel nenalezen.");
                     }
-                } else
-                {
-                    MessageBox.Show("Uživatel nenalezen.");
                 }
             }
             catch (Exception ex)
