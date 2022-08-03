@@ -502,5 +502,15 @@ namespace Reklamace_Kion
             AboutBox1 aboutBox1 = new AboutBox1();
             aboutBox1.Show();
         }
+
+        private void dataGrid1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGrid1.BeginEdit(true);
+        }
+
+        private void dataGridOpravy_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridOpravy.BeginEdit(true);
+        }
     }
 }
