@@ -2,36 +2,43 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Security.Cryptography;
 
 namespace Reklamace_Kion
 {
-    public partial class Login : Form
+    public partial class EditPass : Form
     {
-        public Login()
+
+        public string MyName { get; set; }
+        public EditPass()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void EditPass_Load(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            string Name = txtName.Text;
-            string Pass = txtPass.Text;
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string oldPass = txtOldPass.Text;
+            string newPass = txtNewPass.Text;
+            string newPassAgain = txtNewPassAgain.Text;
 
             using (var sha2 = System.Security.Cryptography.SHA256.Create())
             {
-                var hash = sha2.ComputeHash(Encoding.UTF8.GetBytes(Pass));
+                var hash = sha2.ComputeHash(Encoding.UTF8.GetBytes(oldPass));
                 {
                     string hexString = string.Empty;
 
@@ -39,12 +46,12 @@ namespace Reklamace_Kion
                     {
                         hexString += hash[i].ToString("X2");
                     }
-                    Pass = hexString;
+                    oldPass = hexString;
                 }
             }
 
             SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace"); // making connection
-            SqlCommand cmd = new SqlCommand("select Password from Users where Name='" + Name + "'", conn);
+            SqlCommand cmd = new SqlCommand("select Password from Users where Name='" + MyName + "'", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
 
@@ -65,27 +72,26 @@ namespace Reklamace_Kion
                     }
                     string hashString = stringBuilder.ToString();
 
-                    if (hashString == Pass)
+                    if (hashString == oldPass)
                     {
                         // Correct name and password, continue code...
 
-                        Properties.Settings.Default.Name = Name;
+                        if ((newPass != string.Empty) && (newPass == newPassAgain))
+                        {
+                            MessageBox.Show("Změnit heslo...");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vyplňte všechna pole.");
+                        }
 
-                        Properties.Settings.Default.Save();
-
-                        this.Hide();
-                        Main MainForm = new Main();
-
-                        MainForm.MyName = Name;
-                        MainForm.DisableExit = false;
-                        
-                        MainForm.Show();
-
-                    }else
+                    }
+                    else
                     {
                         MessageBox.Show("Špatné heslo.");
                     }
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Uživatel nenalezen.");
                 }
@@ -94,18 +100,8 @@ namespace Reklamace_Kion
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
             conn.Close();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            txtName.Text = Properties.Settings.Default.Name;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

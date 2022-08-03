@@ -15,7 +15,7 @@ namespace Reklamace_Kion
     {
 
         SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
-
+        
         public string MyName { get; set; }
 
         private static Users form = null;
@@ -23,6 +23,7 @@ namespace Reklamace_Kion
         {
             InitializeComponent();
             form = this;
+            
         }
 
         private void AddUser_Load(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace Reklamace_Kion
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)

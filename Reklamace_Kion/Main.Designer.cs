@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -39,7 +39,8 @@
             this.btnReloadData = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGrid1 = new System.Windows.Forms.DataGridView();
+            this.dataGrid1 = new ADGV.AdvancedDataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAddData = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
@@ -51,13 +52,15 @@
             this.změnitHesloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.lblFilterState = new System.Windows.Forms.Label();
-            this.cmbFilterState = new System.Windows.Forms.ComboBox();
+            this.dataGridOpravy = new ADGV.AdvancedDataGridView();
+            this.lblActionInfo = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOpravy)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -116,10 +119,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(166, 62);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(830, 615);
+            this.tabControl1.Size = new System.Drawing.Size(830, 590);
             this.tabControl1.TabIndex = 4;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -129,7 +133,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(822, 586);
+            this.tabPage1.Size = new System.Drawing.Size(822, 561);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -137,27 +141,38 @@
             // dataGrid1
             // 
             this.dataGrid1.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGrid1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGrid1.AutoGenerateContextFilters = true;
             this.dataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid1.DateWithTime = false;
             this.dataGrid1.Location = new System.Drawing.Point(0, 0);
+            this.dataGrid1.MultiSelect = false;
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.ReadOnly = true;
-            this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid1.Size = new System.Drawing.Size(822, 586);
-            this.dataGrid1.TabIndex = 2;
+            this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGrid1.Size = new System.Drawing.Size(822, 561);
+            this.dataGrid1.TabIndex = 0;
+            this.dataGrid1.TimeFilter = false;
+            this.dataGrid1.SortStringChanged += new System.EventHandler(this.dataGrid1_SortStringChanged);
+            this.dataGrid1.FilterStringChanged += new System.EventHandler(this.dataGrid1_FilterStringChanged);
+            this.dataGrid1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid1_CellValueChanged);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dataGridOpravy);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(822, 582);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -252,6 +267,7 @@
             this.změnitHesloToolStripMenuItem.Name = "změnitHesloToolStripMenuItem";
             this.změnitHesloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.změnitHesloToolStripMenuItem.Text = "Změnit heslo";
+            this.změnitHesloToolStripMenuItem.Click += new System.EventHandler(this.změnitHesloToolStripMenuItem_Click);
             // 
             // toolTip1
             // 
@@ -267,36 +283,46 @@
             this.label1.Size = new System.Drawing.Size(1005, 2);
             this.label1.TabIndex = 8;
             // 
-            // lblFilterState
+            // dataGridOpravy
             // 
-            this.lblFilterState.AutoSize = true;
-            this.lblFilterState.Location = new System.Drawing.Point(167, 32);
-            this.lblFilterState.Name = "lblFilterState";
-            this.lblFilterState.Size = new System.Drawing.Size(44, 16);
-            this.lblFilterState.TabIndex = 9;
-            this.lblFilterState.Text = "Status";
+            this.dataGridOpravy.AllowUserToAddRows = false;
+            this.dataGridOpravy.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridOpravy.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridOpravy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridOpravy.AutoGenerateContextFilters = true;
+            this.dataGridOpravy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridOpravy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridOpravy.DateWithTime = false;
+            this.dataGridOpravy.Location = new System.Drawing.Point(0, 0);
+            this.dataGridOpravy.Name = "dataGridOpravy";
+            this.dataGridOpravy.ReadOnly = true;
+            this.dataGridOpravy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridOpravy.Size = new System.Drawing.Size(822, 582);
+            this.dataGridOpravy.TabIndex = 0;
+            this.dataGridOpravy.TimeFilter = false;
+            this.dataGridOpravy.SortStringChanged += new System.EventHandler(this.dataGridOpravy_SortStringChanged);
+            this.dataGridOpravy.FilterStringChanged += new System.EventHandler(this.dataGridOpravy_FilterStringChanged);
+            this.dataGridOpravy.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridOpravy_CellValueChanged);
             // 
-            // cmbFilterState
+            // lblActionInfo
             // 
-            this.cmbFilterState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFilterState.FormattingEnabled = true;
-            this.cmbFilterState.Items.AddRange(new object[] {
-            "",
-            "Open",
-            "Closed"});
-            this.cmbFilterState.Location = new System.Drawing.Point(216, 29);
-            this.cmbFilterState.Name = "cmbFilterState";
-            this.cmbFilterState.Size = new System.Drawing.Size(121, 24);
-            this.cmbFilterState.TabIndex = 10;
-            this.cmbFilterState.SelectedIndexChanged += new System.EventHandler(this.cmbFilterState_SelectedIndexChanged);
+            this.lblActionInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblActionInfo.AutoSize = true;
+            this.lblActionInfo.Location = new System.Drawing.Point(167, 657);
+            this.lblActionInfo.Name = "lblActionInfo";
+            this.lblActionInfo.Size = new System.Drawing.Size(79, 16);
+            this.lblActionInfo.TabIndex = 9;
+            this.lblActionInfo.Text = "lblActionInfo";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 689);
-            this.Controls.Add(this.cmbFilterState);
-            this.Controls.Add(this.lblFilterState);
+            this.Controls.Add(this.lblActionInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.pictureBox1);
@@ -323,9 +349,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOpravy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,7 +368,6 @@
         private System.Windows.Forms.Button btnReloadData;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGrid1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAddData;
         private System.Windows.Forms.Button btnUsers;
@@ -352,7 +379,9 @@
         private System.Windows.Forms.ToolStripMenuItem změnitHesloToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblFilterState;
-        private System.Windows.Forms.ComboBox cmbFilterState;
+        private ADGV.AdvancedDataGridView dataGrid1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private ADGV.AdvancedDataGridView dataGridOpravy;
+        private System.Windows.Forms.Label lblActionInfo;
     }
 }

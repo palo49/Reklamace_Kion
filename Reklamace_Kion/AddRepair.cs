@@ -78,7 +78,7 @@ namespace Reklamace_Kion
                         cmdInsert.ExecuteNonQuery();
                         conn.Close();
 
-                        Main.GetTableDataRepairs(conn);
+                        Main.ReloadData();
                         this.Close();
                     }
                     else
