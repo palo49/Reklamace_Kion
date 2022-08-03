@@ -9,6 +9,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Description = Aplikace pro úpravu dat pomocí SQL databáze.
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CFDC1FD0-3B97-4AC2-BE0F-EC46D1B64D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

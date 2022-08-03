@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridOpravy = new ADGV.AdvancedDataGridView();
             this.lblActionInfo = new System.Windows.Forms.Label();
+            this.oAplikaciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -120,10 +121,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(166, 62);
+            this.tabControl1.Location = new System.Drawing.Point(166, 32);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(830, 590);
+            this.tabControl1.Size = new System.Drawing.Size(830, 620);
             this.tabControl1.TabIndex = 4;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -133,7 +134,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(822, 561);
+            this.tabPage1.Size = new System.Drawing.Size(822, 591);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -142,8 +143,8 @@
             // 
             this.dataGrid1.AllowUserToAddRows = false;
             this.dataGrid1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -156,7 +157,7 @@
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.ReadOnly = true;
             this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGrid1.Size = new System.Drawing.Size(822, 561);
+            this.dataGrid1.Size = new System.Drawing.Size(822, 591);
             this.dataGrid1.TabIndex = 0;
             this.dataGrid1.TimeFilter = false;
             this.dataGrid1.SortStringChanged += new System.EventHandler(this.dataGrid1_SortStringChanged);
@@ -169,7 +170,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(822, 582);
+            this.tabPage2.Size = new System.Drawing.Size(822, 591);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -247,7 +248,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SettingsToolStripMenuItem});
+            this.SettingsToolStripMenuItem,
+            this.oAplikaciToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
@@ -287,8 +289,8 @@
             // 
             this.dataGridOpravy.AllowUserToAddRows = false;
             this.dataGridOpravy.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridOpravy.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridOpravy.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridOpravy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -300,7 +302,7 @@
             this.dataGridOpravy.Name = "dataGridOpravy";
             this.dataGridOpravy.ReadOnly = true;
             this.dataGridOpravy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridOpravy.Size = new System.Drawing.Size(822, 582);
+            this.dataGridOpravy.Size = new System.Drawing.Size(822, 591);
             this.dataGridOpravy.TabIndex = 0;
             this.dataGridOpravy.TimeFilter = false;
             this.dataGridOpravy.SortStringChanged += new System.EventHandler(this.dataGridOpravy_SortStringChanged);
@@ -316,6 +318,13 @@
             this.lblActionInfo.Size = new System.Drawing.Size(79, 16);
             this.lblActionInfo.TabIndex = 9;
             this.lblActionInfo.Text = "lblActionInfo";
+            // 
+            // oAplikaciToolStripMenuItem
+            // 
+            this.oAplikaciToolStripMenuItem.Name = "oAplikaciToolStripMenuItem";
+            this.oAplikaciToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.oAplikaciToolStripMenuItem.Text = "O aplikaci";
+            this.oAplikaciToolStripMenuItem.Click += new System.EventHandler(this.oAplikaciToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -383,5 +392,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private ADGV.AdvancedDataGridView dataGridOpravy;
         private System.Windows.Forms.Label lblActionInfo;
+        private System.Windows.Forms.ToolStripMenuItem oAplikaciToolStripMenuItem;
     }
 }

@@ -496,5 +496,11 @@ namespace Reklamace_Kion
             editPassForm.MyName = MyName;
             editPassForm.Show();
         }
+
+        private void oAplikaciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutBox1 = new AboutBox1();
+            aboutBox1.Show();
+        }
     }
 }
