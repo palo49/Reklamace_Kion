@@ -264,7 +264,7 @@ namespace Reklamace_Kion
                     int DataIdTab = (int)dataGrid1.CurrentRow.Cells[0].Value;
                     string CLM = (string)dataGrid1.CurrentRow.Cells[1].Value;
 
-                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam " + CLM + "?", "Smazat záznam", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam " + CLM + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dialogResult == DialogResult.Yes)
                     {
                         conn.Open();
@@ -286,7 +286,7 @@ namespace Reklamace_Kion
                 {
                     int RepairIdTab = (int)dataGridOpravy.CurrentRow.Cells[0].Value;
 
-                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s ID " + RepairIdTab + "?", "Smazat záznam", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s ID " + RepairIdTab + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dialogResult == DialogResult.Yes)
                     {
                         conn.Open();
@@ -554,6 +554,62 @@ namespace Reklamace_Kion
         private void RefTime_Tick(object sender, EventArgs e)
         {
             lblActualDate.Text = DateTime.Now.ToString();
+        }
+
+        private void btnResetFiltr_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtSearch.Text = string.Empty;
+                this.bindMainData.Filter = String.Empty;
+            }
+            catch (Exception ex)
+            {
+                lblActionInfo.Text = ex.Message;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchProc();
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchProc();
+            }
+        }
+
+        public void SearchProc()
+        {
+            try
+            {
+                this.bindMainData.Filter = "(CLM LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(State LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(CustomerRequire LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(DateOfCustomerSend LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(DateOfSaftAcceptance LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(DateOfRepair LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(DateOfSaftSend LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(ClaimedComponent LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(Type LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(SerialNumber LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(Fault LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(TypeCW LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(DefectBMS LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(LocationOfBattery LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(ReplacementSend LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(DateOfReplacementSend LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(Result LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(ResultDescription LIKE '%" + txtSearch.Text + "%') OR " +
+                    "(Contact LIKE '%" + txtSearch.Text + "%')";
+            }
+            catch (Exception ex)
+            {
+                lblActionInfo.Text = ex.Message;
+            }
         }
     }
 }

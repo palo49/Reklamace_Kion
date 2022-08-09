@@ -91,7 +91,7 @@ namespace Reklamace_Kion.Komponenty
                 int DataIdTab = (int)dgvComponents.CurrentRow.Cells[0].Value;
                 string Name = (string)dgvComponents.CurrentRow.Cells[1].Value;
 
-                DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam " + Name + "?", "Smazat záznam", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam " + Name + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     conn.Open();

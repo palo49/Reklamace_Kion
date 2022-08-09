@@ -50,7 +50,7 @@ namespace Reklamace_Kion.Komponenty
                     }
                     else
                     {
-                        MessageBox.Show("Tento záznam již existuje.");
+                        MessageBox.Show("Tento záznam již existuje.", "Upozornění", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)
@@ -60,7 +60,7 @@ namespace Reklamace_Kion.Komponenty
             }
             else
             {
-                MessageBox.Show("Vyplňte pole s *");
+                MessageBox.Show("Vyplňte pole s *", "Upozornění", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
