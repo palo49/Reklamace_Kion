@@ -22,7 +22,15 @@ namespace Reklamace_Kion
 
         private void AddData_Load(object sender, EventArgs e)
         {
-
+            using (SqlConnection sqlConnection = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace"))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("SELECT Name FROM DataComponents", sqlConnection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cmbClaimedComponent.DataSource = dt;
+                cmbClaimedComponent.DisplayMember = "Name";
+                cmbClaimedComponent.ValueMember = "Name";
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -39,7 +47,6 @@ namespace Reklamace_Kion
             string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToShortDateString();
             string DateOfRepairVal = DateOfRepair.Value.ToShortDateString();
             string DateOfSaftSendVal = DateOfSaftSend.Value.ToShortDateString();
-            string ClaimedComponent = cmbClaimedComponent.Text;
             string Type = txtType.Text;
             string SerialNumber = txtSerialNumber.Text;
             string Fault = txtFault.Text;
@@ -52,6 +59,7 @@ namespace Reklamace_Kion
             string ResultDescription = txtResultDescription.Text;
             string Price = txtCostOfRepair.Text;
             string Contact = txtContact.Text;
+            string ClaimedComponent = cmbClaimedComponent.Text;
 
             if ((CLM != string.Empty) && (Status != string.Empty))
             {

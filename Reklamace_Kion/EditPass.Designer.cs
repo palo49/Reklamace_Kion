@@ -133,6 +133,7 @@
             this.MinimizeBox = false;
             this.Name = "EditPass";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Změnit heslo";
             this.Load += new System.EventHandler(this.EditPass_Load);

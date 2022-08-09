@@ -69,11 +69,12 @@ namespace Reklamace_Kion
                     {
                         string sqlInsert = "INSERT INTO DataRepairs values('" + Brand + "','" + WD + "','" + BB + "','" + ZD + "','" + SW + "'," +
                             "'" + PD + "','" + Test + "','" + Charging + "','" + SetBrandId + "','" + PrtScr + "'," +
-                            "'" + Label + "','" + TypeOfPalette + "','" + DateOfExp + "','" + SOH + "',@Capacity)";
+                            "'" + Label + "','" + TypeOfPalette + "',@DateExpedition,'" + SOH + "',@Capacity)";
 
                         SqlCommand cmdInsert = new SqlCommand(sqlInsert, conn);
                         cmdInsert.CommandType = System.Data.CommandType.Text;
                         cmdInsert.Parameters.Add("@Capacity", SqlDbType.Float).Value = Capacity;
+                        cmdInsert.Parameters.Add("@DateExpedition", SqlDbType.Date).Value = DateOfExp;
                         conn.Open();
                         cmdInsert.ExecuteNonQuery();
                         conn.Close();
@@ -95,6 +96,11 @@ namespace Reklamace_Kion
             {
                 MessageBox.Show("Vyplňte pole označené *.");
             }
+        }
+
+        private void AddRepair_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

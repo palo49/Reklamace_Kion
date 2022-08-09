@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -46,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>analytics_analysis_data_business_charts_document_report_icon_188743.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AdvancedDataGridView, Version=0.1.0.10, Culture=neutral, processorArchitecture=MSIL">
@@ -103,6 +106,18 @@
     <Compile Include="EditPass.Designer.cs">
       <DependentUpon>EditPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Komponenty\AddComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Komponenty\AddComponent.Designer.cs">
+      <DependentUpon>AddComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komponenty\ListComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Komponenty\ListComponents.Designer.cs">
+      <DependentUpon>ListComponents.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaveInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditPass.resx">
       <DependentUpon>EditPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Komponenty\AddComponent.resx">
+      <DependentUpon>AddComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Komponenty\ListComponents.resx">
+      <DependentUpon>ListComponents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaveInfo.resx">
       <DependentUpon>SaveInfo.cs</DependentUpon>
@@ -223,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="analytics_analysis_data_business_charts_document_report_icon_188743.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

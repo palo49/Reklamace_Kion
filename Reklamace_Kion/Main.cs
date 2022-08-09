@@ -32,6 +32,8 @@ namespace Reklamace_Kion
         {
             InitializeComponent();
 
+            lblLoadingData.Visible = false;
+
             tabControl1.TabPages[0].Text = "Reklamace";
             tabControl1.TabPages[1].Text = "Opravy";
 
@@ -93,9 +95,6 @@ namespace Reklamace_Kion
 
                     conn.Close();
 
-                    dataGrid1.DataSource = GetTableDataMain(conn, DataMain, bindMainData);
-                    dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
-
                     if (Level != string.Empty)
                     {
                         if (Level == "100")
@@ -146,6 +145,8 @@ namespace Reklamace_Kion
             {
                 MessageBox.Show(ex.Message);
             }
+            lblLoadingData.Visible = true;
+            backgroundWorker1.RunWorkerAsync();
         }
 
         public static BindingSource GetTableDataMain(SqlConnection connection, DataTable dt, BindingSource src)
@@ -511,6 +512,48 @@ namespace Reklamace_Kion
         private void dataGridOpravy_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridOpravy.BeginEdit(true);
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            conn.Open();
+            SqlCommand getDataMain = new SqlCommand("SELECT * FROM DataMain", conn);
+            SqlDataAdapter daDataMain = new SqlDataAdapter(getDataMain);
+
+            daDataMain.Fill(DataMain);
+
+            conn.Close();
+            dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+            bindMainData.DataSource = DataMain;
+
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            dataGrid1.DataSource = bindMainData;    
+            lblLoadingData.Visible = false;
+        }
+
+        private void přidatKomponentuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((Level == "100") || (Level == "20") || (Level == "10")) {
+                Komponenty.AddComponent addComponent = new Komponenty.AddComponent();
+                addComponent.Show();
+            }
+        }
+
+        private void upravitKomponentyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                Komponenty.ListComponents listComponents = new Komponenty.ListComponents();
+                listComponents.Show();
+            }
+        }
+
+        private void RefTime_Tick(object sender, EventArgs e)
+        {
+            lblActualDate.Text = DateTime.Now.ToString();
         }
     }
 }
