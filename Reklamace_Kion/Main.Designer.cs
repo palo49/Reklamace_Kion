@@ -60,6 +60,9 @@
             this.komponentyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.přidatKomponentuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.upravitKomponentyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defektyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.přidatDefektToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.upravitDefektyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oAplikaciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -73,9 +76,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnResetFiltr = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.defektyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.přidatDefektToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.upravitDefektyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnFiles = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -440,7 +441,7 @@
             // změnitHesloToolStripMenuItem
             // 
             this.změnitHesloToolStripMenuItem.Name = "změnitHesloToolStripMenuItem";
-            this.změnitHesloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.změnitHesloToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.změnitHesloToolStripMenuItem.Text = "Změnit heslo";
             this.změnitHesloToolStripMenuItem.Click += new System.EventHandler(this.změnitHesloToolStripMenuItem_Click);
             // 
@@ -450,7 +451,7 @@
             this.přidatKomponentuToolStripMenuItem,
             this.upravitKomponentyToolStripMenuItem});
             this.komponentyToolStripMenuItem.Name = "komponentyToolStripMenuItem";
-            this.komponentyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.komponentyToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.komponentyToolStripMenuItem.Text = "Komponenty";
             // 
             // přidatKomponentuToolStripMenuItem
@@ -466,6 +467,29 @@
             this.upravitKomponentyToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.upravitKomponentyToolStripMenuItem.Text = "Upravit komponenty";
             this.upravitKomponentyToolStripMenuItem.Click += new System.EventHandler(this.upravitKomponentyToolStripMenuItem_Click);
+            // 
+            // defektyToolStripMenuItem
+            // 
+            this.defektyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.přidatDefektToolStripMenuItem,
+            this.upravitDefektyToolStripMenuItem});
+            this.defektyToolStripMenuItem.Name = "defektyToolStripMenuItem";
+            this.defektyToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.defektyToolStripMenuItem.Text = "Defekty";
+            // 
+            // přidatDefektToolStripMenuItem
+            // 
+            this.přidatDefektToolStripMenuItem.Name = "přidatDefektToolStripMenuItem";
+            this.přidatDefektToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.přidatDefektToolStripMenuItem.Text = "Přidat defekt";
+            this.přidatDefektToolStripMenuItem.Click += new System.EventHandler(this.přidatDefektToolStripMenuItem_Click);
+            // 
+            // upravitDefektyToolStripMenuItem
+            // 
+            this.upravitDefektyToolStripMenuItem.Name = "upravitDefektyToolStripMenuItem";
+            this.upravitDefektyToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.upravitDefektyToolStripMenuItem.Text = "Upravit defekty";
+            this.upravitDefektyToolStripMenuItem.Click += new System.EventHandler(this.upravitDefektyToolStripMenuItem_Click);
             // 
             // oAplikaciToolStripMenuItem
             // 
@@ -601,28 +625,23 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // defektyToolStripMenuItem
+            // btnFiles
             // 
-            this.defektyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.přidatDefektToolStripMenuItem,
-            this.upravitDefektyToolStripMenuItem});
-            this.defektyToolStripMenuItem.Name = "defektyToolStripMenuItem";
-            this.defektyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.defektyToolStripMenuItem.Text = "Defekty";
-            // 
-            // přidatDefektToolStripMenuItem
-            // 
-            this.přidatDefektToolStripMenuItem.Name = "přidatDefektToolStripMenuItem";
-            this.přidatDefektToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.přidatDefektToolStripMenuItem.Text = "Přidat defekt";
-            this.přidatDefektToolStripMenuItem.Click += new System.EventHandler(this.přidatDefektToolStripMenuItem_Click);
-            // 
-            // upravitDefektyToolStripMenuItem
-            // 
-            this.upravitDefektyToolStripMenuItem.Name = "upravitDefektyToolStripMenuItem";
-            this.upravitDefektyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.upravitDefektyToolStripMenuItem.Text = "Upravit defekty";
-            this.upravitDefektyToolStripMenuItem.Click += new System.EventHandler(this.upravitDefektyToolStripMenuItem_Click);
+            this.btnFiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnFiles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiles.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnFiles.FlatAppearance.BorderSize = 0;
+            this.btnFiles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnFiles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiles.Location = new System.Drawing.Point(12, 320);
+            this.btnFiles.Name = "btnFiles";
+            this.btnFiles.Size = new System.Drawing.Size(148, 39);
+            this.btnFiles.TabIndex = 3;
+            this.btnFiles.Text = "Soubory";
+            this.btnFiles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFiles.UseVisualStyleBackColor = false;
+            this.btnFiles.Click += new System.EventHandler(this.btnFiles_Click);
             // 
             // Main
             // 
@@ -638,6 +657,7 @@
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnFiles);
             this.Controls.Add(this.btnDelData);
             this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.btnAddData);
@@ -715,5 +735,6 @@
         private System.Windows.Forms.ToolStripMenuItem defektyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem přidatDefektToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem upravitDefektyToolStripMenuItem;
+        private System.Windows.Forms.Button btnFiles;
     }
 }

@@ -701,5 +701,11 @@ namespace Reklamace_Kion
             Defekty.ListDefects listDefectsForm = new Defekty.ListDefects();
             listDefectsForm.Show();
         }
+
+        private void btnFiles_Click(object sender, EventArgs e)
+        {
+            Files filesForm = new Files();
+            filesForm.Show();
+        }
     }
 }
