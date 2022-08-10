@@ -685,5 +685,17 @@ namespace Reklamace_Kion
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void přidatDefektToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Defekty.AddDefect addDefectForm = new Defekty.AddDefect();
+            addDefectForm.Show();
+        }
+
+        private void upravitDefektyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Defekty.ListDefects listDefectsForm = new Defekty.ListDefects();
+            listDefectsForm.Show();
+        }
     }
 }

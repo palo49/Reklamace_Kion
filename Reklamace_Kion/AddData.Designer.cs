@@ -48,7 +48,6 @@
             this.txtFault = new System.Windows.Forms.TextBox();
             this.lblCW = new System.Windows.Forms.Label();
             this.lblDefectBMS = new System.Windows.Forms.Label();
-            this.txtDefectBMS = new System.Windows.Forms.TextBox();
             this.lblLocationOfBattery = new System.Windows.Forms.Label();
             this.txtLocationOfBattery = new System.Windows.Forms.TextBox();
             this.lblClaimedComponent = new System.Windows.Forms.Label();
@@ -76,6 +75,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbDefects = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -253,14 +253,6 @@
             this.lblDefectBMS.Size = new System.Drawing.Size(72, 15);
             this.lblDefectBMS.TabIndex = 0;
             this.lblDefectBMS.Text = "Defekt BMS";
-            // 
-            // txtDefectBMS
-            // 
-            this.txtDefectBMS.Location = new System.Drawing.Point(191, 346);
-            this.txtDefectBMS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtDefectBMS.Name = "txtDefectBMS";
-            this.txtDefectBMS.Size = new System.Drawing.Size(267, 21);
-            this.txtDefectBMS.TabIndex = 13;
             // 
             // lblLocationOfBattery
             // 
@@ -529,12 +521,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbDefects
+            // 
+            this.cmbDefects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDefects.FormattingEnabled = true;
+            this.cmbDefects.Location = new System.Drawing.Point(191, 344);
+            this.cmbDefects.Name = "cmbDefects";
+            this.cmbDefects.Size = new System.Drawing.Size(267, 23);
+            this.cmbDefects.TabIndex = 24;
+            // 
             // AddData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 573);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbDefects);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
@@ -551,7 +553,6 @@
             this.Controls.Add(this.cmbClaimedComponent);
             this.Controls.Add(this.cmbState);
             this.Controls.Add(this.txtLocationOfBattery);
-            this.Controls.Add(this.txtDefectBMS);
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.txtCostOfRepair);
             this.Controls.Add(this.txtFault);
@@ -617,7 +618,6 @@
         private System.Windows.Forms.TextBox txtFault;
         private System.Windows.Forms.Label lblCW;
         private System.Windows.Forms.Label lblDefectBMS;
-        private System.Windows.Forms.TextBox txtDefectBMS;
         private System.Windows.Forms.Label lblLocationOfBattery;
         private System.Windows.Forms.TextBox txtLocationOfBattery;
         private System.Windows.Forms.Label lblClaimedComponent;
@@ -645,5 +645,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbDefects;
     }
 }

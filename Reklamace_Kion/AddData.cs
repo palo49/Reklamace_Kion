@@ -30,6 +30,13 @@ namespace Reklamace_Kion
                 cmbClaimedComponent.DataSource = dt;
                 cmbClaimedComponent.DisplayMember = "Name";
                 cmbClaimedComponent.ValueMember = "Name";
+
+                SqlDataAdapter da2 = new SqlDataAdapter("SELECT Name FROM DataDefects", sqlConnection);
+                DataTable dt2 = new DataTable();
+                da2.Fill(dt2);
+                cmbDefects.DataSource = dt2;
+                cmbDefects.DisplayMember = "Name";
+                cmbDefects.ValueMember = "Name";
             }
         }
 
@@ -51,7 +58,7 @@ namespace Reklamace_Kion
             string SerialNumber = txtSerialNumber.Text;
             string Fault = txtFault.Text;
             string CW = cmbCW.Text;
-            string DefectBMS = txtDefectBMS.Text;
+            string DefectBMS = cmbDefects.Text;
             string LocationOfBattery = txtLocationOfBattery.Text;
             string ReplacementSend = cmbReplacementSend.Text;
             string DateOfSendReplacement = DateOfReplacementSend.Value.ToShortDateString();
