@@ -455,23 +455,25 @@ namespace Reklamace_Kion
 
             if (columnName == "CLM") { CommandText = "UPDATE DataMain SET CLM = @newval WHERE DataId = @id"; }
             else if (columnName == "State") { CommandText = "UPDATE DataMain SET State = @newval WHERE DataId = @id"; }
-            else if (columnName == "CustomerRequire") { CommandText = "UPDATE DataMain SET CustomerRequire = @newval WHERE DataId = @id"; }
-            else if (columnName == "DateOfCustomerSend") { CommandText = "UPDATE DataMain SET DateOfCustomerSend = @newval WHERE DataId = @id"; }
-            else if (columnName == "DateOfSaftAcceptance") { CommandText = "UPDATE DataMain SET DateOfSaftAcceptance = @newval WHERE DataId = @id"; }
-            else if (columnName == "DateOfRepair") { CommandText = "UPDATE DataMain SET DateOfRepair = @newval WHERE DataId = @id"; }
-            else if (columnName == "DateOfSaftSend") { CommandText = "UPDATE DataMain SET DateOfSaftSend = @newval WHERE DataId = @id"; }
-            else if (columnName == "ClaimedComponent") { CommandText = "UPDATE DataMain SET ClaimedComponent = @newval WHERE DataId = @id"; }
-            else if (columnName == "Type") { CommandText = "UPDATE DataMain SET Type = @newval WHERE DataId = @id"; }
-            else if (columnName == "SerialNumber") { CommandText = "UPDATE DataMain SET SerialNumber = @newval WHERE DataId = @id"; }
+            else if (columnName == "Customer_Require") { CommandText = "UPDATE DataMain SET Customer_Require = @newval WHERE DataId = @id"; }
+            else if (columnName == "Date_Of_Customer_Send") { CommandText = "UPDATE DataMain SET Date_Of_Customer_Send = @newval WHERE DataId = @id"; }
+            else if (columnName == "Date_Of_Saft_Acceptance") { CommandText = "UPDATE DataMain SET Date_Of_Saft_Acceptance = @newval WHERE DataId = @id"; }
+            else if (columnName == "Date_Of_Repair") { CommandText = "UPDATE DataMain SET Date_Of_Repair = @newval WHERE DataId = @id"; }
+            else if (columnName == "Date_Of_Saft_Send") { CommandText = "UPDATE DataMain SET Date_Of_Saft_Send = @newval WHERE DataId = @id"; }
+            else if (columnName == "PN_Battery") { CommandText = "UPDATE DataMain SET PN_Battery = @newval WHERE DataId = @id"; }
+            else if (columnName == "SN_Battery") { CommandText = "UPDATE DataMain SET SN_Battery = @newval WHERE DataId = @id"; }
+            else if (columnName == "PN_Claimed_Component") { CommandText = "UPDATE DataMain SET PN_Claimed_Component = @newval WHERE DataId = @id"; }
+            else if (columnName == "Claimed_Component") { CommandText = "UPDATE DataMain SET Claimed_Component = @newval WHERE DataId = @id"; }
+            else if (columnName == "SN_Claimed_Component") { CommandText = "UPDATE DataMain SET SN_Claimed_Component = @newval WHERE DataId = @id"; }
             else if (columnName == "Fault") { CommandText = "UPDATE DataMain SET Fault = @newval WHERE DataId = @id"; }
-            else if (columnName == "TypeCW") { CommandText = "UPDATE DataMain SET TypeCW = @newval WHERE DataId = @id"; }
-            else if (columnName == "DefectBMS") { CommandText = "UPDATE DataMain SET DefectBMS = @newval WHERE DataId = @id"; }
-            else if (columnName == "LocationOfBattery") { CommandText = "UPDATE DataMain SET LocationOfBattery = @newval WHERE DataId = @id"; }
-            else if (columnName == "ReplacementSend") { CommandText = "UPDATE DataMain SET ReplacementSend = @newval WHERE DataId = @id"; }
-            else if (columnName == "DateOfReplacementSend") { CommandText = "UPDATE DataMain SET DateOfReplacementSend = @newval WHERE DataId = @id"; }
+            else if (columnName == "Type_CW") { CommandText = "UPDATE DataMain SET Type_CW = @newval WHERE DataId = @id"; }
+            else if (columnName == "Defect_BMS") { CommandText = "UPDATE DataMain SET Defect_BMS = @newval WHERE DataId = @id"; }
+            else if (columnName == "Location_Of_Battery") { CommandText = "UPDATE DataMain SET Location_Of_Battery = @newval WHERE DataId = @id"; }
+            else if (columnName == "Replacement_Send") { CommandText = "UPDATE DataMain SET Replacement_Send = @newval WHERE DataId = @id"; }
+            else if (columnName == "Date_Of_Replacement_Send") { CommandText = "UPDATE DataMain SET Date_Of_Replacement_Send = @newval WHERE DataId = @id"; }
             else if (columnName == "Result") { CommandText = "UPDATE DataMain SET Result = @newval WHERE DataId = @id"; }
-            else if (columnName == "ResultDescription") { CommandText = "UPDATE DataMain SET ResultDescription = @newval WHERE DataId = @id"; }
-            else if (columnName == "CostOfRepair") { CommandText = "UPDATE DataMain SET CostOfRepair = @newval WHERE DataId = @id"; }
+            else if (columnName == "Result_Description") { CommandText = "UPDATE DataMain SET Result_Description = @newval WHERE DataId = @id"; }
+            else if (columnName == "Cost_Of_Repair") { CommandText = "UPDATE DataMain SET Cost_Of_Repair = @newval WHERE DataId = @id"; }
             else if (columnName == "Contact") { CommandText = "UPDATE DataMain SET Contact = @newval WHERE DataId = @id"; }
 
             try
@@ -593,22 +595,24 @@ namespace Reklamace_Kion
                 {
                     this.bindMainData.Filter = "(CLM LIKE '%" + txtSearch.Text + "%') OR " +
                         "(State LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(CustomerRequire LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(DateOfCustomerSend LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(DateOfSaftAcceptance LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(DateOfRepair LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(DateOfSaftSend LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(ClaimedComponent LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(Type LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(SerialNumber LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Customer_Require LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Date_Of_Customer_Send LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Date_Of_Saft_Acceptance LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Date_Of_Repair LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Date_Of_Saft_Send LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(PN_Battery LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(SN_Battery LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(PN_Claimed_Component LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Claimed_Component LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(SN_Claimed_Component LIKE '%" + txtSearch.Text + "%') OR " +
                         "(Fault LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(TypeCW LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(DefectBMS LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(LocationOfBattery LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(ReplacementSend LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(DateOfReplacementSend LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Type_CW LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Defect_BMS LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Location_Of_Battery LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Replacement_Send LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Date_Of_Replacement_Send LIKE '%" + txtSearch.Text + "%') OR " +
                         "(Result LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(ResultDescription LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Result_Description LIKE '%" + txtSearch.Text + "%') OR " +
                         "(Contact LIKE '%" + txtSearch.Text + "%')";
                 }
                 else if (curTab == 1)

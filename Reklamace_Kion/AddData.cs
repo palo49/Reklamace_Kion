@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,8 +55,10 @@ namespace Reklamace_Kion
             string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToShortDateString();
             string DateOfRepairVal = DateOfRepair.Value.ToShortDateString();
             string DateOfSaftSendVal = DateOfSaftSend.Value.ToShortDateString();
-            string Type = txtType.Text;
-            string SerialNumber = txtSerialNumber.Text;
+            string PNBattery = txtPNBattery.Text;
+            string SNBattery = txtSNBattery.Text;
+            string PNClaimedComponent = txtPNComponent.Text;
+            string SNClaimedComponent = txtSNComponent.Text;
             string Fault = txtFault.Text;
             string CW = cmbCW.Text;
             string DefectBMS = cmbDefects.Text;
@@ -68,7 +71,7 @@ namespace Reklamace_Kion
             string Contact = txtContact.Text;
             string ClaimedComponent = cmbClaimedComponent.Text;
 
-            if ((CLM != string.Empty) && (Status != string.Empty))
+            if ((CLM != string.Empty) && (Status != string.Empty) && (PNClaimedComponent != string.Empty) && (SNClaimedComponent != string.Empty))
             {
                 try
                 {
@@ -82,8 +85,10 @@ namespace Reklamace_Kion
 
                     if (dataCount == 0)
                     {
+                        Cursor.Current = Cursors.WaitCursor;
+
                         string sqlInsert = "INSERT INTO DataMain values('" + CLM + "','" + Status + "','" + CustomerRequire + "','" + DateOfCustomerSendVal + "','" + DateOfSaftAcceptanceVal + "'," +
-                            "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + ClaimedComponent + "','" + Type + "','" + SerialNumber + "'," +
+                            "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + PNBattery + "','" + SNBattery + "','" + PNClaimedComponent + "','" + ClaimedComponent + "','" + SNClaimedComponent + "'," +
                             "'" + Fault + "','" + CW + "','" + DefectBMS + "','" + LocationOfBattery + "','" + ReplacementSend + "'," +
                             "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Price + "','" + Contact + "')";
 
@@ -92,8 +97,36 @@ namespace Reklamace_Kion
                         cmdInsert.ExecuteNonQuery();
                         conn.Close();
 
+                        // Vytvoření složek
+                        /////////////////////////////////////////////////////////
+                        ///
+
+                        string dir = @"C:\Users\wantulp\Desktop\Reklamace Kion App - V2\Data\Reklamace\";
+                        string CLMDir = CLM;
+                        string BatteryDir = "undefined";
+                        string ComponentDir = PNClaimedComponent + "_" + SNClaimedComponent;
+
+                        if ((PNBattery != string.Empty) || (SNBattery != string.Empty))
+                        {
+                            BatteryDir = PNBattery + "_" + SNBattery;
+                        }
+
+                        string path = dir + CLMDir + @"\" + BatteryDir + @"\" + ComponentDir;
+
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                            Directory.CreateDirectory(path + @"\01_Dokumenty");
+                            CloneDirectory(@"\\cz-ras-fs2\Applications\Reklamace Kion App\Data\ToCopy\02_Interni_hodnoceni", path + @"\02_Interni_hodnoceni");
+                            Directory.CreateDirectory(path + @"\03_Vyjadreni_pro_zakaznika");
+                            File.Copy(@"\\cz-ras-fs2\Applications\Reklamace Kion App\Data\ToCopy\03_Vyjadreni_pro_zakaznika\TE_template.xlsx", path + @"\03_Vyjadreni_pro_zakaznika\TE_template.xlsx");
+                            File.Copy(@"\\cz-ras-fs2\Applications\Reklamace Kion App\Data\ToCopy\BMSAnalysis_774272-02E_006522.xlsx", path + @"\BMSAnalysis_" + ComponentDir + ".xlsx");
+                        }
+
+                        ///////////////////////////////////////////////////////
+
                         Main.ReloadData();
-                        
+                        Cursor.Current = Cursors.Default;
                         this.Close();
                     }
                     else
@@ -108,7 +141,25 @@ namespace Reklamace_Kion
             }
             else
             {
-                MessageBox.Show("CLM a Status jsou povinná pole.");
+                MessageBox.Show("CLM, Status, PN a S/N komponenty jsou povinná pole.");
+            }
+        }
+
+        private static void CloneDirectory(string root, string dest)
+        {
+            foreach (var directory in Directory.GetDirectories(root))
+            {
+                string dirName = Path.GetFileName(directory);
+                if (!Directory.Exists(Path.Combine(dest, dirName)))
+                {
+                    Directory.CreateDirectory(Path.Combine(dest, dirName));
+                }
+                CloneDirectory(directory, Path.Combine(dest, dirName));
+            }
+
+            foreach (var file in Directory.GetFiles(root))
+            {
+                File.Copy(file, Path.Combine(dest, Path.GetFileName(file)));
             }
         }
 

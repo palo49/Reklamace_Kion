@@ -52,10 +52,6 @@
             this.txtLocationOfBattery = new System.Windows.Forms.TextBox();
             this.lblClaimedComponent = new System.Windows.Forms.Label();
             this.cmbClaimedComponent = new System.Windows.Forms.ComboBox();
-            this.lblType = new System.Windows.Forms.Label();
-            this.txtType = new System.Windows.Forms.TextBox();
-            this.lblSN = new System.Windows.Forms.Label();
-            this.txtSerialNumber = new System.Windows.Forms.TextBox();
             this.lblReplacementSend = new System.Windows.Forms.Label();
             this.cmbReplacementSend = new System.Windows.Forms.ComboBox();
             this.lblDateOfReplacementSend = new System.Windows.Forms.Label();
@@ -76,6 +72,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbDefects = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPNBattery = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSNBattery = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPNComponent = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSNComponent = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +127,7 @@
             // lblCustomerReq
             // 
             this.lblCustomerReq.AutoSize = true;
-            this.lblCustomerReq.Location = new System.Drawing.Point(492, 11);
+            this.lblCustomerReq.Location = new System.Drawing.Point(489, 61);
             this.lblCustomerReq.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerReq.Name = "lblCustomerReq";
             this.lblCustomerReq.Size = new System.Drawing.Size(142, 15);
@@ -132,7 +136,7 @@
             // 
             // txtCustomerRequest
             // 
-            this.txtCustomerRequest.Location = new System.Drawing.Point(495, 29);
+            this.txtCustomerRequest.Location = new System.Drawing.Point(492, 79);
             this.txtCustomerRequest.Multiline = true;
             this.txtCustomerRequest.Name = "txtCustomerRequest";
             this.txtCustomerRequest.Size = new System.Drawing.Size(311, 73);
@@ -216,7 +220,7 @@
             // lblFault
             // 
             this.lblFault.AutoSize = true;
-            this.lblFault.Location = new System.Drawing.Point(188, 172);
+            this.lblFault.Location = new System.Drawing.Point(188, 276);
             this.lblFault.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFault.Name = "lblFault";
             this.lblFault.Size = new System.Drawing.Size(47, 15);
@@ -225,7 +229,7 @@
             // 
             // txtFault
             // 
-            this.txtFault.Location = new System.Drawing.Point(191, 190);
+            this.txtFault.Location = new System.Drawing.Point(191, 294);
             this.txtFault.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFault.Multiline = true;
             this.txtFault.Name = "txtFault";
@@ -237,7 +241,7 @@
             // lblCW
             // 
             this.lblCW.AutoSize = true;
-            this.lblCW.Location = new System.Drawing.Point(188, 276);
+            this.lblCW.Location = new System.Drawing.Point(188, 380);
             this.lblCW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCW.Name = "lblCW";
             this.lblCW.Size = new System.Drawing.Size(35, 15);
@@ -247,7 +251,7 @@
             // lblDefectBMS
             // 
             this.lblDefectBMS.AutoSize = true;
-            this.lblDefectBMS.Location = new System.Drawing.Point(188, 328);
+            this.lblDefectBMS.Location = new System.Drawing.Point(188, 432);
             this.lblDefectBMS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDefectBMS.Name = "lblDefectBMS";
             this.lblDefectBMS.Size = new System.Drawing.Size(72, 15);
@@ -257,7 +261,7 @@
             // lblLocationOfBattery
             // 
             this.lblLocationOfBattery.AutoSize = true;
-            this.lblLocationOfBattery.Location = new System.Drawing.Point(188, 381);
+            this.lblLocationOfBattery.Location = new System.Drawing.Point(489, 9);
             this.lblLocationOfBattery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocationOfBattery.Name = "lblLocationOfBattery";
             this.lblLocationOfBattery.Size = new System.Drawing.Size(84, 15);
@@ -266,7 +270,7 @@
             // 
             // txtLocationOfBattery
             // 
-            this.txtLocationOfBattery.Location = new System.Drawing.Point(191, 399);
+            this.txtLocationOfBattery.Location = new System.Drawing.Point(492, 27);
             this.txtLocationOfBattery.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLocationOfBattery.Name = "txtLocationOfBattery";
             this.txtLocationOfBattery.Size = new System.Drawing.Size(267, 21);
@@ -275,7 +279,7 @@
             // lblClaimedComponent
             // 
             this.lblClaimedComponent.AutoSize = true;
-            this.lblClaimedComponent.Location = new System.Drawing.Point(188, 11);
+            this.lblClaimedComponent.Location = new System.Drawing.Point(188, 172);
             this.lblClaimedComponent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClaimedComponent.Name = "lblClaimedComponent";
             this.lblClaimedComponent.Size = new System.Drawing.Size(78, 15);
@@ -286,46 +290,10 @@
             // 
             this.cmbClaimedComponent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbClaimedComponent.FormattingEnabled = true;
-            this.cmbClaimedComponent.Location = new System.Drawing.Point(191, 29);
+            this.cmbClaimedComponent.Location = new System.Drawing.Point(191, 190);
             this.cmbClaimedComponent.Name = "cmbClaimedComponent";
             this.cmbClaimedComponent.Size = new System.Drawing.Size(267, 23);
             this.cmbClaimedComponent.TabIndex = 8;
-            // 
-            // lblType
-            // 
-            this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(188, 63);
-            this.lblType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(26, 15);
-            this.lblType.TabIndex = 0;
-            this.lblType.Text = "Typ";
-            // 
-            // txtType
-            // 
-            this.txtType.Location = new System.Drawing.Point(191, 81);
-            this.txtType.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(267, 21);
-            this.txtType.TabIndex = 9;
-            // 
-            // lblSN
-            // 
-            this.lblSN.AutoSize = true;
-            this.lblSN.Location = new System.Drawing.Point(188, 121);
-            this.lblSN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSN.Name = "lblSN";
-            this.lblSN.Size = new System.Drawing.Size(76, 15);
-            this.lblSN.TabIndex = 0;
-            this.lblSN.Text = "Sériové číslo";
-            // 
-            // txtSerialNumber
-            // 
-            this.txtSerialNumber.Location = new System.Drawing.Point(191, 139);
-            this.txtSerialNumber.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSerialNumber.Name = "txtSerialNumber";
-            this.txtSerialNumber.Size = new System.Drawing.Size(267, 21);
-            this.txtSerialNumber.TabIndex = 10;
             // 
             // lblReplacementSend
             // 
@@ -370,7 +338,7 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(492, 121);
+            this.lblResult.Location = new System.Drawing.Point(489, 171);
             this.lblResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(55, 15);
@@ -384,7 +352,7 @@
             this.cmbResult.Items.AddRange(new object[] {
             "Opraveno",
             "Neopraveno"});
-            this.cmbResult.Location = new System.Drawing.Point(495, 139);
+            this.cmbResult.Location = new System.Drawing.Point(492, 189);
             this.cmbResult.Name = "cmbResult";
             this.cmbResult.Size = new System.Drawing.Size(311, 23);
             this.cmbResult.TabIndex = 17;
@@ -392,7 +360,7 @@
             // lblResultDescription
             // 
             this.lblResultDescription.AutoSize = true;
-            this.lblResultDescription.Location = new System.Drawing.Point(492, 172);
+            this.lblResultDescription.Location = new System.Drawing.Point(489, 222);
             this.lblResultDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResultDescription.Name = "lblResultDescription";
             this.lblResultDescription.Size = new System.Drawing.Size(87, 15);
@@ -401,7 +369,7 @@
             // 
             // txtResultDescription
             // 
-            this.txtResultDescription.Location = new System.Drawing.Point(495, 190);
+            this.txtResultDescription.Location = new System.Drawing.Point(492, 240);
             this.txtResultDescription.Multiline = true;
             this.txtResultDescription.Name = "txtResultDescription";
             this.txtResultDescription.Size = new System.Drawing.Size(311, 72);
@@ -413,7 +381,7 @@
             // lblCostOfRepair
             // 
             this.lblCostOfRepair.AutoSize = true;
-            this.lblCostOfRepair.Location = new System.Drawing.Point(492, 276);
+            this.lblCostOfRepair.Location = new System.Drawing.Point(489, 326);
             this.lblCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCostOfRepair.Name = "lblCostOfRepair";
             this.lblCostOfRepair.Size = new System.Drawing.Size(74, 15);
@@ -422,7 +390,7 @@
             // 
             // txtCostOfRepair
             // 
-            this.txtCostOfRepair.Location = new System.Drawing.Point(495, 292);
+            this.txtCostOfRepair.Location = new System.Drawing.Point(492, 342);
             this.txtCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCostOfRepair.Name = "txtCostOfRepair";
             this.txtCostOfRepair.Size = new System.Drawing.Size(311, 21);
@@ -436,7 +404,7 @@
             this.cmbCW.Items.AddRange(new object[] {
             "C",
             "W"});
-            this.cmbCW.Location = new System.Drawing.Point(191, 292);
+            this.cmbCW.Location = new System.Drawing.Point(191, 396);
             this.cmbCW.Name = "cmbCW";
             this.cmbCW.Size = new System.Drawing.Size(267, 23);
             this.cmbCW.TabIndex = 12;
@@ -444,7 +412,7 @@
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(492, 328);
+            this.lblContact.Location = new System.Drawing.Point(489, 378);
             this.lblContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(106, 15);
@@ -453,7 +421,7 @@
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(495, 346);
+            this.txtContact.Location = new System.Drawing.Point(492, 396);
             this.txtContact.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(311, 21);
@@ -525,10 +493,74 @@
             // 
             this.cmbDefects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDefects.FormattingEnabled = true;
-            this.cmbDefects.Location = new System.Drawing.Point(191, 344);
+            this.cmbDefects.Location = new System.Drawing.Point(191, 448);
             this.cmbDefects.Name = "cmbDefects";
             this.cmbDefects.Size = new System.Drawing.Size(267, 23);
             this.cmbDefects.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(188, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 15);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "PN baterie";
+            // 
+            // txtPNBattery
+            // 
+            this.txtPNBattery.Location = new System.Drawing.Point(188, 28);
+            this.txtPNBattery.Name = "txtPNBattery";
+            this.txtPNBattery.Size = new System.Drawing.Size(267, 21);
+            this.txtPNBattery.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(188, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "S/N baterie";
+            // 
+            // txtSNBattery
+            // 
+            this.txtSNBattery.Location = new System.Drawing.Point(188, 79);
+            this.txtSNBattery.Name = "txtSNBattery";
+            this.txtSNBattery.Size = new System.Drawing.Size(267, 21);
+            this.txtSNBattery.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(188, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 15);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "PN komponenty*";
+            // 
+            // txtPNComponent
+            // 
+            this.txtPNComponent.Location = new System.Drawing.Point(188, 139);
+            this.txtPNComponent.Name = "txtPNComponent";
+            this.txtPNComponent.Size = new System.Drawing.Size(267, 21);
+            this.txtPNComponent.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(188, 224);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 15);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "S/N Komponenty*";
+            // 
+            // txtSNComponent
+            // 
+            this.txtSNComponent.Location = new System.Drawing.Point(188, 242);
+            this.txtSNComponent.Name = "txtSNComponent";
+            this.txtSNComponent.Size = new System.Drawing.Size(267, 21);
+            this.txtSNComponent.TabIndex = 26;
             // 
             // AddData
             // 
@@ -536,6 +568,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 573);
             this.ControlBox = false;
+            this.Controls.Add(this.txtPNComponent);
+            this.Controls.Add(this.txtSNComponent);
+            this.Controls.Add(this.txtSNBattery);
+            this.Controls.Add(this.txtPNBattery);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbDefects);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSave);
@@ -556,8 +596,6 @@
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.txtCostOfRepair);
             this.Controls.Add(this.txtFault);
-            this.Controls.Add(this.txtSerialNumber);
-            this.Controls.Add(this.txtType);
             this.Controls.Add(this.txtCLM);
             this.Controls.Add(this.lblDateOfSaftSend);
             this.Controls.Add(this.lblDateOfRepair);
@@ -576,8 +614,6 @@
             this.Controls.Add(this.lblCostOfRepair);
             this.Controls.Add(this.lblCW);
             this.Controls.Add(this.lblFault);
-            this.Controls.Add(this.lblSN);
-            this.Controls.Add(this.lblType);
             this.Controls.Add(this.lblClm);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -622,10 +658,6 @@
         private System.Windows.Forms.TextBox txtLocationOfBattery;
         private System.Windows.Forms.Label lblClaimedComponent;
         private System.Windows.Forms.ComboBox cmbClaimedComponent;
-        private System.Windows.Forms.Label lblType;
-        private System.Windows.Forms.TextBox txtType;
-        private System.Windows.Forms.Label lblSN;
-        private System.Windows.Forms.TextBox txtSerialNumber;
         private System.Windows.Forms.Label lblReplacementSend;
         private System.Windows.Forms.ComboBox cmbReplacementSend;
         private System.Windows.Forms.Label lblDateOfReplacementSend;
@@ -646,5 +678,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbDefects;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPNBattery;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSNBattery;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPNComponent;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSNComponent;
     }
 }
