@@ -59,11 +59,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCLM = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBrand
@@ -387,40 +389,50 @@
             this.cmbCLM.Sorted = true;
             this.cmbCLM.TabIndex = 17;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.cmbCLM);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.numCapacity);
+            this.groupBox1.Controls.Add(this.numSOH);
+            this.groupBox1.Controls.Add(this.trackBarSOH);
+            this.groupBox1.Controls.Add(this.dateExpExp);
+            this.groupBox1.Controls.Add(this.cmbTypeOfPalette);
+            this.groupBox1.Controls.Add(this.chckPD);
+            this.groupBox1.Controls.Add(this.chckSW);
+            this.groupBox1.Controls.Add(this.chckZD);
+            this.groupBox1.Controls.Add(this.chckBB);
+            this.groupBox1.Controls.Add(this.chckLabel);
+            this.groupBox1.Controls.Add(this.chckSetBrandId);
+            this.groupBox1.Controls.Add(this.chckPrtscr);
+            this.groupBox1.Controls.Add(this.chckCharging);
+            this.groupBox1.Controls.Add(this.chckTest);
+            this.groupBox1.Controls.Add(this.chckWD);
+            this.groupBox1.Controls.Add(this.txtBrand);
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.lblCapacity);
+            this.groupBox1.Controls.Add(this.lblSOH);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblPalette);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblBrand);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(225, 606);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            // 
             // AddRepair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(216, 661);
             this.ControlBox = false;
-            this.Controls.Add(this.cmbCLM);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.numCapacity);
-            this.Controls.Add(this.numSOH);
-            this.Controls.Add(this.trackBarSOH);
-            this.Controls.Add(this.dateExpExp);
-            this.Controls.Add(this.cmbTypeOfPalette);
-            this.Controls.Add(this.chckPD);
-            this.Controls.Add(this.chckSW);
-            this.Controls.Add(this.chckZD);
-            this.Controls.Add(this.chckBB);
-            this.Controls.Add(this.chckLabel);
-            this.Controls.Add(this.chckSetBrandId);
-            this.Controls.Add(this.chckPrtscr);
-            this.Controls.Add(this.chckCharging);
-            this.Controls.Add(this.chckTest);
-            this.Controls.Add(this.chckWD);
-            this.Controls.Add(this.txtBrand);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblCapacity);
-            this.Controls.Add(this.lblSOH);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblPalette);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblBrand);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
@@ -437,8 +449,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -474,5 +487,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCLM;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

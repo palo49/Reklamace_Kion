@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -68,7 +69,11 @@ namespace Reklamace_Kion
 
                     if (dataCount == 0)
                     {
-                        string sqlInsert = "INSERT INTO DataRepairs values('"+CLM+"','" + Brand + "','" + WD + "','" + BB + "','" + ZD + "','" + SW + "'," +
+                        
+                        groupBox1.Visible = false;
+                        Cursor.Current = Cursors.WaitCursor;
+
+                        string sqlInsert = "INSERT INTO DataRepairs values('" + CLM + "','" + Brand + "','" + WD + "','" + BB + "','" + ZD + "','" + SW + "'," +
                             "'" + PD + "','" + Test + "','" + Charging + "','" + SetBrandId + "','" + PrtScr + "'," +
                             "'" + Label + "','" + TypeOfPalette + "',@DateExpedition,'" + SOH + "',@Capacity)";
 
@@ -81,6 +86,7 @@ namespace Reklamace_Kion
                         conn.Close();
 
                         Main.ReloadData();
+                        
                         this.Close();
                     }
                     else

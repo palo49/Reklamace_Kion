@@ -40,12 +40,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 31);
+            this.label1.Location = new System.Drawing.Point(64, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 15);
+            this.label1.Size = new System.Drawing.Size(193, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Počkejte prosím než se data exportují do souboru.";
+            this.label1.Text = "Počkejte prosím než se data uloží.";
+            this.label1.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -56,6 +57,7 @@
             this.label2.Size = new System.Drawing.Size(130, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ukládám...";
+            this.label2.UseWaitCursor = true;
             // 
             // panel1
             // 
@@ -65,6 +67,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(342, 44);
             this.panel1.TabIndex = 2;
+            this.panel1.UseWaitCursor = true;
             // 
             // pictureBox1
             // 

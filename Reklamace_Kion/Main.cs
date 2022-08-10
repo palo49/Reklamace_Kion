@@ -197,7 +197,9 @@ namespace Reklamace_Kion
         {
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 ReloadData();
+                Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
             {
@@ -562,6 +564,7 @@ namespace Reklamace_Kion
             {
                 txtSearch.Text = string.Empty;
                 this.bindMainData.Filter = String.Empty;
+                this.bindRepairData.Filter = String.Empty;
             }
             catch (Exception ex)
             {
@@ -586,25 +589,34 @@ namespace Reklamace_Kion
         {
             try
             {
-                this.bindMainData.Filter = "(CLM LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(State LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(CustomerRequire LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(DateOfCustomerSend LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(DateOfSaftAcceptance LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(DateOfRepair LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(DateOfSaftSend LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(ClaimedComponent LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(Type LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(SerialNumber LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(Fault LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(TypeCW LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(DefectBMS LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(LocationOfBattery LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(ReplacementSend LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(DateOfReplacementSend LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(Result LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(ResultDescription LIKE '%" + txtSearch.Text + "%') OR " +
-                    "(Contact LIKE '%" + txtSearch.Text + "%')";
+                if(curTab == 0)
+                {
+                    this.bindMainData.Filter = "(CLM LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(State LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(CustomerRequire LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(DateOfCustomerSend LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(DateOfSaftAcceptance LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(DateOfRepair LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(DateOfSaftSend LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(ClaimedComponent LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Type LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(SerialNumber LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Fault LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(TypeCW LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(DefectBMS LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(LocationOfBattery LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(ReplacementSend LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(DateOfReplacementSend LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Result LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(ResultDescription LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Contact LIKE '%" + txtSearch.Text + "%')";
+                }
+                else if (curTab == 1)
+                {
+                    this.bindRepairData.Filter = "(CLM LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(Brand LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(TypeOfPalette LIKE '%" + txtSearch.Text + "%')";
+                }
             }
             catch (Exception ex)
             {
@@ -629,7 +641,7 @@ namespace Reklamace_Kion
         {
             try
             {
-                string actualCellValue = dataGrid1[actualCell.ColumnIndex, actualCell.RowIndex].Value.ToString();
+                string actualCellValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
 
                 DialogResult resultBox = MessageBox.Show("Přidat k opravám " + actualCellValue + "?", "Přidat", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 
@@ -657,6 +669,7 @@ namespace Reklamace_Kion
                             daDataRepair.Fill(form.DataRepair);
                             form.bindRepairData.ResetBindings(true);
 
+                            lblActionInfo.ForeColor = Color.Green;
                             lblActionInfo.Text = "Záznam " + actualCellValue + " byl přidán k opravám.";
                         }
                         conn.Close();
