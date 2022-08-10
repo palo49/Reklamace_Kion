@@ -611,5 +611,66 @@ namespace Reklamace_Kion
                 lblActionInfo.Text = ex.Message;
             }
         }
+
+        DataGridView.HitTestInfo actualCell;
+
+        private void dataGrid1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hti = dataGrid1.HitTest(e.X, e.Y);
+                dataGrid1.ClearSelection();
+                dataGrid1.Rows[hti.RowIndex].Selected = true;
+                actualCell = hti;
+            }
+        }
+
+        private void přidatKOpravámToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string actualCellValue = dataGrid1[actualCell.ColumnIndex, actualCell.RowIndex].Value.ToString();
+
+                DialogResult resultBox = MessageBox.Show("Přidat k opravám " + actualCellValue + "?", "Přidat", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                
+                if (resultBox == DialogResult.Yes)
+                {
+                    string sqlRepairs = "SELECT COUNT(*) from DataRepairs where CLM like '" + actualCellValue + "'";
+                    SqlCommand cmdCount = new SqlCommand(sqlRepairs, conn);
+
+                    conn.Open();
+                    int dataCount = (int)cmdCount.ExecuteScalar();
+                    conn.Close();
+
+                    if (dataCount == 0)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '', '', '', '', " +
+                                "'','','','',''," +
+                                "'','','','','')", conn);
+                        if (cmd.ExecuteNonQuery() != 0)
+                        {
+                            form.DataRepair.Clear();
+                            SqlCommand getDataRepair = new SqlCommand("SELECT * FROM DataRepairs", form.conn);
+                            SqlDataAdapter daDataRepair = new SqlDataAdapter(getDataRepair);
+
+                            daDataRepair.Fill(form.DataRepair);
+                            form.bindRepairData.ResetBindings(true);
+
+                            lblActionInfo.Text = "Záznam " + actualCellValue + " byl přidán k opravám.";
+                        }
+                        conn.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tento záznam již existuje.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

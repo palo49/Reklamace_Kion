@@ -57,6 +57,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbCLM = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).BeginInit();
@@ -67,12 +69,12 @@
             // lblBrand
             // 
             this.lblBrand.AutoSize = true;
-            this.lblBrand.Location = new System.Drawing.Point(14, 10);
+            this.lblBrand.Location = new System.Drawing.Point(14, 57);
             this.lblBrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(45, 15);
+            this.lblBrand.Size = new System.Drawing.Size(40, 15);
             this.lblBrand.TabIndex = 0;
-            this.lblBrand.Text = "Brand*";
+            this.lblBrand.Text = "Brand";
             // 
             // btnCancel
             // 
@@ -88,7 +90,7 @@
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(18, 29);
+            this.txtBrand.Location = new System.Drawing.Point(18, 76);
             this.txtBrand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(181, 21);
@@ -97,7 +99,7 @@
             // chckWD
             // 
             this.chckWD.AutoSize = true;
-            this.chckWD.Location = new System.Drawing.Point(18, 59);
+            this.chckWD.Location = new System.Drawing.Point(18, 106);
             this.chckWD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckWD.Name = "chckWD";
             this.chckWD.Size = new System.Drawing.Size(46, 19);
@@ -108,7 +110,7 @@
             // chckBB
             // 
             this.chckBB.AutoSize = true;
-            this.chckBB.Location = new System.Drawing.Point(18, 85);
+            this.chckBB.Location = new System.Drawing.Point(18, 132);
             this.chckBB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckBB.Name = "chckBB";
             this.chckBB.Size = new System.Drawing.Size(42, 19);
@@ -119,7 +121,7 @@
             // chckZD
             // 
             this.chckZD.AutoSize = true;
-            this.chckZD.Location = new System.Drawing.Point(18, 112);
+            this.chckZD.Location = new System.Drawing.Point(18, 159);
             this.chckZD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckZD.Name = "chckZD";
             this.chckZD.Size = new System.Drawing.Size(42, 19);
@@ -130,7 +132,7 @@
             // chckSW
             // 
             this.chckSW.AutoSize = true;
-            this.chckSW.Location = new System.Drawing.Point(18, 138);
+            this.chckSW.Location = new System.Drawing.Point(18, 185);
             this.chckSW.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckSW.Name = "chckSW";
             this.chckSW.Size = new System.Drawing.Size(45, 19);
@@ -141,7 +143,7 @@
             // chckPD
             // 
             this.chckPD.AutoSize = true;
-            this.chckPD.Location = new System.Drawing.Point(18, 165);
+            this.chckPD.Location = new System.Drawing.Point(18, 212);
             this.chckPD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckPD.Name = "chckPD";
             this.chckPD.Size = new System.Drawing.Size(43, 19);
@@ -152,7 +154,7 @@
             // chckTest
             // 
             this.chckTest.AutoSize = true;
-            this.chckTest.Location = new System.Drawing.Point(99, 59);
+            this.chckTest.Location = new System.Drawing.Point(99, 106);
             this.chckTest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckTest.Name = "chckTest";
             this.chckTest.Size = new System.Drawing.Size(49, 19);
@@ -163,7 +165,7 @@
             // chckCharging
             // 
             this.chckCharging.AutoSize = true;
-            this.chckCharging.Location = new System.Drawing.Point(99, 85);
+            this.chckCharging.Location = new System.Drawing.Point(99, 132);
             this.chckCharging.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckCharging.Name = "chckCharging";
             this.chckCharging.Size = new System.Drawing.Size(76, 19);
@@ -174,7 +176,7 @@
             // chckSetBrandId
             // 
             this.chckSetBrandId.AutoSize = true;
-            this.chckSetBrandId.Location = new System.Drawing.Point(99, 112);
+            this.chckSetBrandId.Location = new System.Drawing.Point(99, 159);
             this.chckSetBrandId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckSetBrandId.Name = "chckSetBrandId";
             this.chckSetBrandId.Size = new System.Drawing.Size(94, 19);
@@ -185,7 +187,7 @@
             // chckPrtscr
             // 
             this.chckPrtscr.AutoSize = true;
-            this.chckPrtscr.Location = new System.Drawing.Point(99, 138);
+            this.chckPrtscr.Location = new System.Drawing.Point(99, 185);
             this.chckPrtscr.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckPrtscr.Name = "chckPrtscr";
             this.chckPrtscr.Size = new System.Drawing.Size(91, 19);
@@ -196,7 +198,7 @@
             // chckLabel
             // 
             this.chckLabel.AutoSize = true;
-            this.chckLabel.Location = new System.Drawing.Point(99, 165);
+            this.chckLabel.Location = new System.Drawing.Point(99, 212);
             this.chckLabel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckLabel.Name = "chckLabel";
             this.chckLabel.Size = new System.Drawing.Size(57, 19);
@@ -207,7 +209,7 @@
             // lblPalette
             // 
             this.lblPalette.AutoSize = true;
-            this.lblPalette.Location = new System.Drawing.Point(15, 202);
+            this.lblPalette.Location = new System.Drawing.Point(15, 249);
             this.lblPalette.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPalette.Name = "lblPalette";
             this.lblPalette.Size = new System.Drawing.Size(86, 15);
@@ -216,12 +218,14 @@
             // 
             // cmbTypeOfPalette
             // 
+            this.cmbTypeOfPalette.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbTypeOfPalette.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTypeOfPalette.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTypeOfPalette.FormattingEnabled = true;
             this.cmbTypeOfPalette.Items.AddRange(new object[] {
             "Euro paleta",
             "Půl paleta"});
-            this.cmbTypeOfPalette.Location = new System.Drawing.Point(18, 220);
+            this.cmbTypeOfPalette.Location = new System.Drawing.Point(18, 267);
             this.cmbTypeOfPalette.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbTypeOfPalette.Name = "cmbTypeOfPalette";
             this.cmbTypeOfPalette.Size = new System.Drawing.Size(181, 23);
@@ -231,7 +235,7 @@
             // 
             this.dateExpExp.CustomFormat = "";
             this.dateExpExp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateExpExp.Location = new System.Drawing.Point(18, 264);
+            this.dateExpExp.Location = new System.Drawing.Point(18, 311);
             this.dateExpExp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateExpExp.Name = "dateExpExp";
             this.dateExpExp.Size = new System.Drawing.Size(181, 21);
@@ -241,7 +245,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 246);
+            this.label1.Location = new System.Drawing.Point(14, 293);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 15);
@@ -251,7 +255,7 @@
             // lblSOH
             // 
             this.lblSOH.AutoSize = true;
-            this.lblSOH.Location = new System.Drawing.Point(15, 298);
+            this.lblSOH.Location = new System.Drawing.Point(15, 345);
             this.lblSOH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSOH.Name = "lblSOH";
             this.lblSOH.Size = new System.Drawing.Size(33, 15);
@@ -260,7 +264,7 @@
             // 
             // trackBarSOH
             // 
-            this.trackBarSOH.Location = new System.Drawing.Point(17, 316);
+            this.trackBarSOH.Location = new System.Drawing.Point(17, 363);
             this.trackBarSOH.Maximum = 100;
             this.trackBarSOH.Name = "trackBarSOH";
             this.trackBarSOH.Size = new System.Drawing.Size(147, 45);
@@ -270,7 +274,7 @@
             // 
             // numSOH
             // 
-            this.numSOH.Location = new System.Drawing.Point(18, 349);
+            this.numSOH.Location = new System.Drawing.Point(18, 396);
             this.numSOH.Name = "numSOH";
             this.numSOH.Size = new System.Drawing.Size(146, 21);
             this.numSOH.TabIndex = 14;
@@ -279,7 +283,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(171, 351);
+            this.label2.Location = new System.Drawing.Point(171, 398);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 15);
@@ -288,7 +292,7 @@
             // 
             // numCapacity
             // 
-            this.numCapacity.Location = new System.Drawing.Point(18, 403);
+            this.numCapacity.Location = new System.Drawing.Point(18, 450);
             this.numCapacity.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -301,7 +305,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(171, 405);
+            this.label3.Location = new System.Drawing.Point(171, 452);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 15);
@@ -323,7 +327,7 @@
             // lblCapacity
             // 
             this.lblCapacity.AutoSize = true;
-            this.lblCapacity.Location = new System.Drawing.Point(15, 385);
+            this.lblCapacity.Location = new System.Drawing.Point(15, 432);
             this.lblCapacity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCapacity.Name = "lblCapacity";
             this.lblCapacity.Size = new System.Drawing.Size(75, 15);
@@ -360,12 +364,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "CLM*";
+            // 
+            // cmbCLM
+            // 
+            this.cmbCLM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCLM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCLM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCLM.FormattingEnabled = true;
+            this.cmbCLM.Location = new System.Drawing.Point(18, 28);
+            this.cmbCLM.MaxDropDownItems = 20;
+            this.cmbCLM.Name = "cmbCLM";
+            this.cmbCLM.Size = new System.Drawing.Size(181, 23);
+            this.cmbCLM.Sorted = true;
+            this.cmbCLM.TabIndex = 17;
+            // 
             // AddRepair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(216, 661);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbCLM);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -391,6 +419,7 @@
             this.Controls.Add(this.lblSOH);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPalette);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblBrand);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -443,5 +472,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbCLM;
     }
 }

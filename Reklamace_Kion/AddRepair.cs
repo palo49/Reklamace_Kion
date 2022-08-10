@@ -37,6 +37,7 @@ namespace Reklamace_Kion
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string CLM = cmbCLM.Text;
             string Brand = txtBrand.Text;
             bool WD = chckWD.Checked;
             bool BB = chckBB.Checked;  
@@ -53,12 +54,12 @@ namespace Reklamace_Kion
             int SOH = trackBarSOH.Value;
             double Capacity = Convert.ToDouble(numCapacity.Value);
 
-            if (Brand != string.Empty)
+            if (CLM != string.Empty)
             {
                 try
                 {
                     SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
-                    string sqlRepairs = "SELECT COUNT(*) from DataRepairs where Brand like '" + Brand + "'";
+                    string sqlRepairs = "SELECT COUNT(*) from DataRepairs where CLM like '" + CLM + "'";
                     SqlCommand cmdCount = new SqlCommand(sqlRepairs, conn);
 
                     conn.Open();
@@ -67,7 +68,7 @@ namespace Reklamace_Kion
 
                     if (dataCount == 0)
                     {
-                        string sqlInsert = "INSERT INTO DataRepairs values('" + Brand + "','" + WD + "','" + BB + "','" + ZD + "','" + SW + "'," +
+                        string sqlInsert = "INSERT INTO DataRepairs values('"+CLM+"','" + Brand + "','" + WD + "','" + BB + "','" + ZD + "','" + SW + "'," +
                             "'" + PD + "','" + Test + "','" + Charging + "','" + SetBrandId + "','" + PrtScr + "'," +
                             "'" + Label + "','" + TypeOfPalette + "',@DateExpedition,'" + SOH + "',@Capacity)";
 
@@ -100,7 +101,15 @@ namespace Reklamace_Kion
 
         private void AddRepair_Load(object sender, EventArgs e)
         {
-
+            using (SqlConnection sqlConnection = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace"))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("SELECT CLM FROM DataMain", sqlConnection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cmbCLM.DataSource = dt;
+                cmbCLM.DisplayMember = "Name";
+                cmbCLM.ValueMember = "CLM";
+            }
         }
     }
 }
