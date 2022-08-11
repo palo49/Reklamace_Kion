@@ -28,9 +28,9 @@ namespace Reklamace_Kion
                 SqlDataAdapter da = new SqlDataAdapter("SELECT Name FROM DataComponents", sqlConnection);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                cmbClaimedComponent.DataSource = dt;
-                cmbClaimedComponent.DisplayMember = "Name";
-                cmbClaimedComponent.ValueMember = "Name";
+                cmbPNComponent.DataSource = dt;
+                cmbPNComponent.DisplayMember = "Name";
+                cmbPNComponent.ValueMember = "Name";
 
                 SqlDataAdapter da2 = new SqlDataAdapter("SELECT Name FROM DataDefects", sqlConnection);
                 DataTable dt2 = new DataTable();
@@ -55,9 +55,9 @@ namespace Reklamace_Kion
             string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToShortDateString();
             string DateOfRepairVal = DateOfRepair.Value.ToShortDateString();
             string DateOfSaftSendVal = DateOfSaftSend.Value.ToShortDateString();
-            string PNBattery = txtPNBattery.Text;
+            string PNBattery = cmbPNBattery.Text;
             string SNBattery = txtSNBattery.Text;
-            string PNClaimedComponent = txtPNComponent.Text;
+            string PNClaimedComponent = cmbPNComponent.Text;
             string SNClaimedComponent = txtSNComponent.Text;
             string Fault = txtFault.Text;
             string CW = cmbCW.Text;
@@ -69,7 +69,6 @@ namespace Reklamace_Kion
             string ResultDescription = txtResultDescription.Text;
             string Price = txtCostOfRepair.Text;
             string Contact = txtContact.Text;
-            string ClaimedComponent = cmbClaimedComponent.Text;
 
             if ((CLM != string.Empty) && (Status != string.Empty) && (PNClaimedComponent != string.Empty) && (SNClaimedComponent != string.Empty))
             {
@@ -88,7 +87,7 @@ namespace Reklamace_Kion
                         Cursor.Current = Cursors.WaitCursor;
 
                         string sqlInsert = "INSERT INTO DataMain values('" + CLM + "','" + Status + "','" + CustomerRequire + "','" + DateOfCustomerSendVal + "','" + DateOfSaftAcceptanceVal + "'," +
-                            "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + PNBattery + "','" + SNBattery + "','" + PNClaimedComponent + "','" + ClaimedComponent + "','" + SNClaimedComponent + "'," +
+                            "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + PNBattery + "','" + SNBattery + "','" + PNClaimedComponent + "','" + SNClaimedComponent + "'," +
                             "'" + Fault + "','" + CW + "','" + DefectBMS + "','" + LocationOfBattery + "','" + ReplacementSend + "'," +
                             "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Price + "','" + Contact + "')";
 
@@ -101,7 +100,7 @@ namespace Reklamace_Kion
                         /////////////////////////////////////////////////////////
                         ///
 
-                        string dir = @"C:\Users\wantulp\Desktop\Reklamace Kion App - V2\Data\Reklamace\";
+                        string dir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\";
                         string CLMDir = CLM;
                         string BatteryDir = "undefined";
                         string ComponentDir = PNClaimedComponent + "_" + SNClaimedComponent;
@@ -120,7 +119,7 @@ namespace Reklamace_Kion
                             CloneDirectory(@"\\cz-ras-fs2\Applications\Reklamace Kion App\Data\ToCopy\02_Interni_hodnoceni", path + @"\02_Interni_hodnoceni");
                             Directory.CreateDirectory(path + @"\03_Vyjadreni_pro_zakaznika");
                             File.Copy(@"\\cz-ras-fs2\Applications\Reklamace Kion App\Data\ToCopy\03_Vyjadreni_pro_zakaznika\TE_template.xlsx", path + @"\03_Vyjadreni_pro_zakaznika\TE_template.xlsx");
-                            File.Copy(@"\\cz-ras-fs2\Applications\Reklamace Kion App\Data\ToCopy\BMSAnalysis_774272-02E_006522.xlsx", path + @"\BMSAnalysis_" + ComponentDir + ".xlsx");
+                            File.Copy(@"\\cz-ras-fs2\Applications\Reklamace Kion App\Data\ToCopy\BMSAnalysis_template.xlsx", path + @"\BMSAnalysis_" + ComponentDir + ".xlsx");
                         }
 
                         ///////////////////////////////////////////////////////
@@ -147,19 +146,26 @@ namespace Reklamace_Kion
 
         private static void CloneDirectory(string root, string dest)
         {
-            foreach (var directory in Directory.GetDirectories(root))
+            try
             {
-                string dirName = Path.GetFileName(directory);
-                if (!Directory.Exists(Path.Combine(dest, dirName)))
+                foreach (var directory in Directory.GetDirectories(root))
                 {
-                    Directory.CreateDirectory(Path.Combine(dest, dirName));
+                    string dirName = Path.GetFileName(directory);
+                    if (!Directory.Exists(Path.Combine(dest, dirName)))
+                    {
+                        Directory.CreateDirectory(Path.Combine(dest, dirName));
+                    }
+                    CloneDirectory(directory, Path.Combine(dest, dirName));
                 }
-                CloneDirectory(directory, Path.Combine(dest, dirName));
-            }
 
-            foreach (var file in Directory.GetFiles(root))
+                foreach (var file in Directory.GetFiles(root))
+                {
+                    File.Copy(file, Path.Combine(dest, Path.GetFileName(file)));
+                }
+            }
+            catch (Exception ex)
             {
-                File.Copy(file, Path.Combine(dest, Path.GetFileName(file)));
+                MessageBox.Show(ex.Message);
             }
         }
 

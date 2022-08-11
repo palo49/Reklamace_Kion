@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace Reklamace_Kion
 {
@@ -463,7 +464,6 @@ namespace Reklamace_Kion
             else if (columnName == "PN_Battery") { CommandText = "UPDATE DataMain SET PN_Battery = @newval WHERE DataId = @id"; }
             else if (columnName == "SN_Battery") { CommandText = "UPDATE DataMain SET SN_Battery = @newval WHERE DataId = @id"; }
             else if (columnName == "PN_Claimed_Component") { CommandText = "UPDATE DataMain SET PN_Claimed_Component = @newval WHERE DataId = @id"; }
-            else if (columnName == "Claimed_Component") { CommandText = "UPDATE DataMain SET Claimed_Component = @newval WHERE DataId = @id"; }
             else if (columnName == "SN_Claimed_Component") { CommandText = "UPDATE DataMain SET SN_Claimed_Component = @newval WHERE DataId = @id"; }
             else if (columnName == "Fault") { CommandText = "UPDATE DataMain SET Fault = @newval WHERE DataId = @id"; }
             else if (columnName == "Type_CW") { CommandText = "UPDATE DataMain SET Type_CW = @newval WHERE DataId = @id"; }
@@ -603,7 +603,6 @@ namespace Reklamace_Kion
                         "(PN_Battery LIKE '%" + txtSearch.Text + "%') OR " +
                         "(SN_Battery LIKE '%" + txtSearch.Text + "%') OR " +
                         "(PN_Claimed_Component LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(Claimed_Component LIKE '%" + txtSearch.Text + "%') OR " +
                         "(SN_Claimed_Component LIKE '%" + txtSearch.Text + "%') OR " +
                         "(Fault LIKE '%" + txtSearch.Text + "%') OR " +
                         "(Type_CW LIKE '%" + txtSearch.Text + "%') OR " +
@@ -643,69 +642,95 @@ namespace Reklamace_Kion
 
         private void přidatKOpravámToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                try
+                {
+                    string actualCellValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
+
+                    DialogResult resultBox = MessageBox.Show("Přidat k opravám " + actualCellValue + "?", "Přidat", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (resultBox == DialogResult.Yes)
+                    {
+                        string sqlRepairs = "SELECT COUNT(*) from DataRepairs where CLM like '" + actualCellValue + "'";
+                        SqlCommand cmdCount = new SqlCommand(sqlRepairs, conn);
+
+                        conn.Open();
+                        int dataCount = (int)cmdCount.ExecuteScalar();
+                        conn.Close();
+
+                        if (dataCount == 0)
+                        {
+                            conn.Open();
+                            SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '', '', '', '', " +
+                                    "'','','','',''," +
+                                    "'','','','','')", conn);
+                            if (cmd.ExecuteNonQuery() != 0)
+                            {
+                                form.DataRepair.Clear();
+                                SqlCommand getDataRepair = new SqlCommand("SELECT * FROM DataRepairs", form.conn);
+                                SqlDataAdapter daDataRepair = new SqlDataAdapter(getDataRepair);
+
+                                daDataRepair.Fill(form.DataRepair);
+                                form.bindRepairData.ResetBindings(true);
+
+                                lblActionInfo.ForeColor = Color.Green;
+                                lblActionInfo.Text = "Záznam " + actualCellValue + " byl přidán k opravám.";
+                            }
+                            conn.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tento záznam již existuje.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void přidatDefektToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                Defekty.AddDefect addDefectForm = new Defekty.AddDefect();
+                addDefectForm.Show();
+            }
+        }
+
+        private void upravitDefektyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                Defekty.ListDefects listDefectsForm = new Defekty.ListDefects();
+                listDefectsForm.Show();
+            }
+        }
+
+        private void toolStripShowFolder_Click(object sender, EventArgs e)
+        {
+            string actualCellValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
+            string dir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\";
+
             try
             {
-                string actualCellValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
-
-                DialogResult resultBox = MessageBox.Show("Přidat k opravám " + actualCellValue + "?", "Přidat", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                
-                if (resultBox == DialogResult.Yes)
+                string path = dir + actualCellValue;
+                if(Directory.Exists(path))
                 {
-                    string sqlRepairs = "SELECT COUNT(*) from DataRepairs where CLM like '" + actualCellValue + "'";
-                    SqlCommand cmdCount = new SqlCommand(sqlRepairs, conn);
-
-                    conn.Open();
-                    int dataCount = (int)cmdCount.ExecuteScalar();
-                    conn.Close();
-
-                    if (dataCount == 0)
-                    {
-                        conn.Open();
-                        SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '', '', '', '', " +
-                                "'','','','',''," +
-                                "'','','','','')", conn);
-                        if (cmd.ExecuteNonQuery() != 0)
-                        {
-                            form.DataRepair.Clear();
-                            SqlCommand getDataRepair = new SqlCommand("SELECT * FROM DataRepairs", form.conn);
-                            SqlDataAdapter daDataRepair = new SqlDataAdapter(getDataRepair);
-
-                            daDataRepair.Fill(form.DataRepair);
-                            form.bindRepairData.ResetBindings(true);
-
-                            lblActionInfo.ForeColor = Color.Green;
-                            lblActionInfo.Text = "Záznam " + actualCellValue + " byl přidán k opravám.";
-                        }
-                        conn.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tento záznam již existuje.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    Process.Start(path);
+                }
+                else
+                {
+                    MessageBox.Show("Pro tento záznam neexistuje složka.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void přidatDefektToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Defekty.AddDefect addDefectForm = new Defekty.AddDefect();
-            addDefectForm.Show();
-        }
-
-        private void upravitDefektyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Defekty.ListDefects listDefectsForm = new Defekty.ListDefects();
-            listDefectsForm.Show();
-        }
-
-        private void btnFiles_Click(object sender, EventArgs e)
-        {
-            Files filesForm = new Files();
-            filesForm.Show();
         }
     }
 }

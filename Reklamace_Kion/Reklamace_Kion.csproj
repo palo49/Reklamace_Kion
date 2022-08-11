@@ -119,12 +119,6 @@
     <Compile Include="EditPass.Designer.cs">
       <DependentUpon>EditPass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Files.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Files.Designer.cs">
-      <DependentUpon>Files.cs</DependentUpon>
-    </Compile>
     <Compile Include="Komponenty\AddComponent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditPass.resx">
       <DependentUpon>EditPass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Files.resx">
-      <DependentUpon>Files.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Komponenty\AddComponent.resx">
       <DependentUpon>AddComponent.cs</DependentUpon>
