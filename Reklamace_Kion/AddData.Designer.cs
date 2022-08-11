@@ -79,9 +79,30 @@
             this.txtSNComponent = new System.Windows.Forms.TextBox();
             this.cmbPNBattery = new System.Windows.Forms.ComboBox();
             this.panelControls = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numTariffRepairman = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numHoursRepairman = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numTariffTechnician = new System.Windows.Forms.NumericUpDown();
+            this.numHoursTechnician = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numTariffAdministration = new System.Windows.Forms.NumericUpDown();
+            this.numHoursAdministration = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.numCostOfComponents = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffRepairman)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursRepairman)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffTechnician)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursTechnician)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffAdministration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursAdministration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCostOfComponents)).BeginInit();
             this.SuspendLayout();
             // 
             // lblClm
@@ -118,6 +139,7 @@
             this.cmbState.FormattingEnabled = true;
             this.cmbState.Items.AddRange(new object[] {
             "Open",
+            "In-process",
             "Closed"});
             this.cmbState.Location = new System.Drawing.Point(4, 84);
             this.cmbState.Name = "cmbState";
@@ -244,9 +266,9 @@
             this.lblCW.Location = new System.Drawing.Point(4, 754);
             this.lblCW.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCW.Name = "lblCW";
-            this.lblCW.Size = new System.Drawing.Size(35, 15);
+            this.lblCW.Size = new System.Drawing.Size(87, 15);
             this.lblCW.TabIndex = 0;
-            this.lblCW.Text = "C / W";
+            this.lblCW.Text = "Typ reklamace";
             // 
             // lblDefectBMS
             // 
@@ -341,8 +363,9 @@
             this.cmbResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbResult.FormattingEnabled = true;
             this.cmbResult.Items.AddRange(new object[] {
-            "Opraveno",
-            "Neopraveno"});
+            "Accepted",
+            "Accepted as goodwill",
+            "Not accepted"});
             this.cmbResult.Location = new System.Drawing.Point(4, 1043);
             this.cmbResult.Name = "cmbResult";
             this.cmbResult.Size = new System.Drawing.Size(346, 23);
@@ -372,20 +395,22 @@
             // lblCostOfRepair
             // 
             this.lblCostOfRepair.AutoSize = true;
-            this.lblCostOfRepair.Location = new System.Drawing.Point(4, 1178);
+            this.lblCostOfRepair.Location = new System.Drawing.Point(4, 1353);
             this.lblCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCostOfRepair.Name = "lblCostOfRepair";
-            this.lblCostOfRepair.Size = new System.Drawing.Size(74, 15);
+            this.lblCostOfRepair.Size = new System.Drawing.Size(118, 15);
             this.lblCostOfRepair.TabIndex = 0;
-            this.lblCostOfRepair.Text = "Cena opravy";
+            this.lblCostOfRepair.Text = "Celková cena opravy";
             // 
             // txtCostOfRepair
             // 
-            this.txtCostOfRepair.Location = new System.Drawing.Point(4, 1196);
+            this.txtCostOfRepair.Location = new System.Drawing.Point(4, 1371);
             this.txtCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCostOfRepair.Name = "txtCostOfRepair";
+            this.txtCostOfRepair.ReadOnly = true;
             this.txtCostOfRepair.Size = new System.Drawing.Size(346, 21);
             this.txtCostOfRepair.TabIndex = 19;
+            this.txtCostOfRepair.Text = "0";
             this.txtCostOfRepair.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostOfRepair_KeyPress);
             // 
             // cmbCW
@@ -403,7 +428,7 @@
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(4, 1232);
+            this.lblContact.Location = new System.Drawing.Point(4, 1175);
             this.lblContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(106, 15);
@@ -412,7 +437,7 @@
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(4, 1250);
+            this.txtContact.Location = new System.Drawing.Point(4, 1193);
             this.txtContact.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(346, 21);
@@ -545,9 +570,10 @@
             this.cmbPNBattery.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPNBattery.FormattingEnabled = true;
             this.cmbPNBattery.Items.AddRange(new object[] {
-            "123",
-            "789",
-            "854"});
+            "774100_B2",
+            "774166_A2",
+            "775369_A1",
+            "776445_B1"});
             this.cmbPNBattery.Location = new System.Drawing.Point(4, 456);
             this.cmbPNBattery.Name = "cmbPNBattery";
             this.cmbPNBattery.Size = new System.Drawing.Size(346, 23);
@@ -557,6 +583,13 @@
             // panelControls
             // 
             this.panelControls.AutoScroll = true;
+            this.panelControls.Controls.Add(this.numHoursAdministration);
+            this.panelControls.Controls.Add(this.numHoursTechnician);
+            this.panelControls.Controls.Add(this.numCostOfComponents);
+            this.panelControls.Controls.Add(this.numHoursRepairman);
+            this.panelControls.Controls.Add(this.numTariffAdministration);
+            this.panelControls.Controls.Add(this.numTariffTechnician);
+            this.panelControls.Controls.Add(this.numTariffRepairman);
             this.panelControls.Controls.Add(this.lblClm);
             this.panelControls.Controls.Add(this.txtSNComponent);
             this.panelControls.Controls.Add(this.lblState);
@@ -582,6 +615,13 @@
             this.panelControls.Controls.Add(this.lblLocationOfBattery);
             this.panelControls.Controls.Add(this.lblContact);
             this.panelControls.Controls.Add(this.cmbDefects);
+            this.panelControls.Controls.Add(this.label11);
+            this.panelControls.Controls.Add(this.label9);
+            this.panelControls.Controls.Add(this.label7);
+            this.panelControls.Controls.Add(this.label10);
+            this.panelControls.Controls.Add(this.label8);
+            this.panelControls.Controls.Add(this.label6);
+            this.panelControls.Controls.Add(this.label12);
             this.panelControls.Controls.Add(this.lblCostOfRepair);
             this.panelControls.Controls.Add(this.lblDateOfSaftSend);
             this.panelControls.Controls.Add(this.txtCLM);
@@ -601,14 +641,175 @@
             this.panelControls.Controls.Add(this.txtFault);
             this.panelControls.Location = new System.Drawing.Point(13, 13);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(377, 458);
+            this.panelControls.Size = new System.Drawing.Size(377, 466);
             this.panelControls.TabIndex = 27;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 1226);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Tarif opravář";
+            // 
+            // numTariffRepairman
+            // 
+            this.numTariffRepairman.Location = new System.Drawing.Point(4, 1244);
+            this.numTariffRepairman.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numTariffRepairman.Name = "numTariffRepairman";
+            this.numTariffRepairman.Size = new System.Drawing.Size(109, 21);
+            this.numTariffRepairman.TabIndex = 27;
+            this.numTariffRepairman.ValueChanged += new System.EventHandler(this.numTariffRepairman_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 1269);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Hodiny opravář";
+            // 
+            // numHoursRepairman
+            // 
+            this.numHoursRepairman.Location = new System.Drawing.Point(4, 1287);
+            this.numHoursRepairman.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numHoursRepairman.Name = "numHoursRepairman";
+            this.numHoursRepairman.Size = new System.Drawing.Size(109, 21);
+            this.numHoursRepairman.TabIndex = 27;
+            this.numHoursRepairman.ValueChanged += new System.EventHandler(this.numHoursRepairman_ValueChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(120, 1226);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Tarif technik";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(120, 1269);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 15);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Hodiny technik";
+            // 
+            // numTariffTechnician
+            // 
+            this.numTariffTechnician.Location = new System.Drawing.Point(120, 1244);
+            this.numTariffTechnician.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numTariffTechnician.Name = "numTariffTechnician";
+            this.numTariffTechnician.Size = new System.Drawing.Size(109, 21);
+            this.numTariffTechnician.TabIndex = 27;
+            this.numTariffTechnician.ValueChanged += new System.EventHandler(this.numTariffTechnician_ValueChanged);
+            // 
+            // numHoursTechnician
+            // 
+            this.numHoursTechnician.Location = new System.Drawing.Point(120, 1287);
+            this.numHoursTechnician.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numHoursTechnician.Name = "numHoursTechnician";
+            this.numHoursTechnician.Size = new System.Drawing.Size(109, 21);
+            this.numHoursTechnician.TabIndex = 27;
+            this.numHoursTechnician.ValueChanged += new System.EventHandler(this.numHoursTechnician_ValueChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(236, 1226);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(105, 15);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Tarif administrace";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(236, 1269);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(119, 15);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Hodiny administrace";
+            // 
+            // numTariffAdministration
+            // 
+            this.numTariffAdministration.Location = new System.Drawing.Point(236, 1244);
+            this.numTariffAdministration.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numTariffAdministration.Name = "numTariffAdministration";
+            this.numTariffAdministration.Size = new System.Drawing.Size(109, 21);
+            this.numTariffAdministration.TabIndex = 27;
+            this.numTariffAdministration.ValueChanged += new System.EventHandler(this.numTariffAdministration_ValueChanged);
+            // 
+            // numHoursAdministration
+            // 
+            this.numHoursAdministration.Location = new System.Drawing.Point(236, 1287);
+            this.numHoursAdministration.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numHoursAdministration.Name = "numHoursAdministration";
+            this.numHoursAdministration.Size = new System.Drawing.Size(109, 21);
+            this.numHoursAdministration.TabIndex = 27;
+            this.numHoursAdministration.ValueChanged += new System.EventHandler(this.numHoursAdministration_ValueChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 1311);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Cena dílů";
+            // 
+            // numCostOfComponents
+            // 
+            this.numCostOfComponents.Location = new System.Drawing.Point(4, 1329);
+            this.numCostOfComponents.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numCostOfComponents.Name = "numCostOfComponents";
+            this.numCostOfComponents.Size = new System.Drawing.Size(341, 21);
+            this.numCostOfComponents.TabIndex = 27;
+            this.numCostOfComponents.ValueChanged += new System.EventHandler(this.numCostOfComponents_ValueChanged);
             // 
             // AddData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 630);
+            this.ClientSize = new System.Drawing.Size(395, 625);
             this.ControlBox = false;
             this.Controls.Add(this.panelControls);
             this.Controls.Add(this.panel1);
@@ -630,6 +831,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelControls.ResumeLayout(false);
             this.panelControls.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffRepairman)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursRepairman)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffTechnician)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursTechnician)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffAdministration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursAdministration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCostOfComponents)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -685,5 +893,19 @@
         private System.Windows.Forms.TextBox txtSNComponent;
         private System.Windows.Forms.ComboBox cmbPNBattery;
         private System.Windows.Forms.Panel panelControls;
+        private System.Windows.Forms.NumericUpDown numHoursAdministration;
+        private System.Windows.Forms.NumericUpDown numHoursTechnician;
+        private System.Windows.Forms.NumericUpDown numCostOfComponents;
+        private System.Windows.Forms.NumericUpDown numHoursRepairman;
+        private System.Windows.Forms.NumericUpDown numTariffAdministration;
+        private System.Windows.Forms.NumericUpDown numTariffTechnician;
+        private System.Windows.Forms.NumericUpDown numTariffRepairman;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -46,6 +46,7 @@
             this.dataGrid1 = new ADGV.AdvancedDataGridView();
             this.CellContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridOpravy = new ADGV.AdvancedDataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,7 +77,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnResetFiltr = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
+            this.cellContextRepairs = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuOpenDataRepairs = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -86,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.cellContextRepairs.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -240,15 +244,23 @@
             this.přidatKOpravámToolStripMenuItem,
             this.toolStripShowFolder});
             this.CellContext.Name = "contextMenuStrip1";
-            this.CellContext.Size = new System.Drawing.Size(181, 70);
+            this.CellContext.Size = new System.Drawing.Size(165, 48);
             // 
             // přidatKOpravámToolStripMenuItem
             // 
             this.přidatKOpravámToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("přidatKOpravámToolStripMenuItem.Image")));
             this.přidatKOpravámToolStripMenuItem.Name = "přidatKOpravámToolStripMenuItem";
-            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.přidatKOpravámToolStripMenuItem.Text = "Přidat k opravám";
             this.přidatKOpravámToolStripMenuItem.Click += new System.EventHandler(this.přidatKOpravámToolStripMenuItem_Click);
+            // 
+            // toolStripShowFolder
+            // 
+            this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
+            this.toolStripShowFolder.Name = "toolStripShowFolder";
+            this.toolStripShowFolder.Size = new System.Drawing.Size(164, 22);
+            this.toolStripShowFolder.Text = "Otevřit složku";
+            this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
             // 
             // tabPage2
             // 
@@ -276,6 +288,7 @@
             this.dataGridOpravy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridOpravy.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.dataGridOpravy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridOpravy.ContextMenuStrip = this.cellContextRepairs;
             this.dataGridOpravy.DateWithTime = false;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
@@ -299,6 +312,7 @@
             this.dataGridOpravy.FilterStringChanged += new System.EventHandler(this.dataGridOpravy_FilterStringChanged);
             this.dataGridOpravy.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridOpravy_CellDoubleClick);
             this.dataGridOpravy.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridOpravy_CellValueChanged);
+            this.dataGridOpravy.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridOpravy_MouseDown);
             // 
             // pictureBox1
             // 
@@ -626,13 +640,28 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // toolStripShowFolder
+            // cellContextRepairs
             // 
-            this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
-            this.toolStripShowFolder.Name = "toolStripShowFolder";
-            this.toolStripShowFolder.Size = new System.Drawing.Size(180, 22);
-            this.toolStripShowFolder.Text = "Otevřit složku";
-            this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
+            this.cellContextRepairs.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenuOpenDataRepairs,
+            this.stripMenuOpenFolderRepairs});
+            this.cellContextRepairs.Name = "contextMenuStrip1";
+            this.cellContextRepairs.Size = new System.Drawing.Size(147, 48);
+            // 
+            // stripMenuOpenFolderRepairs
+            // 
+            this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
+            this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
+            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(146, 22);
+            this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
+            this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
+            // 
+            // StripMenuOpenDataRepairs
+            // 
+            this.StripMenuOpenDataRepairs.Image = ((System.Drawing.Image)(resources.GetObject("StripMenuOpenDataRepairs.Image")));
+            this.StripMenuOpenDataRepairs.Name = "StripMenuOpenDataRepairs";
+            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(146, 22);
+            this.StripMenuOpenDataRepairs.Text = "Data opravy";
             // 
             // Main
             // 
@@ -678,6 +707,7 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.cellContextRepairs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -726,5 +756,8 @@
         private System.Windows.Forms.ToolStripMenuItem přidatDefektToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem upravitDefektyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripShowFolder;
+        private System.Windows.Forms.ContextMenuStrip cellContextRepairs;
+        private System.Windows.Forms.ToolStripMenuItem stripMenuOpenFolderRepairs;
+        private System.Windows.Forms.ToolStripMenuItem StripMenuOpenDataRepairs;
     }
 }

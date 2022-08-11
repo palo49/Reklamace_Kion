@@ -67,8 +67,16 @@ namespace Reklamace_Kion
             string DateOfSendReplacement = DateOfReplacementSend.Value.ToShortDateString();
             string Result = cmbResult.Text;
             string ResultDescription = txtResultDescription.Text;
-            string Price = txtCostOfRepair.Text;
             string Contact = txtContact.Text;
+            float Tariff_Repairman = float.Parse(numTariffRepairman.Text);
+            float Hours_Repairman = float.Parse(numHoursRepairman.Text);
+            float Tariff_Technician = float.Parse(numTariffTechnician.Text);
+            float Hours_Technician = float.Parse(numHoursTechnician.Text);
+            float Tariff_Administration = float.Parse(numTariffAdministration.Text);
+            float Hours_Administration = float.Parse(numHoursAdministration.Text);
+            float CostOfComponents = float.Parse(numCostOfComponents.Text);
+
+            float finalPrice = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + CostOfComponents;
 
             if ((CLM != string.Empty) && (Status != string.Empty) && (PNClaimedComponent != string.Empty) && (SNClaimedComponent != string.Empty))
             {
@@ -89,7 +97,7 @@ namespace Reklamace_Kion
                         string sqlInsert = "INSERT INTO DataMain values('" + CLM + "','" + Status + "','" + CustomerRequire + "','" + DateOfCustomerSendVal + "','" + DateOfSaftAcceptanceVal + "'," +
                             "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + PNBattery + "','" + SNBattery + "','" + PNClaimedComponent + "','" + SNClaimedComponent + "'," +
                             "'" + Fault + "','" + CW + "','" + DefectBMS + "','" + LocationOfBattery + "','" + ReplacementSend + "'," +
-                            "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Price + "','" + Contact + "')";
+                            "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Contact + "','" + Tariff_Repairman + "','" + Hours_Repairman + "','" + Tariff_Technician + "','" + Hours_Technician + "','" + Tariff_Administration + "','" + Hours_Administration + "','" + CostOfComponents + "','" + finalPrice + "')";
 
                         SqlCommand cmdInsert = new SqlCommand(sqlInsert, conn);
                         conn.Open();
@@ -181,6 +189,63 @@ namespace Reklamace_Kion
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void numTariffRepairman_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateFinalPrice();
+        }
+
+        private void numTariffTechnician_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateFinalPrice();
+        }
+
+        private void numTariffAdministration_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateFinalPrice();
+        }
+
+        private void numHoursRepairman_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateFinalPrice();
+        }
+
+        private void numHoursTechnician_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateFinalPrice();
+        }
+
+        private void numHoursAdministration_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateFinalPrice();
+        }
+
+        private void numCostOfComponents_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateFinalPrice();
+        }
+
+        private void UpdateFinalPrice()
+        {
+            try
+            {
+                float Tariff_Repairman = (float)numTariffRepairman.Value;
+                float Hours_Repairman = (float)numHoursRepairman.Value;
+                float Tariff_Technician = (float)numTariffTechnician.Value;
+                float Hours_Technician = (float)numHoursTechnician.Value;
+                float Tariff_Administration = (float)numTariffAdministration.Value;
+                float Hours_Administration = (float)numHoursAdministration.Value;
+                float CostOfComponents = (float)numCostOfComponents.Value;
+
+                float finalPrice = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + CostOfComponents;
+
+                txtCostOfRepair.Text = finalPrice.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

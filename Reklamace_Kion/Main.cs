@@ -454,45 +454,78 @@ namespace Reklamace_Kion
             int rowId = Convert.ToInt32(dataGrid1[0, e.RowIndex].Value);
             string newValue = dataGrid1[e.ColumnIndex, e.RowIndex].Value.ToString();
 
-            if (columnName == "CLM") { CommandText = "UPDATE DataMain SET CLM = @newval WHERE DataId = @id"; }
-            else if (columnName == "State") { CommandText = "UPDATE DataMain SET State = @newval WHERE DataId = @id"; }
-            else if (columnName == "Customer_Require") { CommandText = "UPDATE DataMain SET Customer_Require = @newval WHERE DataId = @id"; }
-            else if (columnName == "Date_Of_Customer_Send") { CommandText = "UPDATE DataMain SET Date_Of_Customer_Send = @newval WHERE DataId = @id"; }
-            else if (columnName == "Date_Of_Saft_Acceptance") { CommandText = "UPDATE DataMain SET Date_Of_Saft_Acceptance = @newval WHERE DataId = @id"; }
-            else if (columnName == "Date_Of_Repair") { CommandText = "UPDATE DataMain SET Date_Of_Repair = @newval WHERE DataId = @id"; }
-            else if (columnName == "Date_Of_Saft_Send") { CommandText = "UPDATE DataMain SET Date_Of_Saft_Send = @newval WHERE DataId = @id"; }
-            else if (columnName == "PN_Battery") { CommandText = "UPDATE DataMain SET PN_Battery = @newval WHERE DataId = @id"; }
-            else if (columnName == "SN_Battery") { CommandText = "UPDATE DataMain SET SN_Battery = @newval WHERE DataId = @id"; }
-            else if (columnName == "PN_Claimed_Component") { CommandText = "UPDATE DataMain SET PN_Claimed_Component = @newval WHERE DataId = @id"; }
-            else if (columnName == "SN_Claimed_Component") { CommandText = "UPDATE DataMain SET SN_Claimed_Component = @newval WHERE DataId = @id"; }
-            else if (columnName == "Fault") { CommandText = "UPDATE DataMain SET Fault = @newval WHERE DataId = @id"; }
-            else if (columnName == "Type_CW") { CommandText = "UPDATE DataMain SET Type_CW = @newval WHERE DataId = @id"; }
-            else if (columnName == "Defect_BMS") { CommandText = "UPDATE DataMain SET Defect_BMS = @newval WHERE DataId = @id"; }
-            else if (columnName == "Location_Of_Battery") { CommandText = "UPDATE DataMain SET Location_Of_Battery = @newval WHERE DataId = @id"; }
-            else if (columnName == "Replacement_Send") { CommandText = "UPDATE DataMain SET Replacement_Send = @newval WHERE DataId = @id"; }
-            else if (columnName == "Date_Of_Replacement_Send") { CommandText = "UPDATE DataMain SET Date_Of_Replacement_Send = @newval WHERE DataId = @id"; }
-            else if (columnName == "Result") { CommandText = "UPDATE DataMain SET Result = @newval WHERE DataId = @id"; }
-            else if (columnName == "Result_Description") { CommandText = "UPDATE DataMain SET Result_Description = @newval WHERE DataId = @id"; }
-            else if (columnName == "Cost_Of_Repair") { CommandText = "UPDATE DataMain SET Cost_Of_Repair = @newval WHERE DataId = @id"; }
-            else if (columnName == "Contact") { CommandText = "UPDATE DataMain SET Contact = @newval WHERE DataId = @id"; }
+            if(columnName != "Cost_Of_Repair")
+            {
+                if (columnName == "CLM") { CommandText = "UPDATE DataMain SET CLM = @newval WHERE DataId = @id"; }
+                else if (columnName == "State") { CommandText = "UPDATE DataMain SET State = @newval WHERE DataId = @id"; }
+                else if (columnName == "Customer_Require") { CommandText = "UPDATE DataMain SET Customer_Require = @newval WHERE DataId = @id"; }
+                else if (columnName == "Date_Of_Customer_Send") { CommandText = "UPDATE DataMain SET Date_Of_Customer_Send = @newval WHERE DataId = @id"; }
+                else if (columnName == "Date_Of_Saft_Acceptance") { CommandText = "UPDATE DataMain SET Date_Of_Saft_Acceptance = @newval WHERE DataId = @id"; }
+                else if (columnName == "Date_Of_Repair") { CommandText = "UPDATE DataMain SET Date_Of_Repair = @newval WHERE DataId = @id"; }
+                else if (columnName == "Date_Of_Saft_Send") { CommandText = "UPDATE DataMain SET Date_Of_Saft_Send = @newval WHERE DataId = @id"; }
+                else if (columnName == "PN_Battery") { CommandText = "UPDATE DataMain SET PN_Battery = @newval WHERE DataId = @id"; }
+                else if (columnName == "SN_Battery") { CommandText = "UPDATE DataMain SET SN_Battery = @newval WHERE DataId = @id"; }
+                else if (columnName == "PN_Claimed_Component") { CommandText = "UPDATE DataMain SET PN_Claimed_Component = @newval WHERE DataId = @id"; }
+                else if (columnName == "SN_Claimed_Component") { CommandText = "UPDATE DataMain SET SN_Claimed_Component = @newval WHERE DataId = @id"; }
+                else if (columnName == "Fault") { CommandText = "UPDATE DataMain SET Fault = @newval WHERE DataId = @id"; }
+                else if (columnName == "Type_CW") { CommandText = "UPDATE DataMain SET Type_CW = @newval WHERE DataId = @id"; }
+                else if (columnName == "Defect_BMS") { CommandText = "UPDATE DataMain SET Defect_BMS = @newval WHERE DataId = @id"; }
+                else if (columnName == "Location_Of_Battery") { CommandText = "UPDATE DataMain SET Location_Of_Battery = @newval WHERE DataId = @id"; }
+                else if (columnName == "Replacement_Send") { CommandText = "UPDATE DataMain SET Replacement_Send = @newval WHERE DataId = @id"; }
+                else if (columnName == "Date_Of_Replacement_Send") { CommandText = "UPDATE DataMain SET Date_Of_Replacement_Send = @newval WHERE DataId = @id"; }
+                else if (columnName == "Result") { CommandText = "UPDATE DataMain SET Result = @newval WHERE DataId = @id"; }
+                else if (columnName == "Result_Description") { CommandText = "UPDATE DataMain SET Result_Description = @newval WHERE DataId = @id"; }
+                else if (columnName == "Contact") { CommandText = "UPDATE DataMain SET Contact = @newval WHERE DataId = @id"; }
+                else if (columnName == "Tariff_Repairman") { CommandText = "UPDATE DataMain SET Tariff_Repairman = @newval WHERE DataId = @id"; }
+                else if (columnName == "Hours_Repairman") { CommandText = "UPDATE DataMain SET Hours_Repairman = @newval WHERE DataId = @id"; }
+                else if (columnName == "Tariff_Technician") { CommandText = "UPDATE DataMain SET Tariff_Technician = @newval WHERE DataId = @id"; }
+                else if (columnName == "Hours_Technician") { CommandText = "UPDATE DataMain SET Hours_Technician = @newval WHERE DataId = @id"; }
+                else if (columnName == "Tariff_Administration") { CommandText = "UPDATE DataMain SET Tariff_Administration = @newval WHERE DataId = @id"; }
+                else if (columnName == "Hours_Administration") { CommandText = "UPDATE DataMain SET Hours_Administration = @newval WHERE DataId = @id"; }
+                else if (columnName == "Cost_Of_Components") { CommandText = "UPDATE DataMain SET Cost_Of_Components = @newval WHERE DataId = @id"; }
 
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(CommandText, conn);
-                cmd.Parameters.AddWithValue("@newval", newValue);
-                cmd.Parameters.AddWithValue("@id", rowId);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                lblActionInfo.ForeColor = Color.Green;
-                lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
-                //form.DataMain.Clear();
-                //dataGrid1.DataSource = GetTableDataMain(conn, DataMain, bindMainData);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(CommandText, conn);
+                    cmd.Parameters.AddWithValue("@newval", newValue);
+                    cmd.Parameters.AddWithValue("@id", rowId);
+                    cmd.ExecuteNonQuery();
+
+                    lblActionInfo.ForeColor = Color.Green;
+                    lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
+                    //form.DataMain.Clear();
+                    //dataGrid1.DataSource = GetTableDataMain(conn, DataMain, bindMainData);
+                    if ((columnName == "Tariff_Repairman") || (columnName == "Hours_Repairman") || (columnName == "Tariff_Technician") || (columnName == "Hours_Technician") || (columnName == "Tariff_Administration") || (columnName == "Hours_Administration") || (columnName == "Cost_Of_Components"))
+                    {
+                        float Tariff_Repairman = float.Parse(dataGrid1[21, e.RowIndex].Value.ToString());
+                        float Hours_Repairman = float.Parse(dataGrid1[22, e.RowIndex].Value.ToString());
+                        float Tariff_Technician = float.Parse(dataGrid1[23, e.RowIndex].Value.ToString());
+                        float Hours_Technician = float.Parse(dataGrid1[24, e.RowIndex].Value.ToString());
+                        float Tariff_Administration = float.Parse(dataGrid1[25, e.RowIndex].Value.ToString());
+                        float Hours_Administration = float.Parse(dataGrid1[26, e.RowIndex].Value.ToString());
+                        float Cost_Of_Components = float.Parse(dataGrid1[27, e.RowIndex].Value.ToString());
+
+                        float finalCost = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + Cost_Of_Components;
+
+                        SqlCommand price = new SqlCommand("UPDATE DataMain SET Cost_Of_Repair = @finalCost WHERE DataId = @id", conn);
+                        price.Parameters.AddWithValue("@finalCost", finalCost);
+                        price.Parameters.AddWithValue("@id", rowId);
+                        int res = price.ExecuteNonQuery();
+
+                        if (res != 0)
+                        {
+                            dataGrid1[28, rowId - 1].Value = finalCost;
+                        }
+                    }
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } 
         }
 
         private void změnitHesloToolStripMenuItem_Click(object sender, EventArgs e)
@@ -640,6 +673,17 @@ namespace Reklamace_Kion
             }
         }
 
+        private void dataGridOpravy_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hti = dataGridOpravy.HitTest(e.X, e.Y);
+                dataGridOpravy.ClearSelection();
+                dataGridOpravy.Rows[hti.RowIndex].Selected = true;
+                actualCell = hti;
+            }
+        }
+
         private void přidatKOpravámToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if ((Level == "100") || (Level == "20") || (Level == "10"))
@@ -712,13 +756,23 @@ namespace Reklamace_Kion
 
         private void toolStripShowFolder_Click(object sender, EventArgs e)
         {
-            string actualCellValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
+            OpenFolderCLM(dataGrid1);
+        }
+
+        private void stripMenuOpenFolderRepairs_Click(object sender, EventArgs e)
+        {
+            OpenFolderCLM(dataGridOpravy);
+        }
+
+        private void OpenFolderCLM(ADGV.AdvancedDataGridView grid)
+        {
+            string actualCellValue = grid[1, actualCell.RowIndex].Value.ToString();
             string dir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\";
 
             try
             {
                 string path = dir + actualCellValue;
-                if(Directory.Exists(path))
+                if (Directory.Exists(path))
                 {
                     Process.Start(path);
                 }
