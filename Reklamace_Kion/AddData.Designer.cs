@@ -283,6 +283,7 @@
             this.cmbPNComponent.Location = new System.Drawing.Point(4, 567);
             this.cmbPNComponent.Name = "cmbPNComponent";
             this.cmbPNComponent.Size = new System.Drawing.Size(346, 23);
+            this.cmbPNComponent.Sorted = true;
             this.cmbPNComponent.TabIndex = 8;
             // 
             // lblReplacementSend
@@ -486,6 +487,7 @@
             this.cmbDefects.Location = new System.Drawing.Point(4, 824);
             this.cmbDefects.Name = "cmbDefects";
             this.cmbDefects.Size = new System.Drawing.Size(346, 23);
+            this.cmbDefects.Sorted = true;
             this.cmbDefects.TabIndex = 24;
             // 
             // label2
@@ -544,11 +546,12 @@
             this.cmbPNBattery.FormattingEnabled = true;
             this.cmbPNBattery.Items.AddRange(new object[] {
             "123",
-            "854",
-            "789"});
+            "789",
+            "854"});
             this.cmbPNBattery.Location = new System.Drawing.Point(4, 456);
             this.cmbPNBattery.Name = "cmbPNBattery";
             this.cmbPNBattery.Size = new System.Drawing.Size(346, 23);
+            this.cmbPNBattery.Sorted = true;
             this.cmbPNBattery.TabIndex = 8;
             // 
             // panelControls
