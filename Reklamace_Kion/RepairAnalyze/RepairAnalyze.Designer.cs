@@ -93,11 +93,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
-            this.tabControl.Location = new System.Drawing.Point(170, 3);
+            this.tabControl.Location = new System.Drawing.Point(0, -1);
             this.tabControl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(861, 517);
+            this.tabControl.Size = new System.Drawing.Size(1031, 465);
             this.tabControl.TabIndex = 25;
             // 
             // tabPage1
@@ -107,7 +107,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage1.Size = new System.Drawing.Size(853, 489);
+            this.tabPage1.Size = new System.Drawing.Size(1023, 437);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -136,14 +136,14 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTorque.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTorque.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvTorque.Location = new System.Drawing.Point(0, 0);
+            this.dgvTorque.Location = new System.Drawing.Point(-4, 0);
             this.dgvTorque.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvTorque.MultiSelect = false;
             this.dgvTorque.Name = "dgvTorque";
             this.dgvTorque.ReadOnly = true;
             this.dgvTorque.RowHeadersVisible = false;
             this.dgvTorque.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTorque.Size = new System.Drawing.Size(852, 485);
+            this.dgvTorque.Size = new System.Drawing.Size(1026, 433);
             this.dgvTorque.TabIndex = 0;
             this.dgvTorque.TimeFilter = false;
             this.dgvTorque.SortStringChanged += new System.EventHandler(this.dgvTorque_SortStringChanged);
@@ -210,7 +210,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(12, 473);
+            this.btnClose.Location = new System.Drawing.Point(12, 470);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(148, 39);
             this.btnClose.TabIndex = 26;
@@ -224,7 +224,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 576);
-            this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.panel1);

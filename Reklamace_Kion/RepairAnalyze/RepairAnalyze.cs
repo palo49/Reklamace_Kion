@@ -111,7 +111,6 @@ namespace Reklamace_Kion.RepairAnalyze
             int curTab = tabControl.SelectedIndex;
             string columnName = dgvTorque.Columns[e.ColumnIndex].Name;
             string id = dgvComponent[1, e.RowIndex].Value.ToString();
-            string newValue = dgvTorque[e.ColumnIndex, e.RowIndex].Value.ToString();
             string CommandText = string.Empty;
 
             try
@@ -129,7 +128,15 @@ namespace Reklamace_Kion.RepairAnalyze
                 {
                     mysql.OpenConection();
                     SqlCommand cmd = new SqlCommand(CommandText, mysql.con);
-                    cmd.Parameters.AddWithValue("@newval", newValue);
+                    if (columnName.Contains("MODULE"))
+                    {
+                        cmd.Parameters.AddWithValue("@newval", dgvTorque[e.ColumnIndex, e.RowIndex].Value.ToString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@newval", Decimal.Parse(dgvTorque[e.ColumnIndex, e.RowIndex].Value.ToString()));
+                    }
+                    
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.ExecuteNonQuery();
                     mysql.CloseConnection();
