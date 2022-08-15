@@ -646,13 +646,13 @@
             this.StripMenuOpenDataRepairs,
             this.stripMenuOpenFolderRepairs});
             this.cellContextRepairs.Name = "contextMenuStrip1";
-            this.cellContextRepairs.Size = new System.Drawing.Size(147, 48);
+            this.cellContextRepairs.Size = new System.Drawing.Size(181, 70);
             // 
             // stripMenuOpenFolderRepairs
             // 
             this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
             this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
-            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(146, 22);
+            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(180, 22);
             this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
             this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
             // 
@@ -660,8 +660,9 @@
             // 
             this.StripMenuOpenDataRepairs.Image = ((System.Drawing.Image)(resources.GetObject("StripMenuOpenDataRepairs.Image")));
             this.StripMenuOpenDataRepairs.Name = "StripMenuOpenDataRepairs";
-            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(146, 22);
+            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(180, 22);
             this.StripMenuOpenDataRepairs.Text = "Data opravy";
+            this.StripMenuOpenDataRepairs.Click += new System.EventHandler(this.StripMenuOpenDataRepairs_Click);
             // 
             // Main
             // 

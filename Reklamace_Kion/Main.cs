@@ -288,6 +288,9 @@ namespace Reklamace_Kion
                 try
                 {
                     int RepairIdTab = (int)dataGridOpravy.CurrentRow.Cells[0].Value;
+                    string CLM = (string)dataGridOpravy.CurrentRow.Cells[1].Value;
+                    string PNBattery = dataGridOpravy[3, actualCell.RowIndex].Value.ToString();
+                    string PNChar = PNBattery.Substring(PNBattery.LastIndexOf('_') + 1);
 
                     DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s ID " + RepairIdTab + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dialogResult == DialogResult.Yes)
@@ -295,6 +298,13 @@ namespace Reklamace_Kion
                         conn.Open();
                         SqlCommand delData = new SqlCommand("DELETE FROM DataRepairs WHERE RepairId=" + RepairIdTab + "", conn);
                         delData.ExecuteNonQuery();
+
+                        delData = new SqlCommand("DELETE FROM CLM_torques_" + PNChar + " WHERE CLM='" + CLM + "'", conn);
+                        delData.ExecuteNonQuery();
+
+                        delData = new SqlCommand("DELETE FROM CLM_components_" + PNChar + " WHERE CLM='" + CLM + "'", conn);
+                        delData.ExecuteNonQuery();
+
                         conn.Close();
                         form.DataRepair.Clear();
                         dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
@@ -684,6 +694,12 @@ namespace Reklamace_Kion
             }
         }
 
+        private string torque(float val)
+        {
+            string result = val.ToString() + " Nm \u00B1 " + (val / 10).ToString() + " Nm";
+            return result;
+        }
+
         private void přidatKOpravámToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if ((Level == "100") || (Level == "20") || (Level == "10"))
@@ -691,6 +707,8 @@ namespace Reklamace_Kion
                 try
                 {
                     string actualCellValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
+                    string PNBattery = dataGrid1[8, actualCell.RowIndex].Value.ToString();
+                    string SNBattery = dataGrid1[9, actualCell.RowIndex].Value.ToString();
 
                     DialogResult resultBox = MessageBox.Show("Přidat k opravám " + actualCellValue + "?", "Přidat", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -706,8 +724,8 @@ namespace Reklamace_Kion
                         if (dataCount == 0)
                         {
                             conn.Open();
-                            SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '', '', '', '', " +
-                                    "'','','','',''," +
+                            SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '" + PNBattery + "', '" + SNBattery + "', '', '', " +
+                                    "'','','','','','',''," +
                                     "'','','','','')", conn);
                             if (cmd.ExecuteNonQuery() != 0)
                             {
@@ -717,6 +735,27 @@ namespace Reklamace_Kion
 
                                 daDataRepair.Fill(form.DataRepair);
                                 form.bindRepairData.ResetBindings(true);
+
+                                string PNChar = PNBattery.Substring(PNBattery.LastIndexOf('_') + 1);
+
+                                cmd = new SqlCommand("INSERT INTO CLM_torques_" + PNChar + " values('" + actualCellValue + "','" + PNBattery + "','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','')", conn);
+                                cmd.ExecuteNonQuery();
+
+                                cmd = new SqlCommand("INSERT INTO CLM_components_" + PNChar + " values('" + actualCellValue + "','" + PNBattery + "','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','',''," +
+                                    "'','','','','','','','','','')", conn);
+                                cmd.ExecuteNonQuery();
 
                                 lblActionInfo.ForeColor = Color.Green;
                                 lblActionInfo.Text = "Záznam " + actualCellValue + " byl přidán k opravám.";
@@ -785,6 +824,17 @@ namespace Reklamace_Kion
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void StripMenuOpenDataRepairs_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            RepairAnalyze.RepairAnalyze repForm = new RepairAnalyze.RepairAnalyze();
+            repForm.PN = dataGridOpravy[3, actualCell.RowIndex].Value.ToString();
+            repForm.CLM = dataGridOpravy[1, actualCell.RowIndex].Value.ToString();
+            repForm.Level = Level;
+            repForm.Show();
+            Cursor.Current = Cursors.Default;
         }
     }
 }

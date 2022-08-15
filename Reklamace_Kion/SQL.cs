@@ -10,7 +10,7 @@ namespace Reklamace_Kion
     public class SQL
     {
         string conString = @"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace";
-        SqlConnection con;
+        public SqlConnection con;
 
         public void OpenConection()
         {

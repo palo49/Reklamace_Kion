@@ -101,11 +101,11 @@
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataRepair\DataRepair.cs">
+    <Compile Include="RepairAnalyze\RepairAnalyze.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DataRepair\DataRepair.Designer.cs">
-      <DependentUpon>DataRepair.cs</DependentUpon>
+    <Compile Include="RepairAnalyze\RepairAnalyze.Designer.cs">
+      <DependentUpon>RepairAnalyze.cs</DependentUpon>
     </Compile>
     <Compile Include="Defekty\AddDefect.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataRepair\DataRepair.resx">
-      <DependentUpon>DataRepair.cs</DependentUpon>
+    <EmbeddedResource Include="RepairAnalyze\RepairAnalyze.resx">
+      <DependentUpon>RepairAnalyze.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Defekty\AddDefect.resx">
       <DependentUpon>AddDefect.cs</DependentUpon>
