@@ -51,6 +51,13 @@ namespace Reklamace_Kion.RepairAnalyze
             Buffering(tableLayoutPanel5);
             Buffering(tableLayoutPanel6);
 
+            Buffering(tableLayoutPanel7);
+            Buffering(tableLayoutPanel8);
+            Buffering(tableLayoutPanel9);
+            Buffering(tableLayoutPanel10);
+            Buffering(tableLayoutPanel11);
+            Buffering(tableLayoutPanel12);
+
             tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
             tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
             tableLayoutPanel3.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
@@ -58,7 +65,19 @@ namespace Reklamace_Kion.RepairAnalyze
             tableLayoutPanel5.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
             tableLayoutPanel6.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
 
+            tableLayoutPanel7.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanel8.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanel9.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanel10.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanel11.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanel12.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+
             PNChar = PN.Substring(PN.LastIndexOf('_') + 1);
+
+            if (PNChar == "A2")
+            {
+                secondPanel.Visible = true;
+            }
         }
 
         private void ClearImage()
@@ -79,6 +98,12 @@ namespace Reklamace_Kion.RepairAnalyze
         private string TRQlbl(int val)
         {
             string result = torques[val - 1].ToString() + " Nm\n\u00B1 " + (torques[val - 1] / 10).ToString() + " Nm";
+            return result;
+        }
+
+        private string TRQlblSecond(int val)
+        {
+            string result = torques[val - 48].ToString() + " Nm\n\u00B1 " + (torques[val - 48] / 10).ToString() + " Nm";
             return result;
         }
 
@@ -123,6 +148,20 @@ namespace Reklamace_Kion.RepairAnalyze
                 MessageBox.Show(ex.Message);
             }
         }
+        private void SetImgSecond(int val)
+        {
+            try
+            {
+                if (pictureBox1.Image == null)
+                {
+                    pictureBox1.Image = imgs[val - 48];
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void lblTRQ_Paint(object sender, PaintEventArgs e)
         {
@@ -131,13 +170,21 @@ namespace Reklamace_Kion.RepairAnalyze
 
             e.Graphics.TranslateTransform(30, 20);
             e.Graphics.RotateTransform(90);
-            if (res >= 20)
+            if (res < 20)
+            {
+                e.Graphics.DrawString(TRQlbl(res), myFont, myBrush, 0, 0);
+            }
+            else if ((res >= 20) && (res < 48))
             {
                 e.Graphics.DrawString(TRQlblCell(5), myFont, myBrush, 0, 0);
             }
-            else
+            else if ((res >= 48) && (res < 67))
             {
-                e.Graphics.DrawString(TRQlbl(res), myFont, myBrush, 0, 0);
+                e.Graphics.DrawString(TRQlblSecond(res), myFont, myBrush, 0, 0);
+            }
+            else if ((res >= 67) && (res < 95))
+            {
+                e.Graphics.DrawString(TRQlblCell(5), myFont, myBrush, 0, 0);
             }
         }
 
@@ -154,7 +201,8 @@ namespace Reklamace_Kion.RepairAnalyze
 
             changebg(lb, Color.FromArgb(254, 250, 224));
 
-            SetImg(res);
+            if (res < 20) { SetImg(res); }
+            else if (res >= 48) { SetImgSecond(res); }
         }
     }
 }

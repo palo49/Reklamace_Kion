@@ -221,6 +221,192 @@
             this.lblTRQ45 = new System.Windows.Forms.Label();
             this.lblTRQ46 = new System.Windows.Forms.Label();
             this.lblTRQ47 = new System.Windows.Forms.Label();
+            this.secondPanel = new System.Windows.Forms.Panel();
+            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.lblTRQ51 = new System.Windows.Forms.Label();
+            this.lblTRQ50 = new System.Windows.Forms.Label();
+            this.lblTRQ49 = new System.Windows.Forms.Label();
+            this.lblTRQ48 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.textBox67 = new System.Windows.Forms.TextBox();
+            this.textBox68 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox69 = new System.Windows.Forms.TextBox();
+            this.textBox70 = new System.Windows.Forms.TextBox();
+            this.lblTRQ66 = new System.Windows.Forms.Label();
+            this.lblTRQ65 = new System.Windows.Forms.Label();
+            this.lblTRQ64 = new System.Windows.Forms.Label();
+            this.lblTRQ63 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.textBox71 = new System.Windows.Forms.TextBox();
+            this.textBox72 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox73 = new System.Windows.Forms.TextBox();
+            this.textBox74 = new System.Windows.Forms.TextBox();
+            this.textBox75 = new System.Windows.Forms.TextBox();
+            this.textBox76 = new System.Windows.Forms.TextBox();
+            this.textBox77 = new System.Windows.Forms.TextBox();
+            this.lblTRQ59 = new System.Windows.Forms.Label();
+            this.lblTRQ58 = new System.Windows.Forms.Label();
+            this.lblTRQ57 = new System.Windows.Forms.Label();
+            this.lblTRQ56 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.textBox78 = new System.Windows.Forms.TextBox();
+            this.textBox79 = new System.Windows.Forms.TextBox();
+            this.lblTRQ60 = new System.Windows.Forms.Label();
+            this.lblTRQ61 = new System.Windows.Forms.Label();
+            this.lblTRQ62 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTRQ67 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label129 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
+            this.label131 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
+            this.label133 = new System.Windows.Forms.Label();
+            this.label134 = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.textBox80 = new System.Windows.Forms.TextBox();
+            this.textBox81 = new System.Windows.Forms.TextBox();
+            this.textBox82 = new System.Windows.Forms.TextBox();
+            this.textBox83 = new System.Windows.Forms.TextBox();
+            this.textBox84 = new System.Windows.Forms.TextBox();
+            this.textBox85 = new System.Windows.Forms.TextBox();
+            this.textBox86 = new System.Windows.Forms.TextBox();
+            this.textBox87 = new System.Windows.Forms.TextBox();
+            this.textBox88 = new System.Windows.Forms.TextBox();
+            this.textBox89 = new System.Windows.Forms.TextBox();
+            this.textBox90 = new System.Windows.Forms.TextBox();
+            this.textBox91 = new System.Windows.Forms.TextBox();
+            this.textBox92 = new System.Windows.Forms.TextBox();
+            this.textBox93 = new System.Windows.Forms.TextBox();
+            this.textBox94 = new System.Windows.Forms.TextBox();
+            this.textBox95 = new System.Windows.Forms.TextBox();
+            this.textBox96 = new System.Windows.Forms.TextBox();
+            this.textBox97 = new System.Windows.Forms.TextBox();
+            this.textBox98 = new System.Windows.Forms.TextBox();
+            this.textBox99 = new System.Windows.Forms.TextBox();
+            this.textBox100 = new System.Windows.Forms.TextBox();
+            this.textBox101 = new System.Windows.Forms.TextBox();
+            this.textBox102 = new System.Windows.Forms.TextBox();
+            this.textBox103 = new System.Windows.Forms.TextBox();
+            this.textBox104 = new System.Windows.Forms.TextBox();
+            this.textBox105 = new System.Windows.Forms.TextBox();
+            this.textBox106 = new System.Windows.Forms.TextBox();
+            this.textBox107 = new System.Windows.Forms.TextBox();
+            this.textBox108 = new System.Windows.Forms.TextBox();
+            this.textBox109 = new System.Windows.Forms.TextBox();
+            this.textBox110 = new System.Windows.Forms.TextBox();
+            this.textBox111 = new System.Windows.Forms.TextBox();
+            this.textBox112 = new System.Windows.Forms.TextBox();
+            this.textBox113 = new System.Windows.Forms.TextBox();
+            this.textBox114 = new System.Windows.Forms.TextBox();
+            this.textBox115 = new System.Windows.Forms.TextBox();
+            this.textBox116 = new System.Windows.Forms.TextBox();
+            this.textBox117 = new System.Windows.Forms.TextBox();
+            this.textBox118 = new System.Windows.Forms.TextBox();
+            this.textBox119 = new System.Windows.Forms.TextBox();
+            this.textBox120 = new System.Windows.Forms.TextBox();
+            this.textBox121 = new System.Windows.Forms.TextBox();
+            this.lblTRQ68 = new System.Windows.Forms.Label();
+            this.lblTRQ69 = new System.Windows.Forms.Label();
+            this.lblTRQ70 = new System.Windows.Forms.Label();
+            this.lblTRQ71 = new System.Windows.Forms.Label();
+            this.lblTRQ72 = new System.Windows.Forms.Label();
+            this.lblTRQ73 = new System.Windows.Forms.Label();
+            this.lblTRQ74 = new System.Windows.Forms.Label();
+            this.lblTRQ75 = new System.Windows.Forms.Label();
+            this.lblTRQ76 = new System.Windows.Forms.Label();
+            this.lblTRQ77 = new System.Windows.Forms.Label();
+            this.lblTRQ78 = new System.Windows.Forms.Label();
+            this.lblTRQ79 = new System.Windows.Forms.Label();
+            this.lblTRQ80 = new System.Windows.Forms.Label();
+            this.lblTRQ81 = new System.Windows.Forms.Label();
+            this.lblTRQ82 = new System.Windows.Forms.Label();
+            this.lblTRQ83 = new System.Windows.Forms.Label();
+            this.lblTRQ84 = new System.Windows.Forms.Label();
+            this.lblTRQ85 = new System.Windows.Forms.Label();
+            this.lblTRQ86 = new System.Windows.Forms.Label();
+            this.lblTRQ87 = new System.Windows.Forms.Label();
+            this.lblTRQ88 = new System.Windows.Forms.Label();
+            this.lblTRQ89 = new System.Windows.Forms.Label();
+            this.lblTRQ90 = new System.Windows.Forms.Label();
+            this.lblTRQ91 = new System.Windows.Forms.Label();
+            this.lblTRQ92 = new System.Windows.Forms.Label();
+            this.lblTRQ93 = new System.Windows.Forms.Label();
+            this.lblTRQ94 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTRQ53 = new System.Windows.Forms.Label();
+            this.lblTRQ52 = new System.Windows.Forms.Label();
+            this.label165 = new System.Windows.Forms.Label();
+            this.label166 = new System.Windows.Forms.Label();
+            this.label167 = new System.Windows.Forms.Label();
+            this.textBox122 = new System.Windows.Forms.TextBox();
+            this.textBox123 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTRQ55 = new System.Windows.Forms.Label();
+            this.lblTRQ54 = new System.Windows.Forms.Label();
+            this.label170 = new System.Windows.Forms.Label();
+            this.label171 = new System.Windows.Forms.Label();
+            this.label172 = new System.Windows.Forms.Label();
+            this.textBox124 = new System.Windows.Forms.TextBox();
+            this.textBox125 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox126 = new System.Windows.Forms.TextBox();
+            this.label173 = new System.Windows.Forms.Label();
+            this.label174 = new System.Windows.Forms.Label();
+            this.label175 = new System.Windows.Forms.Label();
+            this.label176 = new System.Windows.Forms.Label();
+            this.textBox127 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label66 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -233,6 +419,15 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.secondPanel.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCLM
@@ -334,6 +529,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.secondPanel);
             this.panel1.Controls.Add(this.textBox63);
             this.panel1.Controls.Add(this.label64);
             this.panel1.Controls.Add(this.label62);
@@ -347,7 +543,7 @@
             this.panel1.Controls.Add(this.textBox62);
             this.panel1.Location = new System.Drawing.Point(2, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 655);
+            this.panel1.Size = new System.Drawing.Size(940, 696);
             this.panel1.TabIndex = 28;
             // 
             // textBox63
@@ -355,7 +551,7 @@
             this.textBox63.Location = new System.Drawing.Point(28, 607);
             this.textBox63.Multiline = true;
             this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(863, 47);
+            this.textBox63.Size = new System.Drawing.Size(863, 40);
             this.textBox63.TabIndex = 29;
             // 
             // label64
@@ -387,7 +583,7 @@
             this.panel3.Location = new System.Drawing.Point(4, 177);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(919, 53);
+            this.panel3.Size = new System.Drawing.Size(913, 53);
             this.panel3.TabIndex = 26;
             // 
             // txtModuleSN
@@ -396,7 +592,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtModuleSN.Location = new System.Drawing.Point(349, 26);
             this.txtModuleSN.Name = "txtModuleSN";
-            this.txtModuleSN.Size = new System.Drawing.Size(211, 21);
+            this.txtModuleSN.Size = new System.Drawing.Size(194, 21);
             this.txtModuleSN.TabIndex = 12;
             // 
             // lblModuleSN
@@ -405,7 +601,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblModuleSN.Location = new System.Drawing.Point(0, 3);
             this.lblModuleSN.Name = "lblModuleSN";
-            this.lblModuleSN.Size = new System.Drawing.Size(919, 20);
+            this.lblModuleSN.Size = new System.Drawing.Size(902, 20);
             this.lblModuleSN.TabIndex = 11;
             this.lblModuleSN.Text = "Module SN";
             this.lblModuleSN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -418,7 +614,7 @@
             this.label6.Location = new System.Drawing.Point(4, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(903, 2);
+            this.label6.Size = new System.Drawing.Size(886, 2);
             this.label6.TabIndex = 10;
             // 
             // tableLayoutPanel4
@@ -515,6 +711,7 @@
             // 
             this.textBox14.Location = new System.Drawing.Point(3, 140);
             this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(39, 21);
             this.textBox14.TabIndex = 7;
             // 
@@ -522,6 +719,7 @@
             // 
             this.textBox15.Location = new System.Drawing.Point(51, 140);
             this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(39, 21);
             this.textBox15.TabIndex = 8;
             // 
@@ -2736,6 +2934,2437 @@
             this.lblTRQ47.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
             this.lblTRQ47.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
             // 
+            // secondPanel
+            // 
+            this.secondPanel.Controls.Add(this.panel6);
+            this.secondPanel.Controls.Add(this.tableLayoutPanel7);
+            this.secondPanel.Controls.Add(this.textBox127);
+            this.secondPanel.Controls.Add(this.textBox64);
+            this.secondPanel.Controls.Add(this.label176);
+            this.secondPanel.Controls.Add(this.tableLayoutPanel8);
+            this.secondPanel.Controls.Add(this.label175);
+            this.secondPanel.Controls.Add(this.tableLayoutPanel9);
+            this.secondPanel.Controls.Add(this.panel5);
+            this.secondPanel.Controls.Add(this.tableLayoutPanel10);
+            this.secondPanel.Controls.Add(this.tableLayoutPanel12);
+            this.secondPanel.Controls.Add(this.tableLayoutPanel11);
+            this.secondPanel.Location = new System.Drawing.Point(0, 653);
+            this.secondPanel.Name = "secondPanel";
+            this.secondPanel.Size = new System.Drawing.Size(920, 815);
+            this.secondPanel.TabIndex = 30;
+            this.secondPanel.Visible = false;
+            // 
+            // textBox64
+            // 
+            this.textBox64.Location = new System.Drawing.Point(152, 663);
+            this.textBox64.Name = "textBox64";
+            this.textBox64.Size = new System.Drawing.Size(118, 21);
+            this.textBox64.TabIndex = 1;
+            this.textBox64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.Controls.Add(this.textBox65, 3, 3);
+            this.tableLayoutPanel7.Controls.Add(this.textBox66, 2, 3);
+            this.tableLayoutPanel7.Controls.Add(this.lblTRQ51, 3, 2);
+            this.tableLayoutPanel7.Controls.Add(this.lblTRQ50, 2, 2);
+            this.tableLayoutPanel7.Controls.Add(this.lblTRQ49, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.lblTRQ48, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.label69, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label70, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label71, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label72, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label73, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.textBox67, 0, 3);
+            this.tableLayoutPanel7.Controls.Add(this.textBox68, 1, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 112);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 4;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.7541F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10101F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.53659F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.85366F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(191, 166);
+            this.tableLayoutPanel7.TabIndex = 4;
+            // 
+            // textBox65
+            // 
+            this.textBox65.Location = new System.Drawing.Point(144, 140);
+            this.textBox65.Name = "textBox65";
+            this.textBox65.Size = new System.Drawing.Size(40, 21);
+            this.textBox65.TabIndex = 4;
+            // 
+            // textBox66
+            // 
+            this.textBox66.Location = new System.Drawing.Point(97, 140);
+            this.textBox66.Name = "textBox66";
+            this.textBox66.Size = new System.Drawing.Size(39, 21);
+            this.textBox66.TabIndex = 3;
+            // 
+            // lblTRQ51
+            // 
+            this.lblTRQ51.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ51.AutoSize = true;
+            this.lblTRQ51.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ51.Location = new System.Drawing.Point(144, 40);
+            this.lblTRQ51.Name = "lblTRQ51";
+            this.lblTRQ51.Size = new System.Drawing.Size(44, 97);
+            this.lblTRQ51.TabIndex = 7;
+            this.lblTRQ51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ51.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ51.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ51.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ50
+            // 
+            this.lblTRQ50.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ50.AutoSize = true;
+            this.lblTRQ50.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ50.Location = new System.Drawing.Point(97, 40);
+            this.lblTRQ50.Name = "lblTRQ50";
+            this.lblTRQ50.Size = new System.Drawing.Size(41, 97);
+            this.lblTRQ50.TabIndex = 6;
+            this.lblTRQ50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ50.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ50.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ50.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ49
+            // 
+            this.lblTRQ49.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ49.AutoSize = true;
+            this.lblTRQ49.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ49.Location = new System.Drawing.Point(50, 40);
+            this.lblTRQ49.Name = "lblTRQ49";
+            this.lblTRQ49.Size = new System.Drawing.Size(41, 97);
+            this.lblTRQ49.TabIndex = 5;
+            this.lblTRQ49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ49.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ49.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ49.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ48
+            // 
+            this.lblTRQ48.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ48.AutoSize = true;
+            this.lblTRQ48.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ48.Location = new System.Drawing.Point(3, 40);
+            this.lblTRQ48.Name = "lblTRQ48";
+            this.lblTRQ48.Size = new System.Drawing.Size(41, 97);
+            this.lblTRQ48.TabIndex = 4;
+            this.lblTRQ48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ48.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ48.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ48.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // label69
+            // 
+            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(3, 24);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(41, 16);
+            this.label69.TabIndex = 3;
+            this.label69.Text = "+";
+            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label70
+            // 
+            this.tableLayoutPanel7.SetColumnSpan(this.label70, 4);
+            this.label70.Location = new System.Drawing.Point(3, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(181, 23);
+            this.label70.TabIndex = 2;
+            this.label70.Text = "PP(1)-Cover(2)";
+            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label71
+            // 
+            this.label71.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(50, 24);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(41, 16);
+            this.label71.TabIndex = 3;
+            this.label71.Text = "+";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label72
+            // 
+            this.label72.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(144, 24);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(44, 16);
+            this.label72.TabIndex = 3;
+            this.label72.Text = "-";
+            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label73
+            // 
+            this.label73.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(97, 24);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(41, 16);
+            this.label73.TabIndex = 3;
+            this.label73.Text = "-";
+            this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox67
+            // 
+            this.textBox67.Location = new System.Drawing.Point(3, 140);
+            this.textBox67.Name = "textBox67";
+            this.textBox67.Size = new System.Drawing.Size(39, 21);
+            this.textBox67.TabIndex = 1;
+            // 
+            // textBox68
+            // 
+            this.textBox68.Location = new System.Drawing.Point(50, 140);
+            this.textBox68.Name = "textBox68";
+            this.textBox68.Size = new System.Drawing.Size(39, 21);
+            this.textBox68.TabIndex = 2;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.Controls.Add(this.textBox69, 3, 3);
+            this.tableLayoutPanel8.Controls.Add(this.textBox70, 2, 3);
+            this.tableLayoutPanel8.Controls.Add(this.lblTRQ66, 3, 2);
+            this.tableLayoutPanel8.Controls.Add(this.lblTRQ65, 2, 2);
+            this.tableLayoutPanel8.Controls.Add(this.lblTRQ64, 1, 2);
+            this.tableLayoutPanel8.Controls.Add(this.lblTRQ63, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.label78, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label79, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label80, 1, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label81, 3, 1);
+            this.tableLayoutPanel8.Controls.Add(this.label82, 2, 1);
+            this.tableLayoutPanel8.Controls.Add(this.textBox71, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.textBox72, 1, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(732, 112);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 4;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.7541F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10101F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.53659F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.85366F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(191, 166);
+            this.tableLayoutPanel8.TabIndex = 4;
+            // 
+            // textBox69
+            // 
+            this.textBox69.Location = new System.Drawing.Point(144, 140);
+            this.textBox69.Name = "textBox69";
+            this.textBox69.Size = new System.Drawing.Size(40, 21);
+            this.textBox69.TabIndex = 19;
+            // 
+            // textBox70
+            // 
+            this.textBox70.Location = new System.Drawing.Point(97, 140);
+            this.textBox70.Name = "textBox70";
+            this.textBox70.Size = new System.Drawing.Size(39, 21);
+            this.textBox70.TabIndex = 18;
+            // 
+            // lblTRQ66
+            // 
+            this.lblTRQ66.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ66.AutoSize = true;
+            this.lblTRQ66.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ66.Location = new System.Drawing.Point(144, 40);
+            this.lblTRQ66.Name = "lblTRQ66";
+            this.lblTRQ66.Size = new System.Drawing.Size(44, 97);
+            this.lblTRQ66.TabIndex = 7;
+            this.lblTRQ66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ66.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ66.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ66.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ65
+            // 
+            this.lblTRQ65.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ65.AutoSize = true;
+            this.lblTRQ65.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ65.Location = new System.Drawing.Point(97, 40);
+            this.lblTRQ65.Name = "lblTRQ65";
+            this.lblTRQ65.Size = new System.Drawing.Size(41, 97);
+            this.lblTRQ65.TabIndex = 6;
+            this.lblTRQ65.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ65.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ65.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ65.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ64
+            // 
+            this.lblTRQ64.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ64.AutoSize = true;
+            this.lblTRQ64.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ64.Location = new System.Drawing.Point(50, 40);
+            this.lblTRQ64.Name = "lblTRQ64";
+            this.lblTRQ64.Size = new System.Drawing.Size(41, 97);
+            this.lblTRQ64.TabIndex = 5;
+            this.lblTRQ64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ64.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ64.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ64.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ63
+            // 
+            this.lblTRQ63.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ63.AutoSize = true;
+            this.lblTRQ63.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ63.Location = new System.Drawing.Point(3, 40);
+            this.lblTRQ63.Name = "lblTRQ63";
+            this.lblTRQ63.Size = new System.Drawing.Size(41, 97);
+            this.lblTRQ63.TabIndex = 4;
+            this.lblTRQ63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ63.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ63.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ63.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // label78
+            // 
+            this.label78.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(3, 24);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(41, 16);
+            this.label78.TabIndex = 3;
+            this.label78.Text = "+";
+            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label79
+            // 
+            this.tableLayoutPanel8.SetColumnSpan(this.label79, 4);
+            this.label79.Location = new System.Drawing.Point(3, 0);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(181, 23);
+            this.label79.TabIndex = 2;
+            this.label79.Text = "Module";
+            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label80
+            // 
+            this.label80.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(50, 24);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(41, 16);
+            this.label80.TabIndex = 3;
+            this.label80.Text = "+";
+            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label81
+            // 
+            this.label81.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(144, 24);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(44, 16);
+            this.label81.TabIndex = 3;
+            this.label81.Text = "-";
+            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label82
+            // 
+            this.label82.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(97, 24);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(41, 16);
+            this.label82.TabIndex = 3;
+            this.label82.Text = "-";
+            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox71
+            // 
+            this.textBox71.Location = new System.Drawing.Point(3, 140);
+            this.textBox71.Name = "textBox71";
+            this.textBox71.Size = new System.Drawing.Size(39, 21);
+            this.textBox71.TabIndex = 16;
+            // 
+            // textBox72
+            // 
+            this.textBox72.Location = new System.Drawing.Point(50, 140);
+            this.textBox72.Name = "textBox72";
+            this.textBox72.Size = new System.Drawing.Size(39, 21);
+            this.textBox72.TabIndex = 17;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 7;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel9.Controls.Add(this.textBox73, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.textBox74, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.textBox75, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.textBox76, 3, 3);
+            this.tableLayoutPanel9.Controls.Add(this.textBox77, 2, 3);
+            this.tableLayoutPanel9.Controls.Add(this.lblTRQ59, 3, 2);
+            this.tableLayoutPanel9.Controls.Add(this.lblTRQ58, 2, 2);
+            this.tableLayoutPanel9.Controls.Add(this.lblTRQ57, 1, 2);
+            this.tableLayoutPanel9.Controls.Add(this.lblTRQ56, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.label87, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.textBox78, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.textBox79, 1, 3);
+            this.tableLayoutPanel9.Controls.Add(this.lblTRQ60, 4, 2);
+            this.tableLayoutPanel9.Controls.Add(this.lblTRQ61, 5, 2);
+            this.tableLayoutPanel9.Controls.Add(this.lblTRQ62, 6, 2);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(392, 112);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 4;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.96372F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.17735F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.98831F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.87062F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(339, 166);
+            this.tableLayoutPanel9.TabIndex = 4;
+            // 
+            // textBox73
+            // 
+            this.textBox73.Location = new System.Drawing.Point(99, 140);
+            this.textBox73.Name = "textBox73";
+            this.textBox73.Size = new System.Drawing.Size(40, 21);
+            this.textBox73.TabIndex = 11;
+            // 
+            // textBox74
+            // 
+            this.textBox74.Location = new System.Drawing.Point(147, 140);
+            this.textBox74.Name = "textBox74";
+            this.textBox74.Size = new System.Drawing.Size(40, 21);
+            this.textBox74.TabIndex = 12;
+            // 
+            // textBox75
+            // 
+            this.textBox75.Location = new System.Drawing.Point(51, 140);
+            this.textBox75.Name = "textBox75";
+            this.textBox75.Size = new System.Drawing.Size(40, 21);
+            this.textBox75.TabIndex = 10;
+            // 
+            // textBox76
+            // 
+            this.textBox76.Location = new System.Drawing.Point(291, 140);
+            this.textBox76.Name = "textBox76";
+            this.textBox76.Size = new System.Drawing.Size(40, 21);
+            this.textBox76.TabIndex = 15;
+            // 
+            // textBox77
+            // 
+            this.textBox77.Location = new System.Drawing.Point(243, 140);
+            this.textBox77.Name = "textBox77";
+            this.textBox77.Size = new System.Drawing.Size(39, 21);
+            this.textBox77.TabIndex = 14;
+            // 
+            // lblTRQ59
+            // 
+            this.lblTRQ59.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ59.AutoSize = true;
+            this.lblTRQ59.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ59.Location = new System.Drawing.Point(147, 40);
+            this.lblTRQ59.Name = "lblTRQ59";
+            this.lblTRQ59.Size = new System.Drawing.Size(42, 97);
+            this.lblTRQ59.TabIndex = 7;
+            this.lblTRQ59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ59.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ59.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ59.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ58
+            // 
+            this.lblTRQ58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ58.AutoSize = true;
+            this.lblTRQ58.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ58.Location = new System.Drawing.Point(99, 40);
+            this.lblTRQ58.Name = "lblTRQ58";
+            this.lblTRQ58.Size = new System.Drawing.Size(42, 97);
+            this.lblTRQ58.TabIndex = 6;
+            this.lblTRQ58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ58.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ58.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ58.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ57
+            // 
+            this.lblTRQ57.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ57.AutoSize = true;
+            this.lblTRQ57.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ57.Location = new System.Drawing.Point(51, 40);
+            this.lblTRQ57.Name = "lblTRQ57";
+            this.lblTRQ57.Size = new System.Drawing.Size(42, 97);
+            this.lblTRQ57.TabIndex = 5;
+            this.lblTRQ57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ57.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ57.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ57.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ56
+            // 
+            this.lblTRQ56.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ56.AutoSize = true;
+            this.lblTRQ56.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ56.Location = new System.Drawing.Point(3, 40);
+            this.lblTRQ56.Name = "lblTRQ56";
+            this.lblTRQ56.Size = new System.Drawing.Size(42, 97);
+            this.lblTRQ56.TabIndex = 4;
+            this.lblTRQ56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ56.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ56.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ56.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // label87
+            // 
+            this.tableLayoutPanel9.SetColumnSpan(this.label87, 7);
+            this.label87.Location = new System.Drawing.Point(3, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(333, 24);
+            this.label87.TabIndex = 2;
+            this.label87.Text = "Power plate";
+            this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox78
+            // 
+            this.textBox78.Location = new System.Drawing.Point(3, 140);
+            this.textBox78.Name = "textBox78";
+            this.textBox78.Size = new System.Drawing.Size(39, 21);
+            this.textBox78.TabIndex = 9;
+            // 
+            // textBox79
+            // 
+            this.textBox79.Location = new System.Drawing.Point(195, 140);
+            this.textBox79.Name = "textBox79";
+            this.textBox79.Size = new System.Drawing.Size(39, 21);
+            this.textBox79.TabIndex = 13;
+            // 
+            // lblTRQ60
+            // 
+            this.lblTRQ60.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ60.AutoSize = true;
+            this.lblTRQ60.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ60.Location = new System.Drawing.Point(195, 40);
+            this.lblTRQ60.Name = "lblTRQ60";
+            this.lblTRQ60.Size = new System.Drawing.Size(42, 97);
+            this.lblTRQ60.TabIndex = 7;
+            this.lblTRQ60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ60.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ60.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ60.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ61
+            // 
+            this.lblTRQ61.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ61.AutoSize = true;
+            this.lblTRQ61.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ61.Location = new System.Drawing.Point(243, 40);
+            this.lblTRQ61.Name = "lblTRQ61";
+            this.lblTRQ61.Size = new System.Drawing.Size(42, 97);
+            this.lblTRQ61.TabIndex = 7;
+            this.lblTRQ61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ61.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ61.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ61.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ62
+            // 
+            this.lblTRQ62.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ62.AutoSize = true;
+            this.lblTRQ62.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ62.Location = new System.Drawing.Point(291, 40);
+            this.lblTRQ62.Name = "lblTRQ62";
+            this.lblTRQ62.Size = new System.Drawing.Size(45, 97);
+            this.lblTRQ62.TabIndex = 7;
+            this.lblTRQ62.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ62.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ62.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ62.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 28;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.571429F));
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ67, 0, 3);
+            this.tableLayoutPanel10.Controls.Add(this.label92, 0, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label93, 1, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label94, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.label95, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label96, 26, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label97, 24, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label98, 22, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label99, 20, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label100, 18, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label101, 16, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label102, 14, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label103, 12, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label104, 10, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label105, 8, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label106, 6, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label107, 4, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label108, 2, 1);
+            this.tableLayoutPanel10.Controls.Add(this.label109, 3, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label110, 5, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label111, 7, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label112, 11, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label113, 9, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label114, 13, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label115, 15, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label116, 17, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label117, 19, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label118, 21, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label119, 23, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label120, 25, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label121, 27, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label122, 2, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label123, 4, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label124, 6, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label125, 8, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label126, 10, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label127, 12, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label128, 14, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label129, 16, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label130, 18, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label131, 20, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label132, 22, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label133, 24, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label134, 26, 2);
+            this.tableLayoutPanel10.Controls.Add(this.label135, 0, 5);
+            this.tableLayoutPanel10.Controls.Add(this.textBox80, 1, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox81, 2, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox82, 0, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox83, 3, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox84, 4, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox85, 5, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox86, 6, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox87, 7, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox88, 8, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox89, 9, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox90, 10, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox91, 11, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox92, 12, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox93, 13, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox94, 14, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox95, 15, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox96, 16, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox97, 17, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox98, 18, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox99, 19, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox100, 20, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox101, 21, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox102, 22, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox103, 23, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox104, 24, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox105, 25, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox106, 26, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox107, 27, 4);
+            this.tableLayoutPanel10.Controls.Add(this.textBox108, 0, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox109, 2, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox110, 4, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox111, 6, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox112, 10, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox113, 12, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox114, 14, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox115, 16, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox116, 18, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox117, 20, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox118, 22, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox119, 24, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox120, 26, 6);
+            this.tableLayoutPanel10.Controls.Add(this.textBox121, 8, 6);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ68, 1, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ69, 2, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ70, 3, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ71, 4, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ72, 5, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ73, 6, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ74, 7, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ75, 8, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ76, 9, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ77, 10, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ78, 11, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ79, 12, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ80, 13, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ81, 14, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ82, 15, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ83, 16, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ84, 17, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ85, 18, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ86, 19, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ87, 20, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ88, 21, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ89, 22, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ90, 23, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ91, 24, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ92, 25, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ93, 26, 3);
+            this.tableLayoutPanel10.Controls.Add(this.lblTRQ94, 27, 3);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(25, 344);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 7;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.122449F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.78717F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.580175F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.5656F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.945687F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.93291F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.265176F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(870, 313);
+            this.tableLayoutPanel10.TabIndex = 4;
+            // 
+            // lblTRQ67
+            // 
+            this.lblTRQ67.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ67.AutoSize = true;
+            this.lblTRQ67.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ67.Location = new System.Drawing.Point(3, 74);
+            this.lblTRQ67.Name = "lblTRQ67";
+            this.lblTRQ67.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ67.TabIndex = 28;
+            this.lblTRQ67.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ67.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ67.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // label92
+            // 
+            this.label92.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(3, 51);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(25, 23);
+            this.label92.TabIndex = 27;
+            this.label92.Text = "-";
+            this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label93
+            // 
+            this.label93.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(34, 51);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(25, 23);
+            this.label93.TabIndex = 26;
+            this.label93.Text = "+";
+            this.label93.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label94
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.label94, 28);
+            this.label94.Location = new System.Drawing.Point(3, 0);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(864, 18);
+            this.label94.TabIndex = 2;
+            this.label94.Text = "Busbar";
+            this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label95
+            // 
+            this.label95.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label95, 2);
+            this.label95.Location = new System.Drawing.Point(3, 18);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(56, 33);
+            this.label95.TabIndex = 3;
+            this.label95.Text = "Cell 1";
+            this.label95.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label96
+            // 
+            this.label96.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label96, 2);
+            this.label96.Location = new System.Drawing.Point(809, 18);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(58, 33);
+            this.label96.TabIndex = 3;
+            this.label96.Text = "Cell 14";
+            this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label97
+            // 
+            this.label97.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label97, 2);
+            this.label97.Location = new System.Drawing.Point(747, 18);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(56, 33);
+            this.label97.TabIndex = 3;
+            this.label97.Text = "Cell 13";
+            this.label97.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label98
+            // 
+            this.label98.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label98, 2);
+            this.label98.Location = new System.Drawing.Point(685, 18);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(56, 33);
+            this.label98.TabIndex = 3;
+            this.label98.Text = "Cell 12";
+            this.label98.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label99
+            // 
+            this.label99.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label99, 2);
+            this.label99.Location = new System.Drawing.Point(623, 18);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(56, 33);
+            this.label99.TabIndex = 3;
+            this.label99.Text = "Cell 11";
+            this.label99.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label100
+            // 
+            this.label100.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label100, 2);
+            this.label100.Location = new System.Drawing.Point(561, 18);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(56, 33);
+            this.label100.TabIndex = 3;
+            this.label100.Text = "Cell 10";
+            this.label100.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label101
+            // 
+            this.label101.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label101, 2);
+            this.label101.Location = new System.Drawing.Point(499, 18);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(56, 33);
+            this.label101.TabIndex = 3;
+            this.label101.Text = "Cell 9";
+            this.label101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label102
+            // 
+            this.label102.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label102, 2);
+            this.label102.Location = new System.Drawing.Point(437, 18);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(56, 33);
+            this.label102.TabIndex = 3;
+            this.label102.Text = "Cell 8";
+            this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label103
+            // 
+            this.label103.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label103, 2);
+            this.label103.Location = new System.Drawing.Point(375, 18);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(56, 33);
+            this.label103.TabIndex = 3;
+            this.label103.Text = "Cell 7";
+            this.label103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label104
+            // 
+            this.label104.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label104, 2);
+            this.label104.Location = new System.Drawing.Point(313, 18);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(56, 33);
+            this.label104.TabIndex = 3;
+            this.label104.Text = "Cell 6";
+            this.label104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label105
+            // 
+            this.label105.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label105, 2);
+            this.label105.Location = new System.Drawing.Point(251, 18);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(56, 33);
+            this.label105.TabIndex = 3;
+            this.label105.Text = "Cell 5";
+            this.label105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label106
+            // 
+            this.label106.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label106, 2);
+            this.label106.Location = new System.Drawing.Point(189, 18);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(56, 33);
+            this.label106.TabIndex = 3;
+            this.label106.Text = "Cell 4";
+            this.label106.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label107
+            // 
+            this.label107.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label107, 2);
+            this.label107.Location = new System.Drawing.Point(127, 18);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(56, 33);
+            this.label107.TabIndex = 3;
+            this.label107.Text = "Cell 3";
+            this.label107.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label108
+            // 
+            this.label108.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label108, 2);
+            this.label108.Location = new System.Drawing.Point(65, 18);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(56, 33);
+            this.label108.TabIndex = 3;
+            this.label108.Text = "Cell 2";
+            this.label108.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label109
+            // 
+            this.label109.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(96, 51);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(25, 23);
+            this.label109.TabIndex = 26;
+            this.label109.Text = "+";
+            this.label109.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label110
+            // 
+            this.label110.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label110.AutoSize = true;
+            this.label110.Location = new System.Drawing.Point(158, 51);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(25, 23);
+            this.label110.TabIndex = 26;
+            this.label110.Text = "+";
+            this.label110.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label111
+            // 
+            this.label111.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(220, 51);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(25, 23);
+            this.label111.TabIndex = 26;
+            this.label111.Text = "+";
+            this.label111.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label112
+            // 
+            this.label112.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label112.AutoSize = true;
+            this.label112.Location = new System.Drawing.Point(344, 51);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(25, 23);
+            this.label112.TabIndex = 26;
+            this.label112.Text = "+";
+            this.label112.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label113
+            // 
+            this.label113.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label113.AutoSize = true;
+            this.label113.Location = new System.Drawing.Point(282, 51);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(25, 23);
+            this.label113.TabIndex = 26;
+            this.label113.Text = "+";
+            this.label113.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label114
+            // 
+            this.label114.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label114.AutoSize = true;
+            this.label114.Location = new System.Drawing.Point(406, 51);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(25, 23);
+            this.label114.TabIndex = 26;
+            this.label114.Text = "+";
+            this.label114.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label115
+            // 
+            this.label115.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label115.AutoSize = true;
+            this.label115.Location = new System.Drawing.Point(468, 51);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(25, 23);
+            this.label115.TabIndex = 26;
+            this.label115.Text = "+";
+            this.label115.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label116
+            // 
+            this.label116.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label116.AutoSize = true;
+            this.label116.Location = new System.Drawing.Point(530, 51);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(25, 23);
+            this.label116.TabIndex = 26;
+            this.label116.Text = "+";
+            this.label116.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label117
+            // 
+            this.label117.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label117.AutoSize = true;
+            this.label117.Location = new System.Drawing.Point(592, 51);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(25, 23);
+            this.label117.TabIndex = 26;
+            this.label117.Text = "+";
+            this.label117.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label118
+            // 
+            this.label118.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label118.AutoSize = true;
+            this.label118.Location = new System.Drawing.Point(654, 51);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(25, 23);
+            this.label118.TabIndex = 26;
+            this.label118.Text = "+";
+            this.label118.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label119
+            // 
+            this.label119.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label119.AutoSize = true;
+            this.label119.Location = new System.Drawing.Point(716, 51);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(25, 23);
+            this.label119.TabIndex = 26;
+            this.label119.Text = "+";
+            this.label119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label120
+            // 
+            this.label120.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label120.AutoSize = true;
+            this.label120.Location = new System.Drawing.Point(778, 51);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(25, 23);
+            this.label120.TabIndex = 26;
+            this.label120.Text = "+";
+            this.label120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label121
+            // 
+            this.label121.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(840, 51);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(27, 23);
+            this.label121.TabIndex = 26;
+            this.label121.Text = "+";
+            this.label121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label122
+            // 
+            this.label122.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(65, 51);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(25, 23);
+            this.label122.TabIndex = 27;
+            this.label122.Text = "-";
+            this.label122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label123
+            // 
+            this.label123.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(127, 51);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(25, 23);
+            this.label123.TabIndex = 27;
+            this.label123.Text = "-";
+            this.label123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label124
+            // 
+            this.label124.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label124.AutoSize = true;
+            this.label124.Location = new System.Drawing.Point(189, 51);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(25, 23);
+            this.label124.TabIndex = 27;
+            this.label124.Text = "-";
+            this.label124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label125
+            // 
+            this.label125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(251, 51);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(25, 23);
+            this.label125.TabIndex = 27;
+            this.label125.Text = "-";
+            this.label125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label126
+            // 
+            this.label126.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label126.AutoSize = true;
+            this.label126.Location = new System.Drawing.Point(313, 51);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(25, 23);
+            this.label126.TabIndex = 27;
+            this.label126.Text = "-";
+            this.label126.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label127
+            // 
+            this.label127.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label127.AutoSize = true;
+            this.label127.Location = new System.Drawing.Point(375, 51);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(25, 23);
+            this.label127.TabIndex = 27;
+            this.label127.Text = "-";
+            this.label127.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label128
+            // 
+            this.label128.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label128.AutoSize = true;
+            this.label128.Location = new System.Drawing.Point(437, 51);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(25, 23);
+            this.label128.TabIndex = 27;
+            this.label128.Text = "-";
+            this.label128.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label129
+            // 
+            this.label129.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label129.AutoSize = true;
+            this.label129.Location = new System.Drawing.Point(499, 51);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(25, 23);
+            this.label129.TabIndex = 27;
+            this.label129.Text = "-";
+            this.label129.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label130
+            // 
+            this.label130.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label130.AutoSize = true;
+            this.label130.Location = new System.Drawing.Point(561, 51);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(25, 23);
+            this.label130.TabIndex = 27;
+            this.label130.Text = "-";
+            this.label130.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label131
+            // 
+            this.label131.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label131.AutoSize = true;
+            this.label131.Location = new System.Drawing.Point(623, 51);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(25, 23);
+            this.label131.TabIndex = 27;
+            this.label131.Text = "-";
+            this.label131.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label132
+            // 
+            this.label132.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label132.AutoSize = true;
+            this.label132.Location = new System.Drawing.Point(685, 51);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(25, 23);
+            this.label132.TabIndex = 27;
+            this.label132.Text = "-";
+            this.label132.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label133
+            // 
+            this.label133.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label133.AutoSize = true;
+            this.label133.Location = new System.Drawing.Point(747, 51);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(25, 23);
+            this.label133.TabIndex = 27;
+            this.label133.Text = "-";
+            this.label133.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label134
+            // 
+            this.label134.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label134.AutoSize = true;
+            this.label134.Location = new System.Drawing.Point(809, 51);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(25, 23);
+            this.label134.TabIndex = 27;
+            this.label134.Text = "-";
+            this.label134.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label135
+            // 
+            this.label135.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel10.SetColumnSpan(this.label135, 28);
+            this.label135.Location = new System.Drawing.Point(3, 231);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(864, 51);
+            this.label135.TabIndex = 3;
+            this.label135.Text = "Voltage (V)";
+            this.label135.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox80
+            // 
+            this.textBox80.Location = new System.Drawing.Point(34, 207);
+            this.textBox80.Name = "textBox80";
+            this.textBox80.Size = new System.Drawing.Size(25, 21);
+            this.textBox80.TabIndex = 1;
+            this.textBox80.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox81
+            // 
+            this.textBox81.Location = new System.Drawing.Point(65, 207);
+            this.textBox81.Name = "textBox81";
+            this.textBox81.Size = new System.Drawing.Size(25, 21);
+            this.textBox81.TabIndex = 1;
+            this.textBox81.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox82
+            // 
+            this.textBox82.Location = new System.Drawing.Point(3, 207);
+            this.textBox82.Name = "textBox82";
+            this.textBox82.Size = new System.Drawing.Size(25, 21);
+            this.textBox82.TabIndex = 1;
+            this.textBox82.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox83
+            // 
+            this.textBox83.Location = new System.Drawing.Point(96, 207);
+            this.textBox83.Name = "textBox83";
+            this.textBox83.Size = new System.Drawing.Size(25, 21);
+            this.textBox83.TabIndex = 1;
+            this.textBox83.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox84
+            // 
+            this.textBox84.Location = new System.Drawing.Point(127, 207);
+            this.textBox84.Name = "textBox84";
+            this.textBox84.Size = new System.Drawing.Size(25, 21);
+            this.textBox84.TabIndex = 1;
+            this.textBox84.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox85
+            // 
+            this.textBox85.Location = new System.Drawing.Point(158, 207);
+            this.textBox85.Name = "textBox85";
+            this.textBox85.Size = new System.Drawing.Size(25, 21);
+            this.textBox85.TabIndex = 1;
+            this.textBox85.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox86
+            // 
+            this.textBox86.Location = new System.Drawing.Point(189, 207);
+            this.textBox86.Name = "textBox86";
+            this.textBox86.Size = new System.Drawing.Size(25, 21);
+            this.textBox86.TabIndex = 1;
+            this.textBox86.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox87
+            // 
+            this.textBox87.Location = new System.Drawing.Point(220, 207);
+            this.textBox87.Name = "textBox87";
+            this.textBox87.Size = new System.Drawing.Size(25, 21);
+            this.textBox87.TabIndex = 1;
+            this.textBox87.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox88
+            // 
+            this.textBox88.Location = new System.Drawing.Point(251, 207);
+            this.textBox88.Name = "textBox88";
+            this.textBox88.Size = new System.Drawing.Size(25, 21);
+            this.textBox88.TabIndex = 1;
+            this.textBox88.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox89
+            // 
+            this.textBox89.Location = new System.Drawing.Point(282, 207);
+            this.textBox89.Name = "textBox89";
+            this.textBox89.Size = new System.Drawing.Size(25, 21);
+            this.textBox89.TabIndex = 1;
+            this.textBox89.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox90
+            // 
+            this.textBox90.Location = new System.Drawing.Point(313, 207);
+            this.textBox90.Name = "textBox90";
+            this.textBox90.Size = new System.Drawing.Size(25, 21);
+            this.textBox90.TabIndex = 1;
+            this.textBox90.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox91
+            // 
+            this.textBox91.Location = new System.Drawing.Point(344, 207);
+            this.textBox91.Name = "textBox91";
+            this.textBox91.Size = new System.Drawing.Size(25, 21);
+            this.textBox91.TabIndex = 1;
+            this.textBox91.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox92
+            // 
+            this.textBox92.Location = new System.Drawing.Point(375, 207);
+            this.textBox92.Name = "textBox92";
+            this.textBox92.Size = new System.Drawing.Size(25, 21);
+            this.textBox92.TabIndex = 1;
+            this.textBox92.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox93
+            // 
+            this.textBox93.Location = new System.Drawing.Point(406, 207);
+            this.textBox93.Name = "textBox93";
+            this.textBox93.Size = new System.Drawing.Size(25, 21);
+            this.textBox93.TabIndex = 1;
+            this.textBox93.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox94
+            // 
+            this.textBox94.Location = new System.Drawing.Point(437, 207);
+            this.textBox94.Name = "textBox94";
+            this.textBox94.Size = new System.Drawing.Size(25, 21);
+            this.textBox94.TabIndex = 1;
+            this.textBox94.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox95
+            // 
+            this.textBox95.Location = new System.Drawing.Point(468, 207);
+            this.textBox95.Name = "textBox95";
+            this.textBox95.Size = new System.Drawing.Size(25, 21);
+            this.textBox95.TabIndex = 1;
+            this.textBox95.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox96
+            // 
+            this.textBox96.Location = new System.Drawing.Point(499, 207);
+            this.textBox96.Name = "textBox96";
+            this.textBox96.Size = new System.Drawing.Size(25, 21);
+            this.textBox96.TabIndex = 1;
+            this.textBox96.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox97
+            // 
+            this.textBox97.Location = new System.Drawing.Point(530, 207);
+            this.textBox97.Name = "textBox97";
+            this.textBox97.Size = new System.Drawing.Size(25, 21);
+            this.textBox97.TabIndex = 1;
+            this.textBox97.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox98
+            // 
+            this.textBox98.Location = new System.Drawing.Point(561, 207);
+            this.textBox98.Name = "textBox98";
+            this.textBox98.Size = new System.Drawing.Size(25, 21);
+            this.textBox98.TabIndex = 1;
+            this.textBox98.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox99
+            // 
+            this.textBox99.Location = new System.Drawing.Point(592, 207);
+            this.textBox99.Name = "textBox99";
+            this.textBox99.Size = new System.Drawing.Size(25, 21);
+            this.textBox99.TabIndex = 1;
+            this.textBox99.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox100
+            // 
+            this.textBox100.Location = new System.Drawing.Point(623, 207);
+            this.textBox100.Name = "textBox100";
+            this.textBox100.Size = new System.Drawing.Size(25, 21);
+            this.textBox100.TabIndex = 1;
+            this.textBox100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox101
+            // 
+            this.textBox101.Location = new System.Drawing.Point(654, 207);
+            this.textBox101.Name = "textBox101";
+            this.textBox101.Size = new System.Drawing.Size(25, 21);
+            this.textBox101.TabIndex = 1;
+            this.textBox101.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox102
+            // 
+            this.textBox102.Location = new System.Drawing.Point(685, 207);
+            this.textBox102.Name = "textBox102";
+            this.textBox102.Size = new System.Drawing.Size(25, 21);
+            this.textBox102.TabIndex = 1;
+            this.textBox102.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox103
+            // 
+            this.textBox103.Location = new System.Drawing.Point(716, 207);
+            this.textBox103.Name = "textBox103";
+            this.textBox103.Size = new System.Drawing.Size(25, 21);
+            this.textBox103.TabIndex = 1;
+            this.textBox103.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox104
+            // 
+            this.textBox104.Location = new System.Drawing.Point(747, 207);
+            this.textBox104.Name = "textBox104";
+            this.textBox104.Size = new System.Drawing.Size(25, 21);
+            this.textBox104.TabIndex = 1;
+            this.textBox104.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox105
+            // 
+            this.textBox105.Location = new System.Drawing.Point(778, 207);
+            this.textBox105.Name = "textBox105";
+            this.textBox105.Size = new System.Drawing.Size(25, 21);
+            this.textBox105.TabIndex = 1;
+            this.textBox105.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox106
+            // 
+            this.textBox106.Location = new System.Drawing.Point(809, 207);
+            this.textBox106.Name = "textBox106";
+            this.textBox106.Size = new System.Drawing.Size(25, 21);
+            this.textBox106.TabIndex = 1;
+            this.textBox106.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox107
+            // 
+            this.textBox107.Location = new System.Drawing.Point(840, 207);
+            this.textBox107.Name = "textBox107";
+            this.textBox107.Size = new System.Drawing.Size(26, 21);
+            this.textBox107.TabIndex = 1;
+            this.textBox107.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox108
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox108, 2);
+            this.textBox108.Location = new System.Drawing.Point(3, 285);
+            this.textBox108.Name = "textBox108";
+            this.textBox108.Size = new System.Drawing.Size(56, 21);
+            this.textBox108.TabIndex = 1;
+            this.textBox108.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox109
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox109, 2);
+            this.textBox109.Location = new System.Drawing.Point(65, 285);
+            this.textBox109.Name = "textBox109";
+            this.textBox109.Size = new System.Drawing.Size(56, 21);
+            this.textBox109.TabIndex = 1;
+            this.textBox109.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox110
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox110, 2);
+            this.textBox110.Location = new System.Drawing.Point(127, 285);
+            this.textBox110.Name = "textBox110";
+            this.textBox110.Size = new System.Drawing.Size(56, 21);
+            this.textBox110.TabIndex = 1;
+            this.textBox110.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox111
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox111, 2);
+            this.textBox111.Location = new System.Drawing.Point(189, 285);
+            this.textBox111.Name = "textBox111";
+            this.textBox111.Size = new System.Drawing.Size(56, 21);
+            this.textBox111.TabIndex = 1;
+            this.textBox111.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox112
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox112, 2);
+            this.textBox112.Location = new System.Drawing.Point(313, 285);
+            this.textBox112.Name = "textBox112";
+            this.textBox112.Size = new System.Drawing.Size(56, 21);
+            this.textBox112.TabIndex = 1;
+            this.textBox112.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox113
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox113, 2);
+            this.textBox113.Location = new System.Drawing.Point(375, 285);
+            this.textBox113.Name = "textBox113";
+            this.textBox113.Size = new System.Drawing.Size(56, 21);
+            this.textBox113.TabIndex = 1;
+            this.textBox113.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox114
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox114, 2);
+            this.textBox114.Location = new System.Drawing.Point(437, 285);
+            this.textBox114.Name = "textBox114";
+            this.textBox114.Size = new System.Drawing.Size(56, 21);
+            this.textBox114.TabIndex = 1;
+            this.textBox114.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox115
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox115, 2);
+            this.textBox115.Location = new System.Drawing.Point(499, 285);
+            this.textBox115.Name = "textBox115";
+            this.textBox115.Size = new System.Drawing.Size(56, 21);
+            this.textBox115.TabIndex = 1;
+            this.textBox115.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox116
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox116, 2);
+            this.textBox116.Location = new System.Drawing.Point(561, 285);
+            this.textBox116.Name = "textBox116";
+            this.textBox116.Size = new System.Drawing.Size(56, 21);
+            this.textBox116.TabIndex = 1;
+            this.textBox116.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox117
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox117, 2);
+            this.textBox117.Location = new System.Drawing.Point(623, 285);
+            this.textBox117.Name = "textBox117";
+            this.textBox117.Size = new System.Drawing.Size(56, 21);
+            this.textBox117.TabIndex = 1;
+            this.textBox117.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox118
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox118, 2);
+            this.textBox118.Location = new System.Drawing.Point(685, 285);
+            this.textBox118.Name = "textBox118";
+            this.textBox118.Size = new System.Drawing.Size(56, 21);
+            this.textBox118.TabIndex = 1;
+            this.textBox118.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox119
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox119, 2);
+            this.textBox119.Location = new System.Drawing.Point(747, 285);
+            this.textBox119.Name = "textBox119";
+            this.textBox119.Size = new System.Drawing.Size(56, 21);
+            this.textBox119.TabIndex = 1;
+            this.textBox119.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox120
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox120, 2);
+            this.textBox120.Location = new System.Drawing.Point(809, 285);
+            this.textBox120.Name = "textBox120";
+            this.textBox120.Size = new System.Drawing.Size(58, 21);
+            this.textBox120.TabIndex = 1;
+            this.textBox120.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox121
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.textBox121, 2);
+            this.textBox121.Location = new System.Drawing.Point(251, 285);
+            this.textBox121.Name = "textBox121";
+            this.textBox121.Size = new System.Drawing.Size(56, 21);
+            this.textBox121.TabIndex = 1;
+            this.textBox121.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblTRQ68
+            // 
+            this.lblTRQ68.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ68.AutoSize = true;
+            this.lblTRQ68.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ68.Location = new System.Drawing.Point(34, 74);
+            this.lblTRQ68.Name = "lblTRQ68";
+            this.lblTRQ68.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ68.TabIndex = 28;
+            this.lblTRQ68.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ68.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ68.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ69
+            // 
+            this.lblTRQ69.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ69.AutoSize = true;
+            this.lblTRQ69.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ69.Location = new System.Drawing.Point(65, 74);
+            this.lblTRQ69.Name = "lblTRQ69";
+            this.lblTRQ69.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ69.TabIndex = 28;
+            this.lblTRQ69.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ69.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ69.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ70
+            // 
+            this.lblTRQ70.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ70.AutoSize = true;
+            this.lblTRQ70.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ70.Location = new System.Drawing.Point(96, 74);
+            this.lblTRQ70.Name = "lblTRQ70";
+            this.lblTRQ70.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ70.TabIndex = 28;
+            this.lblTRQ70.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ70.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ70.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ71
+            // 
+            this.lblTRQ71.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ71.AutoSize = true;
+            this.lblTRQ71.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ71.Location = new System.Drawing.Point(127, 74);
+            this.lblTRQ71.Name = "lblTRQ71";
+            this.lblTRQ71.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ71.TabIndex = 28;
+            this.lblTRQ71.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ71.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ71.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ72
+            // 
+            this.lblTRQ72.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ72.AutoSize = true;
+            this.lblTRQ72.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ72.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ72.Location = new System.Drawing.Point(158, 74);
+            this.lblTRQ72.Name = "lblTRQ72";
+            this.lblTRQ72.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ72.TabIndex = 28;
+            this.lblTRQ72.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ72.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ72.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ73
+            // 
+            this.lblTRQ73.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ73.AutoSize = true;
+            this.lblTRQ73.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ73.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ73.Location = new System.Drawing.Point(189, 74);
+            this.lblTRQ73.Name = "lblTRQ73";
+            this.lblTRQ73.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ73.TabIndex = 28;
+            this.lblTRQ73.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ73.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ73.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ74
+            // 
+            this.lblTRQ74.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ74.AutoSize = true;
+            this.lblTRQ74.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ74.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ74.Location = new System.Drawing.Point(220, 74);
+            this.lblTRQ74.Name = "lblTRQ74";
+            this.lblTRQ74.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ74.TabIndex = 28;
+            this.lblTRQ74.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ74.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ74.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ75
+            // 
+            this.lblTRQ75.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ75.AutoSize = true;
+            this.lblTRQ75.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ75.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ75.Location = new System.Drawing.Point(251, 74);
+            this.lblTRQ75.Name = "lblTRQ75";
+            this.lblTRQ75.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ75.TabIndex = 28;
+            this.lblTRQ75.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ75.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ75.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ76
+            // 
+            this.lblTRQ76.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ76.AutoSize = true;
+            this.lblTRQ76.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ76.Location = new System.Drawing.Point(282, 74);
+            this.lblTRQ76.Name = "lblTRQ76";
+            this.lblTRQ76.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ76.TabIndex = 28;
+            this.lblTRQ76.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ76.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ76.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ77
+            // 
+            this.lblTRQ77.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ77.AutoSize = true;
+            this.lblTRQ77.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ77.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ77.Location = new System.Drawing.Point(313, 74);
+            this.lblTRQ77.Name = "lblTRQ77";
+            this.lblTRQ77.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ77.TabIndex = 28;
+            this.lblTRQ77.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ77.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ77.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ78
+            // 
+            this.lblTRQ78.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ78.AutoSize = true;
+            this.lblTRQ78.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ78.Location = new System.Drawing.Point(344, 74);
+            this.lblTRQ78.Name = "lblTRQ78";
+            this.lblTRQ78.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ78.TabIndex = 28;
+            this.lblTRQ78.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ78.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ78.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ79
+            // 
+            this.lblTRQ79.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ79.AutoSize = true;
+            this.lblTRQ79.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ79.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ79.Location = new System.Drawing.Point(375, 74);
+            this.lblTRQ79.Name = "lblTRQ79";
+            this.lblTRQ79.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ79.TabIndex = 28;
+            this.lblTRQ79.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ79.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ79.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ80
+            // 
+            this.lblTRQ80.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ80.AutoSize = true;
+            this.lblTRQ80.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ80.Location = new System.Drawing.Point(406, 74);
+            this.lblTRQ80.Name = "lblTRQ80";
+            this.lblTRQ80.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ80.TabIndex = 28;
+            this.lblTRQ80.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ80.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ80.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ81
+            // 
+            this.lblTRQ81.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ81.AutoSize = true;
+            this.lblTRQ81.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ81.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ81.Location = new System.Drawing.Point(437, 74);
+            this.lblTRQ81.Name = "lblTRQ81";
+            this.lblTRQ81.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ81.TabIndex = 28;
+            this.lblTRQ81.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ81.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ81.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ82
+            // 
+            this.lblTRQ82.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ82.AutoSize = true;
+            this.lblTRQ82.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ82.Location = new System.Drawing.Point(468, 74);
+            this.lblTRQ82.Name = "lblTRQ82";
+            this.lblTRQ82.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ82.TabIndex = 28;
+            this.lblTRQ82.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ82.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ82.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ83
+            // 
+            this.lblTRQ83.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ83.AutoSize = true;
+            this.lblTRQ83.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ83.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ83.Location = new System.Drawing.Point(499, 74);
+            this.lblTRQ83.Name = "lblTRQ83";
+            this.lblTRQ83.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ83.TabIndex = 28;
+            this.lblTRQ83.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ83.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ83.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ84
+            // 
+            this.lblTRQ84.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ84.AutoSize = true;
+            this.lblTRQ84.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ84.Location = new System.Drawing.Point(530, 74);
+            this.lblTRQ84.Name = "lblTRQ84";
+            this.lblTRQ84.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ84.TabIndex = 28;
+            this.lblTRQ84.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ84.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ84.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ85
+            // 
+            this.lblTRQ85.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ85.AutoSize = true;
+            this.lblTRQ85.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ85.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ85.Location = new System.Drawing.Point(561, 74);
+            this.lblTRQ85.Name = "lblTRQ85";
+            this.lblTRQ85.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ85.TabIndex = 28;
+            this.lblTRQ85.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ85.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ85.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ86
+            // 
+            this.lblTRQ86.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ86.AutoSize = true;
+            this.lblTRQ86.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ86.Location = new System.Drawing.Point(592, 74);
+            this.lblTRQ86.Name = "lblTRQ86";
+            this.lblTRQ86.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ86.TabIndex = 28;
+            this.lblTRQ86.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ86.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ86.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ87
+            // 
+            this.lblTRQ87.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ87.AutoSize = true;
+            this.lblTRQ87.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ87.Location = new System.Drawing.Point(623, 74);
+            this.lblTRQ87.Name = "lblTRQ87";
+            this.lblTRQ87.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ87.TabIndex = 28;
+            this.lblTRQ87.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ87.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ87.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ88
+            // 
+            this.lblTRQ88.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ88.AutoSize = true;
+            this.lblTRQ88.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ88.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ88.Location = new System.Drawing.Point(654, 74);
+            this.lblTRQ88.Name = "lblTRQ88";
+            this.lblTRQ88.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ88.TabIndex = 28;
+            this.lblTRQ88.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ88.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ88.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ89
+            // 
+            this.lblTRQ89.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ89.AutoSize = true;
+            this.lblTRQ89.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ89.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ89.Location = new System.Drawing.Point(685, 74);
+            this.lblTRQ89.Name = "lblTRQ89";
+            this.lblTRQ89.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ89.TabIndex = 28;
+            this.lblTRQ89.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ89.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ89.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ90
+            // 
+            this.lblTRQ90.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ90.AutoSize = true;
+            this.lblTRQ90.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ90.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ90.Location = new System.Drawing.Point(716, 74);
+            this.lblTRQ90.Name = "lblTRQ90";
+            this.lblTRQ90.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ90.TabIndex = 28;
+            this.lblTRQ90.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ90.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ90.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ91
+            // 
+            this.lblTRQ91.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ91.AutoSize = true;
+            this.lblTRQ91.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ91.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ91.Location = new System.Drawing.Point(747, 74);
+            this.lblTRQ91.Name = "lblTRQ91";
+            this.lblTRQ91.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ91.TabIndex = 28;
+            this.lblTRQ91.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ91.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ91.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ92
+            // 
+            this.lblTRQ92.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ92.AutoSize = true;
+            this.lblTRQ92.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ92.Location = new System.Drawing.Point(778, 74);
+            this.lblTRQ92.Name = "lblTRQ92";
+            this.lblTRQ92.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ92.TabIndex = 28;
+            this.lblTRQ92.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ92.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ92.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ93
+            // 
+            this.lblTRQ93.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ93.AutoSize = true;
+            this.lblTRQ93.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ93.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ93.Location = new System.Drawing.Point(809, 74);
+            this.lblTRQ93.Name = "lblTRQ93";
+            this.lblTRQ93.Size = new System.Drawing.Size(25, 130);
+            this.lblTRQ93.TabIndex = 28;
+            this.lblTRQ93.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ93.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ93.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // lblTRQ94
+            // 
+            this.lblTRQ94.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ94.AutoSize = true;
+            this.lblTRQ94.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblTRQ94.Location = new System.Drawing.Point(840, 74);
+            this.lblTRQ94.Name = "lblTRQ94";
+            this.lblTRQ94.Size = new System.Drawing.Size(27, 130);
+            this.lblTRQ94.TabIndex = 28;
+            this.lblTRQ94.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTRQ94.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ94.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.lblTRQ53, 1, 2);
+            this.tableLayoutPanel11.Controls.Add(this.lblTRQ52, 0, 2);
+            this.tableLayoutPanel11.Controls.Add(this.label165, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.label166, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label167, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.textBox122, 0, 3);
+            this.tableLayoutPanel11.Controls.Add(this.textBox123, 1, 3);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(196, 112);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 4;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.86296F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.17735F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.98831F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97138F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(97, 166);
+            this.tableLayoutPanel11.TabIndex = 4;
+            // 
+            // lblTRQ53
+            // 
+            this.lblTRQ53.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ53.AutoSize = true;
+            this.lblTRQ53.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ53.Location = new System.Drawing.Point(51, 40);
+            this.lblTRQ53.Name = "lblTRQ53";
+            this.lblTRQ53.Size = new System.Drawing.Size(43, 97);
+            this.lblTRQ53.TabIndex = 5;
+            this.lblTRQ53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ53.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ53.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ53.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ52
+            // 
+            this.lblTRQ52.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ52.AutoSize = true;
+            this.lblTRQ52.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ52.Location = new System.Drawing.Point(3, 40);
+            this.lblTRQ52.Name = "lblTRQ52";
+            this.lblTRQ52.Size = new System.Drawing.Size(42, 97);
+            this.lblTRQ52.TabIndex = 4;
+            this.lblTRQ52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ52.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ52.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ52.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // label165
+            // 
+            this.label165.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label165.AutoSize = true;
+            this.label165.Location = new System.Drawing.Point(3, 24);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(42, 16);
+            this.label165.TabIndex = 3;
+            this.label165.Text = "+";
+            this.label165.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label166
+            // 
+            this.tableLayoutPanel11.SetColumnSpan(this.label166, 2);
+            this.label166.Location = new System.Drawing.Point(3, 0);
+            this.label166.Name = "label166";
+            this.label166.Size = new System.Drawing.Size(86, 23);
+            this.label166.TabIndex = 2;
+            this.label166.Text = "PP-Module 1";
+            this.label166.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label167
+            // 
+            this.label167.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label167.AutoSize = true;
+            this.label167.Location = new System.Drawing.Point(51, 24);
+            this.label167.Name = "label167";
+            this.label167.Size = new System.Drawing.Size(43, 16);
+            this.label167.TabIndex = 3;
+            this.label167.Text = "-";
+            this.label167.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox122
+            // 
+            this.textBox122.Location = new System.Drawing.Point(3, 140);
+            this.textBox122.Name = "textBox122";
+            this.textBox122.Size = new System.Drawing.Size(39, 21);
+            this.textBox122.TabIndex = 5;
+            // 
+            // textBox123
+            // 
+            this.textBox123.Location = new System.Drawing.Point(51, 140);
+            this.textBox123.Name = "textBox123";
+            this.textBox123.Size = new System.Drawing.Size(39, 21);
+            this.textBox123.TabIndex = 6;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Controls.Add(this.lblTRQ55, 1, 2);
+            this.tableLayoutPanel12.Controls.Add(this.lblTRQ54, 0, 2);
+            this.tableLayoutPanel12.Controls.Add(this.label170, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.label171, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.label172, 1, 1);
+            this.tableLayoutPanel12.Controls.Add(this.textBox124, 0, 3);
+            this.tableLayoutPanel12.Controls.Add(this.textBox125, 1, 3);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(294, 112);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 4;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.86296F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.17735F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.98831F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97138F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(97, 166);
+            this.tableLayoutPanel12.TabIndex = 4;
+            // 
+            // lblTRQ55
+            // 
+            this.lblTRQ55.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ55.AutoSize = true;
+            this.lblTRQ55.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ55.Location = new System.Drawing.Point(51, 40);
+            this.lblTRQ55.Name = "lblTRQ55";
+            this.lblTRQ55.Size = new System.Drawing.Size(43, 97);
+            this.lblTRQ55.TabIndex = 5;
+            this.lblTRQ55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ55.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ55.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ55.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // lblTRQ54
+            // 
+            this.lblTRQ54.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTRQ54.AutoSize = true;
+            this.lblTRQ54.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lblTRQ54.Location = new System.Drawing.Point(3, 40);
+            this.lblTRQ54.Name = "lblTRQ54";
+            this.lblTRQ54.Size = new System.Drawing.Size(42, 97);
+            this.lblTRQ54.TabIndex = 4;
+            this.lblTRQ54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTRQ54.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTRQ_Paint);
+            this.lblTRQ54.MouseLeave += new System.EventHandler(this.lblTRQ_MouseLeave);
+            this.lblTRQ54.MouseHover += new System.EventHandler(this.lblTRQ_MouseHover);
+            // 
+            // label170
+            // 
+            this.label170.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label170.AutoSize = true;
+            this.label170.Location = new System.Drawing.Point(3, 24);
+            this.label170.Name = "label170";
+            this.label170.Size = new System.Drawing.Size(42, 16);
+            this.label170.TabIndex = 3;
+            this.label170.Text = "+";
+            this.label170.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label171
+            // 
+            this.tableLayoutPanel12.SetColumnSpan(this.label171, 2);
+            this.label171.Location = new System.Drawing.Point(3, 0);
+            this.label171.Name = "label171";
+            this.label171.Size = new System.Drawing.Size(86, 23);
+            this.label171.TabIndex = 2;
+            this.label171.Text = "PP-Module 2";
+            this.label171.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label172
+            // 
+            this.label172.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label172.AutoSize = true;
+            this.label172.Location = new System.Drawing.Point(51, 24);
+            this.label172.Name = "label172";
+            this.label172.Size = new System.Drawing.Size(43, 16);
+            this.label172.TabIndex = 3;
+            this.label172.Text = "-";
+            this.label172.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox124
+            // 
+            this.textBox124.Location = new System.Drawing.Point(3, 140);
+            this.textBox124.Name = "textBox124";
+            this.textBox124.Size = new System.Drawing.Size(39, 21);
+            this.textBox124.TabIndex = 7;
+            // 
+            // textBox125
+            // 
+            this.textBox125.Location = new System.Drawing.Point(51, 140);
+            this.textBox125.Name = "textBox125";
+            this.textBox125.Size = new System.Drawing.Size(39, 21);
+            this.textBox125.TabIndex = 8;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.panel5.Controls.Add(this.textBox126);
+            this.panel5.Controls.Add(this.label173);
+            this.panel5.Controls.Add(this.label174);
+            this.panel5.Location = new System.Drawing.Point(4, 286);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(913, 53);
+            this.panel5.TabIndex = 26;
+            // 
+            // textBox126
+            // 
+            this.textBox126.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox126.Location = new System.Drawing.Point(349, 26);
+            this.textBox126.Name = "textBox126";
+            this.textBox126.Size = new System.Drawing.Size(194, 21);
+            this.textBox126.TabIndex = 12;
+            // 
+            // label173
+            // 
+            this.label173.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label173.Location = new System.Drawing.Point(0, 3);
+            this.label173.Name = "label173";
+            this.label173.Size = new System.Drawing.Size(902, 20);
+            this.label173.TabIndex = 11;
+            this.label173.Text = "Module SN";
+            this.label173.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label174
+            // 
+            this.label174.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label174.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label174.Location = new System.Drawing.Point(4, 0);
+            this.label174.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label174.Name = "label174";
+            this.label174.Size = new System.Drawing.Size(886, 2);
+            this.label174.TabIndex = 10;
+            // 
+            // label175
+            // 
+            this.label175.Location = new System.Drawing.Point(25, 660);
+            this.label175.Name = "label175";
+            this.label175.Size = new System.Drawing.Size(116, 26);
+            this.label175.TabIndex = 27;
+            this.label175.Text = "Total voltage (V):";
+            this.label175.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label176
+            // 
+            this.label176.Location = new System.Drawing.Point(27, 686);
+            this.label176.Name = "label176";
+            this.label176.Size = new System.Drawing.Size(116, 26);
+            this.label176.TabIndex = 28;
+            this.label176.Text = "Information:";
+            this.label176.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBox127
+            // 
+            this.textBox127.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox127.Location = new System.Drawing.Point(28, 716);
+            this.textBox127.Multiline = true;
+            this.textBox127.Name = "textBox127";
+            this.textBox127.Size = new System.Drawing.Size(863, 40);
+            this.textBox127.TabIndex = 29;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel6.Controls.Add(this.label66);
+            this.panel6.Location = new System.Drawing.Point(3, 17);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(913, 53);
+            this.panel6.TabIndex = 30;
+            // 
+            // label66
+            // 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label66.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label66.Location = new System.Drawing.Point(4, 0);
+            this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(886, 2);
+            this.label66.TabIndex = 10;
+            // 
             // AnalysisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2774,6 +5403,23 @@
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.secondPanel.ResumeLayout(false);
+            this.secondPanel.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2972,5 +5618,191 @@
         private System.Windows.Forms.Label lblTRQ45;
         private System.Windows.Forms.Label lblTRQ46;
         private System.Windows.Forms.Label lblTRQ47;
+        private System.Windows.Forms.Panel secondPanel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.TextBox textBox65;
+        private System.Windows.Forms.TextBox textBox66;
+        private System.Windows.Forms.Label lblTRQ51;
+        private System.Windows.Forms.Label lblTRQ50;
+        private System.Windows.Forms.Label lblTRQ49;
+        private System.Windows.Forms.Label lblTRQ48;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.TextBox textBox67;
+        private System.Windows.Forms.TextBox textBox68;
+        private System.Windows.Forms.TextBox textBox127;
+        private System.Windows.Forms.TextBox textBox64;
+        private System.Windows.Forms.Label label176;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.TextBox textBox69;
+        private System.Windows.Forms.TextBox textBox70;
+        private System.Windows.Forms.Label lblTRQ66;
+        private System.Windows.Forms.Label lblTRQ65;
+        private System.Windows.Forms.Label lblTRQ64;
+        private System.Windows.Forms.Label lblTRQ63;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.TextBox textBox71;
+        private System.Windows.Forms.TextBox textBox72;
+        private System.Windows.Forms.Label label175;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.TextBox textBox73;
+        private System.Windows.Forms.TextBox textBox74;
+        private System.Windows.Forms.TextBox textBox75;
+        private System.Windows.Forms.TextBox textBox76;
+        private System.Windows.Forms.TextBox textBox77;
+        private System.Windows.Forms.Label lblTRQ59;
+        private System.Windows.Forms.Label lblTRQ58;
+        private System.Windows.Forms.Label lblTRQ57;
+        private System.Windows.Forms.Label lblTRQ56;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.TextBox textBox78;
+        private System.Windows.Forms.TextBox textBox79;
+        private System.Windows.Forms.Label lblTRQ60;
+        private System.Windows.Forms.Label lblTRQ61;
+        private System.Windows.Forms.Label lblTRQ62;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox textBox126;
+        private System.Windows.Forms.Label label173;
+        private System.Windows.Forms.Label label174;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Label lblTRQ67;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.Label label114;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label label131;
+        private System.Windows.Forms.Label label132;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.TextBox textBox80;
+        private System.Windows.Forms.TextBox textBox81;
+        private System.Windows.Forms.TextBox textBox82;
+        private System.Windows.Forms.TextBox textBox83;
+        private System.Windows.Forms.TextBox textBox84;
+        private System.Windows.Forms.TextBox textBox85;
+        private System.Windows.Forms.TextBox textBox86;
+        private System.Windows.Forms.TextBox textBox87;
+        private System.Windows.Forms.TextBox textBox88;
+        private System.Windows.Forms.TextBox textBox89;
+        private System.Windows.Forms.TextBox textBox90;
+        private System.Windows.Forms.TextBox textBox91;
+        private System.Windows.Forms.TextBox textBox92;
+        private System.Windows.Forms.TextBox textBox93;
+        private System.Windows.Forms.TextBox textBox94;
+        private System.Windows.Forms.TextBox textBox95;
+        private System.Windows.Forms.TextBox textBox96;
+        private System.Windows.Forms.TextBox textBox97;
+        private System.Windows.Forms.TextBox textBox98;
+        private System.Windows.Forms.TextBox textBox99;
+        private System.Windows.Forms.TextBox textBox100;
+        private System.Windows.Forms.TextBox textBox101;
+        private System.Windows.Forms.TextBox textBox102;
+        private System.Windows.Forms.TextBox textBox103;
+        private System.Windows.Forms.TextBox textBox104;
+        private System.Windows.Forms.TextBox textBox105;
+        private System.Windows.Forms.TextBox textBox106;
+        private System.Windows.Forms.TextBox textBox107;
+        private System.Windows.Forms.TextBox textBox108;
+        private System.Windows.Forms.TextBox textBox109;
+        private System.Windows.Forms.TextBox textBox110;
+        private System.Windows.Forms.TextBox textBox111;
+        private System.Windows.Forms.TextBox textBox112;
+        private System.Windows.Forms.TextBox textBox113;
+        private System.Windows.Forms.TextBox textBox114;
+        private System.Windows.Forms.TextBox textBox115;
+        private System.Windows.Forms.TextBox textBox116;
+        private System.Windows.Forms.TextBox textBox117;
+        private System.Windows.Forms.TextBox textBox118;
+        private System.Windows.Forms.TextBox textBox119;
+        private System.Windows.Forms.TextBox textBox120;
+        private System.Windows.Forms.TextBox textBox121;
+        private System.Windows.Forms.Label lblTRQ68;
+        private System.Windows.Forms.Label lblTRQ69;
+        private System.Windows.Forms.Label lblTRQ70;
+        private System.Windows.Forms.Label lblTRQ71;
+        private System.Windows.Forms.Label lblTRQ72;
+        private System.Windows.Forms.Label lblTRQ73;
+        private System.Windows.Forms.Label lblTRQ74;
+        private System.Windows.Forms.Label lblTRQ75;
+        private System.Windows.Forms.Label lblTRQ76;
+        private System.Windows.Forms.Label lblTRQ77;
+        private System.Windows.Forms.Label lblTRQ78;
+        private System.Windows.Forms.Label lblTRQ79;
+        private System.Windows.Forms.Label lblTRQ80;
+        private System.Windows.Forms.Label lblTRQ81;
+        private System.Windows.Forms.Label lblTRQ82;
+        private System.Windows.Forms.Label lblTRQ83;
+        private System.Windows.Forms.Label lblTRQ84;
+        private System.Windows.Forms.Label lblTRQ85;
+        private System.Windows.Forms.Label lblTRQ86;
+        private System.Windows.Forms.Label lblTRQ87;
+        private System.Windows.Forms.Label lblTRQ88;
+        private System.Windows.Forms.Label lblTRQ89;
+        private System.Windows.Forms.Label lblTRQ90;
+        private System.Windows.Forms.Label lblTRQ91;
+        private System.Windows.Forms.Label lblTRQ92;
+        private System.Windows.Forms.Label lblTRQ93;
+        private System.Windows.Forms.Label lblTRQ94;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.Label lblTRQ55;
+        private System.Windows.Forms.Label lblTRQ54;
+        private System.Windows.Forms.Label label170;
+        private System.Windows.Forms.Label label171;
+        private System.Windows.Forms.Label label172;
+        private System.Windows.Forms.TextBox textBox124;
+        private System.Windows.Forms.TextBox textBox125;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Label lblTRQ53;
+        private System.Windows.Forms.Label lblTRQ52;
+        private System.Windows.Forms.Label label165;
+        private System.Windows.Forms.Label label166;
+        private System.Windows.Forms.Label label167;
+        private System.Windows.Forms.TextBox textBox122;
+        private System.Windows.Forms.TextBox textBox123;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label66;
     }
 }
