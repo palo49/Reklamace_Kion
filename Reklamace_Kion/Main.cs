@@ -829,7 +829,7 @@ namespace Reklamace_Kion
         private void StripMenuOpenDataRepairs_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            RepairAnalyze.RepairAnalyze repForm = new RepairAnalyze.RepairAnalyze();
+            RepairAnalyze.AnalysisForm repForm = new RepairAnalyze.AnalysisForm();
             repForm.PN = dataGridOpravy[3, actualCell.RowIndex].Value.ToString();
             repForm.CLM = dataGridOpravy[1, actualCell.RowIndex].Value.ToString();
             repForm.Level = Level;

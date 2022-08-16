@@ -101,6 +101,12 @@
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="RepairAnalyze\AnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepairAnalyze\AnalysisForm.Designer.cs">
+      <DependentUpon>AnalysisForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RepairAnalyze\RepairAnalyze.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RepairAnalyze\AnalysisForm.resx">
+      <DependentUpon>AnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RepairAnalyze\RepairAnalyze.resx">
       <DependentUpon>RepairAnalyze.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +223,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -275,6 +285,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="analytics_analysis_data_business_charts_document_report_icon_188743.ico" />
+    <None Include="RepairAnalyze\Images\19.png" />
+    <None Include="RepairAnalyze\Images\18.png" />
+    <None Include="RepairAnalyze\Images\17.png" />
+    <None Include="RepairAnalyze\Images\16.png" />
+    <None Include="RepairAnalyze\Images\15.png" />
+    <None Include="RepairAnalyze\Images\14.png" />
+    <None Include="RepairAnalyze\Images\13.png" />
+    <None Include="RepairAnalyze\Images\12.png" />
+    <None Include="RepairAnalyze\Images\11.png" />
+    <None Include="RepairAnalyze\Images\10.png" />
+    <None Include="RepairAnalyze\Images\9.png" />
+    <None Include="RepairAnalyze\Images\8.png" />
+    <None Include="RepairAnalyze\Images\7.png" />
+    <None Include="RepairAnalyze\Images\6.png" />
+    <None Include="RepairAnalyze\Images\5.png" />
+    <None Include="RepairAnalyze\Images\4.png" />
+    <None Include="RepairAnalyze\Images\3.png" />
+    <None Include="RepairAnalyze\Images\2.png" />
+    <None Include="RepairAnalyze\Images\1.png" />
+    <None Include="Resources\Image1.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
