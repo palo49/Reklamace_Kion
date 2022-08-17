@@ -23,7 +23,6 @@ namespace Reklamace_Kion.RepairAnalyze
         public string Level { get; set; }
 
         Font myFont = new Font("Microsoft Sans Serif", 9);
-        Font myFontCell = new Font("Microsoft Sans Serif", 8);
         Brush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
 
         public AnalysisForm()
@@ -44,6 +43,10 @@ namespace Reklamace_Kion.RepairAnalyze
             lblCLM.Text = CLM;
             lblPN.Text = PN;
 
+            panel1.Size = new Size(940, 696);
+            panelB.Location = new Point(2, 9);
+            panelB.Size = new Size(940, 696);
+
             Buffering(tableLayoutPanel1);
             Buffering(tableLayoutPanel2);
             Buffering(tableLayoutPanel3);
@@ -51,12 +54,11 @@ namespace Reklamace_Kion.RepairAnalyze
             Buffering(tableLayoutPanel5);
             Buffering(tableLayoutPanel6);
 
-            Buffering(tableLayoutPanel7);
-            Buffering(tableLayoutPanel8);
-            Buffering(tableLayoutPanel9);
             Buffering(tableLayoutPanel10);
-            Buffering(tableLayoutPanel11);
-            Buffering(tableLayoutPanel12);
+
+            Buffering(tableLayoutPanelB1);
+            Buffering(tableLayoutPanelB2);
+            Buffering(tableLayoutPanelB2_2);
 
             tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
             tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
@@ -65,18 +67,37 @@ namespace Reklamace_Kion.RepairAnalyze
             tableLayoutPanel5.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
             tableLayoutPanel6.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
 
-            tableLayoutPanel7.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
-            tableLayoutPanel8.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
-            tableLayoutPanel9.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
             tableLayoutPanel10.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
-            tableLayoutPanel11.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
-            tableLayoutPanel12.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+
+            tableLayoutPanelB1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanelB2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            tableLayoutPanelB2_2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
 
             PNChar = PN.Substring(PN.LastIndexOf('_') + 1);
 
-            if (PNChar == "A2")
+            if (PNChar.Contains("A"))
             {
-                secondPanel.Visible = true;
+                panel1.Visible = true;
+
+                if (PNChar == "A2")
+                {
+                    txtPPModule2_1.ReadOnly = false;
+                    txtPPModule2_2.ReadOnly = false;
+                    secondPanel.Visible = true;
+                }
+            }
+            if (PNChar.Contains("B"))
+            {
+                panelB.Visible = true;
+                lblModule1.Text = "MODULE-23-VL41M-SFP-7S5P (Bottom position) SN";
+
+                if (PNChar == "B2")
+                {
+                    lblModule1.Text = "MODULE-23-VL41M-SFP-7S5P (Top position) SN";
+                    txtB2B.ReadOnly = false;
+                    txtB14B.ReadOnly = false;
+                    panelB2.Visible = true;
+                }
             }
         }
 
@@ -94,6 +115,7 @@ namespace Reklamace_Kion.RepairAnalyze
         }
 
         double[] torques = { 13, 13, 5, 5, 13, 5, 13, 5, 5, 10, 10, 13, 13, 1, 1, 13, 13, 5, 5, 13, 13, 5, 5 };
+        double[] torquesB = { 4,5,5,10,10,5,5,13,5,5,5,5,5,4,5,5 };
 
         private string TRQlbl(int val)
         {
@@ -110,6 +132,12 @@ namespace Reklamace_Kion.RepairAnalyze
         private string TRQlblCell(int val)
         {
             string result = "\n" + torques[val].ToString() + " Nm \u00B1 " + (torques[val] / 10).ToString() + " Nm";
+            return result;
+        }
+
+        private string TRQlblB(int val)
+        {
+            string result = torquesB[val - 1].ToString() + " Nm\n\u00B1 " + (torquesB[val - 1] / 10).ToString() + " Nm";
             return result;
         }
 
@@ -203,6 +231,41 @@ namespace Reklamace_Kion.RepairAnalyze
 
             if (res < 20) { SetImg(res); }
             else if (res >= 48) { SetImgSecond(res); }
+        }
+
+        private void lblTRQB_Paint(object sender, PaintEventArgs e)
+        {
+            Label lb = (Label)sender;
+            int res = Convert.ToInt16(lb.Name.Remove(0, 7));
+
+            e.Graphics.TranslateTransform(30, 20);
+            e.Graphics.RotateTransform(90);
+            if (res < 17)
+            {
+                e.Graphics.DrawString(TRQlblB(res), myFont, myBrush, 0, 0);
+            }
+            else if ((res >= 20) && (res < 48))
+            {
+                
+            }
+            else if ((res >= 48) && (res < 67))
+            {
+                
+            }
+            else if ((res >= 67) && (res < 95))
+            {
+                
+            }
+        }
+
+        private void lblTRQB_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTRQB_MouseLeave(object sender, EventArgs e)
+        {
+
         }
     }
 }
