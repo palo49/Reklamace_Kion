@@ -40,11 +40,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.secondPanel = new System.Windows.Forms.Panel();
             this.textBox127 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.txt108 = new System.Windows.Forms.TextBox();
             this.label176 = new System.Windows.Forms.Label();
             this.label175 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox126 = new System.Windows.Forms.TextBox();
+            this.txt65 = new System.Windows.Forms.TextBox();
             this.label173 = new System.Windows.Forms.Label();
             this.label174 = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -93,48 +93,48 @@
             this.label133 = new System.Windows.Forms.Label();
             this.label134 = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
-            this.textBox80 = new System.Windows.Forms.TextBox();
-            this.textBox81 = new System.Windows.Forms.TextBox();
-            this.textBox82 = new System.Windows.Forms.TextBox();
-            this.textBox83 = new System.Windows.Forms.TextBox();
-            this.textBox84 = new System.Windows.Forms.TextBox();
-            this.textBox85 = new System.Windows.Forms.TextBox();
-            this.textBox86 = new System.Windows.Forms.TextBox();
-            this.textBox87 = new System.Windows.Forms.TextBox();
-            this.textBox88 = new System.Windows.Forms.TextBox();
-            this.textBox89 = new System.Windows.Forms.TextBox();
-            this.textBox90 = new System.Windows.Forms.TextBox();
-            this.textBox91 = new System.Windows.Forms.TextBox();
-            this.textBox92 = new System.Windows.Forms.TextBox();
-            this.textBox93 = new System.Windows.Forms.TextBox();
-            this.textBox94 = new System.Windows.Forms.TextBox();
-            this.textBox95 = new System.Windows.Forms.TextBox();
-            this.textBox96 = new System.Windows.Forms.TextBox();
-            this.textBox97 = new System.Windows.Forms.TextBox();
-            this.textBox98 = new System.Windows.Forms.TextBox();
-            this.textBox99 = new System.Windows.Forms.TextBox();
-            this.textBox100 = new System.Windows.Forms.TextBox();
-            this.textBox101 = new System.Windows.Forms.TextBox();
-            this.textBox102 = new System.Windows.Forms.TextBox();
-            this.textBox103 = new System.Windows.Forms.TextBox();
-            this.textBox104 = new System.Windows.Forms.TextBox();
-            this.textBox105 = new System.Windows.Forms.TextBox();
-            this.textBox106 = new System.Windows.Forms.TextBox();
-            this.textBox107 = new System.Windows.Forms.TextBox();
-            this.textBox108 = new System.Windows.Forms.TextBox();
-            this.textBox109 = new System.Windows.Forms.TextBox();
-            this.textBox110 = new System.Windows.Forms.TextBox();
-            this.textBox111 = new System.Windows.Forms.TextBox();
-            this.textBox112 = new System.Windows.Forms.TextBox();
-            this.textBox113 = new System.Windows.Forms.TextBox();
-            this.textBox114 = new System.Windows.Forms.TextBox();
-            this.textBox115 = new System.Windows.Forms.TextBox();
-            this.textBox116 = new System.Windows.Forms.TextBox();
-            this.textBox117 = new System.Windows.Forms.TextBox();
-            this.textBox118 = new System.Windows.Forms.TextBox();
-            this.textBox119 = new System.Windows.Forms.TextBox();
-            this.textBox120 = new System.Windows.Forms.TextBox();
-            this.textBox121 = new System.Windows.Forms.TextBox();
+            this.txt67 = new System.Windows.Forms.TextBox();
+            this.txt68 = new System.Windows.Forms.TextBox();
+            this.txt66 = new System.Windows.Forms.TextBox();
+            this.txt69 = new System.Windows.Forms.TextBox();
+            this.txt70 = new System.Windows.Forms.TextBox();
+            this.txt71 = new System.Windows.Forms.TextBox();
+            this.txt72 = new System.Windows.Forms.TextBox();
+            this.txt73 = new System.Windows.Forms.TextBox();
+            this.txt74 = new System.Windows.Forms.TextBox();
+            this.txt75 = new System.Windows.Forms.TextBox();
+            this.txt76 = new System.Windows.Forms.TextBox();
+            this.txt77 = new System.Windows.Forms.TextBox();
+            this.txt78 = new System.Windows.Forms.TextBox();
+            this.txt79 = new System.Windows.Forms.TextBox();
+            this.txt80 = new System.Windows.Forms.TextBox();
+            this.txt81 = new System.Windows.Forms.TextBox();
+            this.txt82 = new System.Windows.Forms.TextBox();
+            this.txt83 = new System.Windows.Forms.TextBox();
+            this.txt84 = new System.Windows.Forms.TextBox();
+            this.txt85 = new System.Windows.Forms.TextBox();
+            this.txt86 = new System.Windows.Forms.TextBox();
+            this.txt87 = new System.Windows.Forms.TextBox();
+            this.txt88 = new System.Windows.Forms.TextBox();
+            this.txt89 = new System.Windows.Forms.TextBox();
+            this.txt90 = new System.Windows.Forms.TextBox();
+            this.txt91 = new System.Windows.Forms.TextBox();
+            this.txt92 = new System.Windows.Forms.TextBox();
+            this.txt93 = new System.Windows.Forms.TextBox();
+            this.txt94 = new System.Windows.Forms.TextBox();
+            this.txt95 = new System.Windows.Forms.TextBox();
+            this.txt96 = new System.Windows.Forms.TextBox();
+            this.txt97 = new System.Windows.Forms.TextBox();
+            this.txt99 = new System.Windows.Forms.TextBox();
+            this.txt100 = new System.Windows.Forms.TextBox();
+            this.txt101 = new System.Windows.Forms.TextBox();
+            this.txt102 = new System.Windows.Forms.TextBox();
+            this.txt103 = new System.Windows.Forms.TextBox();
+            this.txt104 = new System.Windows.Forms.TextBox();
+            this.txt105 = new System.Windows.Forms.TextBox();
+            this.txt106 = new System.Windows.Forms.TextBox();
+            this.txt107 = new System.Windows.Forms.TextBox();
+            this.txt98 = new System.Windows.Forms.TextBox();
             this.lblTRQ68 = new System.Windows.Forms.Label();
             this.lblTRQ69 = new System.Windows.Forms.Label();
             this.lblTRQ70 = new System.Windows.Forms.Label();
@@ -348,7 +348,7 @@
             this.panelB = new System.Windows.Forms.Panel();
             this.panelB2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox153 = new System.Windows.Forms.TextBox();
+            this.Btxt17 = new System.Windows.Forms.TextBox();
             this.lblModule1 = new System.Windows.Forms.Label();
             this.label192 = new System.Windows.Forms.Label();
             this.tableLayoutPanelB2 = new System.Windows.Forms.TableLayoutPanel();
@@ -356,36 +356,36 @@
             this.label205 = new System.Windows.Forms.Label();
             this.label206 = new System.Windows.Forms.Label();
             this.label207 = new System.Windows.Forms.Label();
-            this.textBox158 = new System.Windows.Forms.TextBox();
-            this.textBox159 = new System.Windows.Forms.TextBox();
-            this.textBox160 = new System.Windows.Forms.TextBox();
-            this.textBox161 = new System.Windows.Forms.TextBox();
-            this.textBox162 = new System.Windows.Forms.TextBox();
-            this.textBox163 = new System.Windows.Forms.TextBox();
-            this.textBox164 = new System.Windows.Forms.TextBox();
-            this.textBox165 = new System.Windows.Forms.TextBox();
-            this.textBox166 = new System.Windows.Forms.TextBox();
-            this.textBox167 = new System.Windows.Forms.TextBox();
-            this.textBox168 = new System.Windows.Forms.TextBox();
-            this.textBox169 = new System.Windows.Forms.TextBox();
-            this.textBox170 = new System.Windows.Forms.TextBox();
-            this.textBox171 = new System.Windows.Forms.TextBox();
-            this.textBox172 = new System.Windows.Forms.TextBox();
-            this.textBox173 = new System.Windows.Forms.TextBox();
-            this.textBox174 = new System.Windows.Forms.TextBox();
-            this.textBox175 = new System.Windows.Forms.TextBox();
-            this.textBox176 = new System.Windows.Forms.TextBox();
-            this.textBox177 = new System.Windows.Forms.TextBox();
+            this.Btxt19 = new System.Windows.Forms.TextBox();
+            this.Btxt20 = new System.Windows.Forms.TextBox();
+            this.Btxt18 = new System.Windows.Forms.TextBox();
+            this.Btxt21 = new System.Windows.Forms.TextBox();
+            this.Btxt22 = new System.Windows.Forms.TextBox();
+            this.Btxt23 = new System.Windows.Forms.TextBox();
+            this.Btxt24 = new System.Windows.Forms.TextBox();
+            this.Btxt25 = new System.Windows.Forms.TextBox();
+            this.Btxt26 = new System.Windows.Forms.TextBox();
+            this.Btxt27 = new System.Windows.Forms.TextBox();
+            this.Btxt28 = new System.Windows.Forms.TextBox();
+            this.Btxt29 = new System.Windows.Forms.TextBox();
+            this.Btxt30 = new System.Windows.Forms.TextBox();
+            this.Btxt31 = new System.Windows.Forms.TextBox();
+            this.Btxt32 = new System.Windows.Forms.TextBox();
+            this.Btxt33 = new System.Windows.Forms.TextBox();
+            this.Btxt34 = new System.Windows.Forms.TextBox();
+            this.Btxt35 = new System.Windows.Forms.TextBox();
+            this.Btxt36 = new System.Windows.Forms.TextBox();
+            this.Btxt37 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelB1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox200 = new System.Windows.Forms.TextBox();
-            this.textBox201 = new System.Windows.Forms.TextBox();
-            this.txtB2B = new System.Windows.Forms.TextBox();
-            this.textBox203 = new System.Windows.Forms.TextBox();
-            this.textBox204 = new System.Windows.Forms.TextBox();
+            this.Btxt1 = new System.Windows.Forms.TextBox();
+            this.Btxt2 = new System.Windows.Forms.TextBox();
+            this.Btxt3 = new System.Windows.Forms.TextBox();
+            this.Btxt7 = new System.Windows.Forms.TextBox();
+            this.Btxt6 = new System.Windows.Forms.TextBox();
             this.lblTRQB1 = new System.Windows.Forms.Label();
             this.label279 = new System.Windows.Forms.Label();
-            this.textBox205 = new System.Windows.Forms.TextBox();
-            this.textBox206 = new System.Windows.Forms.TextBox();
+            this.Btxt4 = new System.Windows.Forms.TextBox();
+            this.Btxt5 = new System.Windows.Forms.TextBox();
             this.label193 = new System.Windows.Forms.Label();
             this.label194 = new System.Windows.Forms.Label();
             this.label195 = new System.Windows.Forms.Label();
@@ -407,15 +407,15 @@
             this.lblTRQB14 = new System.Windows.Forms.Label();
             this.lblTRQB16 = new System.Windows.Forms.Label();
             this.lblTRQB15 = new System.Windows.Forms.Label();
-            this.textBox154 = new System.Windows.Forms.TextBox();
-            this.textBox155 = new System.Windows.Forms.TextBox();
-            this.textBox156 = new System.Windows.Forms.TextBox();
-            this.textBox157 = new System.Windows.Forms.TextBox();
-            this.textBox207 = new System.Windows.Forms.TextBox();
-            this.textBox208 = new System.Windows.Forms.TextBox();
-            this.textBox209 = new System.Windows.Forms.TextBox();
-            this.textBox210 = new System.Windows.Forms.TextBox();
-            this.txtB14B = new System.Windows.Forms.TextBox();
+            this.Btxt8 = new System.Windows.Forms.TextBox();
+            this.Btxt9 = new System.Windows.Forms.TextBox();
+            this.Btxt10 = new System.Windows.Forms.TextBox();
+            this.Btxt11 = new System.Windows.Forms.TextBox();
+            this.Btxt12 = new System.Windows.Forms.TextBox();
+            this.Btxt13 = new System.Windows.Forms.TextBox();
+            this.Btxt14 = new System.Windows.Forms.TextBox();
+            this.Btxt15 = new System.Windows.Forms.TextBox();
+            this.Btxt16 = new System.Windows.Forms.TextBox();
             this.label199 = new System.Windows.Forms.Label();
             this.label200 = new System.Windows.Forms.Label();
             this.label201 = new System.Windows.Forms.Label();
@@ -470,26 +470,26 @@
             this.label240 = new System.Windows.Forms.Label();
             this.label241 = new System.Windows.Forms.Label();
             this.label242 = new System.Windows.Forms.Label();
-            this.textBox152 = new System.Windows.Forms.TextBox();
-            this.textBox178 = new System.Windows.Forms.TextBox();
-            this.textBox179 = new System.Windows.Forms.TextBox();
-            this.textBox180 = new System.Windows.Forms.TextBox();
-            this.textBox181 = new System.Windows.Forms.TextBox();
-            this.textBox182 = new System.Windows.Forms.TextBox();
-            this.textBox183 = new System.Windows.Forms.TextBox();
-            this.textBox184 = new System.Windows.Forms.TextBox();
-            this.textBox185 = new System.Windows.Forms.TextBox();
-            this.textBox186 = new System.Windows.Forms.TextBox();
-            this.textBox187 = new System.Windows.Forms.TextBox();
-            this.textBox188 = new System.Windows.Forms.TextBox();
-            this.textBox189 = new System.Windows.Forms.TextBox();
-            this.textBox190 = new System.Windows.Forms.TextBox();
-            this.textBox191 = new System.Windows.Forms.TextBox();
-            this.textBox192 = new System.Windows.Forms.TextBox();
-            this.textBox193 = new System.Windows.Forms.TextBox();
-            this.textBox194 = new System.Windows.Forms.TextBox();
-            this.textBox195 = new System.Windows.Forms.TextBox();
-            this.textBox196 = new System.Windows.Forms.TextBox();
+            this.Btxt38 = new System.Windows.Forms.TextBox();
+            this.Btxt39 = new System.Windows.Forms.TextBox();
+            this.Btxt40 = new System.Windows.Forms.TextBox();
+            this.Btxt41 = new System.Windows.Forms.TextBox();
+            this.Btxt42 = new System.Windows.Forms.TextBox();
+            this.Btxt43 = new System.Windows.Forms.TextBox();
+            this.Btxt44 = new System.Windows.Forms.TextBox();
+            this.Btxt45 = new System.Windows.Forms.TextBox();
+            this.Btxt46 = new System.Windows.Forms.TextBox();
+            this.Btxt47 = new System.Windows.Forms.TextBox();
+            this.Btxt48 = new System.Windows.Forms.TextBox();
+            this.Btxt49 = new System.Windows.Forms.TextBox();
+            this.Btxt50 = new System.Windows.Forms.TextBox();
+            this.Btxt51 = new System.Windows.Forms.TextBox();
+            this.Btxt52 = new System.Windows.Forms.TextBox();
+            this.Btxt53 = new System.Windows.Forms.TextBox();
+            this.Btxt54 = new System.Windows.Forms.TextBox();
+            this.Btxt55 = new System.Windows.Forms.TextBox();
+            this.Btxt56 = new System.Windows.Forms.TextBox();
+            this.Btxt57 = new System.Windows.Forms.TextBox();
             this.label243 = new System.Windows.Forms.Label();
             this.label244 = new System.Windows.Forms.Label();
             this.label245 = new System.Windows.Forms.Label();
@@ -512,26 +512,26 @@
             this.label262 = new System.Windows.Forms.Label();
             this.label263 = new System.Windows.Forms.Label();
             this.label264 = new System.Windows.Forms.Label();
-            this.textBox197 = new System.Windows.Forms.TextBox();
-            this.textBox198 = new System.Windows.Forms.TextBox();
-            this.textBox199 = new System.Windows.Forms.TextBox();
-            this.textBox212 = new System.Windows.Forms.TextBox();
-            this.textBox213 = new System.Windows.Forms.TextBox();
-            this.textBox214 = new System.Windows.Forms.TextBox();
-            this.textBox215 = new System.Windows.Forms.TextBox();
-            this.textBox216 = new System.Windows.Forms.TextBox();
-            this.textBox217 = new System.Windows.Forms.TextBox();
-            this.textBox218 = new System.Windows.Forms.TextBox();
-            this.textBox219 = new System.Windows.Forms.TextBox();
-            this.textBox220 = new System.Windows.Forms.TextBox();
-            this.textBox221 = new System.Windows.Forms.TextBox();
-            this.textBox222 = new System.Windows.Forms.TextBox();
-            this.textBox223 = new System.Windows.Forms.TextBox();
-            this.textBox224 = new System.Windows.Forms.TextBox();
-            this.textBox225 = new System.Windows.Forms.TextBox();
-            this.textBox226 = new System.Windows.Forms.TextBox();
-            this.textBox227 = new System.Windows.Forms.TextBox();
-            this.textBox228 = new System.Windows.Forms.TextBox();
+            this.Btxt58 = new System.Windows.Forms.TextBox();
+            this.Btxt59 = new System.Windows.Forms.TextBox();
+            this.Btxt60 = new System.Windows.Forms.TextBox();
+            this.Btxt61 = new System.Windows.Forms.TextBox();
+            this.Btxt62 = new System.Windows.Forms.TextBox();
+            this.Btxt63 = new System.Windows.Forms.TextBox();
+            this.Btxt64 = new System.Windows.Forms.TextBox();
+            this.Btxt65 = new System.Windows.Forms.TextBox();
+            this.Btxt66 = new System.Windows.Forms.TextBox();
+            this.Btxt67 = new System.Windows.Forms.TextBox();
+            this.Btxt68 = new System.Windows.Forms.TextBox();
+            this.Btxt69 = new System.Windows.Forms.TextBox();
+            this.Btxt70 = new System.Windows.Forms.TextBox();
+            this.Btxt71 = new System.Windows.Forms.TextBox();
+            this.Btxt72 = new System.Windows.Forms.TextBox();
+            this.Btxt73 = new System.Windows.Forms.TextBox();
+            this.Btxt74 = new System.Windows.Forms.TextBox();
+            this.Btxt75 = new System.Windows.Forms.TextBox();
+            this.Btxt76 = new System.Windows.Forms.TextBox();
+            this.Btxt77 = new System.Windows.Forms.TextBox();
             this.label265 = new System.Windows.Forms.Label();
             this.label266 = new System.Windows.Forms.Label();
             this.label267 = new System.Windows.Forms.Label();
@@ -543,16 +543,16 @@
             this.label273 = new System.Windows.Forms.Label();
             this.label274 = new System.Windows.Forms.Label();
             this.label288 = new System.Windows.Forms.Label();
-            this.textBox229 = new System.Windows.Forms.TextBox();
-            this.textBox230 = new System.Windows.Forms.TextBox();
-            this.textBox231 = new System.Windows.Forms.TextBox();
-            this.textBox232 = new System.Windows.Forms.TextBox();
-            this.textBox233 = new System.Windows.Forms.TextBox();
-            this.textBox234 = new System.Windows.Forms.TextBox();
-            this.textBox235 = new System.Windows.Forms.TextBox();
-            this.textBox236 = new System.Windows.Forms.TextBox();
-            this.textBox237 = new System.Windows.Forms.TextBox();
-            this.textBox238 = new System.Windows.Forms.TextBox();
+            this.Btxt78 = new System.Windows.Forms.TextBox();
+            this.Btxt79 = new System.Windows.Forms.TextBox();
+            this.Btxt80 = new System.Windows.Forms.TextBox();
+            this.Btxt81 = new System.Windows.Forms.TextBox();
+            this.Btxt82 = new System.Windows.Forms.TextBox();
+            this.Btxt83 = new System.Windows.Forms.TextBox();
+            this.Btxt84 = new System.Windows.Forms.TextBox();
+            this.Btxt85 = new System.Windows.Forms.TextBox();
+            this.Btxt86 = new System.Windows.Forms.TextBox();
+            this.Btxt87 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelB2_2 = new System.Windows.Forms.TableLayoutPanel();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
@@ -703,6 +703,7 @@
             this.textBox264 = new System.Windows.Forms.TextBox();
             this.label188 = new System.Windows.Forms.Label();
             this.label289 = new System.Windows.Forms.Label();
+            this.txt109 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -840,14 +841,15 @@
             this.panel1.Controls.Add(this.txt63);
             this.panel1.Location = new System.Drawing.Point(2, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 474);
+            this.panel1.Size = new System.Drawing.Size(940, 124);
             this.panel1.TabIndex = 28;
             this.panel1.Visible = false;
             // 
             // secondPanel
             // 
             this.secondPanel.Controls.Add(this.textBox127);
-            this.secondPanel.Controls.Add(this.textBox64);
+            this.secondPanel.Controls.Add(this.txt109);
+            this.secondPanel.Controls.Add(this.txt108);
             this.secondPanel.Controls.Add(this.label176);
             this.secondPanel.Controls.Add(this.label175);
             this.secondPanel.Controls.Add(this.panel5);
@@ -868,13 +870,13 @@
             this.textBox127.Size = new System.Drawing.Size(863, 0);
             this.textBox127.TabIndex = 29;
             // 
-            // textBox64
+            // txt108
             // 
-            this.textBox64.Location = new System.Drawing.Point(151, 427);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(118, 21);
-            this.textBox64.TabIndex = 1;
-            this.textBox64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt108.Location = new System.Drawing.Point(151, 427);
+            this.txt108.Name = "txt108";
+            this.txt108.Size = new System.Drawing.Size(118, 21);
+            this.txt108.TabIndex = 1;
+            this.txt108.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label176
             // 
@@ -899,7 +901,7 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.panel5.Controls.Add(this.textBox126);
+            this.panel5.Controls.Add(this.txt65);
             this.panel5.Controls.Add(this.label173);
             this.panel5.Controls.Add(this.label174);
             this.panel5.Location = new System.Drawing.Point(3, 50);
@@ -908,14 +910,14 @@
             this.panel5.Size = new System.Drawing.Size(913, 53);
             this.panel5.TabIndex = 26;
             // 
-            // textBox126
+            // txt65
             // 
-            this.textBox126.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt65.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox126.Location = new System.Drawing.Point(349, 26);
-            this.textBox126.Name = "textBox126";
-            this.textBox126.Size = new System.Drawing.Size(194, 21);
-            this.textBox126.TabIndex = 12;
+            this.txt65.Location = new System.Drawing.Point(349, 26);
+            this.txt65.Name = "txt65";
+            this.txt65.Size = new System.Drawing.Size(194, 21);
+            this.txt65.TabIndex = 12;
             // 
             // label173
             // 
@@ -1015,48 +1017,48 @@
             this.tableLayoutPanel10.Controls.Add(this.label133, 24, 2);
             this.tableLayoutPanel10.Controls.Add(this.label134, 26, 2);
             this.tableLayoutPanel10.Controls.Add(this.label135, 0, 5);
-            this.tableLayoutPanel10.Controls.Add(this.textBox80, 1, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox81, 2, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox82, 0, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox83, 3, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox84, 4, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox85, 5, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox86, 6, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox87, 7, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox88, 8, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox89, 9, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox90, 10, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox91, 11, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox92, 12, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox93, 13, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox94, 14, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox95, 15, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox96, 16, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox97, 17, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox98, 18, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox99, 19, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox100, 20, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox101, 21, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox102, 22, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox103, 23, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox104, 24, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox105, 25, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox106, 26, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox107, 27, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox108, 0, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox109, 2, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox110, 4, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox111, 6, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox112, 10, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox113, 12, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox114, 14, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox115, 16, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox116, 18, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox117, 20, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox118, 22, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox119, 24, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox120, 26, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox121, 8, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt67, 1, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt68, 2, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt66, 0, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt69, 3, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt70, 4, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt71, 5, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt72, 6, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt73, 7, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt74, 8, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt75, 9, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt76, 10, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt77, 11, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt78, 12, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt79, 13, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt80, 14, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt81, 15, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt82, 16, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt83, 17, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt84, 18, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt85, 19, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt86, 20, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt87, 21, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt88, 22, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt89, 23, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt90, 24, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt91, 25, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt92, 26, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt93, 27, 4);
+            this.tableLayoutPanel10.Controls.Add(this.txt94, 0, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt95, 2, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt96, 4, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt97, 6, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt99, 10, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt100, 12, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt101, 14, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt102, 16, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt103, 18, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt104, 20, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt105, 22, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt106, 24, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt107, 26, 6);
+            this.tableLayoutPanel10.Controls.Add(this.txt98, 8, 6);
             this.tableLayoutPanel10.Controls.Add(this.lblTRQ68, 1, 3);
             this.tableLayoutPanel10.Controls.Add(this.lblTRQ69, 2, 3);
             this.tableLayoutPanel10.Controls.Add(this.lblTRQ70, 3, 3);
@@ -1682,355 +1684,355 @@
             this.label135.Text = "Voltage (V)";
             this.label135.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox80
-            // 
-            this.textBox80.Location = new System.Drawing.Point(34, 207);
-            this.textBox80.Name = "textBox80";
-            this.textBox80.Size = new System.Drawing.Size(25, 21);
-            this.textBox80.TabIndex = 1;
-            this.textBox80.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt67
+            // 
+            this.txt67.Location = new System.Drawing.Point(34, 207);
+            this.txt67.Name = "txt67";
+            this.txt67.Size = new System.Drawing.Size(25, 21);
+            this.txt67.TabIndex = 1;
+            this.txt67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox81
-            // 
-            this.textBox81.Location = new System.Drawing.Point(65, 207);
-            this.textBox81.Name = "textBox81";
-            this.textBox81.Size = new System.Drawing.Size(25, 21);
-            this.textBox81.TabIndex = 1;
-            this.textBox81.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt68
+            // 
+            this.txt68.Location = new System.Drawing.Point(65, 207);
+            this.txt68.Name = "txt68";
+            this.txt68.Size = new System.Drawing.Size(25, 21);
+            this.txt68.TabIndex = 1;
+            this.txt68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox82
-            // 
-            this.textBox82.Location = new System.Drawing.Point(3, 207);
-            this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(25, 21);
-            this.textBox82.TabIndex = 1;
-            this.textBox82.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt66
+            // 
+            this.txt66.Location = new System.Drawing.Point(3, 207);
+            this.txt66.Name = "txt66";
+            this.txt66.Size = new System.Drawing.Size(25, 21);
+            this.txt66.TabIndex = 1;
+            this.txt66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox83
-            // 
-            this.textBox83.Location = new System.Drawing.Point(96, 207);
-            this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(25, 21);
-            this.textBox83.TabIndex = 1;
-            this.textBox83.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt69
+            // 
+            this.txt69.Location = new System.Drawing.Point(96, 207);
+            this.txt69.Name = "txt69";
+            this.txt69.Size = new System.Drawing.Size(25, 21);
+            this.txt69.TabIndex = 1;
+            this.txt69.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox84
-            // 
-            this.textBox84.Location = new System.Drawing.Point(127, 207);
-            this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new System.Drawing.Size(25, 21);
-            this.textBox84.TabIndex = 1;
-            this.textBox84.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt70
+            // 
+            this.txt70.Location = new System.Drawing.Point(127, 207);
+            this.txt70.Name = "txt70";
+            this.txt70.Size = new System.Drawing.Size(25, 21);
+            this.txt70.TabIndex = 1;
+            this.txt70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox85
-            // 
-            this.textBox85.Location = new System.Drawing.Point(158, 207);
-            this.textBox85.Name = "textBox85";
-            this.textBox85.Size = new System.Drawing.Size(25, 21);
-            this.textBox85.TabIndex = 1;
-            this.textBox85.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt71
+            // 
+            this.txt71.Location = new System.Drawing.Point(158, 207);
+            this.txt71.Name = "txt71";
+            this.txt71.Size = new System.Drawing.Size(25, 21);
+            this.txt71.TabIndex = 1;
+            this.txt71.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox86
-            // 
-            this.textBox86.Location = new System.Drawing.Point(189, 207);
-            this.textBox86.Name = "textBox86";
-            this.textBox86.Size = new System.Drawing.Size(25, 21);
-            this.textBox86.TabIndex = 1;
-            this.textBox86.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt72
+            // 
+            this.txt72.Location = new System.Drawing.Point(189, 207);
+            this.txt72.Name = "txt72";
+            this.txt72.Size = new System.Drawing.Size(25, 21);
+            this.txt72.TabIndex = 1;
+            this.txt72.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox87
-            // 
-            this.textBox87.Location = new System.Drawing.Point(220, 207);
-            this.textBox87.Name = "textBox87";
-            this.textBox87.Size = new System.Drawing.Size(25, 21);
-            this.textBox87.TabIndex = 1;
-            this.textBox87.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt73
+            // 
+            this.txt73.Location = new System.Drawing.Point(220, 207);
+            this.txt73.Name = "txt73";
+            this.txt73.Size = new System.Drawing.Size(25, 21);
+            this.txt73.TabIndex = 1;
+            this.txt73.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox88
-            // 
-            this.textBox88.Location = new System.Drawing.Point(251, 207);
-            this.textBox88.Name = "textBox88";
-            this.textBox88.Size = new System.Drawing.Size(25, 21);
-            this.textBox88.TabIndex = 1;
-            this.textBox88.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt74
+            // 
+            this.txt74.Location = new System.Drawing.Point(251, 207);
+            this.txt74.Name = "txt74";
+            this.txt74.Size = new System.Drawing.Size(25, 21);
+            this.txt74.TabIndex = 1;
+            this.txt74.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox89
-            // 
-            this.textBox89.Location = new System.Drawing.Point(282, 207);
-            this.textBox89.Name = "textBox89";
-            this.textBox89.Size = new System.Drawing.Size(25, 21);
-            this.textBox89.TabIndex = 1;
-            this.textBox89.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt75
+            // 
+            this.txt75.Location = new System.Drawing.Point(282, 207);
+            this.txt75.Name = "txt75";
+            this.txt75.Size = new System.Drawing.Size(25, 21);
+            this.txt75.TabIndex = 1;
+            this.txt75.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox90
-            // 
-            this.textBox90.Location = new System.Drawing.Point(313, 207);
-            this.textBox90.Name = "textBox90";
-            this.textBox90.Size = new System.Drawing.Size(25, 21);
-            this.textBox90.TabIndex = 1;
-            this.textBox90.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt76
+            // 
+            this.txt76.Location = new System.Drawing.Point(313, 207);
+            this.txt76.Name = "txt76";
+            this.txt76.Size = new System.Drawing.Size(25, 21);
+            this.txt76.TabIndex = 1;
+            this.txt76.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox91
-            // 
-            this.textBox91.Location = new System.Drawing.Point(344, 207);
-            this.textBox91.Name = "textBox91";
-            this.textBox91.Size = new System.Drawing.Size(25, 21);
-            this.textBox91.TabIndex = 1;
-            this.textBox91.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt77
+            // 
+            this.txt77.Location = new System.Drawing.Point(344, 207);
+            this.txt77.Name = "txt77";
+            this.txt77.Size = new System.Drawing.Size(25, 21);
+            this.txt77.TabIndex = 1;
+            this.txt77.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox92
-            // 
-            this.textBox92.Location = new System.Drawing.Point(375, 207);
-            this.textBox92.Name = "textBox92";
-            this.textBox92.Size = new System.Drawing.Size(25, 21);
-            this.textBox92.TabIndex = 1;
-            this.textBox92.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt78
+            // 
+            this.txt78.Location = new System.Drawing.Point(375, 207);
+            this.txt78.Name = "txt78";
+            this.txt78.Size = new System.Drawing.Size(25, 21);
+            this.txt78.TabIndex = 1;
+            this.txt78.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox93
-            // 
-            this.textBox93.Location = new System.Drawing.Point(406, 207);
-            this.textBox93.Name = "textBox93";
-            this.textBox93.Size = new System.Drawing.Size(25, 21);
-            this.textBox93.TabIndex = 1;
-            this.textBox93.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt79
+            // 
+            this.txt79.Location = new System.Drawing.Point(406, 207);
+            this.txt79.Name = "txt79";
+            this.txt79.Size = new System.Drawing.Size(25, 21);
+            this.txt79.TabIndex = 1;
+            this.txt79.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox94
-            // 
-            this.textBox94.Location = new System.Drawing.Point(437, 207);
-            this.textBox94.Name = "textBox94";
-            this.textBox94.Size = new System.Drawing.Size(25, 21);
-            this.textBox94.TabIndex = 1;
-            this.textBox94.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt80
+            // 
+            this.txt80.Location = new System.Drawing.Point(437, 207);
+            this.txt80.Name = "txt80";
+            this.txt80.Size = new System.Drawing.Size(25, 21);
+            this.txt80.TabIndex = 1;
+            this.txt80.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox95
-            // 
-            this.textBox95.Location = new System.Drawing.Point(468, 207);
-            this.textBox95.Name = "textBox95";
-            this.textBox95.Size = new System.Drawing.Size(25, 21);
-            this.textBox95.TabIndex = 1;
-            this.textBox95.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt81
+            // 
+            this.txt81.Location = new System.Drawing.Point(468, 207);
+            this.txt81.Name = "txt81";
+            this.txt81.Size = new System.Drawing.Size(25, 21);
+            this.txt81.TabIndex = 1;
+            this.txt81.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox96
-            // 
-            this.textBox96.Location = new System.Drawing.Point(499, 207);
-            this.textBox96.Name = "textBox96";
-            this.textBox96.Size = new System.Drawing.Size(25, 21);
-            this.textBox96.TabIndex = 1;
-            this.textBox96.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt82
+            // 
+            this.txt82.Location = new System.Drawing.Point(499, 207);
+            this.txt82.Name = "txt82";
+            this.txt82.Size = new System.Drawing.Size(25, 21);
+            this.txt82.TabIndex = 1;
+            this.txt82.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox97
-            // 
-            this.textBox97.Location = new System.Drawing.Point(530, 207);
-            this.textBox97.Name = "textBox97";
-            this.textBox97.Size = new System.Drawing.Size(25, 21);
-            this.textBox97.TabIndex = 1;
-            this.textBox97.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox98
-            // 
-            this.textBox98.Location = new System.Drawing.Point(561, 207);
-            this.textBox98.Name = "textBox98";
-            this.textBox98.Size = new System.Drawing.Size(25, 21);
-            this.textBox98.TabIndex = 1;
-            this.textBox98.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox99
-            // 
-            this.textBox99.Location = new System.Drawing.Point(592, 207);
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(25, 21);
-            this.textBox99.TabIndex = 1;
-            this.textBox99.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox100
-            // 
-            this.textBox100.Location = new System.Drawing.Point(623, 207);
-            this.textBox100.Name = "textBox100";
-            this.textBox100.Size = new System.Drawing.Size(25, 21);
-            this.textBox100.TabIndex = 1;
-            this.textBox100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox101
-            // 
-            this.textBox101.Location = new System.Drawing.Point(654, 207);
-            this.textBox101.Name = "textBox101";
-            this.textBox101.Size = new System.Drawing.Size(25, 21);
-            this.textBox101.TabIndex = 1;
-            this.textBox101.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox102
-            // 
-            this.textBox102.Location = new System.Drawing.Point(685, 207);
-            this.textBox102.Name = "textBox102";
-            this.textBox102.Size = new System.Drawing.Size(25, 21);
-            this.textBox102.TabIndex = 1;
-            this.textBox102.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox103
-            // 
-            this.textBox103.Location = new System.Drawing.Point(716, 207);
-            this.textBox103.Name = "textBox103";
-            this.textBox103.Size = new System.Drawing.Size(25, 21);
-            this.textBox103.TabIndex = 1;
-            this.textBox103.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox104
-            // 
-            this.textBox104.Location = new System.Drawing.Point(747, 207);
-            this.textBox104.Name = "textBox104";
-            this.textBox104.Size = new System.Drawing.Size(25, 21);
-            this.textBox104.TabIndex = 1;
-            this.textBox104.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox105
-            // 
-            this.textBox105.Location = new System.Drawing.Point(778, 207);
-            this.textBox105.Name = "textBox105";
-            this.textBox105.Size = new System.Drawing.Size(25, 21);
-            this.textBox105.TabIndex = 1;
-            this.textBox105.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox106
-            // 
-            this.textBox106.Location = new System.Drawing.Point(809, 207);
-            this.textBox106.Name = "textBox106";
-            this.textBox106.Size = new System.Drawing.Size(25, 21);
-            this.textBox106.TabIndex = 1;
-            this.textBox106.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox107
-            // 
-            this.textBox107.Location = new System.Drawing.Point(840, 207);
-            this.textBox107.Name = "textBox107";
-            this.textBox107.Size = new System.Drawing.Size(26, 21);
-            this.textBox107.TabIndex = 1;
-            this.textBox107.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox108
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox108, 2);
-            this.textBox108.Location = new System.Drawing.Point(3, 285);
-            this.textBox108.Name = "textBox108";
-            this.textBox108.Size = new System.Drawing.Size(56, 21);
-            this.textBox108.TabIndex = 1;
-            this.textBox108.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox109
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox109, 2);
-            this.textBox109.Location = new System.Drawing.Point(65, 285);
-            this.textBox109.Name = "textBox109";
-            this.textBox109.Size = new System.Drawing.Size(56, 21);
-            this.textBox109.TabIndex = 1;
-            this.textBox109.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox110
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox110, 2);
-            this.textBox110.Location = new System.Drawing.Point(127, 285);
-            this.textBox110.Name = "textBox110";
-            this.textBox110.Size = new System.Drawing.Size(56, 21);
-            this.textBox110.TabIndex = 1;
-            this.textBox110.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox111
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox111, 2);
-            this.textBox111.Location = new System.Drawing.Point(189, 285);
-            this.textBox111.Name = "textBox111";
-            this.textBox111.Size = new System.Drawing.Size(56, 21);
-            this.textBox111.TabIndex = 1;
-            this.textBox111.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox112
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox112, 2);
-            this.textBox112.Location = new System.Drawing.Point(313, 285);
-            this.textBox112.Name = "textBox112";
-            this.textBox112.Size = new System.Drawing.Size(56, 21);
-            this.textBox112.TabIndex = 1;
-            this.textBox112.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox113
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox113, 2);
-            this.textBox113.Location = new System.Drawing.Point(375, 285);
-            this.textBox113.Name = "textBox113";
-            this.textBox113.Size = new System.Drawing.Size(56, 21);
-            this.textBox113.TabIndex = 1;
-            this.textBox113.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox114
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox114, 2);
-            this.textBox114.Location = new System.Drawing.Point(437, 285);
-            this.textBox114.Name = "textBox114";
-            this.textBox114.Size = new System.Drawing.Size(56, 21);
-            this.textBox114.TabIndex = 1;
-            this.textBox114.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox115
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox115, 2);
-            this.textBox115.Location = new System.Drawing.Point(499, 285);
-            this.textBox115.Name = "textBox115";
-            this.textBox115.Size = new System.Drawing.Size(56, 21);
-            this.textBox115.TabIndex = 1;
-            this.textBox115.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox116
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox116, 2);
-            this.textBox116.Location = new System.Drawing.Point(561, 285);
-            this.textBox116.Name = "textBox116";
-            this.textBox116.Size = new System.Drawing.Size(56, 21);
-            this.textBox116.TabIndex = 1;
-            this.textBox116.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox117
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox117, 2);
-            this.textBox117.Location = new System.Drawing.Point(623, 285);
-            this.textBox117.Name = "textBox117";
-            this.textBox117.Size = new System.Drawing.Size(56, 21);
-            this.textBox117.TabIndex = 1;
-            this.textBox117.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox118
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox118, 2);
-            this.textBox118.Location = new System.Drawing.Point(685, 285);
-            this.textBox118.Name = "textBox118";
-            this.textBox118.Size = new System.Drawing.Size(56, 21);
-            this.textBox118.TabIndex = 1;
-            this.textBox118.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox119
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox119, 2);
-            this.textBox119.Location = new System.Drawing.Point(747, 285);
-            this.textBox119.Name = "textBox119";
-            this.textBox119.Size = new System.Drawing.Size(56, 21);
-            this.textBox119.TabIndex = 1;
-            this.textBox119.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox120
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox120, 2);
-            this.textBox120.Location = new System.Drawing.Point(809, 285);
-            this.textBox120.Name = "textBox120";
-            this.textBox120.Size = new System.Drawing.Size(58, 21);
-            this.textBox120.TabIndex = 1;
-            this.textBox120.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox121
-            // 
-            this.tableLayoutPanel10.SetColumnSpan(this.textBox121, 2);
-            this.textBox121.Location = new System.Drawing.Point(251, 285);
-            this.textBox121.Name = "textBox121";
-            this.textBox121.Size = new System.Drawing.Size(56, 21);
-            this.textBox121.TabIndex = 1;
-            this.textBox121.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // txt83
+            // 
+            this.txt83.Location = new System.Drawing.Point(530, 207);
+            this.txt83.Name = "txt83";
+            this.txt83.Size = new System.Drawing.Size(25, 21);
+            this.txt83.TabIndex = 1;
+            this.txt83.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt84
+            // 
+            this.txt84.Location = new System.Drawing.Point(561, 207);
+            this.txt84.Name = "txt84";
+            this.txt84.Size = new System.Drawing.Size(25, 21);
+            this.txt84.TabIndex = 1;
+            this.txt84.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt85
+            // 
+            this.txt85.Location = new System.Drawing.Point(592, 207);
+            this.txt85.Name = "txt85";
+            this.txt85.Size = new System.Drawing.Size(25, 21);
+            this.txt85.TabIndex = 1;
+            this.txt85.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt86
+            // 
+            this.txt86.Location = new System.Drawing.Point(623, 207);
+            this.txt86.Name = "txt86";
+            this.txt86.Size = new System.Drawing.Size(25, 21);
+            this.txt86.TabIndex = 1;
+            this.txt86.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt87
+            // 
+            this.txt87.Location = new System.Drawing.Point(654, 207);
+            this.txt87.Name = "txt87";
+            this.txt87.Size = new System.Drawing.Size(25, 21);
+            this.txt87.TabIndex = 1;
+            this.txt87.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt88
+            // 
+            this.txt88.Location = new System.Drawing.Point(685, 207);
+            this.txt88.Name = "txt88";
+            this.txt88.Size = new System.Drawing.Size(25, 21);
+            this.txt88.TabIndex = 1;
+            this.txt88.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt89
+            // 
+            this.txt89.Location = new System.Drawing.Point(716, 207);
+            this.txt89.Name = "txt89";
+            this.txt89.Size = new System.Drawing.Size(25, 21);
+            this.txt89.TabIndex = 1;
+            this.txt89.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt90
+            // 
+            this.txt90.Location = new System.Drawing.Point(747, 207);
+            this.txt90.Name = "txt90";
+            this.txt90.Size = new System.Drawing.Size(25, 21);
+            this.txt90.TabIndex = 1;
+            this.txt90.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt91
+            // 
+            this.txt91.Location = new System.Drawing.Point(778, 207);
+            this.txt91.Name = "txt91";
+            this.txt91.Size = new System.Drawing.Size(25, 21);
+            this.txt91.TabIndex = 1;
+            this.txt91.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt92
+            // 
+            this.txt92.Location = new System.Drawing.Point(809, 207);
+            this.txt92.Name = "txt92";
+            this.txt92.Size = new System.Drawing.Size(25, 21);
+            this.txt92.TabIndex = 1;
+            this.txt92.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt93
+            // 
+            this.txt93.Location = new System.Drawing.Point(840, 207);
+            this.txt93.Name = "txt93";
+            this.txt93.Size = new System.Drawing.Size(26, 21);
+            this.txt93.TabIndex = 1;
+            this.txt93.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt94
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt94, 2);
+            this.txt94.Location = new System.Drawing.Point(3, 285);
+            this.txt94.Name = "txt94";
+            this.txt94.Size = new System.Drawing.Size(56, 21);
+            this.txt94.TabIndex = 1;
+            this.txt94.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt95
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt95, 2);
+            this.txt95.Location = new System.Drawing.Point(65, 285);
+            this.txt95.Name = "txt95";
+            this.txt95.Size = new System.Drawing.Size(56, 21);
+            this.txt95.TabIndex = 1;
+            this.txt95.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt96
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt96, 2);
+            this.txt96.Location = new System.Drawing.Point(127, 285);
+            this.txt96.Name = "txt96";
+            this.txt96.Size = new System.Drawing.Size(56, 21);
+            this.txt96.TabIndex = 1;
+            this.txt96.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt97
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt97, 2);
+            this.txt97.Location = new System.Drawing.Point(189, 285);
+            this.txt97.Name = "txt97";
+            this.txt97.Size = new System.Drawing.Size(56, 21);
+            this.txt97.TabIndex = 1;
+            this.txt97.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt99
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt99, 2);
+            this.txt99.Location = new System.Drawing.Point(313, 285);
+            this.txt99.Name = "txt99";
+            this.txt99.Size = new System.Drawing.Size(56, 21);
+            this.txt99.TabIndex = 1;
+            this.txt99.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt100
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt100, 2);
+            this.txt100.Location = new System.Drawing.Point(375, 285);
+            this.txt100.Name = "txt100";
+            this.txt100.Size = new System.Drawing.Size(56, 21);
+            this.txt100.TabIndex = 1;
+            this.txt100.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt101
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt101, 2);
+            this.txt101.Location = new System.Drawing.Point(437, 285);
+            this.txt101.Name = "txt101";
+            this.txt101.Size = new System.Drawing.Size(56, 21);
+            this.txt101.TabIndex = 1;
+            this.txt101.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt102
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt102, 2);
+            this.txt102.Location = new System.Drawing.Point(499, 285);
+            this.txt102.Name = "txt102";
+            this.txt102.Size = new System.Drawing.Size(56, 21);
+            this.txt102.TabIndex = 1;
+            this.txt102.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt103
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt103, 2);
+            this.txt103.Location = new System.Drawing.Point(561, 285);
+            this.txt103.Name = "txt103";
+            this.txt103.Size = new System.Drawing.Size(56, 21);
+            this.txt103.TabIndex = 1;
+            this.txt103.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt104
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt104, 2);
+            this.txt104.Location = new System.Drawing.Point(623, 285);
+            this.txt104.Name = "txt104";
+            this.txt104.Size = new System.Drawing.Size(56, 21);
+            this.txt104.TabIndex = 1;
+            this.txt104.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt105
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt105, 2);
+            this.txt105.Location = new System.Drawing.Point(685, 285);
+            this.txt105.Name = "txt105";
+            this.txt105.Size = new System.Drawing.Size(56, 21);
+            this.txt105.TabIndex = 1;
+            this.txt105.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt106
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt106, 2);
+            this.txt106.Location = new System.Drawing.Point(747, 285);
+            this.txt106.Name = "txt106";
+            this.txt106.Size = new System.Drawing.Size(56, 21);
+            this.txt106.TabIndex = 1;
+            this.txt106.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt107
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt107, 2);
+            this.txt107.Location = new System.Drawing.Point(809, 285);
+            this.txt107.Name = "txt107";
+            this.txt107.Size = new System.Drawing.Size(58, 21);
+            this.txt107.TabIndex = 1;
+            this.txt107.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt98
+            // 
+            this.tableLayoutPanel10.SetColumnSpan(this.txt98, 2);
+            this.txt98.Location = new System.Drawing.Point(251, 285);
+            this.txt98.Name = "txt98";
+            this.txt98.Size = new System.Drawing.Size(56, 21);
+            this.txt98.TabIndex = 1;
+            this.txt98.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTRQ68
             // 
@@ -4510,6 +4512,7 @@
             // 
             this.txt19.Location = new System.Drawing.Point(144, 140);
             this.txt19.Name = "txt19";
+            this.txt19.ReadOnly = true;
             this.txt19.Size = new System.Drawing.Size(40, 21);
             this.txt19.TabIndex = 19;
             // 
@@ -4657,6 +4660,7 @@
             // 
             this.txt17.Location = new System.Drawing.Point(50, 140);
             this.txt17.Name = "txt17";
+            this.txt17.ReadOnly = true;
             this.txt17.Size = new System.Drawing.Size(39, 21);
             this.txt17.TabIndex = 17;
             // 
@@ -4861,9 +4865,9 @@
             this.panelB.Controls.Add(this.panel9);
             this.panelB.Controls.Add(this.tableLayoutPanelB2);
             this.panelB.Controls.Add(this.tableLayoutPanelB1);
-            this.panelB.Location = new System.Drawing.Point(2, 516);
+            this.panelB.Location = new System.Drawing.Point(2, 166);
             this.panelB.Name = "panelB";
-            this.panelB.Size = new System.Drawing.Size(940, 178);
+            this.panelB.Size = new System.Drawing.Size(940, 528);
             this.panelB.TabIndex = 28;
             this.panelB.Visible = false;
             // 
@@ -4882,7 +4886,7 @@
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.panel9.Controls.Add(this.textBox153);
+            this.panel9.Controls.Add(this.Btxt17);
             this.panel9.Controls.Add(this.lblModule1);
             this.panel9.Controls.Add(this.label192);
             this.panel9.Location = new System.Drawing.Point(4, 209);
@@ -4891,14 +4895,14 @@
             this.panel9.Size = new System.Drawing.Size(916, 53);
             this.panel9.TabIndex = 26;
             // 
-            // textBox153
+            // Btxt17
             // 
-            this.textBox153.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Btxt17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox153.Location = new System.Drawing.Point(382, 24);
-            this.textBox153.Name = "textBox153";
-            this.textBox153.Size = new System.Drawing.Size(145, 21);
-            this.textBox153.TabIndex = 12;
+            this.Btxt17.Location = new System.Drawing.Point(382, 24);
+            this.Btxt17.Name = "Btxt17";
+            this.Btxt17.Size = new System.Drawing.Size(145, 21);
+            this.Btxt17.TabIndex = 12;
             // 
             // lblModule1
             // 
@@ -4967,26 +4971,26 @@
             this.tableLayoutPanelB2.Controls.Add(this.label221, 17, 2);
             this.tableLayoutPanelB2.Controls.Add(this.label222, 18, 2);
             this.tableLayoutPanelB2.Controls.Add(this.label223, 19, 2);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox160, 0, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox158, 1, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox159, 2, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox161, 3, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox162, 4, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox163, 5, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox164, 6, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox165, 7, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox166, 8, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox167, 9, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox168, 10, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox169, 11, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox170, 12, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox171, 13, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox172, 14, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox173, 15, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox174, 16, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox175, 17, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox176, 18, 3);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox177, 19, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt18, 0, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt19, 1, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt20, 2, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt21, 3, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt22, 4, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt23, 5, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt24, 6, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt25, 7, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt26, 8, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt27, 9, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt28, 10, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt29, 11, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt30, 12, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt31, 13, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt32, 14, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt33, 15, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt34, 16, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt35, 17, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt36, 18, 3);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt37, 19, 3);
             this.tableLayoutPanelB2.Controls.Add(this.label203, 0, 5);
             this.tableLayoutPanelB2.Controls.Add(this.label224, 1, 5);
             this.tableLayoutPanelB2.Controls.Add(this.label225, 2, 5);
@@ -5007,26 +5011,26 @@
             this.tableLayoutPanelB2.Controls.Add(this.label240, 17, 5);
             this.tableLayoutPanelB2.Controls.Add(this.label241, 18, 5);
             this.tableLayoutPanelB2.Controls.Add(this.label242, 19, 5);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox152, 0, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox178, 1, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox179, 2, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox180, 3, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox181, 4, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox182, 5, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox183, 6, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox184, 7, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox185, 8, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox186, 9, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox187, 10, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox188, 11, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox189, 12, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox190, 13, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox191, 14, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox192, 15, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox193, 16, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox194, 17, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox195, 18, 6);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox196, 19, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt38, 0, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt39, 1, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt40, 2, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt41, 3, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt42, 4, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt43, 5, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt44, 6, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt45, 7, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt46, 8, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt47, 9, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt48, 10, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt49, 11, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt50, 12, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt51, 13, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt52, 14, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt53, 15, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt54, 16, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt55, 17, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt56, 18, 6);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt57, 19, 6);
             this.tableLayoutPanelB2.Controls.Add(this.label243, 0, 4);
             this.tableLayoutPanelB2.Controls.Add(this.label244, 0, 7);
             this.tableLayoutPanelB2.Controls.Add(this.label245, 0, 8);
@@ -5049,26 +5053,26 @@
             this.tableLayoutPanelB2.Controls.Add(this.label262, 17, 8);
             this.tableLayoutPanelB2.Controls.Add(this.label263, 18, 8);
             this.tableLayoutPanelB2.Controls.Add(this.label264, 19, 8);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox197, 0, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox198, 1, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox199, 2, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox212, 3, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox213, 4, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox214, 5, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox215, 6, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox216, 7, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox217, 8, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox218, 9, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox219, 10, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox220, 11, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox221, 12, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox222, 13, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox223, 14, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox224, 15, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox225, 16, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox226, 17, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox227, 18, 9);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox228, 19, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt58, 0, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt59, 1, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt60, 2, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt61, 3, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt62, 4, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt63, 5, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt64, 6, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt65, 7, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt66, 8, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt67, 9, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt68, 10, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt69, 11, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt70, 12, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt71, 13, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt72, 14, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt73, 15, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt74, 16, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt75, 17, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt76, 18, 9);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt77, 19, 9);
             this.tableLayoutPanelB2.Controls.Add(this.label265, 0, 10);
             this.tableLayoutPanelB2.Controls.Add(this.label288, 14, 11);
             this.tableLayoutPanelB2.Controls.Add(this.label274, 13, 11);
@@ -5080,16 +5084,16 @@
             this.tableLayoutPanelB2.Controls.Add(this.label268, 7, 11);
             this.tableLayoutPanelB2.Controls.Add(this.label267, 6, 11);
             this.tableLayoutPanelB2.Controls.Add(this.label266, 5, 11);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox229, 5, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox230, 6, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox231, 7, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox232, 8, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox233, 9, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox234, 10, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox235, 11, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox236, 12, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox237, 13, 12);
-            this.tableLayoutPanelB2.Controls.Add(this.textBox238, 14, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt78, 5, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt79, 6, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt80, 7, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt81, 8, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt82, 9, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt83, 10, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt84, 11, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt85, 12, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt86, 13, 12);
+            this.tableLayoutPanelB2.Controls.Add(this.Btxt87, 14, 12);
             this.tableLayoutPanelB2.Location = new System.Drawing.Point(19, 268);
             this.tableLayoutPanelB2.Name = "tableLayoutPanelB2";
             this.tableLayoutPanelB2.RowCount = 13;
@@ -5158,165 +5162,165 @@
             this.label207.Text = "5 Nm ± 0,5 Nm";
             this.label207.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox158
+            // Btxt19
             // 
-            this.textBox158.Location = new System.Drawing.Point(47, 62);
-            this.textBox158.Name = "textBox158";
-            this.textBox158.Size = new System.Drawing.Size(38, 21);
-            this.textBox158.TabIndex = 1;
-            this.textBox158.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt19.Location = new System.Drawing.Point(47, 62);
+            this.Btxt19.Name = "Btxt19";
+            this.Btxt19.Size = new System.Drawing.Size(38, 21);
+            this.Btxt19.TabIndex = 1;
+            this.Btxt19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox159
+            // Btxt20
             // 
-            this.textBox159.Location = new System.Drawing.Point(91, 62);
-            this.textBox159.Name = "textBox159";
-            this.textBox159.Size = new System.Drawing.Size(38, 21);
-            this.textBox159.TabIndex = 1;
-            this.textBox159.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt20.Location = new System.Drawing.Point(91, 62);
+            this.Btxt20.Name = "Btxt20";
+            this.Btxt20.Size = new System.Drawing.Size(38, 21);
+            this.Btxt20.TabIndex = 1;
+            this.Btxt20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox160
+            // Btxt18
             // 
-            this.textBox160.Location = new System.Drawing.Point(3, 62);
-            this.textBox160.Name = "textBox160";
-            this.textBox160.Size = new System.Drawing.Size(38, 21);
-            this.textBox160.TabIndex = 1;
-            this.textBox160.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt18.Location = new System.Drawing.Point(3, 62);
+            this.Btxt18.Name = "Btxt18";
+            this.Btxt18.Size = new System.Drawing.Size(38, 21);
+            this.Btxt18.TabIndex = 1;
+            this.Btxt18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox161
+            // Btxt21
             // 
-            this.textBox161.Location = new System.Drawing.Point(135, 62);
-            this.textBox161.Name = "textBox161";
-            this.textBox161.Size = new System.Drawing.Size(38, 21);
-            this.textBox161.TabIndex = 1;
-            this.textBox161.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt21.Location = new System.Drawing.Point(135, 62);
+            this.Btxt21.Name = "Btxt21";
+            this.Btxt21.Size = new System.Drawing.Size(38, 21);
+            this.Btxt21.TabIndex = 1;
+            this.Btxt21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox162
+            // Btxt22
             // 
-            this.textBox162.Location = new System.Drawing.Point(179, 62);
-            this.textBox162.Name = "textBox162";
-            this.textBox162.Size = new System.Drawing.Size(38, 21);
-            this.textBox162.TabIndex = 1;
-            this.textBox162.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt22.Location = new System.Drawing.Point(179, 62);
+            this.Btxt22.Name = "Btxt22";
+            this.Btxt22.Size = new System.Drawing.Size(38, 21);
+            this.Btxt22.TabIndex = 1;
+            this.Btxt22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox163
+            // Btxt23
             // 
-            this.textBox163.Location = new System.Drawing.Point(223, 62);
-            this.textBox163.Name = "textBox163";
-            this.textBox163.Size = new System.Drawing.Size(38, 21);
-            this.textBox163.TabIndex = 1;
-            this.textBox163.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt23.Location = new System.Drawing.Point(223, 62);
+            this.Btxt23.Name = "Btxt23";
+            this.Btxt23.Size = new System.Drawing.Size(38, 21);
+            this.Btxt23.TabIndex = 1;
+            this.Btxt23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox164
+            // Btxt24
             // 
-            this.textBox164.Location = new System.Drawing.Point(267, 62);
-            this.textBox164.Name = "textBox164";
-            this.textBox164.Size = new System.Drawing.Size(38, 21);
-            this.textBox164.TabIndex = 1;
-            this.textBox164.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt24.Location = new System.Drawing.Point(267, 62);
+            this.Btxt24.Name = "Btxt24";
+            this.Btxt24.Size = new System.Drawing.Size(38, 21);
+            this.Btxt24.TabIndex = 1;
+            this.Btxt24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox165
+            // Btxt25
             // 
-            this.textBox165.Location = new System.Drawing.Point(311, 62);
-            this.textBox165.Name = "textBox165";
-            this.textBox165.Size = new System.Drawing.Size(38, 21);
-            this.textBox165.TabIndex = 1;
-            this.textBox165.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt25.Location = new System.Drawing.Point(311, 62);
+            this.Btxt25.Name = "Btxt25";
+            this.Btxt25.Size = new System.Drawing.Size(38, 21);
+            this.Btxt25.TabIndex = 1;
+            this.Btxt25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox166
+            // Btxt26
             // 
-            this.textBox166.Location = new System.Drawing.Point(355, 62);
-            this.textBox166.Name = "textBox166";
-            this.textBox166.Size = new System.Drawing.Size(38, 21);
-            this.textBox166.TabIndex = 1;
-            this.textBox166.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt26.Location = new System.Drawing.Point(355, 62);
+            this.Btxt26.Name = "Btxt26";
+            this.Btxt26.Size = new System.Drawing.Size(38, 21);
+            this.Btxt26.TabIndex = 1;
+            this.Btxt26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox167
+            // Btxt27
             // 
-            this.textBox167.Location = new System.Drawing.Point(399, 62);
-            this.textBox167.Name = "textBox167";
-            this.textBox167.Size = new System.Drawing.Size(38, 21);
-            this.textBox167.TabIndex = 1;
-            this.textBox167.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt27.Location = new System.Drawing.Point(399, 62);
+            this.Btxt27.Name = "Btxt27";
+            this.Btxt27.Size = new System.Drawing.Size(38, 21);
+            this.Btxt27.TabIndex = 1;
+            this.Btxt27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox168
+            // Btxt28
             // 
-            this.textBox168.Location = new System.Drawing.Point(443, 62);
-            this.textBox168.Name = "textBox168";
-            this.textBox168.Size = new System.Drawing.Size(38, 21);
-            this.textBox168.TabIndex = 1;
-            this.textBox168.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt28.Location = new System.Drawing.Point(443, 62);
+            this.Btxt28.Name = "Btxt28";
+            this.Btxt28.Size = new System.Drawing.Size(38, 21);
+            this.Btxt28.TabIndex = 1;
+            this.Btxt28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox169
+            // Btxt29
             // 
-            this.textBox169.Location = new System.Drawing.Point(487, 62);
-            this.textBox169.Name = "textBox169";
-            this.textBox169.Size = new System.Drawing.Size(38, 21);
-            this.textBox169.TabIndex = 1;
-            this.textBox169.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt29.Location = new System.Drawing.Point(487, 62);
+            this.Btxt29.Name = "Btxt29";
+            this.Btxt29.Size = new System.Drawing.Size(38, 21);
+            this.Btxt29.TabIndex = 1;
+            this.Btxt29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox170
+            // Btxt30
             // 
-            this.textBox170.Location = new System.Drawing.Point(531, 62);
-            this.textBox170.Name = "textBox170";
-            this.textBox170.Size = new System.Drawing.Size(38, 21);
-            this.textBox170.TabIndex = 1;
-            this.textBox170.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt30.Location = new System.Drawing.Point(531, 62);
+            this.Btxt30.Name = "Btxt30";
+            this.Btxt30.Size = new System.Drawing.Size(38, 21);
+            this.Btxt30.TabIndex = 1;
+            this.Btxt30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox171
+            // Btxt31
             // 
-            this.textBox171.Location = new System.Drawing.Point(575, 62);
-            this.textBox171.Name = "textBox171";
-            this.textBox171.Size = new System.Drawing.Size(38, 21);
-            this.textBox171.TabIndex = 1;
-            this.textBox171.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt31.Location = new System.Drawing.Point(575, 62);
+            this.Btxt31.Name = "Btxt31";
+            this.Btxt31.Size = new System.Drawing.Size(38, 21);
+            this.Btxt31.TabIndex = 1;
+            this.Btxt31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox172
+            // Btxt32
             // 
-            this.textBox172.Location = new System.Drawing.Point(619, 62);
-            this.textBox172.Name = "textBox172";
-            this.textBox172.Size = new System.Drawing.Size(38, 21);
-            this.textBox172.TabIndex = 1;
-            this.textBox172.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt32.Location = new System.Drawing.Point(619, 62);
+            this.Btxt32.Name = "Btxt32";
+            this.Btxt32.Size = new System.Drawing.Size(38, 21);
+            this.Btxt32.TabIndex = 1;
+            this.Btxt32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox173
+            // Btxt33
             // 
-            this.textBox173.Location = new System.Drawing.Point(663, 62);
-            this.textBox173.Name = "textBox173";
-            this.textBox173.Size = new System.Drawing.Size(38, 21);
-            this.textBox173.TabIndex = 1;
-            this.textBox173.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt33.Location = new System.Drawing.Point(663, 62);
+            this.Btxt33.Name = "Btxt33";
+            this.Btxt33.Size = new System.Drawing.Size(38, 21);
+            this.Btxt33.TabIndex = 1;
+            this.Btxt33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox174
+            // Btxt34
             // 
-            this.textBox174.Location = new System.Drawing.Point(707, 62);
-            this.textBox174.Name = "textBox174";
-            this.textBox174.Size = new System.Drawing.Size(38, 21);
-            this.textBox174.TabIndex = 1;
-            this.textBox174.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt34.Location = new System.Drawing.Point(707, 62);
+            this.Btxt34.Name = "Btxt34";
+            this.Btxt34.Size = new System.Drawing.Size(38, 21);
+            this.Btxt34.TabIndex = 1;
+            this.Btxt34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox175
+            // Btxt35
             // 
-            this.textBox175.Location = new System.Drawing.Point(751, 62);
-            this.textBox175.Name = "textBox175";
-            this.textBox175.Size = new System.Drawing.Size(38, 21);
-            this.textBox175.TabIndex = 1;
-            this.textBox175.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt35.Location = new System.Drawing.Point(751, 62);
+            this.Btxt35.Name = "Btxt35";
+            this.Btxt35.Size = new System.Drawing.Size(38, 21);
+            this.Btxt35.TabIndex = 1;
+            this.Btxt35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox176
+            // Btxt36
             // 
-            this.textBox176.Location = new System.Drawing.Point(795, 62);
-            this.textBox176.Name = "textBox176";
-            this.textBox176.Size = new System.Drawing.Size(38, 21);
-            this.textBox176.TabIndex = 1;
-            this.textBox176.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt36.Location = new System.Drawing.Point(795, 62);
+            this.Btxt36.Name = "Btxt36";
+            this.Btxt36.Size = new System.Drawing.Size(38, 21);
+            this.Btxt36.TabIndex = 1;
+            this.Btxt36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox177
+            // Btxt37
             // 
-            this.textBox177.Location = new System.Drawing.Point(839, 62);
-            this.textBox177.Name = "textBox177";
-            this.textBox177.Size = new System.Drawing.Size(40, 21);
-            this.textBox177.TabIndex = 1;
-            this.textBox177.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt37.Location = new System.Drawing.Point(839, 62);
+            this.Btxt37.Name = "Btxt37";
+            this.Btxt37.Size = new System.Drawing.Size(40, 21);
+            this.Btxt37.TabIndex = 1;
+            this.Btxt37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanelB1
             // 
@@ -5337,16 +5341,16 @@
             this.tableLayoutPanelB1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.251249F));
             this.tableLayoutPanelB1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.247812F));
             this.tableLayoutPanelB1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.247812F));
-            this.tableLayoutPanelB1.Controls.Add(this.textBox200, 0, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox201, 0, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.txtB2B, 0, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox203, 3, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox204, 2, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt1, 0, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt2, 0, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt3, 0, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt7, 3, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt6, 2, 3);
             this.tableLayoutPanelB1.Controls.Add(this.lblTRQB1, 0, 2);
             this.tableLayoutPanelB1.Controls.Add(this.label199, 0, 1);
             this.tableLayoutPanelB1.Controls.Add(this.label279, 0, 0);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox205, 0, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox206, 1, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt4, 0, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt5, 1, 3);
             this.tableLayoutPanelB1.Controls.Add(this.label193, 3, 0);
             this.tableLayoutPanelB1.Controls.Add(this.label194, 5, 0);
             this.tableLayoutPanelB1.Controls.Add(this.label195, 9, 0);
@@ -5368,15 +5372,15 @@
             this.tableLayoutPanelB1.Controls.Add(this.lblTRQB14, 13, 2);
             this.tableLayoutPanelB1.Controls.Add(this.lblTRQB16, 15, 2);
             this.tableLayoutPanelB1.Controls.Add(this.lblTRQB15, 14, 2);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox154, 7, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox155, 8, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox156, 9, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox157, 10, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox207, 11, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox208, 12, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox209, 13, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.textBox210, 14, 3);
-            this.tableLayoutPanelB1.Controls.Add(this.txtB14B, 15, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt8, 7, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt9, 8, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt10, 9, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt11, 10, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt12, 11, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt13, 12, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt14, 13, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt15, 14, 3);
+            this.tableLayoutPanelB1.Controls.Add(this.Btxt16, 15, 3);
             this.tableLayoutPanelB1.Controls.Add(this.label200, 1, 1);
             this.tableLayoutPanelB1.Controls.Add(this.label201, 2, 1);
             this.tableLayoutPanelB1.Controls.Add(this.label202, 3, 1);
@@ -5403,41 +5407,41 @@
             this.tableLayoutPanelB1.Size = new System.Drawing.Size(916, 203);
             this.tableLayoutPanelB1.TabIndex = 4;
             // 
-            // textBox200
+            // Btxt1
             // 
-            this.textBox200.Location = new System.Drawing.Point(3, 178);
-            this.textBox200.Name = "textBox200";
-            this.textBox200.Size = new System.Drawing.Size(51, 21);
-            this.textBox200.TabIndex = 11;
+            this.Btxt1.Location = new System.Drawing.Point(3, 178);
+            this.Btxt1.Name = "Btxt1";
+            this.Btxt1.Size = new System.Drawing.Size(51, 21);
+            this.Btxt1.TabIndex = 11;
             // 
-            // textBox201
+            // Btxt2
             // 
-            this.textBox201.Location = new System.Drawing.Point(60, 178);
-            this.textBox201.Name = "textBox201";
-            this.textBox201.Size = new System.Drawing.Size(51, 21);
-            this.textBox201.TabIndex = 12;
+            this.Btxt2.Location = new System.Drawing.Point(60, 178);
+            this.Btxt2.Name = "Btxt2";
+            this.Btxt2.Size = new System.Drawing.Size(51, 21);
+            this.Btxt2.TabIndex = 12;
             // 
-            // txtB2B
+            // Btxt3
             // 
-            this.txtB2B.Location = new System.Drawing.Point(117, 178);
-            this.txtB2B.Name = "txtB2B";
-            this.txtB2B.ReadOnly = true;
-            this.txtB2B.Size = new System.Drawing.Size(51, 21);
-            this.txtB2B.TabIndex = 10;
+            this.Btxt3.Location = new System.Drawing.Point(117, 178);
+            this.Btxt3.Name = "Btxt3";
+            this.Btxt3.ReadOnly = true;
+            this.Btxt3.Size = new System.Drawing.Size(51, 21);
+            this.Btxt3.TabIndex = 10;
             // 
-            // textBox203
+            // Btxt7
             // 
-            this.textBox203.Location = new System.Drawing.Point(345, 178);
-            this.textBox203.Name = "textBox203";
-            this.textBox203.Size = new System.Drawing.Size(51, 21);
-            this.textBox203.TabIndex = 15;
+            this.Btxt7.Location = new System.Drawing.Point(345, 178);
+            this.Btxt7.Name = "Btxt7";
+            this.Btxt7.Size = new System.Drawing.Size(51, 21);
+            this.Btxt7.TabIndex = 15;
             // 
-            // textBox204
+            // Btxt6
             // 
-            this.textBox204.Location = new System.Drawing.Point(288, 178);
-            this.textBox204.Name = "textBox204";
-            this.textBox204.Size = new System.Drawing.Size(51, 21);
-            this.textBox204.TabIndex = 14;
+            this.Btxt6.Location = new System.Drawing.Point(288, 178);
+            this.Btxt6.Name = "Btxt6";
+            this.Btxt6.Size = new System.Drawing.Size(51, 21);
+            this.Btxt6.TabIndex = 14;
             // 
             // lblTRQB1
             // 
@@ -5465,19 +5469,19 @@
             this.label279.Text = "Rigid connection +";
             this.label279.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox205
+            // Btxt4
             // 
-            this.textBox205.Location = new System.Drawing.Point(174, 178);
-            this.textBox205.Name = "textBox205";
-            this.textBox205.Size = new System.Drawing.Size(51, 21);
-            this.textBox205.TabIndex = 9;
+            this.Btxt4.Location = new System.Drawing.Point(174, 178);
+            this.Btxt4.Name = "Btxt4";
+            this.Btxt4.Size = new System.Drawing.Size(51, 21);
+            this.Btxt4.TabIndex = 9;
             // 
-            // textBox206
+            // Btxt5
             // 
-            this.textBox206.Location = new System.Drawing.Point(231, 178);
-            this.textBox206.Name = "textBox206";
-            this.textBox206.Size = new System.Drawing.Size(51, 21);
-            this.textBox206.TabIndex = 13;
+            this.Btxt5.Location = new System.Drawing.Point(231, 178);
+            this.Btxt5.Name = "Btxt5";
+            this.Btxt5.Size = new System.Drawing.Size(51, 21);
+            this.Btxt5.TabIndex = 13;
             // 
             // label193
             // 
@@ -5777,69 +5781,69 @@
             this.lblTRQB15.MouseLeave += new System.EventHandler(this.lblTRQB_MouseLeave);
             this.lblTRQB15.MouseHover += new System.EventHandler(this.lblTRQB_MouseHover);
             // 
-            // textBox154
+            // Btxt8
             // 
-            this.textBox154.Location = new System.Drawing.Point(402, 178);
-            this.textBox154.Name = "textBox154";
-            this.textBox154.Size = new System.Drawing.Size(51, 21);
-            this.textBox154.TabIndex = 15;
+            this.Btxt8.Location = new System.Drawing.Point(402, 178);
+            this.Btxt8.Name = "Btxt8";
+            this.Btxt8.Size = new System.Drawing.Size(51, 21);
+            this.Btxt8.TabIndex = 15;
             // 
-            // textBox155
+            // Btxt9
             // 
-            this.textBox155.Location = new System.Drawing.Point(459, 178);
-            this.textBox155.Name = "textBox155";
-            this.textBox155.Size = new System.Drawing.Size(51, 21);
-            this.textBox155.TabIndex = 15;
+            this.Btxt9.Location = new System.Drawing.Point(459, 178);
+            this.Btxt9.Name = "Btxt9";
+            this.Btxt9.Size = new System.Drawing.Size(51, 21);
+            this.Btxt9.TabIndex = 15;
             // 
-            // textBox156
+            // Btxt10
             // 
-            this.textBox156.Location = new System.Drawing.Point(516, 178);
-            this.textBox156.Name = "textBox156";
-            this.textBox156.Size = new System.Drawing.Size(51, 21);
-            this.textBox156.TabIndex = 15;
+            this.Btxt10.Location = new System.Drawing.Point(516, 178);
+            this.Btxt10.Name = "Btxt10";
+            this.Btxt10.Size = new System.Drawing.Size(51, 21);
+            this.Btxt10.TabIndex = 15;
             // 
-            // textBox157
+            // Btxt11
             // 
-            this.textBox157.Location = new System.Drawing.Point(573, 178);
-            this.textBox157.Name = "textBox157";
-            this.textBox157.Size = new System.Drawing.Size(51, 21);
-            this.textBox157.TabIndex = 15;
+            this.Btxt11.Location = new System.Drawing.Point(573, 178);
+            this.Btxt11.Name = "Btxt11";
+            this.Btxt11.Size = new System.Drawing.Size(51, 21);
+            this.Btxt11.TabIndex = 15;
             // 
-            // textBox207
+            // Btxt12
             // 
-            this.textBox207.Location = new System.Drawing.Point(630, 178);
-            this.textBox207.Name = "textBox207";
-            this.textBox207.Size = new System.Drawing.Size(51, 21);
-            this.textBox207.TabIndex = 15;
+            this.Btxt12.Location = new System.Drawing.Point(630, 178);
+            this.Btxt12.Name = "Btxt12";
+            this.Btxt12.Size = new System.Drawing.Size(51, 21);
+            this.Btxt12.TabIndex = 15;
             // 
-            // textBox208
+            // Btxt13
             // 
-            this.textBox208.Location = new System.Drawing.Point(687, 178);
-            this.textBox208.Name = "textBox208";
-            this.textBox208.Size = new System.Drawing.Size(51, 21);
-            this.textBox208.TabIndex = 15;
+            this.Btxt13.Location = new System.Drawing.Point(687, 178);
+            this.Btxt13.Name = "Btxt13";
+            this.Btxt13.Size = new System.Drawing.Size(51, 21);
+            this.Btxt13.TabIndex = 15;
             // 
-            // textBox209
+            // Btxt14
             // 
-            this.textBox209.Location = new System.Drawing.Point(744, 178);
-            this.textBox209.Name = "textBox209";
-            this.textBox209.Size = new System.Drawing.Size(51, 21);
-            this.textBox209.TabIndex = 15;
+            this.Btxt14.Location = new System.Drawing.Point(744, 178);
+            this.Btxt14.Name = "Btxt14";
+            this.Btxt14.Size = new System.Drawing.Size(51, 21);
+            this.Btxt14.TabIndex = 15;
             // 
-            // textBox210
+            // Btxt15
             // 
-            this.textBox210.Location = new System.Drawing.Point(801, 178);
-            this.textBox210.Name = "textBox210";
-            this.textBox210.Size = new System.Drawing.Size(51, 21);
-            this.textBox210.TabIndex = 15;
+            this.Btxt15.Location = new System.Drawing.Point(801, 178);
+            this.Btxt15.Name = "Btxt15";
+            this.Btxt15.Size = new System.Drawing.Size(51, 21);
+            this.Btxt15.TabIndex = 15;
             // 
-            // txtB14B
+            // Btxt16
             // 
-            this.txtB14B.Location = new System.Drawing.Point(858, 178);
-            this.txtB14B.Name = "txtB14B";
-            this.txtB14B.ReadOnly = true;
-            this.txtB14B.Size = new System.Drawing.Size(51, 21);
-            this.txtB14B.TabIndex = 15;
+            this.Btxt16.Location = new System.Drawing.Point(858, 178);
+            this.Btxt16.Name = "Btxt16";
+            this.Btxt16.ReadOnly = true;
+            this.Btxt16.Size = new System.Drawing.Size(51, 21);
+            this.Btxt16.TabIndex = 15;
             // 
             // label199
             // 
@@ -6543,165 +6547,165 @@
             this.label242.Text = "40";
             this.label242.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox152
+            // Btxt38
             // 
-            this.textBox152.Location = new System.Drawing.Point(3, 122);
-            this.textBox152.Name = "textBox152";
-            this.textBox152.Size = new System.Drawing.Size(38, 21);
-            this.textBox152.TabIndex = 1;
-            this.textBox152.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt38.Location = new System.Drawing.Point(3, 122);
+            this.Btxt38.Name = "Btxt38";
+            this.Btxt38.Size = new System.Drawing.Size(38, 21);
+            this.Btxt38.TabIndex = 1;
+            this.Btxt38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox178
+            // Btxt39
             // 
-            this.textBox178.Location = new System.Drawing.Point(47, 122);
-            this.textBox178.Name = "textBox178";
-            this.textBox178.Size = new System.Drawing.Size(38, 21);
-            this.textBox178.TabIndex = 1;
-            this.textBox178.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt39.Location = new System.Drawing.Point(47, 122);
+            this.Btxt39.Name = "Btxt39";
+            this.Btxt39.Size = new System.Drawing.Size(38, 21);
+            this.Btxt39.TabIndex = 1;
+            this.Btxt39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox179
+            // Btxt40
             // 
-            this.textBox179.Location = new System.Drawing.Point(91, 122);
-            this.textBox179.Name = "textBox179";
-            this.textBox179.Size = new System.Drawing.Size(38, 21);
-            this.textBox179.TabIndex = 1;
-            this.textBox179.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt40.Location = new System.Drawing.Point(91, 122);
+            this.Btxt40.Name = "Btxt40";
+            this.Btxt40.Size = new System.Drawing.Size(38, 21);
+            this.Btxt40.TabIndex = 1;
+            this.Btxt40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox180
+            // Btxt41
             // 
-            this.textBox180.Location = new System.Drawing.Point(135, 122);
-            this.textBox180.Name = "textBox180";
-            this.textBox180.Size = new System.Drawing.Size(38, 21);
-            this.textBox180.TabIndex = 1;
-            this.textBox180.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt41.Location = new System.Drawing.Point(135, 122);
+            this.Btxt41.Name = "Btxt41";
+            this.Btxt41.Size = new System.Drawing.Size(38, 21);
+            this.Btxt41.TabIndex = 1;
+            this.Btxt41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox181
+            // Btxt42
             // 
-            this.textBox181.Location = new System.Drawing.Point(179, 122);
-            this.textBox181.Name = "textBox181";
-            this.textBox181.Size = new System.Drawing.Size(38, 21);
-            this.textBox181.TabIndex = 1;
-            this.textBox181.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt42.Location = new System.Drawing.Point(179, 122);
+            this.Btxt42.Name = "Btxt42";
+            this.Btxt42.Size = new System.Drawing.Size(38, 21);
+            this.Btxt42.TabIndex = 1;
+            this.Btxt42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox182
+            // Btxt43
             // 
-            this.textBox182.Location = new System.Drawing.Point(223, 122);
-            this.textBox182.Name = "textBox182";
-            this.textBox182.Size = new System.Drawing.Size(38, 21);
-            this.textBox182.TabIndex = 1;
-            this.textBox182.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt43.Location = new System.Drawing.Point(223, 122);
+            this.Btxt43.Name = "Btxt43";
+            this.Btxt43.Size = new System.Drawing.Size(38, 21);
+            this.Btxt43.TabIndex = 1;
+            this.Btxt43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox183
+            // Btxt44
             // 
-            this.textBox183.Location = new System.Drawing.Point(267, 122);
-            this.textBox183.Name = "textBox183";
-            this.textBox183.Size = new System.Drawing.Size(38, 21);
-            this.textBox183.TabIndex = 1;
-            this.textBox183.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt44.Location = new System.Drawing.Point(267, 122);
+            this.Btxt44.Name = "Btxt44";
+            this.Btxt44.Size = new System.Drawing.Size(38, 21);
+            this.Btxt44.TabIndex = 1;
+            this.Btxt44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox184
+            // Btxt45
             // 
-            this.textBox184.Location = new System.Drawing.Point(311, 122);
-            this.textBox184.Name = "textBox184";
-            this.textBox184.Size = new System.Drawing.Size(38, 21);
-            this.textBox184.TabIndex = 1;
-            this.textBox184.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt45.Location = new System.Drawing.Point(311, 122);
+            this.Btxt45.Name = "Btxt45";
+            this.Btxt45.Size = new System.Drawing.Size(38, 21);
+            this.Btxt45.TabIndex = 1;
+            this.Btxt45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox185
+            // Btxt46
             // 
-            this.textBox185.Location = new System.Drawing.Point(355, 122);
-            this.textBox185.Name = "textBox185";
-            this.textBox185.Size = new System.Drawing.Size(38, 21);
-            this.textBox185.TabIndex = 1;
-            this.textBox185.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt46.Location = new System.Drawing.Point(355, 122);
+            this.Btxt46.Name = "Btxt46";
+            this.Btxt46.Size = new System.Drawing.Size(38, 21);
+            this.Btxt46.TabIndex = 1;
+            this.Btxt46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox186
+            // Btxt47
             // 
-            this.textBox186.Location = new System.Drawing.Point(399, 122);
-            this.textBox186.Name = "textBox186";
-            this.textBox186.Size = new System.Drawing.Size(38, 21);
-            this.textBox186.TabIndex = 1;
-            this.textBox186.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt47.Location = new System.Drawing.Point(399, 122);
+            this.Btxt47.Name = "Btxt47";
+            this.Btxt47.Size = new System.Drawing.Size(38, 21);
+            this.Btxt47.TabIndex = 1;
+            this.Btxt47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox187
+            // Btxt48
             // 
-            this.textBox187.Location = new System.Drawing.Point(443, 122);
-            this.textBox187.Name = "textBox187";
-            this.textBox187.Size = new System.Drawing.Size(38, 21);
-            this.textBox187.TabIndex = 1;
-            this.textBox187.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt48.Location = new System.Drawing.Point(443, 122);
+            this.Btxt48.Name = "Btxt48";
+            this.Btxt48.Size = new System.Drawing.Size(38, 21);
+            this.Btxt48.TabIndex = 1;
+            this.Btxt48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox188
+            // Btxt49
             // 
-            this.textBox188.Location = new System.Drawing.Point(487, 122);
-            this.textBox188.Name = "textBox188";
-            this.textBox188.Size = new System.Drawing.Size(38, 21);
-            this.textBox188.TabIndex = 1;
-            this.textBox188.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt49.Location = new System.Drawing.Point(487, 122);
+            this.Btxt49.Name = "Btxt49";
+            this.Btxt49.Size = new System.Drawing.Size(38, 21);
+            this.Btxt49.TabIndex = 1;
+            this.Btxt49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox189
+            // Btxt50
             // 
-            this.textBox189.Location = new System.Drawing.Point(531, 122);
-            this.textBox189.Name = "textBox189";
-            this.textBox189.Size = new System.Drawing.Size(38, 21);
-            this.textBox189.TabIndex = 1;
-            this.textBox189.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt50.Location = new System.Drawing.Point(531, 122);
+            this.Btxt50.Name = "Btxt50";
+            this.Btxt50.Size = new System.Drawing.Size(38, 21);
+            this.Btxt50.TabIndex = 1;
+            this.Btxt50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox190
+            // Btxt51
             // 
-            this.textBox190.Location = new System.Drawing.Point(575, 122);
-            this.textBox190.Name = "textBox190";
-            this.textBox190.Size = new System.Drawing.Size(38, 21);
-            this.textBox190.TabIndex = 1;
-            this.textBox190.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt51.Location = new System.Drawing.Point(575, 122);
+            this.Btxt51.Name = "Btxt51";
+            this.Btxt51.Size = new System.Drawing.Size(38, 21);
+            this.Btxt51.TabIndex = 1;
+            this.Btxt51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox191
+            // Btxt52
             // 
-            this.textBox191.Location = new System.Drawing.Point(619, 122);
-            this.textBox191.Name = "textBox191";
-            this.textBox191.Size = new System.Drawing.Size(38, 21);
-            this.textBox191.TabIndex = 1;
-            this.textBox191.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt52.Location = new System.Drawing.Point(619, 122);
+            this.Btxt52.Name = "Btxt52";
+            this.Btxt52.Size = new System.Drawing.Size(38, 21);
+            this.Btxt52.TabIndex = 1;
+            this.Btxt52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox192
+            // Btxt53
             // 
-            this.textBox192.Location = new System.Drawing.Point(663, 122);
-            this.textBox192.Name = "textBox192";
-            this.textBox192.Size = new System.Drawing.Size(38, 21);
-            this.textBox192.TabIndex = 1;
-            this.textBox192.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt53.Location = new System.Drawing.Point(663, 122);
+            this.Btxt53.Name = "Btxt53";
+            this.Btxt53.Size = new System.Drawing.Size(38, 21);
+            this.Btxt53.TabIndex = 1;
+            this.Btxt53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox193
+            // Btxt54
             // 
-            this.textBox193.Location = new System.Drawing.Point(707, 122);
-            this.textBox193.Name = "textBox193";
-            this.textBox193.Size = new System.Drawing.Size(38, 21);
-            this.textBox193.TabIndex = 1;
-            this.textBox193.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt54.Location = new System.Drawing.Point(707, 122);
+            this.Btxt54.Name = "Btxt54";
+            this.Btxt54.Size = new System.Drawing.Size(38, 21);
+            this.Btxt54.TabIndex = 1;
+            this.Btxt54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox194
+            // Btxt55
             // 
-            this.textBox194.Location = new System.Drawing.Point(751, 122);
-            this.textBox194.Name = "textBox194";
-            this.textBox194.Size = new System.Drawing.Size(38, 21);
-            this.textBox194.TabIndex = 1;
-            this.textBox194.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt55.Location = new System.Drawing.Point(751, 122);
+            this.Btxt55.Name = "Btxt55";
+            this.Btxt55.Size = new System.Drawing.Size(38, 21);
+            this.Btxt55.TabIndex = 1;
+            this.Btxt55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox195
+            // Btxt56
             // 
-            this.textBox195.Location = new System.Drawing.Point(795, 122);
-            this.textBox195.Name = "textBox195";
-            this.textBox195.Size = new System.Drawing.Size(38, 21);
-            this.textBox195.TabIndex = 1;
-            this.textBox195.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt56.Location = new System.Drawing.Point(795, 122);
+            this.Btxt56.Name = "Btxt56";
+            this.Btxt56.Size = new System.Drawing.Size(38, 21);
+            this.Btxt56.TabIndex = 1;
+            this.Btxt56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox196
+            // Btxt57
             // 
-            this.textBox196.Location = new System.Drawing.Point(839, 122);
-            this.textBox196.Name = "textBox196";
-            this.textBox196.Size = new System.Drawing.Size(39, 21);
-            this.textBox196.TabIndex = 1;
-            this.textBox196.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt57.Location = new System.Drawing.Point(839, 122);
+            this.Btxt57.Name = "Btxt57";
+            this.Btxt57.Size = new System.Drawing.Size(39, 21);
+            this.Btxt57.TabIndex = 1;
+            this.Btxt57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label243
             // 
@@ -6989,165 +6993,165 @@
             this.label264.Text = "60";
             this.label264.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox197
+            // Btxt58
             // 
-            this.textBox197.Location = new System.Drawing.Point(3, 187);
-            this.textBox197.Name = "textBox197";
-            this.textBox197.Size = new System.Drawing.Size(38, 21);
-            this.textBox197.TabIndex = 1;
-            this.textBox197.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt58.Location = new System.Drawing.Point(3, 187);
+            this.Btxt58.Name = "Btxt58";
+            this.Btxt58.Size = new System.Drawing.Size(38, 21);
+            this.Btxt58.TabIndex = 1;
+            this.Btxt58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox198
+            // Btxt59
             // 
-            this.textBox198.Location = new System.Drawing.Point(47, 187);
-            this.textBox198.Name = "textBox198";
-            this.textBox198.Size = new System.Drawing.Size(38, 21);
-            this.textBox198.TabIndex = 1;
-            this.textBox198.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt59.Location = new System.Drawing.Point(47, 187);
+            this.Btxt59.Name = "Btxt59";
+            this.Btxt59.Size = new System.Drawing.Size(38, 21);
+            this.Btxt59.TabIndex = 1;
+            this.Btxt59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox199
+            // Btxt60
             // 
-            this.textBox199.Location = new System.Drawing.Point(91, 187);
-            this.textBox199.Name = "textBox199";
-            this.textBox199.Size = new System.Drawing.Size(38, 21);
-            this.textBox199.TabIndex = 1;
-            this.textBox199.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt60.Location = new System.Drawing.Point(91, 187);
+            this.Btxt60.Name = "Btxt60";
+            this.Btxt60.Size = new System.Drawing.Size(38, 21);
+            this.Btxt60.TabIndex = 1;
+            this.Btxt60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox212
+            // Btxt61
             // 
-            this.textBox212.Location = new System.Drawing.Point(135, 187);
-            this.textBox212.Name = "textBox212";
-            this.textBox212.Size = new System.Drawing.Size(38, 21);
-            this.textBox212.TabIndex = 1;
-            this.textBox212.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt61.Location = new System.Drawing.Point(135, 187);
+            this.Btxt61.Name = "Btxt61";
+            this.Btxt61.Size = new System.Drawing.Size(38, 21);
+            this.Btxt61.TabIndex = 1;
+            this.Btxt61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox213
+            // Btxt62
             // 
-            this.textBox213.Location = new System.Drawing.Point(179, 187);
-            this.textBox213.Name = "textBox213";
-            this.textBox213.Size = new System.Drawing.Size(38, 21);
-            this.textBox213.TabIndex = 1;
-            this.textBox213.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt62.Location = new System.Drawing.Point(179, 187);
+            this.Btxt62.Name = "Btxt62";
+            this.Btxt62.Size = new System.Drawing.Size(38, 21);
+            this.Btxt62.TabIndex = 1;
+            this.Btxt62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox214
+            // Btxt63
             // 
-            this.textBox214.Location = new System.Drawing.Point(223, 187);
-            this.textBox214.Name = "textBox214";
-            this.textBox214.Size = new System.Drawing.Size(38, 21);
-            this.textBox214.TabIndex = 1;
-            this.textBox214.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt63.Location = new System.Drawing.Point(223, 187);
+            this.Btxt63.Name = "Btxt63";
+            this.Btxt63.Size = new System.Drawing.Size(38, 21);
+            this.Btxt63.TabIndex = 1;
+            this.Btxt63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox215
+            // Btxt64
             // 
-            this.textBox215.Location = new System.Drawing.Point(267, 187);
-            this.textBox215.Name = "textBox215";
-            this.textBox215.Size = new System.Drawing.Size(38, 21);
-            this.textBox215.TabIndex = 1;
-            this.textBox215.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt64.Location = new System.Drawing.Point(267, 187);
+            this.Btxt64.Name = "Btxt64";
+            this.Btxt64.Size = new System.Drawing.Size(38, 21);
+            this.Btxt64.TabIndex = 1;
+            this.Btxt64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox216
+            // Btxt65
             // 
-            this.textBox216.Location = new System.Drawing.Point(311, 187);
-            this.textBox216.Name = "textBox216";
-            this.textBox216.Size = new System.Drawing.Size(38, 21);
-            this.textBox216.TabIndex = 1;
-            this.textBox216.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt65.Location = new System.Drawing.Point(311, 187);
+            this.Btxt65.Name = "Btxt65";
+            this.Btxt65.Size = new System.Drawing.Size(38, 21);
+            this.Btxt65.TabIndex = 1;
+            this.Btxt65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox217
+            // Btxt66
             // 
-            this.textBox217.Location = new System.Drawing.Point(355, 187);
-            this.textBox217.Name = "textBox217";
-            this.textBox217.Size = new System.Drawing.Size(38, 21);
-            this.textBox217.TabIndex = 1;
-            this.textBox217.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt66.Location = new System.Drawing.Point(355, 187);
+            this.Btxt66.Name = "Btxt66";
+            this.Btxt66.Size = new System.Drawing.Size(38, 21);
+            this.Btxt66.TabIndex = 1;
+            this.Btxt66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox218
+            // Btxt67
             // 
-            this.textBox218.Location = new System.Drawing.Point(399, 187);
-            this.textBox218.Name = "textBox218";
-            this.textBox218.Size = new System.Drawing.Size(38, 21);
-            this.textBox218.TabIndex = 1;
-            this.textBox218.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt67.Location = new System.Drawing.Point(399, 187);
+            this.Btxt67.Name = "Btxt67";
+            this.Btxt67.Size = new System.Drawing.Size(38, 21);
+            this.Btxt67.TabIndex = 1;
+            this.Btxt67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox219
+            // Btxt68
             // 
-            this.textBox219.Location = new System.Drawing.Point(443, 187);
-            this.textBox219.Name = "textBox219";
-            this.textBox219.Size = new System.Drawing.Size(38, 21);
-            this.textBox219.TabIndex = 1;
-            this.textBox219.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt68.Location = new System.Drawing.Point(443, 187);
+            this.Btxt68.Name = "Btxt68";
+            this.Btxt68.Size = new System.Drawing.Size(38, 21);
+            this.Btxt68.TabIndex = 1;
+            this.Btxt68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox220
+            // Btxt69
             // 
-            this.textBox220.Location = new System.Drawing.Point(487, 187);
-            this.textBox220.Name = "textBox220";
-            this.textBox220.Size = new System.Drawing.Size(38, 21);
-            this.textBox220.TabIndex = 1;
-            this.textBox220.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt69.Location = new System.Drawing.Point(487, 187);
+            this.Btxt69.Name = "Btxt69";
+            this.Btxt69.Size = new System.Drawing.Size(38, 21);
+            this.Btxt69.TabIndex = 1;
+            this.Btxt69.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox221
+            // Btxt70
             // 
-            this.textBox221.Location = new System.Drawing.Point(531, 187);
-            this.textBox221.Name = "textBox221";
-            this.textBox221.Size = new System.Drawing.Size(38, 21);
-            this.textBox221.TabIndex = 1;
-            this.textBox221.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt70.Location = new System.Drawing.Point(531, 187);
+            this.Btxt70.Name = "Btxt70";
+            this.Btxt70.Size = new System.Drawing.Size(38, 21);
+            this.Btxt70.TabIndex = 1;
+            this.Btxt70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox222
+            // Btxt71
             // 
-            this.textBox222.Location = new System.Drawing.Point(575, 187);
-            this.textBox222.Name = "textBox222";
-            this.textBox222.Size = new System.Drawing.Size(38, 21);
-            this.textBox222.TabIndex = 1;
-            this.textBox222.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt71.Location = new System.Drawing.Point(575, 187);
+            this.Btxt71.Name = "Btxt71";
+            this.Btxt71.Size = new System.Drawing.Size(38, 21);
+            this.Btxt71.TabIndex = 1;
+            this.Btxt71.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox223
+            // Btxt72
             // 
-            this.textBox223.Location = new System.Drawing.Point(619, 187);
-            this.textBox223.Name = "textBox223";
-            this.textBox223.Size = new System.Drawing.Size(38, 21);
-            this.textBox223.TabIndex = 1;
-            this.textBox223.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt72.Location = new System.Drawing.Point(619, 187);
+            this.Btxt72.Name = "Btxt72";
+            this.Btxt72.Size = new System.Drawing.Size(38, 21);
+            this.Btxt72.TabIndex = 1;
+            this.Btxt72.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox224
+            // Btxt73
             // 
-            this.textBox224.Location = new System.Drawing.Point(663, 187);
-            this.textBox224.Name = "textBox224";
-            this.textBox224.Size = new System.Drawing.Size(38, 21);
-            this.textBox224.TabIndex = 1;
-            this.textBox224.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt73.Location = new System.Drawing.Point(663, 187);
+            this.Btxt73.Name = "Btxt73";
+            this.Btxt73.Size = new System.Drawing.Size(38, 21);
+            this.Btxt73.TabIndex = 1;
+            this.Btxt73.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox225
+            // Btxt74
             // 
-            this.textBox225.Location = new System.Drawing.Point(707, 187);
-            this.textBox225.Name = "textBox225";
-            this.textBox225.Size = new System.Drawing.Size(38, 21);
-            this.textBox225.TabIndex = 1;
-            this.textBox225.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt74.Location = new System.Drawing.Point(707, 187);
+            this.Btxt74.Name = "Btxt74";
+            this.Btxt74.Size = new System.Drawing.Size(38, 21);
+            this.Btxt74.TabIndex = 1;
+            this.Btxt74.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox226
+            // Btxt75
             // 
-            this.textBox226.Location = new System.Drawing.Point(751, 187);
-            this.textBox226.Name = "textBox226";
-            this.textBox226.Size = new System.Drawing.Size(38, 21);
-            this.textBox226.TabIndex = 1;
-            this.textBox226.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt75.Location = new System.Drawing.Point(751, 187);
+            this.Btxt75.Name = "Btxt75";
+            this.Btxt75.Size = new System.Drawing.Size(38, 21);
+            this.Btxt75.TabIndex = 1;
+            this.Btxt75.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox227
+            // Btxt76
             // 
-            this.textBox227.Location = new System.Drawing.Point(795, 187);
-            this.textBox227.Name = "textBox227";
-            this.textBox227.Size = new System.Drawing.Size(38, 21);
-            this.textBox227.TabIndex = 1;
-            this.textBox227.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt76.Location = new System.Drawing.Point(795, 187);
+            this.Btxt76.Name = "Btxt76";
+            this.Btxt76.Size = new System.Drawing.Size(38, 21);
+            this.Btxt76.TabIndex = 1;
+            this.Btxt76.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox228
+            // Btxt77
             // 
-            this.textBox228.Location = new System.Drawing.Point(839, 187);
-            this.textBox228.Name = "textBox228";
-            this.textBox228.Size = new System.Drawing.Size(38, 21);
-            this.textBox228.TabIndex = 1;
-            this.textBox228.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt77.Location = new System.Drawing.Point(839, 187);
+            this.Btxt77.Name = "Btxt77";
+            this.Btxt77.Size = new System.Drawing.Size(38, 21);
+            this.Btxt77.TabIndex = 1;
+            this.Btxt77.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label265
             // 
@@ -7292,85 +7296,85 @@
             this.label288.Text = "70";
             this.label288.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox229
+            // Btxt78
             // 
-            this.textBox229.Location = new System.Drawing.Point(223, 246);
-            this.textBox229.Name = "textBox229";
-            this.textBox229.Size = new System.Drawing.Size(38, 21);
-            this.textBox229.TabIndex = 1;
-            this.textBox229.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt78.Location = new System.Drawing.Point(223, 246);
+            this.Btxt78.Name = "Btxt78";
+            this.Btxt78.Size = new System.Drawing.Size(38, 21);
+            this.Btxt78.TabIndex = 1;
+            this.Btxt78.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox230
+            // Btxt79
             // 
-            this.textBox230.Location = new System.Drawing.Point(267, 246);
-            this.textBox230.Name = "textBox230";
-            this.textBox230.Size = new System.Drawing.Size(38, 21);
-            this.textBox230.TabIndex = 1;
-            this.textBox230.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt79.Location = new System.Drawing.Point(267, 246);
+            this.Btxt79.Name = "Btxt79";
+            this.Btxt79.Size = new System.Drawing.Size(38, 21);
+            this.Btxt79.TabIndex = 1;
+            this.Btxt79.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox231
+            // Btxt80
             // 
-            this.textBox231.Location = new System.Drawing.Point(311, 246);
-            this.textBox231.Name = "textBox231";
-            this.textBox231.Size = new System.Drawing.Size(38, 21);
-            this.textBox231.TabIndex = 1;
-            this.textBox231.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt80.Location = new System.Drawing.Point(311, 246);
+            this.Btxt80.Name = "Btxt80";
+            this.Btxt80.Size = new System.Drawing.Size(38, 21);
+            this.Btxt80.TabIndex = 1;
+            this.Btxt80.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox232
+            // Btxt81
             // 
-            this.textBox232.Location = new System.Drawing.Point(355, 246);
-            this.textBox232.Name = "textBox232";
-            this.textBox232.Size = new System.Drawing.Size(38, 21);
-            this.textBox232.TabIndex = 1;
-            this.textBox232.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt81.Location = new System.Drawing.Point(355, 246);
+            this.Btxt81.Name = "Btxt81";
+            this.Btxt81.Size = new System.Drawing.Size(38, 21);
+            this.Btxt81.TabIndex = 1;
+            this.Btxt81.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox233
+            // Btxt82
             // 
-            this.textBox233.Location = new System.Drawing.Point(399, 246);
-            this.textBox233.Name = "textBox233";
-            this.textBox233.Size = new System.Drawing.Size(38, 21);
-            this.textBox233.TabIndex = 1;
-            this.textBox233.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt82.Location = new System.Drawing.Point(399, 246);
+            this.Btxt82.Name = "Btxt82";
+            this.Btxt82.Size = new System.Drawing.Size(38, 21);
+            this.Btxt82.TabIndex = 1;
+            this.Btxt82.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox234
+            // Btxt83
             // 
-            this.textBox234.Location = new System.Drawing.Point(443, 246);
-            this.textBox234.Name = "textBox234";
-            this.textBox234.Size = new System.Drawing.Size(38, 21);
-            this.textBox234.TabIndex = 1;
-            this.textBox234.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt83.Location = new System.Drawing.Point(443, 246);
+            this.Btxt83.Name = "Btxt83";
+            this.Btxt83.Size = new System.Drawing.Size(38, 21);
+            this.Btxt83.TabIndex = 1;
+            this.Btxt83.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox235
+            // Btxt84
             // 
-            this.textBox235.Location = new System.Drawing.Point(487, 246);
-            this.textBox235.Name = "textBox235";
-            this.textBox235.Size = new System.Drawing.Size(38, 21);
-            this.textBox235.TabIndex = 1;
-            this.textBox235.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt84.Location = new System.Drawing.Point(487, 246);
+            this.Btxt84.Name = "Btxt84";
+            this.Btxt84.Size = new System.Drawing.Size(38, 21);
+            this.Btxt84.TabIndex = 1;
+            this.Btxt84.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox236
+            // Btxt85
             // 
-            this.textBox236.Location = new System.Drawing.Point(531, 246);
-            this.textBox236.Name = "textBox236";
-            this.textBox236.Size = new System.Drawing.Size(38, 21);
-            this.textBox236.TabIndex = 1;
-            this.textBox236.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt85.Location = new System.Drawing.Point(531, 246);
+            this.Btxt85.Name = "Btxt85";
+            this.Btxt85.Size = new System.Drawing.Size(38, 21);
+            this.Btxt85.TabIndex = 1;
+            this.Btxt85.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox237
+            // Btxt86
             // 
-            this.textBox237.Location = new System.Drawing.Point(575, 246);
-            this.textBox237.Name = "textBox237";
-            this.textBox237.Size = new System.Drawing.Size(38, 21);
-            this.textBox237.TabIndex = 1;
-            this.textBox237.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt86.Location = new System.Drawing.Point(575, 246);
+            this.Btxt86.Name = "Btxt86";
+            this.Btxt86.Size = new System.Drawing.Size(38, 21);
+            this.Btxt86.TabIndex = 1;
+            this.Btxt86.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox238
+            // Btxt87
             // 
-            this.textBox238.Location = new System.Drawing.Point(619, 246);
-            this.textBox238.Name = "textBox238";
-            this.textBox238.Size = new System.Drawing.Size(38, 21);
-            this.textBox238.TabIndex = 1;
-            this.textBox238.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Btxt87.Location = new System.Drawing.Point(619, 246);
+            this.Btxt87.Name = "Btxt87";
+            this.Btxt87.Size = new System.Drawing.Size(38, 21);
+            this.Btxt87.TabIndex = 1;
+            this.Btxt87.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanelB2_2
             // 
@@ -9136,6 +9140,14 @@
             this.label289.Size = new System.Drawing.Size(837, 2);
             this.label289.TabIndex = 10;
             // 
+            // txt109
+            // 
+            this.txt109.Location = new System.Drawing.Point(28, 479);
+            this.txt109.Multiline = true;
+            this.txt109.Name = "txt109";
+            this.txt109.Size = new System.Drawing.Size(863, 40);
+            this.txt109.TabIndex = 29;
+            // 
             // AnalysisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -9393,11 +9405,11 @@
         private System.Windows.Forms.Label lblTRQ47;
         private System.Windows.Forms.Panel secondPanel;
         private System.Windows.Forms.TextBox textBox127;
-        private System.Windows.Forms.TextBox textBox64;
+        private System.Windows.Forms.TextBox txt108;
         private System.Windows.Forms.Label label176;
         private System.Windows.Forms.Label label175;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox126;
+        private System.Windows.Forms.TextBox txt65;
         private System.Windows.Forms.Label label173;
         private System.Windows.Forms.Label label174;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -9446,48 +9458,48 @@
         private System.Windows.Forms.Label label133;
         private System.Windows.Forms.Label label134;
         private System.Windows.Forms.Label label135;
-        private System.Windows.Forms.TextBox textBox80;
-        private System.Windows.Forms.TextBox textBox81;
-        private System.Windows.Forms.TextBox textBox82;
-        private System.Windows.Forms.TextBox textBox83;
-        private System.Windows.Forms.TextBox textBox84;
-        private System.Windows.Forms.TextBox textBox85;
-        private System.Windows.Forms.TextBox textBox86;
-        private System.Windows.Forms.TextBox textBox87;
-        private System.Windows.Forms.TextBox textBox88;
-        private System.Windows.Forms.TextBox textBox89;
-        private System.Windows.Forms.TextBox textBox90;
-        private System.Windows.Forms.TextBox textBox91;
-        private System.Windows.Forms.TextBox textBox92;
-        private System.Windows.Forms.TextBox textBox93;
-        private System.Windows.Forms.TextBox textBox94;
-        private System.Windows.Forms.TextBox textBox95;
-        private System.Windows.Forms.TextBox textBox96;
-        private System.Windows.Forms.TextBox textBox97;
-        private System.Windows.Forms.TextBox textBox98;
-        private System.Windows.Forms.TextBox textBox99;
-        private System.Windows.Forms.TextBox textBox100;
-        private System.Windows.Forms.TextBox textBox101;
-        private System.Windows.Forms.TextBox textBox102;
-        private System.Windows.Forms.TextBox textBox103;
-        private System.Windows.Forms.TextBox textBox104;
-        private System.Windows.Forms.TextBox textBox105;
-        private System.Windows.Forms.TextBox textBox106;
-        private System.Windows.Forms.TextBox textBox107;
-        private System.Windows.Forms.TextBox textBox108;
-        private System.Windows.Forms.TextBox textBox109;
-        private System.Windows.Forms.TextBox textBox110;
-        private System.Windows.Forms.TextBox textBox111;
-        private System.Windows.Forms.TextBox textBox112;
-        private System.Windows.Forms.TextBox textBox113;
-        private System.Windows.Forms.TextBox textBox114;
-        private System.Windows.Forms.TextBox textBox115;
-        private System.Windows.Forms.TextBox textBox116;
-        private System.Windows.Forms.TextBox textBox117;
-        private System.Windows.Forms.TextBox textBox118;
-        private System.Windows.Forms.TextBox textBox119;
-        private System.Windows.Forms.TextBox textBox120;
-        private System.Windows.Forms.TextBox textBox121;
+        private System.Windows.Forms.TextBox txt67;
+        private System.Windows.Forms.TextBox txt68;
+        private System.Windows.Forms.TextBox txt66;
+        private System.Windows.Forms.TextBox txt69;
+        private System.Windows.Forms.TextBox txt70;
+        private System.Windows.Forms.TextBox txt71;
+        private System.Windows.Forms.TextBox txt72;
+        private System.Windows.Forms.TextBox txt73;
+        private System.Windows.Forms.TextBox txt74;
+        private System.Windows.Forms.TextBox txt75;
+        private System.Windows.Forms.TextBox txt76;
+        private System.Windows.Forms.TextBox txt77;
+        private System.Windows.Forms.TextBox txt78;
+        private System.Windows.Forms.TextBox txt79;
+        private System.Windows.Forms.TextBox txt80;
+        private System.Windows.Forms.TextBox txt81;
+        private System.Windows.Forms.TextBox txt82;
+        private System.Windows.Forms.TextBox txt83;
+        private System.Windows.Forms.TextBox txt84;
+        private System.Windows.Forms.TextBox txt85;
+        private System.Windows.Forms.TextBox txt86;
+        private System.Windows.Forms.TextBox txt87;
+        private System.Windows.Forms.TextBox txt88;
+        private System.Windows.Forms.TextBox txt89;
+        private System.Windows.Forms.TextBox txt90;
+        private System.Windows.Forms.TextBox txt91;
+        private System.Windows.Forms.TextBox txt92;
+        private System.Windows.Forms.TextBox txt93;
+        private System.Windows.Forms.TextBox txt94;
+        private System.Windows.Forms.TextBox txt95;
+        private System.Windows.Forms.TextBox txt96;
+        private System.Windows.Forms.TextBox txt97;
+        private System.Windows.Forms.TextBox txt99;
+        private System.Windows.Forms.TextBox txt100;
+        private System.Windows.Forms.TextBox txt101;
+        private System.Windows.Forms.TextBox txt102;
+        private System.Windows.Forms.TextBox txt103;
+        private System.Windows.Forms.TextBox txt104;
+        private System.Windows.Forms.TextBox txt105;
+        private System.Windows.Forms.TextBox txt106;
+        private System.Windows.Forms.TextBox txt107;
+        private System.Windows.Forms.TextBox txt98;
         private System.Windows.Forms.Label lblTRQ68;
         private System.Windows.Forms.Label lblTRQ69;
         private System.Windows.Forms.Label lblTRQ70;
@@ -9518,7 +9530,7 @@
         private System.Windows.Forms.Panel panelB;
         private System.Windows.Forms.Panel panelB2;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox153;
+        private System.Windows.Forms.TextBox Btxt17;
         private System.Windows.Forms.Label lblModule1;
         private System.Windows.Forms.Label label192;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelB2;
@@ -9526,36 +9538,36 @@
         private System.Windows.Forms.Label label205;
         private System.Windows.Forms.Label label206;
         private System.Windows.Forms.Label label207;
-        private System.Windows.Forms.TextBox textBox158;
-        private System.Windows.Forms.TextBox textBox159;
-        private System.Windows.Forms.TextBox textBox160;
-        private System.Windows.Forms.TextBox textBox161;
-        private System.Windows.Forms.TextBox textBox162;
-        private System.Windows.Forms.TextBox textBox163;
-        private System.Windows.Forms.TextBox textBox164;
-        private System.Windows.Forms.TextBox textBox165;
-        private System.Windows.Forms.TextBox textBox166;
-        private System.Windows.Forms.TextBox textBox167;
-        private System.Windows.Forms.TextBox textBox168;
-        private System.Windows.Forms.TextBox textBox169;
-        private System.Windows.Forms.TextBox textBox170;
-        private System.Windows.Forms.TextBox textBox171;
-        private System.Windows.Forms.TextBox textBox172;
-        private System.Windows.Forms.TextBox textBox173;
-        private System.Windows.Forms.TextBox textBox174;
-        private System.Windows.Forms.TextBox textBox175;
-        private System.Windows.Forms.TextBox textBox176;
-        private System.Windows.Forms.TextBox textBox177;
+        private System.Windows.Forms.TextBox Btxt19;
+        private System.Windows.Forms.TextBox Btxt20;
+        private System.Windows.Forms.TextBox Btxt18;
+        private System.Windows.Forms.TextBox Btxt21;
+        private System.Windows.Forms.TextBox Btxt22;
+        private System.Windows.Forms.TextBox Btxt23;
+        private System.Windows.Forms.TextBox Btxt24;
+        private System.Windows.Forms.TextBox Btxt25;
+        private System.Windows.Forms.TextBox Btxt26;
+        private System.Windows.Forms.TextBox Btxt27;
+        private System.Windows.Forms.TextBox Btxt28;
+        private System.Windows.Forms.TextBox Btxt29;
+        private System.Windows.Forms.TextBox Btxt30;
+        private System.Windows.Forms.TextBox Btxt31;
+        private System.Windows.Forms.TextBox Btxt32;
+        private System.Windows.Forms.TextBox Btxt33;
+        private System.Windows.Forms.TextBox Btxt34;
+        private System.Windows.Forms.TextBox Btxt35;
+        private System.Windows.Forms.TextBox Btxt36;
+        private System.Windows.Forms.TextBox Btxt37;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelB1;
-        private System.Windows.Forms.TextBox textBox200;
-        private System.Windows.Forms.TextBox textBox201;
-        private System.Windows.Forms.TextBox txtB2B;
-        private System.Windows.Forms.TextBox textBox203;
-        private System.Windows.Forms.TextBox textBox204;
+        private System.Windows.Forms.TextBox Btxt1;
+        private System.Windows.Forms.TextBox Btxt2;
+        private System.Windows.Forms.TextBox Btxt3;
+        private System.Windows.Forms.TextBox Btxt7;
+        private System.Windows.Forms.TextBox Btxt6;
         private System.Windows.Forms.Label lblTRQB1;
         private System.Windows.Forms.Label label279;
-        private System.Windows.Forms.TextBox textBox205;
-        private System.Windows.Forms.TextBox textBox206;
+        private System.Windows.Forms.TextBox Btxt4;
+        private System.Windows.Forms.TextBox Btxt5;
         private System.Windows.Forms.Label label193;
         private System.Windows.Forms.Label label194;
         private System.Windows.Forms.Label label195;
@@ -9577,15 +9589,15 @@
         private System.Windows.Forms.Label lblTRQB14;
         private System.Windows.Forms.Label lblTRQB16;
         private System.Windows.Forms.Label lblTRQB15;
-        private System.Windows.Forms.TextBox textBox154;
-        private System.Windows.Forms.TextBox textBox155;
-        private System.Windows.Forms.TextBox textBox156;
-        private System.Windows.Forms.TextBox textBox157;
-        private System.Windows.Forms.TextBox textBox207;
-        private System.Windows.Forms.TextBox textBox208;
-        private System.Windows.Forms.TextBox textBox209;
-        private System.Windows.Forms.TextBox textBox210;
-        private System.Windows.Forms.TextBox txtB14B;
+        private System.Windows.Forms.TextBox Btxt8;
+        private System.Windows.Forms.TextBox Btxt9;
+        private System.Windows.Forms.TextBox Btxt10;
+        private System.Windows.Forms.TextBox Btxt11;
+        private System.Windows.Forms.TextBox Btxt12;
+        private System.Windows.Forms.TextBox Btxt13;
+        private System.Windows.Forms.TextBox Btxt14;
+        private System.Windows.Forms.TextBox Btxt15;
+        private System.Windows.Forms.TextBox Btxt16;
         private System.Windows.Forms.Label label199;
         private System.Windows.Forms.Label label200;
         private System.Windows.Forms.Label label201;
@@ -9640,26 +9652,26 @@
         private System.Windows.Forms.Label label240;
         private System.Windows.Forms.Label label241;
         private System.Windows.Forms.Label label242;
-        private System.Windows.Forms.TextBox textBox152;
-        private System.Windows.Forms.TextBox textBox178;
-        private System.Windows.Forms.TextBox textBox179;
-        private System.Windows.Forms.TextBox textBox180;
-        private System.Windows.Forms.TextBox textBox181;
-        private System.Windows.Forms.TextBox textBox182;
-        private System.Windows.Forms.TextBox textBox183;
-        private System.Windows.Forms.TextBox textBox184;
-        private System.Windows.Forms.TextBox textBox185;
-        private System.Windows.Forms.TextBox textBox186;
-        private System.Windows.Forms.TextBox textBox187;
-        private System.Windows.Forms.TextBox textBox188;
-        private System.Windows.Forms.TextBox textBox189;
-        private System.Windows.Forms.TextBox textBox190;
-        private System.Windows.Forms.TextBox textBox191;
-        private System.Windows.Forms.TextBox textBox192;
-        private System.Windows.Forms.TextBox textBox193;
-        private System.Windows.Forms.TextBox textBox194;
-        private System.Windows.Forms.TextBox textBox195;
-        private System.Windows.Forms.TextBox textBox196;
+        private System.Windows.Forms.TextBox Btxt38;
+        private System.Windows.Forms.TextBox Btxt39;
+        private System.Windows.Forms.TextBox Btxt40;
+        private System.Windows.Forms.TextBox Btxt41;
+        private System.Windows.Forms.TextBox Btxt42;
+        private System.Windows.Forms.TextBox Btxt43;
+        private System.Windows.Forms.TextBox Btxt44;
+        private System.Windows.Forms.TextBox Btxt45;
+        private System.Windows.Forms.TextBox Btxt46;
+        private System.Windows.Forms.TextBox Btxt47;
+        private System.Windows.Forms.TextBox Btxt48;
+        private System.Windows.Forms.TextBox Btxt49;
+        private System.Windows.Forms.TextBox Btxt50;
+        private System.Windows.Forms.TextBox Btxt51;
+        private System.Windows.Forms.TextBox Btxt52;
+        private System.Windows.Forms.TextBox Btxt53;
+        private System.Windows.Forms.TextBox Btxt54;
+        private System.Windows.Forms.TextBox Btxt55;
+        private System.Windows.Forms.TextBox Btxt56;
+        private System.Windows.Forms.TextBox Btxt57;
         private System.Windows.Forms.Label label243;
         private System.Windows.Forms.Label label244;
         private System.Windows.Forms.Label label245;
@@ -9682,26 +9694,26 @@
         private System.Windows.Forms.Label label262;
         private System.Windows.Forms.Label label263;
         private System.Windows.Forms.Label label264;
-        private System.Windows.Forms.TextBox textBox197;
-        private System.Windows.Forms.TextBox textBox198;
-        private System.Windows.Forms.TextBox textBox199;
-        private System.Windows.Forms.TextBox textBox212;
-        private System.Windows.Forms.TextBox textBox213;
-        private System.Windows.Forms.TextBox textBox214;
-        private System.Windows.Forms.TextBox textBox215;
-        private System.Windows.Forms.TextBox textBox216;
-        private System.Windows.Forms.TextBox textBox217;
-        private System.Windows.Forms.TextBox textBox218;
-        private System.Windows.Forms.TextBox textBox219;
-        private System.Windows.Forms.TextBox textBox220;
-        private System.Windows.Forms.TextBox textBox221;
-        private System.Windows.Forms.TextBox textBox222;
-        private System.Windows.Forms.TextBox textBox223;
-        private System.Windows.Forms.TextBox textBox224;
-        private System.Windows.Forms.TextBox textBox225;
-        private System.Windows.Forms.TextBox textBox226;
-        private System.Windows.Forms.TextBox textBox227;
-        private System.Windows.Forms.TextBox textBox228;
+        private System.Windows.Forms.TextBox Btxt58;
+        private System.Windows.Forms.TextBox Btxt59;
+        private System.Windows.Forms.TextBox Btxt60;
+        private System.Windows.Forms.TextBox Btxt61;
+        private System.Windows.Forms.TextBox Btxt62;
+        private System.Windows.Forms.TextBox Btxt63;
+        private System.Windows.Forms.TextBox Btxt64;
+        private System.Windows.Forms.TextBox Btxt65;
+        private System.Windows.Forms.TextBox Btxt66;
+        private System.Windows.Forms.TextBox Btxt67;
+        private System.Windows.Forms.TextBox Btxt68;
+        private System.Windows.Forms.TextBox Btxt69;
+        private System.Windows.Forms.TextBox Btxt70;
+        private System.Windows.Forms.TextBox Btxt71;
+        private System.Windows.Forms.TextBox Btxt72;
+        private System.Windows.Forms.TextBox Btxt73;
+        private System.Windows.Forms.TextBox Btxt74;
+        private System.Windows.Forms.TextBox Btxt75;
+        private System.Windows.Forms.TextBox Btxt76;
+        private System.Windows.Forms.TextBox Btxt77;
         private System.Windows.Forms.Label label265;
         private System.Windows.Forms.Label label288;
         private System.Windows.Forms.Label label274;
@@ -9713,16 +9725,16 @@
         private System.Windows.Forms.Label label268;
         private System.Windows.Forms.Label label267;
         private System.Windows.Forms.Label label266;
-        private System.Windows.Forms.TextBox textBox229;
-        private System.Windows.Forms.TextBox textBox230;
-        private System.Windows.Forms.TextBox textBox231;
-        private System.Windows.Forms.TextBox textBox232;
-        private System.Windows.Forms.TextBox textBox233;
-        private System.Windows.Forms.TextBox textBox234;
-        private System.Windows.Forms.TextBox textBox235;
-        private System.Windows.Forms.TextBox textBox236;
-        private System.Windows.Forms.TextBox textBox237;
-        private System.Windows.Forms.TextBox textBox238;
+        private System.Windows.Forms.TextBox Btxt78;
+        private System.Windows.Forms.TextBox Btxt79;
+        private System.Windows.Forms.TextBox Btxt80;
+        private System.Windows.Forms.TextBox Btxt81;
+        private System.Windows.Forms.TextBox Btxt82;
+        private System.Windows.Forms.TextBox Btxt83;
+        private System.Windows.Forms.TextBox Btxt84;
+        private System.Windows.Forms.TextBox Btxt85;
+        private System.Windows.Forms.TextBox Btxt86;
+        private System.Windows.Forms.TextBox Btxt87;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox264;
         private System.Windows.Forms.Label label188;
@@ -9873,5 +9885,6 @@
         private System.Windows.Forms.TextBox textBox261;
         private System.Windows.Forms.TextBox textBox262;
         private System.Windows.Forms.TextBox textBox263;
+        private System.Windows.Forms.TextBox txt109;
     }
 }

@@ -42,6 +42,39 @@ namespace Reklamace_Kion.RepairAnalyze
 
         private void AnalysisForm_Load(object sender, EventArgs e)
         {
+            TextBox[] textBoxesA1 = { txt1, txt2, txt3, txt4, txt5, txt6, txt9, txt10,
+                                        txt11, txt12, txt13, txt14, txt15, txt16, txt18, txt20,
+                                        txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
+                                        txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40,
+                                        txt41, txt42, txt43, txt44, txt45, txt46, txt47, txt48, txt49, txt50,
+                                        txt51, txt52, txt53, txt54, txt55, txt56, txt57, txt58, txt59, txt60,
+                                        txt61, txt62, txt63, txt64
+                                    };
+
+            TextBox[] textBoxesA2 = { txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10,
+                                        txt11, txt12, txt13, txt14, txt15, txt16, txt17, txt18, txt19, txt20,
+                                        txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
+                                        txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40,
+                                        txt41, txt42, txt43, txt44, txt45, txt46, txt47, txt48, txt49, txt50,
+                                        txt51, txt52, txt53, txt54, txt55, txt56, txt57, txt58, txt59, txt60,
+                                        txt61, txt62, txt63, txt64, txt65, txt66, txt67, txt68, txt69, txt70,
+                                        txt71, txt72, txt73, txt74, txt75, txt76, txt77, txt78, txt79, txt80,
+                                        txt81, txt82, txt83, txt84, txt85, txt86, txt87, txt88, txt89, txt90,
+                                        txt91, txt92, txt93, txt94, txt95, txt96, txt97, txt98, txt99, txt100,
+                                        txt101, txt102, txt103, txt104, txt105, txt106, txt107, txt108, txt109
+                                    };
+
+            TextBox[] textBoxesB1 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
+                                        Btxt11, Btxt12, Btxt13, Btxt14, Btxt15, Btxt16, Btxt17, Btxt18, Btxt19, Btxt20,
+                                        Btxt21, Btxt22, Btxt23, Btxt24, Btxt25, Btxt26, Btxt27, Btxt28, Btxt29, Btxt30,
+                                        Btxt31, Btxt32, Btxt33, Btxt34, Btxt35, Btxt36, Btxt37, Btxt38, Btxt39, Btxt40,
+                                        Btxt41, Btxt42, Btxt43, Btxt44, Btxt45, Btxt46, Btxt47, Btxt48, Btxt49, Btxt50,
+                                        Btxt51, Btxt52, Btxt53, Btxt54, Btxt55, Btxt56, Btxt57, Btxt58, Btxt59, Btxt60,
+                                        Btxt61, Btxt62, Btxt63, Btxt64, Btxt65, Btxt66, Btxt67, Btxt68, Btxt69, Btxt70,
+                                        Btxt71, Btxt72, Btxt73, Btxt74, Btxt75, Btxt76, Btxt77, Btxt78, Btxt79, Btxt80,
+                                        Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87
+                                    };
+
             lblCLM.Text = CLM;
             lblPN.Text = PN;
 
@@ -85,11 +118,14 @@ namespace Reklamace_Kion.RepairAnalyze
                 {
                     txt7.ReadOnly = false;
                     txt8.ReadOnly = false;
+                    txt17.ReadOnly = false;
+                    txt19.ReadOnly = false;
                     secondPanel.Visible = true;
+                    LoadData(PNChar, CLM, textBoxesA2);
                 }
                 else
                 {
-                    LoadData(PNChar, CLM);
+                    LoadData(PNChar, CLM, textBoxesA1);
                 }
             }
             if (PNChar.Contains("B"))
@@ -100,36 +136,31 @@ namespace Reklamace_Kion.RepairAnalyze
                 if (PNChar == "B2")
                 {
                     lblModule1.Text = "MODULE-23-VL41M-SFP-7S5P (Top position) SN";
-                    txtB2B.ReadOnly = false;
-                    txtB14B.ReadOnly = false;
+                    Btxt3.ReadOnly = false;
+                    Btxt16.ReadOnly = false;
                     panelB2.Visible = true;
+                }
+                else
+                {
+                    LoadData(PNChar, CLM, textBoxesB1);
                 }
             }
         }
 
-        private void LoadData(string PN, string CLM)
+        private void LoadData(string PN, string CLM, TextBox[] boxes)
         {
-            TextBox[] textBoxes = { txt1, txt2, txt3, txt4, txt5, txt6, txt9, txt10,
-                                    txt11, txt12, txt13, txt14, txt15, txt16, txt17, txt18, txt19, txt20,
-                                    txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
-                                    txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40,
-                                    txt41, txt42, txt43, txt44, txt45, txt46, txt47, txt48, txt49, txt50,
-                                    txt51, txt52, txt53, txt54, txt55, txt56, txt57, txt58, txt59, txt60,
-                                    txt61, txt62, txt63, txt64
-                                    };
-            string cmd = string.Empty;
             SqlDataReader data;
             try
             {
-                cmd = "SELECT * FROM A1_torques WHERE CLM='" + CLM + "'";
+                string cmd = "SELECT * FROM " + PN + "_torques WHERE CLM='" + CLM + "'";
                 mysql.OpenConection();
-                int count = mysql.CountCols("A1_torques");
+                int count = mysql.CountCols(PN + "_torques");
                 data = mysql.DataReader(cmd);
                 if (data.Read())
                 {
                     for (int i = 0; i < count - 3; i++)
                     {
-                        textBoxes[i].Text = data[i + 3].ToString();
+                        boxes[i].Text = data[i + 3].ToString();
                     }
                 }
                 mysql.CloseConnection();
