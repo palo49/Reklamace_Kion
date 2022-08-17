@@ -289,7 +289,7 @@ namespace Reklamace_Kion
                 {
                     int RepairIdTab = (int)dataGridOpravy.CurrentRow.Cells[0].Value;
                     string CLM = (string)dataGridOpravy.CurrentRow.Cells[1].Value;
-                    string PNBattery = dataGridOpravy[3, actualCell.RowIndex].Value.ToString();
+                    string PNBattery = (string)dataGridOpravy.CurrentRow.Cells[3].Value;
                     string PNChar = PNBattery.Substring(PNBattery.LastIndexOf('_') + 1);
 
                     DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s ID " + RepairIdTab + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -298,12 +298,27 @@ namespace Reklamace_Kion
                         conn.Open();
                         SqlCommand delData = new SqlCommand("DELETE FROM DataRepairs WHERE RepairId=" + RepairIdTab + "", conn);
                         delData.ExecuteNonQuery();
+                        if (PNChar == "A1")
+                        {
+                            delData = new SqlCommand("DELETE FROM A1_torques WHERE CLM='" + CLM + "'", conn);
+                            delData.ExecuteNonQuery();
+                        }
+                        else if (PNChar == "A2")
+                        {
+                            delData = new SqlCommand("DELETE FROM A2_torques WHERE CLM='" + CLM + "'", conn);
+                            delData.ExecuteNonQuery();
+                        }
+                        else if (PNChar == "B1")
+                        {
+                            delData = new SqlCommand("DELETE FROM B1_torques WHERE CLM='" + CLM + "'", conn);
+                            delData.ExecuteNonQuery();
+                        }
+                        else if (PNChar == "B2")
+                        {
+                            delData = new SqlCommand("DELETE FROM B2_torques WHERE CLM='" + CLM + "'", conn);
+                            delData.ExecuteNonQuery();
+                        }
 
-                        delData = new SqlCommand("DELETE FROM CLM_torques_" + PNChar + " WHERE CLM='" + CLM + "'", conn);
-                        delData.ExecuteNonQuery();
-
-                        delData = new SqlCommand("DELETE FROM CLM_components_" + PNChar + " WHERE CLM='" + CLM + "'", conn);
-                        delData.ExecuteNonQuery();
 
                         conn.Close();
                         form.DataRepair.Clear();
@@ -738,24 +753,28 @@ namespace Reklamace_Kion
 
                                 string PNChar = PNBattery.Substring(PNBattery.LastIndexOf('_') + 1);
 
-                                cmd = new SqlCommand("INSERT INTO CLM_torques_" + PNChar + " values('" + actualCellValue + "','" + PNBattery + "','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','')", conn);
-                                cmd.ExecuteNonQuery();
+                                if (PNChar == "A1")
+                                {
+                                    cmd = new SqlCommand("INSERT INTO A1_torques (CLM,PN) values('" + actualCellValue + "','" + PNBattery + "')", conn);
+                                    cmd.ExecuteNonQuery();
+                                }
+                                else if (PNChar == "A2")
+                                {
+                                    cmd = new SqlCommand("INSERT INTO A2_torques (CLM,PN) values('" + actualCellValue + "','" + PNBattery + "')", conn);
+                                    cmd.ExecuteNonQuery();
+                                }
+                                else if (PNChar == "B1")
+                                {
+                                    cmd = new SqlCommand("INSERT INTO B1_torques (CLM,PN) values('" + actualCellValue + "','" + PNBattery + "')", conn);
+                                    cmd.ExecuteNonQuery();
+                                }
+                                else if (PNChar == "B2")
+                                {
+                                    cmd = new SqlCommand("INSERT INTO B2_torques (CLM,PN) values('" + actualCellValue + "','" + PNBattery + "')", conn);
+                                    cmd.ExecuteNonQuery();
+                                }
 
-                                cmd = new SqlCommand("INSERT INTO CLM_components_" + PNChar + " values('" + actualCellValue + "','" + PNBattery + "','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','',''," +
-                                    "'','','','','','','','','','')", conn);
-                                cmd.ExecuteNonQuery();
+
 
                                 lblActionInfo.ForeColor = Color.Green;
                                 lblActionInfo.Text = "Záznam " + actualCellValue + " byl přidán k opravám.";

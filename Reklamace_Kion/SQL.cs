@@ -35,5 +35,11 @@ namespace Reklamace_Kion
             SqlDataReader dr = cmd.ExecuteReader();
             return dr;
         }
+
+        public int CountCols(string TableName)
+        {
+            SqlCommand cmd = new SqlCommand("select count(*) as Number from information_schema.columns where table_name='" + TableName + "'", con);
+            return (int)cmd.ExecuteScalar();
+        }
     }
 }

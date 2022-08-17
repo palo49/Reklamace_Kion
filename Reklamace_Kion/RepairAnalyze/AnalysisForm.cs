@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -16,6 +17,7 @@ namespace Reklamace_Kion.RepairAnalyze
 {
     public partial class AnalysisForm : Form
     {
+        SQL mysql = new SQL();
 
         public string PN { get; set; }
         string PNChar = string.Empty;
@@ -81,9 +83,13 @@ namespace Reklamace_Kion.RepairAnalyze
 
                 if (PNChar == "A2")
                 {
-                    txtPPModule2_1.ReadOnly = false;
-                    txtPPModule2_2.ReadOnly = false;
+                    txt7.ReadOnly = false;
+                    txt8.ReadOnly = false;
                     secondPanel.Visible = true;
+                }
+                else
+                {
+                    LoadData(PNChar, CLM);
                 }
             }
             if (PNChar.Contains("B"))
@@ -98,6 +104,39 @@ namespace Reklamace_Kion.RepairAnalyze
                     txtB14B.ReadOnly = false;
                     panelB2.Visible = true;
                 }
+            }
+        }
+
+        private void LoadData(string PN, string CLM)
+        {
+            TextBox[] textBoxes = { txt1, txt2, txt3, txt4, txt5, txt6, txt9, txt10,
+                                    txt11, txt12, txt13, txt14, txt15, txt16, txt17, txt18, txt19, txt20,
+                                    txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
+                                    txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40,
+                                    txt41, txt42, txt43, txt44, txt45, txt46, txt47, txt48, txt49, txt50,
+                                    txt51, txt52, txt53, txt54, txt55, txt56, txt57, txt58, txt59, txt60,
+                                    txt61, txt62, txt63, txt64
+                                    };
+            string cmd = string.Empty;
+            SqlDataReader data;
+            try
+            {
+                cmd = "SELECT * FROM A1_torques WHERE CLM='" + CLM + "'";
+                mysql.OpenConection();
+                int count = mysql.CountCols("A1_torques");
+                data = mysql.DataReader(cmd);
+                if (data.Read())
+                {
+                    for (int i = 0; i < count - 3; i++)
+                    {
+                        textBoxes[i].Text = data[i + 3].ToString();
+                    }
+                }
+                mysql.CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
