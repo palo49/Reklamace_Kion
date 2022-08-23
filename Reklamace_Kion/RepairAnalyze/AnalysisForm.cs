@@ -512,6 +512,8 @@ namespace Reklamace_Kion.RepairAnalyze
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             TextBox[] textBoxesA1 = { txt1, txt2, txt3, txt4, txt5, txt6, txt9, txt10,
                                         txt11, txt12, txt13, txt14, txt15, txt16, txt18, txt20,
                                         txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
@@ -584,7 +586,8 @@ namespace Reklamace_Kion.RepairAnalyze
                 {
                     for (int i = 0; i < namesA1.Length; i++)
                     {
-                        cmd = "UPDATE " + PNChar + "_torques SET " + namesA1[i] + " = '" + textBoxesA1[i].Text + "' WHERE CLM = '" + CLM + "'";
+                        string val = textBoxesA1[i].Text.Replace(',','.');
+                        cmd = "UPDATE " + PNChar + "_torques SET " + namesA1[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
                         mysql.ExecuteQueries(cmd);
                     }
                 }
@@ -593,7 +596,8 @@ namespace Reklamace_Kion.RepairAnalyze
                 {
                     for (int i = 0; i < namesA2.Length; i++)
                     {
-                        cmd = "UPDATE " + PNChar + "_torques SET " + namesA2[i] + " = '" + textBoxesA2[i].Text + "' WHERE CLM = '" + CLM + "'";
+                        string val = textBoxesA2[i].Text.Replace(',', '.');
+                        cmd = "UPDATE " + PNChar + "_torques SET " + namesA2[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
                         mysql.ExecuteQueries(cmd);
                     }
                 }
@@ -602,7 +606,8 @@ namespace Reklamace_Kion.RepairAnalyze
                 {
                     for (int i = 0; i < namesB1.Length; i++)
                     {
-                        cmd = "UPDATE " + PNChar + "_torques SET " + namesB1[i] + " = '" + textBoxesB1[i].Text + "' WHERE CLM = '" + CLM + "'";
+                        string val = textBoxesB1[i].Text.Replace(',', '.');
+                        cmd = "UPDATE " + PNChar + "_torques SET " + namesB1[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
                         mysql.ExecuteQueries(cmd);
                     }
                 }
@@ -611,7 +616,8 @@ namespace Reklamace_Kion.RepairAnalyze
                 {
                     for (int i = 0; i < namesB2.Length; i++)
                     {
-                        cmd = "UPDATE " + PNChar + "_torques SET " + namesB2[i] + " = '" + textBoxesB2[i].Text + "' WHERE CLM = '" + CLM + "'";
+                        string val = textBoxesB2[i].Text.Replace(',', '.');
+                        cmd = "UPDATE " + PNChar + "_torques SET " + namesB2[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
                         mysql.ExecuteQueries(cmd);
                     }
                 }
