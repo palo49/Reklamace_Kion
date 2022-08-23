@@ -29,9 +29,12 @@ namespace Reklamace_Kion.RepairAnalyze
         Font myFont = new Font("Microsoft Sans Serif", 9);
         Brush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
 
+        private static AnalysisForm form = null;
+
         public AnalysisForm()
         {
             InitializeComponent();
+            form = this;
         }
 
         private void Buffering(TableLayoutPanel panel)
@@ -41,7 +44,7 @@ namespace Reklamace_Kion.RepairAnalyze
               BindingFlags.Instance | BindingFlags.NonPublic);
             pi.SetValue(panel, true, null);
         }
-
+        
         private void AnalysisForm_Load(object sender, EventArgs e)
         {
             TextBox[] textBoxesA1 = { txt1, txt2, txt3, txt4, txt5, txt6, txt9, txt10,
@@ -52,7 +55,7 @@ namespace Reklamace_Kion.RepairAnalyze
                                         txt51, txt52, txt53, txt54, txt55, txt56, txt57, txt58, txt59, txt60,
                                         txt61, txt62, txt63, txt64
                                     };
-
+            
             TextBox[] textBoxesA2 = { txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10,
                                         txt11, txt12, txt13, txt14, txt15, txt16, txt17, txt18, txt19, txt20,
                                         txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
@@ -386,6 +389,16 @@ namespace Reklamace_Kion.RepairAnalyze
         {
             try
             {
+                Panel p;
+                if (PNChar.Contains("B"))
+                {
+                    p = panelB;
+                }
+                else
+                {
+                    p = panel1;
+                }
+
                 _i++;
                 ComboBox cmb = new ComboBox();
                 cmb.Name = "cmbComponent_" + _i;
@@ -396,18 +409,18 @@ namespace Reklamace_Kion.RepairAnalyze
                 cmb.DisplayMember = "Name";
                 cmb.ValueMember = "Name";
                 cmb.DropDownStyle = ComboBoxStyle.DropDownList;
-                panel1.Controls.Add(cmb);
+                p.Controls.Add(cmb);
                 Label lbl = new Label();
                 lbl.Text = "Počet:";
                 lbl.Name = "lbl_" + _i;
                 lbl.Location = new Point(160, cmb.Location.Y + 3);
                 lbl.Width = 55;
-                panel1.Controls.Add(lbl);
+                p.Controls.Add(lbl);
                 TextBox txt = new TextBox();
                 txt.Name = "txtComponent_" + _i;
                 txt.Location = new Point(220, cmb.Location.Y + 2);
                 txt.Width = 50;
-                panel1.Controls.Add(txt);
+                p.Controls.Add(txt);
                 txt.Text = count;
                 cmb.SelectedIndex = cmb.FindStringExact(value);
             }
@@ -426,18 +439,28 @@ namespace Reklamace_Kion.RepairAnalyze
         {
             try
             {
+                Panel p;
+                if (PNChar.Contains("B"))
+                {
+                    p = panelB;
+                }
+                else
+                {
+                    p = panel1;
+                }
+
                 if (_i != 0)
                 {
-                    foreach (Control item in panel1.Controls.OfType<Control>().ToList())
+                    foreach (Control item in p.Controls.OfType<Control>().ToList())
                     {
                         if (item.Name == "cmbComponent_" + _i)
-                            panel1.Controls.Remove(item);
+                            p.Controls.Remove(item);
                         if (item.Name == "lbl_" + _i)
-                            panel1.Controls.Remove(item);
+                            p.Controls.Remove(item);
                         if (item.Name == "txtComponent_" + _i)
-                            panel1.Controls.Remove(item);
+                            p.Controls.Remove(item);
                         if (item.Name == "delBtnComponent_" + _i)
-                            panel1.Controls.Remove(item);
+                            p.Controls.Remove(item);
                     }
                     _i--;
                 }
@@ -452,21 +475,160 @@ namespace Reklamace_Kion.RepairAnalyze
             }
         }
 
+
+
+        string[] namesA1 = {
+                                "PP_Cover_P_1","PP_Cover_P_2","PP_Cover_N_1","PP_Cover_N_2","PP_Module_1_P","PP_Module_1_N",
+                                "Power_Plate_1","Power_Plate_2","Power_Plate_3","Power_Plate_4","Power_Plate_5","Power_Plate_6","Power_Plate_7",
+                                "Module_P_1","Module_N_1","Module_SN","Cell_1_N","Cell_1_P","Cell_2_N","Cell_2_P","Cell_3_N","Cell_3_P","Cell_4_N","Cell_4_P","Cell_5_N",
+                                "Cell_5_P","Cell_6_N","Cell_6_P","Cell_7_N","Cell_7_P","Cell_8_N","Cell_8_P","Cell_9_N","Cell_9_P",
+                                "Cell_10_N","Cell_10_P","Cell_11_N","Cell_11_P","Cell_12_N","Cell_12_P","Cell_13_N","Cell_13_P","Cell_14_N","Cell_14_P",
+                                "Cell_1_Voltage","Cell_2_Voltage","Cell_3_Voltage","Cell_4_Voltage","Cell_5_Voltage","Cell_6_Voltage","Cell_7_Voltage",
+                                "Cell_8_Voltage","Cell_9_Voltage","Cell_10_Voltage","Cell_11_Voltage","Cell_12_Voltage","Cell_13_Voltage","Cell_14_Voltage","Total_Voltage",
+                                "Information"
+                            };
+
+        string[] namesA2 = {
+                                "PP_Cover_P_1","PP_Cover_P_2","PP_Cover_N_1","PP_Cover_N_2","PP_Module_1_P","PP_Module_1_N","PP_Module_2_P",
+                                "PP_Module_2_N","Power_Plate_1","Power_Plate_2","Power_Plate_3","Power_Plate_4","Power_Plate_5","Power_Plate_6",
+                                "Power_Plate_7","Module_P_1","Module_P_2","Module_N_1","Module_N_2","Module_A_SN","A_Cell_1_N","A_Cell_1_P",
+                                "A_Cell_2_N","A_Cell_2_P","A_Cell_3_N","A_Cell_3_P","A_Cell_4_N","A_Cell_4_P","A_Cell_5_N","A_Cell_5_P",
+                                "A_Cell_6_N","A_Cell_6_P","A_Cell_7_N","A_Cell_7_P","A_Cell_8_N","A_Cell_8_P","A_Cell_9_N","A_Cell_9_P",
+                                "A_Cell_10_N","A_Cell_10_P","A_Cell_11_N","A_Cell_11_P","A_Cell_12_N","A_Cell_12_P","A_Cell_13_N","A_Cell_13_P","A_Cell_14_N","A_Cell_14_P",
+                                "A_Cell_1_Voltage","A_Cell_2_Voltage","A_Cell_3_Voltage","A_Cell_4_Voltage","A_Cell_5_Voltage","A_Cell_6_Voltage",
+                                "A_Cell_7_Voltage","A_Cell_8_Voltage","A_Cell_9_Voltage","A_Cell_10_Voltage","A_Cell_11_Voltage","A_Cell_12_Voltage",
+                                "A_Cell_13_Voltage","A_Cell_14_Voltage","A_Total_Voltage","A_Information","Module_B_SN","B_Cell_1_N","B_Cell_1_P",
+                                "B_Cell_2_N","B_Cell_2_P","B_Cell_3_N","B_Cell_3_P","B_Cell_4_N","B_Cell_4_P","B_Cell_5_N","B_Cell_5_P",
+                                "B_Cell_6_N","B_Cell_6_P","B_Cell_7_N","B_Cell_7_P","B_Cell_8_N","B_Cell_8_P","B_Cell_9_N","B_Cell_9_P",
+                                "B_Cell_10_N","B_Cell_10_P","B_Cell_11_N","B_Cell_11_P","B_Cell_12_N","B_Cell_12_P","B_Cell_13_N","B_Cell_13_P",
+                                "B_Cell_14_N","B_Cell_14_P","B_Cell_1_Voltage","B_Cell_2_Voltage","B_Cell_3_Voltage","B_Cell_4_Voltage","B_Cell_5_Voltage",
+                                "B_Cell_6_Voltage","B_Cell_7_Voltage","B_Cell_8_Voltage","B_Cell_9_Voltage","B_Cell_10_Voltage","B_Cell_11_Voltage",
+                                "B_Cell_12_Voltage","B_Cell_13_Voltage","B_Cell_14_Voltage","B_Total_Voltage","B_Information"
+                            };
+
+        string[] namesB1 = { "Rigid_Connection_P_1", "Rigid_Connection_P_2A", "Rigid_Connection_P_2B", "Contactor_1", "Contactor_2", "Cover_1", "Cover_2", "Cover_3", "Cover_4", "Cable", "Fuse_1", "Fuse_2", "Conn_Fuse", "Rigid_Connection_N_1", "Rigid_Connection_N_2A", "Rigid_Connection_N_2B", "Module_SN", "PL_1", "PL_2", "PL_3", "PL_4", "PL_5", "PL_6", "PL_7", "PL_8", "PL_9", "PL_10", "PL_11", "PL_12", "PL_13", "PL_14", "PL_15", "PL_16", "PL_17", "PL_18", "PL_19", "PL_20", "PL_21", "PL_22", "PL_23", "PL_24", "PL_25", "PL_26", "PL_27", "PL_28", "PL_29", "PL_30", "PL_31", "PL_32", "PL_33", "PL_34", "PL_35", "PL_36", "PL_37", "PL_38", "PL_39", "PL_40", "PL_41", "PL_42", "PL_43", "PL_44", "PL_45", "PL_46", "PL_47", "PL_48", "PL_49", "PL_50", "PL_51", "PL_52", "PL_53", "PL_54", "PL_55", "PL_56", "PL_57", "PL_58", "PL_59", "PL_60", "PL_61", "PL_62", "PL_63", "PL_64", "PL_65", "PL_66", "PL_67", "PL_68", "PL_69", "PL_70" };
+
+        string[] namesB2 = { "Rigid_Connection_P_1", "Rigid_Connection_P_2A", "Rigid_Connection_P_2B", "Contactor_1", "Contactor_2", "Cover_1", "Cover_2", "Cover_3", "Cover_4", "Cable", "Fuse_1", "Fuse_2", "Conn_Fuse", "Rigid_Connection_N_1", "Rigid_Connection_N_2A", "Rigid_Connection_N_2B", "Module_A_SN", "A_PL_1", "A_PL_2", "A_PL_3", "A_PL_4", "A_PL_5", "A_PL_6", "A_PL_7", "A_PL_8", "A_PL_9", "A_PL_10", "A_PL_11", "A_PL_12", "A_PL_13", "A_PL_14", "A_PL_15", "A_PL_16", "A_PL_17", "A_PL_18", "A_PL_19", "A_PL_20", "A_PL_21", "A_PL_22", "A_PL_23", "A_PL_24", "A_PL_25", "A_PL_26", "A_PL_27", "A_PL_28", "A_PL_29", "A_PL_30", "A_PL_31", "A_PL_32", "A_PL_33", "A_PL_34", "A_PL_35", "A_PL_36", "A_PL_37", "A_PL_38", "A_PL_39", "A_PL_40", "A_PL_41", "A_PL_42", "A_PL_43", "A_PL_44", "A_PL_45", "A_PL_46", "A_PL_47", "A_PL_48", "A_PL_49", "A_PL_50", "A_PL_51", "A_PL_52", "A_PL_53", "A_PL_54", "A_PL_55", "A_PL_56", "A_PL_57", "A_PL_58", "A_PL_59", "A_PL_60", "A_PL_61", "A_PL_62", "A_PL_63", "A_PL_64", "A_PL_65", "A_PL_66", "A_PL_67", "A_PL_68", "A_PL_69", "A_PL_70", "Module_B_SN", "B_PL_1", "B_PL_2", "B_PL_3", "B_PL_4", "B_PL_5", "B_PL_6", "B_PL_7", "B_PL_8", "B_PL_9", "B_PL_10", "B_PL_11", "B_PL_12", "B_PL_13", "B_PL_14", "B_PL_15", "B_PL_16", "B_PL_17", "B_PL_18", "B_PL_19", "B_PL_20", "B_PL_21", "B_PL_22", "B_PL_23", "B_PL_24", "B_PL_25", "B_PL_26", "B_PL_27", "B_PL_28", "B_PL_29", "B_PL_30", "B_PL_31", "B_PL_32", "B_PL_33", "B_PL_34", "B_PL_35", "B_PL_36", "B_PL_37", "B_PL_38", "B_PL_39", "B_PL_40", "B_PL_41", "B_PL_42", "B_PL_43", "B_PL_44", "B_PL_45", "B_PL_46", "B_PL_47", "B_PL_48", "B_PL_49", "B_PL_50", "B_PL_51", "B_PL_52", "B_PL_53", "B_PL_54", "B_PL_55", "B_PL_56", "B_PL_57", "B_PL_58", "B_PL_59", "B_PL_60", "B_PL_61", "B_PL_62", "B_PL_63", "B_PL_64", "B_PL_65", "B_PL_66", "B_PL_67", "B_PL_68", "B_PL_69", "B_PL_70" };
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+            TextBox[] textBoxesA1 = { txt1, txt2, txt3, txt4, txt5, txt6, txt9, txt10,
+                                        txt11, txt12, txt13, txt14, txt15, txt16, txt18, txt20,
+                                        txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
+                                        txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40,
+                                        txt41, txt42, txt43, txt44, txt45, txt46, txt47, txt48, txt49, txt50,
+                                        txt51, txt52, txt53, txt54, txt55, txt56, txt57, txt58, txt59, txt60,
+                                        txt61, txt62, txt63, txt64
+                                    };
+
+            TextBox[] textBoxesA2 = { txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10,
+                                        txt11, txt12, txt13, txt14, txt15, txt16, txt17, txt18, txt19, txt20,
+                                        txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
+                                        txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40,
+                                        txt41, txt42, txt43, txt44, txt45, txt46, txt47, txt48, txt49, txt50,
+                                        txt51, txt52, txt53, txt54, txt55, txt56, txt57, txt58, txt59, txt60,
+                                        txt61, txt62, txt63, txt64, txt65, txt66, txt67, txt68, txt69, txt70,
+                                        txt71, txt72, txt73, txt74, txt75, txt76, txt77, txt78, txt79, txt80,
+                                        txt81, txt82, txt83, txt84, txt85, txt86, txt87, txt88, txt89, txt90,
+                                        txt91, txt92, txt93, txt94, txt95, txt96, txt97, txt98, txt99, txt100,
+                                        txt101, txt102, txt103, txt104, txt105, txt106, txt107, txt108, txt109
+                                    };
+
+            TextBox[] textBoxesB1 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
+                                        Btxt11, Btxt12, Btxt13, Btxt14, Btxt15, Btxt16, Btxt17, Btxt18, Btxt19, Btxt20,
+                                        Btxt21, Btxt22, Btxt23, Btxt24, Btxt25, Btxt26, Btxt27, Btxt28, Btxt29, Btxt30,
+                                        Btxt31, Btxt32, Btxt33, Btxt34, Btxt35, Btxt36, Btxt37, Btxt38, Btxt39, Btxt40,
+                                        Btxt41, Btxt42, Btxt43, Btxt44, Btxt45, Btxt46, Btxt47, Btxt48, Btxt49, Btxt50,
+                                        Btxt51, Btxt52, Btxt53, Btxt54, Btxt55, Btxt56, Btxt57, Btxt58, Btxt59, Btxt60,
+                                        Btxt61, Btxt62, Btxt63, Btxt64, Btxt65, Btxt66, Btxt67, Btxt68, Btxt69, Btxt70,
+                                        Btxt71, Btxt72, Btxt73, Btxt74, Btxt75, Btxt76, Btxt77, Btxt78, Btxt79, Btxt80,
+                                        Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87
+                                    };
+
+            TextBox[] textBoxesB2 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
+                                        Btxt11, Btxt12, Btxt13, Btxt14, Btxt15, Btxt16, Btxt17, Btxt18, Btxt19, Btxt20,
+                                        Btxt21, Btxt22, Btxt23, Btxt24, Btxt25, Btxt26, Btxt27, Btxt28, Btxt29, Btxt30,
+                                        Btxt31, Btxt32, Btxt33, Btxt34, Btxt35, Btxt36, Btxt37, Btxt38, Btxt39, Btxt40,
+                                        Btxt41, Btxt42, Btxt43, Btxt44, Btxt45, Btxt46, Btxt47, Btxt48, Btxt49, Btxt50,
+                                        Btxt51, Btxt52, Btxt53, Btxt54, Btxt55, Btxt56, Btxt57, Btxt58, Btxt59, Btxt60,
+                                        Btxt61, Btxt62, Btxt63, Btxt64, Btxt65, Btxt66, Btxt67, Btxt68, Btxt69, Btxt70,
+                                        Btxt71, Btxt72, Btxt73, Btxt74, Btxt75, Btxt76, Btxt77, Btxt78, Btxt79, Btxt80,
+                                        Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87, Btxt88, Btxt89, Btxt90,
+                                        Btxt91, Btxt92, Btxt93, Btxt94, Btxt95, Btxt96, Btxt97, Btxt98, Btxt99, Btxt100,
+                                        Btxt101, Btxt102, Btxt103, Btxt104, Btxt105, Btxt106, Btxt107, Btxt108, Btxt109, Btxt110,
+                                        Btxt111, Btxt112, Btxt113, Btxt114, Btxt115, Btxt116, Btxt117, Btxt118, Btxt119, Btxt120,
+                                        Btxt121, Btxt122, Btxt123, Btxt124, Btxt125, Btxt126, Btxt127, Btxt128, Btxt129, Btxt130,
+                                        Btxt131, Btxt132, Btxt133, Btxt134, Btxt135, Btxt136, Btxt137, Btxt138, Btxt139, Btxt140,
+                                        Btxt141, Btxt142, Btxt143, Btxt144, Btxt145, Btxt146, Btxt147, Btxt148, Btxt149, Btxt150,
+                                        Btxt151, Btxt152, Btxt153, Btxt154, Btxt155, Btxt156, Btxt157, Btxt158
+                                    };
+
             try
             {
-                string buildStr = string.Empty;
-                foreach (Control item in panel1.Controls.OfType<Control>().ToList())
+                Panel p;
+                if (PNChar.Contains("B"))
                 {
+                    p = panelB;
+                }
+                else
+                {
+                    p = panel1;
+                }
+
+                string cmd = string.Empty;
+                string buildStr = string.Empty;
+
+                //MessageBox.Show(namesB1.Length.ToString() + " | " + textBoxesB1.Length.ToString());
+                mysql.OpenConection();
+                if (PNChar == "A1")
+                {
+                    for (int i = 0; i < namesA1.Length; i++)
+                    {
+                        cmd = "UPDATE " + PNChar + "_torques SET " + namesA1[i] + " = '" + textBoxesA1[i].Text + "' WHERE CLM = '" + CLM + "'";
+                        mysql.ExecuteQueries(cmd);
+                    }
+                }
+
+                if (PNChar == "A2")
+                {
+                    for (int i = 0; i < namesA2.Length; i++)
+                    {
+                        cmd = "UPDATE " + PNChar + "_torques SET " + namesA2[i] + " = '" + textBoxesA2[i].Text + "' WHERE CLM = '" + CLM + "'";
+                        mysql.ExecuteQueries(cmd);
+                    }
+                }
+
+                if (PNChar == "B1")
+                {
+                    for (int i = 0; i < namesB1.Length; i++)
+                    {
+                        cmd = "UPDATE " + PNChar + "_torques SET " + namesB1[i] + " = '" + textBoxesB1[i].Text + "' WHERE CLM = '" + CLM + "'";
+                        mysql.ExecuteQueries(cmd);
+                    }
+                }
+
+                if (PNChar == "B2")
+                {
+                    for (int i = 0; i < namesB2.Length; i++)
+                    {
+                        cmd = "UPDATE " + PNChar + "_torques SET " + namesB2[i] + " = '" + textBoxesB2[i].Text + "' WHERE CLM = '" + CLM + "'";
+                        mysql.ExecuteQueries(cmd);
+                    }
+                }
+
+
+                foreach (Control item in p.Controls.OfType<Control>().ToList())
+                {
+                    
                     if (item.Name.Contains("cmbComponent_"))
                         buildStr += item.Text + "=";
                     if (item.Name.Contains("txtComponent_"))
                         buildStr += item.Text + ";";
-                }
-                string cmd = "UPDATE " + PNChar + "_torques SET RepairComponents = '" + buildStr + "' WHERE CLM = '" + CLM + "'";
 
-                mysql.OpenConection();
+                }
+                cmd = "UPDATE " + PNChar + "_torques SET RepairComponents = '" + buildStr + "' WHERE CLM = '" + CLM + "'";
+
+                
                 mysql.ExecuteQueries(cmd);
                 mysql.CloseConnection();
 
