@@ -38,6 +38,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label63 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelComponent = new System.Windows.Forms.Button();
+            this.btnAddComponent = new System.Windows.Forms.Button();
             this.secondPanel = new System.Windows.Forms.Panel();
             this.txt109 = new System.Windows.Forms.TextBox();
             this.txt108 = new System.Windows.Forms.TextBox();
@@ -703,8 +705,7 @@
             this.label285 = new System.Windows.Forms.Label();
             this.label286 = new System.Windows.Forms.Label();
             this.label287 = new System.Windows.Forms.Label();
-            this.btnAddComponent = new System.Windows.Forms.Button();
-            this.btnDelComponent = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -756,7 +757,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(4, 71);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 643);
+            this.pictureBox1.Size = new System.Drawing.Size(279, 594);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -802,6 +803,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.label63);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.lblCLM);
@@ -847,6 +849,26 @@
             this.panel1.Size = new System.Drawing.Size(940, 499);
             this.panel1.TabIndex = 28;
             this.panel1.Visible = false;
+            // 
+            // btnDelComponent
+            // 
+            this.btnDelComponent.Location = new System.Drawing.Point(191, 653);
+            this.btnDelComponent.Name = "btnDelComponent";
+            this.btnDelComponent.Size = new System.Drawing.Size(145, 30);
+            this.btnDelComponent.TabIndex = 31;
+            this.btnDelComponent.Text = "Smazat komponentu";
+            this.btnDelComponent.UseVisualStyleBackColor = true;
+            this.btnDelComponent.Click += new System.EventHandler(this.btnDelComponent_Click);
+            // 
+            // btnAddComponent
+            // 
+            this.btnAddComponent.Location = new System.Drawing.Point(28, 653);
+            this.btnAddComponent.Name = "btnAddComponent";
+            this.btnAddComponent.Size = new System.Drawing.Size(145, 30);
+            this.btnAddComponent.TabIndex = 30;
+            this.btnAddComponent.Text = "Přidat komponentu";
+            this.btnAddComponent.UseVisualStyleBackColor = true;
+            this.btnAddComponent.Click += new System.EventHandler(this.btnAddComponent_Click);
             // 
             // secondPanel
             // 
@@ -6656,7 +6678,7 @@
             this.panel9.Location = new System.Drawing.Point(4, 209);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(899, 53);
+            this.panel9.Size = new System.Drawing.Size(882, 53);
             this.panel9.TabIndex = 26;
             // 
             // Btxt17
@@ -6665,7 +6687,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Btxt17.Location = new System.Drawing.Point(382, 24);
             this.Btxt17.Name = "Btxt17";
-            this.Btxt17.Size = new System.Drawing.Size(128, 21);
+            this.Btxt17.Size = new System.Drawing.Size(111, 21);
             this.Btxt17.TabIndex = 12;
             // 
             // lblModule1
@@ -6674,7 +6696,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblModule1.Location = new System.Drawing.Point(0, 3);
             this.lblModule1.Name = "lblModule1";
-            this.lblModule1.Size = new System.Drawing.Size(899, 20);
+            this.lblModule1.Size = new System.Drawing.Size(882, 20);
             this.lblModule1.TabIndex = 11;
             this.lblModule1.Text = "MODULE-23-VL41M-SFP-7S5P (Top position) SN";
             this.lblModule1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -6687,7 +6709,7 @@
             this.label192.Location = new System.Drawing.Point(4, 0);
             this.label192.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(820, 2);
+            this.label192.Size = new System.Drawing.Size(803, 2);
             this.label192.TabIndex = 10;
             // 
             // tableLayoutPanelB2
@@ -9140,25 +9162,16 @@
             this.label287.Text = "14B";
             this.label287.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAddComponent
+            // btnSave
             // 
-            this.btnAddComponent.Location = new System.Drawing.Point(28, 653);
-            this.btnAddComponent.Name = "btnAddComponent";
-            this.btnAddComponent.Size = new System.Drawing.Size(145, 30);
-            this.btnAddComponent.TabIndex = 30;
-            this.btnAddComponent.Text = "Přidat komponentu";
-            this.btnAddComponent.UseVisualStyleBackColor = true;
-            this.btnAddComponent.Click += new System.EventHandler(this.btnAddComponent_Click);
-            // 
-            // btnDelComponent
-            // 
-            this.btnDelComponent.Location = new System.Drawing.Point(191, 653);
-            this.btnDelComponent.Name = "btnDelComponent";
-            this.btnDelComponent.Size = new System.Drawing.Size(145, 30);
-            this.btnDelComponent.TabIndex = 31;
-            this.btnDelComponent.Text = "Smazat komponentu";
-            this.btnDelComponent.UseVisualStyleBackColor = true;
-            this.btnDelComponent.Click += new System.EventHandler(this.btnDelComponent_Click);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSave.Location = new System.Drawing.Point(4, 681);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(119, 33);
+            this.btnSave.TabIndex = 11;
+            this.btnSave.Text = "Uložit";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AnalysisForm
             // 
@@ -9899,5 +9912,6 @@
         private System.Windows.Forms.TextBox txt109;
         private System.Windows.Forms.Button btnAddComponent;
         private System.Windows.Forms.Button btnDelComponent;
+        private System.Windows.Forms.Button btnSave;
     }
 }

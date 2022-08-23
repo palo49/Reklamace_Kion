@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MoreLinq;
+using MoreLinq.Extensions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -177,12 +179,25 @@ namespace Reklamace_Kion.RepairAnalyze
                 data = mysql.DataReader(cmd);
                 if (data.Read())
                 {
-                    for (int i = 0; i < count - 3; i++)
+                    for (int i = 0; i < count - 4; i++)
                     {
                         boxes[i].Text = data[i + 3].ToString();
                     }
+                    data.Close();
                 }
+                cmd = "SELECT RepairComponents FROM " + PN + "_torques WHERE CLM='" + CLM + "'";
+                data = mysql.DataReader(cmd);
+                data.Read();
+                string dataStr = data[0].ToString();
+                count = dataStr.Split(';').Length - 1;
                 mysql.CloseConnection();
+                string[] strList = dataStr.Split(';');
+                
+                for (int i = 0; i < count; i++)
+                {
+                    string[] sep = strList[i].Split('=');
+                    AddComponentControl(btnAddComponent, sep[0], sep[1]);
+                }
             }
             catch (Exception ex)
             {
@@ -359,7 +374,7 @@ namespace Reklamace_Kion.RepairAnalyze
 
         private int _i = 0;
 
-        private void AddComponentControl(Button btn)
+        private void AddComponentControl(Button btn, string value, string count)
         {
             try
             {
@@ -372,6 +387,7 @@ namespace Reklamace_Kion.RepairAnalyze
                 mysql.CloseConnection();
                 cmb.DisplayMember = "Name";
                 cmb.ValueMember = "Name";
+                cmb.DropDownStyle = ComboBoxStyle.DropDownList;
                 panel1.Controls.Add(cmb);
                 Label lbl = new Label();
                 lbl.Text = "Počet:";
@@ -384,6 +400,8 @@ namespace Reklamace_Kion.RepairAnalyze
                 txt.Location = new Point(220, cmb.Location.Y + 2);
                 txt.Width = 50;
                 panel1.Controls.Add(txt);
+                txt.Text = count;
+                cmb.SelectedIndex = cmb.FindStringExact(value);
             }
             catch (Exception ex)
             {
@@ -391,14 +409,9 @@ namespace Reklamace_Kion.RepairAnalyze
             }
         }
 
-        private void btnDelComponents(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAddComponent_Click(object sender, EventArgs e)
         {
-            AddComponentControl(btnAddComponent);
+            AddComponentControl(btnAddComponent, null, null);
         }
 
         private void btnDelComponent_Click(object sender, EventArgs e)
@@ -424,6 +437,32 @@ namespace Reklamace_Kion.RepairAnalyze
                 {
                     MessageBox.Show("Není zde žádná komponenta ke smazání.");
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string buildStr = string.Empty;
+                foreach (Control item in panel1.Controls.OfType<Control>().ToList())
+                {
+                    if (item.Name.Contains("cmbComponent_"))
+                        buildStr += item.Text + "=";
+                    if (item.Name.Contains("txtComponent_"))
+                        buildStr += item.Text + ";";
+                }
+                string cmd = "UPDATE " + PNChar + "_torques SET RepairComponents = '" + buildStr + "' WHERE CLM = '" + CLM + "'";
+
+                mysql.OpenConection();
+                mysql.ExecuteQueries(cmd);
+                mysql.CloseConnection();
+
+                this.Close();
             }
             catch (Exception ex)
             {
