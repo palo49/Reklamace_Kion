@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Reklamace_Kion
 {
@@ -34,6 +35,14 @@ namespace Reklamace_Kion
             SqlCommand cmd = new SqlCommand(Query_, con);
             SqlDataReader dr = cmd.ExecuteReader();
             return dr;
+        }
+
+        public DataTable DataTable(string Query_)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(Query_, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
 
         public int CountCols(string TableName)

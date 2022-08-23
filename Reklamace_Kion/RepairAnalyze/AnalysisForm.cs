@@ -75,6 +75,24 @@ namespace Reklamace_Kion.RepairAnalyze
                                         Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87
                                     };
 
+            TextBox[] textBoxesB2 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
+                                        Btxt11, Btxt12, Btxt13, Btxt14, Btxt15, Btxt16, Btxt17, Btxt18, Btxt19, Btxt20,
+                                        Btxt21, Btxt22, Btxt23, Btxt24, Btxt25, Btxt26, Btxt27, Btxt28, Btxt29, Btxt30,
+                                        Btxt31, Btxt32, Btxt33, Btxt34, Btxt35, Btxt36, Btxt37, Btxt38, Btxt39, Btxt40,
+                                        Btxt41, Btxt42, Btxt43, Btxt44, Btxt45, Btxt46, Btxt47, Btxt48, Btxt49, Btxt50,
+                                        Btxt51, Btxt52, Btxt53, Btxt54, Btxt55, Btxt56, Btxt57, Btxt58, Btxt59, Btxt60,
+                                        Btxt61, Btxt62, Btxt63, Btxt64, Btxt65, Btxt66, Btxt67, Btxt68, Btxt69, Btxt70,
+                                        Btxt71, Btxt72, Btxt73, Btxt74, Btxt75, Btxt76, Btxt77, Btxt78, Btxt79, Btxt80,
+                                        Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87, Btxt88, Btxt89, Btxt90,
+                                        Btxt91, Btxt92, Btxt93, Btxt94, Btxt95, Btxt96, Btxt97, Btxt98, Btxt99, Btxt100,
+                                        Btxt101, Btxt102, Btxt103, Btxt104, Btxt105, Btxt106, Btxt107, Btxt108, Btxt109, Btxt110,
+                                        Btxt111, Btxt112, Btxt113, Btxt114, Btxt115, Btxt116, Btxt117, Btxt118, Btxt119, Btxt120,
+                                        Btxt121, Btxt122, Btxt123, Btxt124, Btxt125, Btxt126, Btxt127, Btxt128, Btxt129, Btxt130,
+                                        Btxt131, Btxt132, Btxt133, Btxt134, Btxt135, Btxt136, Btxt137, Btxt138, Btxt139, Btxt140,
+                                        Btxt141, Btxt142, Btxt143, Btxt144, Btxt145, Btxt146, Btxt147, Btxt148, Btxt149, Btxt150,
+                                        Btxt151, Btxt152, Btxt153, Btxt154, Btxt155, Btxt156, Btxt157, Btxt158
+                                    };
+
             lblCLM.Text = CLM;
             lblPN.Text = PN;
 
@@ -139,6 +157,7 @@ namespace Reklamace_Kion.RepairAnalyze
                     Btxt3.ReadOnly = false;
                     Btxt16.ReadOnly = false;
                     panelB2.Visible = true;
+                    LoadData(PNChar, CLM, textBoxesB2);
                 }
                 else
                 {
@@ -336,6 +355,80 @@ namespace Reklamace_Kion.RepairAnalyze
         private void lblTRQB_MouseLeave(object sender, EventArgs e)
         {
 
+        }
+
+        private int _i = 0;
+
+        private void AddComponentControl(Button btn)
+        {
+            try
+            {
+                _i++;
+                ComboBox cmb = new ComboBox();
+                cmb.Name = "cmbComponent_" + _i;
+                cmb.Location = new Point(30, (btn.Location.Y) + _i * 40);
+                mysql.OpenConection();
+                cmb.DataSource = mysql.DataTable("SELECT Name FROM RepairComponents");
+                mysql.CloseConnection();
+                cmb.DisplayMember = "Name";
+                cmb.ValueMember = "Name";
+                panel1.Controls.Add(cmb);
+                Label lbl = new Label();
+                lbl.Text = "Počet:";
+                lbl.Name = "lbl_" + _i;
+                lbl.Location = new Point(160, cmb.Location.Y + 3);
+                lbl.Width = 55;
+                panel1.Controls.Add(lbl);
+                TextBox txt = new TextBox();
+                txt.Name = "txtComponent_" + _i;
+                txt.Location = new Point(220, cmb.Location.Y + 2);
+                txt.Width = 50;
+                panel1.Controls.Add(txt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelComponents(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddComponent_Click(object sender, EventArgs e)
+        {
+            AddComponentControl(btnAddComponent);
+        }
+
+        private void btnDelComponent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_i != 0)
+                {
+                    foreach (Control item in panel1.Controls.OfType<Control>().ToList())
+                    {
+                        if (item.Name == "cmbComponent_" + _i)
+                            panel1.Controls.Remove(item);
+                        if (item.Name == "lbl_" + _i)
+                            panel1.Controls.Remove(item);
+                        if (item.Name == "txtComponent_" + _i)
+                            panel1.Controls.Remove(item);
+                        if (item.Name == "delBtnComponent_" + _i)
+                            panel1.Controls.Remove(item);
+                    }
+                    _i--;
+                }
+                else
+                {
+                    MessageBox.Show("Není zde žádná komponenta ke smazání.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
