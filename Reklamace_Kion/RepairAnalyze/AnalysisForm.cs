@@ -141,6 +141,8 @@ namespace Reklamace_Kion.RepairAnalyze
                     txt17.ReadOnly = false;
                     txt19.ReadOnly = false;
                     secondPanel.Visible = true;
+                    btnAddComponent.Location = new Point(btnAddComponent.Location.X, 1300);
+                    btnDelComponent.Location = new Point(btnDelComponent.Location.X, 1300);
                     LoadData(PNChar, CLM, textBoxesA2);
                 }
                 else
@@ -152,6 +154,10 @@ namespace Reklamace_Kion.RepairAnalyze
             {
                 panelB.Visible = true;
                 lblModule1.Text = "MODULE-23-VL41M-SFP-7S5P (Bottom position) SN";
+                panelB.Controls.Add(btnAddComponent);
+                panelB.Controls.Add(btnDelComponent);
+                btnAddComponent.Location = new Point(btnAddComponent.Location.X, 600);
+                btnDelComponent.Location = new Point(btnDelComponent.Location.X, 600);
 
                 if (PNChar == "B2")
                 {
@@ -159,6 +165,8 @@ namespace Reklamace_Kion.RepairAnalyze
                     Btxt3.ReadOnly = false;
                     Btxt16.ReadOnly = false;
                     panelB2.Visible = true;
+                    btnAddComponent.Location = new Point(btnAddComponent.Location.X, 1000);
+                    btnDelComponent.Location = new Point(btnDelComponent.Location.X, 1000);
                     LoadData(PNChar, CLM, textBoxesB2);
                 }
                 else

@@ -846,12 +846,13 @@
             this.panel1.Controls.Add(this.txt63);
             this.panel1.Location = new System.Drawing.Point(2, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 499);
+            this.panel1.Size = new System.Drawing.Size(940, 537);
             this.panel1.TabIndex = 28;
             this.panel1.Visible = false;
             // 
             // btnDelComponent
             // 
+            this.btnDelComponent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelComponent.Location = new System.Drawing.Point(191, 653);
             this.btnDelComponent.Name = "btnDelComponent";
             this.btnDelComponent.Size = new System.Drawing.Size(145, 30);
@@ -862,6 +863,7 @@
             // 
             // btnAddComponent
             // 
+            this.btnAddComponent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddComponent.Location = new System.Drawing.Point(28, 653);
             this.btnAddComponent.Name = "btnAddComponent";
             this.btnAddComponent.Size = new System.Drawing.Size(145, 30);
@@ -4887,9 +4889,9 @@
             this.panelB.Controls.Add(this.panel9);
             this.panelB.Controls.Add(this.tableLayoutPanelB2);
             this.panelB.Controls.Add(this.tableLayoutPanelB1);
-            this.panelB.Location = new System.Drawing.Point(2, 560);
+            this.panelB.Location = new System.Drawing.Point(2, 616);
             this.panelB.Name = "panelB";
-            this.panelB.Size = new System.Drawing.Size(940, 149);
+            this.panelB.Size = new System.Drawing.Size(940, 93);
             this.panelB.TabIndex = 28;
             this.panelB.Visible = false;
             // 
@@ -9164,10 +9166,12 @@
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSave.Location = new System.Drawing.Point(4, 681);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Location = new System.Drawing.Point(71, 675);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(119, 33);
+            this.btnSave.Size = new System.Drawing.Size(160, 33);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Uložit";
             this.btnSave.UseVisualStyleBackColor = true;
