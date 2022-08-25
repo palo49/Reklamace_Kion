@@ -288,5 +288,78 @@ namespace Reklamace_Kion
                 throw;
             }
         }
+
+        private void btnClearDateSendFromCustomer_Click(object sender, EventArgs e)
+        {
+            DateOfCustomerSend.Value = DateTimePicker.MinimumDateTime;
+            DateOfCustomerSend.CustomFormat = " ";
+            DateOfCustomerSend.Format = DateTimePickerFormat.Custom;
+        }
+
+        private void DateOfCustomerSend_ValueChanged(object sender, EventArgs e)
+        {
+            DateOfCustomerSend.Format = DateTimePickerFormat.Short;
+        }
+
+        private void btnClearDateOfSaftAccept_Click(object sender, EventArgs e)
+        {
+            DateOfSaftAcceptance.Value = DateTimePicker.MinimumDateTime;
+            DateOfSaftAcceptance.CustomFormat = " ";
+            DateOfSaftAcceptance.Format = DateTimePickerFormat.Custom;
+        }
+
+        private void DateOfSaftAcceptance_ValueChanged(object sender, EventArgs e)
+        {
+            DateOfSaftAcceptance.Format = DateTimePickerFormat.Short;
+        }
+
+        private void btnClearDateOfRepair_Click(object sender, EventArgs e)
+        {
+            DateOfRepair.Value = DateTimePicker.MinimumDateTime;
+            DateOfRepair.CustomFormat = " ";
+            DateOfRepair.Format = DateTimePickerFormat.Custom;
+        }
+
+        private void DateOfRepair_ValueChanged(object sender, EventArgs e)
+        {
+            DateOfRepair.Format = DateTimePickerFormat.Short;
+        }
+
+        private void btnClearDateOfSaftSend_Click(object sender, EventArgs e)
+        {
+            DateOfSaftSend.Value = DateTimePicker.MinimumDateTime;
+            DateOfSaftSend.CustomFormat = " ";
+            DateOfSaftSend.Format = DateTimePickerFormat.Custom;
+        }
+
+        private void DateOfSaftSend_ValueChanged(object sender, EventArgs e)
+        {
+            DateOfSaftSend.Format = DateTimePickerFormat.Short;
+        }
+
+        private void btnClearDateOfReplacementSend_Click(object sender, EventArgs e)
+        {
+            DateOfReplacementSend.Value = DateTimePicker.MinimumDateTime;
+            DateOfReplacementSend.CustomFormat = " ";
+            DateOfReplacementSend.Format = DateTimePickerFormat.Custom;
+        }
+
+        private void DateOfReplacementSend_ValueChanged(object sender, EventArgs e)
+        {
+            DateOfReplacementSend.Format = DateTimePickerFormat.Short;
+        }
+
+        private void cmbPNComponent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbPNComponent.Text == cmbPNBattery.Text)
+            {
+                txtSNComponent.Text = txtSNBattery.Text;
+            }
+        }
+
+        private void btnClearDefekt_Click(object sender, EventArgs e)
+        {
+            cmbDefects.SelectedIndex = -1;
+        }
     }
 }

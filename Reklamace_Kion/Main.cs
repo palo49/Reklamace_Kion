@@ -675,7 +675,7 @@ namespace Reklamace_Kion
                 else if (curTab == 1)
                 {
                     this.bindRepairData.Filter = "(CLM LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(Brand LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(BrandId_Speed LIKE '%" + txtSearch.Text + "%') OR " +
                         "(TypeOfPalette LIKE '%" + txtSearch.Text + "%')";
                 }
             }
@@ -691,10 +691,25 @@ namespace Reklamace_Kion
         {
             if (e.Button == MouseButtons.Right)
             {
-                var hti = dataGrid1.HitTest(e.X, e.Y);
-                dataGrid1.ClearSelection();
-                dataGrid1.Rows[hti.RowIndex].Selected = true;
-                actualCell = hti;
+                try
+                {
+                    var hti = dataGrid1.HitTest(e.X, e.Y);
+                    if (hti.RowIndex >= 0)
+                    {
+                        dataGrid1.ClearSelection();
+                        dataGrid1.Rows[hti.RowIndex].Selected = true;
+                        actualCell = hti;
+                        dataGrid1.ContextMenuStrip.Enabled = true;
+                    }
+                    else
+                    {
+                        dataGrid1.ContextMenuStrip.Enabled = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -702,10 +717,25 @@ namespace Reklamace_Kion
         {
             if (e.Button == MouseButtons.Right)
             {
-                var hti = dataGridOpravy.HitTest(e.X, e.Y);
-                dataGridOpravy.ClearSelection();
-                dataGridOpravy.Rows[hti.RowIndex].Selected = true;
-                actualCell = hti;
+                try
+                {
+                    var hti = dataGridOpravy.HitTest(e.X, e.Y);
+                    if (hti.RowIndex >= 0)
+                    {
+                        dataGridOpravy.ClearSelection();
+                        dataGridOpravy.Rows[hti.RowIndex].Selected = true;
+                        actualCell = hti;
+                        dataGridOpravy.ContextMenuStrip.Enabled = true;
+                    }
+                    else
+                    {
+                        dataGridOpravy.ContextMenuStrip.Enabled = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 

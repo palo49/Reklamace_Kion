@@ -78,6 +78,11 @@
             this.txtSNComponent = new System.Windows.Forms.TextBox();
             this.cmbPNBattery = new System.Windows.Forms.ComboBox();
             this.panelControls = new System.Windows.Forms.Panel();
+            this.txtContactEmail = new System.Windows.Forms.TextBox();
+            this.txtContactFirstName = new System.Windows.Forms.TextBox();
+            this.txtContactId = new System.Windows.Forms.TextBox();
+            this.txtContactLastName = new System.Windows.Forms.TextBox();
+            this.cmbContacts = new System.Windows.Forms.ComboBox();
             this.numHoursAdministration = new System.Windows.Forms.NumericUpDown();
             this.numHoursTechnician = new System.Windows.Forms.NumericUpDown();
             this.numCostOfComponents = new System.Windows.Forms.NumericUpDown();
@@ -92,11 +97,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.cmbContacts = new System.Windows.Forms.ComboBox();
-            this.txtContactLastName = new System.Windows.Forms.TextBox();
-            this.txtContactFirstName = new System.Windows.Forms.TextBox();
-            this.txtContactEmail = new System.Windows.Forms.TextBox();
-            this.txtContactId = new System.Windows.Forms.TextBox();
+            this.btnClearDateSendFromCustomer = new System.Windows.Forms.Button();
+            this.btnClearDateOfSaftAccept = new System.Windows.Forms.Button();
+            this.btnClearDateOfRepair = new System.Windows.Forms.Button();
+            this.btnClearDateOfSaftSend = new System.Windows.Forms.Button();
+            this.btnClearDateOfReplacementSend = new System.Windows.Forms.Button();
+            this.btnClearDefekt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelControls.SuspendLayout();
@@ -186,8 +192,9 @@
             this.DateOfCustomerSend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfCustomerSend.Location = new System.Drawing.Point(4, 144);
             this.DateOfCustomerSend.Name = "DateOfCustomerSend";
-            this.DateOfCustomerSend.Size = new System.Drawing.Size(346, 21);
+            this.DateOfCustomerSend.Size = new System.Drawing.Size(317, 21);
             this.DateOfCustomerSend.TabIndex = 4;
+            this.DateOfCustomerSend.ValueChanged += new System.EventHandler(this.DateOfCustomerSend_ValueChanged);
             // 
             // lblDateOfSaftAcceptance
             // 
@@ -204,8 +211,9 @@
             this.DateOfSaftAcceptance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfSaftAcceptance.Location = new System.Drawing.Point(4, 195);
             this.DateOfSaftAcceptance.Name = "DateOfSaftAcceptance";
-            this.DateOfSaftAcceptance.Size = new System.Drawing.Size(346, 21);
+            this.DateOfSaftAcceptance.Size = new System.Drawing.Size(317, 21);
             this.DateOfSaftAcceptance.TabIndex = 5;
+            this.DateOfSaftAcceptance.ValueChanged += new System.EventHandler(this.DateOfSaftAcceptance_ValueChanged);
             // 
             // lblDateOfRepair
             // 
@@ -222,8 +230,9 @@
             this.DateOfRepair.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfRepair.Location = new System.Drawing.Point(4, 247);
             this.DateOfRepair.Name = "DateOfRepair";
-            this.DateOfRepair.Size = new System.Drawing.Size(346, 21);
+            this.DateOfRepair.Size = new System.Drawing.Size(317, 21);
             this.DateOfRepair.TabIndex = 6;
+            this.DateOfRepair.ValueChanged += new System.EventHandler(this.DateOfRepair_ValueChanged);
             // 
             // lblDateOfSaftSend
             // 
@@ -240,8 +249,9 @@
             this.DateOfSaftSend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfSaftSend.Location = new System.Drawing.Point(4, 299);
             this.DateOfSaftSend.Name = "DateOfSaftSend";
-            this.DateOfSaftSend.Size = new System.Drawing.Size(346, 21);
+            this.DateOfSaftSend.Size = new System.Drawing.Size(317, 21);
             this.DateOfSaftSend.TabIndex = 7;
+            this.DateOfSaftSend.ValueChanged += new System.EventHandler(this.DateOfSaftSend_ValueChanged);
             // 
             // lblFault
             // 
@@ -311,6 +321,7 @@
             this.cmbPNComponent.Size = new System.Drawing.Size(346, 23);
             this.cmbPNComponent.Sorted = true;
             this.cmbPNComponent.TabIndex = 8;
+            this.cmbPNComponent.SelectedIndexChanged += new System.EventHandler(this.cmbPNComponent_SelectedIndexChanged);
             // 
             // lblReplacementSend
             // 
@@ -349,8 +360,9 @@
             this.DateOfReplacementSend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfReplacementSend.Location = new System.Drawing.Point(4, 404);
             this.DateOfReplacementSend.Name = "DateOfReplacementSend";
-            this.DateOfReplacementSend.Size = new System.Drawing.Size(346, 21);
+            this.DateOfReplacementSend.Size = new System.Drawing.Size(317, 21);
             this.DateOfReplacementSend.TabIndex = 16;
+            this.DateOfReplacementSend.ValueChanged += new System.EventHandler(this.DateOfReplacementSend_ValueChanged);
             // 
             // lblResult
             // 
@@ -507,7 +519,7 @@
             this.cmbDefects.FormattingEnabled = true;
             this.cmbDefects.Location = new System.Drawing.Point(4, 824);
             this.cmbDefects.Name = "cmbDefects";
-            this.cmbDefects.Size = new System.Drawing.Size(346, 23);
+            this.cmbDefects.Size = new System.Drawing.Size(319, 23);
             this.cmbDefects.Sorted = true;
             this.cmbDefects.TabIndex = 24;
             // 
@@ -579,6 +591,12 @@
             // panelControls
             // 
             this.panelControls.AutoScroll = true;
+            this.panelControls.Controls.Add(this.btnClearDefekt);
+            this.panelControls.Controls.Add(this.btnClearDateOfReplacementSend);
+            this.panelControls.Controls.Add(this.btnClearDateOfSaftSend);
+            this.panelControls.Controls.Add(this.btnClearDateOfRepair);
+            this.panelControls.Controls.Add(this.btnClearDateOfSaftAccept);
+            this.panelControls.Controls.Add(this.btnClearDateSendFromCustomer);
             this.panelControls.Controls.Add(this.txtContactEmail);
             this.panelControls.Controls.Add(this.txtContactFirstName);
             this.panelControls.Controls.Add(this.txtContactId);
@@ -643,6 +661,48 @@
             this.panelControls.Name = "panelControls";
             this.panelControls.Size = new System.Drawing.Size(377, 466);
             this.panelControls.TabIndex = 27;
+            // 
+            // txtContactEmail
+            // 
+            this.txtContactEmail.Location = new System.Drawing.Point(4, 1276);
+            this.txtContactEmail.Name = "txtContactEmail";
+            this.txtContactEmail.ReadOnly = true;
+            this.txtContactEmail.Size = new System.Drawing.Size(346, 21);
+            this.txtContactEmail.TabIndex = 29;
+            // 
+            // txtContactFirstName
+            // 
+            this.txtContactFirstName.Location = new System.Drawing.Point(4, 1249);
+            this.txtContactFirstName.Name = "txtContactFirstName";
+            this.txtContactFirstName.ReadOnly = true;
+            this.txtContactFirstName.Size = new System.Drawing.Size(346, 21);
+            this.txtContactFirstName.TabIndex = 29;
+            // 
+            // txtContactId
+            // 
+            this.txtContactId.Location = new System.Drawing.Point(4, 1193);
+            this.txtContactId.Name = "txtContactId";
+            this.txtContactId.ReadOnly = true;
+            this.txtContactId.Size = new System.Drawing.Size(37, 21);
+            this.txtContactId.TabIndex = 29;
+            // 
+            // txtContactLastName
+            // 
+            this.txtContactLastName.Location = new System.Drawing.Point(4, 1222);
+            this.txtContactLastName.Name = "txtContactLastName";
+            this.txtContactLastName.ReadOnly = true;
+            this.txtContactLastName.Size = new System.Drawing.Size(346, 21);
+            this.txtContactLastName.TabIndex = 29;
+            // 
+            // cmbContacts
+            // 
+            this.cmbContacts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbContacts.FormattingEnabled = true;
+            this.cmbContacts.Location = new System.Drawing.Point(47, 1193);
+            this.cmbContacts.Name = "cmbContacts";
+            this.cmbContacts.Size = new System.Drawing.Size(303, 23);
+            this.cmbContacts.TabIndex = 28;
+            this.cmbContacts.SelectedIndexChanged += new System.EventHandler(this.cmbContacts_SelectedIndexChanged);
             // 
             // numHoursAdministration
             // 
@@ -805,47 +865,101 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Cena dílů";
             // 
-            // cmbContacts
+            // btnClearDateSendFromCustomer
             // 
-            this.cmbContacts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbContacts.FormattingEnabled = true;
-            this.cmbContacts.Location = new System.Drawing.Point(47, 1193);
-            this.cmbContacts.Name = "cmbContacts";
-            this.cmbContacts.Size = new System.Drawing.Size(303, 23);
-            this.cmbContacts.TabIndex = 28;
-            this.cmbContacts.SelectedIndexChanged += new System.EventHandler(this.cmbContacts_SelectedIndexChanged);
+            this.btnClearDateSendFromCustomer.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateSendFromCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateSendFromCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateSendFromCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateSendFromCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateSendFromCustomer.Location = new System.Drawing.Point(325, 144);
+            this.btnClearDateSendFromCustomer.Name = "btnClearDateSendFromCustomer";
+            this.btnClearDateSendFromCustomer.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateSendFromCustomer.TabIndex = 30;
+            this.btnClearDateSendFromCustomer.Text = "X";
+            this.btnClearDateSendFromCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateSendFromCustomer.UseVisualStyleBackColor = false;
+            this.btnClearDateSendFromCustomer.Click += new System.EventHandler(this.btnClearDateSendFromCustomer_Click);
             // 
-            // txtContactLastName
+            // btnClearDateOfSaftAccept
             // 
-            this.txtContactLastName.Location = new System.Drawing.Point(4, 1222);
-            this.txtContactLastName.Name = "txtContactLastName";
-            this.txtContactLastName.ReadOnly = true;
-            this.txtContactLastName.Size = new System.Drawing.Size(346, 21);
-            this.txtContactLastName.TabIndex = 29;
+            this.btnClearDateOfSaftAccept.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateOfSaftAccept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateOfSaftAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateOfSaftAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateOfSaftAccept.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateOfSaftAccept.Location = new System.Drawing.Point(325, 195);
+            this.btnClearDateOfSaftAccept.Name = "btnClearDateOfSaftAccept";
+            this.btnClearDateOfSaftAccept.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateOfSaftAccept.TabIndex = 30;
+            this.btnClearDateOfSaftAccept.Text = "X";
+            this.btnClearDateOfSaftAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateOfSaftAccept.UseVisualStyleBackColor = false;
+            this.btnClearDateOfSaftAccept.Click += new System.EventHandler(this.btnClearDateOfSaftAccept_Click);
             // 
-            // txtContactFirstName
+            // btnClearDateOfRepair
             // 
-            this.txtContactFirstName.Location = new System.Drawing.Point(4, 1249);
-            this.txtContactFirstName.Name = "txtContactFirstName";
-            this.txtContactFirstName.ReadOnly = true;
-            this.txtContactFirstName.Size = new System.Drawing.Size(346, 21);
-            this.txtContactFirstName.TabIndex = 29;
+            this.btnClearDateOfRepair.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateOfRepair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateOfRepair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateOfRepair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateOfRepair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateOfRepair.Location = new System.Drawing.Point(325, 247);
+            this.btnClearDateOfRepair.Name = "btnClearDateOfRepair";
+            this.btnClearDateOfRepair.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateOfRepair.TabIndex = 30;
+            this.btnClearDateOfRepair.Text = "X";
+            this.btnClearDateOfRepair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateOfRepair.UseVisualStyleBackColor = false;
+            this.btnClearDateOfRepair.Click += new System.EventHandler(this.btnClearDateOfRepair_Click);
             // 
-            // txtContactEmail
+            // btnClearDateOfSaftSend
             // 
-            this.txtContactEmail.Location = new System.Drawing.Point(4, 1276);
-            this.txtContactEmail.Name = "txtContactEmail";
-            this.txtContactEmail.ReadOnly = true;
-            this.txtContactEmail.Size = new System.Drawing.Size(346, 21);
-            this.txtContactEmail.TabIndex = 29;
+            this.btnClearDateOfSaftSend.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateOfSaftSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateOfSaftSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateOfSaftSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateOfSaftSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateOfSaftSend.Location = new System.Drawing.Point(325, 299);
+            this.btnClearDateOfSaftSend.Name = "btnClearDateOfSaftSend";
+            this.btnClearDateOfSaftSend.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateOfSaftSend.TabIndex = 30;
+            this.btnClearDateOfSaftSend.Text = "X";
+            this.btnClearDateOfSaftSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateOfSaftSend.UseVisualStyleBackColor = false;
+            this.btnClearDateOfSaftSend.Click += new System.EventHandler(this.btnClearDateOfSaftSend_Click);
             // 
-            // txtContactId
+            // btnClearDateOfReplacementSend
             // 
-            this.txtContactId.Location = new System.Drawing.Point(4, 1193);
-            this.txtContactId.Name = "txtContactId";
-            this.txtContactId.ReadOnly = true;
-            this.txtContactId.Size = new System.Drawing.Size(37, 21);
-            this.txtContactId.TabIndex = 29;
+            this.btnClearDateOfReplacementSend.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateOfReplacementSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateOfReplacementSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateOfReplacementSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateOfReplacementSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateOfReplacementSend.Location = new System.Drawing.Point(325, 404);
+            this.btnClearDateOfReplacementSend.Name = "btnClearDateOfReplacementSend";
+            this.btnClearDateOfReplacementSend.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateOfReplacementSend.TabIndex = 30;
+            this.btnClearDateOfReplacementSend.Text = "X";
+            this.btnClearDateOfReplacementSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateOfReplacementSend.UseVisualStyleBackColor = false;
+            this.btnClearDateOfReplacementSend.Click += new System.EventHandler(this.btnClearDateOfReplacementSend_Click);
+            // 
+            // btnClearDefekt
+            // 
+            this.btnClearDefekt.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDefekt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDefekt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDefekt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDefekt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDefekt.Location = new System.Drawing.Point(325, 825);
+            this.btnClearDefekt.Name = "btnClearDefekt";
+            this.btnClearDefekt.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDefekt.TabIndex = 31;
+            this.btnClearDefekt.Text = "X";
+            this.btnClearDefekt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDefekt.UseVisualStyleBackColor = false;
+            this.btnClearDefekt.Click += new System.EventHandler(this.btnClearDefekt_Click);
             // 
             // AddData
             // 
@@ -953,5 +1067,11 @@
         private System.Windows.Forms.TextBox txtContactFirstName;
         private System.Windows.Forms.TextBox txtContactLastName;
         private System.Windows.Forms.TextBox txtContactId;
+        private System.Windows.Forms.Button btnClearDateSendFromCustomer;
+        private System.Windows.Forms.Button btnClearDateOfSaftAccept;
+        private System.Windows.Forms.Button btnClearDateOfRepair;
+        private System.Windows.Forms.Button btnClearDateOfSaftSend;
+        private System.Windows.Forms.Button btnClearDateOfReplacementSend;
+        private System.Windows.Forms.Button btnClearDefekt;
     }
 }
