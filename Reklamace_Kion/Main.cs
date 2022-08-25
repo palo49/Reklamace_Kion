@@ -637,6 +637,8 @@ namespace Reklamace_Kion
                 txtSearch.Text = string.Empty;
                 this.bindMainData.Filter = String.Empty;
                 this.bindRepairData.Filter = String.Empty;
+                this.dataGrid1.ClearFilter();
+                this.dataGridOpravy.ClearFilter();
             }
             catch (Exception ex)
             {
