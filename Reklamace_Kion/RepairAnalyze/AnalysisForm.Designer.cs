@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnalysisForm));
             this.lblCLM = new System.Windows.Forms.Label();
             this.lblPN = new System.Windows.Forms.Label();
@@ -776,6 +777,7 @@
             this.label177 = new System.Windows.Forms.Label();
             this.label191 = new System.Windows.Forms.Label();
             this.BtxtVoltageSum2 = new System.Windows.Forms.TextBox();
+            this.TipVoltage = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -9249,6 +9251,7 @@
             this.BtxtV1.Size = new System.Drawing.Size(82, 21);
             this.BtxtV1.TabIndex = 1;
             this.BtxtV1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV1, "Napětí na článku ve voltech.");
             // 
             // BtxtV2
             // 
@@ -9258,6 +9261,7 @@
             this.BtxtV2.Size = new System.Drawing.Size(82, 21);
             this.BtxtV2.TabIndex = 1;
             this.BtxtV2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV2, "Napětí na článku ve voltech.");
             // 
             // BtxtV3
             // 
@@ -9267,6 +9271,7 @@
             this.BtxtV3.Size = new System.Drawing.Size(82, 21);
             this.BtxtV3.TabIndex = 1;
             this.BtxtV3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV3, "Napětí na článku ve voltech.");
             // 
             // BtxtV4
             // 
@@ -9276,6 +9281,7 @@
             this.BtxtV4.Size = new System.Drawing.Size(82, 21);
             this.BtxtV4.TabIndex = 1;
             this.BtxtV4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV4, "Napětí na článku ve voltech.");
             // 
             // BtxtV5
             // 
@@ -9285,6 +9291,7 @@
             this.BtxtV5.Size = new System.Drawing.Size(82, 21);
             this.BtxtV5.TabIndex = 1;
             this.BtxtV5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV5, "Napětí na článku ve voltech.");
             // 
             // BtxtV6
             // 
@@ -9294,6 +9301,7 @@
             this.BtxtV6.Size = new System.Drawing.Size(82, 21);
             this.BtxtV6.TabIndex = 1;
             this.BtxtV6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV6, "Napětí na článku ve voltech.");
             // 
             // BtxtV7
             // 
@@ -9303,6 +9311,7 @@
             this.BtxtV7.Size = new System.Drawing.Size(82, 21);
             this.BtxtV7.TabIndex = 1;
             this.BtxtV7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV7, "Napětí na článku ve voltech.");
             // 
             // BtxtV8
             // 
@@ -9312,6 +9321,7 @@
             this.BtxtV8.Size = new System.Drawing.Size(82, 21);
             this.BtxtV8.TabIndex = 1;
             this.BtxtV8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV8, "Napětí na článku ve voltech.");
             // 
             // BtxtV9
             // 
@@ -9321,6 +9331,7 @@
             this.BtxtV9.Size = new System.Drawing.Size(82, 21);
             this.BtxtV9.TabIndex = 1;
             this.BtxtV9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV9, "Napětí na článku ve voltech.");
             // 
             // BtxtV10
             // 
@@ -9330,6 +9341,7 @@
             this.BtxtV10.Size = new System.Drawing.Size(84, 21);
             this.BtxtV10.TabIndex = 1;
             this.BtxtV10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV10, "Napětí na článku ve voltech.");
             // 
             // BtxtV11
             // 
@@ -9339,6 +9351,7 @@
             this.BtxtV11.Size = new System.Drawing.Size(82, 21);
             this.BtxtV11.TabIndex = 1;
             this.BtxtV11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV11, "Napětí na článku ve voltech.");
             // 
             // BtxtV12
             // 
@@ -9348,6 +9361,7 @@
             this.BtxtV12.Size = new System.Drawing.Size(82, 21);
             this.BtxtV12.TabIndex = 1;
             this.BtxtV12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV12, "Napětí na článku ve voltech.");
             // 
             // BtxtV13
             // 
@@ -9357,6 +9371,7 @@
             this.BtxtV13.Size = new System.Drawing.Size(82, 21);
             this.BtxtV13.TabIndex = 1;
             this.BtxtV13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV13, "Napětí na článku ve voltech.");
             // 
             // BtxtV14
             // 
@@ -9366,6 +9381,7 @@
             this.BtxtV14.Size = new System.Drawing.Size(82, 21);
             this.BtxtV14.TabIndex = 1;
             this.BtxtV14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV14, "Napětí na článku ve voltech.");
             // 
             // BtxtV15
             // 
@@ -9375,6 +9391,7 @@
             this.BtxtV15.Size = new System.Drawing.Size(82, 21);
             this.BtxtV15.TabIndex = 1;
             this.BtxtV15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV15, "Napětí na článku ve voltech.");
             // 
             // BtxtV16
             // 
@@ -9384,6 +9401,7 @@
             this.BtxtV16.Size = new System.Drawing.Size(82, 21);
             this.BtxtV16.TabIndex = 1;
             this.BtxtV16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV16, "Napětí na článku ve voltech.");
             // 
             // BtxtV17
             // 
@@ -9393,6 +9411,7 @@
             this.BtxtV17.Size = new System.Drawing.Size(82, 21);
             this.BtxtV17.TabIndex = 1;
             this.BtxtV17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV17, "Napětí na článku ve voltech.");
             // 
             // BtxtV18
             // 
@@ -9402,6 +9421,7 @@
             this.BtxtV18.Size = new System.Drawing.Size(82, 21);
             this.BtxtV18.TabIndex = 1;
             this.BtxtV18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV18, "Napětí na článku ve voltech.");
             // 
             // BtxtV19
             // 
@@ -9411,6 +9431,7 @@
             this.BtxtV19.Size = new System.Drawing.Size(82, 21);
             this.BtxtV19.TabIndex = 1;
             this.BtxtV19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV19, "Napětí na článku ve voltech.");
             // 
             // BtxtV20
             // 
@@ -9420,6 +9441,7 @@
             this.BtxtV20.Size = new System.Drawing.Size(84, 21);
             this.BtxtV20.TabIndex = 1;
             this.BtxtV20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV20, "Napětí na článku ve voltech.");
             // 
             // BtxtV21
             // 
@@ -9429,6 +9451,7 @@
             this.BtxtV21.Size = new System.Drawing.Size(82, 21);
             this.BtxtV21.TabIndex = 1;
             this.BtxtV21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV21, "Napětí na článku ve voltech.");
             // 
             // BtxtV22
             // 
@@ -9438,6 +9461,7 @@
             this.BtxtV22.Size = new System.Drawing.Size(82, 21);
             this.BtxtV22.TabIndex = 1;
             this.BtxtV22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV22, "Napětí na článku ve voltech.");
             // 
             // BtxtV23
             // 
@@ -9447,6 +9471,7 @@
             this.BtxtV23.Size = new System.Drawing.Size(82, 21);
             this.BtxtV23.TabIndex = 1;
             this.BtxtV23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV23, "Napětí na článku ve voltech.");
             // 
             // BtxtV24
             // 
@@ -9456,6 +9481,7 @@
             this.BtxtV24.Size = new System.Drawing.Size(82, 21);
             this.BtxtV24.TabIndex = 1;
             this.BtxtV24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV24, "Napětí na článku ve voltech.");
             // 
             // BtxtV25
             // 
@@ -9465,6 +9491,7 @@
             this.BtxtV25.Size = new System.Drawing.Size(82, 21);
             this.BtxtV25.TabIndex = 1;
             this.BtxtV25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV25, "Napětí na článku ve voltech.");
             // 
             // BtxtV26
             // 
@@ -9474,6 +9501,7 @@
             this.BtxtV26.Size = new System.Drawing.Size(82, 21);
             this.BtxtV26.TabIndex = 1;
             this.BtxtV26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV26, "Napětí na článku ve voltech.");
             // 
             // BtxtV27
             // 
@@ -9483,6 +9511,7 @@
             this.BtxtV27.Size = new System.Drawing.Size(82, 21);
             this.BtxtV27.TabIndex = 1;
             this.BtxtV27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV27, "Napětí na článku ve voltech.");
             // 
             // BtxtV28
             // 
@@ -9492,6 +9521,7 @@
             this.BtxtV28.Size = new System.Drawing.Size(82, 21);
             this.BtxtV28.TabIndex = 1;
             this.BtxtV28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV28, "Napětí na článku ve voltech.");
             // 
             // BtxtV29
             // 
@@ -9501,6 +9531,7 @@
             this.BtxtV29.Size = new System.Drawing.Size(82, 21);
             this.BtxtV29.TabIndex = 1;
             this.BtxtV29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV29, "Napětí na článku ve voltech.");
             // 
             // BtxtV30
             // 
@@ -9510,6 +9541,7 @@
             this.BtxtV30.Size = new System.Drawing.Size(84, 21);
             this.BtxtV30.TabIndex = 1;
             this.BtxtV30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV30, "Napětí na článku ve voltech.");
             // 
             // BtxtV31
             // 
@@ -9519,6 +9551,7 @@
             this.BtxtV31.Size = new System.Drawing.Size(82, 21);
             this.BtxtV31.TabIndex = 1;
             this.BtxtV31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV31, "Napětí na článku ve voltech.");
             // 
             // BtxtV32
             // 
@@ -9528,6 +9561,7 @@
             this.BtxtV32.Size = new System.Drawing.Size(82, 21);
             this.BtxtV32.TabIndex = 1;
             this.BtxtV32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV32, "Napětí na článku ve voltech.");
             // 
             // BtxtV33
             // 
@@ -9537,6 +9571,7 @@
             this.BtxtV33.Size = new System.Drawing.Size(82, 21);
             this.BtxtV33.TabIndex = 1;
             this.BtxtV33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV33, "Napětí na článku ve voltech.");
             // 
             // BtxtV34
             // 
@@ -9546,6 +9581,7 @@
             this.BtxtV34.Size = new System.Drawing.Size(82, 21);
             this.BtxtV34.TabIndex = 1;
             this.BtxtV34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV34, "Napětí na článku ve voltech.");
             // 
             // BtxtV35
             // 
@@ -9555,6 +9591,7 @@
             this.BtxtV35.Size = new System.Drawing.Size(82, 21);
             this.BtxtV35.TabIndex = 1;
             this.BtxtV35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV35, "Napětí na článku ve voltech.");
             // 
             // BtxtV36
             // 
@@ -9564,6 +9601,7 @@
             this.BtxtV36.Size = new System.Drawing.Size(82, 21);
             this.BtxtV36.TabIndex = 1;
             this.BtxtV36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV36, "Napětí na článku ve voltech.");
             // 
             // BtxtV37
             // 
@@ -9573,6 +9611,7 @@
             this.BtxtV37.Size = new System.Drawing.Size(82, 21);
             this.BtxtV37.TabIndex = 1;
             this.BtxtV37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV37, "Napětí na článku ve voltech.");
             // 
             // BtxtV38
             // 
@@ -9582,6 +9621,7 @@
             this.BtxtV38.Size = new System.Drawing.Size(82, 21);
             this.BtxtV38.TabIndex = 1;
             this.BtxtV38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV38, "Napětí na článku ve voltech.");
             // 
             // BtxtV39
             // 
@@ -9591,6 +9631,7 @@
             this.BtxtV39.Size = new System.Drawing.Size(82, 21);
             this.BtxtV39.TabIndex = 1;
             this.BtxtV39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV39, "Napětí na článku ve voltech.");
             // 
             // BtxtV40
             // 
@@ -9600,6 +9641,7 @@
             this.BtxtV40.Size = new System.Drawing.Size(82, 21);
             this.BtxtV40.TabIndex = 1;
             this.BtxtV40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV40, "Napětí na článku ve voltech.");
             // 
             // BtxtV41
             // 
@@ -9609,6 +9651,7 @@
             this.BtxtV41.Size = new System.Drawing.Size(82, 21);
             this.BtxtV41.TabIndex = 1;
             this.BtxtV41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV41, "Napětí na článku ve voltech.");
             // 
             // BtxtV42
             // 
@@ -9618,6 +9661,7 @@
             this.BtxtV42.Size = new System.Drawing.Size(82, 21);
             this.BtxtV42.TabIndex = 1;
             this.BtxtV42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV42, "Napětí na článku ve voltech.");
             // 
             // BtxtV43
             // 
@@ -9627,6 +9671,7 @@
             this.BtxtV43.Size = new System.Drawing.Size(82, 21);
             this.BtxtV43.TabIndex = 1;
             this.BtxtV43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV43, "Napětí na článku ve voltech.");
             // 
             // BtxtV44
             // 
@@ -9636,6 +9681,7 @@
             this.BtxtV44.Size = new System.Drawing.Size(82, 21);
             this.BtxtV44.TabIndex = 1;
             this.BtxtV44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV44, "Napětí na článku ve voltech.");
             // 
             // BtxtV45
             // 
@@ -9645,6 +9691,7 @@
             this.BtxtV45.Size = new System.Drawing.Size(82, 21);
             this.BtxtV45.TabIndex = 1;
             this.BtxtV45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV45, "Napětí na článku ve voltech.");
             // 
             // BtxtV46
             // 
@@ -9654,6 +9701,7 @@
             this.BtxtV46.Size = new System.Drawing.Size(82, 21);
             this.BtxtV46.TabIndex = 1;
             this.BtxtV46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV46, "Napětí na článku ve voltech.");
             // 
             // BtxtV47
             // 
@@ -9663,6 +9711,7 @@
             this.BtxtV47.Size = new System.Drawing.Size(82, 21);
             this.BtxtV47.TabIndex = 1;
             this.BtxtV47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV47, "Napětí na článku ve voltech.");
             // 
             // BtxtV48
             // 
@@ -9672,6 +9721,7 @@
             this.BtxtV48.Size = new System.Drawing.Size(82, 21);
             this.BtxtV48.TabIndex = 1;
             this.BtxtV48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV48, "Napětí na článku ve voltech.");
             // 
             // BtxtV49
             // 
@@ -9681,6 +9731,7 @@
             this.BtxtV49.Size = new System.Drawing.Size(82, 21);
             this.BtxtV49.TabIndex = 1;
             this.BtxtV49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV49, "Napětí na článku ve voltech.");
             // 
             // BtxtV50
             // 
@@ -9690,6 +9741,7 @@
             this.BtxtV50.Size = new System.Drawing.Size(82, 21);
             this.BtxtV50.TabIndex = 1;
             this.BtxtV50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV50, "Napětí na článku ve voltech.");
             // 
             // BtxtV51
             // 
@@ -9699,6 +9751,7 @@
             this.BtxtV51.Size = new System.Drawing.Size(82, 21);
             this.BtxtV51.TabIndex = 1;
             this.BtxtV51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV51, "Napětí na článku ve voltech.");
             // 
             // BtxtV52
             // 
@@ -9708,6 +9761,7 @@
             this.BtxtV52.Size = new System.Drawing.Size(82, 21);
             this.BtxtV52.TabIndex = 1;
             this.BtxtV52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV52, "Napětí na článku ve voltech.");
             // 
             // BtxtV53
             // 
@@ -9717,6 +9771,7 @@
             this.BtxtV53.Size = new System.Drawing.Size(82, 21);
             this.BtxtV53.TabIndex = 1;
             this.BtxtV53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV53, "Napětí na článku ve voltech.");
             // 
             // BtxtV54
             // 
@@ -9726,6 +9781,7 @@
             this.BtxtV54.Size = new System.Drawing.Size(82, 21);
             this.BtxtV54.TabIndex = 1;
             this.BtxtV54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV54, "Napětí na článku ve voltech.");
             // 
             // BtxtV55
             // 
@@ -9735,6 +9791,7 @@
             this.BtxtV55.Size = new System.Drawing.Size(82, 21);
             this.BtxtV55.TabIndex = 1;
             this.BtxtV55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV55, "Napětí na článku ve voltech.");
             // 
             // BtxtV56
             // 
@@ -9744,6 +9801,7 @@
             this.BtxtV56.Size = new System.Drawing.Size(82, 21);
             this.BtxtV56.TabIndex = 1;
             this.BtxtV56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV56, "Napětí na článku ve voltech.");
             // 
             // BtxtV57
             // 
@@ -9753,6 +9811,7 @@
             this.BtxtV57.Size = new System.Drawing.Size(82, 21);
             this.BtxtV57.TabIndex = 1;
             this.BtxtV57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV57, "Napětí na článku ve voltech.");
             // 
             // BtxtV58
             // 
@@ -9762,6 +9821,7 @@
             this.BtxtV58.Size = new System.Drawing.Size(82, 21);
             this.BtxtV58.TabIndex = 1;
             this.BtxtV58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV58, "Napětí na článku ve voltech.");
             // 
             // BtxtV59
             // 
@@ -9771,6 +9831,7 @@
             this.BtxtV59.Size = new System.Drawing.Size(82, 21);
             this.BtxtV59.TabIndex = 1;
             this.BtxtV59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV59, "Napětí na článku ve voltech.");
             // 
             // BtxtV60
             // 
@@ -9780,6 +9841,7 @@
             this.BtxtV60.Size = new System.Drawing.Size(82, 21);
             this.BtxtV60.TabIndex = 1;
             this.BtxtV60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV60, "Napětí na článku ve voltech.");
             // 
             // BtxtV61
             // 
@@ -9789,6 +9851,7 @@
             this.BtxtV61.Size = new System.Drawing.Size(82, 21);
             this.BtxtV61.TabIndex = 1;
             this.BtxtV61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV61, "Napětí na článku ve voltech.");
             // 
             // BtxtV62
             // 
@@ -9798,6 +9861,7 @@
             this.BtxtV62.Size = new System.Drawing.Size(82, 21);
             this.BtxtV62.TabIndex = 1;
             this.BtxtV62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV62, "Napětí na článku ve voltech.");
             // 
             // BtxtV63
             // 
@@ -9807,6 +9871,7 @@
             this.BtxtV63.Size = new System.Drawing.Size(82, 21);
             this.BtxtV63.TabIndex = 1;
             this.BtxtV63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV63, "Napětí na článku ve voltech.");
             // 
             // BtxtV64
             // 
@@ -9816,6 +9881,7 @@
             this.BtxtV64.Size = new System.Drawing.Size(82, 21);
             this.BtxtV64.TabIndex = 1;
             this.BtxtV64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV64, "Napětí na článku ve voltech.");
             // 
             // BtxtV65
             // 
@@ -9825,6 +9891,7 @@
             this.BtxtV65.Size = new System.Drawing.Size(82, 21);
             this.BtxtV65.TabIndex = 1;
             this.BtxtV65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV65, "Napětí na článku ve voltech.");
             // 
             // BtxtV66
             // 
@@ -9834,6 +9901,7 @@
             this.BtxtV66.Size = new System.Drawing.Size(82, 21);
             this.BtxtV66.TabIndex = 1;
             this.BtxtV66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV66, "Napětí na článku ve voltech.");
             // 
             // BtxtV67
             // 
@@ -9843,6 +9911,7 @@
             this.BtxtV67.Size = new System.Drawing.Size(82, 21);
             this.BtxtV67.TabIndex = 1;
             this.BtxtV67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV67, "Napětí na článku ve voltech.");
             // 
             // BtxtV68
             // 
@@ -9852,6 +9921,7 @@
             this.BtxtV68.Size = new System.Drawing.Size(82, 21);
             this.BtxtV68.TabIndex = 1;
             this.BtxtV68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV68, "Napětí na článku ve voltech.");
             // 
             // BtxtV69
             // 
@@ -9861,6 +9931,7 @@
             this.BtxtV69.Size = new System.Drawing.Size(82, 21);
             this.BtxtV69.TabIndex = 1;
             this.BtxtV69.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV69, "Napětí na článku ve voltech.");
             // 
             // BtxtV70
             // 
@@ -9870,6 +9941,7 @@
             this.BtxtV70.Size = new System.Drawing.Size(82, 21);
             this.BtxtV70.TabIndex = 1;
             this.BtxtV70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV70, "Napětí na článku ve voltech.");
             // 
             // label151
             // 
@@ -9922,6 +9994,11 @@
             this.BtxtVoltageSum2.Size = new System.Drawing.Size(89, 21);
             this.BtxtVoltageSum2.TabIndex = 33;
             this.BtxtVoltageSum2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TipVoltage
+            // 
+            this.TipVoltage.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.TipVoltage.ToolTipTitle = "Info";
             // 
             // AnalysisForm
             // 
@@ -10735,5 +10812,6 @@
         private System.Windows.Forms.Label label191;
         private System.Windows.Forms.TextBox BtxtVoltageSum2;
         private System.Windows.Forms.TextBox BtxtVoltageSum1;
+        private System.Windows.Forms.ToolTip TipVoltage;
     }
 }
