@@ -20,6 +20,9 @@ namespace Reklamace_Kion
         {
             InitializeComponent();
         }
+        static SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
+        SqlDataAdapter da3 = new SqlDataAdapter("SELECT Id, Company FROM Contacts", conn);
+        DataTable dt3 = new DataTable();
 
         private void AddData_Load(object sender, EventArgs e)
         {
@@ -38,6 +41,14 @@ namespace Reklamace_Kion
                 cmbDefects.DataSource = dt2;
                 cmbDefects.DisplayMember = "Name";
                 cmbDefects.ValueMember = "Name";
+
+                
+                da3.Fill(dt3);
+                cmbContacts.DataSource = dt3;
+                cmbContacts.DisplayMember = "Company";
+                cmbContacts.ValueMember = "Company";
+                txtContactId.Text = dt3.Rows[0]["Id"].ToString();
+                
             }
         }
 
@@ -67,7 +78,11 @@ namespace Reklamace_Kion
             string DateOfSendReplacement = DateOfReplacementSend.Value.ToShortDateString();
             string Result = cmbResult.Text;
             string ResultDescription = txtResultDescription.Text;
-            string Contact = txtContact.Text;
+            string ContactCompany = cmbContacts.Text;
+            string ContactLastName = txtContactLastName.Text;
+            string ContactFirstName = txtContactFirstName.Text;
+            string ContactEmail = txtContactEmail.Text;
+            string Contact = ContactCompany + ";" + ContactLastName + ";" + ContactFirstName + ";" + ContactEmail + ";";
             float Tariff_Repairman = float.Parse(numTariffRepairman.Text);
             float Hours_Repairman = float.Parse(numHoursRepairman.Text);
             float Tariff_Technician = float.Parse(numTariffTechnician.Text);
@@ -246,6 +261,31 @@ namespace Reklamace_Kion
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbContacts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtContactId.Text = dt3.Rows[cmbContacts.SelectedIndex]["Id"].ToString();
+                SqlConnection sqlConnection = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
+                sqlConnection.Open();
+                string sqlData = "SELECT Last_Name, First_Name, Email from Contacts where Id like '" + dt3.Rows[cmbContacts.SelectedIndex]["Id"].ToString() + "'";
+                SqlCommand cmd = new SqlCommand(sqlData, sqlConnection);
+                SqlDataReader DR1 = cmd.ExecuteReader();
+                if (DR1.Read())
+                {
+                    txtContactLastName.Text = DR1.GetValue(0).ToString();
+                    txtContactFirstName.Text = DR1.GetValue(1).ToString();
+                    txtContactEmail.Text = DR1.GetValue(2).ToString();
+                }
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
             }
         }
     }

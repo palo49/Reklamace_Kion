@@ -63,7 +63,6 @@
             this.txtCostOfRepair = new System.Windows.Forms.TextBox();
             this.cmbCW = new System.Windows.Forms.ComboBox();
             this.lblContact = new System.Windows.Forms.Label();
-            this.txtContact = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -79,30 +78,35 @@
             this.txtSNComponent = new System.Windows.Forms.TextBox();
             this.cmbPNBattery = new System.Windows.Forms.ComboBox();
             this.panelControls = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numTariffRepairman = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numHoursRepairman = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numTariffTechnician = new System.Windows.Forms.NumericUpDown();
-            this.numHoursTechnician = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.numTariffAdministration = new System.Windows.Forms.NumericUpDown();
             this.numHoursAdministration = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
+            this.numHoursTechnician = new System.Windows.Forms.NumericUpDown();
             this.numCostOfComponents = new System.Windows.Forms.NumericUpDown();
+            this.numHoursRepairman = new System.Windows.Forms.NumericUpDown();
+            this.numTariffAdministration = new System.Windows.Forms.NumericUpDown();
+            this.numTariffTechnician = new System.Windows.Forms.NumericUpDown();
+            this.numTariffRepairman = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmbContacts = new System.Windows.Forms.ComboBox();
+            this.txtContactLastName = new System.Windows.Forms.TextBox();
+            this.txtContactFirstName = new System.Windows.Forms.TextBox();
+            this.txtContactEmail = new System.Windows.Forms.TextBox();
+            this.txtContactId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelControls.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numTariffRepairman)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHoursRepairman)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTariffTechnician)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHoursTechnician)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTariffAdministration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHoursAdministration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursTechnician)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCostOfComponents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursRepairman)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffAdministration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffTechnician)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffRepairman)).BeginInit();
             this.SuspendLayout();
             // 
             // lblClm
@@ -395,7 +399,7 @@
             // lblCostOfRepair
             // 
             this.lblCostOfRepair.AutoSize = true;
-            this.lblCostOfRepair.Location = new System.Drawing.Point(4, 1353);
+            this.lblCostOfRepair.Location = new System.Drawing.Point(4, 1456);
             this.lblCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCostOfRepair.Name = "lblCostOfRepair";
             this.lblCostOfRepair.Size = new System.Drawing.Size(118, 15);
@@ -404,7 +408,7 @@
             // 
             // txtCostOfRepair
             // 
-            this.txtCostOfRepair.Location = new System.Drawing.Point(4, 1371);
+            this.txtCostOfRepair.Location = new System.Drawing.Point(4, 1474);
             this.txtCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCostOfRepair.Name = "txtCostOfRepair";
             this.txtCostOfRepair.ReadOnly = true;
@@ -434,14 +438,6 @@
             this.lblContact.Size = new System.Drawing.Size(106, 15);
             this.lblContact.TabIndex = 0;
             this.lblContact.Text = "Kontakt zákazníka";
-            // 
-            // txtContact
-            // 
-            this.txtContact.Location = new System.Drawing.Point(4, 1193);
-            this.txtContact.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(346, 21);
-            this.txtContact.TabIndex = 20;
             // 
             // btnCancel
             // 
@@ -583,6 +579,11 @@
             // panelControls
             // 
             this.panelControls.AutoScroll = true;
+            this.panelControls.Controls.Add(this.txtContactEmail);
+            this.panelControls.Controls.Add(this.txtContactFirstName);
+            this.panelControls.Controls.Add(this.txtContactId);
+            this.panelControls.Controls.Add(this.txtContactLastName);
+            this.panelControls.Controls.Add(this.cmbContacts);
             this.panelControls.Controls.Add(this.numHoursAdministration);
             this.panelControls.Controls.Add(this.numHoursTechnician);
             this.panelControls.Controls.Add(this.numCostOfComponents);
@@ -602,7 +603,6 @@
             this.panelControls.Controls.Add(this.lblDateOfCustomerSend);
             this.panelControls.Controls.Add(this.txtLocationOfBattery);
             this.panelControls.Controls.Add(this.label5);
-            this.panelControls.Controls.Add(this.txtContact);
             this.panelControls.Controls.Add(this.lblDateOfReplacementSend);
             this.panelControls.Controls.Add(this.txtCostOfRepair);
             this.panelControls.Controls.Add(this.label3);
@@ -644,134 +644,9 @@
             this.panelControls.Size = new System.Drawing.Size(377, 466);
             this.panelControls.TabIndex = 27;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 1226);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 15);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Tarif opravář";
-            // 
-            // numTariffRepairman
-            // 
-            this.numTariffRepairman.Location = new System.Drawing.Point(4, 1244);
-            this.numTariffRepairman.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numTariffRepairman.Name = "numTariffRepairman";
-            this.numTariffRepairman.Size = new System.Drawing.Size(109, 21);
-            this.numTariffRepairman.TabIndex = 27;
-            this.numTariffRepairman.ValueChanged += new System.EventHandler(this.numTariffRepairman_ValueChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 1269);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 15);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Hodiny opravář";
-            // 
-            // numHoursRepairman
-            // 
-            this.numHoursRepairman.Location = new System.Drawing.Point(4, 1287);
-            this.numHoursRepairman.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numHoursRepairman.Name = "numHoursRepairman";
-            this.numHoursRepairman.Size = new System.Drawing.Size(109, 21);
-            this.numHoursRepairman.TabIndex = 27;
-            this.numHoursRepairman.ValueChanged += new System.EventHandler(this.numHoursRepairman_ValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(120, 1226);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Tarif technik";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(120, 1269);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Hodiny technik";
-            // 
-            // numTariffTechnician
-            // 
-            this.numTariffTechnician.Location = new System.Drawing.Point(120, 1244);
-            this.numTariffTechnician.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numTariffTechnician.Name = "numTariffTechnician";
-            this.numTariffTechnician.Size = new System.Drawing.Size(109, 21);
-            this.numTariffTechnician.TabIndex = 27;
-            this.numTariffTechnician.ValueChanged += new System.EventHandler(this.numTariffTechnician_ValueChanged);
-            // 
-            // numHoursTechnician
-            // 
-            this.numHoursTechnician.Location = new System.Drawing.Point(120, 1287);
-            this.numHoursTechnician.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numHoursTechnician.Name = "numHoursTechnician";
-            this.numHoursTechnician.Size = new System.Drawing.Size(109, 21);
-            this.numHoursTechnician.TabIndex = 27;
-            this.numHoursTechnician.ValueChanged += new System.EventHandler(this.numHoursTechnician_ValueChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(236, 1226);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(105, 15);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Tarif administrace";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(236, 1269);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(119, 15);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Hodiny administrace";
-            // 
-            // numTariffAdministration
-            // 
-            this.numTariffAdministration.Location = new System.Drawing.Point(236, 1244);
-            this.numTariffAdministration.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numTariffAdministration.Name = "numTariffAdministration";
-            this.numTariffAdministration.Size = new System.Drawing.Size(109, 21);
-            this.numTariffAdministration.TabIndex = 27;
-            this.numTariffAdministration.ValueChanged += new System.EventHandler(this.numTariffAdministration_ValueChanged);
-            // 
             // numHoursAdministration
             // 
-            this.numHoursAdministration.Location = new System.Drawing.Point(236, 1287);
+            this.numHoursAdministration.Location = new System.Drawing.Point(236, 1390);
             this.numHoursAdministration.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -782,19 +657,22 @@
             this.numHoursAdministration.TabIndex = 27;
             this.numHoursAdministration.ValueChanged += new System.EventHandler(this.numHoursAdministration_ValueChanged);
             // 
-            // label12
+            // numHoursTechnician
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 1311);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 15);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Cena dílů";
+            this.numHoursTechnician.Location = new System.Drawing.Point(120, 1390);
+            this.numHoursTechnician.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numHoursTechnician.Name = "numHoursTechnician";
+            this.numHoursTechnician.Size = new System.Drawing.Size(109, 21);
+            this.numHoursTechnician.TabIndex = 27;
+            this.numHoursTechnician.ValueChanged += new System.EventHandler(this.numHoursTechnician_ValueChanged);
             // 
             // numCostOfComponents
             // 
-            this.numCostOfComponents.Location = new System.Drawing.Point(4, 1329);
+            this.numCostOfComponents.Location = new System.Drawing.Point(4, 1432);
             this.numCostOfComponents.Maximum = new decimal(new int[] {
             60000,
             0,
@@ -804,6 +682,170 @@
             this.numCostOfComponents.Size = new System.Drawing.Size(341, 21);
             this.numCostOfComponents.TabIndex = 27;
             this.numCostOfComponents.ValueChanged += new System.EventHandler(this.numCostOfComponents_ValueChanged);
+            // 
+            // numHoursRepairman
+            // 
+            this.numHoursRepairman.Location = new System.Drawing.Point(4, 1390);
+            this.numHoursRepairman.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numHoursRepairman.Name = "numHoursRepairman";
+            this.numHoursRepairman.Size = new System.Drawing.Size(109, 21);
+            this.numHoursRepairman.TabIndex = 27;
+            this.numHoursRepairman.ValueChanged += new System.EventHandler(this.numHoursRepairman_ValueChanged);
+            // 
+            // numTariffAdministration
+            // 
+            this.numTariffAdministration.Location = new System.Drawing.Point(236, 1347);
+            this.numTariffAdministration.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numTariffAdministration.Name = "numTariffAdministration";
+            this.numTariffAdministration.Size = new System.Drawing.Size(109, 21);
+            this.numTariffAdministration.TabIndex = 27;
+            this.numTariffAdministration.ValueChanged += new System.EventHandler(this.numTariffAdministration_ValueChanged);
+            // 
+            // numTariffTechnician
+            // 
+            this.numTariffTechnician.Location = new System.Drawing.Point(120, 1347);
+            this.numTariffTechnician.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numTariffTechnician.Name = "numTariffTechnician";
+            this.numTariffTechnician.Size = new System.Drawing.Size(109, 21);
+            this.numTariffTechnician.TabIndex = 27;
+            this.numTariffTechnician.ValueChanged += new System.EventHandler(this.numTariffTechnician_ValueChanged);
+            // 
+            // numTariffRepairman
+            // 
+            this.numTariffRepairman.Location = new System.Drawing.Point(4, 1347);
+            this.numTariffRepairman.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numTariffRepairman.Name = "numTariffRepairman";
+            this.numTariffRepairman.Size = new System.Drawing.Size(109, 21);
+            this.numTariffRepairman.TabIndex = 27;
+            this.numTariffRepairman.ValueChanged += new System.EventHandler(this.numTariffRepairman_ValueChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(236, 1372);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(119, 15);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Hodiny administrace";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(120, 1372);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 15);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Hodiny technik";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 1372);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Hodiny opravář";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(236, 1329);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(105, 15);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Tarif administrace";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(120, 1329);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Tarif technik";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 1329);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Tarif opravář";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 1414);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Cena dílů";
+            // 
+            // cmbContacts
+            // 
+            this.cmbContacts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbContacts.FormattingEnabled = true;
+            this.cmbContacts.Location = new System.Drawing.Point(47, 1193);
+            this.cmbContacts.Name = "cmbContacts";
+            this.cmbContacts.Size = new System.Drawing.Size(303, 23);
+            this.cmbContacts.TabIndex = 28;
+            this.cmbContacts.SelectedIndexChanged += new System.EventHandler(this.cmbContacts_SelectedIndexChanged);
+            // 
+            // txtContactLastName
+            // 
+            this.txtContactLastName.Location = new System.Drawing.Point(4, 1222);
+            this.txtContactLastName.Name = "txtContactLastName";
+            this.txtContactLastName.ReadOnly = true;
+            this.txtContactLastName.Size = new System.Drawing.Size(346, 21);
+            this.txtContactLastName.TabIndex = 29;
+            // 
+            // txtContactFirstName
+            // 
+            this.txtContactFirstName.Location = new System.Drawing.Point(4, 1249);
+            this.txtContactFirstName.Name = "txtContactFirstName";
+            this.txtContactFirstName.ReadOnly = true;
+            this.txtContactFirstName.Size = new System.Drawing.Size(346, 21);
+            this.txtContactFirstName.TabIndex = 29;
+            // 
+            // txtContactEmail
+            // 
+            this.txtContactEmail.Location = new System.Drawing.Point(4, 1276);
+            this.txtContactEmail.Name = "txtContactEmail";
+            this.txtContactEmail.ReadOnly = true;
+            this.txtContactEmail.Size = new System.Drawing.Size(346, 21);
+            this.txtContactEmail.TabIndex = 29;
+            // 
+            // txtContactId
+            // 
+            this.txtContactId.Location = new System.Drawing.Point(4, 1193);
+            this.txtContactId.Name = "txtContactId";
+            this.txtContactId.ReadOnly = true;
+            this.txtContactId.Size = new System.Drawing.Size(37, 21);
+            this.txtContactId.TabIndex = 29;
             // 
             // AddData
             // 
@@ -831,13 +873,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelControls.ResumeLayout(false);
             this.panelControls.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numTariffRepairman)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHoursRepairman)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTariffTechnician)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numHoursTechnician)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTariffAdministration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHoursAdministration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursTechnician)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCostOfComponents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHoursRepairman)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffAdministration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffTechnician)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTariffRepairman)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -877,7 +919,6 @@
         private System.Windows.Forms.TextBox txtCostOfRepair;
         private System.Windows.Forms.ComboBox cmbCW;
         private System.Windows.Forms.Label lblContact;
-        private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ToolTip toolTip1;
@@ -907,5 +948,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cmbContacts;
+        private System.Windows.Forms.TextBox txtContactEmail;
+        private System.Windows.Forms.TextBox txtContactFirstName;
+        private System.Windows.Forms.TextBox txtContactLastName;
+        private System.Windows.Forms.TextBox txtContactId;
     }
 }
