@@ -21,7 +21,7 @@ namespace Reklamace_Kion
             InitializeComponent();
         }
         static SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
-        SqlDataAdapter da3 = new SqlDataAdapter("SELECT Id, Company FROM Contacts", conn);
+        SqlDataAdapter da3 = new SqlDataAdapter("SELECT Id, Company, Last_Name, First_Name, Email, (Company + ' | ' + Last_Name + ' ' + First_Name) AS Comp FROM Contacts", conn);
         DataTable dt3 = new DataTable();
 
         private void AddData_Load(object sender, EventArgs e)
@@ -44,11 +44,12 @@ namespace Reklamace_Kion
 
                 
                 da3.Fill(dt3);
+                dt3.DefaultView.Sort = "Company";
                 cmbContacts.DataSource = dt3;
-                cmbContacts.DisplayMember = "Company";
-                cmbContacts.ValueMember = "Company";
-                txtContactId.Text = dt3.Rows[0]["Id"].ToString();
-                
+                cmbContacts.DisplayMember = "Comp";
+                cmbContacts.ValueMember = "Id";
+                cmbContacts.SelectedIndex = -1;
+                txtContactId.Text = "";
             }
         }
 
@@ -268,19 +269,22 @@ namespace Reklamace_Kion
         {
             try
             {
-                txtContactId.Text = dt3.Rows[cmbContacts.SelectedIndex]["Id"].ToString();
-                SqlConnection sqlConnection = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
-                sqlConnection.Open();
-                string sqlData = "SELECT Last_Name, First_Name, Email from Contacts where Id like '" + dt3.Rows[cmbContacts.SelectedIndex]["Id"].ToString() + "'";
-                SqlCommand cmd = new SqlCommand(sqlData, sqlConnection);
-                SqlDataReader DR1 = cmd.ExecuteReader();
-                if (DR1.Read())
+                if (cmbContacts.SelectedIndex != -1)
                 {
-                    txtContactLastName.Text = DR1.GetValue(0).ToString();
-                    txtContactFirstName.Text = DR1.GetValue(1).ToString();
-                    txtContactEmail.Text = DR1.GetValue(2).ToString();
+                    txtContactId.Text = cmbContacts.SelectedValue.ToString();
+                    SqlConnection sqlConnection = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
+                    sqlConnection.Open();
+                    string sqlData = "SELECT Last_Name, First_Name, Email from Contacts where Id like '" + cmbContacts.SelectedValue.ToString() + "'";
+                    SqlCommand cmd = new SqlCommand(sqlData, sqlConnection);
+                    SqlDataReader DR1 = cmd.ExecuteReader();
+                    if (DR1.Read())
+                    {
+                        txtContactLastName.Text = DR1.GetValue(0).ToString();
+                        txtContactFirstName.Text = DR1.GetValue(1).ToString();
+                        txtContactEmail.Text = DR1.GetValue(2).ToString();
+                    }
+                    sqlConnection.Close();
                 }
-                sqlConnection.Close();
             }
             catch (Exception ex)
             {
