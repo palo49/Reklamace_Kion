@@ -29,32 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
-            this.btnReloadData = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblLoadingData = new System.Windows.Forms.Label();
             this.dataGrid1 = new ADGV.AdvancedDataGridView();
             this.CellContext = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridOpravy = new ADGV.AdvancedDataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAddData = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnDelData = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.cellContextRepairs = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.změnitHesloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,21 +67,35 @@
             this.RefTime = new System.Windows.Forms.Timer(this.components);
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnResetFiltr = new System.Windows.Forms.Button();
+            this.opravyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.přidatSoučástToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.upravitSoučástiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontaktyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.přidatKontaktToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.cellContextRepairs = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnResetFiltr = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuOpenDataRepairs = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnDelData = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnAddData = new System.Windows.Forms.Button();
+            this.btnReloadData = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.upravitKontaktyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.CellContext.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOpravy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cellContextRepairs.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.cellContextRepairs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -123,26 +129,6 @@
             this.lblLevel.TabIndex = 0;
             this.lblLevel.Text = "Level";
             this.lblLevel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnReloadData
-            // 
-            this.btnReloadData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnReloadData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReloadData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnReloadData.FlatAppearance.BorderSize = 0;
-            this.btnReloadData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnReloadData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReloadData.Image = ((System.Drawing.Image)(resources.GetObject("btnReloadData.Image")));
-            this.btnReloadData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReloadData.Location = new System.Drawing.Point(12, 113);
-            this.btnReloadData.Name = "btnReloadData";
-            this.btnReloadData.Size = new System.Drawing.Size(148, 39);
-            this.btnReloadData.TabIndex = 3;
-            this.btnReloadData.Text = "Obnovit";
-            this.btnReloadData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnReloadData, "Znovu načte data ze serveru.");
-            this.btnReloadData.UseVisualStyleBackColor = false;
-            this.btnReloadData.Click += new System.EventHandler(this.btnReloadData_Click);
             // 
             // tabControl1
             // 
@@ -229,7 +215,7 @@
             this.dataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid1.RowHeadersVisible = false;
             this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid1.Size = new System.Drawing.Size(822, 515);
+            this.dataGrid1.Size = new System.Drawing.Size(822, 503);
             this.dataGrid1.TabIndex = 0;
             this.dataGrid1.TimeFilter = false;
             this.dataGrid1.SortStringChanged += new System.EventHandler(this.dataGrid1_SortStringChanged);
@@ -245,22 +231,6 @@
             this.toolStripShowFolder});
             this.CellContext.Name = "contextMenuStrip1";
             this.CellContext.Size = new System.Drawing.Size(165, 48);
-            // 
-            // přidatKOpravámToolStripMenuItem
-            // 
-            this.přidatKOpravámToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("přidatKOpravámToolStripMenuItem.Image")));
-            this.přidatKOpravámToolStripMenuItem.Name = "přidatKOpravámToolStripMenuItem";
-            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.přidatKOpravámToolStripMenuItem.Text = "Přidat k opravám";
-            this.přidatKOpravámToolStripMenuItem.Click += new System.EventHandler(this.přidatKOpravámToolStripMenuItem_Click);
-            // 
-            // toolStripShowFolder
-            // 
-            this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
-            this.toolStripShowFolder.Name = "toolStripShowFolder";
-            this.toolStripShowFolder.Size = new System.Drawing.Size(164, 22);
-            this.toolStripShowFolder.Text = "Otevřit složku";
-            this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
             // 
             // tabPage2
             // 
@@ -314,121 +284,13 @@
             this.dataGridOpravy.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridOpravy_CellValueChanged);
             this.dataGridOpravy.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridOpravy_MouseDown);
             // 
-            // pictureBox1
+            // cellContextRepairs
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(39, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnAddData
-            // 
-            this.btnAddData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnAddData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnAddData.FlatAppearance.BorderSize = 0;
-            this.btnAddData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnAddData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddData.Image = ((System.Drawing.Image)(resources.GetObject("btnAddData.Image")));
-            this.btnAddData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddData.Location = new System.Drawing.Point(12, 200);
-            this.btnAddData.Name = "btnAddData";
-            this.btnAddData.Size = new System.Drawing.Size(148, 39);
-            this.btnAddData.TabIndex = 3;
-            this.btnAddData.Text = "Přidat";
-            this.btnAddData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnAddData, "Přídá data na server.");
-            this.btnAddData.UseVisualStyleBackColor = false;
-            this.btnAddData.Click += new System.EventHandler(this.btnAddData_Click);
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsers.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
-            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(12, 548);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(148, 39);
-            this.btnUsers.TabIndex = 3;
-            this.btnUsers.Text = "Uživatelé";
-            this.btnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsers.UseVisualStyleBackColor = false;
-            this.btnUsers.Visible = false;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(28)))), ((int)(((byte)(31)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(12, 593);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(148, 39);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Konec";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnExit, "Ukonči aplikaci.");
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnDelData
-            // 
-            this.btnDelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnDelData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnDelData.FlatAppearance.BorderSize = 0;
-            this.btnDelData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnDelData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelData.Image = ((System.Drawing.Image)(resources.GetObject("btnDelData.Image")));
-            this.btnDelData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelData.Location = new System.Drawing.Point(12, 245);
-            this.btnDelData.Name = "btnDelData";
-            this.btnDelData.Size = new System.Drawing.Size(148, 39);
-            this.btnDelData.TabIndex = 3;
-            this.btnDelData.Text = "Smazat";
-            this.btnDelData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnDelData, "Smaže vybrané data ze serveru.");
-            this.btnDelData.UseVisualStyleBackColor = false;
-            this.btnDelData.Click += new System.EventHandler(this.btnDelData_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(12, 158);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(148, 36);
-            this.btnExport.TabIndex = 6;
-            this.btnExport.Text = "Export";
-            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnExport, "Exportuje právě aktivní tabulku do excelu.");
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.cellContextRepairs.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StripMenuOpenDataRepairs,
+            this.stripMenuOpenFolderRepairs});
+            this.cellContextRepairs.Name = "contextMenuStrip1";
+            this.cellContextRepairs.Size = new System.Drawing.Size(147, 48);
             // 
             // menuStrip1
             // 
@@ -448,7 +310,9 @@
             this.SettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.změnitHesloToolStripMenuItem,
             this.komponentyToolStripMenuItem,
-            this.defektyToolStripMenuItem});
+            this.defektyToolStripMenuItem,
+            this.opravyToolStripMenuItem,
+            this.kontaktyToolStripMenuItem});
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
             this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.SettingsToolStripMenuItem.Text = "Nastavení";
@@ -456,7 +320,7 @@
             // změnitHesloToolStripMenuItem
             // 
             this.změnitHesloToolStripMenuItem.Name = "změnitHesloToolStripMenuItem";
-            this.změnitHesloToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.změnitHesloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.změnitHesloToolStripMenuItem.Text = "Změnit heslo";
             this.změnitHesloToolStripMenuItem.Click += new System.EventHandler(this.změnitHesloToolStripMenuItem_Click);
             // 
@@ -466,7 +330,7 @@
             this.přidatKomponentuToolStripMenuItem,
             this.upravitKomponentyToolStripMenuItem});
             this.komponentyToolStripMenuItem.Name = "komponentyToolStripMenuItem";
-            this.komponentyToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.komponentyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.komponentyToolStripMenuItem.Text = "Komponenty";
             // 
             // přidatKomponentuToolStripMenuItem
@@ -489,7 +353,7 @@
             this.přidatDefektToolStripMenuItem,
             this.upravitDefektyToolStripMenuItem});
             this.defektyToolStripMenuItem.Name = "defektyToolStripMenuItem";
-            this.defektyToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.defektyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.defektyToolStripMenuItem.Text = "Defekty";
             // 
             // přidatDefektToolStripMenuItem
@@ -602,24 +466,44 @@
             this.txtSearch.TabIndex = 13;
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
-            // btnResetFiltr
+            // opravyToolStripMenuItem
             // 
-            this.btnResetFiltr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResetFiltr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnResetFiltr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResetFiltr.FlatAppearance.BorderSize = 0;
-            this.btnResetFiltr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnResetFiltr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetFiltr.Image = ((System.Drawing.Image)(resources.GetObject("btnResetFiltr.Image")));
-            this.btnResetFiltr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResetFiltr.Location = new System.Drawing.Point(896, 43);
-            this.btnResetFiltr.Name = "btnResetFiltr";
-            this.btnResetFiltr.Size = new System.Drawing.Size(94, 39);
-            this.btnResetFiltr.TabIndex = 14;
-            this.btnResetFiltr.Text = "Reset";
-            this.btnResetFiltr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnResetFiltr.UseVisualStyleBackColor = false;
-            this.btnResetFiltr.Click += new System.EventHandler(this.btnResetFiltr_Click);
+            this.opravyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.přidatSoučástToolStripMenuItem,
+            this.upravitSoučástiToolStripMenuItem});
+            this.opravyToolStripMenuItem.Name = "opravyToolStripMenuItem";
+            this.opravyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opravyToolStripMenuItem.Text = "Opravy";
+            // 
+            // přidatSoučástToolStripMenuItem
+            // 
+            this.přidatSoučástToolStripMenuItem.Name = "přidatSoučástToolStripMenuItem";
+            this.přidatSoučástToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.přidatSoučástToolStripMenuItem.Text = "Přidat součást";
+            this.přidatSoučástToolStripMenuItem.Click += new System.EventHandler(this.přidatSoučástToolStripMenuItem_Click);
+            // 
+            // upravitSoučástiToolStripMenuItem
+            // 
+            this.upravitSoučástiToolStripMenuItem.Name = "upravitSoučástiToolStripMenuItem";
+            this.upravitSoučástiToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.upravitSoučástiToolStripMenuItem.Text = "Upravit součásti";
+            this.upravitSoučástiToolStripMenuItem.Click += new System.EventHandler(this.upravitSoučástiToolStripMenuItem_Click);
+            // 
+            // kontaktyToolStripMenuItem
+            // 
+            this.kontaktyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.přidatKontaktToolStripMenuItem,
+            this.upravitKontaktyToolStripMenuItem});
+            this.kontaktyToolStripMenuItem.Name = "kontaktyToolStripMenuItem";
+            this.kontaktyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kontaktyToolStripMenuItem.Text = "Kontakty";
+            // 
+            // přidatKontaktToolStripMenuItem
+            // 
+            this.přidatKontaktToolStripMenuItem.Name = "přidatKontaktToolStripMenuItem";
+            this.přidatKontaktToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.přidatKontaktToolStripMenuItem.Text = "Přidat kontakt";
+            this.přidatKontaktToolStripMenuItem.Click += new System.EventHandler(this.přidatKontaktToolStripMenuItem_Click);
             // 
             // btnSearch
             // 
@@ -640,29 +524,199 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // cellContextRepairs
+            // btnResetFiltr
             // 
-            this.cellContextRepairs.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StripMenuOpenDataRepairs,
-            this.stripMenuOpenFolderRepairs});
-            this.cellContextRepairs.Name = "contextMenuStrip1";
-            this.cellContextRepairs.Size = new System.Drawing.Size(181, 70);
+            this.btnResetFiltr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetFiltr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnResetFiltr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetFiltr.FlatAppearance.BorderSize = 0;
+            this.btnResetFiltr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnResetFiltr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetFiltr.Image = ((System.Drawing.Image)(resources.GetObject("btnResetFiltr.Image")));
+            this.btnResetFiltr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResetFiltr.Location = new System.Drawing.Point(896, 43);
+            this.btnResetFiltr.Name = "btnResetFiltr";
+            this.btnResetFiltr.Size = new System.Drawing.Size(94, 39);
+            this.btnResetFiltr.TabIndex = 14;
+            this.btnResetFiltr.Text = "Reset";
+            this.btnResetFiltr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnResetFiltr.UseVisualStyleBackColor = false;
+            this.btnResetFiltr.Click += new System.EventHandler(this.btnResetFiltr_Click);
             // 
-            // stripMenuOpenFolderRepairs
+            // btnExport
             // 
-            this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
-            this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
-            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(180, 22);
-            this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
-            this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExport.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(12, 158);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(148, 36);
+            this.btnExport.TabIndex = 6;
+            this.btnExport.Text = "Export";
+            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnExport, "Exportuje právě aktivní tabulku do excelu.");
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // přidatKOpravámToolStripMenuItem
+            // 
+            this.přidatKOpravámToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("přidatKOpravámToolStripMenuItem.Image")));
+            this.přidatKOpravámToolStripMenuItem.Name = "přidatKOpravámToolStripMenuItem";
+            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.přidatKOpravámToolStripMenuItem.Text = "Přidat k opravám";
+            this.přidatKOpravámToolStripMenuItem.Click += new System.EventHandler(this.přidatKOpravámToolStripMenuItem_Click);
+            // 
+            // toolStripShowFolder
+            // 
+            this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
+            this.toolStripShowFolder.Name = "toolStripShowFolder";
+            this.toolStripShowFolder.Size = new System.Drawing.Size(164, 22);
+            this.toolStripShowFolder.Text = "Otevřit složku";
+            this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
             // 
             // StripMenuOpenDataRepairs
             // 
             this.StripMenuOpenDataRepairs.Image = ((System.Drawing.Image)(resources.GetObject("StripMenuOpenDataRepairs.Image")));
             this.StripMenuOpenDataRepairs.Name = "StripMenuOpenDataRepairs";
-            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(146, 22);
             this.StripMenuOpenDataRepairs.Text = "Data opravy";
             this.StripMenuOpenDataRepairs.Click += new System.EventHandler(this.StripMenuOpenDataRepairs_Click);
+            // 
+            // stripMenuOpenFolderRepairs
+            // 
+            this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
+            this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
+            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(146, 22);
+            this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
+            this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(28)))), ((int)(((byte)(31)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(12, 593);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(148, 39);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Konec";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnExit, "Ukonči aplikaci.");
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnDelData
+            // 
+            this.btnDelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnDelData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnDelData.FlatAppearance.BorderSize = 0;
+            this.btnDelData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnDelData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelData.Image = ((System.Drawing.Image)(resources.GetObject("btnDelData.Image")));
+            this.btnDelData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelData.Location = new System.Drawing.Point(12, 245);
+            this.btnDelData.Name = "btnDelData";
+            this.btnDelData.Size = new System.Drawing.Size(148, 39);
+            this.btnDelData.TabIndex = 3;
+            this.btnDelData.Text = "Smazat";
+            this.btnDelData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnDelData, "Smaže vybrané data ze serveru.");
+            this.btnDelData.UseVisualStyleBackColor = false;
+            this.btnDelData.Click += new System.EventHandler(this.btnDelData_Click);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsers.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(12, 548);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(148, 39);
+            this.btnUsers.TabIndex = 3;
+            this.btnUsers.Text = "Uživatelé";
+            this.btnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsers.UseVisualStyleBackColor = false;
+            this.btnUsers.Visible = false;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
+            // btnAddData
+            // 
+            this.btnAddData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnAddData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnAddData.FlatAppearance.BorderSize = 0;
+            this.btnAddData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnAddData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddData.Image = ((System.Drawing.Image)(resources.GetObject("btnAddData.Image")));
+            this.btnAddData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddData.Location = new System.Drawing.Point(12, 200);
+            this.btnAddData.Name = "btnAddData";
+            this.btnAddData.Size = new System.Drawing.Size(148, 39);
+            this.btnAddData.TabIndex = 3;
+            this.btnAddData.Text = "Přidat";
+            this.btnAddData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnAddData, "Přídá data na server.");
+            this.btnAddData.UseVisualStyleBackColor = false;
+            this.btnAddData.Click += new System.EventHandler(this.btnAddData_Click);
+            // 
+            // btnReloadData
+            // 
+            this.btnReloadData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnReloadData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReloadData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnReloadData.FlatAppearance.BorderSize = 0;
+            this.btnReloadData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnReloadData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReloadData.Image = ((System.Drawing.Image)(resources.GetObject("btnReloadData.Image")));
+            this.btnReloadData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReloadData.Location = new System.Drawing.Point(12, 113);
+            this.btnReloadData.Name = "btnReloadData";
+            this.btnReloadData.Size = new System.Drawing.Size(148, 39);
+            this.btnReloadData.TabIndex = 3;
+            this.btnReloadData.Text = "Obnovit";
+            this.btnReloadData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnReloadData, "Znovu načte data ze serveru.");
+            this.btnReloadData.UseVisualStyleBackColor = false;
+            this.btnReloadData.Click += new System.EventHandler(this.btnReloadData_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(39, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // upravitKontaktyToolStripMenuItem
+            // 
+            this.upravitKontaktyToolStripMenuItem.Name = "upravitKontaktyToolStripMenuItem";
+            this.upravitKontaktyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.upravitKontaktyToolStripMenuItem.Text = "Upravit kontakty";
+            this.upravitKontaktyToolStripMenuItem.Click += new System.EventHandler(this.upravitKontaktyToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -703,12 +757,12 @@
             this.CellContext.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOpravy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.cellContextRepairs.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.cellContextRepairs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -760,5 +814,11 @@
         private System.Windows.Forms.ContextMenuStrip cellContextRepairs;
         private System.Windows.Forms.ToolStripMenuItem stripMenuOpenFolderRepairs;
         private System.Windows.Forms.ToolStripMenuItem StripMenuOpenDataRepairs;
+        private System.Windows.Forms.ToolStripMenuItem opravyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem přidatSoučástToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem upravitSoučástiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kontaktyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem přidatKontaktToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem upravitKontaktyToolStripMenuItem;
     }
 }

@@ -101,6 +101,30 @@
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contacts\AddContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\AddContact.Designer.cs">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\ListContacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\ListContacts.Designer.cs">
+      <DependentUpon>ListContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opravy\AddComponentRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opravy\AddComponentRepair.Designer.cs">
+      <DependentUpon>AddComponentRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opravy\ListComponentsRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opravy\ListComponentsRepair.Designer.cs">
+      <DependentUpon>ListComponentsRepair.cs</DependentUpon>
+    </Compile>
     <Compile Include="RepairAnalyze\AnalysisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +205,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\AddContact.resx">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\ListContacts.resx">
+      <DependentUpon>ListContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opravy\AddComponentRepair.resx">
+      <DependentUpon>AddComponentRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opravy\ListComponentsRepair.resx">
+      <DependentUpon>ListComponentsRepair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairAnalyze\AnalysisForm.resx">
       <DependentUpon>AnalysisForm.cs</DependentUpon>

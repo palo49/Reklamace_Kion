@@ -855,5 +855,29 @@ namespace Reklamace_Kion
             repForm.Show();
             Cursor.Current = Cursors.Default;
         }
+
+        private void přidatSoučástToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Opravy.AddComponentRepair addComponentRepair = new Opravy.AddComponentRepair();
+            addComponentRepair.Show();
+        }
+
+        private void upravitSoučástiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Opravy.ListComponentsRepair listComponentsRepair = new Opravy.ListComponentsRepair();
+            listComponentsRepair.Show();
+        }
+
+        private void přidatKontaktToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Contacts.AddContact addContact = new Contacts.AddContact();
+            addContact.Show();
+        }
+
+        private void upravitKontaktyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Contacts.ListContacts listContacts = new Contacts.ListContacts();
+            listContacts.Show();
+        }
     }
 }
