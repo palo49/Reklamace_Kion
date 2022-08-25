@@ -83,7 +83,7 @@ namespace Reklamace_Kion
             string ContactLastName = txtContactLastName.Text;
             string ContactFirstName = txtContactFirstName.Text;
             string ContactEmail = txtContactEmail.Text;
-            string Contact = ContactCompany + ";" + ContactLastName + ";" + ContactFirstName + ";" + ContactEmail + ";";
+            string Contact = ContactCompany + ";" + ContactEmail + ";";
             float Tariff_Repairman = float.Parse(numTariffRepairman.Text);
             float Hours_Repairman = float.Parse(numHoursRepairman.Text);
             float Tariff_Technician = float.Parse(numTariffTechnician.Text);

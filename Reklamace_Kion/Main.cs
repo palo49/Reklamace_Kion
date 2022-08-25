@@ -592,7 +592,19 @@ namespace Reklamace_Kion
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            dataGrid1.DataSource = bindMainData;    
+            dataGrid1.DataSource = bindMainData;
+            dataGrid1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            for (int i = 0; i <= dataGrid1.Columns.Count - 1; i++)
+            {
+                // Store Auto Sized Widths:
+                int colw = dataGrid1.Columns[i].Width;
+
+                // Remove AutoSizing:
+                dataGrid1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                // Set Width to calculated AutoSize value:
+                dataGrid1.Columns[i].Width = colw;
+            }
             lblLoadingData.Visible = false;
         }
 
