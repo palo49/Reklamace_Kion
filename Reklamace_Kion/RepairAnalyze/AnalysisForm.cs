@@ -77,7 +77,11 @@ namespace Reklamace_Kion.RepairAnalyze
                                         Btxt51, Btxt52, Btxt53, Btxt54, Btxt55, Btxt56, Btxt57, Btxt58, Btxt59, Btxt60,
                                         Btxt61, Btxt62, Btxt63, Btxt64, Btxt65, Btxt66, Btxt67, Btxt68, Btxt69, Btxt70,
                                         Btxt71, Btxt72, Btxt73, Btxt74, Btxt75, Btxt76, Btxt77, Btxt78, Btxt79, Btxt80,
-                                        Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87
+                                        Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87,
+                                        BtxtV1, BtxtV2, BtxtV3, BtxtV4, BtxtV5, BtxtV6, BtxtV7, BtxtV8, BtxtV9, BtxtV10,
+                                        BtxtV11, BtxtV12, BtxtV13, BtxtV14, BtxtV15, BtxtV16, BtxtV17, BtxtV18, BtxtV19, BtxtV20,
+                                        BtxtV21, BtxtV22, BtxtV23, BtxtV24, BtxtV25, BtxtV26, BtxtV27, BtxtV28, BtxtV29, BtxtV30,
+                                        BtxtV31, BtxtV32, BtxtV33, BtxtV34, BtxtV35, BtxtVoltageSum1
                                     };
 
             TextBox[] textBoxesB2 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
@@ -95,7 +99,8 @@ namespace Reklamace_Kion.RepairAnalyze
                                         Btxt121, Btxt122, Btxt123, Btxt124, Btxt125, Btxt126, Btxt127, Btxt128, Btxt129, Btxt130,
                                         Btxt131, Btxt132, Btxt133, Btxt134, Btxt135, Btxt136, Btxt137, Btxt138, Btxt139, Btxt140,
                                         Btxt141, Btxt142, Btxt143, Btxt144, Btxt145, Btxt146, Btxt147, Btxt148, Btxt149, Btxt150,
-                                        Btxt151, Btxt152, Btxt153, Btxt154, Btxt155, Btxt156, Btxt157, Btxt158
+                                        Btxt151, Btxt152, Btxt153, Btxt154, Btxt155, Btxt156, Btxt157, Btxt158,
+                                        BtxtV1, BtxtV2, BtxtV3, BtxtV4, BtxtV5, BtxtV6, BtxtV7, BtxtV8, BtxtV9, BtxtV10, BtxtV11, BtxtV12, BtxtV13, BtxtV14, BtxtV15, BtxtV16, BtxtV17, BtxtV18, BtxtV19, BtxtV20, BtxtV21, BtxtV22, BtxtV23, BtxtV24, BtxtV25, BtxtV26, BtxtV27, BtxtV28, BtxtV29, BtxtV30, BtxtV31, BtxtV32, BtxtV33, BtxtV34, BtxtV35, BtxtV36, BtxtV37, BtxtV38, BtxtV39, BtxtV40, BtxtV41, BtxtV42, BtxtV43, BtxtV44, BtxtV45, BtxtV46, BtxtV47, BtxtV48, BtxtV49, BtxtV50, BtxtV51, BtxtV52, BtxtV53, BtxtV54, BtxtV55, BtxtV56, BtxtV57, BtxtV58, BtxtV59, BtxtV60, BtxtV61, BtxtV62, BtxtV63, BtxtV64, BtxtV65, BtxtV66, BtxtV67, BtxtV68, BtxtV69, BtxtV70, BtxtVoltageSum1, BtxtVoltageSum2
                                     };
 
             lblCLM.Text = CLM;
@@ -159,8 +164,8 @@ namespace Reklamace_Kion.RepairAnalyze
                 lblModule1.Text = "MODULE-23-VL41M-SFP-7S5P (Bottom position) SN";
                 panelB.Controls.Add(btnAddComponent);
                 panelB.Controls.Add(btnDelComponent);
-                btnAddComponent.Location = new Point(btnAddComponent.Location.X, 600);
-                btnDelComponent.Location = new Point(btnDelComponent.Location.X, 600);
+                btnAddComponent.Location = new Point(btnAddComponent.Location.X, 700);
+                btnDelComponent.Location = new Point(btnDelComponent.Location.X, 700);
 
                 if (PNChar == "B2")
                 {
@@ -168,8 +173,8 @@ namespace Reklamace_Kion.RepairAnalyze
                     Btxt3.ReadOnly = false;
                     Btxt16.ReadOnly = false;
                     panelB2.Visible = true;
-                    btnAddComponent.Location = new Point(btnAddComponent.Location.X, 1000);
-                    btnDelComponent.Location = new Point(btnDelComponent.Location.X, 1000);
+                    btnAddComponent.Location = new Point(btnAddComponent.Location.X, 1200);
+                    btnDelComponent.Location = new Point(btnDelComponent.Location.X, 1200);
                     LoadData(PNChar, CLM, textBoxesB2);
                 }
                 else
@@ -506,9 +511,9 @@ namespace Reklamace_Kion.RepairAnalyze
                                 "B_Cell_12_Voltage","B_Cell_13_Voltage","B_Cell_14_Voltage","B_Total_Voltage","B_Information"
                             };
 
-        string[] namesB1 = { "Rigid_Connection_P_1", "Rigid_Connection_P_2A", "Rigid_Connection_P_2B", "Contactor_1", "Contactor_2", "Cover_1", "Cover_2", "Cover_3", "Cover_4", "Cable", "Fuse_1", "Fuse_2", "Conn_Fuse", "Rigid_Connection_N_1", "Rigid_Connection_N_2A", "Rigid_Connection_N_2B", "Module_SN", "PL_1", "PL_2", "PL_3", "PL_4", "PL_5", "PL_6", "PL_7", "PL_8", "PL_9", "PL_10", "PL_11", "PL_12", "PL_13", "PL_14", "PL_15", "PL_16", "PL_17", "PL_18", "PL_19", "PL_20", "PL_21", "PL_22", "PL_23", "PL_24", "PL_25", "PL_26", "PL_27", "PL_28", "PL_29", "PL_30", "PL_31", "PL_32", "PL_33", "PL_34", "PL_35", "PL_36", "PL_37", "PL_38", "PL_39", "PL_40", "PL_41", "PL_42", "PL_43", "PL_44", "PL_45", "PL_46", "PL_47", "PL_48", "PL_49", "PL_50", "PL_51", "PL_52", "PL_53", "PL_54", "PL_55", "PL_56", "PL_57", "PL_58", "PL_59", "PL_60", "PL_61", "PL_62", "PL_63", "PL_64", "PL_65", "PL_66", "PL_67", "PL_68", "PL_69", "PL_70" };
+        string[] namesB1 = { "Rigid_Connection_P_1", "Rigid_Connection_P_2A", "Rigid_Connection_P_2B", "Contactor_1", "Contactor_2", "Cover_1", "Cover_2", "Cover_3", "Cover_4", "Cable", "Fuse_1", "Fuse_2", "Conn_Fuse", "Rigid_Connection_N_1", "Rigid_Connection_N_2A", "Rigid_Connection_N_2B", "Module_SN", "PL_1", "PL_2", "PL_3", "PL_4", "PL_5", "PL_6", "PL_7", "PL_8", "PL_9", "PL_10", "PL_11", "PL_12", "PL_13", "PL_14", "PL_15", "PL_16", "PL_17", "PL_18", "PL_19", "PL_20", "PL_21", "PL_22", "PL_23", "PL_24", "PL_25", "PL_26", "PL_27", "PL_28", "PL_29", "PL_30", "PL_31", "PL_32", "PL_33", "PL_34", "PL_35", "PL_36", "PL_37", "PL_38", "PL_39", "PL_40", "PL_41", "PL_42", "PL_43", "PL_44", "PL_45", "PL_46", "PL_47", "PL_48", "PL_49", "PL_50", "PL_51", "PL_52", "PL_53", "PL_54", "PL_55", "PL_56", "PL_57", "PL_58", "PL_59", "PL_60", "PL_61", "PL_62", "PL_63", "PL_64", "PL_65", "PL_66", "PL_67", "PL_68", "PL_69", "PL_70", "Cell_1_Voltage", "Cell_2_Voltage", "Cell_3_Voltage", "Cell_4_Voltage", "Cell_5_Voltage", "Cell_6_Voltage", "Cell_7_Voltage", "Cell_8_Voltage", "Cell_9_Voltage", "Cell_10_Voltage", "Cell_11_Voltage", "Cell_12_Voltage", "Cell_13_Voltage", "Cell_14_Voltage", "Cell_15_Voltage", "Cell_16_Voltage", "Cell_17_Voltage", "Cell_18_Voltage", "Cell_19_Voltage", "Cell_20_Voltage", "Cell_21_Voltage", "Cell_22_Voltage", "Cell_23_Voltage", "Cell_24_Voltage", "Cell_25_Voltage", "Cell_26_Voltage", "Cell_27_Voltage", "Cell_28_Voltage", "Cell_29_Voltage", "Cell_30_Voltage", "Cell_31_Voltage", "Cell_32_Voltage", "Cell_33_Voltage", "Cell_34_Voltage", "Cell_35_Voltage", "Total_Voltage" };
 
-        string[] namesB2 = { "Rigid_Connection_P_1", "Rigid_Connection_P_2A", "Rigid_Connection_P_2B", "Contactor_1", "Contactor_2", "Cover_1", "Cover_2", "Cover_3", "Cover_4", "Cable", "Fuse_1", "Fuse_2", "Conn_Fuse", "Rigid_Connection_N_1", "Rigid_Connection_N_2A", "Rigid_Connection_N_2B", "Module_A_SN", "A_PL_1", "A_PL_2", "A_PL_3", "A_PL_4", "A_PL_5", "A_PL_6", "A_PL_7", "A_PL_8", "A_PL_9", "A_PL_10", "A_PL_11", "A_PL_12", "A_PL_13", "A_PL_14", "A_PL_15", "A_PL_16", "A_PL_17", "A_PL_18", "A_PL_19", "A_PL_20", "A_PL_21", "A_PL_22", "A_PL_23", "A_PL_24", "A_PL_25", "A_PL_26", "A_PL_27", "A_PL_28", "A_PL_29", "A_PL_30", "A_PL_31", "A_PL_32", "A_PL_33", "A_PL_34", "A_PL_35", "A_PL_36", "A_PL_37", "A_PL_38", "A_PL_39", "A_PL_40", "A_PL_41", "A_PL_42", "A_PL_43", "A_PL_44", "A_PL_45", "A_PL_46", "A_PL_47", "A_PL_48", "A_PL_49", "A_PL_50", "A_PL_51", "A_PL_52", "A_PL_53", "A_PL_54", "A_PL_55", "A_PL_56", "A_PL_57", "A_PL_58", "A_PL_59", "A_PL_60", "A_PL_61", "A_PL_62", "A_PL_63", "A_PL_64", "A_PL_65", "A_PL_66", "A_PL_67", "A_PL_68", "A_PL_69", "A_PL_70", "Module_B_SN", "B_PL_1", "B_PL_2", "B_PL_3", "B_PL_4", "B_PL_5", "B_PL_6", "B_PL_7", "B_PL_8", "B_PL_9", "B_PL_10", "B_PL_11", "B_PL_12", "B_PL_13", "B_PL_14", "B_PL_15", "B_PL_16", "B_PL_17", "B_PL_18", "B_PL_19", "B_PL_20", "B_PL_21", "B_PL_22", "B_PL_23", "B_PL_24", "B_PL_25", "B_PL_26", "B_PL_27", "B_PL_28", "B_PL_29", "B_PL_30", "B_PL_31", "B_PL_32", "B_PL_33", "B_PL_34", "B_PL_35", "B_PL_36", "B_PL_37", "B_PL_38", "B_PL_39", "B_PL_40", "B_PL_41", "B_PL_42", "B_PL_43", "B_PL_44", "B_PL_45", "B_PL_46", "B_PL_47", "B_PL_48", "B_PL_49", "B_PL_50", "B_PL_51", "B_PL_52", "B_PL_53", "B_PL_54", "B_PL_55", "B_PL_56", "B_PL_57", "B_PL_58", "B_PL_59", "B_PL_60", "B_PL_61", "B_PL_62", "B_PL_63", "B_PL_64", "B_PL_65", "B_PL_66", "B_PL_67", "B_PL_68", "B_PL_69", "B_PL_70" };
+        string[] namesB2 = { "Rigid_Connection_P_1", "Rigid_Connection_P_2A", "Rigid_Connection_P_2B", "Contactor_1", "Contactor_2", "Cover_1", "Cover_2", "Cover_3", "Cover_4", "Cable", "Fuse_1", "Fuse_2", "Conn_Fuse", "Rigid_Connection_N_1", "Rigid_Connection_N_2A", "Rigid_Connection_N_2B", "Module_A_SN", "A_PL_1", "A_PL_2", "A_PL_3", "A_PL_4", "A_PL_5", "A_PL_6", "A_PL_7", "A_PL_8", "A_PL_9", "A_PL_10", "A_PL_11", "A_PL_12", "A_PL_13", "A_PL_14", "A_PL_15", "A_PL_16", "A_PL_17", "A_PL_18", "A_PL_19", "A_PL_20", "A_PL_21", "A_PL_22", "A_PL_23", "A_PL_24", "A_PL_25", "A_PL_26", "A_PL_27", "A_PL_28", "A_PL_29", "A_PL_30", "A_PL_31", "A_PL_32", "A_PL_33", "A_PL_34", "A_PL_35", "A_PL_36", "A_PL_37", "A_PL_38", "A_PL_39", "A_PL_40", "A_PL_41", "A_PL_42", "A_PL_43", "A_PL_44", "A_PL_45", "A_PL_46", "A_PL_47", "A_PL_48", "A_PL_49", "A_PL_50", "A_PL_51", "A_PL_52", "A_PL_53", "A_PL_54", "A_PL_55", "A_PL_56", "A_PL_57", "A_PL_58", "A_PL_59", "A_PL_60", "A_PL_61", "A_PL_62", "A_PL_63", "A_PL_64", "A_PL_65", "A_PL_66", "A_PL_67", "A_PL_68", "A_PL_69", "A_PL_70", "Module_B_SN", "B_PL_1", "B_PL_2", "B_PL_3", "B_PL_4", "B_PL_5", "B_PL_6", "B_PL_7", "B_PL_8", "B_PL_9", "B_PL_10", "B_PL_11", "B_PL_12", "B_PL_13", "B_PL_14", "B_PL_15", "B_PL_16", "B_PL_17", "B_PL_18", "B_PL_19", "B_PL_20", "B_PL_21", "B_PL_22", "B_PL_23", "B_PL_24", "B_PL_25", "B_PL_26", "B_PL_27", "B_PL_28", "B_PL_29", "B_PL_30", "B_PL_31", "B_PL_32", "B_PL_33", "B_PL_34", "B_PL_35", "B_PL_36", "B_PL_37", "B_PL_38", "B_PL_39", "B_PL_40", "B_PL_41", "B_PL_42", "B_PL_43", "B_PL_44", "B_PL_45", "B_PL_46", "B_PL_47", "B_PL_48", "B_PL_49", "B_PL_50", "B_PL_51", "B_PL_52", "B_PL_53", "B_PL_54", "B_PL_55", "B_PL_56", "B_PL_57", "B_PL_58", "B_PL_59", "B_PL_60", "B_PL_61", "B_PL_62", "B_PL_63", "B_PL_64", "B_PL_65", "B_PL_66", "B_PL_67", "B_PL_68", "B_PL_69", "B_PL_70", "Cell_1_Voltage", "Cell_2_Voltage", "Cell_3_Voltage", "Cell_4_Voltage", "Cell_5_Voltage", "Cell_6_Voltage", "Cell_7_Voltage", "Cell_8_Voltage", "Cell_9_Voltage", "Cell_10_Voltage", "Cell_11_Voltage", "Cell_12_Voltage", "Cell_13_Voltage", "Cell_14_Voltage", "Cell_15_Voltage", "Cell_16_Voltage", "Cell_17_Voltage", "Cell_18_Voltage", "Cell_19_Voltage", "Cell_20_Voltage", "Cell_21_Voltage", "Cell_22_Voltage", "Cell_23_Voltage", "Cell_24_Voltage", "Cell_25_Voltage", "Cell_26_Voltage", "Cell_27_Voltage", "Cell_28_Voltage", "Cell_29_Voltage", "Cell_30_Voltage", "Cell_31_Voltage", "Cell_32_Voltage", "Cell_33_Voltage", "Cell_34_Voltage", "Cell_35_Voltage", "Cell_36_Voltage", "Cell_37_Voltage", "Cell_38_Voltage", "Cell_39_Voltage", "Cell_40_Voltage", "Cell_41_Voltage", "Cell_42_Voltage", "Cell_43_Voltage", "Cell_44_Voltage", "Cell_45_Voltage", "Cell_46_Voltage", "Cell_47_Voltage", "Cell_48_Voltage", "Cell_49_Voltage", "Cell_50_Voltage", "Cell_51_Voltage", "Cell_52_Voltage", "Cell_53_Voltage", "Cell_54_Voltage", "Cell_55_Voltage", "Cell_56_Voltage", "Cell_57_Voltage", "Cell_58_Voltage", "Cell_59_Voltage", "Cell_60_Voltage", "Cell_61_Voltage", "Cell_62_Voltage", "Cell_63_Voltage", "Cell_64_Voltage", "Cell_65_Voltage", "Cell_66_Voltage", "Cell_67_Voltage", "Cell_68_Voltage", "Cell_69_Voltage", "Cell_70_Voltage", "A_Total_Voltage", "B_Total_Voltage" };
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -544,7 +549,11 @@ namespace Reklamace_Kion.RepairAnalyze
                                         Btxt51, Btxt52, Btxt53, Btxt54, Btxt55, Btxt56, Btxt57, Btxt58, Btxt59, Btxt60,
                                         Btxt61, Btxt62, Btxt63, Btxt64, Btxt65, Btxt66, Btxt67, Btxt68, Btxt69, Btxt70,
                                         Btxt71, Btxt72, Btxt73, Btxt74, Btxt75, Btxt76, Btxt77, Btxt78, Btxt79, Btxt80,
-                                        Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87
+                                        Btxt81, Btxt82, Btxt83, Btxt84, Btxt85, Btxt86, Btxt87,
+                                        BtxtV1, BtxtV2, BtxtV3, BtxtV4, BtxtV5, BtxtV6, BtxtV7, BtxtV8, BtxtV9, BtxtV10,
+                                        BtxtV11, BtxtV12, BtxtV13, BtxtV14, BtxtV15, BtxtV16, BtxtV17, BtxtV18, BtxtV19, BtxtV20,
+                                        BtxtV21, BtxtV22, BtxtV23, BtxtV24, BtxtV25, BtxtV26, BtxtV27, BtxtV28, BtxtV29, BtxtV30,
+                                        BtxtV31, BtxtV32, BtxtV33, BtxtV34, BtxtV35, BtxtVoltageSum1
                                     };
 
             TextBox[] textBoxesB2 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
@@ -562,7 +571,8 @@ namespace Reklamace_Kion.RepairAnalyze
                                         Btxt121, Btxt122, Btxt123, Btxt124, Btxt125, Btxt126, Btxt127, Btxt128, Btxt129, Btxt130,
                                         Btxt131, Btxt132, Btxt133, Btxt134, Btxt135, Btxt136, Btxt137, Btxt138, Btxt139, Btxt140,
                                         Btxt141, Btxt142, Btxt143, Btxt144, Btxt145, Btxt146, Btxt147, Btxt148, Btxt149, Btxt150,
-                                        Btxt151, Btxt152, Btxt153, Btxt154, Btxt155, Btxt156, Btxt157, Btxt158
+                                        Btxt151, Btxt152, Btxt153, Btxt154, Btxt155, Btxt156, Btxt157, Btxt158,
+                                        BtxtV1, BtxtV2, BtxtV3, BtxtV4, BtxtV5, BtxtV6, BtxtV7, BtxtV8, BtxtV9, BtxtV10, BtxtV11, BtxtV12, BtxtV13, BtxtV14, BtxtV15, BtxtV16, BtxtV17, BtxtV18, BtxtV19, BtxtV20, BtxtV21, BtxtV22, BtxtV23, BtxtV24, BtxtV25, BtxtV26, BtxtV27, BtxtV28, BtxtV29, BtxtV30, BtxtV31, BtxtV32, BtxtV33, BtxtV34, BtxtV35, BtxtV36, BtxtV37, BtxtV38, BtxtV39, BtxtV40, BtxtV41, BtxtV42, BtxtV43, BtxtV44, BtxtV45, BtxtV46, BtxtV47, BtxtV48, BtxtV49, BtxtV50, BtxtV51, BtxtV52, BtxtV53, BtxtV54, BtxtV55, BtxtV56, BtxtV57, BtxtV58, BtxtV59, BtxtV60, BtxtV61, BtxtV62, BtxtV63, BtxtV64, BtxtV65, BtxtV66, BtxtV67, BtxtV68, BtxtV69, BtxtV70, BtxtVoltageSum1, BtxtVoltageSum2
                                     };
 
             try
