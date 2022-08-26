@@ -394,40 +394,43 @@ namespace Reklamace_Kion.RepairAnalyze
         {
             try
             {
-                Panel p;
-                if (PNChar.Contains("B"))
+                if ((Level == "5") || (Level == "20") || (Level == "100"))
                 {
-                    p = panelB;
-                }
-                else
-                {
-                    p = panel1;
-                }
+                    Panel p;
+                    if (PNChar.Contains("B"))
+                    {
+                        p = panelB;
+                    }
+                    else
+                    {
+                        p = panel1;
+                    }
 
-                _i++;
-                ComboBox cmb = new ComboBox();
-                cmb.Name = "cmbComponent_" + _i;
-                cmb.Location = new Point(30, (btn.Location.Y) + _i * 40);
-                mysql.OpenConection();
-                cmb.DataSource = mysql.DataTable("SELECT Name FROM RepairComponents");
-                mysql.CloseConnection();
-                cmb.DisplayMember = "Name";
-                cmb.ValueMember = "Name";
-                cmb.DropDownStyle = ComboBoxStyle.DropDownList;
-                p.Controls.Add(cmb);
-                Label lbl = new Label();
-                lbl.Text = "Počet:";
-                lbl.Name = "lbl_" + _i;
-                lbl.Location = new Point(160, cmb.Location.Y + 3);
-                lbl.Width = 55;
-                p.Controls.Add(lbl);
-                TextBox txt = new TextBox();
-                txt.Name = "txtComponent_" + _i;
-                txt.Location = new Point(220, cmb.Location.Y + 2);
-                txt.Width = 50;
-                p.Controls.Add(txt);
-                txt.Text = count;
-                cmb.SelectedIndex = cmb.FindStringExact(value);
+                    _i++;
+                    ComboBox cmb = new ComboBox();
+                    cmb.Name = "cmbComponent_" + _i;
+                    cmb.Location = new Point(30, (btn.Location.Y) + _i * 40);
+                    mysql.OpenConection();
+                    cmb.DataSource = mysql.DataTable("SELECT Name FROM RepairComponents");
+                    mysql.CloseConnection();
+                    cmb.DisplayMember = "Name";
+                    cmb.ValueMember = "Name";
+                    cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+                    p.Controls.Add(cmb);
+                    Label lbl = new Label();
+                    lbl.Text = "Počet:";
+                    lbl.Name = "lbl_" + _i;
+                    lbl.Location = new Point(160, cmb.Location.Y + 3);
+                    lbl.Width = 55;
+                    p.Controls.Add(lbl);
+                    TextBox txt = new TextBox();
+                    txt.Name = "txtComponent_" + _i;
+                    txt.Location = new Point(220, cmb.Location.Y + 2);
+                    txt.Width = 50;
+                    p.Controls.Add(txt);
+                    txt.Text = count;
+                    cmb.SelectedIndex = cmb.FindStringExact(value);
+                }
             }
             catch (Exception ex)
             {
@@ -444,34 +447,37 @@ namespace Reklamace_Kion.RepairAnalyze
         {
             try
             {
-                Panel p;
-                if (PNChar.Contains("B"))
+                if ((Level == "5") || (Level == "20") || (Level == "100"))
                 {
-                    p = panelB;
-                }
-                else
-                {
-                    p = panel1;
-                }
-
-                if (_i != 0)
-                {
-                    foreach (Control item in p.Controls.OfType<Control>().ToList())
+                    Panel p;
+                    if (PNChar.Contains("B"))
                     {
-                        if (item.Name == "cmbComponent_" + _i)
-                            p.Controls.Remove(item);
-                        if (item.Name == "lbl_" + _i)
-                            p.Controls.Remove(item);
-                        if (item.Name == "txtComponent_" + _i)
-                            p.Controls.Remove(item);
-                        if (item.Name == "delBtnComponent_" + _i)
-                            p.Controls.Remove(item);
+                        p = panelB;
                     }
-                    _i--;
-                }
-                else
-                {
-                    MessageBox.Show("Není zde žádná komponenta ke smazání.");
+                    else
+                    {
+                        p = panel1;
+                    }
+
+                    if (_i != 0)
+                    {
+                        foreach (Control item in p.Controls.OfType<Control>().ToList())
+                        {
+                            if (item.Name == "cmbComponent_" + _i)
+                                p.Controls.Remove(item);
+                            if (item.Name == "lbl_" + _i)
+                                p.Controls.Remove(item);
+                            if (item.Name == "txtComponent_" + _i)
+                                p.Controls.Remove(item);
+                            if (item.Name == "delBtnComponent_" + _i)
+                                p.Controls.Remove(item);
+                        }
+                        _i--;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Není zde žádná komponenta ke smazání.");
+                    }
                 }
             }
             catch (Exception ex)
@@ -517,9 +523,11 @@ namespace Reklamace_Kion.RepairAnalyze
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
+            if ((Level == "5") || (Level == "20") || (Level == "100"))
+            {
+                Cursor.Current = Cursors.WaitCursor;
 
-            TextBox[] textBoxesA1 = { txt1, txt2, txt3, txt4, txt5, txt6, txt9, txt10,
+                TextBox[] textBoxesA1 = { txt1, txt2, txt3, txt4, txt5, txt6, txt9, txt10,
                                         txt11, txt12, txt13, txt14, txt15, txt16, txt18, txt20,
                                         txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
                                         txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40,
@@ -528,7 +536,7 @@ namespace Reklamace_Kion.RepairAnalyze
                                         txt61, txt62, txt63, txt64
                                     };
 
-            TextBox[] textBoxesA2 = { txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10,
+                TextBox[] textBoxesA2 = { txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt10,
                                         txt11, txt12, txt13, txt14, txt15, txt16, txt17, txt18, txt19, txt20,
                                         txt21, txt22, txt23, txt24, txt25, txt26, txt27, txt28, txt29, txt30,
                                         txt31, txt32, txt33, txt34, txt35, txt36, txt37, txt38, txt39, txt40,
@@ -541,7 +549,7 @@ namespace Reklamace_Kion.RepairAnalyze
                                         txt101, txt102, txt103, txt104, txt105, txt106, txt107, txt108, txt109
                                     };
 
-            TextBox[] textBoxesB1 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
+                TextBox[] textBoxesB1 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
                                         Btxt11, Btxt12, Btxt13, Btxt14, Btxt15, Btxt16, Btxt17, Btxt18, Btxt19, Btxt20,
                                         Btxt21, Btxt22, Btxt23, Btxt24, Btxt25, Btxt26, Btxt27, Btxt28, Btxt29, Btxt30,
                                         Btxt31, Btxt32, Btxt33, Btxt34, Btxt35, Btxt36, Btxt37, Btxt38, Btxt39, Btxt40,
@@ -556,7 +564,7 @@ namespace Reklamace_Kion.RepairAnalyze
                                         BtxtV31, BtxtV32, BtxtV33, BtxtV34, BtxtV35, BtxtVoltageSum1
                                     };
 
-            TextBox[] textBoxesB2 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
+                TextBox[] textBoxesB2 = { Btxt1, Btxt2, Btxt3, Btxt4, Btxt5, Btxt6, Btxt7, Btxt8, Btxt9, Btxt10,
                                         Btxt11, Btxt12, Btxt13, Btxt14, Btxt15, Btxt16, Btxt17, Btxt18, Btxt19, Btxt20,
                                         Btxt21, Btxt22, Btxt23, Btxt24, Btxt25, Btxt26, Btxt27, Btxt28, Btxt29, Btxt30,
                                         Btxt31, Btxt32, Btxt33, Btxt34, Btxt35, Btxt36, Btxt37, Btxt38, Btxt39, Btxt40,
@@ -575,84 +583,85 @@ namespace Reklamace_Kion.RepairAnalyze
                                         BtxtV1, BtxtV2, BtxtV3, BtxtV4, BtxtV5, BtxtV6, BtxtV7, BtxtV8, BtxtV9, BtxtV10, BtxtV11, BtxtV12, BtxtV13, BtxtV14, BtxtV15, BtxtV16, BtxtV17, BtxtV18, BtxtV19, BtxtV20, BtxtV21, BtxtV22, BtxtV23, BtxtV24, BtxtV25, BtxtV26, BtxtV27, BtxtV28, BtxtV29, BtxtV30, BtxtV31, BtxtV32, BtxtV33, BtxtV34, BtxtV35, BtxtV36, BtxtV37, BtxtV38, BtxtV39, BtxtV40, BtxtV41, BtxtV42, BtxtV43, BtxtV44, BtxtV45, BtxtV46, BtxtV47, BtxtV48, BtxtV49, BtxtV50, BtxtV51, BtxtV52, BtxtV53, BtxtV54, BtxtV55, BtxtV56, BtxtV57, BtxtV58, BtxtV59, BtxtV60, BtxtV61, BtxtV62, BtxtV63, BtxtV64, BtxtV65, BtxtV66, BtxtV67, BtxtV68, BtxtV69, BtxtV70, BtxtVoltageSum1, BtxtVoltageSum2
                                     };
 
-            try
-            {
-                Panel p;
-                if (PNChar.Contains("B"))
+                try
                 {
-                    p = panelB;
-                }
-                else
-                {
-                    p = panel1;
-                }
-
-                string cmd = string.Empty;
-                string buildStr = string.Empty;
-
-                //MessageBox.Show(namesB1.Length.ToString() + " | " + textBoxesB1.Length.ToString());
-                mysql.OpenConection();
-                if (PNChar == "A1")
-                {
-                    for (int i = 0; i < namesA1.Length; i++)
+                    Panel p;
+                    if (PNChar.Contains("B"))
                     {
-                        string val = textBoxesA1[i].Text.Replace(',','.');
-                        cmd = "UPDATE " + PNChar + "_torques SET " + namesA1[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
-                        mysql.ExecuteQueries(cmd);
+                        p = panelB;
                     }
-                }
-
-                if (PNChar == "A2")
-                {
-                    for (int i = 0; i < namesA2.Length; i++)
+                    else
                     {
-                        string val = textBoxesA2[i].Text.Replace(',', '.');
-                        cmd = "UPDATE " + PNChar + "_torques SET " + namesA2[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
-                        mysql.ExecuteQueries(cmd);
+                        p = panel1;
                     }
-                }
 
-                if (PNChar == "B1")
-                {
-                    for (int i = 0; i < namesB1.Length; i++)
+                    string cmd = string.Empty;
+                    string buildStr = string.Empty;
+
+                    //MessageBox.Show(namesB1.Length.ToString() + " | " + textBoxesB1.Length.ToString());
+                    mysql.OpenConection();
+                    if (PNChar == "A1")
                     {
-                        string val = textBoxesB1[i].Text.Replace(',', '.');
-                        cmd = "UPDATE " + PNChar + "_torques SET " + namesB1[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
-                        mysql.ExecuteQueries(cmd);
+                        for (int i = 0; i < namesA1.Length; i++)
+                        {
+                            string val = textBoxesA1[i].Text.Replace(',', '.');
+                            cmd = "UPDATE " + PNChar + "_torques SET " + namesA1[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
+                            mysql.ExecuteQueries(cmd);
+                        }
                     }
-                }
 
-                if (PNChar == "B2")
-                {
-                    for (int i = 0; i < namesB2.Length; i++)
+                    if (PNChar == "A2")
                     {
-                        string val = textBoxesB2[i].Text.Replace(',', '.');
-                        cmd = "UPDATE " + PNChar + "_torques SET " + namesB2[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
-                        mysql.ExecuteQueries(cmd);
+                        for (int i = 0; i < namesA2.Length; i++)
+                        {
+                            string val = textBoxesA2[i].Text.Replace(',', '.');
+                            cmd = "UPDATE " + PNChar + "_torques SET " + namesA2[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
+                            mysql.ExecuteQueries(cmd);
+                        }
                     }
+
+                    if (PNChar == "B1")
+                    {
+                        for (int i = 0; i < namesB1.Length; i++)
+                        {
+                            string val = textBoxesB1[i].Text.Replace(',', '.');
+                            cmd = "UPDATE " + PNChar + "_torques SET " + namesB1[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
+                            mysql.ExecuteQueries(cmd);
+                        }
+                    }
+
+                    if (PNChar == "B2")
+                    {
+                        for (int i = 0; i < namesB2.Length; i++)
+                        {
+                            string val = textBoxesB2[i].Text.Replace(',', '.');
+                            cmd = "UPDATE " + PNChar + "_torques SET " + namesB2[i] + " = '" + val + "' WHERE CLM = '" + CLM + "'";
+                            mysql.ExecuteQueries(cmd);
+                        }
+                    }
+
+
+                    foreach (Control item in p.Controls.OfType<Control>().ToList())
+                    {
+
+                        if (item.Name.Contains("cmbComponent_"))
+                            buildStr += item.Text + "=";
+                        if (item.Name.Contains("txtComponent_"))
+                            buildStr += item.Text + ";";
+
+                    }
+                    cmd = "UPDATE " + PNChar + "_torques SET RepairComponents = '" + buildStr + "' WHERE CLM = '" + CLM + "'";
+
+
+                    mysql.ExecuteQueries(cmd);
+                    mysql.CloseConnection();
+
+                    this.Close();
                 }
-
-
-                foreach (Control item in p.Controls.OfType<Control>().ToList())
+                catch (Exception ex)
                 {
-                    
-                    if (item.Name.Contains("cmbComponent_"))
-                        buildStr += item.Text + "=";
-                    if (item.Name.Contains("txtComponent_"))
-                        buildStr += item.Text + ";";
-
+                    MessageBox.Show(ex.Message);
                 }
-                cmd = "UPDATE " + PNChar + "_torques SET RepairComponents = '" + buildStr + "' WHERE CLM = '" + CLM + "'";
-
-                
-                mysql.ExecuteQueries(cmd);
-                mysql.CloseConnection();
-
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
     }

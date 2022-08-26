@@ -523,7 +523,6 @@ namespace Reklamace_Kion
 
                     if ((columnName == "CLM") || (columnName == "PN_Battery") || (columnName == "SN_Battery"))
                     {
-                        string PNBattery = dataGrid1[8, actualClick.RowIndex].Value.ToString();
                         string PNChar = PNBattery.Substring(PNBattery.LastIndexOf('_') + 1);
 
                         int dataCount = 0;
@@ -534,13 +533,17 @@ namespace Reklamace_Kion
 
                             dataCount = (int)cmdCount.ExecuteScalar();
                         }
+                        string dir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\";
                         
 
-                        if(dataCount > 0)
+
+
+                        if (dataCount > 0)
                         {
-                            var result = MessageBox.Show("Tato akce provede také změny v databázi oprav. Opravdu chcete tento údaj změnit?", "Varování", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            var result = MessageBox.Show("Tato akce provede také změny v databázi oprav a změnu názvu složky.\nOpravdu chcete tento údaj změnit?", "Varování", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                             if (result == DialogResult.Yes)
                             {
+                                
                                 cmd.ExecuteNonQuery();
                                 if (columnName == "CLM")
                                 {
@@ -550,6 +553,15 @@ namespace Reklamace_Kion
                                     CommandText = "UPDATE " + PNChar + "_torques SET CLM = '" + newValue + "' WHERE CLM = '" + CLM + "'";
                                     cmd = new SqlCommand(CommandText, conn);
                                     cmd.ExecuteNonQuery();
+                                    try
+                                    {
+                                        System.IO.Directory.Move(dir + CLM, dir + newValue);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message);
+                                        conn.Close();
+                                    }
                                 }
                                 else if (columnName == "PN_Battery")
                                 {
@@ -559,12 +571,30 @@ namespace Reklamace_Kion
                                     CommandText = "UPDATE " + PNChar + "_torques SET PN = '" + newValue + "' WHERE CLM = '" + CLM + "'";
                                     cmd = new SqlCommand(CommandText, conn);
                                     cmd.ExecuteNonQuery();
+                                    try
+                                    {
+                                        System.IO.Directory.Move(dir + CLM + "\\" + PNBattery + "_" + SNBattery, dir + CLM + "\\" + newValue + "_" + SNBattery);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message);
+                                        conn.Close();
+                                    }
                                 }
                                 else if (columnName == "SN_Battery")
                                 {
                                     CommandText = "UPDATE DataRepairs SET SN_Battery = '" + newValue + "' WHERE CLM = '" + CLM + "'";
                                     cmd = new SqlCommand(CommandText, conn);
                                     cmd.ExecuteNonQuery();
+                                    try
+                                    {
+                                        System.IO.Directory.Move(dir + CLM + "\\" + PNBattery + "_" + SNBattery, dir + CLM + "\\" + PNBattery + "_" + newValue);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message);
+                                        conn.Close();
+                                    }
                                 }
                             }
                             else
@@ -580,6 +610,35 @@ namespace Reklamace_Kion
                     else
                     {
                         cmd.ExecuteNonQuery();
+
+                        string dir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\";
+                        if ((columnName == "PN_Claimed_Component") || (columnName == "SN_Claimed_Component"))
+                        {
+                            if (columnName == "PN_Claimed_Component")
+                            {
+                                try
+                                {
+                                    System.IO.Directory.Move(dir + CLM + "\\" + PNBattery + "_" + SNBattery + "\\" + PNComponent + "_" + SNComponent, dir + CLM + "\\" + PNBattery + "_" + SNBattery + "\\" + newValue + "_" + SNComponent);
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                    conn.Close();
+                                }
+                            }
+                            if (columnName == "SN_Claimed_Component")
+                            {
+                                try
+                                {
+                                    System.IO.Directory.Move(dir + CLM + "\\" + PNBattery + "_" + SNBattery + "\\" + PNComponent + "_" + SNComponent, dir + CLM + "\\" + PNBattery + "_" + SNBattery + "\\" + PNComponent + "_" + newValue);
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                    conn.Close();
+                                }
+                            }
+                        }
                     }
 
                     lblActionInfo.ForeColor = Color.Green;
@@ -769,12 +828,20 @@ namespace Reklamace_Kion
         DataGridView.HitTestInfo actualCell;
         DataGridView.HitTestInfo actualClick;
         string CLM = string.Empty;
+        string PNBattery = string.Empty;
+        string SNBattery = string.Empty;
+        string PNComponent = string.Empty;
+        string SNComponent = string.Empty;
         private void dataGrid1_MouseDown(object sender, MouseEventArgs e)
         {
             actualClick = dataGrid1.HitTest(e.X, e.Y);
             if (actualClick.RowIndex >= 0)
             {
                 CLM = dataGrid1[1, actualClick.RowIndex].Value.ToString();
+                PNBattery = dataGrid1[8, actualClick.RowIndex].Value.ToString();
+                SNBattery = dataGrid1[9, actualClick.RowIndex].Value.ToString();
+                PNComponent = dataGrid1[10, actualClick.RowIndex].Value.ToString();
+                SNComponent = dataGrid1[11, actualClick.RowIndex].Value.ToString();
             }
             if (e.Button == MouseButtons.Right)
             {
@@ -975,26 +1042,38 @@ namespace Reklamace_Kion
 
         private void přidatSoučástToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Opravy.AddComponentRepair addComponentRepair = new Opravy.AddComponentRepair();
-            addComponentRepair.Show();
+            if ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5"))
+            {
+                Opravy.AddComponentRepair addComponentRepair = new Opravy.AddComponentRepair();
+                addComponentRepair.Show();
+            }
         }
 
         private void upravitSoučástiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Opravy.ListComponentsRepair listComponentsRepair = new Opravy.ListComponentsRepair();
-            listComponentsRepair.Show();
+            if ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5"))
+            {
+                Opravy.ListComponentsRepair listComponentsRepair = new Opravy.ListComponentsRepair();
+                listComponentsRepair.Show();
+            }
         }
 
         private void přidatKontaktToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Contacts.AddContact addContact = new Contacts.AddContact();
-            addContact.Show();
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                Contacts.AddContact addContact = new Contacts.AddContact();
+                addContact.Show();
+            }
         }
 
         private void upravitKontaktyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Contacts.ListContacts listContacts = new Contacts.ListContacts();
-            listContacts.Show();
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                Contacts.ListContacts listContacts = new Contacts.ListContacts();
+                listContacts.Show();
+            }
         }
     }
 }
