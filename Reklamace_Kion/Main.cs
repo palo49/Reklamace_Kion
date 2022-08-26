@@ -520,7 +520,67 @@ namespace Reklamace_Kion
                     SqlCommand cmd = new SqlCommand(CommandText, conn);
                     cmd.Parameters.AddWithValue("@newval", newValue);
                     cmd.Parameters.AddWithValue("@id", rowId);
-                    cmd.ExecuteNonQuery();
+
+                    if ((columnName == "CLM") || (columnName == "PN_Battery") || (columnName == "SN_Battery"))
+                    {
+                        string PNBattery = dataGrid1[8, actualClick.RowIndex].Value.ToString();
+                        string PNChar = PNBattery.Substring(PNBattery.LastIndexOf('_') + 1);
+
+                        int dataCount = 0;
+                        if (PNChar != string.Empty)
+                        {
+                            string sqlTorques = "SELECT COUNT(*) from " + PNChar + "_torques where CLM like '" + CLM + "'";
+                            SqlCommand cmdCount = new SqlCommand(sqlTorques, conn);
+
+                            dataCount = (int)cmdCount.ExecuteScalar();
+                        }
+                        
+
+                        if(dataCount > 0)
+                        {
+                            var result = MessageBox.Show("Tato akce provede také změny v databázi oprav. Opravdu chcete tento údaj změnit?", "Varování", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (result == DialogResult.Yes)
+                            {
+                                cmd.ExecuteNonQuery();
+                                if (columnName == "CLM")
+                                {
+                                    CommandText = "UPDATE DataRepairs SET CLM = '" + newValue + "' WHERE CLM = '" + CLM + "'";
+                                    cmd = new SqlCommand(CommandText, conn);
+                                    cmd.ExecuteNonQuery();
+                                    CommandText = "UPDATE " + PNChar + "_torques SET CLM = '" + newValue + "' WHERE CLM = '" + CLM + "'";
+                                    cmd = new SqlCommand(CommandText, conn);
+                                    cmd.ExecuteNonQuery();
+                                }
+                                else if (columnName == "PN_Battery")
+                                {
+                                    CommandText = "UPDATE DataRepairs SET PN_Battery = '" + newValue + "' WHERE CLM = '" + CLM + "'";
+                                    cmd = new SqlCommand(CommandText, conn);
+                                    cmd.ExecuteNonQuery();
+                                    CommandText = "UPDATE " + PNChar + "_torques SET PN = '" + newValue + "' WHERE CLM = '" + CLM + "'";
+                                    cmd = new SqlCommand(CommandText, conn);
+                                    cmd.ExecuteNonQuery();
+                                }
+                                else if (columnName == "SN_Battery")
+                                {
+                                    CommandText = "UPDATE DataRepairs SET SN_Battery = '" + newValue + "' WHERE CLM = '" + CLM + "'";
+                                    cmd = new SqlCommand(CommandText, conn);
+                                    cmd.ExecuteNonQuery();
+                                }
+                            }
+                            else
+                            {
+                                bindMainData.CancelEdit(); dataGrid1.CancelEdit(); dataGrid1.EndEdit();
+                            }
+                        }
+                        else
+                        {
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
 
                     lblActionInfo.ForeColor = Color.Green;
                     lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
@@ -548,6 +608,7 @@ namespace Reklamace_Kion
                             dataGrid1[28, rowId - 1].Value = finalCost;
                         }
                     }
+
                     conn.Close();
                 }
                 catch (Exception ex)
@@ -569,6 +630,8 @@ namespace Reklamace_Kion
             AboutBox1 aboutBox1 = new AboutBox1();
             aboutBox1.Show();
         }
+
+        
 
         private void dataGrid1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -704,9 +767,15 @@ namespace Reklamace_Kion
         }
 
         DataGridView.HitTestInfo actualCell;
-
+        DataGridView.HitTestInfo actualClick;
+        string CLM = string.Empty;
         private void dataGrid1_MouseDown(object sender, MouseEventArgs e)
         {
+            actualClick = dataGrid1.HitTest(e.X, e.Y);
+            if (actualClick.RowIndex >= 0)
+            {
+                CLM = dataGrid1[1, actualClick.RowIndex].Value.ToString();
+            }
             if (e.Button == MouseButtons.Right)
             {
                 try
@@ -798,7 +867,7 @@ namespace Reklamace_Kion
 
                                 daDataRepair.Fill(form.DataRepair);
                                 form.bindRepairData.ResetBindings(true);
-
+                                
                                 string PNChar = PNBattery.Substring(PNBattery.LastIndexOf('_') + 1);
 
                                 if (PNChar == "A1")
