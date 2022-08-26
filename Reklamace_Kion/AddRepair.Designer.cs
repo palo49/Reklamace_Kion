@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddRepair));
-            this.lblBrand = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtBrand = new System.Windows.Forms.TextBox();
             this.chckWD = new System.Windows.Forms.CheckBox();
             this.chckBB = new System.Windows.Forms.CheckBox();
             this.chckZD = new System.Windows.Forms.CheckBox();
@@ -60,6 +58,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCLM = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBrandSpeed = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).BeginInit();
@@ -68,20 +68,10 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblBrand
-            // 
-            this.lblBrand.AutoSize = true;
-            this.lblBrand.Location = new System.Drawing.Point(14, 57);
-            this.lblBrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(40, 15);
-            this.lblBrand.TabIndex = 0;
-            this.lblBrand.Text = "Brand";
-            // 
             // btnCancel
             // 
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Location = new System.Drawing.Point(14, 554);
+            this.btnCancel.Location = new System.Drawing.Point(12, 566);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(189, 45);
@@ -90,18 +80,10 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtBrand
-            // 
-            this.txtBrand.Location = new System.Drawing.Point(18, 76);
-            this.txtBrand.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(181, 21);
-            this.txtBrand.TabIndex = 1;
-            // 
             // chckWD
             // 
             this.chckWD.AutoSize = true;
-            this.chckWD.Location = new System.Drawing.Point(18, 106);
+            this.chckWD.Location = new System.Drawing.Point(16, 118);
             this.chckWD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckWD.Name = "chckWD";
             this.chckWD.Size = new System.Drawing.Size(46, 19);
@@ -112,7 +94,7 @@
             // chckBB
             // 
             this.chckBB.AutoSize = true;
-            this.chckBB.Location = new System.Drawing.Point(18, 132);
+            this.chckBB.Location = new System.Drawing.Point(16, 144);
             this.chckBB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckBB.Name = "chckBB";
             this.chckBB.Size = new System.Drawing.Size(42, 19);
@@ -123,7 +105,7 @@
             // chckZD
             // 
             this.chckZD.AutoSize = true;
-            this.chckZD.Location = new System.Drawing.Point(18, 159);
+            this.chckZD.Location = new System.Drawing.Point(16, 171);
             this.chckZD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckZD.Name = "chckZD";
             this.chckZD.Size = new System.Drawing.Size(42, 19);
@@ -134,7 +116,7 @@
             // chckSW
             // 
             this.chckSW.AutoSize = true;
-            this.chckSW.Location = new System.Drawing.Point(18, 185);
+            this.chckSW.Location = new System.Drawing.Point(16, 197);
             this.chckSW.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckSW.Name = "chckSW";
             this.chckSW.Size = new System.Drawing.Size(45, 19);
@@ -145,7 +127,7 @@
             // chckPD
             // 
             this.chckPD.AutoSize = true;
-            this.chckPD.Location = new System.Drawing.Point(18, 212);
+            this.chckPD.Location = new System.Drawing.Point(16, 224);
             this.chckPD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckPD.Name = "chckPD";
             this.chckPD.Size = new System.Drawing.Size(43, 19);
@@ -156,7 +138,7 @@
             // chckTest
             // 
             this.chckTest.AutoSize = true;
-            this.chckTest.Location = new System.Drawing.Point(99, 106);
+            this.chckTest.Location = new System.Drawing.Point(97, 118);
             this.chckTest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckTest.Name = "chckTest";
             this.chckTest.Size = new System.Drawing.Size(49, 19);
@@ -167,7 +149,7 @@
             // chckCharging
             // 
             this.chckCharging.AutoSize = true;
-            this.chckCharging.Location = new System.Drawing.Point(99, 132);
+            this.chckCharging.Location = new System.Drawing.Point(97, 144);
             this.chckCharging.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckCharging.Name = "chckCharging";
             this.chckCharging.Size = new System.Drawing.Size(76, 19);
@@ -178,7 +160,7 @@
             // chckSetBrandId
             // 
             this.chckSetBrandId.AutoSize = true;
-            this.chckSetBrandId.Location = new System.Drawing.Point(99, 159);
+            this.chckSetBrandId.Location = new System.Drawing.Point(97, 171);
             this.chckSetBrandId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckSetBrandId.Name = "chckSetBrandId";
             this.chckSetBrandId.Size = new System.Drawing.Size(94, 19);
@@ -189,7 +171,7 @@
             // chckPrtscr
             // 
             this.chckPrtscr.AutoSize = true;
-            this.chckPrtscr.Location = new System.Drawing.Point(99, 185);
+            this.chckPrtscr.Location = new System.Drawing.Point(97, 197);
             this.chckPrtscr.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckPrtscr.Name = "chckPrtscr";
             this.chckPrtscr.Size = new System.Drawing.Size(91, 19);
@@ -200,7 +182,7 @@
             // chckLabel
             // 
             this.chckLabel.AutoSize = true;
-            this.chckLabel.Location = new System.Drawing.Point(99, 212);
+            this.chckLabel.Location = new System.Drawing.Point(97, 224);
             this.chckLabel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chckLabel.Name = "chckLabel";
             this.chckLabel.Size = new System.Drawing.Size(57, 19);
@@ -211,7 +193,7 @@
             // lblPalette
             // 
             this.lblPalette.AutoSize = true;
-            this.lblPalette.Location = new System.Drawing.Point(15, 249);
+            this.lblPalette.Location = new System.Drawing.Point(13, 261);
             this.lblPalette.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPalette.Name = "lblPalette";
             this.lblPalette.Size = new System.Drawing.Size(86, 15);
@@ -227,7 +209,7 @@
             this.cmbTypeOfPalette.Items.AddRange(new object[] {
             "Euro paleta",
             "Půl paleta"});
-            this.cmbTypeOfPalette.Location = new System.Drawing.Point(18, 267);
+            this.cmbTypeOfPalette.Location = new System.Drawing.Point(16, 279);
             this.cmbTypeOfPalette.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbTypeOfPalette.Name = "cmbTypeOfPalette";
             this.cmbTypeOfPalette.Size = new System.Drawing.Size(181, 23);
@@ -237,7 +219,7 @@
             // 
             this.dateExpExp.CustomFormat = "";
             this.dateExpExp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateExpExp.Location = new System.Drawing.Point(18, 311);
+            this.dateExpExp.Location = new System.Drawing.Point(16, 323);
             this.dateExpExp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateExpExp.Name = "dateExpExp";
             this.dateExpExp.Size = new System.Drawing.Size(181, 21);
@@ -247,7 +229,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 293);
+            this.label1.Location = new System.Drawing.Point(12, 305);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 15);
@@ -257,7 +239,7 @@
             // lblSOH
             // 
             this.lblSOH.AutoSize = true;
-            this.lblSOH.Location = new System.Drawing.Point(15, 345);
+            this.lblSOH.Location = new System.Drawing.Point(13, 357);
             this.lblSOH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSOH.Name = "lblSOH";
             this.lblSOH.Size = new System.Drawing.Size(33, 15);
@@ -266,7 +248,7 @@
             // 
             // trackBarSOH
             // 
-            this.trackBarSOH.Location = new System.Drawing.Point(17, 363);
+            this.trackBarSOH.Location = new System.Drawing.Point(15, 375);
             this.trackBarSOH.Maximum = 100;
             this.trackBarSOH.Name = "trackBarSOH";
             this.trackBarSOH.Size = new System.Drawing.Size(147, 45);
@@ -276,7 +258,7 @@
             // 
             // numSOH
             // 
-            this.numSOH.Location = new System.Drawing.Point(18, 396);
+            this.numSOH.Location = new System.Drawing.Point(16, 408);
             this.numSOH.Name = "numSOH";
             this.numSOH.Size = new System.Drawing.Size(146, 21);
             this.numSOH.TabIndex = 14;
@@ -285,7 +267,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(171, 398);
+            this.label2.Location = new System.Drawing.Point(169, 410);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 15);
@@ -294,7 +276,7 @@
             // 
             // numCapacity
             // 
-            this.numCapacity.Location = new System.Drawing.Point(18, 450);
+            this.numCapacity.Location = new System.Drawing.Point(16, 462);
             this.numCapacity.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -307,7 +289,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(171, 452);
+            this.label3.Location = new System.Drawing.Point(169, 464);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 15);
@@ -317,7 +299,7 @@
             // btnSave
             // 
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Location = new System.Drawing.Point(14, 503);
+            this.btnSave.Location = new System.Drawing.Point(12, 515);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(189, 45);
@@ -329,7 +311,7 @@
             // lblCapacity
             // 
             this.lblCapacity.AutoSize = true;
-            this.lblCapacity.Location = new System.Drawing.Point(15, 432);
+            this.lblCapacity.Location = new System.Drawing.Point(13, 444);
             this.lblCapacity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCapacity.Name = "lblCapacity";
             this.lblCapacity.Size = new System.Drawing.Size(75, 15);
@@ -341,7 +323,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-7, 605);
+            this.panel1.Location = new System.Drawing.Point(-7, 649);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 63);
             this.panel1.TabIndex = 16;
@@ -369,7 +351,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 9);
+            this.label5.Location = new System.Drawing.Point(13, 17);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 15);
@@ -382,7 +364,7 @@
             this.cmbCLM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCLM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCLM.FormattingEnabled = true;
-            this.cmbCLM.Location = new System.Drawing.Point(18, 28);
+            this.cmbCLM.Location = new System.Drawing.Point(16, 36);
             this.cmbCLM.MaxDropDownItems = 20;
             this.cmbCLM.Name = "cmbCLM";
             this.cmbCLM.Size = new System.Drawing.Size(181, 23);
@@ -410,7 +392,7 @@
             this.groupBox1.Controls.Add(this.chckCharging);
             this.groupBox1.Controls.Add(this.chckTest);
             this.groupBox1.Controls.Add(this.chckWD);
-            this.groupBox1.Controls.Add(this.txtBrand);
+            this.groupBox1.Controls.Add(this.txtBrandSpeed);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.lblCapacity);
@@ -418,26 +400,44 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblPalette);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.lblBrand);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(225, 606);
+            this.groupBox1.Size = new System.Drawing.Size(225, 616);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 64);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Brand speed";
+            // 
+            // txtBrandSpeed
+            // 
+            this.txtBrandSpeed.Location = new System.Drawing.Point(17, 83);
+            this.txtBrandSpeed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtBrandSpeed.Name = "txtBrandSpeed";
+            this.txtBrandSpeed.Size = new System.Drawing.Size(181, 21);
+            this.txtBrandSpeed.TabIndex = 1;
             // 
             // AddRepair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(216, 661);
+            this.ClientSize = new System.Drawing.Size(216, 711);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(232, 700);
-            this.MinimumSize = new System.Drawing.Size(232, 700);
+            this.MaximumSize = new System.Drawing.Size(232, 750);
+            this.MinimumSize = new System.Drawing.Size(232, 750);
             this.Name = "AddRepair";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -456,10 +456,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblBrand;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.CheckBox chckWD;
         private System.Windows.Forms.CheckBox chckBB;
         private System.Windows.Forms.CheckBox chckZD;
@@ -488,5 +485,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCLM;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtBrandSpeed;
+        private System.Windows.Forms.Label label6;
     }
 }

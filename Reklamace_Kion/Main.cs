@@ -437,7 +437,7 @@ namespace Reklamace_Kion
             int rowId = Convert.ToInt32(dataGridOpravy[0, e.RowIndex].Value);
             string newValue = dataGridOpravy[e.ColumnIndex, e.RowIndex].Value.ToString();
 
-            if (columnName == "Brand") { CommandText = "UPDATE DataRepairs SET Brand = @newval WHERE RepairId = @id"; }
+            if (columnName == "BrandId_Speed") { CommandText = "UPDATE DataRepairs SET BrandId_Speed = @newval WHERE RepairId = @id"; }
             else if (columnName == "WD") { CommandText = "UPDATE DataRepairs SET WD = @newval WHERE RepairId = @id"; }
             else if (columnName == "BB") { CommandText = "UPDATE DataRepairs SET BB = @newval WHERE RepairId = @id"; }
             else if (columnName == "ZD") { CommandText = "UPDATE DataRepairs SET ZD = @newval WHERE RepairId = @id"; }
@@ -445,26 +445,30 @@ namespace Reklamace_Kion
             else if (columnName == "PD") { CommandText = "UPDATE DataRepairs SET PD = @newval WHERE RepairId = @id"; }
             else if (columnName == "Test") { CommandText = "UPDATE DataRepairs SET Test = @newval WHERE RepairId = @id"; }
             else if (columnName == "Charging") { CommandText = "UPDATE DataRepairs SET Charging = @newval WHERE RepairId = @id"; }
-            else if (columnName == "SetBrandID") { CommandText = "UPDATE DataRepairs SET SetBrandID = @newval WHERE RepairId = @id"; }
+            else if (columnName == "SetBrandID_Speed") { CommandText = "UPDATE DataRepairs SET SetBrandID_Speed = @newval WHERE RepairId = @id"; }
             else if (columnName == "PrintScr") { CommandText = "UPDATE DataRepairs SET PrintScr = @newval WHERE RepairId = @id"; }
             else if (columnName == "Label") { CommandText = "UPDATE DataRepairs SET Label = @newval WHERE RepairId = @id"; }
             else if (columnName == "TypeOfPalette") { CommandText = "UPDATE DataRepairs SET TypeOfPalette = @newval WHERE RepairId = @id"; }
             else if (columnName == "ExpectedExpedition") { CommandText = "UPDATE DataRepairs SET ExpectedExpedition = @newval WHERE RepairId = @id"; }
             else if (columnName == "SOH") { CommandText = "UPDATE DataRepairs SET SOH = @newval WHERE RepairId = @id"; }
             else if (columnName == "CapacityTest") { CommandText = "UPDATE DataRepairs SET CapacityTest = @newval WHERE RepairId = @id"; }
+            else if ((columnName == "CLM") || (columnName == "PN_Battery") || (columnName == "SN_Battery")) { CommandText = string.Empty; bindRepairData.CancelEdit(); dataGridOpravy.CancelEdit(); dataGridOpravy.EndEdit(); MessageBox.Show("Nelze upravit CLM, PN a SN."); }
 
             try
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(CommandText, conn);
-                cmd.Parameters.AddWithValue("@newval", newValue);
-                cmd.Parameters.AddWithValue("@id", rowId);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                lblActionInfo.ForeColor = Color.Green;
-                lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
-                //form.DataRepair.Clear();
-                //dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+                if (CommandText != string.Empty)
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(CommandText, conn);
+                    cmd.Parameters.AddWithValue("@newval", newValue);
+                    cmd.Parameters.AddWithValue("@id", rowId);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    lblActionInfo.ForeColor = Color.Green;
+                    lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
+                    //form.DataRepair.Clear();
+                    //dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+                }
             }
             catch (Exception ex)
             {

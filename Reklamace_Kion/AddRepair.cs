@@ -39,7 +39,7 @@ namespace Reklamace_Kion
         private void btnSave_Click(object sender, EventArgs e)
         {
             string CLM = cmbCLM.Text;
-            string Brand = txtBrand.Text;
+            string BrandSpeed = txtBrandSpeed.Text;
             bool WD = chckWD.Checked;
             bool BB = chckBB.Checked;  
             bool ZD = chckZD.Checked;
@@ -55,6 +55,8 @@ namespace Reklamace_Kion
             int SOH = trackBarSOH.Value;
             double Capacity = Convert.ToDouble(numCapacity.Value);
 
+            DataTable PNSN = new DataTable();
+
             if (CLM != string.Empty)
             {
                 try
@@ -65,6 +67,11 @@ namespace Reklamace_Kion
 
                     conn.Open();
                     int dataCount = (int)cmdCount.ExecuteScalar();
+                    string cmdstring = "SELECT PN_Battery, SN_Battery from DataMain where CLM like '" + CLM + "'";
+                    SqlCommand cmdd = new SqlCommand(cmdstring, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmdd);
+                    da.Fill(PNSN);
+                    
                     conn.Close();
 
                     if (dataCount == 0)
@@ -72,8 +79,9 @@ namespace Reklamace_Kion
                         
                         groupBox1.Visible = false;
                         Cursor.Current = Cursors.WaitCursor;
-
-                        string sqlInsert = "INSERT INTO DataRepairs values('" + CLM + "','" + Brand + "','" + WD + "','" + BB + "','" + ZD + "','" + SW + "'," +
+                        string a = "PN_battery";
+                        string b = "SN_battery";
+                        string sqlInsert = "INSERT INTO DataRepairs values('" + CLM + "','" + BrandSpeed + "','" + PNSN.Rows[0][a] + "','" + PNSN.Rows[0][b] + "','" + WD + "','" + BB + "','" + ZD + "','" + SW + "'," +
                             "'" + PD + "','" + Test + "','" + Charging + "','" + SetBrandId + "','" + PrtScr + "'," +
                             "'" + Label + "','" + TypeOfPalette + "',@DateExpedition,'" + SOH + "',@Capacity)";
 
@@ -83,6 +91,28 @@ namespace Reklamace_Kion
                         cmdInsert.Parameters.Add("@DateExpedition", SqlDbType.Date).Value = DateOfExp;
                         conn.Open();
                         cmdInsert.ExecuteNonQuery();
+
+                        string PN = PNSN.Rows[0][a].ToString();
+                        string PNChar = PNSN.Rows[0][a].ToString().Substring(PNSN.Rows[0][a].ToString().LastIndexOf('_') + 1);
+                        string cmdString = string.Empty;
+                        if (PNChar == "A1")
+                        {
+                            cmdString = "INSERT INTO A1_torques (CLM,PN) values('" + CLM + "','" + PN + "')";
+                        }
+                        else if (PNChar == "A2")
+                        {
+                            cmdString = "INSERT INTO A2_torques (CLM,PN) values('" + CLM + "','" + PN + "')";
+                        }
+                        else if (PNChar == "B1")
+                        {
+                            cmdString = "INSERT INTO B1_torques (CLM,PN) values('" + CLM + "','" + PN + "')";
+                        }
+                        else if (PNChar == "B2")
+                        {
+                            cmdString = "INSERT INTO B2_torques (CLM,PN) values('" + CLM + "','" + PN + "')";
+                        }
+                        SqlCommand cmdI = new SqlCommand(cmdString, conn);
+                        cmdI.ExecuteNonQuery();
                         conn.Close();
 
                         Main.ReloadData();

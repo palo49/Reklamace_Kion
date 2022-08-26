@@ -186,25 +186,24 @@ namespace Reklamace_Kion.RepairAnalyze
 
         private void LoadData(string PN, string CLM, TextBox[] boxes)
         {
-            SqlDataReader data;
             try
             {
-                string cmd = "SELECT * FROM " + PN + "_torques WHERE CLM='" + CLM + "'";
+                string cmds = "SELECT * FROM " + PN + "_torques WHERE CLM='" + CLM + "'";
                 mysql.OpenConection();
                 int count = mysql.CountCols(PN + "_torques");
-                data = mysql.DataReader(cmd);
-                if (data.Read())
+                SqlDataReader dataa = mysql.DataReader(cmds);
+                if (dataa.Read())
                 {
                     for (int i = 0; i < count - 4; i++)
                     {
-                        boxes[i].Text = data[i + 3].ToString();
+                        boxes[i].Text = dataa[i + 3].ToString();
                     }
-                    data.Close();
                 }
-                cmd = "SELECT RepairComponents FROM " + PN + "_torques WHERE CLM='" + CLM + "'";
-                data = mysql.DataReader(cmd);
-                data.Read();
-                string dataStr = data[0].ToString();
+                dataa.Close();
+                cmds = "SELECT RepairComponents FROM " + PN + "_torques WHERE CLM='" + CLM + "'";
+                dataa = mysql.DataReader(cmds);
+                dataa.Read();
+                string dataStr = dataa[0].ToString();
                 count = dataStr.Split(';').Length - 1;
                 mysql.CloseConnection();
                 string[] strList = dataStr.Split(';');
@@ -214,6 +213,7 @@ namespace Reklamace_Kion.RepairAnalyze
                     string[] sep = strList[i].Split('=');
                     AddComponentControl(btnAddComponent, sep[0], sep[1]);
                 }
+                dataa.Close();
             }
             catch (Exception ex)
             {
