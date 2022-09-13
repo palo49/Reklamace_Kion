@@ -735,7 +735,21 @@ namespace Reklamace_Kion
                 // Set Width to calculated AutoSize value:
                 dataGrid1.Columns[i].Width = colw;
             }
+            for (int i = 0; i <= dataGridOpravy.Columns.Count - 1; i++)
+            {
+                // Store Auto Sized Widths:
+                int colw = dataGridOpravy.Columns[i].Width;
+
+                // Remove AutoSizing:
+                dataGridOpravy.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+
+                // Set Width to calculated AutoSize value:
+                dataGridOpravy.Columns[i].Width = colw;
+            }
             lblLoadingData.Visible = false;
+
+            dataGrid1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridOpravy.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void přidatKomponentuToolStripMenuItem_Click(object sender, EventArgs e)
