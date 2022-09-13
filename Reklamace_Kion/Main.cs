@@ -224,6 +224,9 @@ namespace Reklamace_Kion
             form.bindMainData.ResetBindings(true);
             form.bindRepairData.ResetBindings(true);
 
+            form.dataGrid1.Rows[0].Selected = true;
+            form.dataGridOpravy.Rows[0].Selected = true;
+
             form.lblActionInfo.ForeColor = Color.Black;
             form.lblActionInfo.Text = "Data aktualizována.";
         }
@@ -512,7 +515,8 @@ namespace Reklamace_Kion
                 else if (columnName == "Tariff_Administration") { CommandText = "UPDATE DataMain SET Tariff_Administration = @newval WHERE DataId = @id"; }
                 else if (columnName == "Hours_Administration") { CommandText = "UPDATE DataMain SET Hours_Administration = @newval WHERE DataId = @id"; }
                 else if (columnName == "Cost_Of_Components") { CommandText = "UPDATE DataMain SET Cost_Of_Components = @newval WHERE DataId = @id"; }
-
+                else if (columnName == "Note_1") { CommandText = "UPDATE DataMain SET Note_1 = @newval WHERE DataId = @id"; }
+                else if (columnName == "Note_2") { CommandText = "UPDATE DataMain SET Note_2 = @newval WHERE DataId = @id"; }
 
                 try
                 {
@@ -1074,6 +1078,11 @@ namespace Reklamace_Kion
                 Contacts.ListContacts listContacts = new Contacts.ListContacts();
                 listContacts.Show();
             }
+        }
+
+        private void CellContext_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

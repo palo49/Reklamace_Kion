@@ -113,7 +113,7 @@ namespace Reklamace_Kion
                         string sqlInsert = "INSERT INTO DataMain values('" + CLM + "','" + Status + "','" + CustomerRequire + "','" + DateOfCustomerSendVal + "','" + DateOfSaftAcceptanceVal + "'," +
                             "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + PNBattery + "','" + SNBattery + "','" + PNClaimedComponent + "','" + SNClaimedComponent + "'," +
                             "'" + Fault + "','" + CW + "','" + DefectBMS + "','" + LocationOfBattery + "','" + ReplacementSend + "'," +
-                            "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Contact + "','" + Tariff_Repairman + "','" + Hours_Repairman + "','" + Tariff_Technician + "','" + Hours_Technician + "','" + Tariff_Administration + "','" + Hours_Administration + "','" + CostOfComponents + "','" + finalPrice + "')";
+                            "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Contact + "','" + Tariff_Repairman + "','" + Hours_Repairman + "','" + Tariff_Technician + "','" + Hours_Technician + "','" + Tariff_Administration + "','" + Hours_Administration + "','" + CostOfComponents + "','" + finalPrice + "', '', '')";
 
                         SqlCommand cmdInsert = new SqlCommand(sqlInsert, conn);
                         conn.Open();

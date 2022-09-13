@@ -215,7 +215,7 @@
             this.dataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid1.RowHeadersVisible = false;
             this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid1.Size = new System.Drawing.Size(822, 503);
+            this.dataGrid1.Size = new System.Drawing.Size(822, 514);
             this.dataGrid1.TabIndex = 0;
             this.dataGrid1.TimeFilter = false;
             this.dataGrid1.SortStringChanged += new System.EventHandler(this.dataGrid1_SortStringChanged);
@@ -231,6 +231,7 @@
             this.toolStripShowFolder});
             this.CellContext.Name = "contextMenuStrip1";
             this.CellContext.Size = new System.Drawing.Size(165, 48);
+            this.CellContext.Opening += new System.ComponentModel.CancelEventHandler(this.CellContext_Opening);
             // 
             // přidatKOpravámToolStripMenuItem
             // 
@@ -269,7 +270,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridOpravy.AutoGenerateContextFilters = true;
-            this.dataGridOpravy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridOpravy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridOpravy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
             this.dataGridOpravy.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridOpravy.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;

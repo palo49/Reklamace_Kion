@@ -78,6 +78,12 @@
             this.txtSNComponent = new System.Windows.Forms.TextBox();
             this.cmbPNBattery = new System.Windows.Forms.ComboBox();
             this.panelControls = new System.Windows.Forms.Panel();
+            this.btnClearDefekt = new System.Windows.Forms.Button();
+            this.btnClearDateOfReplacementSend = new System.Windows.Forms.Button();
+            this.btnClearDateOfSaftSend = new System.Windows.Forms.Button();
+            this.btnClearDateOfRepair = new System.Windows.Forms.Button();
+            this.btnClearDateOfSaftAccept = new System.Windows.Forms.Button();
+            this.btnClearDateSendFromCustomer = new System.Windows.Forms.Button();
             this.txtContactEmail = new System.Windows.Forms.TextBox();
             this.txtContactFirstName = new System.Windows.Forms.TextBox();
             this.txtContactId = new System.Windows.Forms.TextBox();
@@ -97,12 +103,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnClearDateSendFromCustomer = new System.Windows.Forms.Button();
-            this.btnClearDateOfSaftAccept = new System.Windows.Forms.Button();
-            this.btnClearDateOfRepair = new System.Windows.Forms.Button();
-            this.btnClearDateOfSaftSend = new System.Windows.Forms.Button();
-            this.btnClearDateOfReplacementSend = new System.Windows.Forms.Button();
-            this.btnClearDefekt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelControls.SuspendLayout();
@@ -173,9 +173,6 @@
             this.txtCustomerRequest.Name = "txtCustomerRequest";
             this.txtCustomerRequest.Size = new System.Drawing.Size(346, 73);
             this.txtCustomerRequest.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.txtCustomerRequest, "Pište bez použití klávesy Enter.\r\nPokud budete používat Enter, text se při zápisu" +
-        " do databáze spojí.\r\nNapř. \r\nŘádek 1\r\nŘádek 2\r\n\r\nse spojí takto: Řádek 1Řádek2\r\n" +
-        "");
             // 
             // lblDateOfCustomerSend
             // 
@@ -271,8 +268,6 @@
             this.txtFault.Name = "txtFault";
             this.txtFault.Size = new System.Drawing.Size(346, 73);
             this.txtFault.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.txtFault, "Pište bez použití klávesy Enter.\r\nPokud budete používat Enter, text se při zápisu" +
-        " do databáze spojí.\r\nNapř. \r\nŘádek 1\r\nŘádek 2\r\n\r\nse spojí takto: Řádek 1Řádek2");
             // 
             // lblCW
             // 
@@ -404,9 +399,6 @@
             this.txtResultDescription.Name = "txtResultDescription";
             this.txtResultDescription.Size = new System.Drawing.Size(346, 72);
             this.txtResultDescription.TabIndex = 18;
-            this.toolTip1.SetToolTip(this.txtResultDescription, "Pište bez použití klávesy Enter.\r\nPokud budete používat Enter, text se při zápisu" +
-        " do databáze spojí.\r\nNapř. \r\nŘádek 1\r\nŘádek 2\r\n\r\nse spojí takto: Řádek 1Řádek2\r\n" +
-        "");
             // 
             // lblCostOfRepair
             // 
@@ -662,6 +654,102 @@
             this.panelControls.Size = new System.Drawing.Size(377, 466);
             this.panelControls.TabIndex = 27;
             // 
+            // btnClearDefekt
+            // 
+            this.btnClearDefekt.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDefekt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDefekt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDefekt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDefekt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDefekt.Location = new System.Drawing.Point(325, 825);
+            this.btnClearDefekt.Name = "btnClearDefekt";
+            this.btnClearDefekt.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDefekt.TabIndex = 31;
+            this.btnClearDefekt.Text = "X";
+            this.btnClearDefekt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDefekt.UseVisualStyleBackColor = false;
+            this.btnClearDefekt.Click += new System.EventHandler(this.btnClearDefekt_Click);
+            // 
+            // btnClearDateOfReplacementSend
+            // 
+            this.btnClearDateOfReplacementSend.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateOfReplacementSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateOfReplacementSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateOfReplacementSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateOfReplacementSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateOfReplacementSend.Location = new System.Drawing.Point(325, 404);
+            this.btnClearDateOfReplacementSend.Name = "btnClearDateOfReplacementSend";
+            this.btnClearDateOfReplacementSend.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateOfReplacementSend.TabIndex = 30;
+            this.btnClearDateOfReplacementSend.Text = "X";
+            this.btnClearDateOfReplacementSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateOfReplacementSend.UseVisualStyleBackColor = false;
+            this.btnClearDateOfReplacementSend.Click += new System.EventHandler(this.btnClearDateOfReplacementSend_Click);
+            // 
+            // btnClearDateOfSaftSend
+            // 
+            this.btnClearDateOfSaftSend.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateOfSaftSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateOfSaftSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateOfSaftSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateOfSaftSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateOfSaftSend.Location = new System.Drawing.Point(325, 299);
+            this.btnClearDateOfSaftSend.Name = "btnClearDateOfSaftSend";
+            this.btnClearDateOfSaftSend.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateOfSaftSend.TabIndex = 30;
+            this.btnClearDateOfSaftSend.Text = "X";
+            this.btnClearDateOfSaftSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateOfSaftSend.UseVisualStyleBackColor = false;
+            this.btnClearDateOfSaftSend.Click += new System.EventHandler(this.btnClearDateOfSaftSend_Click);
+            // 
+            // btnClearDateOfRepair
+            // 
+            this.btnClearDateOfRepair.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateOfRepair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateOfRepair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateOfRepair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateOfRepair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateOfRepair.Location = new System.Drawing.Point(325, 247);
+            this.btnClearDateOfRepair.Name = "btnClearDateOfRepair";
+            this.btnClearDateOfRepair.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateOfRepair.TabIndex = 30;
+            this.btnClearDateOfRepair.Text = "X";
+            this.btnClearDateOfRepair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateOfRepair.UseVisualStyleBackColor = false;
+            this.btnClearDateOfRepair.Click += new System.EventHandler(this.btnClearDateOfRepair_Click);
+            // 
+            // btnClearDateOfSaftAccept
+            // 
+            this.btnClearDateOfSaftAccept.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateOfSaftAccept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateOfSaftAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateOfSaftAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateOfSaftAccept.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateOfSaftAccept.Location = new System.Drawing.Point(325, 195);
+            this.btnClearDateOfSaftAccept.Name = "btnClearDateOfSaftAccept";
+            this.btnClearDateOfSaftAccept.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateOfSaftAccept.TabIndex = 30;
+            this.btnClearDateOfSaftAccept.Text = "X";
+            this.btnClearDateOfSaftAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateOfSaftAccept.UseVisualStyleBackColor = false;
+            this.btnClearDateOfSaftAccept.Click += new System.EventHandler(this.btnClearDateOfSaftAccept_Click);
+            // 
+            // btnClearDateSendFromCustomer
+            // 
+            this.btnClearDateSendFromCustomer.BackColor = System.Drawing.Color.Brown;
+            this.btnClearDateSendFromCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearDateSendFromCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDateSendFromCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnClearDateSendFromCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClearDateSendFromCustomer.Location = new System.Drawing.Point(325, 144);
+            this.btnClearDateSendFromCustomer.Name = "btnClearDateSendFromCustomer";
+            this.btnClearDateSendFromCustomer.Size = new System.Drawing.Size(25, 21);
+            this.btnClearDateSendFromCustomer.TabIndex = 30;
+            this.btnClearDateSendFromCustomer.Text = "X";
+            this.btnClearDateSendFromCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearDateSendFromCustomer.UseVisualStyleBackColor = false;
+            this.btnClearDateSendFromCustomer.Click += new System.EventHandler(this.btnClearDateSendFromCustomer_Click);
+            // 
             // txtContactEmail
             // 
             this.txtContactEmail.Location = new System.Drawing.Point(4, 1276);
@@ -864,102 +952,6 @@
             this.label12.Size = new System.Drawing.Size(59, 15);
             this.label12.TabIndex = 0;
             this.label12.Text = "Cena dílů";
-            // 
-            // btnClearDateSendFromCustomer
-            // 
-            this.btnClearDateSendFromCustomer.BackColor = System.Drawing.Color.Brown;
-            this.btnClearDateSendFromCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearDateSendFromCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearDateSendFromCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnClearDateSendFromCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearDateSendFromCustomer.Location = new System.Drawing.Point(325, 144);
-            this.btnClearDateSendFromCustomer.Name = "btnClearDateSendFromCustomer";
-            this.btnClearDateSendFromCustomer.Size = new System.Drawing.Size(25, 21);
-            this.btnClearDateSendFromCustomer.TabIndex = 30;
-            this.btnClearDateSendFromCustomer.Text = "X";
-            this.btnClearDateSendFromCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClearDateSendFromCustomer.UseVisualStyleBackColor = false;
-            this.btnClearDateSendFromCustomer.Click += new System.EventHandler(this.btnClearDateSendFromCustomer_Click);
-            // 
-            // btnClearDateOfSaftAccept
-            // 
-            this.btnClearDateOfSaftAccept.BackColor = System.Drawing.Color.Brown;
-            this.btnClearDateOfSaftAccept.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearDateOfSaftAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearDateOfSaftAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnClearDateOfSaftAccept.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearDateOfSaftAccept.Location = new System.Drawing.Point(325, 195);
-            this.btnClearDateOfSaftAccept.Name = "btnClearDateOfSaftAccept";
-            this.btnClearDateOfSaftAccept.Size = new System.Drawing.Size(25, 21);
-            this.btnClearDateOfSaftAccept.TabIndex = 30;
-            this.btnClearDateOfSaftAccept.Text = "X";
-            this.btnClearDateOfSaftAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClearDateOfSaftAccept.UseVisualStyleBackColor = false;
-            this.btnClearDateOfSaftAccept.Click += new System.EventHandler(this.btnClearDateOfSaftAccept_Click);
-            // 
-            // btnClearDateOfRepair
-            // 
-            this.btnClearDateOfRepair.BackColor = System.Drawing.Color.Brown;
-            this.btnClearDateOfRepair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearDateOfRepair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearDateOfRepair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnClearDateOfRepair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearDateOfRepair.Location = new System.Drawing.Point(325, 247);
-            this.btnClearDateOfRepair.Name = "btnClearDateOfRepair";
-            this.btnClearDateOfRepair.Size = new System.Drawing.Size(25, 21);
-            this.btnClearDateOfRepair.TabIndex = 30;
-            this.btnClearDateOfRepair.Text = "X";
-            this.btnClearDateOfRepair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClearDateOfRepair.UseVisualStyleBackColor = false;
-            this.btnClearDateOfRepair.Click += new System.EventHandler(this.btnClearDateOfRepair_Click);
-            // 
-            // btnClearDateOfSaftSend
-            // 
-            this.btnClearDateOfSaftSend.BackColor = System.Drawing.Color.Brown;
-            this.btnClearDateOfSaftSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearDateOfSaftSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearDateOfSaftSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnClearDateOfSaftSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearDateOfSaftSend.Location = new System.Drawing.Point(325, 299);
-            this.btnClearDateOfSaftSend.Name = "btnClearDateOfSaftSend";
-            this.btnClearDateOfSaftSend.Size = new System.Drawing.Size(25, 21);
-            this.btnClearDateOfSaftSend.TabIndex = 30;
-            this.btnClearDateOfSaftSend.Text = "X";
-            this.btnClearDateOfSaftSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClearDateOfSaftSend.UseVisualStyleBackColor = false;
-            this.btnClearDateOfSaftSend.Click += new System.EventHandler(this.btnClearDateOfSaftSend_Click);
-            // 
-            // btnClearDateOfReplacementSend
-            // 
-            this.btnClearDateOfReplacementSend.BackColor = System.Drawing.Color.Brown;
-            this.btnClearDateOfReplacementSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearDateOfReplacementSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearDateOfReplacementSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnClearDateOfReplacementSend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearDateOfReplacementSend.Location = new System.Drawing.Point(325, 404);
-            this.btnClearDateOfReplacementSend.Name = "btnClearDateOfReplacementSend";
-            this.btnClearDateOfReplacementSend.Size = new System.Drawing.Size(25, 21);
-            this.btnClearDateOfReplacementSend.TabIndex = 30;
-            this.btnClearDateOfReplacementSend.Text = "X";
-            this.btnClearDateOfReplacementSend.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClearDateOfReplacementSend.UseVisualStyleBackColor = false;
-            this.btnClearDateOfReplacementSend.Click += new System.EventHandler(this.btnClearDateOfReplacementSend_Click);
-            // 
-            // btnClearDefekt
-            // 
-            this.btnClearDefekt.BackColor = System.Drawing.Color.Brown;
-            this.btnClearDefekt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearDefekt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearDefekt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnClearDefekt.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClearDefekt.Location = new System.Drawing.Point(325, 825);
-            this.btnClearDefekt.Name = "btnClearDefekt";
-            this.btnClearDefekt.Size = new System.Drawing.Size(25, 21);
-            this.btnClearDefekt.TabIndex = 31;
-            this.btnClearDefekt.Text = "X";
-            this.btnClearDefekt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClearDefekt.UseVisualStyleBackColor = false;
-            this.btnClearDefekt.Click += new System.EventHandler(this.btnClearDefekt_Click);
             // 
             // AddData
             // 
