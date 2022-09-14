@@ -188,6 +188,12 @@
     <Compile Include="Komponenty\ListComponents.Designer.cs">
       <DependentUpon>ListComponents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaveInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Komponenty\ListComponents.resx">
       <DependentUpon>ListComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaveInfo.resx">
       <DependentUpon>SaveInfo.cs</DependentUpon>

@@ -1098,5 +1098,11 @@ namespace Reklamace_Kion
         {
 
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Report.Report repForm = new Report.Report();
+            repForm.Show();
+        }
     }
 }
