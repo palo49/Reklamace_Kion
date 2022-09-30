@@ -37,6 +37,7 @@ namespace Reklamace_Kion
 
             tabControl1.TabPages[0].Text = "Reklamace";
             tabControl1.TabPages[1].Text = "Opravy";
+            tabControl1.TabPages[2].Text = "Analýzy";
 
             btnAddData.Visible = false;
             btnDelData.Visible = false;
@@ -53,6 +54,11 @@ namespace Reklamace_Kion
                 PropertyInfo pi2 = dgvType2.GetProperty("DoubleBuffered",
                   BindingFlags.Instance | BindingFlags.NonPublic);
                 pi2.SetValue(dataGridOpravy, true, null);
+
+                Type dgvType3 = dgvAnalysis.GetType();
+                PropertyInfo pi3 = dgvType3.GetProperty("DoubleBuffered",
+                  BindingFlags.Instance | BindingFlags.NonPublic);
+                pi3.SetValue(dgvAnalysis, true, null);
             }
 
             form = this;
@@ -106,7 +112,7 @@ namespace Reklamace_Kion
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
 
-                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = false;
+                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = false;
                         }
                         else if (Level == "20")
                         {
@@ -115,7 +121,7 @@ namespace Reklamace_Kion
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
 
-                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = false;
+                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = false;
                         }
                         else if (Level == "10")
                         {
@@ -333,6 +339,32 @@ namespace Reklamace_Kion
                     MessageBox.Show(ex.Message);
                 }
             }
+            else if ((curTab == 2) && ((Level == "100") || (Level == "20") || (Level == "5")))
+            {
+                try
+                {
+                    string CLM = (string)dgvAnalysis.CurrentRow.Cells[0].Value;
+
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s CLM: " + CLM + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand delData = new SqlCommand("DELETE FROM DataAnalysis WHERE CLM='" + CLM + "'", conn);
+                        delData.ExecuteNonQuery();
+
+                        SqlCommand delData2 = new SqlCommand("DELETE FROM DataAnalysis_BB WHERE CLM='" + CLM + "'", conn);
+                        delData2.ExecuteNonQuery();
+
+                        conn.Close();
+
+                        loadDgvAnalysis();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -344,6 +376,9 @@ namespace Reklamace_Kion
                     break;
                 case 1:
                     curTab = 1;
+                    break;
+                case 2:
+                    curTab = 2;
                     break;
             }
         }
@@ -1103,6 +1138,214 @@ namespace Reklamace_Kion
         {
             Report.Report repForm = new Report.Report();
             repForm.Show();
+        }
+
+        private void toolStripAddToAnalysis_Click(object sender, EventArgs e)
+        {
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                try
+                {
+                    string actualCellValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
+
+                    DialogResult resultBox = MessageBox.Show("Přidat k analýzam " + actualCellValue + "?", "Přidat", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (resultBox == DialogResult.Yes)
+                    {
+                        string sqlRepairs = "SELECT COUNT(*) from DataAnalysis where CLM like '" + actualCellValue + "'";
+                        SqlCommand cmdCount = new SqlCommand(sqlRepairs, conn);
+
+                        conn.Open();
+                        int dataCount = (int)cmdCount.ExecuteScalar();
+                        conn.Close();
+
+                        if (dataCount == 0)
+                        {
+                            conn.Open();
+                            SqlCommand cmd = new SqlCommand("INSERT INTO DataAnalysis (CLM) values('" + actualCellValue + "')", conn);
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+
+                            lblActionInfo.ForeColor = Color.Green;
+                            lblActionInfo.Text = "Záznam " + actualCellValue + " byl přidán k analýze.";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tento záznam již existuje.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        string sqlBB = "SELECT COUNT(*) from DataAnalysis_BB where CLM like '" + actualCellValue + "'";
+                        SqlCommand cmdBBCount = new SqlCommand(sqlBB, conn);
+
+                        conn.Open();
+                        int dataBBCount = (int)cmdBBCount.ExecuteScalar();
+                        conn.Close();
+
+                        if (dataBBCount == 0)
+                        {
+                            conn.Open();
+                            SqlCommand cmd = new SqlCommand("INSERT INTO DataAnalysis_BB (CLM) values('" + actualCellValue + "')", conn);
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tento záznam již existuje.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        public static string SafeGetString(SqlDataReader reader, int colIndex)
+        {
+            if (!reader.IsDBNull(colIndex))
+            {
+                return reader.GetString(colIndex);
+            }
+            return string.Empty;
+        }
+
+        public static double SafeGetDouble(SqlDataReader reader, int colIndex)
+        {
+            if (!reader.IsDBNull(colIndex))
+            {
+                return reader.GetDouble(colIndex);
+            }
+            return -0;
+        }
+
+        public static bool SafeGetBool(SqlDataReader reader, int colIndex)
+        {
+            if (!reader.IsDBNull(colIndex))
+            {
+                return reader.GetBoolean(colIndex);
+            }
+            return false;
+        }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            try
+            {
+                if (tabControl1.SelectedTab == tabControl1.TabPages[2])
+                {
+                    loadDgvAnalysis();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void loadDgvAnalysis()
+        {
+            dgvAnalysis.Rows.Clear();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM DataAnalysis", conn);
+            using (SqlDataReader rdr = cmd.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    dgvAnalysis.Rows.Add(SafeGetString(rdr, 1), SafeGetString(rdr, 2), SafeGetDouble(rdr, 3), SafeGetString(rdr, 4), SafeGetString(rdr, 5), SafeGetDouble(rdr, 6), SafeGetDouble(rdr, 7), SafeGetString(rdr, 8), SafeGetString(rdr, 9), SafeGetString(rdr, 10), SafeGetDouble(rdr, 11), SafeGetString(rdr, 12), SafeGetString(rdr, 13), "", SafeGetString(rdr, 14), SafeGetString(rdr, 15), SafeGetString(rdr, 16), SafeGetString(rdr, 17), SafeGetString(rdr, 18), SafeGetBool(rdr, 19), SafeGetBool(rdr, 20), SafeGetBool(rdr, 21), SafeGetBool(rdr, 22), SafeGetBool(rdr, 23), SafeGetBool(rdr, 24), SafeGetString(rdr, 25), SafeGetString(rdr, 26));
+                    //dgvAnalysis.Rows.Add(rdr.GetString(1), rdr.GetString(2), rdr.GetDouble(3), rdr.GetString(4), rdr.GetString(5), rdr.GetDouble(6), rdr.GetDouble(7), rdr.GetString(8), rdr.GetString(9), rdr.GetString(10), rdr.GetDouble(11), rdr.GetString(12), rdr.GetString(13), "",rdr.GetString(14), rdr.GetString(15), rdr.GetString(16), rdr.GetString(17), rdr.GetString(18), rdr.GetBoolean(19), rdr.GetBoolean(20), rdr.GetBoolean(21), rdr.GetBoolean(22), rdr.GetBoolean(23), rdr.GetBoolean(24), rdr.GetString(25), rdr.GetString(26));
+                }
+            }
+
+            conn.Close();
+        }
+
+        private void dgvAnalysis_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAnalysis.Columns[e.ColumnIndex].Name == "Column26")
+            {
+                if (e.RowIndex >= 0)
+                {
+                    BlackBoxData blackBoxData = new BlackBoxData();
+                    blackBoxData.Id = e.RowIndex;
+                    blackBoxData.CLM = dgvAnalysis[0, e.RowIndex].Value.ToString();
+                    blackBoxData.Show();
+                }
+            }
+        }
+
+        private void dgvAnalysis_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabControl1.TabPages[2])
+            {
+                string CommandText = string.Empty;
+                string columnName = dgvAnalysis.Columns[e.ColumnIndex].HeaderText;
+                string rowId = dgvAnalysis[0, e.RowIndex].Value.ToString();
+                string newValue = dgvAnalysis[e.ColumnIndex, e.RowIndex].Value.ToString();
+
+                if (columnName == "Visual_State") { CommandText = "UPDATE DataAnalysis SET Visual_State = @newval WHERE CLM = @id"; }
+                else if (columnName == "Voltage_(V)") { CommandText = "UPDATE DataAnalysis SET Voltage_V = @newval WHERE CLM = @id"; }
+                else if (columnName == "BMS_Function_OK") { CommandText = "UPDATE DataAnalysis SET BMS_Function_OK = @newval WHERE CLM = @id"; }
+                else if (columnName == "PrtScn_Overview") { CommandText = "UPDATE DataAnalysis SET PrtScn_Overview = @newval WHERE CLM = @id"; }
+                else if (columnName == "Actual_Current_(A)") { CommandText = "UPDATE DataAnalysis SET Actuall_Current_A = @newval WHERE CLM = @id"; }
+                else if (columnName == "Voltage_Diag_Con_Pin3_4_(V)") { CommandText = "UPDATE DataAnalysis SET Voltage_Diag_Con_Pin3_4_V = @newval WHERE CLM = @id"; }
+                else if (columnName == "SMU_CRC") { CommandText = "UPDATE DataAnalysis SET SMU_CRC = @newval WHERE CLM = @id"; }
+                else if (columnName == "Calib_Const_IG") { CommandText = "UPDATE DataAnalysis SET Calib_Const_IG = @newval WHERE CLM = @id"; }
+                else if (columnName == "Calib_Const_IO") { CommandText = "UPDATE DataAnalysis SET Calib_Const_IO = @newval WHERE CLM = @id"; }
+                else if (columnName == "CAN_Speed_(kbps)") { CommandText = "UPDATE DataAnalysis SET CAN_Speed_kbps = @newval WHERE CLM = @id"; }
+                else if (columnName == "Brand_ID") { CommandText = "UPDATE DataAnalysis SET Brand_ID = @newval WHERE CLM = @id"; }
+                else if (columnName == "BlackBox_Downloaded") { CommandText = "UPDATE DataAnalysis SET BlackBox_Downloaded = @newval WHERE CLM = @id"; }
+                else if (columnName == "Critical_Fault") { CommandText = "UPDATE DataAnalysis SET Critical_Fault = @newval WHERE CLM = @id"; }
+                else if (columnName == "Pofbit_CBIT") { CommandText = "UPDATE DataAnalysis SET Pofbit_CBIT = @newval WHERE CLM = @id"; }
+                else if (columnName == "Fault_Description") { CommandText = "UPDATE DataAnalysis SET Fault_Description = @newval WHERE CLM = @id"; }
+                else if (columnName == "Production_Date") { CommandText = "UPDATE DataAnalysis SET Production_Date = @newval WHERE CLM = @id"; }
+                else if (columnName == "Warranty_(2_5_years)") { CommandText = "UPDATE DataAnalysis SET Warranty_2_5_years = @newval WHERE CLM = @id"; }
+                else if (columnName == "Charged") { CommandText = "UPDATE DataAnalysis SET Charged = @newval WHERE CLM = @id"; }
+                else if (columnName == "Discharged") { CommandText = "UPDATE DataAnalysis SET Discharged = @newval WHERE CLM = @id"; }
+                else if (columnName == "Capacity_Test") { CommandText = "UPDATE DataAnalysis SET Capacity_Test = @newval WHERE CLM = @id"; }
+                else if (columnName == "Contiunity_Test") { CommandText = "UPDATE DataAnalysis SET Contiunity_Test = @newval WHERE CLM = @id"; }
+                else if (columnName == "Function_Test") { CommandText = "UPDATE DataAnalysis SET Function_Test = @newval WHERE CLM = @id"; }
+                else if (columnName == "BMS_Test") { CommandText = "UPDATE DataAnalysis SET BMS_Test = @newval WHERE CLM = @id"; }
+                else if (columnName == "BMS_Test_Result") { CommandText = "UPDATE DataAnalysis SET BMS_Test_Result = @newval WHERE CLM = @id"; }
+                else if (columnName == "Result") { CommandText = "UPDATE DataAnalysis SET Result = @newval WHERE CLM = @id"; }
+
+                try
+                {
+                    if (CommandText != string.Empty)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand(CommandText, conn);
+                        cmd.Parameters.AddWithValue("@newval", newValue);
+                        cmd.Parameters.AddWithValue("@id", rowId);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        lblActionInfo.ForeColor = Color.Green;
+                        lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
+                        //form.DataRepair.Clear();
+                        //dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void přidatKódToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                FaultCodes.AddFaultCode faultCodesAdd = new FaultCodes.AddFaultCode();
+                faultCodesAdd.Show();
+            }
+        }
+
+        private void upravitKódyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FaultCodes.ListFaultCodes listFaultCodes = new FaultCodes.ListFaultCodes();
+            listFaultCodes.Show();
         }
     }
 }
