@@ -38,6 +38,7 @@ namespace Reklamace_Kion
             tabControl1.TabPages[0].Text = "Reklamace";
             tabControl1.TabPages[1].Text = "Opravy";
             tabControl1.TabPages[2].Text = "Analýzy";
+            tabControl1.TabPages[3].Text = "Expedice";
 
             btnAddData.Visible = false;
             btnDelData.Visible = false;
@@ -59,6 +60,11 @@ namespace Reklamace_Kion
                 PropertyInfo pi3 = dgvType3.GetProperty("DoubleBuffered",
                   BindingFlags.Instance | BindingFlags.NonPublic);
                 pi3.SetValue(dgvAnalysis, true, null);
+
+                Type dgvType4 = dgvExpedition.GetType();
+                PropertyInfo pi4 = dgvType4.GetProperty("DoubleBuffered",
+                  BindingFlags.Instance | BindingFlags.NonPublic);
+                pi4.SetValue(dgvExpedition, true, null);
             }
 
             form = this;
@@ -260,6 +266,24 @@ namespace Reklamace_Kion
                 repairForm.MyLevel = Level;
                 repairForm.Show();
             }
+            else if ((curTab == 3) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5")))
+            {
+                try
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO DataExpedition (Type_of_Palette) VALUES ('')", conn);
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    loadDgvExpedition();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -365,6 +389,29 @@ namespace Reklamace_Kion
                     MessageBox.Show(ex.Message);
                 }
             }
+            else if ((curTab == 3) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5")))
+            {
+                try
+                {
+                    int id = (int)dgvExpedition.CurrentRow.Cells[0].Value;
+
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s Expedition ID: " + id + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand delData = new SqlCommand("DELETE FROM DataExpedition WHERE Expedition_Id=" + id + "", conn);
+                        delData.ExecuteNonQuery();
+
+                        conn.Close();
+
+                        loadDgvExpedition();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -379,6 +426,9 @@ namespace Reklamace_Kion
                     break;
                 case 2:
                     curTab = 2;
+                    break;
+                case 3:
+                    curTab = 3;
                     break;
             }
         }
@@ -1236,6 +1286,10 @@ namespace Reklamace_Kion
                 {
                     loadDgvAnalysis();
                 }
+                else if (tabControl1.SelectedTab == tabControl1.TabPages[3])
+                {
+                    loadDgvExpedition();
+                }
             }
             catch (Exception ex)
             {
@@ -1255,6 +1309,23 @@ namespace Reklamace_Kion
                 {
                     dgvAnalysis.Rows.Add(SafeGetString(rdr, 1), SafeGetString(rdr, 2), SafeGetDouble(rdr, 3), SafeGetString(rdr, 4), SafeGetString(rdr, 5), SafeGetDouble(rdr, 6), SafeGetDouble(rdr, 7), SafeGetString(rdr, 8), SafeGetString(rdr, 9), SafeGetString(rdr, 10), SafeGetDouble(rdr, 11), SafeGetString(rdr, 12), SafeGetString(rdr, 13), "", SafeGetString(rdr, 14), SafeGetString(rdr, 15), SafeGetString(rdr, 16), SafeGetString(rdr, 17), SafeGetString(rdr, 18), SafeGetBool(rdr, 19), SafeGetBool(rdr, 20), SafeGetBool(rdr, 21), SafeGetBool(rdr, 22), SafeGetBool(rdr, 23), SafeGetBool(rdr, 24), SafeGetString(rdr, 25), SafeGetString(rdr, 26));
                     //dgvAnalysis.Rows.Add(rdr.GetString(1), rdr.GetString(2), rdr.GetDouble(3), rdr.GetString(4), rdr.GetString(5), rdr.GetDouble(6), rdr.GetDouble(7), rdr.GetString(8), rdr.GetString(9), rdr.GetString(10), rdr.GetDouble(11), rdr.GetString(12), rdr.GetString(13), "",rdr.GetString(14), rdr.GetString(15), rdr.GetString(16), rdr.GetString(17), rdr.GetString(18), rdr.GetBoolean(19), rdr.GetBoolean(20), rdr.GetBoolean(21), rdr.GetBoolean(22), rdr.GetBoolean(23), rdr.GetBoolean(24), rdr.GetString(25), rdr.GetString(26));
+                }
+            }
+
+            conn.Close();
+        }
+
+        private void loadDgvExpedition()
+        {
+            dgvExpedition.Rows.Clear();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM DataExpedition", conn);
+            using (SqlDataReader rdr = cmd.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    dgvExpedition.Rows.Add(rdr.GetValue(0), SafeGetString(rdr, 1), SafeGetString(rdr, 2), "+", SafeGetString(rdr, 3), "+", SafeGetString(rdr, 4), "+", SafeGetString(rdr, 5), "+", SafeGetString(rdr, 6), "+", SafeGetString(rdr, 7), "+", SafeGetString(rdr, 8), SafeGetString(rdr, 9), SafeGetString(rdr, 10));
                 }
             }
 
@@ -1346,6 +1417,121 @@ namespace Reklamace_Kion
         {
             FaultCodes.ListFaultCodes listFaultCodes = new FaultCodes.ListFaultCodes();
             listFaultCodes.Show();
+        }
+
+        bool selectClaim = false;
+        int rowSelectClaim = 0;
+        string colSelectClaim = string.Empty;
+
+        private void dgvExpedition_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var x = dgvExpedition.Columns[e.ColumnIndex].Name;
+            if ((x == "Column_3_add") || (x == "Column_4_add") || (x == "Column_5_add") || (x == "Column_6_add") || (x == "Column_7_add") || (x == "Column_8_add"))
+            {
+                if (e.RowIndex >= 0)
+                {
+                    selectClaim = true;
+                    rowSelectClaim = dgvExpedition.Rows[e.RowIndex].Index;
+                    colSelectClaim = dgvExpedition.Columns[e.ColumnIndex - 1].Name;
+                    tabControl1.SelectedTab = tabPage2;
+                }
+            }
+        }
+
+        private void dataGridOpravy_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (selectClaim)
+            {
+                string PNValue = dataGridOpravy.SelectedCells[3].Value.ToString();
+                string SNValue = dataGridOpravy.SelectedCells[4].Value.ToString();
+                string final = PNValue + "_" + SNValue;
+
+                tabControl1.SelectedTab = tabPage4;
+
+                try
+                {
+                    conn.Open();
+
+                    SqlCommand cmdCount = new SqlCommand("SELECT COUNT(*) from DataExpedition where Position_1 like '" + final + "' OR Position_2 like '" + final + "' OR Position_3 like '" + final + "' OR Position_4 like '" + final + "' OR Position_5 like '" + final + "' OR Position_6 like '" + final + "'", conn);
+
+                    int count = (int)cmdCount.ExecuteScalar();
+                    conn.Close();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("PN a SN baterie je již v seznamu expedice.", "Upozornění", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        dgvExpedition.Rows[rowSelectClaim].Cells[colSelectClaim].Value = final;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                selectClaim = false;
+            }
+        }
+
+        private void dgvExpedition_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabControl1.TabPages[3])
+            {
+                string CommandText = string.Empty;
+                string columnName = dgvExpedition.Columns[e.ColumnIndex].HeaderText;
+                string rowId = dgvExpedition[0, e.RowIndex].Value.ToString();
+                string newValue = String.Empty;
+                if (dgvExpedition[e.ColumnIndex, e.RowIndex].Value == null)
+                {
+                    newValue = String.Empty;
+                }
+                else
+                {
+                    newValue = dgvExpedition[e.ColumnIndex, e.RowIndex].Value.ToString();
+                }
+
+                if (columnName == "Typ palety") { CommandText = "UPDATE DataExpedition SET Type_of_Palette = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "1. Pozice") { CommandText = "UPDATE DataExpedition SET Position_1 = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "2. Pozice") { CommandText = "UPDATE DataExpedition SET Position_2 = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "3. Pozice") { CommandText = "UPDATE DataExpedition SET Position_3 = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "4. Pozice") { CommandText = "UPDATE DataExpedition SET Position_4 = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "5. Pozice") { CommandText = "UPDATE DataExpedition SET Position_5 = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "6. Pozice") { CommandText = "UPDATE DataExpedition SET Position_6 = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "Místo") { CommandText = "UPDATE DataExpedition SET Place = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "Datum přípravy") { CommandText = "UPDATE DataExpedition SET Date_of_prepare = @newval WHERE Expedition_Id = @id"; }
+                else if (columnName == "Datum expedice") { CommandText = "UPDATE DataExpedition SET Date_of_expedition = @newval WHERE Expedition_Id = @id"; }
+
+                try
+                {
+                    if (CommandText != string.Empty)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand(CommandText, conn);
+                        cmd.Parameters.AddWithValue("@newval", newValue);
+                        cmd.Parameters.AddWithValue("@id", rowId);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        lblActionInfo.ForeColor = Color.Green;
+                        lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
+                        //form.DataRepair.Clear();
+                        //dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void RemoveValue_Click(object sender, EventArgs e)
+        {
+            if ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5"))
+            {
+                dgvExpedition.CurrentCell.Value = string.Empty;
+            }
         }
     }
 }
