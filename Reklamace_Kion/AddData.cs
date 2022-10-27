@@ -127,11 +127,11 @@ namespace Reklamace_Kion
                         string dir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\";
                         string CLMDir = CLM;
                         string BatteryDir = "undefined";
-                        string ComponentDir = PNClaimedComponent + "_" + SNClaimedComponent;
+                        string ComponentDir = PNClaimedComponent.Substring(0,6) + "_" + SNClaimedComponent;
 
                         if ((PNBattery != string.Empty) || (SNBattery != string.Empty))
                         {
-                            BatteryDir = PNBattery + "_" + SNBattery;
+                            BatteryDir = PNBattery.Substring(0, 6) + "_" + SNBattery;
                         }
 
                         string path = dir + CLMDir + @"\" + BatteryDir + @"\" + ComponentDir;

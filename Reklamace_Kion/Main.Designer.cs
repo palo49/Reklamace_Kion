@@ -39,11 +39,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -62,33 +64,10 @@
             this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvAnalysis = new ADGV.AdvancedDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dgvExpedition = new ADGV.AdvancedDataGridView();
+            this.cellContextExpedition = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.RemoveValue = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.změnitHesloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -128,8 +107,6 @@
             this.btnResetFiltr = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dgvExpedition = new ADGV.AdvancedDataGridView();
             this.Column_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -144,11 +121,12 @@
             this.Column_7_add = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column_8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_8_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column_9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column_10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cellContextExpedition = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.RemoveValue = new System.Windows.Forms.ToolStripMenuItem();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -158,12 +136,12 @@
             this.cellContextRepairs.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnalysis)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpedition)).BeginInit();
             this.cellContextExpedition.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -434,33 +412,8 @@
             this.dgvAnalysis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAnalysis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column6,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
             this.Column26,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column27,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.Column20,
-            this.Column21,
-            this.Column22,
-            this.Column23,
-            this.Column24,
             this.Column25});
-            this.dgvAnalysis.ContextMenuStrip = this.cellContextRepairs;
             this.dgvAnalysis.DateWithTime = false;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
@@ -483,270 +436,86 @@
             this.dgvAnalysis.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnalysis_CellContentClick);
             this.dgvAnalysis.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnalysis_CellValueChanged);
             // 
-            // Column1
+            // tabPage4
             // 
-            this.Column1.HeaderText = "CLM";
-            this.Column1.MinimumWidth = 22;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column1.Width = 59;
+            this.tabPage4.Controls.Add(this.dgvExpedition);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(821, 514);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // Column6
+            // dgvExpedition
             // 
-            this.Column6.HeaderText = "Visual_State";
-            this.Column6.MinimumWidth = 22;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column6.Width = 107;
+            this.dgvExpedition.AllowUserToAddRows = false;
+            this.dgvExpedition.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.dgvExpedition.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvExpedition.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvExpedition.AutoGenerateContextFilters = true;
+            this.dgvExpedition.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
+            this.dgvExpedition.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvExpedition.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.dgvExpedition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExpedition.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_1,
+            this.Column_2,
+            this.Column_3,
+            this.Column_3_add,
+            this.Column_4,
+            this.Column_4_add,
+            this.Column_5,
+            this.Column_5_add,
+            this.Column_6,
+            this.Column_6_add,
+            this.Column_7,
+            this.Column_7_add,
+            this.Column_8,
+            this.Column_8_add,
+            this.Column_9,
+            this.Column_10,
+            this.Column_11});
+            this.dgvExpedition.ContextMenuStrip = this.cellContextExpedition;
+            this.dgvExpedition.DateWithTime = false;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(213)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExpedition.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvExpedition.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvExpedition.Location = new System.Drawing.Point(0, 0);
+            this.dgvExpedition.MultiSelect = false;
+            this.dgvExpedition.Name = "dgvExpedition";
+            this.dgvExpedition.RowHeadersVisible = false;
+            this.dgvExpedition.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvExpedition.Size = new System.Drawing.Size(821, 514);
+            this.dgvExpedition.TabIndex = 0;
+            this.dgvExpedition.TimeFilter = false;
+            this.dgvExpedition.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpedition_CellContentClick);
+            this.dgvExpedition.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvExpedition_CellMouseDown);
+            this.dgvExpedition.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpedition_CellValueChanged);
             // 
-            // Column2
+            // cellContextExpedition
             // 
-            this.Column2.HeaderText = "Voltage_(V)";
-            this.Column2.MinimumWidth = 22;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column2.Width = 103;
+            this.cellContextExpedition.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RemoveValue});
+            this.cellContextExpedition.Name = "cellContextExpedition";
+            this.cellContextExpedition.Size = new System.Drawing.Size(203, 26);
             // 
-            // Column3
+            // RemoveValue
             // 
-            this.Column3.HeaderText = "BMS_Function_OK";
-            this.Column3.Items.AddRange(new object[] {
-            "",
-            "Ano",
-            "Ne"});
-            this.Column3.MinimumWidth = 22;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column3.Width = 143;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "PrtScn_Overview";
-            this.Column4.Items.AddRange(new object[] {
-            "",
-            "Ano",
-            "Ne"});
-            this.Column4.MinimumWidth = 22;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column4.Width = 134;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Actual_Current_(A)";
-            this.Column5.MinimumWidth = 22;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column5.Width = 142;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Voltage_Diag_Con_Pin3_4_(V)";
-            this.Column7.MinimumWidth = 22;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column7.Width = 217;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "SMU_CRC";
-            this.Column8.MinimumWidth = 22;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column8.Width = 97;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Calib_Const_IG";
-            this.Column9.MinimumWidth = 22;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column9.Width = 124;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Calib_Const_IO";
-            this.Column10.MinimumWidth = 22;
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column10.Width = 124;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "CAN_Speed_(kbps)";
-            this.Column11.MinimumWidth = 22;
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column11.Width = 153;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Brand_ID";
-            this.Column12.MinimumWidth = 22;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column12.Width = 88;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "BlackBox_Downloaded";
-            this.Column13.Items.AddRange(new object[] {
-            "",
-            "Ano",
-            "Ne"});
-            this.Column13.MinimumWidth = 22;
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column13.Width = 173;
-            // 
-            // Column26
-            // 
-            this.Column26.HeaderText = "BlackBox_Data";
-            this.Column26.MinimumWidth = 22;
-            this.Column26.Name = "Column26";
-            this.Column26.ReadOnly = true;
-            this.Column26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column26.Text = "Data";
-            this.Column26.UseColumnTextForButtonValue = true;
-            this.Column26.Width = 125;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Critical_Fault";
-            this.Column14.MinimumWidth = 22;
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column14.Width = 108;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Pofbit_CBIT";
-            this.Column15.MinimumWidth = 22;
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column15.Width = 103;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "Fault_Description";
-            this.Column16.MinimumWidth = 22;
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            this.Column16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column16.Width = 136;
-            // 
-            // Column27
-            // 
-            this.Column27.HeaderText = "Production_Date";
-            this.Column27.MinimumWidth = 22;
-            this.Column27.Name = "Column27";
-            this.Column27.ReadOnly = true;
-            this.Column27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column27.Width = 132;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Warranty_(2_5_years)";
-            this.Column17.Items.AddRange(new object[] {
-            "",
-            "Ano",
-            "Ne"});
-            this.Column17.MinimumWidth = 22;
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            this.Column17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column17.Width = 163;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "Charged";
-            this.Column18.MinimumWidth = 22;
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column18.Width = 84;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "Discharged";
-            this.Column19.MinimumWidth = 22;
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column19.Width = 102;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "Capacity_Test";
-            this.Column20.MinimumWidth = 22;
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column20.Width = 119;
-            // 
-            // Column21
-            // 
-            this.Column21.HeaderText = "Contiunity_Test";
-            this.Column21.MinimumWidth = 22;
-            this.Column21.Name = "Column21";
-            this.Column21.ReadOnly = true;
-            this.Column21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column21.Width = 123;
-            // 
-            // Column22
-            // 
-            this.Column22.HeaderText = "Function_Test";
-            this.Column22.MinimumWidth = 22;
-            this.Column22.Name = "Column22";
-            this.Column22.ReadOnly = true;
-            this.Column22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column22.Width = 116;
-            // 
-            // Column23
-            // 
-            this.Column23.HeaderText = "BMS_Test";
-            this.Column23.MinimumWidth = 22;
-            this.Column23.Name = "Column23";
-            this.Column23.ReadOnly = true;
-            this.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column23.Width = 95;
-            // 
-            // Column24
-            // 
-            this.Column24.HeaderText = "BMS_Test_Result";
-            this.Column24.MinimumWidth = 22;
-            this.Column24.Name = "Column24";
-            this.Column24.ReadOnly = true;
-            this.Column24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column24.Width = 140;
-            // 
-            // Column25
-            // 
-            this.Column25.HeaderText = "Result";
-            this.Column25.Items.AddRange(new object[] {
-            "",
-            "Uznáno",
-            "Neuznáno"});
-            this.Column25.MinimumWidth = 22;
-            this.Column25.Name = "Column25";
-            this.Column25.ReadOnly = true;
-            this.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column25.Width = 70;
+            this.RemoveValue.Image = ((System.Drawing.Image)(resources.GetObject("RemoveValue.Image")));
+            this.RemoveValue.Name = "RemoveValue";
+            this.RemoveValue.Size = new System.Drawing.Size(202, 22);
+            this.RemoveValue.Text = "Smazat vybranou buňku";
+            this.RemoveValue.Click += new System.EventHandler(this.RemoveValue_Click);
             // 
             // menuStrip1
             // 
@@ -1187,59 +956,6 @@
             this.btnUsers.Visible = false;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.dgvExpedition);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(821, 514);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // dgvExpedition
-            // 
-            this.dgvExpedition.AllowUserToAddRows = false;
-            this.dgvExpedition.AllowUserToDeleteRows = false;
-            this.dgvExpedition.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvExpedition.AutoGenerateContextFilters = true;
-            this.dgvExpedition.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(250)))), ((int)(((byte)(224)))));
-            this.dgvExpedition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvExpedition.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_1,
-            this.Column_2,
-            this.Column_3,
-            this.Column_3_add,
-            this.Column_4,
-            this.Column_4_add,
-            this.Column_5,
-            this.Column_5_add,
-            this.Column_6,
-            this.Column_6_add,
-            this.Column_7,
-            this.Column_7_add,
-            this.Column_8,
-            this.Column_8_add,
-            this.Column_9,
-            this.Column_10,
-            this.Column_11});
-            this.dgvExpedition.ContextMenuStrip = this.cellContextExpedition;
-            this.dgvExpedition.DateWithTime = false;
-            this.dgvExpedition.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dgvExpedition.Location = new System.Drawing.Point(0, 0);
-            this.dgvExpedition.MultiSelect = false;
-            this.dgvExpedition.Name = "dgvExpedition";
-            this.dgvExpedition.RowHeadersVisible = false;
-            this.dgvExpedition.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvExpedition.Size = new System.Drawing.Size(821, 514);
-            this.dgvExpedition.TabIndex = 0;
-            this.dgvExpedition.TimeFilter = false;
-            this.dgvExpedition.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpedition_CellContentClick);
-            this.dgvExpedition.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpedition_CellValueChanged);
-            // 
             // Column_1
             // 
             this.Column_1.HeaderText = "Expedition ID";
@@ -1259,6 +975,7 @@
             this.Column_2.MinimumWidth = 22;
             this.Column_2.Name = "Column_2";
             this.Column_2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_2.Width = 130;
             // 
             // Column_3
             // 
@@ -1271,9 +988,9 @@
             // 
             // Column_3_add
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.NullValue = "+";
-            this.Column_3_add.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.NullValue = "+";
+            this.Column_3_add.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column_3_add.HeaderText = "";
             this.Column_3_add.MinimumWidth = 22;
             this.Column_3_add.Name = "Column_3_add";
@@ -1293,9 +1010,9 @@
             // 
             // Column_4_add
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.NullValue = "+";
-            this.Column_4_add.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.NullValue = "+";
+            this.Column_4_add.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column_4_add.HeaderText = "";
             this.Column_4_add.MinimumWidth = 22;
             this.Column_4_add.Name = "Column_4_add";
@@ -1314,9 +1031,9 @@
             // 
             // Column_5_add
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.NullValue = "+";
-            this.Column_5_add.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.NullValue = "+";
+            this.Column_5_add.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column_5_add.HeaderText = "";
             this.Column_5_add.MinimumWidth = 22;
             this.Column_5_add.Name = "Column_5_add";
@@ -1336,9 +1053,9 @@
             // 
             // Column_6_add
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.NullValue = "+";
-            this.Column_6_add.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.NullValue = "+";
+            this.Column_6_add.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column_6_add.HeaderText = "";
             this.Column_6_add.MinimumWidth = 22;
             this.Column_6_add.Name = "Column_6_add";
@@ -1357,9 +1074,9 @@
             // 
             // Column_7_add
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.NullValue = "+";
-            this.Column_7_add.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.NullValue = "+";
+            this.Column_7_add.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column_7_add.HeaderText = "";
             this.Column_7_add.MinimumWidth = 22;
             this.Column_7_add.Name = "Column_7_add";
@@ -1378,9 +1095,9 @@
             // 
             // Column_8_add
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.NullValue = "+";
-            this.Column_8_add.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.NullValue = "+";
+            this.Column_8_add.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column_8_add.HeaderText = "";
             this.Column_8_add.MinimumWidth = 22;
             this.Column_8_add.Name = "Column_8_add";
@@ -1391,8 +1108,14 @@
             // Column_9
             // 
             this.Column_9.HeaderText = "Místo";
+            this.Column_9.Items.AddRange(new object[] {
+            "",
+            "Opravy",
+            "KION",
+            "Expedice"});
             this.Column_9.MinimumWidth = 22;
             this.Column_9.Name = "Column_9";
+            this.Column_9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column_9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // Column_10
@@ -1409,20 +1132,41 @@
             this.Column_11.Name = "Column_11";
             this.Column_11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // cellContextExpedition
+            // Column1
             // 
-            this.cellContextExpedition.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RemoveValue});
-            this.cellContextExpedition.Name = "cellContextExpedition";
-            this.cellContextExpedition.Size = new System.Drawing.Size(203, 48);
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = "CLM";
+            this.Column1.MinimumWidth = 22;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column1.Width = 120;
             // 
-            // RemoveValue
+            // Column26
             // 
-            this.RemoveValue.Image = ((System.Drawing.Image)(resources.GetObject("RemoveValue.Image")));
-            this.RemoveValue.Name = "RemoveValue";
-            this.RemoveValue.Size = new System.Drawing.Size(202, 22);
-            this.RemoveValue.Text = "Smazat vybranou buňku";
-            this.RemoveValue.Click += new System.EventHandler(this.RemoveValue_Click);
+            this.Column26.HeaderText = "BlackBox_Data";
+            this.Column26.MinimumWidth = 22;
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            this.Column26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column26.Text = "Data";
+            this.Column26.UseColumnTextForButtonValue = true;
+            this.Column26.Width = 125;
+            // 
+            // Column25
+            // 
+            this.Column25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column25.FillWeight = 120F;
+            this.Column25.HeaderText = "Result";
+            this.Column25.Items.AddRange(new object[] {
+            " ",
+            "Uznáno",
+            "Neuznáno"});
+            this.Column25.MinimumWidth = 22;
+            this.Column25.Name = "Column25";
+            this.Column25.ReadOnly = true;
+            this.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column25.Width = 120;
             // 
             // Main
             // 
@@ -1467,14 +1211,14 @@
             this.cellContextRepairs.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnalysis)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpedition)).EndInit();
+            this.cellContextExpedition.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExpedition)).EndInit();
-            this.cellContextExpedition.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1536,38 +1280,13 @@
         private System.Windows.Forms.TabPage tabPage3;
         private ADGV.AdvancedDataGridView dgvAnalysis;
         private System.Windows.Forms.ToolStripMenuItem toolStripAddToAnalysis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewButtonColumn Column26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column21;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column22;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column25;
         private System.Windows.Forms.ToolStripMenuItem chybovéKódyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem přidatKódToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem upravitKódyToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage4;
         private ADGV.AdvancedDataGridView dgvExpedition;
+        private System.Windows.Forms.ContextMenuStrip cellContextExpedition;
+        private System.Windows.Forms.ToolStripMenuItem RemoveValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column_2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_3;
@@ -1582,10 +1301,11 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column_7_add;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_8;
         private System.Windows.Forms.DataGridViewButtonColumn Column_8_add;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_9;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column_9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_11;
-        private System.Windows.Forms.ContextMenuStrip cellContextExpedition;
-        private System.Windows.Forms.ToolStripMenuItem RemoveValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewButtonColumn Column26;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Column25;
     }
 }

@@ -46,61 +46,72 @@ namespace Reklamace_Kion
                     {
                         txtBattery.Text = rdr.GetString(2);
                         txtBMS.Text = rdr.GetString(3);
-                        cmbVoltage.Text = rdr.GetString(4);
-                        txtVoltage.Text = rdr.GetValue(5).ToString();
-                        cmbFunctBMS.Text = rdr.GetString(6);
-                        txtFunctionalBMS.Text = rdr.GetString(7);
-                        cmbWinDiag.Text = rdr.GetString(8);
-                        txtWinDiag.Text = rdr.GetString(9);
-                        cmbActualCurr.Text = rdr.GetString(10);
-                        txtActualCurr.Text = rdr.GetString(11);
-                        cmbPresence.Text = rdr.GetString(12);
-                        cmbPresence12.Text = rdr.GetString(13);
-                        cmbPresence24.Text = rdr.GetString(14);
-                        txtPresence.Text = rdr.GetString(15);
-                        cmbSMU.Text = rdr.GetString(16);
-                        txtSMUVal.Text = rdr.GetValue(17).ToString();
+                        cmbVisualState.Text = rdr.GetString(4);
+                        txtVisualState.Text = rdr.GetString(5);
+                        cmbPrtScn.Text = rdr.GetString(6);
+                        txtBrandID.Text = rdr.GetString(7);
+                        cmbVoltage.Text = rdr.GetString(8);
+                        txtVoltage.Text = rdr.GetValue(9).ToString();
+                        cmbFunctBMS.Text = rdr.GetString(10);
+                        txtFunctionalBMS.Text = rdr.GetString(11);
+                        cmbWinDiag.Text = rdr.GetString(12);
+                        txtWinDiag.Text = rdr.GetString(13);
+                        cmbActualCurr.Text = rdr.GetString(14);
+                        txtActualCurr.Text = rdr.GetString(15);
+                        cmbPresence.Text = rdr.GetString(16);
+                        cmbPresence12.Text = rdr.GetString(17);
+                        cmbPresence24.Text = rdr.GetString(18);
+                        txtPresence.Text = rdr.GetString(19);
+                        cmbSMU.Text = rdr.GetString(20);
+                        txtSMUVal.Text = rdr.GetValue(21).ToString();
                         //txtSMU.Text = rdr.GetString(18);
-                        cmbCurrentConst.Text = rdr.GetString(19);
-                        txtIG.Text = rdr.GetString(20);
-                        txtIO.Text = rdr.GetString(21);
-                        cmbCANSpeed.Text = rdr.GetString(22);
-                        txtCanSpeed.Text = rdr.GetValue(23).ToString();
+                        cmbCurrentConst.Text = rdr.GetString(23);
+                        txtIG.Text = rdr.GetString(24);
+                        txtIO.Text = rdr.GetString(25);
+                        cmbCANSpeed.Text = rdr.GetString(26);
+                        txtCanSpeed.Text = rdr.GetValue(27).ToString();
                         //txtCANKbps.Text = rdr.GetValue(24).ToString();
-                        cmbCRCofSW.Text = rdr.GetString(25);
-                        txtCRCofSW.Text = rdr.GetString(26);
-                        cmbBB.Text = rdr.GetString(27);
-                        txtBB.Text = rdr.GetString(28);
-                        cmbSaftCode.Text = rdr.GetString(29);
-                        cmbKionCode.Text = rdr.GetString(30);
-                        cmbKionDTC.Text = rdr.GetString(31);
-                        txtSaftCode1.Text = rdr.GetValue(32).ToString(); txtKionCode1.Text = rdr.GetValue(33).ToString(); txtKionDTC1.Text = rdr.GetValue(34).ToString();
-                        txtSaftCode2.Text = rdr.GetValue(35).ToString(); txtKionCode2.Text = rdr.GetValue(36).ToString(); txtKionDTC2.Text = rdr.GetValue(37).ToString();
-                        txtSaftCode3.Text = rdr.GetValue(38).ToString(); txtKionCode3.Text = rdr.GetValue(39).ToString(); txtKionDTC3.Text = rdr.GetValue(40).ToString();
-                        txtSaftCode4.Text = rdr.GetValue(41).ToString(); txtKionCode4.Text = rdr.GetValue(42).ToString(); txtKionDTC4.Text = rdr.GetValue(43).ToString();
-                        txtSaftCode5.Text = rdr.GetValue(44).ToString(); txtKionCode5.Text = rdr.GetValue(45).ToString(); txtKionDTC5.Text = rdr.GetValue(46).ToString();
-                        txtSaftCode6.Text = rdr.GetValue(47).ToString(); txtKionCode6.Text = rdr.GetValue(48).ToString(); txtKionDTC6.Text = rdr.GetValue(49).ToString();
-                        txtSaftCode7.Text = rdr.GetValue(50).ToString(); txtKionCode7.Text = rdr.GetValue(51).ToString(); txtKionDTC7.Text = rdr.GetValue(52).ToString();
-                        txtSaftCode8.Text = rdr.GetValue(53).ToString(); txtKionCode8.Text = rdr.GetValue(54).ToString(); txtKionDTC8.Text = rdr.GetValue(55).ToString();
-                        txtSaftCode9.Text = rdr.GetValue(56).ToString(); txtKionCode9.Text = rdr.GetValue(57).ToString(); txtKionDTC9.Text = rdr.GetValue(58).ToString();
-                        txtSaftCode10.Text = rdr.GetValue(59).ToString(); txtKionCode10.Text = rdr.GetValue(60).ToString(); txtKionDTC10.Text = rdr.GetValue(61).ToString();
-                        txtSaftCode11.Text = rdr.GetValue(62).ToString(); txtKionCode11.Text = rdr.GetValue(63).ToString(); txtKionDTC11.Text = rdr.GetValue(64).ToString();
-                        txtSaftCode12.Text = rdr.GetValue(65).ToString(); txtKionCode12.Text = rdr.GetValue(66).ToString(); txtKionDTC12.Text = rdr.GetValue(67).ToString();
-                        cmbCharging.Text = rdr.GetString(68);
-                        txtCharging.Text = rdr.GetString(69);
-                        cmbDischarging.Text = rdr.GetString(70);
-                        txtDischarging.Text = rdr.GetString(71);
-                        cmbRTC.Text = rdr.GetString(72);
-                        txtRTC.Text = rdr.GetString(73);
-                        cmbBMSTested.Text = rdr.GetString(74);
-                        txtBMSTested.Text = rdr.GetString(75);
-                        cmbReplacement.Text = rdr.GetString(76);
-                        txtReplacement.Text = rdr.GetString(77);
-                        cmbStatus.Text = rdr.GetString(78);
-                        txtStatus.Text = rdr.GetString(79);
-                        cmbWarranty.Text = rdr.GetString(80);
-                        txtWarranty.Text = rdr.GetString(81);
-                        dateWarranty.Text = rdr.GetString(82);
+                        cmbCRCofSW.Text = rdr.GetString(29);
+                        txtCRCofSW.Text = rdr.GetString(30);
+                        cmbBB.Text = rdr.GetString(31);
+                        txtBB.Text = rdr.GetString(32);
+                        txtSaftCode1.Text = rdr.GetValue(33).ToString(); txtKionCode1.Text = rdr.GetValue(34).ToString(); txtKionDTC1.Text = rdr.GetValue(35).ToString();
+                        txtSaftCode2.Text = rdr.GetValue(36).ToString(); txtKionCode2.Text = rdr.GetValue(37).ToString(); txtKionDTC2.Text = rdr.GetValue(38).ToString();
+                        txtSaftCode3.Text = rdr.GetValue(39).ToString(); txtKionCode3.Text = rdr.GetValue(40).ToString(); txtKionDTC3.Text = rdr.GetValue(41).ToString();
+                        txtSaftCode4.Text = rdr.GetValue(42).ToString(); txtKionCode4.Text = rdr.GetValue(43).ToString(); txtKionDTC4.Text = rdr.GetValue(44).ToString();
+                        txtSaftCode5.Text = rdr.GetValue(45).ToString(); txtKionCode5.Text = rdr.GetValue(46).ToString(); txtKionDTC5.Text = rdr.GetValue(47).ToString();
+                        txtSaftCode6.Text = rdr.GetValue(48).ToString(); txtKionCode6.Text = rdr.GetValue(49).ToString(); txtKionDTC6.Text = rdr.GetValue(50).ToString();
+                        txtSaftCode7.Text = rdr.GetValue(51).ToString(); txtKionCode7.Text = rdr.GetValue(52).ToString(); txtKionDTC7.Text = rdr.GetValue(53).ToString();
+                        txtSaftCode8.Text = rdr.GetValue(54).ToString(); txtKionCode8.Text = rdr.GetValue(55).ToString(); txtKionDTC8.Text = rdr.GetValue(56).ToString();
+                        txtSaftCode9.Text = rdr.GetValue(57).ToString(); txtKionCode9.Text = rdr.GetValue(58).ToString(); txtKionDTC9.Text = rdr.GetValue(59).ToString();
+                        txtSaftCode10.Text = rdr.GetValue(60).ToString(); txtKionCode10.Text = rdr.GetValue(61).ToString(); txtKionDTC10.Text = rdr.GetValue(62).ToString();
+                        txtSaftCode11.Text = rdr.GetValue(63).ToString(); txtKionCode11.Text = rdr.GetValue(64).ToString(); txtKionDTC11.Text = rdr.GetValue(65).ToString();
+                        txtSaftCode12.Text = rdr.GetValue(66).ToString(); txtKionCode12.Text = rdr.GetValue(67).ToString(); txtKionDTC12.Text = rdr.GetValue(68).ToString();
+                        cmbCharging.Text = rdr.GetString(69);
+                        txtCharging.Text = rdr.GetString(70);
+                        cmbDischarging.Text = rdr.GetString(71);
+                        txtDischarging.Text = rdr.GetString(72);
+                        cmbRTC.Text = rdr.GetString(73);
+                        txtRTC.Text = rdr.GetString(74);
+                        cmbBMSTested.Text = rdr.GetString(75);
+                        txtBMSTested.Text = rdr.GetString(76);
+                        cmbReplacement.Text = rdr.GetString(77);
+                        txtReplacement.Text = rdr.GetString(78);
+                        cmbCriticalFault.Text = rdr.GetString(79);
+                        txtCriticalFault.Text = rdr.GetString(80);
+                        cmbCBIT.Text = rdr.GetString(81);
+                        txtCBIT.Text = rdr.GetString(82);
+                        cmbCapacityTest.Text = rdr.GetString(83);
+                        txtCapacityTest.Text = rdr.GetString(84);
+                        cmbContiunityTest.Text = rdr.GetString(85);
+                        txtContiunityTest.Text = rdr.GetString(86);
+                        cmbFunctionTest.Text = rdr.GetString(87);
+                        txtFunctionTest.Text = rdr.GetString(88);
+                        cmbStatus.Text = rdr.GetString(89);
+                        txtStatus.Text = rdr.GetString(90);
+                        cmbWarranty.Text = rdr.GetString(91);
+                        txtWarranty.Text = rdr.GetString(92);
+                        dateWarranty.Text = rdr.GetString(93);
                     }
                 }
 
@@ -108,7 +119,12 @@ namespace Reklamace_Kion
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                
+                if(conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
             }
         }
 
@@ -215,7 +231,7 @@ namespace Reklamace_Kion
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("UPDATE DataAnalysis_BB SET Battery='" + txtBattery.Text + "', BMS='" + txtBMS.Text + "', ModuleVoltage_State='" + cmbVoltage.Text + "', ModuleVoltage=@modVoltage, Funct_BMS_State='" + cmbFunctBMS.Text + "', Funct_BMS='" + txtFunctionalBMS.Text + "', WinDiag_State='" + cmbWinDiag.Text + "', WinDiag='" + txtWinDiag.Text + "', ActualCurr_State='" + cmbActualCurr.Text + "', ActualCurr='" + txtActualCurr.Text + "', Presence_State='" + cmbPresence.Text + "', Presence_State12='" + cmbPresence12.Text + "', Presence_State24='" + cmbPresence24.Text + "', Presence='" + txtPresence.Text + "', SMU_State='" + cmbSMU.Text + "', SMU_Val=@smuVal, Current_Const_State='" + cmbCurrentConst.Text + "', Current_Const_IG='" + txtIG.Text + "', Current_Const_IO='" + txtIO.Text + "', CAN_Speed_State='" + cmbCANSpeed.Text + "', CAN_Speed_Val='" + txtCanSpeed.Text + "', CRC_of_SW_State='" + cmbCRCofSW.Text + "', CRC_of_SW='" + txtCRCofSW.Text + "', BB_State='" + cmbBB.Text + "', BB='" + txtBB.Text + "', Saft_Fault_Code_State='" + cmbSaftCode.Text + "', Kion_Fault_Code_State='" + cmbKionCode.Text + "', Kion_DTC_State='" + cmbKionDTC.Text + "', Saft_Fault_Code_1=@saftCode1, Saft_Fault_Code_2=@saftCode2, Saft_Fault_Code_3=@saftCode3, Saft_Fault_Code_4=@saftCode4, Saft_Fault_Code_5=@saftCode5, Saft_Fault_Code_6=@saftCode6, Saft_Fault_Code_7=@saftCode7, Saft_Fault_Code_8=@saftCode8, Saft_Fault_Code_9=@saftCode9, Saft_Fault_Code_10=@saftCode10, Saft_Fault_Code_11=@saftCode11, Saft_Fault_Code_12=@saftCode12, Kion_Fault_Code_1=@kionCode1, Kion_Fault_Code_2=@kionCode2, Kion_Fault_Code_3=@kionCode3, Kion_Fault_Code_4=@kionCode4, Kion_Fault_Code_5=@kionCode5, Kion_Fault_Code_6=@kionCode6, Kion_Fault_Code_7=@kionCode7, Kion_Fault_Code_8=@kionCode8, Kion_Fault_Code_9=@kionCode9, Kion_Fault_Code_10=@kionCode10, Kion_Fault_Code_11=@kionCode11, Kion_Fault_Code_12=@kionCode12, Kion_DTC_1=@dtcCode1, Kion_DTC_2=@dtcCode2, Kion_DTC_3=@dtcCode3, Kion_DTC_4=@dtcCode4, Kion_DTC_5=@dtcCode5, Kion_DTC_6=@dtcCode6, Kion_DTC_7=@dtcCode7, Kion_DTC_8=@dtcCode8, Kion_DTC_9=@dtcCode9, Kion_DTC_10=@dtcCode10, Kion_DTC_11=@dtcCode11, Kion_DTC_12=@dtcCode12, Charging_State='" + cmbCharging.Text + "', Charging='" + txtCharging.Text + "', Discharging_State='" + cmbDischarging.Text + "', discharging='" + txtDischarging.Text + "', RTC_State='" + cmbRTC.Text + "', RTC='" + txtRTC.Text + "', BMS_Tested_State='" + cmbBMSTested.Text + "', BMS_Tested='" + txtBMSTested.Text + "', Replacement_State='" + cmbReplacement.Text + "', Replacement='" + txtReplacement.Text + "', Status_State='" + cmbStatus.Text + "', Status='" + txtStatus.Text + "', Warranty_State='" + cmbWarranty.Text + "', Warranty='" + txtWarranty.Text + "', Production_Date='" + dateWarranty.Text + "', Now_Date='" + dateNow.Text + "' WHERE CLM='" + CLM + "'", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE DataAnalysis_BB SET Battery='" + txtBattery.Text + "', BMS='" + txtBMS.Text + "', Visual_State='" + cmbVisualState.Text + "', Visual_State_Note='" + txtVisualState.Text + "', PrtScn='" + cmbPrtScn.Text + "', BrandID='" + txtBrandID.Text + "', ModuleVoltage_State='" + cmbVoltage.Text + "', ModuleVoltage=@modVoltage, Funct_BMS_State='" + cmbFunctBMS.Text + "', Funct_BMS='" + txtFunctionalBMS.Text + "', WinDiag_State='" + cmbWinDiag.Text + "', WinDiag='" + txtWinDiag.Text + "', ActualCurr_State='" + cmbActualCurr.Text + "', ActualCurr='" + txtActualCurr.Text + "', Presence_State='" + cmbPresence.Text + "', Presence_State12='" + cmbPresence12.Text + "', Presence_State24='" + cmbPresence24.Text + "', Presence='" + txtPresence.Text + "', SMU_State='" + cmbSMU.Text + "', SMU_Val=@smuVal, Current_Const_State='" + cmbCurrentConst.Text + "', Current_Const_IG='" + txtIG.Text + "', Current_Const_IO='" + txtIO.Text + "', CAN_Speed_State='" + cmbCANSpeed.Text + "', CAN_Speed_Val='" + txtCanSpeed.Text + "', CRC_of_SW_State='" + cmbCRCofSW.Text + "', CRC_of_SW='" + txtCRCofSW.Text + "', BB_State='" + cmbBB.Text + "', BB='" + txtBB.Text + "', Saft_Fault_Code_1=@saftCode1, Saft_Fault_Code_2=@saftCode2, Saft_Fault_Code_3=@saftCode3, Saft_Fault_Code_4=@saftCode4, Saft_Fault_Code_5=@saftCode5, Saft_Fault_Code_6=@saftCode6, Saft_Fault_Code_7=@saftCode7, Saft_Fault_Code_8=@saftCode8, Saft_Fault_Code_9=@saftCode9, Saft_Fault_Code_10=@saftCode10, Saft_Fault_Code_11=@saftCode11, Saft_Fault_Code_12=@saftCode12, Kion_Fault_Code_1=@kionCode1, Kion_Fault_Code_2=@kionCode2, Kion_Fault_Code_3=@kionCode3, Kion_Fault_Code_4=@kionCode4, Kion_Fault_Code_5=@kionCode5, Kion_Fault_Code_6=@kionCode6, Kion_Fault_Code_7=@kionCode7, Kion_Fault_Code_8=@kionCode8, Kion_Fault_Code_9=@kionCode9, Kion_Fault_Code_10=@kionCode10, Kion_Fault_Code_11=@kionCode11, Kion_Fault_Code_12=@kionCode12, Kion_DTC_1=@dtcCode1, Kion_DTC_2=@dtcCode2, Kion_DTC_3=@dtcCode3, Kion_DTC_4=@dtcCode4, Kion_DTC_5=@dtcCode5, Kion_DTC_6=@dtcCode6, Kion_DTC_7=@dtcCode7, Kion_DTC_8=@dtcCode8, Kion_DTC_9=@dtcCode9, Kion_DTC_10=@dtcCode10, Kion_DTC_11=@dtcCode11, Kion_DTC_12=@dtcCode12, Charging_State='" + cmbCharging.Text + "', Charging='" + txtCharging.Text + "', Discharging_State='" + cmbDischarging.Text + "', discharging='" + txtDischarging.Text + "', RTC_State='" + cmbRTC.Text + "', RTC='" + txtRTC.Text + "', BMS_Tested_State='" + cmbBMSTested.Text + "', BMS_Tested='" + txtBMSTested.Text + "', Replacement_State='" + cmbReplacement.Text + "', Replacement='" + txtReplacement.Text + "', CriticalFault_State='" + cmbCriticalFault.Text + "', CriticalFault='" + txtCriticalFault.Text + "', CBIT_State='" + cmbCBIT.Text + "', CBIT='" + txtCBIT.Text + "', Capacity_State='" + cmbCapacityTest.Text + "', Capacity='" + txtCapacityTest.Text + "', Contiunity_State='" + cmbContiunityTest.Text + "', Contiunity='" + txtContiunityTest.Text + "', Function_State='" + cmbFunctionTest.Text + "', Function_Text='" + txtFunctionTest.Text + "', Status_State='" + cmbStatus.Text + "', Status='" + txtStatus.Text + "', Warranty_State='" + cmbWarranty.Text + "', Warranty='" + txtWarranty.Text + "', Production_Date='" + dateWarranty.Text + "', Now_Date='" + dateNow.Text + "' WHERE CLM='" + CLM + "'", conn);
                 cmd.Parameters.Add("@modVoltage", SqlDbType.Real).Value = txtVoltage.Text == "" ? 0 : float.Parse(txtVoltage.Text);
                 cmd.Parameters.Add("@smuVal", SqlDbType.Real).Value = txtSMUVal.Text == "" ? 0 : float.Parse(txtSMUVal.Text);
 

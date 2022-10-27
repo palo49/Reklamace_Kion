@@ -104,9 +104,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbPresence24 = new System.Windows.Forms.ComboBox();
             this.cmbPresence12 = new System.Windows.Forms.ComboBox();
-            this.cmbKionDTC = new System.Windows.Forms.ComboBox();
-            this.cmbSaftCode = new System.Windows.Forms.ComboBox();
-            this.cmbKionCode = new System.Windows.Forms.ComboBox();
             this.cmbWarranty = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbReplacement = new System.Windows.Forms.ComboBox();
@@ -141,12 +138,8 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -159,6 +152,28 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.cmbVisualState = new System.Windows.Forms.ComboBox();
+            this.txtVisualState = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.cmbPrtScn = new System.Windows.Forms.ComboBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txtBrandID = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.cmbCriticalFault = new System.Windows.Forms.ComboBox();
+            this.txtCriticalFault = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.cmbCBIT = new System.Windows.Forms.ComboBox();
+            this.txtCBIT = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.cmbCapacityTest = new System.Windows.Forms.ComboBox();
+            this.txtCapacityTest = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.cmbContiunityTest = new System.Windows.Forms.ComboBox();
+            this.txtContiunityTest = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.cmbFunctionTest = new System.Windows.Forms.ComboBox();
+            this.txtFunctionTest = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelData.SuspendLayout();
@@ -304,6 +319,11 @@
             this.panelData.Controls.Add(this.txtPresence);
             this.panelData.Controls.Add(this.txtWarranty);
             this.panelData.Controls.Add(this.txtStatus);
+            this.panelData.Controls.Add(this.txtFunctionTest);
+            this.panelData.Controls.Add(this.txtContiunityTest);
+            this.panelData.Controls.Add(this.txtCapacityTest);
+            this.panelData.Controls.Add(this.txtCBIT);
+            this.panelData.Controls.Add(this.txtCriticalFault);
             this.panelData.Controls.Add(this.txtReplacement);
             this.panelData.Controls.Add(this.txtBMSTested);
             this.panelData.Controls.Add(this.txtRTC);
@@ -313,15 +333,18 @@
             this.panelData.Controls.Add(this.txtCRCofSW);
             this.panelData.Controls.Add(this.txtActualCurr);
             this.panelData.Controls.Add(this.txtWinDiag);
+            this.panelData.Controls.Add(this.txtVisualState);
             this.panelData.Controls.Add(this.txtFunctionalBMS);
             this.panelData.Controls.Add(this.label6);
             this.panelData.Controls.Add(this.cmbPresence24);
             this.panelData.Controls.Add(this.cmbPresence12);
-            this.panelData.Controls.Add(this.cmbKionDTC);
-            this.panelData.Controls.Add(this.cmbSaftCode);
-            this.panelData.Controls.Add(this.cmbKionCode);
             this.panelData.Controls.Add(this.cmbWarranty);
             this.panelData.Controls.Add(this.cmbStatus);
+            this.panelData.Controls.Add(this.cmbFunctionTest);
+            this.panelData.Controls.Add(this.cmbContiunityTest);
+            this.panelData.Controls.Add(this.cmbCapacityTest);
+            this.panelData.Controls.Add(this.cmbCBIT);
+            this.panelData.Controls.Add(this.cmbCriticalFault);
             this.panelData.Controls.Add(this.cmbReplacement);
             this.panelData.Controls.Add(this.cmbBMSTested);
             this.panelData.Controls.Add(this.cmbRTC);
@@ -336,8 +359,11 @@
             this.panelData.Controls.Add(this.cmbActualCurr);
             this.panelData.Controls.Add(this.cmbWinDiag);
             this.panelData.Controls.Add(this.cmbFunctBMS);
+            this.panelData.Controls.Add(this.cmbPrtScn);
+            this.panelData.Controls.Add(this.cmbVisualState);
             this.panelData.Controls.Add(this.cmbVoltage);
             this.panelData.Controls.Add(this.label1);
+            this.panelData.Controls.Add(this.txtBrandID);
             this.panelData.Controls.Add(this.txtVoltage);
             this.panelData.Controls.Add(this.txtBMS);
             this.panelData.Controls.Add(this.label2);
@@ -352,18 +378,19 @@
             this.panelData.Controls.Add(this.label37);
             this.panelData.Controls.Add(this.label36);
             this.panelData.Controls.Add(this.label35);
+            this.panelData.Controls.Add(this.label49);
+            this.panelData.Controls.Add(this.label48);
+            this.panelData.Controls.Add(this.label47);
+            this.panelData.Controls.Add(this.label46);
+            this.panelData.Controls.Add(this.label45);
             this.panelData.Controls.Add(this.label34);
             this.panelData.Controls.Add(this.label33);
             this.panelData.Controls.Add(this.label32);
             this.panelData.Controls.Add(this.label31);
             this.panelData.Controls.Add(this.label30);
             this.panelData.Controls.Add(this.label29);
-            this.panelData.Controls.Add(this.label26);
             this.panelData.Controls.Add(this.label28);
-            this.panelData.Controls.Add(this.label25);
             this.panelData.Controls.Add(this.label27);
-            this.panelData.Controls.Add(this.label24);
-            this.panelData.Controls.Add(this.label23);
             this.panelData.Controls.Add(this.label21);
             this.panelData.Controls.Add(this.label20);
             this.panelData.Controls.Add(this.label17);
@@ -374,6 +401,9 @@
             this.panelData.Controls.Add(this.label8);
             this.panelData.Controls.Add(this.label7);
             this.panelData.Controls.Add(this.label5);
+            this.panelData.Controls.Add(this.label44);
+            this.panelData.Controls.Add(this.label43);
+            this.panelData.Controls.Add(this.label42);
             this.panelData.Controls.Add(this.label3);
             this.panelData.Controls.Add(this.txtCLM);
             this.panelData.Location = new System.Drawing.Point(12, 12);
@@ -385,7 +415,7 @@
             // 
             this.dateNow.Enabled = false;
             this.dateNow.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNow.Location = new System.Drawing.Point(379, 1164);
+            this.dateNow.Location = new System.Drawing.Point(379, 1413);
             this.dateNow.Name = "dateNow";
             this.dateNow.Size = new System.Drawing.Size(84, 21);
             this.dateNow.TabIndex = 29;
@@ -393,7 +423,7 @@
             // dateWarranty
             // 
             this.dateWarranty.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateWarranty.Location = new System.Drawing.Point(105, 1164);
+            this.dateWarranty.Location = new System.Drawing.Point(105, 1413);
             this.dateWarranty.Name = "dateWarranty";
             this.dateWarranty.Size = new System.Drawing.Size(84, 21);
             this.dateWarranty.TabIndex = 29;
@@ -402,7 +432,7 @@
             // txtKionDTC12
             // 
             this.txtKionDTC12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC12.Location = new System.Drawing.Point(435, 821);
+            this.txtKionDTC12.Location = new System.Drawing.Point(435, 844);
             this.txtKionDTC12.Name = "txtKionDTC12";
             this.txtKionDTC12.ReadOnly = true;
             this.txtKionDTC12.Size = new System.Drawing.Size(24, 20);
@@ -412,7 +442,7 @@
             // txtKionCode12
             // 
             this.txtKionCode12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode12.Location = new System.Drawing.Point(435, 794);
+            this.txtKionCode12.Location = new System.Drawing.Point(435, 817);
             this.txtKionCode12.Name = "txtKionCode12";
             this.txtKionCode12.ReadOnly = true;
             this.txtKionCode12.Size = new System.Drawing.Size(24, 20);
@@ -422,7 +452,7 @@
             // txtSaftCode12
             // 
             this.txtSaftCode12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode12.Location = new System.Drawing.Point(435, 765);
+            this.txtSaftCode12.Location = new System.Drawing.Point(435, 788);
             this.txtSaftCode12.Name = "txtSaftCode12";
             this.txtSaftCode12.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode12.TabIndex = 28;
@@ -432,7 +462,7 @@
             // txtKionDTC9
             // 
             this.txtKionDTC9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC9.Location = new System.Drawing.Point(345, 821);
+            this.txtKionDTC9.Location = new System.Drawing.Point(345, 844);
             this.txtKionDTC9.Name = "txtKionDTC9";
             this.txtKionDTC9.ReadOnly = true;
             this.txtKionDTC9.Size = new System.Drawing.Size(24, 20);
@@ -442,7 +472,7 @@
             // txtKionCode9
             // 
             this.txtKionCode9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode9.Location = new System.Drawing.Point(345, 794);
+            this.txtKionCode9.Location = new System.Drawing.Point(345, 817);
             this.txtKionCode9.Name = "txtKionCode9";
             this.txtKionCode9.ReadOnly = true;
             this.txtKionCode9.Size = new System.Drawing.Size(24, 20);
@@ -452,7 +482,7 @@
             // txtSaftCode9
             // 
             this.txtSaftCode9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode9.Location = new System.Drawing.Point(345, 765);
+            this.txtSaftCode9.Location = new System.Drawing.Point(345, 788);
             this.txtSaftCode9.Name = "txtSaftCode9";
             this.txtSaftCode9.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode9.TabIndex = 28;
@@ -462,7 +492,7 @@
             // txtKionDTC11
             // 
             this.txtKionDTC11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC11.Location = new System.Drawing.Point(405, 821);
+            this.txtKionDTC11.Location = new System.Drawing.Point(405, 844);
             this.txtKionDTC11.Name = "txtKionDTC11";
             this.txtKionDTC11.ReadOnly = true;
             this.txtKionDTC11.Size = new System.Drawing.Size(24, 20);
@@ -472,7 +502,7 @@
             // txtKionCode11
             // 
             this.txtKionCode11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode11.Location = new System.Drawing.Point(405, 794);
+            this.txtKionCode11.Location = new System.Drawing.Point(405, 817);
             this.txtKionCode11.Name = "txtKionCode11";
             this.txtKionCode11.ReadOnly = true;
             this.txtKionCode11.Size = new System.Drawing.Size(24, 20);
@@ -482,7 +512,7 @@
             // txtSaftCode11
             // 
             this.txtSaftCode11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode11.Location = new System.Drawing.Point(405, 765);
+            this.txtSaftCode11.Location = new System.Drawing.Point(405, 788);
             this.txtSaftCode11.Name = "txtSaftCode11";
             this.txtSaftCode11.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode11.TabIndex = 28;
@@ -492,7 +522,7 @@
             // txtKionDTC8
             // 
             this.txtKionDTC8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC8.Location = new System.Drawing.Point(315, 821);
+            this.txtKionDTC8.Location = new System.Drawing.Point(315, 844);
             this.txtKionDTC8.Name = "txtKionDTC8";
             this.txtKionDTC8.ReadOnly = true;
             this.txtKionDTC8.Size = new System.Drawing.Size(24, 20);
@@ -502,7 +532,7 @@
             // txtKionCode8
             // 
             this.txtKionCode8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode8.Location = new System.Drawing.Point(315, 794);
+            this.txtKionCode8.Location = new System.Drawing.Point(315, 817);
             this.txtKionCode8.Name = "txtKionCode8";
             this.txtKionCode8.ReadOnly = true;
             this.txtKionCode8.Size = new System.Drawing.Size(24, 20);
@@ -512,7 +542,7 @@
             // txtSaftCode8
             // 
             this.txtSaftCode8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode8.Location = new System.Drawing.Point(315, 765);
+            this.txtSaftCode8.Location = new System.Drawing.Point(315, 788);
             this.txtSaftCode8.Name = "txtSaftCode8";
             this.txtSaftCode8.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode8.TabIndex = 28;
@@ -522,7 +552,7 @@
             // txtKionDTC10
             // 
             this.txtKionDTC10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC10.Location = new System.Drawing.Point(375, 821);
+            this.txtKionDTC10.Location = new System.Drawing.Point(375, 844);
             this.txtKionDTC10.Name = "txtKionDTC10";
             this.txtKionDTC10.ReadOnly = true;
             this.txtKionDTC10.Size = new System.Drawing.Size(24, 20);
@@ -532,7 +562,7 @@
             // txtKionCode10
             // 
             this.txtKionCode10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode10.Location = new System.Drawing.Point(375, 794);
+            this.txtKionCode10.Location = new System.Drawing.Point(375, 817);
             this.txtKionCode10.Name = "txtKionCode10";
             this.txtKionCode10.ReadOnly = true;
             this.txtKionCode10.Size = new System.Drawing.Size(24, 20);
@@ -542,7 +572,7 @@
             // txtSaftCode10
             // 
             this.txtSaftCode10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode10.Location = new System.Drawing.Point(375, 765);
+            this.txtSaftCode10.Location = new System.Drawing.Point(375, 788);
             this.txtSaftCode10.Name = "txtSaftCode10";
             this.txtSaftCode10.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode10.TabIndex = 28;
@@ -552,7 +582,7 @@
             // txtKionDTC7
             // 
             this.txtKionDTC7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC7.Location = new System.Drawing.Point(285, 821);
+            this.txtKionDTC7.Location = new System.Drawing.Point(285, 844);
             this.txtKionDTC7.Name = "txtKionDTC7";
             this.txtKionDTC7.ReadOnly = true;
             this.txtKionDTC7.Size = new System.Drawing.Size(24, 20);
@@ -562,7 +592,7 @@
             // txtKionCode7
             // 
             this.txtKionCode7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode7.Location = new System.Drawing.Point(285, 794);
+            this.txtKionCode7.Location = new System.Drawing.Point(285, 817);
             this.txtKionCode7.Name = "txtKionCode7";
             this.txtKionCode7.ReadOnly = true;
             this.txtKionCode7.Size = new System.Drawing.Size(24, 20);
@@ -572,7 +602,7 @@
             // txtSaftCode7
             // 
             this.txtSaftCode7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode7.Location = new System.Drawing.Point(285, 765);
+            this.txtSaftCode7.Location = new System.Drawing.Point(285, 788);
             this.txtSaftCode7.Name = "txtSaftCode7";
             this.txtSaftCode7.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode7.TabIndex = 28;
@@ -582,7 +612,7 @@
             // txtKionDTC6
             // 
             this.txtKionDTC6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC6.Location = new System.Drawing.Point(255, 821);
+            this.txtKionDTC6.Location = new System.Drawing.Point(255, 844);
             this.txtKionDTC6.Name = "txtKionDTC6";
             this.txtKionDTC6.ReadOnly = true;
             this.txtKionDTC6.Size = new System.Drawing.Size(24, 20);
@@ -592,7 +622,7 @@
             // txtKionCode6
             // 
             this.txtKionCode6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode6.Location = new System.Drawing.Point(255, 794);
+            this.txtKionCode6.Location = new System.Drawing.Point(255, 817);
             this.txtKionCode6.Name = "txtKionCode6";
             this.txtKionCode6.ReadOnly = true;
             this.txtKionCode6.Size = new System.Drawing.Size(24, 20);
@@ -602,7 +632,7 @@
             // txtSaftCode6
             // 
             this.txtSaftCode6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode6.Location = new System.Drawing.Point(255, 765);
+            this.txtSaftCode6.Location = new System.Drawing.Point(255, 788);
             this.txtSaftCode6.Name = "txtSaftCode6";
             this.txtSaftCode6.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode6.TabIndex = 28;
@@ -612,7 +642,7 @@
             // txtKionDTC5
             // 
             this.txtKionDTC5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC5.Location = new System.Drawing.Point(225, 821);
+            this.txtKionDTC5.Location = new System.Drawing.Point(225, 844);
             this.txtKionDTC5.Name = "txtKionDTC5";
             this.txtKionDTC5.ReadOnly = true;
             this.txtKionDTC5.Size = new System.Drawing.Size(24, 20);
@@ -622,7 +652,7 @@
             // txtKionCode5
             // 
             this.txtKionCode5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode5.Location = new System.Drawing.Point(225, 794);
+            this.txtKionCode5.Location = new System.Drawing.Point(225, 817);
             this.txtKionCode5.Name = "txtKionCode5";
             this.txtKionCode5.ReadOnly = true;
             this.txtKionCode5.Size = new System.Drawing.Size(24, 20);
@@ -632,7 +662,7 @@
             // txtSaftCode5
             // 
             this.txtSaftCode5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode5.Location = new System.Drawing.Point(225, 765);
+            this.txtSaftCode5.Location = new System.Drawing.Point(225, 788);
             this.txtSaftCode5.Name = "txtSaftCode5";
             this.txtSaftCode5.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode5.TabIndex = 28;
@@ -642,7 +672,7 @@
             // txtKionDTC4
             // 
             this.txtKionDTC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC4.Location = new System.Drawing.Point(195, 821);
+            this.txtKionDTC4.Location = new System.Drawing.Point(195, 844);
             this.txtKionDTC4.Name = "txtKionDTC4";
             this.txtKionDTC4.ReadOnly = true;
             this.txtKionDTC4.Size = new System.Drawing.Size(24, 20);
@@ -652,7 +682,7 @@
             // txtKionCode4
             // 
             this.txtKionCode4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode4.Location = new System.Drawing.Point(195, 794);
+            this.txtKionCode4.Location = new System.Drawing.Point(195, 817);
             this.txtKionCode4.Name = "txtKionCode4";
             this.txtKionCode4.ReadOnly = true;
             this.txtKionCode4.Size = new System.Drawing.Size(24, 20);
@@ -662,7 +692,7 @@
             // txtSaftCode4
             // 
             this.txtSaftCode4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode4.Location = new System.Drawing.Point(195, 765);
+            this.txtSaftCode4.Location = new System.Drawing.Point(195, 788);
             this.txtSaftCode4.Name = "txtSaftCode4";
             this.txtSaftCode4.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode4.TabIndex = 28;
@@ -672,7 +702,7 @@
             // txtKionDTC3
             // 
             this.txtKionDTC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC3.Location = new System.Drawing.Point(165, 821);
+            this.txtKionDTC3.Location = new System.Drawing.Point(165, 844);
             this.txtKionDTC3.Name = "txtKionDTC3";
             this.txtKionDTC3.ReadOnly = true;
             this.txtKionDTC3.Size = new System.Drawing.Size(24, 20);
@@ -682,7 +712,7 @@
             // txtKionCode3
             // 
             this.txtKionCode3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode3.Location = new System.Drawing.Point(165, 794);
+            this.txtKionCode3.Location = new System.Drawing.Point(165, 817);
             this.txtKionCode3.Name = "txtKionCode3";
             this.txtKionCode3.ReadOnly = true;
             this.txtKionCode3.Size = new System.Drawing.Size(24, 20);
@@ -692,7 +722,7 @@
             // txtSaftCode3
             // 
             this.txtSaftCode3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode3.Location = new System.Drawing.Point(165, 765);
+            this.txtSaftCode3.Location = new System.Drawing.Point(165, 788);
             this.txtSaftCode3.Name = "txtSaftCode3";
             this.txtSaftCode3.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode3.TabIndex = 28;
@@ -702,7 +732,7 @@
             // txtKionDTC2
             // 
             this.txtKionDTC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC2.Location = new System.Drawing.Point(135, 821);
+            this.txtKionDTC2.Location = new System.Drawing.Point(135, 844);
             this.txtKionDTC2.Name = "txtKionDTC2";
             this.txtKionDTC2.ReadOnly = true;
             this.txtKionDTC2.Size = new System.Drawing.Size(24, 20);
@@ -712,7 +742,7 @@
             // txtKionCode2
             // 
             this.txtKionCode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode2.Location = new System.Drawing.Point(135, 794);
+            this.txtKionCode2.Location = new System.Drawing.Point(135, 817);
             this.txtKionCode2.Name = "txtKionCode2";
             this.txtKionCode2.ReadOnly = true;
             this.txtKionCode2.Size = new System.Drawing.Size(24, 20);
@@ -722,7 +752,7 @@
             // txtSaftCode2
             // 
             this.txtSaftCode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode2.Location = new System.Drawing.Point(135, 765);
+            this.txtSaftCode2.Location = new System.Drawing.Point(135, 788);
             this.txtSaftCode2.Name = "txtSaftCode2";
             this.txtSaftCode2.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode2.TabIndex = 28;
@@ -732,7 +762,7 @@
             // txtKionDTC1
             // 
             this.txtKionDTC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionDTC1.Location = new System.Drawing.Point(105, 821);
+            this.txtKionDTC1.Location = new System.Drawing.Point(105, 844);
             this.txtKionDTC1.Name = "txtKionDTC1";
             this.txtKionDTC1.ReadOnly = true;
             this.txtKionDTC1.Size = new System.Drawing.Size(24, 20);
@@ -742,7 +772,7 @@
             // txtKionCode1
             // 
             this.txtKionCode1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtKionCode1.Location = new System.Drawing.Point(105, 794);
+            this.txtKionCode1.Location = new System.Drawing.Point(105, 817);
             this.txtKionCode1.Name = "txtKionCode1";
             this.txtKionCode1.ReadOnly = true;
             this.txtKionCode1.Size = new System.Drawing.Size(24, 20);
@@ -752,7 +782,7 @@
             // txtSaftCode1
             // 
             this.txtSaftCode1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtSaftCode1.Location = new System.Drawing.Point(105, 765);
+            this.txtSaftCode1.Location = new System.Drawing.Point(105, 788);
             this.txtSaftCode1.Name = "txtSaftCode1";
             this.txtSaftCode1.Size = new System.Drawing.Size(24, 20);
             this.txtSaftCode1.TabIndex = 28;
@@ -762,7 +792,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(324, 506);
+            this.label19.Location = new System.Drawing.Point(324, 632);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(38, 16);
             this.label19.TabIndex = 27;
@@ -771,7 +801,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(324, 456);
+            this.label16.Location = new System.Drawing.Point(324, 582);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(23, 16);
             this.label16.TabIndex = 27;
@@ -780,7 +810,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(192, 415);
+            this.label22.Location = new System.Drawing.Point(192, 541);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(30, 16);
             this.label22.TabIndex = 27;
@@ -789,7 +819,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(192, 506);
+            this.label18.Location = new System.Drawing.Point(192, 632);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(30, 16);
             this.label18.TabIndex = 27;
@@ -798,7 +828,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(192, 456);
+            this.label15.Location = new System.Drawing.Point(192, 582);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(23, 16);
             this.label15.TabIndex = 27;
@@ -806,28 +836,28 @@
             // 
             // txtIO
             // 
-            this.txtIO.Location = new System.Drawing.Point(366, 455);
+            this.txtIO.Location = new System.Drawing.Point(366, 581);
             this.txtIO.Name = "txtIO";
             this.txtIO.Size = new System.Drawing.Size(97, 21);
             this.txtIO.TabIndex = 25;
             // 
             // txtCanSpeed
             // 
-            this.txtCanSpeed.Location = new System.Drawing.Point(225, 505);
+            this.txtCanSpeed.Location = new System.Drawing.Point(225, 631);
             this.txtCanSpeed.Name = "txtCanSpeed";
             this.txtCanSpeed.Size = new System.Drawing.Size(96, 21);
             this.txtCanSpeed.TabIndex = 25;
             // 
             // txtIG
             // 
-            this.txtIG.Location = new System.Drawing.Point(225, 455);
+            this.txtIG.Location = new System.Drawing.Point(225, 581);
             this.txtIG.Name = "txtIG";
             this.txtIG.Size = new System.Drawing.Size(96, 21);
             this.txtIG.TabIndex = 25;
             // 
             // txtSMUVal
             // 
-            this.txtSMUVal.Location = new System.Drawing.Point(225, 412);
+            this.txtSMUVal.Location = new System.Drawing.Point(225, 538);
             this.txtSMUVal.Name = "txtSMUVal";
             this.txtSMUVal.Size = new System.Drawing.Size(96, 21);
             this.txtSMUVal.TabIndex = 25;
@@ -835,7 +865,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(198, 365);
+            this.label12.Location = new System.Drawing.Point(198, 483);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(33, 16);
             this.label12.TabIndex = 24;
@@ -844,7 +874,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(198, 335);
+            this.label11.Location = new System.Drawing.Point(198, 453);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 16);
             this.label11.TabIndex = 24;
@@ -852,7 +882,7 @@
             // 
             // txtPresence
             // 
-            this.txtPresence.Location = new System.Drawing.Point(327, 302);
+            this.txtPresence.Location = new System.Drawing.Point(327, 420);
             this.txtPresence.Multiline = true;
             this.txtPresence.Name = "txtPresence";
             this.txtPresence.Size = new System.Drawing.Size(136, 104);
@@ -860,7 +890,7 @@
             // 
             // txtWarranty
             // 
-            this.txtWarranty.Location = new System.Drawing.Point(195, 1108);
+            this.txtWarranty.Location = new System.Drawing.Point(195, 1361);
             this.txtWarranty.Multiline = true;
             this.txtWarranty.Name = "txtWarranty";
             this.txtWarranty.Size = new System.Drawing.Size(268, 36);
@@ -868,7 +898,7 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(195, 1066);
+            this.txtStatus.Location = new System.Drawing.Point(195, 1315);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(268, 36);
@@ -876,7 +906,7 @@
             // 
             // txtReplacement
             // 
-            this.txtReplacement.Location = new System.Drawing.Point(195, 1024);
+            this.txtReplacement.Location = new System.Drawing.Point(195, 1044);
             this.txtReplacement.Multiline = true;
             this.txtReplacement.Name = "txtReplacement";
             this.txtReplacement.Size = new System.Drawing.Size(268, 36);
@@ -884,7 +914,7 @@
             // 
             // txtBMSTested
             // 
-            this.txtBMSTested.Location = new System.Drawing.Point(195, 982);
+            this.txtBMSTested.Location = new System.Drawing.Point(195, 1002);
             this.txtBMSTested.Multiline = true;
             this.txtBMSTested.Name = "txtBMSTested";
             this.txtBMSTested.Size = new System.Drawing.Size(268, 36);
@@ -892,7 +922,7 @@
             // 
             // txtRTC
             // 
-            this.txtRTC.Location = new System.Drawing.Point(195, 940);
+            this.txtRTC.Location = new System.Drawing.Point(195, 960);
             this.txtRTC.Multiline = true;
             this.txtRTC.Name = "txtRTC";
             this.txtRTC.Size = new System.Drawing.Size(268, 36);
@@ -900,7 +930,7 @@
             // 
             // txtDischarging
             // 
-            this.txtDischarging.Location = new System.Drawing.Point(195, 898);
+            this.txtDischarging.Location = new System.Drawing.Point(195, 918);
             this.txtDischarging.Multiline = true;
             this.txtDischarging.Name = "txtDischarging";
             this.txtDischarging.Size = new System.Drawing.Size(268, 36);
@@ -908,7 +938,7 @@
             // 
             // txtCharging
             // 
-            this.txtCharging.Location = new System.Drawing.Point(195, 856);
+            this.txtCharging.Location = new System.Drawing.Point(195, 876);
             this.txtCharging.Multiline = true;
             this.txtCharging.Name = "txtCharging";
             this.txtCharging.Size = new System.Drawing.Size(268, 36);
@@ -916,7 +946,7 @@
             // 
             // txtBB
             // 
-            this.txtBB.Location = new System.Drawing.Point(195, 595);
+            this.txtBB.Location = new System.Drawing.Point(195, 721);
             this.txtBB.Multiline = true;
             this.txtBB.Name = "txtBB";
             this.txtBB.Size = new System.Drawing.Size(268, 54);
@@ -924,7 +954,7 @@
             // 
             // txtCRCofSW
             // 
-            this.txtCRCofSW.Location = new System.Drawing.Point(195, 532);
+            this.txtCRCofSW.Location = new System.Drawing.Point(195, 658);
             this.txtCRCofSW.Multiline = true;
             this.txtCRCofSW.Name = "txtCRCofSW";
             this.txtCRCofSW.Size = new System.Drawing.Size(268, 54);
@@ -932,7 +962,7 @@
             // 
             // txtActualCurr
             // 
-            this.txtActualCurr.Location = new System.Drawing.Point(195, 238);
+            this.txtActualCurr.Location = new System.Drawing.Point(195, 356);
             this.txtActualCurr.Multiline = true;
             this.txtActualCurr.Name = "txtActualCurr";
             this.txtActualCurr.Size = new System.Drawing.Size(268, 58);
@@ -940,7 +970,7 @@
             // 
             // txtWinDiag
             // 
-            this.txtWinDiag.Location = new System.Drawing.Point(195, 174);
+            this.txtWinDiag.Location = new System.Drawing.Point(195, 292);
             this.txtWinDiag.Multiline = true;
             this.txtWinDiag.Name = "txtWinDiag";
             this.txtWinDiag.Size = new System.Drawing.Size(268, 58);
@@ -948,7 +978,7 @@
             // 
             // txtFunctionalBMS
             // 
-            this.txtFunctionalBMS.Location = new System.Drawing.Point(195, 110);
+            this.txtFunctionalBMS.Location = new System.Drawing.Point(195, 228);
             this.txtFunctionalBMS.Multiline = true;
             this.txtFunctionalBMS.Name = "txtFunctionalBMS";
             this.txtFunctionalBMS.Size = new System.Drawing.Size(268, 58);
@@ -957,7 +987,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(447, 86);
+            this.label6.Location = new System.Drawing.Point(447, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 16);
             this.label6.TabIndex = 22;
@@ -965,6 +995,7 @@
             // 
             // cmbPresence24
             // 
+            this.cmbPresence24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbPresence24.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPresence24.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbPresence24.FormattingEnabled = true;
@@ -972,7 +1003,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbPresence24.Location = new System.Drawing.Point(237, 360);
+            this.cmbPresence24.Location = new System.Drawing.Point(237, 478);
             this.cmbPresence24.Name = "cmbPresence24";
             this.cmbPresence24.Size = new System.Drawing.Size(84, 23);
             this.cmbPresence24.TabIndex = 21;
@@ -980,6 +1011,7 @@
             // 
             // cmbPresence12
             // 
+            this.cmbPresence12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbPresence12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPresence12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbPresence12.FormattingEnabled = true;
@@ -987,59 +1019,15 @@
             "",
             "NOK",
             "OK"});
-            this.cmbPresence12.Location = new System.Drawing.Point(237, 331);
+            this.cmbPresence12.Location = new System.Drawing.Point(237, 449);
             this.cmbPresence12.Name = "cmbPresence12";
             this.cmbPresence12.Size = new System.Drawing.Size(84, 23);
             this.cmbPresence12.TabIndex = 21;
             this.cmbPresence12.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
             // 
-            // cmbKionDTC
-            // 
-            this.cmbKionDTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKionDTC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbKionDTC.FormattingEnabled = true;
-            this.cmbKionDTC.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbKionDTC.Location = new System.Drawing.Point(105, 728);
-            this.cmbKionDTC.Name = "cmbKionDTC";
-            this.cmbKionDTC.Size = new System.Drawing.Size(84, 23);
-            this.cmbKionDTC.TabIndex = 21;
-            this.cmbKionDTC.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // cmbSaftCode
-            // 
-            this.cmbSaftCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSaftCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbSaftCode.FormattingEnabled = true;
-            this.cmbSaftCode.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbSaftCode.Location = new System.Drawing.Point(105, 670);
-            this.cmbSaftCode.Name = "cmbSaftCode";
-            this.cmbSaftCode.Size = new System.Drawing.Size(84, 23);
-            this.cmbSaftCode.TabIndex = 21;
-            this.cmbSaftCode.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // cmbKionCode
-            // 
-            this.cmbKionCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKionCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbKionCode.FormattingEnabled = true;
-            this.cmbKionCode.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbKionCode.Location = new System.Drawing.Point(105, 699);
-            this.cmbKionCode.Name = "cmbKionCode";
-            this.cmbKionCode.Size = new System.Drawing.Size(84, 23);
-            this.cmbKionCode.TabIndex = 21;
-            this.cmbKionCode.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
             // cmbWarranty
             // 
+            this.cmbWarranty.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbWarranty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbWarranty.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbWarranty.FormattingEnabled = true;
@@ -1047,7 +1035,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbWarranty.Location = new System.Drawing.Point(105, 1116);
+            this.cmbWarranty.Location = new System.Drawing.Point(105, 1369);
             this.cmbWarranty.Name = "cmbWarranty";
             this.cmbWarranty.Size = new System.Drawing.Size(84, 23);
             this.cmbWarranty.TabIndex = 21;
@@ -1055,6 +1043,7 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbStatus.FormattingEnabled = true;
@@ -1062,7 +1051,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbStatus.Location = new System.Drawing.Point(105, 1072);
+            this.cmbStatus.Location = new System.Drawing.Point(105, 1321);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(84, 23);
             this.cmbStatus.TabIndex = 21;
@@ -1070,6 +1059,7 @@
             // 
             // cmbReplacement
             // 
+            this.cmbReplacement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbReplacement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReplacement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbReplacement.FormattingEnabled = true;
@@ -1077,7 +1067,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbReplacement.Location = new System.Drawing.Point(105, 1032);
+            this.cmbReplacement.Location = new System.Drawing.Point(105, 1052);
             this.cmbReplacement.Name = "cmbReplacement";
             this.cmbReplacement.Size = new System.Drawing.Size(84, 23);
             this.cmbReplacement.TabIndex = 21;
@@ -1085,6 +1075,7 @@
             // 
             // cmbBMSTested
             // 
+            this.cmbBMSTested.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbBMSTested.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBMSTested.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbBMSTested.FormattingEnabled = true;
@@ -1092,7 +1083,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbBMSTested.Location = new System.Drawing.Point(105, 990);
+            this.cmbBMSTested.Location = new System.Drawing.Point(105, 1010);
             this.cmbBMSTested.Name = "cmbBMSTested";
             this.cmbBMSTested.Size = new System.Drawing.Size(84, 23);
             this.cmbBMSTested.TabIndex = 21;
@@ -1100,6 +1091,7 @@
             // 
             // cmbRTC
             // 
+            this.cmbRTC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbRTC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRTC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbRTC.FormattingEnabled = true;
@@ -1107,7 +1099,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbRTC.Location = new System.Drawing.Point(105, 948);
+            this.cmbRTC.Location = new System.Drawing.Point(105, 968);
             this.cmbRTC.Name = "cmbRTC";
             this.cmbRTC.Size = new System.Drawing.Size(84, 23);
             this.cmbRTC.TabIndex = 21;
@@ -1115,6 +1107,7 @@
             // 
             // cmbDischarging
             // 
+            this.cmbDischarging.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbDischarging.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDischarging.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbDischarging.FormattingEnabled = true;
@@ -1122,7 +1115,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbDischarging.Location = new System.Drawing.Point(105, 906);
+            this.cmbDischarging.Location = new System.Drawing.Point(105, 926);
             this.cmbDischarging.Name = "cmbDischarging";
             this.cmbDischarging.Size = new System.Drawing.Size(84, 23);
             this.cmbDischarging.TabIndex = 21;
@@ -1130,6 +1123,7 @@
             // 
             // cmbCharging
             // 
+            this.cmbCharging.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCharging.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCharging.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbCharging.FormattingEnabled = true;
@@ -1137,7 +1131,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbCharging.Location = new System.Drawing.Point(105, 864);
+            this.cmbCharging.Location = new System.Drawing.Point(105, 884);
             this.cmbCharging.Name = "cmbCharging";
             this.cmbCharging.Size = new System.Drawing.Size(84, 23);
             this.cmbCharging.TabIndex = 21;
@@ -1145,6 +1139,7 @@
             // 
             // cmbBB
             // 
+            this.cmbBB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbBB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbBB.FormattingEnabled = true;
@@ -1152,7 +1147,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbBB.Location = new System.Drawing.Point(105, 612);
+            this.cmbBB.Location = new System.Drawing.Point(105, 738);
             this.cmbBB.Name = "cmbBB";
             this.cmbBB.Size = new System.Drawing.Size(84, 23);
             this.cmbBB.TabIndex = 21;
@@ -1160,6 +1155,7 @@
             // 
             // cmbCRCofSW
             // 
+            this.cmbCRCofSW.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCRCofSW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCRCofSW.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbCRCofSW.FormattingEnabled = true;
@@ -1167,7 +1163,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbCRCofSW.Location = new System.Drawing.Point(105, 549);
+            this.cmbCRCofSW.Location = new System.Drawing.Point(105, 675);
             this.cmbCRCofSW.Name = "cmbCRCofSW";
             this.cmbCRCofSW.Size = new System.Drawing.Size(84, 23);
             this.cmbCRCofSW.TabIndex = 21;
@@ -1175,6 +1171,7 @@
             // 
             // cmbCANSpeed
             // 
+            this.cmbCANSpeed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCANSpeed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCANSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbCANSpeed.FormattingEnabled = true;
@@ -1182,7 +1179,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbCANSpeed.Location = new System.Drawing.Point(105, 503);
+            this.cmbCANSpeed.Location = new System.Drawing.Point(105, 629);
             this.cmbCANSpeed.Name = "cmbCANSpeed";
             this.cmbCANSpeed.Size = new System.Drawing.Size(84, 23);
             this.cmbCANSpeed.TabIndex = 21;
@@ -1190,6 +1187,7 @@
             // 
             // cmbCurrentConst
             // 
+            this.cmbCurrentConst.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCurrentConst.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCurrentConst.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbCurrentConst.FormattingEnabled = true;
@@ -1197,7 +1195,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbCurrentConst.Location = new System.Drawing.Point(105, 453);
+            this.cmbCurrentConst.Location = new System.Drawing.Point(105, 579);
             this.cmbCurrentConst.Name = "cmbCurrentConst";
             this.cmbCurrentConst.Size = new System.Drawing.Size(84, 23);
             this.cmbCurrentConst.TabIndex = 21;
@@ -1205,6 +1203,7 @@
             // 
             // cmbSMU
             // 
+            this.cmbSMU.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSMU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSMU.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbSMU.FormattingEnabled = true;
@@ -1212,7 +1211,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbSMU.Location = new System.Drawing.Point(105, 411);
+            this.cmbSMU.Location = new System.Drawing.Point(105, 537);
             this.cmbSMU.Name = "cmbSMU";
             this.cmbSMU.Size = new System.Drawing.Size(84, 23);
             this.cmbSMU.TabIndex = 21;
@@ -1220,6 +1219,7 @@
             // 
             // cmbPresence
             // 
+            this.cmbPresence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbPresence.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPresence.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbPresence.FormattingEnabled = true;
@@ -1227,7 +1227,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbPresence.Location = new System.Drawing.Point(105, 346);
+            this.cmbPresence.Location = new System.Drawing.Point(105, 464);
             this.cmbPresence.Name = "cmbPresence";
             this.cmbPresence.Size = new System.Drawing.Size(84, 23);
             this.cmbPresence.TabIndex = 21;
@@ -1235,6 +1235,7 @@
             // 
             // cmbActualCurr
             // 
+            this.cmbActualCurr.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbActualCurr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbActualCurr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbActualCurr.FormattingEnabled = true;
@@ -1242,7 +1243,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbActualCurr.Location = new System.Drawing.Point(105, 257);
+            this.cmbActualCurr.Location = new System.Drawing.Point(105, 375);
             this.cmbActualCurr.Name = "cmbActualCurr";
             this.cmbActualCurr.Size = new System.Drawing.Size(84, 23);
             this.cmbActualCurr.TabIndex = 21;
@@ -1250,6 +1251,7 @@
             // 
             // cmbWinDiag
             // 
+            this.cmbWinDiag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbWinDiag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbWinDiag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbWinDiag.FormattingEnabled = true;
@@ -1257,7 +1259,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbWinDiag.Location = new System.Drawing.Point(105, 193);
+            this.cmbWinDiag.Location = new System.Drawing.Point(105, 311);
             this.cmbWinDiag.Name = "cmbWinDiag";
             this.cmbWinDiag.Size = new System.Drawing.Size(84, 23);
             this.cmbWinDiag.TabIndex = 21;
@@ -1265,6 +1267,7 @@
             // 
             // cmbFunctBMS
             // 
+            this.cmbFunctBMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbFunctBMS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFunctBMS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbFunctBMS.FormattingEnabled = true;
@@ -1272,7 +1275,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbFunctBMS.Location = new System.Drawing.Point(105, 128);
+            this.cmbFunctBMS.Location = new System.Drawing.Point(105, 246);
             this.cmbFunctBMS.Name = "cmbFunctBMS";
             this.cmbFunctBMS.Size = new System.Drawing.Size(84, 23);
             this.cmbFunctBMS.TabIndex = 21;
@@ -1280,6 +1283,7 @@
             // 
             // cmbVoltage
             // 
+            this.cmbVoltage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbVoltage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVoltage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbVoltage.FormattingEnabled = true;
@@ -1287,7 +1291,7 @@
             "",
             "NOK",
             "OK"});
-            this.cmbVoltage.Location = new System.Drawing.Point(105, 82);
+            this.cmbVoltage.Location = new System.Drawing.Point(105, 200);
             this.cmbVoltage.Name = "cmbVoltage";
             this.cmbVoltage.Size = new System.Drawing.Size(84, 23);
             this.cmbVoltage.TabIndex = 21;
@@ -1295,14 +1299,14 @@
             // 
             // txtVoltage
             // 
-            this.txtVoltage.Location = new System.Drawing.Point(195, 83);
+            this.txtVoltage.Location = new System.Drawing.Point(195, 201);
             this.txtVoltage.Name = "txtVoltage";
             this.txtVoltage.Size = new System.Drawing.Size(243, 21);
             this.txtVoltage.TabIndex = 20;
             // 
             // lblNoD
             // 
-            this.lblNoD.Location = new System.Drawing.Point(86, 1266);
+            this.lblNoD.Location = new System.Drawing.Point(86, 1515);
             this.lblNoD.Name = "lblNoD";
             this.lblNoD.Size = new System.Drawing.Size(103, 36);
             this.lblNoD.TabIndex = 18;
@@ -1311,7 +1315,7 @@
             // 
             // lblNoM
             // 
-            this.lblNoM.Location = new System.Drawing.Point(86, 1230);
+            this.lblNoM.Location = new System.Drawing.Point(86, 1479);
             this.lblNoM.Name = "lblNoM";
             this.lblNoM.Size = new System.Drawing.Size(103, 36);
             this.lblNoM.TabIndex = 18;
@@ -1320,7 +1324,7 @@
             // 
             // lblNoY
             // 
-            this.lblNoY.Location = new System.Drawing.Point(86, 1194);
+            this.lblNoY.Location = new System.Drawing.Point(86, 1443);
             this.lblNoY.Name = "lblNoY";
             this.lblNoY.Size = new System.Drawing.Size(103, 36);
             this.lblNoY.TabIndex = 18;
@@ -1329,7 +1333,7 @@
             // 
             // label38
             // 
-            this.label38.Location = new System.Drawing.Point(310, 1158);
+            this.label38.Location = new System.Drawing.Point(310, 1407);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(74, 36);
             this.label38.TabIndex = 18;
@@ -1338,7 +1342,7 @@
             // 
             // label41
             // 
-            this.label41.Location = new System.Drawing.Point(3, 1266);
+            this.label41.Location = new System.Drawing.Point(3, 1515);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(103, 36);
             this.label41.TabIndex = 18;
@@ -1347,7 +1351,7 @@
             // 
             // label40
             // 
-            this.label40.Location = new System.Drawing.Point(3, 1230);
+            this.label40.Location = new System.Drawing.Point(3, 1479);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(103, 36);
             this.label40.TabIndex = 18;
@@ -1356,7 +1360,7 @@
             // 
             // label39
             // 
-            this.label39.Location = new System.Drawing.Point(3, 1194);
+            this.label39.Location = new System.Drawing.Point(3, 1443);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(103, 36);
             this.label39.TabIndex = 18;
@@ -1365,7 +1369,7 @@
             // 
             // label37
             // 
-            this.label37.Location = new System.Drawing.Point(3, 1158);
+            this.label37.Location = new System.Drawing.Point(3, 1407);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(103, 36);
             this.label37.TabIndex = 18;
@@ -1374,7 +1378,7 @@
             // 
             // label36
             // 
-            this.label36.Location = new System.Drawing.Point(3, 1108);
+            this.label36.Location = new System.Drawing.Point(3, 1361);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(103, 36);
             this.label36.TabIndex = 18;
@@ -1383,7 +1387,7 @@
             // 
             // label35
             // 
-            this.label35.Location = new System.Drawing.Point(3, 1066);
+            this.label35.Location = new System.Drawing.Point(3, 1315);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(103, 36);
             this.label35.TabIndex = 18;
@@ -1392,7 +1396,7 @@
             // 
             // label34
             // 
-            this.label34.Location = new System.Drawing.Point(3, 1024);
+            this.label34.Location = new System.Drawing.Point(3, 1044);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(103, 36);
             this.label34.TabIndex = 18;
@@ -1401,7 +1405,7 @@
             // 
             // label33
             // 
-            this.label33.Location = new System.Drawing.Point(3, 982);
+            this.label33.Location = new System.Drawing.Point(3, 1002);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(103, 36);
             this.label33.TabIndex = 18;
@@ -1410,7 +1414,7 @@
             // 
             // label32
             // 
-            this.label32.Location = new System.Drawing.Point(3, 940);
+            this.label32.Location = new System.Drawing.Point(3, 960);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(103, 36);
             this.label32.TabIndex = 18;
@@ -1419,7 +1423,7 @@
             // 
             // label31
             // 
-            this.label31.Location = new System.Drawing.Point(3, 898);
+            this.label31.Location = new System.Drawing.Point(3, 918);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(103, 36);
             this.label31.TabIndex = 18;
@@ -1428,7 +1432,7 @@
             // 
             // label30
             // 
-            this.label30.Location = new System.Drawing.Point(3, 856);
+            this.label30.Location = new System.Drawing.Point(3, 876);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(103, 36);
             this.label30.TabIndex = 18;
@@ -1437,79 +1441,43 @@
             // 
             // label29
             // 
-            this.label29.Location = new System.Drawing.Point(3, 821);
+            this.label29.Location = new System.Drawing.Point(3, 844);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(103, 23);
             this.label29.TabIndex = 18;
             this.label29.Text = "Kion DTC";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label26
-            // 
-            this.label26.Location = new System.Drawing.Point(195, 728);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(103, 23);
-            this.label26.TabIndex = 18;
-            this.label26.Text = "Kion DTC";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label28
             // 
-            this.label28.Location = new System.Drawing.Point(3, 792);
+            this.label28.Location = new System.Drawing.Point(3, 815);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(103, 23);
             this.label28.TabIndex = 18;
             this.label28.Text = "Kion fault code";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label25
-            // 
-            this.label25.Location = new System.Drawing.Point(195, 699);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(103, 23);
-            this.label25.TabIndex = 18;
-            this.label25.Text = "Kion fault code";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label27
             // 
-            this.label27.Location = new System.Drawing.Point(3, 763);
+            this.label27.Location = new System.Drawing.Point(3, 786);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(103, 23);
             this.label27.TabIndex = 18;
             this.label27.Text = "Saft fault code";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label24
-            // 
-            this.label24.Location = new System.Drawing.Point(195, 670);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(103, 23);
-            this.label24.TabIndex = 18;
-            this.label24.Text = "Saft fault code";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label23
-            // 
-            this.label23.Location = new System.Drawing.Point(3, 670);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(103, 81);
-            this.label23.TabIndex = 18;
-            this.label23.Text = "Faults";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label21
             // 
-            this.label21.Location = new System.Drawing.Point(3, 595);
+            this.label21.Location = new System.Drawing.Point(3, 721);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(103, 54);
             this.label21.TabIndex = 18;
-            this.label21.Text = "BB events";
+            this.label21.Text = "BB downloaded";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label20
             // 
-            this.label20.Location = new System.Drawing.Point(3, 532);
+            this.label20.Location = new System.Drawing.Point(3, 658);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(103, 54);
             this.label20.TabIndex = 18;
@@ -1518,7 +1486,7 @@
             // 
             // label17
             // 
-            this.label17.Location = new System.Drawing.Point(3, 493);
+            this.label17.Location = new System.Drawing.Point(3, 619);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(103, 41);
             this.label17.TabIndex = 18;
@@ -1527,7 +1495,7 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(3, 443);
+            this.label14.Location = new System.Drawing.Point(3, 569);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(103, 41);
             this.label14.TabIndex = 18;
@@ -1536,7 +1504,7 @@
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(3, 412);
+            this.label13.Location = new System.Drawing.Point(3, 538);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(103, 23);
             this.label13.TabIndex = 18;
@@ -1545,7 +1513,7 @@
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(3, 307);
+            this.label10.Location = new System.Drawing.Point(3, 425);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 99);
             this.label10.TabIndex = 18;
@@ -1554,7 +1522,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(3, 238);
+            this.label9.Location = new System.Drawing.Point(3, 356);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 58);
             this.label9.TabIndex = 18;
@@ -1563,7 +1531,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(3, 174);
+            this.label8.Location = new System.Drawing.Point(3, 292);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 58);
             this.label8.TabIndex = 18;
@@ -1572,7 +1540,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(3, 108);
+            this.label7.Location = new System.Drawing.Point(3, 226);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 60);
             this.label7.TabIndex = 18;
@@ -1581,7 +1549,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(3, 83);
+            this.label5.Location = new System.Drawing.Point(3, 201);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 21);
             this.label5.TabIndex = 18;
@@ -1611,6 +1579,245 @@
             this.btnCancel.Text = "Zrušit";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // label42
+            // 
+            this.label42.Location = new System.Drawing.Point(3, 88);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(96, 21);
+            this.label42.TabIndex = 18;
+            this.label42.Text = "Visual state";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbVisualState
+            // 
+            this.cmbVisualState.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbVisualState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVisualState.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbVisualState.FormattingEnabled = true;
+            this.cmbVisualState.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbVisualState.Location = new System.Drawing.Point(105, 86);
+            this.cmbVisualState.Name = "cmbVisualState";
+            this.cmbVisualState.Size = new System.Drawing.Size(84, 23);
+            this.cmbVisualState.TabIndex = 21;
+            this.cmbVisualState.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // txtVisualState
+            // 
+            this.txtVisualState.Location = new System.Drawing.Point(195, 82);
+            this.txtVisualState.Multiline = true;
+            this.txtVisualState.Name = "txtVisualState";
+            this.txtVisualState.Size = new System.Drawing.Size(268, 34);
+            this.txtVisualState.TabIndex = 23;
+            // 
+            // label43
+            // 
+            this.label43.Location = new System.Drawing.Point(3, 114);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(96, 37);
+            this.label43.TabIndex = 18;
+            this.label43.Text = "PrtScn overview";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbPrtScn
+            // 
+            this.cmbPrtScn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbPrtScn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPrtScn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbPrtScn.FormattingEnabled = true;
+            this.cmbPrtScn.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbPrtScn.Location = new System.Drawing.Point(105, 122);
+            this.cmbPrtScn.Name = "cmbPrtScn";
+            this.cmbPrtScn.Size = new System.Drawing.Size(84, 23);
+            this.cmbPrtScn.TabIndex = 21;
+            this.cmbPrtScn.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // label44
+            // 
+            this.label44.Location = new System.Drawing.Point(3, 158);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(96, 27);
+            this.label44.TabIndex = 18;
+            this.label44.Text = "Brand ID";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtBrandID
+            // 
+            this.txtBrandID.Location = new System.Drawing.Point(105, 161);
+            this.txtBrandID.Name = "txtBrandID";
+            this.txtBrandID.Size = new System.Drawing.Size(358, 21);
+            this.txtBrandID.TabIndex = 20;
+            // 
+            // label45
+            // 
+            this.label45.Location = new System.Drawing.Point(3, 1087);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(103, 36);
+            this.label45.TabIndex = 18;
+            this.label45.Text = "Critical fault";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbCriticalFault
+            // 
+            this.cmbCriticalFault.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCriticalFault.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCriticalFault.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbCriticalFault.FormattingEnabled = true;
+            this.cmbCriticalFault.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbCriticalFault.Location = new System.Drawing.Point(105, 1095);
+            this.cmbCriticalFault.Name = "cmbCriticalFault";
+            this.cmbCriticalFault.Size = new System.Drawing.Size(84, 23);
+            this.cmbCriticalFault.TabIndex = 21;
+            this.cmbCriticalFault.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // txtCriticalFault
+            // 
+            this.txtCriticalFault.Location = new System.Drawing.Point(195, 1087);
+            this.txtCriticalFault.Multiline = true;
+            this.txtCriticalFault.Name = "txtCriticalFault";
+            this.txtCriticalFault.Size = new System.Drawing.Size(268, 36);
+            this.txtCriticalFault.TabIndex = 23;
+            // 
+            // label46
+            // 
+            this.label46.Location = new System.Drawing.Point(3, 1131);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(103, 36);
+            this.label46.TabIndex = 18;
+            this.label46.Text = "Pofbit_CBIT";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbCBIT
+            // 
+            this.cmbCBIT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCBIT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCBIT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbCBIT.FormattingEnabled = true;
+            this.cmbCBIT.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbCBIT.Location = new System.Drawing.Point(105, 1139);
+            this.cmbCBIT.Name = "cmbCBIT";
+            this.cmbCBIT.Size = new System.Drawing.Size(84, 23);
+            this.cmbCBIT.TabIndex = 21;
+            this.cmbCBIT.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // txtCBIT
+            // 
+            this.txtCBIT.Location = new System.Drawing.Point(195, 1131);
+            this.txtCBIT.Multiline = true;
+            this.txtCBIT.Name = "txtCBIT";
+            this.txtCBIT.Size = new System.Drawing.Size(268, 36);
+            this.txtCBIT.TabIndex = 23;
+            // 
+            // label47
+            // 
+            this.label47.Location = new System.Drawing.Point(3, 1176);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(103, 36);
+            this.label47.TabIndex = 18;
+            this.label47.Text = "Capacity test";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbCapacityTest
+            // 
+            this.cmbCapacityTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCapacityTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCapacityTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbCapacityTest.FormattingEnabled = true;
+            this.cmbCapacityTest.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbCapacityTest.Location = new System.Drawing.Point(105, 1184);
+            this.cmbCapacityTest.Name = "cmbCapacityTest";
+            this.cmbCapacityTest.Size = new System.Drawing.Size(84, 23);
+            this.cmbCapacityTest.TabIndex = 21;
+            this.cmbCapacityTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // txtCapacityTest
+            // 
+            this.txtCapacityTest.Location = new System.Drawing.Point(195, 1176);
+            this.txtCapacityTest.Multiline = true;
+            this.txtCapacityTest.Name = "txtCapacityTest";
+            this.txtCapacityTest.Size = new System.Drawing.Size(268, 36);
+            this.txtCapacityTest.TabIndex = 23;
+            // 
+            // label48
+            // 
+            this.label48.Location = new System.Drawing.Point(3, 1221);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(103, 36);
+            this.label48.TabIndex = 18;
+            this.label48.Text = "Contiunity test";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbContiunityTest
+            // 
+            this.cmbContiunityTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbContiunityTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbContiunityTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbContiunityTest.FormattingEnabled = true;
+            this.cmbContiunityTest.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbContiunityTest.Location = new System.Drawing.Point(105, 1229);
+            this.cmbContiunityTest.Name = "cmbContiunityTest";
+            this.cmbContiunityTest.Size = new System.Drawing.Size(84, 23);
+            this.cmbContiunityTest.TabIndex = 21;
+            this.cmbContiunityTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // txtContiunityTest
+            // 
+            this.txtContiunityTest.Location = new System.Drawing.Point(195, 1221);
+            this.txtContiunityTest.Multiline = true;
+            this.txtContiunityTest.Name = "txtContiunityTest";
+            this.txtContiunityTest.Size = new System.Drawing.Size(268, 36);
+            this.txtContiunityTest.TabIndex = 23;
+            // 
+            // label49
+            // 
+            this.label49.Location = new System.Drawing.Point(3, 1268);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(103, 36);
+            this.label49.TabIndex = 18;
+            this.label49.Text = "Function test";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbFunctionTest
+            // 
+            this.cmbFunctionTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbFunctionTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFunctionTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbFunctionTest.FormattingEnabled = true;
+            this.cmbFunctionTest.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbFunctionTest.Location = new System.Drawing.Point(105, 1276);
+            this.cmbFunctionTest.Name = "cmbFunctionTest";
+            this.cmbFunctionTest.Size = new System.Drawing.Size(84, 23);
+            this.cmbFunctionTest.TabIndex = 21;
+            this.cmbFunctionTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // txtFunctionTest
+            // 
+            this.txtFunctionTest.Location = new System.Drawing.Point(195, 1268);
+            this.txtFunctionTest.Multiline = true;
+            this.txtFunctionTest.Name = "txtFunctionTest";
+            this.txtFunctionTest.Size = new System.Drawing.Size(268, 36);
+            this.txtFunctionTest.TabIndex = 23;
             // 
             // BlackBoxData
             // 
@@ -1699,18 +1906,11 @@
         private System.Windows.Forms.TextBox txtSaftCode2;
         private System.Windows.Forms.TextBox txtSaftCode1;
         private System.Windows.Forms.TextBox txtBB;
-        private System.Windows.Forms.ComboBox cmbKionDTC;
-        private System.Windows.Forms.ComboBox cmbSaftCode;
-        private System.Windows.Forms.ComboBox cmbKionCode;
         private System.Windows.Forms.ComboBox cmbBB;
         private System.Windows.Forms.Label lblNoY;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtKionDTC12;
         private System.Windows.Forms.TextBox txtKionCode12;
@@ -1772,5 +1972,27 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtFunctionTest;
+        private System.Windows.Forms.TextBox txtContiunityTest;
+        private System.Windows.Forms.TextBox txtCapacityTest;
+        private System.Windows.Forms.TextBox txtCBIT;
+        private System.Windows.Forms.TextBox txtCriticalFault;
+        private System.Windows.Forms.TextBox txtVisualState;
+        private System.Windows.Forms.ComboBox cmbFunctionTest;
+        private System.Windows.Forms.ComboBox cmbContiunityTest;
+        private System.Windows.Forms.ComboBox cmbCapacityTest;
+        private System.Windows.Forms.ComboBox cmbCBIT;
+        private System.Windows.Forms.ComboBox cmbCriticalFault;
+        private System.Windows.Forms.ComboBox cmbPrtScn;
+        private System.Windows.Forms.ComboBox cmbVisualState;
+        private System.Windows.Forms.TextBox txtBrandID;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
     }
 }

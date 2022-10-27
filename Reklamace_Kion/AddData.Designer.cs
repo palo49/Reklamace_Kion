@@ -796,7 +796,7 @@
             // 
             this.numHoursAdministration.Location = new System.Drawing.Point(236, 1390);
             this.numHoursAdministration.Maximum = new decimal(new int[] {
-            60000,
+            99999999,
             0,
             0,
             0});
@@ -809,7 +809,7 @@
             // 
             this.numHoursTechnician.Location = new System.Drawing.Point(120, 1390);
             this.numHoursTechnician.Maximum = new decimal(new int[] {
-            60000,
+            99999999,
             0,
             0,
             0});
@@ -822,7 +822,7 @@
             // 
             this.numCostOfComponents.Location = new System.Drawing.Point(4, 1432);
             this.numCostOfComponents.Maximum = new decimal(new int[] {
-            60000,
+            99999999,
             0,
             0,
             0});
@@ -835,7 +835,7 @@
             // 
             this.numHoursRepairman.Location = new System.Drawing.Point(4, 1390);
             this.numHoursRepairman.Maximum = new decimal(new int[] {
-            60000,
+            99999999,
             0,
             0,
             0});
@@ -848,7 +848,7 @@
             // 
             this.numTariffAdministration.Location = new System.Drawing.Point(236, 1347);
             this.numTariffAdministration.Maximum = new decimal(new int[] {
-            60000,
+            99999999,
             0,
             0,
             0});
@@ -861,7 +861,7 @@
             // 
             this.numTariffTechnician.Location = new System.Drawing.Point(120, 1347);
             this.numTariffTechnician.Maximum = new decimal(new int[] {
-            60000,
+            99999999,
             0,
             0,
             0});
@@ -874,7 +874,7 @@
             // 
             this.numTariffRepairman.Location = new System.Drawing.Point(4, 1347);
             this.numTariffRepairman.Maximum = new decimal(new int[] {
-            60000,
+            99999999,
             0,
             0,
             0});

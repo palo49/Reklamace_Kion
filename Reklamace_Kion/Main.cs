@@ -448,6 +448,11 @@ namespace Reklamace_Kion
                 exportName = "DataRepairs_export_";
                 tabulka = dataGridOpravy;
             }
+            else if ((curTab == 3) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
+            {
+                exportName = "DataExpedition_export_";
+                tabulka = dgvExpedition;
+            }
             else
             {
                 return;
@@ -919,6 +924,8 @@ namespace Reklamace_Kion
                 {
                     this.bindRepairData.Filter = "(CLM LIKE '%" + txtSearch.Text + "%') OR " +
                         "(BrandId_Speed LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(PN_Battery LIKE '%" + txtSearch.Text + "%') OR " +
+                        "(SN_Battery LIKE '%" + txtSearch.Text + "%') OR " +
                         "(TypeOfPalette LIKE '%" + txtSearch.Text + "%')";
                 }
             }
@@ -1307,7 +1314,7 @@ namespace Reklamace_Kion
             {
                 while (rdr.Read())
                 {
-                    dgvAnalysis.Rows.Add(SafeGetString(rdr, 1), SafeGetString(rdr, 2), SafeGetDouble(rdr, 3), SafeGetString(rdr, 4), SafeGetString(rdr, 5), SafeGetDouble(rdr, 6), SafeGetDouble(rdr, 7), SafeGetString(rdr, 8), SafeGetString(rdr, 9), SafeGetString(rdr, 10), SafeGetDouble(rdr, 11), SafeGetString(rdr, 12), SafeGetString(rdr, 13), "", SafeGetString(rdr, 14), SafeGetString(rdr, 15), SafeGetString(rdr, 16), SafeGetString(rdr, 17), SafeGetString(rdr, 18), SafeGetBool(rdr, 19), SafeGetBool(rdr, 20), SafeGetBool(rdr, 21), SafeGetBool(rdr, 22), SafeGetBool(rdr, 23), SafeGetBool(rdr, 24), SafeGetString(rdr, 25), SafeGetString(rdr, 26));
+                    dgvAnalysis.Rows.Add(SafeGetString(rdr, 1), "", SafeGetString(rdr, 2));
                     //dgvAnalysis.Rows.Add(rdr.GetString(1), rdr.GetString(2), rdr.GetDouble(3), rdr.GetString(4), rdr.GetString(5), rdr.GetDouble(6), rdr.GetDouble(7), rdr.GetString(8), rdr.GetString(9), rdr.GetString(10), rdr.GetDouble(11), rdr.GetString(12), rdr.GetString(13), "",rdr.GetString(14), rdr.GetString(15), rdr.GetString(16), rdr.GetString(17), rdr.GetString(18), rdr.GetBoolean(19), rdr.GetBoolean(20), rdr.GetBoolean(21), rdr.GetBoolean(22), rdr.GetBoolean(23), rdr.GetBoolean(24), rdr.GetString(25), rdr.GetString(26));
                 }
             }
@@ -1531,6 +1538,18 @@ namespace Reklamace_Kion
             if ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5"))
             {
                 dgvExpedition.CurrentCell.Value = string.Empty;
+            }
+        }
+
+        private void dgvExpedition_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var dataGrid = (DataGridView)sender;
+            if (e.Button == MouseButtons.Right && e.RowIndex != -1)
+            {
+                var row = dataGrid.Rows[e.RowIndex];
+                dataGrid.CurrentCell = row.Cells[e.ColumnIndex == -1 ? 1 : e.ColumnIndex];
+                row.Selected = true;
+                dataGrid.Focus();
             }
         }
     }
