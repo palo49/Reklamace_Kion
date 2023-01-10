@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,6 +45,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -54,20 +54,34 @@
             this.lblLoadingData = new System.Windows.Forms.Label();
             this.dataGrid1 = new ADGV.AdvancedDataGridView();
             this.CellContext = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripAddToAnalysis = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridOpravy = new ADGV.AdvancedDataGridView();
             this.cellContextRepairs = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.StripMenuOpenDataRepairs = new System.Windows.Forms.ToolStripMenuItem();
-            this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvAnalysis = new ADGV.AdvancedDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvExpedition = new ADGV.AdvancedDataGridView();
+            this.Column_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_3_add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column_4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_4_add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_5_add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column_6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_6_add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column_7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_7_add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column_8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_8_add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column_9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column_10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cellContextExpedition = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.RemoveValue = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.změnitHesloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,46 +101,33 @@
             this.přidatKódToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.upravitKódyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oAplikaciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnDelData = new System.Windows.Forms.Button();
-            this.btnAddData = new System.Windows.Forms.Button();
-            this.btnReloadData = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblActionInfo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblActualDate = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.RefTime = new System.Windows.Forms.Timer(this.components);
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnResetFiltr = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripAddToAnalysis = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
+            this.StripMenuOpenDataRepairs = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
+            this.RemoveValue = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.btnUsers = new System.Windows.Forms.Button();
-            this.Column_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_3_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column_4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_4_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_5_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column_6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_6_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column_7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_7_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column_8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_8_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column_9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column_10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.btnDelData = new System.Windows.Forms.Button();
+            this.btnAddData = new System.Windows.Forms.Button();
+            this.btnReloadData = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripEditData = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -264,7 +265,7 @@
             this.dataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid1.RowHeadersVisible = false;
             this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid1.Size = new System.Drawing.Size(822, 505);
+            this.dataGrid1.Size = new System.Drawing.Size(822, 499);
             this.dataGrid1.TabIndex = 0;
             this.dataGrid1.TimeFilter = false;
             this.dataGrid1.SortStringChanged += new System.EventHandler(this.dataGrid1_SortStringChanged);
@@ -276,36 +277,13 @@
             // CellContext
             // 
             this.CellContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripEditData,
             this.přidatKOpravámToolStripMenuItem,
             this.toolStripAddToAnalysis,
             this.toolStripShowFolder});
             this.CellContext.Name = "contextMenuStrip1";
-            this.CellContext.Size = new System.Drawing.Size(168, 70);
+            this.CellContext.Size = new System.Drawing.Size(181, 114);
             this.CellContext.Opening += new System.ComponentModel.CancelEventHandler(this.CellContext_Opening);
-            // 
-            // přidatKOpravámToolStripMenuItem
-            // 
-            this.přidatKOpravámToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("přidatKOpravámToolStripMenuItem.Image")));
-            this.přidatKOpravámToolStripMenuItem.Name = "přidatKOpravámToolStripMenuItem";
-            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.přidatKOpravámToolStripMenuItem.Text = "Přidat k opravám";
-            this.přidatKOpravámToolStripMenuItem.Click += new System.EventHandler(this.přidatKOpravámToolStripMenuItem_Click);
-            // 
-            // toolStripAddToAnalysis
-            // 
-            this.toolStripAddToAnalysis.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAddToAnalysis.Image")));
-            this.toolStripAddToAnalysis.Name = "toolStripAddToAnalysis";
-            this.toolStripAddToAnalysis.Size = new System.Drawing.Size(167, 22);
-            this.toolStripAddToAnalysis.Text = "Přidat k analýzam";
-            this.toolStripAddToAnalysis.Click += new System.EventHandler(this.toolStripAddToAnalysis_Click);
-            // 
-            // toolStripShowFolder
-            // 
-            this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
-            this.toolStripShowFolder.Name = "toolStripShowFolder";
-            this.toolStripShowFolder.Size = new System.Drawing.Size(167, 22);
-            this.toolStripShowFolder.Text = "Otevřit složku";
-            this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
             // 
             // tabPage2
             // 
@@ -368,22 +346,6 @@
             this.cellContextRepairs.Name = "contextMenuStrip1";
             this.cellContextRepairs.Size = new System.Drawing.Size(147, 48);
             // 
-            // StripMenuOpenDataRepairs
-            // 
-            this.StripMenuOpenDataRepairs.Image = ((System.Drawing.Image)(resources.GetObject("StripMenuOpenDataRepairs.Image")));
-            this.StripMenuOpenDataRepairs.Name = "StripMenuOpenDataRepairs";
-            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(146, 22);
-            this.StripMenuOpenDataRepairs.Text = "Data opravy";
-            this.StripMenuOpenDataRepairs.Click += new System.EventHandler(this.StripMenuOpenDataRepairs_Click);
-            // 
-            // stripMenuOpenFolderRepairs
-            // 
-            this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
-            this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
-            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(146, 22);
-            this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
-            this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgvAnalysis);
@@ -435,6 +397,42 @@
             this.dgvAnalysis.TimeFilter = false;
             this.dgvAnalysis.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnalysis_CellContentClick);
             this.dgvAnalysis.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnalysis_CellValueChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = "CLM";
+            this.Column1.MinimumWidth = 22;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column1.Width = 120;
+            // 
+            // Column26
+            // 
+            this.Column26.HeaderText = "BlackBox_Data";
+            this.Column26.MinimumWidth = 22;
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            this.Column26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column26.Text = "Data";
+            this.Column26.UseColumnTextForButtonValue = true;
+            this.Column26.Width = 125;
+            // 
+            // Column25
+            // 
+            this.Column25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column25.FillWeight = 120F;
+            this.Column25.HeaderText = "Result";
+            this.Column25.Items.AddRange(new object[] {
+            " ",
+            "Uznáno",
+            "Neuznáno"});
+            this.Column25.MinimumWidth = 22;
+            this.Column25.Name = "Column25";
+            this.Column25.ReadOnly = true;
+            this.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column25.Width = 120;
             // 
             // tabPage4
             // 
@@ -493,6 +491,7 @@
             this.dgvExpedition.Location = new System.Drawing.Point(0, 0);
             this.dgvExpedition.MultiSelect = false;
             this.dgvExpedition.Name = "dgvExpedition";
+            this.dgvExpedition.ReadOnly = true;
             this.dgvExpedition.RowHeadersVisible = false;
             this.dgvExpedition.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvExpedition.Size = new System.Drawing.Size(821, 514);
@@ -502,6 +501,192 @@
             this.dgvExpedition.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvExpedition_CellMouseDown);
             this.dgvExpedition.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpedition_CellValueChanged);
             // 
+            // Column_1
+            // 
+            this.Column_1.HeaderText = "Expedition ID";
+            this.Column_1.MinimumWidth = 22;
+            this.Column_1.Name = "Column_1";
+            this.Column_1.ReadOnly = true;
+            this.Column_1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Column_2
+            // 
+            this.Column_2.HeaderText = "Typ palety";
+            this.Column_2.Items.AddRange(new object[] {
+            "",
+            "Půl paleta",
+            "EURO paleta",
+            "Nefab"});
+            this.Column_2.MinimumWidth = 22;
+            this.Column_2.Name = "Column_2";
+            this.Column_2.ReadOnly = true;
+            this.Column_2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_2.Width = 130;
+            // 
+            // Column_3
+            // 
+            this.Column_3.HeaderText = "1. Pozice";
+            this.Column_3.MinimumWidth = 22;
+            this.Column_3.Name = "Column_3";
+            this.Column_3.ReadOnly = true;
+            this.Column_3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_3.Width = 150;
+            // 
+            // Column_3_add
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.NullValue = "+";
+            this.Column_3_add.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Column_3_add.HeaderText = "";
+            this.Column_3_add.MinimumWidth = 22;
+            this.Column_3_add.Name = "Column_3_add";
+            this.Column_3_add.ReadOnly = true;
+            this.Column_3_add.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column_3_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_3_add.Text = "+";
+            this.Column_3_add.Width = 22;
+            // 
+            // Column_4
+            // 
+            this.Column_4.HeaderText = "2. Pozice";
+            this.Column_4.MinimumWidth = 22;
+            this.Column_4.Name = "Column_4";
+            this.Column_4.ReadOnly = true;
+            this.Column_4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_4.Width = 150;
+            // 
+            // Column_4_add
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.NullValue = "+";
+            this.Column_4_add.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Column_4_add.HeaderText = "";
+            this.Column_4_add.MinimumWidth = 22;
+            this.Column_4_add.Name = "Column_4_add";
+            this.Column_4_add.ReadOnly = true;
+            this.Column_4_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_4_add.Text = "+";
+            this.Column_4_add.Width = 22;
+            // 
+            // Column_5
+            // 
+            this.Column_5.HeaderText = "3. Pozice";
+            this.Column_5.MinimumWidth = 22;
+            this.Column_5.Name = "Column_5";
+            this.Column_5.ReadOnly = true;
+            this.Column_5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_5.Width = 150;
+            // 
+            // Column_5_add
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.NullValue = "+";
+            this.Column_5_add.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Column_5_add.HeaderText = "";
+            this.Column_5_add.MinimumWidth = 22;
+            this.Column_5_add.Name = "Column_5_add";
+            this.Column_5_add.ReadOnly = true;
+            this.Column_5_add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column_5_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_5_add.Text = "+";
+            this.Column_5_add.Width = 22;
+            // 
+            // Column_6
+            // 
+            this.Column_6.HeaderText = "4. Pozice";
+            this.Column_6.MinimumWidth = 22;
+            this.Column_6.Name = "Column_6";
+            this.Column_6.ReadOnly = true;
+            this.Column_6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_6.Width = 150;
+            // 
+            // Column_6_add
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.NullValue = "+";
+            this.Column_6_add.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Column_6_add.HeaderText = "";
+            this.Column_6_add.MinimumWidth = 22;
+            this.Column_6_add.Name = "Column_6_add";
+            this.Column_6_add.ReadOnly = true;
+            this.Column_6_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_6_add.Text = "+";
+            this.Column_6_add.Width = 22;
+            // 
+            // Column_7
+            // 
+            this.Column_7.HeaderText = "5. Pozice";
+            this.Column_7.MinimumWidth = 22;
+            this.Column_7.Name = "Column_7";
+            this.Column_7.ReadOnly = true;
+            this.Column_7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_7.Width = 150;
+            // 
+            // Column_7_add
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.NullValue = "+";
+            this.Column_7_add.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Column_7_add.HeaderText = "";
+            this.Column_7_add.MinimumWidth = 22;
+            this.Column_7_add.Name = "Column_7_add";
+            this.Column_7_add.ReadOnly = true;
+            this.Column_7_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_7_add.Text = "+";
+            this.Column_7_add.Width = 22;
+            // 
+            // Column_8
+            // 
+            this.Column_8.HeaderText = "6. Pozice";
+            this.Column_8.MinimumWidth = 22;
+            this.Column_8.Name = "Column_8";
+            this.Column_8.ReadOnly = true;
+            this.Column_8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_8.Width = 150;
+            // 
+            // Column_8_add
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.NullValue = "+";
+            this.Column_8_add.DefaultCellStyle = dataGridViewCellStyle15;
+            this.Column_8_add.HeaderText = "";
+            this.Column_8_add.MinimumWidth = 22;
+            this.Column_8_add.Name = "Column_8_add";
+            this.Column_8_add.ReadOnly = true;
+            this.Column_8_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column_8_add.Text = "+";
+            this.Column_8_add.Width = 22;
+            // 
+            // Column_9
+            // 
+            this.Column_9.HeaderText = "Místo";
+            this.Column_9.Items.AddRange(new object[] {
+            "",
+            "Opravy",
+            "KION",
+            "Expedice"});
+            this.Column_9.MinimumWidth = 22;
+            this.Column_9.Name = "Column_9";
+            this.Column_9.ReadOnly = true;
+            this.Column_9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column_9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Column_10
+            // 
+            this.Column_10.HeaderText = "Datum přípravy";
+            this.Column_10.MinimumWidth = 22;
+            this.Column_10.Name = "Column_10";
+            this.Column_10.ReadOnly = true;
+            this.Column_10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Column_11
+            // 
+            this.Column_11.HeaderText = "Datum expedice";
+            this.Column_11.MinimumWidth = 22;
+            this.Column_11.Name = "Column_11";
+            this.Column_11.ReadOnly = true;
+            this.Column_11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // cellContextExpedition
             // 
             this.cellContextExpedition.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -509,20 +694,13 @@
             this.cellContextExpedition.Name = "cellContextExpedition";
             this.cellContextExpedition.Size = new System.Drawing.Size(203, 26);
             // 
-            // RemoveValue
-            // 
-            this.RemoveValue.Image = ((System.Drawing.Image)(resources.GetObject("RemoveValue.Image")));
-            this.RemoveValue.Name = "RemoveValue";
-            this.RemoveValue.Size = new System.Drawing.Size(202, 22);
-            this.RemoveValue.Text = "Smazat vybranou buňku";
-            this.RemoveValue.Click += new System.EventHandler(this.RemoveValue_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SettingsToolStripMenuItem,
-            this.oAplikaciToolStripMenuItem});
+            this.oAplikaciToolStripMenuItem,
+            this.adminPanelToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -672,111 +850,16 @@
             this.oAplikaciToolStripMenuItem.Text = "O aplikaci";
             this.oAplikaciToolStripMenuItem.Click += new System.EventHandler(this.oAplikaciToolStripMenuItem_Click);
             // 
+            // adminPanelToolStripMenuItem
+            // 
+            this.adminPanelToolStripMenuItem.Name = "adminPanelToolStripMenuItem";
+            this.adminPanelToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.adminPanelToolStripMenuItem.Text = "Admin panel";
+            this.adminPanelToolStripMenuItem.Click += new System.EventHandler(this.adminPanelToolStripMenuItem_Click);
+            // 
             // toolTip1
             // 
             this.toolTip1.ToolTipTitle = "Info";
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.Location = new System.Drawing.Point(12, 158);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(148, 36);
-            this.btnExport.TabIndex = 6;
-            this.btnExport.Text = "Export";
-            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnExport, "Exportuje právě aktivní tabulku do excelu.");
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(28)))), ((int)(((byte)(31)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(12, 593);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(148, 39);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Konec";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnExit, "Ukonči aplikaci.");
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnDelData
-            // 
-            this.btnDelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnDelData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnDelData.FlatAppearance.BorderSize = 0;
-            this.btnDelData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnDelData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelData.Image = ((System.Drawing.Image)(resources.GetObject("btnDelData.Image")));
-            this.btnDelData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelData.Location = new System.Drawing.Point(12, 245);
-            this.btnDelData.Name = "btnDelData";
-            this.btnDelData.Size = new System.Drawing.Size(148, 39);
-            this.btnDelData.TabIndex = 3;
-            this.btnDelData.Text = "Smazat";
-            this.btnDelData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnDelData, "Smaže vybrané data ze serveru.");
-            this.btnDelData.UseVisualStyleBackColor = false;
-            this.btnDelData.Click += new System.EventHandler(this.btnDelData_Click);
-            // 
-            // btnAddData
-            // 
-            this.btnAddData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnAddData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnAddData.FlatAppearance.BorderSize = 0;
-            this.btnAddData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnAddData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddData.Image = ((System.Drawing.Image)(resources.GetObject("btnAddData.Image")));
-            this.btnAddData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddData.Location = new System.Drawing.Point(12, 200);
-            this.btnAddData.Name = "btnAddData";
-            this.btnAddData.Size = new System.Drawing.Size(148, 39);
-            this.btnAddData.TabIndex = 3;
-            this.btnAddData.Text = "Přidat";
-            this.btnAddData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnAddData, "Přídá data na server.");
-            this.btnAddData.UseVisualStyleBackColor = false;
-            this.btnAddData.Click += new System.EventHandler(this.btnAddData_Click);
-            // 
-            // btnReloadData
-            // 
-            this.btnReloadData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnReloadData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReloadData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnReloadData.FlatAppearance.BorderSize = 0;
-            this.btnReloadData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnReloadData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReloadData.Image = ((System.Drawing.Image)(resources.GetObject("btnReloadData.Image")));
-            this.btnReloadData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReloadData.Location = new System.Drawing.Point(12, 113);
-            this.btnReloadData.Name = "btnReloadData";
-            this.btnReloadData.Size = new System.Drawing.Size(148, 39);
-            this.btnReloadData.TabIndex = 3;
-            this.btnReloadData.Text = "Obnovit";
-            this.btnReloadData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.btnReloadData, "Znovu načte data ze serveru.");
-            this.btnReloadData.UseVisualStyleBackColor = false;
-            this.btnReloadData.Click += new System.EventHandler(this.btnReloadData_Click);
             // 
             // label1
             // 
@@ -831,18 +914,6 @@
             this.lblActualDate.Size = new System.Drawing.Size(38, 16);
             this.lblActualDate.TabIndex = 10;
             this.lblActualDate.Text = "Time";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(39, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // backgroundWorker1
             // 
@@ -913,6 +984,96 @@
             this.btnResetFiltr.UseVisualStyleBackColor = false;
             this.btnResetFiltr.Click += new System.EventHandler(this.btnResetFiltr_Click);
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExport.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.Location = new System.Drawing.Point(12, 158);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(148, 36);
+            this.btnExport.TabIndex = 6;
+            this.btnExport.Text = "Export";
+            this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnExport, "Exportuje právě aktivní tabulku do excelu.");
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // přidatKOpravámToolStripMenuItem
+            // 
+            this.přidatKOpravámToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("přidatKOpravámToolStripMenuItem.Image")));
+            this.přidatKOpravámToolStripMenuItem.Name = "přidatKOpravámToolStripMenuItem";
+            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.přidatKOpravámToolStripMenuItem.Text = "Přidat k opravám";
+            this.přidatKOpravámToolStripMenuItem.Click += new System.EventHandler(this.přidatKOpravámToolStripMenuItem_Click);
+            // 
+            // toolStripAddToAnalysis
+            // 
+            this.toolStripAddToAnalysis.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAddToAnalysis.Image")));
+            this.toolStripAddToAnalysis.Name = "toolStripAddToAnalysis";
+            this.toolStripAddToAnalysis.Size = new System.Drawing.Size(180, 22);
+            this.toolStripAddToAnalysis.Text = "Přidat k analýzam";
+            this.toolStripAddToAnalysis.Click += new System.EventHandler(this.toolStripAddToAnalysis_Click);
+            // 
+            // toolStripShowFolder
+            // 
+            this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
+            this.toolStripShowFolder.Name = "toolStripShowFolder";
+            this.toolStripShowFolder.Size = new System.Drawing.Size(180, 22);
+            this.toolStripShowFolder.Text = "Otevřit složku";
+            this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
+            // 
+            // StripMenuOpenDataRepairs
+            // 
+            this.StripMenuOpenDataRepairs.Image = ((System.Drawing.Image)(resources.GetObject("StripMenuOpenDataRepairs.Image")));
+            this.StripMenuOpenDataRepairs.Name = "StripMenuOpenDataRepairs";
+            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(146, 22);
+            this.StripMenuOpenDataRepairs.Text = "Data opravy";
+            this.StripMenuOpenDataRepairs.Click += new System.EventHandler(this.StripMenuOpenDataRepairs_Click);
+            // 
+            // stripMenuOpenFolderRepairs
+            // 
+            this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
+            this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
+            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(146, 22);
+            this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
+            this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
+            // 
+            // RemoveValue
+            // 
+            this.RemoveValue.Image = ((System.Drawing.Image)(resources.GetObject("RemoveValue.Image")));
+            this.RemoveValue.Name = "RemoveValue";
+            this.RemoveValue.Size = new System.Drawing.Size(202, 22);
+            this.RemoveValue.Text = "Smazat vybranou buňku";
+            this.RemoveValue.Click += new System.EventHandler(this.RemoveValue_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(28)))), ((int)(((byte)(31)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(12, 593);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(148, 39);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Konec";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnExit, "Ukonči aplikaci.");
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // btnReport
             // 
             this.btnReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -925,7 +1086,7 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(12, 503);
+            this.btnReport.Location = new System.Drawing.Point(12, 548);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(148, 39);
             this.btnReport.TabIndex = 3;
@@ -934,239 +1095,86 @@
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
-            // btnUsers
+            // btnDelData
             // 
-            this.btnUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsers.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
-            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(12, 548);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(148, 39);
-            this.btnUsers.TabIndex = 3;
-            this.btnUsers.Text = "Uživatelé";
-            this.btnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsers.UseVisualStyleBackColor = false;
-            this.btnUsers.Visible = false;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            this.btnDelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnDelData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnDelData.FlatAppearance.BorderSize = 0;
+            this.btnDelData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnDelData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelData.Image = ((System.Drawing.Image)(resources.GetObject("btnDelData.Image")));
+            this.btnDelData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelData.Location = new System.Drawing.Point(12, 245);
+            this.btnDelData.Name = "btnDelData";
+            this.btnDelData.Size = new System.Drawing.Size(148, 39);
+            this.btnDelData.TabIndex = 3;
+            this.btnDelData.Text = "Smazat";
+            this.btnDelData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnDelData, "Smaže vybrané data ze serveru.");
+            this.btnDelData.UseVisualStyleBackColor = false;
+            this.btnDelData.Click += new System.EventHandler(this.btnDelData_Click);
             // 
-            // Column_1
+            // btnAddData
             // 
-            this.Column_1.HeaderText = "Expedition ID";
-            this.Column_1.MinimumWidth = 22;
-            this.Column_1.Name = "Column_1";
-            this.Column_1.ReadOnly = true;
-            this.Column_1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.btnAddData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnAddData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnAddData.FlatAppearance.BorderSize = 0;
+            this.btnAddData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnAddData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddData.Image = ((System.Drawing.Image)(resources.GetObject("btnAddData.Image")));
+            this.btnAddData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddData.Location = new System.Drawing.Point(12, 200);
+            this.btnAddData.Name = "btnAddData";
+            this.btnAddData.Size = new System.Drawing.Size(148, 39);
+            this.btnAddData.TabIndex = 3;
+            this.btnAddData.Text = "Přidat";
+            this.btnAddData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnAddData, "Přídá data na server.");
+            this.btnAddData.UseVisualStyleBackColor = false;
+            this.btnAddData.Click += new System.EventHandler(this.btnAddData_Click);
             // 
-            // Column_2
+            // btnReloadData
             // 
-            this.Column_2.HeaderText = "Typ palety";
-            this.Column_2.Items.AddRange(new object[] {
-            "",
-            "Půl paleta",
-            "EURO paleta",
-            "Nefab"});
-            this.Column_2.MinimumWidth = 22;
-            this.Column_2.Name = "Column_2";
-            this.Column_2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_2.Width = 130;
+            this.btnReloadData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnReloadData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReloadData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnReloadData.FlatAppearance.BorderSize = 0;
+            this.btnReloadData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnReloadData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReloadData.Image = ((System.Drawing.Image)(resources.GetObject("btnReloadData.Image")));
+            this.btnReloadData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReloadData.Location = new System.Drawing.Point(12, 113);
+            this.btnReloadData.Name = "btnReloadData";
+            this.btnReloadData.Size = new System.Drawing.Size(148, 39);
+            this.btnReloadData.TabIndex = 3;
+            this.btnReloadData.Text = "Obnovit";
+            this.btnReloadData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnReloadData, "Znovu načte data ze serveru.");
+            this.btnReloadData.UseVisualStyleBackColor = false;
+            this.btnReloadData.Click += new System.EventHandler(this.btnReloadData_Click);
             // 
-            // Column_3
+            // pictureBox1
             // 
-            this.Column_3.HeaderText = "1. Pozice";
-            this.Column_3.MinimumWidth = 22;
-            this.Column_3.Name = "Column_3";
-            this.Column_3.ReadOnly = true;
-            this.Column_3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_3.Width = 150;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(39, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
-            // Column_3_add
+            // toolStripEditData
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.NullValue = "+";
-            this.Column_3_add.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Column_3_add.HeaderText = "";
-            this.Column_3_add.MinimumWidth = 22;
-            this.Column_3_add.Name = "Column_3_add";
-            this.Column_3_add.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column_3_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_3_add.Text = "+";
-            this.Column_3_add.Width = 22;
-            // 
-            // Column_4
-            // 
-            this.Column_4.HeaderText = "2. Pozice";
-            this.Column_4.MinimumWidth = 22;
-            this.Column_4.Name = "Column_4";
-            this.Column_4.ReadOnly = true;
-            this.Column_4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_4.Width = 150;
-            // 
-            // Column_4_add
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.NullValue = "+";
-            this.Column_4_add.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Column_4_add.HeaderText = "";
-            this.Column_4_add.MinimumWidth = 22;
-            this.Column_4_add.Name = "Column_4_add";
-            this.Column_4_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_4_add.Text = "+";
-            this.Column_4_add.Width = 22;
-            // 
-            // Column_5
-            // 
-            this.Column_5.HeaderText = "3. Pozice";
-            this.Column_5.MinimumWidth = 22;
-            this.Column_5.Name = "Column_5";
-            this.Column_5.ReadOnly = true;
-            this.Column_5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_5.Width = 150;
-            // 
-            // Column_5_add
-            // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.NullValue = "+";
-            this.Column_5_add.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Column_5_add.HeaderText = "";
-            this.Column_5_add.MinimumWidth = 22;
-            this.Column_5_add.Name = "Column_5_add";
-            this.Column_5_add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column_5_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_5_add.Text = "+";
-            this.Column_5_add.Width = 22;
-            // 
-            // Column_6
-            // 
-            this.Column_6.HeaderText = "4. Pozice";
-            this.Column_6.MinimumWidth = 22;
-            this.Column_6.Name = "Column_6";
-            this.Column_6.ReadOnly = true;
-            this.Column_6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_6.Width = 150;
-            // 
-            // Column_6_add
-            // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.NullValue = "+";
-            this.Column_6_add.DefaultCellStyle = dataGridViewCellStyle13;
-            this.Column_6_add.HeaderText = "";
-            this.Column_6_add.MinimumWidth = 22;
-            this.Column_6_add.Name = "Column_6_add";
-            this.Column_6_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_6_add.Text = "+";
-            this.Column_6_add.Width = 22;
-            // 
-            // Column_7
-            // 
-            this.Column_7.HeaderText = "5. Pozice";
-            this.Column_7.MinimumWidth = 22;
-            this.Column_7.Name = "Column_7";
-            this.Column_7.ReadOnly = true;
-            this.Column_7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_7.Width = 150;
-            // 
-            // Column_7_add
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.NullValue = "+";
-            this.Column_7_add.DefaultCellStyle = dataGridViewCellStyle14;
-            this.Column_7_add.HeaderText = "";
-            this.Column_7_add.MinimumWidth = 22;
-            this.Column_7_add.Name = "Column_7_add";
-            this.Column_7_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_7_add.Text = "+";
-            this.Column_7_add.Width = 22;
-            // 
-            // Column_8
-            // 
-            this.Column_8.HeaderText = "6. Pozice";
-            this.Column_8.MinimumWidth = 22;
-            this.Column_8.Name = "Column_8";
-            this.Column_8.ReadOnly = true;
-            this.Column_8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_8.Width = 150;
-            // 
-            // Column_8_add
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.NullValue = "+";
-            this.Column_8_add.DefaultCellStyle = dataGridViewCellStyle15;
-            this.Column_8_add.HeaderText = "";
-            this.Column_8_add.MinimumWidth = 22;
-            this.Column_8_add.Name = "Column_8_add";
-            this.Column_8_add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column_8_add.Text = "+";
-            this.Column_8_add.Width = 22;
-            // 
-            // Column_9
-            // 
-            this.Column_9.HeaderText = "Místo";
-            this.Column_9.Items.AddRange(new object[] {
-            "",
-            "Opravy",
-            "KION",
-            "Expedice"});
-            this.Column_9.MinimumWidth = 22;
-            this.Column_9.Name = "Column_9";
-            this.Column_9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column_9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Column_10
-            // 
-            this.Column_10.HeaderText = "Datum přípravy";
-            this.Column_10.MinimumWidth = 22;
-            this.Column_10.Name = "Column_10";
-            this.Column_10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Column_11
-            // 
-            this.Column_11.HeaderText = "Datum expedice";
-            this.Column_11.MinimumWidth = 22;
-            this.Column_11.Name = "Column_11";
-            this.Column_11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.HeaderText = "CLM";
-            this.Column1.MinimumWidth = 22;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column1.Width = 120;
-            // 
-            // Column26
-            // 
-            this.Column26.HeaderText = "BlackBox_Data";
-            this.Column26.MinimumWidth = 22;
-            this.Column26.Name = "Column26";
-            this.Column26.ReadOnly = true;
-            this.Column26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column26.Text = "Data";
-            this.Column26.UseColumnTextForButtonValue = true;
-            this.Column26.Width = 125;
-            // 
-            // Column25
-            // 
-            this.Column25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column25.FillWeight = 120F;
-            this.Column25.HeaderText = "Result";
-            this.Column25.Items.AddRange(new object[] {
-            " ",
-            "Uznáno",
-            "Neuznáno"});
-            this.Column25.MinimumWidth = 22;
-            this.Column25.Name = "Column25";
-            this.Column25.ReadOnly = true;
-            this.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Column25.Width = 120;
+            this.toolStripEditData.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.toolStripEditData.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditData.Image")));
+            this.toolStripEditData.Name = "toolStripEditData";
+            this.toolStripEditData.Size = new System.Drawing.Size(180, 22);
+            this.toolStripEditData.Text = "Upravit záznam";
+            this.toolStripEditData.Click += new System.EventHandler(this.toolStripEditData_Click);
             // 
             // Main
             // 
@@ -1184,7 +1192,6 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnDelData);
-            this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.btnAddData);
             this.Controls.Add(this.btnReloadData);
             this.Controls.Add(this.lblLevel);
@@ -1234,7 +1241,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAddData;
-        private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDelData;
         private System.Windows.Forms.Button btnExport;
@@ -1307,5 +1313,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Column26;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column25;
+        private System.Windows.Forms.ToolStripMenuItem adminPanelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripEditData;
     }
 }

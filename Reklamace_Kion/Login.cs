@@ -44,13 +44,18 @@ namespace Reklamace_Kion
             }
 
             SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace"); // making connection
-            SqlCommand cmd = new SqlCommand("select Password from Users where Name='" + Name + "'", conn);
+            SqlCommand cmd = new SqlCommand("select Password, Level from Users where Name='" + Name + "'", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlCommand cmdService = new SqlCommand("select Activated from AppSettings where Name='ServiceMode'", conn);
 
 
             try
             {
                 conn.Open();
+
+
+                bool ServiceMode = Convert.ToBoolean(cmdService.ExecuteScalar());
+
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -75,22 +80,46 @@ namespace Reklamace_Kion
                             Properties.Settings.Default.Save();
 
                             this.Hide();
-                            Main MainForm = new Main();
 
-                            MainForm.MyName = Name;
-                            MainForm.DisableExit = false;
+                            if (ServiceMode == true)
+                            {
+                                var res = MessageBox.Show("Aplikace je v servisním módu a bude nějakou dobu nedostupná. V případě dotazu kontaktujte administrátora aplikace.", "Údržba aplikace", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                                if (res == DialogResult.OK)
+                                {
+                                    if (Convert.ToInt16(reader[1]) == 100) // User level == 100
+                                    {
+                                        Main MainForm = new Main();
 
-                            MainForm.Show();
+                                        MainForm.MyName = Name;
+                                        MainForm.DisableExit = false;
 
+                                        MainForm.Show();
+                                    }
+                                    else
+                                    {
+                                        conn.Close();
+                                        Environment.Exit(0);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                Main MainForm = new Main();
+
+                                MainForm.MyName = Name;
+                                MainForm.DisableExit = false;
+
+                                MainForm.Show();
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Špatné heslo.");
+                            MessageBox.Show("Zadali jste špatné heslo.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Uživatel nenalezen.");
+                        MessageBox.Show("Uživatel nenalezen.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                 }
             }

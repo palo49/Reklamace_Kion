@@ -122,6 +122,12 @@
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="BlackBoxData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     </Compile>
     <Compile Include="Contacts\ListContacts.Designer.cs">
       <DependentUpon>ListContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditData.Designer.cs">
+      <DependentUpon>EditData.cs</DependentUpon>
     </Compile>
     <Compile Include="FaultCodes\AddFaultCode.cs">
       <SubType>Form</SubType>
@@ -251,6 +263,9 @@
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BlackBoxData.resx">
       <DependentUpon>BlackBoxData.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\ListContacts.resx">
       <DependentUpon>ListContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditData.resx">
+      <DependentUpon>EditData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FaultCodes\AddFaultCode.resx">
       <DependentUpon>AddFaultCode.cs</DependentUpon>

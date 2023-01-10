@@ -91,6 +91,8 @@ namespace Reklamace_Kion
             float Tariff_Administration = float.Parse(numTariffAdministration.Text);
             float Hours_Administration = float.Parse(numHoursAdministration.Text);
             float CostOfComponents = float.Parse(numCostOfComponents.Text);
+            string Note1 = txtNote1.Text;
+            string Note2 = txtNote2.Text;
 
             float finalPrice = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + CostOfComponents;
 
@@ -113,7 +115,7 @@ namespace Reklamace_Kion
                         string sqlInsert = "INSERT INTO DataMain values('" + CLM + "','" + Status + "','" + CustomerRequire + "','" + DateOfCustomerSendVal + "','" + DateOfSaftAcceptanceVal + "'," +
                             "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + PNBattery + "','" + SNBattery + "','" + PNClaimedComponent + "','" + SNClaimedComponent + "'," +
                             "'" + Fault + "','" + CW + "','" + DefectBMS + "','" + LocationOfBattery + "','" + ReplacementSend + "'," +
-                            "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Contact + "','" + Tariff_Repairman + "','" + Hours_Repairman + "','" + Tariff_Technician + "','" + Hours_Technician + "','" + Tariff_Administration + "','" + Hours_Administration + "','" + CostOfComponents + "','" + finalPrice + "', '', '')";
+                            "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Contact + "','" + Tariff_Repairman + "','" + Hours_Repairman + "','" + Tariff_Technician + "','" + Hours_Technician + "','" + Tariff_Administration + "','" + Hours_Administration + "','" + CostOfComponents + "','" + finalPrice + "', '" + Note1 + "', '" + Note2 + "')";
 
                         SqlCommand cmdInsert = new SqlCommand(sqlInsert, conn);
                         conn.Open();

@@ -43,6 +43,8 @@ namespace Reklamace_Kion
             btnAddData.Visible = false;
             btnDelData.Visible = false;
 
+            
+
             // Double buffering can make DGV slow in remote desktop
             if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
             {
@@ -114,11 +116,10 @@ namespace Reklamace_Kion
                         {
                             lblLevel.Text = "Administrátor";
 
-                            btnUsers.Visible = true;
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
 
-                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = false;
+                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
                         else if (Level == "20")
                         {
@@ -127,7 +128,7 @@ namespace Reklamace_Kion
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
 
-                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = false;
+                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
                         else if (Level == "10")
                         {
@@ -158,6 +159,13 @@ namespace Reklamace_Kion
             {
                 MessageBox.Show(ex.Message);
             }
+
+            int lvlConv = Int32.Parse(Level);
+            if (lvlConv < 100)
+            {
+                adminPanelToolStripMenuItem.Enabled = false;
+            }
+
             lblLoadingData.Visible = true;
             backgroundWorker1.RunWorkerAsync();
         }
@@ -241,15 +249,6 @@ namespace Reklamace_Kion
 
             form.lblActionInfo.ForeColor = Color.Black;
             form.lblActionInfo.Text = "Data aktualizována.";
-        }
-
-        private void btnUsers_Click(object sender, EventArgs e)
-        {
-            Users UserForm = new Users();
-
-            UserForm.MyName = MyName;
-
-            UserForm.Show();
         }
 
         private void btnAddData_Click(object sender, EventArgs e)
@@ -1348,6 +1347,7 @@ namespace Reklamace_Kion
                     BlackBoxData blackBoxData = new BlackBoxData();
                     blackBoxData.Id = e.RowIndex;
                     blackBoxData.CLM = dgvAnalysis[0, e.RowIndex].Value.ToString();
+                    blackBoxData.Level = Convert.ToInt16(Level);
                     blackBoxData.Show();
                 }
             }
@@ -1422,8 +1422,11 @@ namespace Reklamace_Kion
 
         private void upravitKódyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FaultCodes.ListFaultCodes listFaultCodes = new FaultCodes.ListFaultCodes();
-            listFaultCodes.Show();
+            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            {
+                FaultCodes.ListFaultCodes listFaultCodes = new FaultCodes.ListFaultCodes();
+                listFaultCodes.Show();
+            }
         }
 
         bool selectClaim = false;
@@ -1432,15 +1435,18 @@ namespace Reklamace_Kion
 
         private void dgvExpedition_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var x = dgvExpedition.Columns[e.ColumnIndex].Name;
-            if ((x == "Column_3_add") || (x == "Column_4_add") || (x == "Column_5_add") || (x == "Column_6_add") || (x == "Column_7_add") || (x == "Column_8_add"))
+            if (Convert.ToInt16(Level) > 1)
             {
-                if (e.RowIndex >= 0)
+                var x = dgvExpedition.Columns[e.ColumnIndex].Name;
+                if ((x == "Column_3_add") || (x == "Column_4_add") || (x == "Column_5_add") || (x == "Column_6_add") || (x == "Column_7_add") || (x == "Column_8_add"))
                 {
-                    selectClaim = true;
-                    rowSelectClaim = dgvExpedition.Rows[e.RowIndex].Index;
-                    colSelectClaim = dgvExpedition.Columns[e.ColumnIndex - 1].Name;
-                    tabControl1.SelectedTab = tabPage2;
+                    if (e.RowIndex >= 0)
+                    {
+                        selectClaim = true;
+                        rowSelectClaim = dgvExpedition.Rows[e.RowIndex].Index;
+                        colSelectClaim = dgvExpedition.Columns[e.ColumnIndex - 1].Name;
+                        tabControl1.SelectedTab = tabPage2;
+                    }
                 }
             }
         }
@@ -1550,6 +1556,30 @@ namespace Reklamace_Kion
                 dataGrid.CurrentCell = row.Cells[e.ColumnIndex == -1 ? 1 : e.ColumnIndex];
                 row.Selected = true;
                 dataGrid.Focus();
+            }
+        }
+
+        private void adminPanelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Level == "100")
+            {
+                AdminPanel.AdminPanel AP = new AdminPanel.AdminPanel();
+                AP.MyName = MyName;
+                AP.Show();
+            }
+        }
+
+        private void toolStripEditData_Click(object sender, EventArgs e)
+        {
+            int CLM_ID = Convert.ToInt32(dataGrid1[0, actualCell.RowIndex].Value);
+
+            int lvl = Convert.ToInt16(Level);
+            if (lvl > 1)
+            {
+                EditData ED = new EditData();
+                ED.MyLevel = lvl;
+                ED.CLMID = CLM_ID;
+                ED.Show();
             }
         }
     }
