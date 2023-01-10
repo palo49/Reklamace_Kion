@@ -112,9 +112,11 @@
             this.RefTime = new System.Windows.Forms.Timer(this.components);
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.nahlásitChybuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnResetFiltr = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
+            this.toolStripEditData = new System.Windows.Forms.ToolStripMenuItem();
             this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripAddToAnalysis = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,7 +129,6 @@
             this.btnAddData = new System.Windows.Forms.Button();
             this.btnReloadData = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripEditData = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -265,7 +266,7 @@
             this.dataGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGrid1.RowHeadersVisible = false;
             this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid1.Size = new System.Drawing.Size(822, 499);
+            this.dataGrid1.Size = new System.Drawing.Size(822, 496);
             this.dataGrid1.TabIndex = 0;
             this.dataGrid1.TimeFilter = false;
             this.dataGrid1.SortStringChanged += new System.EventHandler(this.dataGrid1_SortStringChanged);
@@ -282,7 +283,7 @@
             this.toolStripAddToAnalysis,
             this.toolStripShowFolder});
             this.CellContext.Name = "contextMenuStrip1";
-            this.CellContext.Size = new System.Drawing.Size(181, 114);
+            this.CellContext.Size = new System.Drawing.Size(168, 92);
             this.CellContext.Opening += new System.ComponentModel.CancelEventHandler(this.CellContext_Opening);
             // 
             // tabPage2
@@ -699,8 +700,9 @@
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SettingsToolStripMenuItem,
-            this.oAplikaciToolStripMenuItem,
-            this.adminPanelToolStripMenuItem});
+            this.adminPanelToolStripMenuItem,
+            this.nahlásitChybuToolStripMenuItem,
+            this.oAplikaciToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -946,6 +948,13 @@
             this.txtSearch.TabIndex = 13;
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
+            // nahlásitChybuToolStripMenuItem
+            // 
+            this.nahlásitChybuToolStripMenuItem.Name = "nahlásitChybuToolStripMenuItem";
+            this.nahlásitChybuToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.nahlásitChybuToolStripMenuItem.Text = "Nahlásit chybu";
+            this.nahlásitChybuToolStripMenuItem.Click += new System.EventHandler(this.nahlásitChybuToolStripMenuItem_Click);
+            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1004,11 +1013,20 @@
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // toolStripEditData
+            // 
+            this.toolStripEditData.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.toolStripEditData.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditData.Image")));
+            this.toolStripEditData.Name = "toolStripEditData";
+            this.toolStripEditData.Size = new System.Drawing.Size(167, 22);
+            this.toolStripEditData.Text = "Upravit záznam";
+            this.toolStripEditData.Click += new System.EventHandler(this.toolStripEditData_Click);
+            // 
             // přidatKOpravámToolStripMenuItem
             // 
             this.přidatKOpravámToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("přidatKOpravámToolStripMenuItem.Image")));
             this.přidatKOpravámToolStripMenuItem.Name = "přidatKOpravámToolStripMenuItem";
-            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.přidatKOpravámToolStripMenuItem.Text = "Přidat k opravám";
             this.přidatKOpravámToolStripMenuItem.Click += new System.EventHandler(this.přidatKOpravámToolStripMenuItem_Click);
             // 
@@ -1016,7 +1034,7 @@
             // 
             this.toolStripAddToAnalysis.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAddToAnalysis.Image")));
             this.toolStripAddToAnalysis.Name = "toolStripAddToAnalysis";
-            this.toolStripAddToAnalysis.Size = new System.Drawing.Size(180, 22);
+            this.toolStripAddToAnalysis.Size = new System.Drawing.Size(167, 22);
             this.toolStripAddToAnalysis.Text = "Přidat k analýzam";
             this.toolStripAddToAnalysis.Click += new System.EventHandler(this.toolStripAddToAnalysis_Click);
             // 
@@ -1024,7 +1042,7 @@
             // 
             this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
             this.toolStripShowFolder.Name = "toolStripShowFolder";
-            this.toolStripShowFolder.Size = new System.Drawing.Size(180, 22);
+            this.toolStripShowFolder.Size = new System.Drawing.Size(167, 22);
             this.toolStripShowFolder.Text = "Otevřit složku";
             this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
             // 
@@ -1167,15 +1185,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // toolStripEditData
-            // 
-            this.toolStripEditData.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.toolStripEditData.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditData.Image")));
-            this.toolStripEditData.Name = "toolStripEditData";
-            this.toolStripEditData.Size = new System.Drawing.Size(180, 22);
-            this.toolStripEditData.Text = "Upravit záznam";
-            this.toolStripEditData.Click += new System.EventHandler(this.toolStripEditData_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1315,5 +1324,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Column25;
         private System.Windows.Forms.ToolStripMenuItem adminPanelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripEditData;
+        private System.Windows.Forms.ToolStripMenuItem nahlásitChybuToolStripMenuItem;
     }
 }

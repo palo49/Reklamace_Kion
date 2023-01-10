@@ -215,6 +215,7 @@
             // 
             // txtNote1
             // 
+            this.txtNote1.Enabled = false;
             this.txtNote1.Location = new System.Drawing.Point(4, 1531);
             this.txtNote1.Multiline = true;
             this.txtNote1.Name = "txtNote1";
@@ -223,6 +224,7 @@
             // 
             // txtNote2
             // 
+            this.txtNote2.Enabled = false;
             this.txtNote2.Location = new System.Drawing.Point(3, 1657);
             this.txtNote2.Multiline = true;
             this.txtNote2.Name = "txtNote2";
@@ -360,6 +362,7 @@
             // cmbContacts
             // 
             this.cmbContacts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbContacts.Enabled = false;
             this.cmbContacts.FormattingEnabled = true;
             this.cmbContacts.Location = new System.Drawing.Point(47, 1193);
             this.cmbContacts.Name = "cmbContacts";
@@ -369,6 +372,7 @@
             // 
             // numHoursAdministration
             // 
+            this.numHoursAdministration.Enabled = false;
             this.numHoursAdministration.Location = new System.Drawing.Point(236, 1390);
             this.numHoursAdministration.Maximum = new decimal(new int[] {
             99999999,
@@ -382,6 +386,7 @@
             // 
             // numHoursTechnician
             // 
+            this.numHoursTechnician.Enabled = false;
             this.numHoursTechnician.Location = new System.Drawing.Point(120, 1390);
             this.numHoursTechnician.Maximum = new decimal(new int[] {
             99999999,
@@ -395,6 +400,7 @@
             // 
             // numCostOfComponents
             // 
+            this.numCostOfComponents.Enabled = false;
             this.numCostOfComponents.Location = new System.Drawing.Point(4, 1432);
             this.numCostOfComponents.Maximum = new decimal(new int[] {
             99999999,
@@ -408,6 +414,7 @@
             // 
             // numHoursRepairman
             // 
+            this.numHoursRepairman.Enabled = false;
             this.numHoursRepairman.Location = new System.Drawing.Point(4, 1390);
             this.numHoursRepairman.Maximum = new decimal(new int[] {
             99999999,
@@ -421,6 +428,7 @@
             // 
             // numTariffAdministration
             // 
+            this.numTariffAdministration.Enabled = false;
             this.numTariffAdministration.Location = new System.Drawing.Point(236, 1347);
             this.numTariffAdministration.Maximum = new decimal(new int[] {
             99999999,
@@ -434,6 +442,7 @@
             // 
             // numTariffTechnician
             // 
+            this.numTariffTechnician.Enabled = false;
             this.numTariffTechnician.Location = new System.Drawing.Point(120, 1347);
             this.numTariffTechnician.Maximum = new decimal(new int[] {
             99999999,
@@ -447,6 +456,7 @@
             // 
             // numTariffRepairman
             // 
+            this.numTariffRepairman.Enabled = false;
             this.numTariffRepairman.Location = new System.Drawing.Point(4, 1347);
             this.numTariffRepairman.Maximum = new decimal(new int[] {
             99999999,
@@ -472,6 +482,7 @@
             // 
             this.txtSNComponent.Location = new System.Drawing.Point(4, 620);
             this.txtSNComponent.Name = "txtSNComponent";
+            this.txtSNComponent.ReadOnly = true;
             this.txtSNComponent.Size = new System.Drawing.Size(346, 20);
             this.txtSNComponent.TabIndex = 26;
             // 
@@ -489,11 +500,13 @@
             // 
             this.txtSNBattery.Location = new System.Drawing.Point(4, 507);
             this.txtSNBattery.Name = "txtSNBattery";
+            this.txtSNBattery.ReadOnly = true;
             this.txtSNBattery.Size = new System.Drawing.Size(346, 20);
             this.txtSNBattery.TabIndex = 26;
             // 
             // txtResultDescription
             // 
+            this.txtResultDescription.Enabled = false;
             this.txtResultDescription.Location = new System.Drawing.Point(4, 1094);
             this.txtResultDescription.Multiline = true;
             this.txtResultDescription.Name = "txtResultDescription";
@@ -512,6 +525,7 @@
             // 
             // txtCustomerRequest
             // 
+            this.txtCustomerRequest.Enabled = false;
             this.txtCustomerRequest.Location = new System.Drawing.Point(4, 933);
             this.txtCustomerRequest.Multiline = true;
             this.txtCustomerRequest.Name = "txtCustomerRequest";
@@ -530,6 +544,7 @@
             // cmbResult
             // 
             this.cmbResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbResult.Enabled = false;
             this.cmbResult.FormattingEnabled = true;
             this.cmbResult.Items.AddRange(new object[] {
             "Accepted",
@@ -552,6 +567,7 @@
             // 
             // txtLocationOfBattery
             // 
+            this.txtLocationOfBattery.Enabled = false;
             this.txtLocationOfBattery.Location = new System.Drawing.Point(4, 881);
             this.txtLocationOfBattery.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLocationOfBattery.Name = "txtLocationOfBattery";
@@ -678,6 +694,7 @@
             // cmbDefects
             // 
             this.cmbDefects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDefects.Enabled = false;
             this.cmbDefects.FormattingEnabled = true;
             this.cmbDefects.Location = new System.Drawing.Point(4, 824);
             this.cmbDefects.Name = "cmbDefects";
@@ -780,12 +797,14 @@
             this.txtCLM.Location = new System.Drawing.Point(4, 34);
             this.txtCLM.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCLM.Name = "txtCLM";
+            this.txtCLM.ReadOnly = true;
             this.txtCLM.Size = new System.Drawing.Size(346, 20);
             this.txtCLM.TabIndex = 1;
             // 
             // cmbState
             // 
             this.cmbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbState.Enabled = false;
             this.cmbState.FormattingEnabled = true;
             this.cmbState.Items.AddRange(new object[] {
             "Open",
@@ -799,6 +818,7 @@
             // cmbReplacementSend
             // 
             this.cmbReplacementSend.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbReplacementSend.Enabled = false;
             this.cmbReplacementSend.FormattingEnabled = true;
             this.cmbReplacementSend.Items.AddRange(new object[] {
             "Ano",
@@ -810,6 +830,7 @@
             // 
             // DateOfSaftSend
             // 
+            this.DateOfSaftSend.Enabled = false;
             this.DateOfSaftSend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfSaftSend.Location = new System.Drawing.Point(4, 299);
             this.DateOfSaftSend.Name = "DateOfSaftSend";
@@ -819,6 +840,7 @@
             // 
             // DateOfCustomerSend
             // 
+            this.DateOfCustomerSend.Enabled = false;
             this.DateOfCustomerSend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfCustomerSend.Location = new System.Drawing.Point(4, 144);
             this.DateOfCustomerSend.Name = "DateOfCustomerSend";
@@ -828,6 +850,7 @@
             // 
             // DateOfRepair
             // 
+            this.DateOfRepair.Enabled = false;
             this.DateOfRepair.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfRepair.Location = new System.Drawing.Point(4, 247);
             this.DateOfRepair.Name = "DateOfRepair";
@@ -838,6 +861,7 @@
             // cmbCW
             // 
             this.cmbCW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCW.Enabled = false;
             this.cmbCW.FormattingEnabled = true;
             this.cmbCW.Items.AddRange(new object[] {
             "C",
@@ -849,6 +873,7 @@
             // 
             // DateOfReplacementSend
             // 
+            this.DateOfReplacementSend.Enabled = false;
             this.DateOfReplacementSend.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfReplacementSend.Location = new System.Drawing.Point(4, 404);
             this.DateOfReplacementSend.Name = "DateOfReplacementSend";
@@ -859,6 +884,7 @@
             // cmbPNBattery
             // 
             this.cmbPNBattery.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPNBattery.Enabled = false;
             this.cmbPNBattery.FormattingEnabled = true;
             this.cmbPNBattery.Items.AddRange(new object[] {
             "774100_B2",
@@ -873,6 +899,7 @@
             // 
             // DateOfSaftAcceptance
             // 
+            this.DateOfSaftAcceptance.Enabled = false;
             this.DateOfSaftAcceptance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateOfSaftAcceptance.Location = new System.Drawing.Point(4, 195);
             this.DateOfSaftAcceptance.Name = "DateOfSaftAcceptance";
@@ -883,6 +910,7 @@
             // cmbPNComponent
             // 
             this.cmbPNComponent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPNComponent.Enabled = false;
             this.cmbPNComponent.FormattingEnabled = true;
             this.cmbPNComponent.Location = new System.Drawing.Point(4, 567);
             this.cmbPNComponent.Name = "cmbPNComponent";
@@ -923,6 +951,7 @@
             // 
             // txtFault
             // 
+            this.txtFault.Enabled = false;
             this.txtFault.Location = new System.Drawing.Point(4, 675);
             this.txtFault.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFault.Multiline = true;

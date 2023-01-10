@@ -42,6 +42,7 @@ namespace Reklamace_Kion
 
             btnAddData.Visible = false;
             btnDelData.Visible = false;
+            btnReport.Visible = false;
 
             
 
@@ -103,8 +104,8 @@ namespace Reklamace_Kion
                 {
                     while (reader.Read())
                     {
-                        lblFirstName.Text = reader.GetString(0);
-                        lblLastName.Text = reader.GetString(1);
+                        FirstName = lblFirstName.Text = reader.GetString(0);
+                        LastName = lblLastName.Text = reader.GetString(1);
                         Level = reader.GetString(2);
                     }
 
@@ -118,6 +119,7 @@ namespace Reklamace_Kion
 
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
+                            btnReport.Visible = true;
 
                             dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
@@ -127,6 +129,7 @@ namespace Reklamace_Kion
 
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
+                            btnReport.Visible = true;
 
                             dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
@@ -136,6 +139,7 @@ namespace Reklamace_Kion
 
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
+                            btnReport.Visible = true;
 
                             dataGrid1.ReadOnly = false;
                         }
@@ -145,6 +149,7 @@ namespace Reklamace_Kion
 
                             btnDelData.Visible = true;
                             btnAddData.Visible = true;
+                            btnReport.Visible = true;
 
                             dataGridOpravy.ReadOnly = false;
                         }
@@ -787,7 +792,10 @@ namespace Reklamace_Kion
 
         private void dataGrid1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGrid1.BeginEdit(true);
+            if (dataGrid1.CurrentCell.OwningColumn.Name == "Contact")
+            {
+                dataGrid1.BeginEdit(true);
+            }
         }
 
         private void dataGridOpravy_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -1581,6 +1589,16 @@ namespace Reklamace_Kion
                 ED.CLMID = CLM_ID;
                 ED.Show();
             }
+        }
+
+        private void nahlásitChybuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportErrors.ReportErrors RE = new ReportErrors.ReportErrors();
+            RE.MyLevel = Convert.ToInt16(Level);
+            RE.MyLogin = MyName;
+            RE.MyFirstName = FirstName;
+            RE.MyLastName = LastName;
+            RE.Show();
         }
     }
 }

@@ -33,7 +33,64 @@ namespace Reklamace_Kion
         {
             try
             {
+                string CLM = txtCLM.Text;
+                string Status = cmbState.Text;
+                string CustomerRequire = txtCustomerRequest.Text;
+                string DateOfCustomerSendVal = DateOfCustomerSend.Value.ToShortDateString();
+                string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToShortDateString();
+                string DateOfRepairVal = DateOfRepair.Value.ToShortDateString();
+                string DateOfSaftSendVal = DateOfSaftSend.Value.ToShortDateString();
+                string PNBattery = cmbPNBattery.Text;
+                string SNBattery = txtSNBattery.Text;
+                string PNClaimedComponent = cmbPNComponent.Text;
+                string SNClaimedComponent = txtSNComponent.Text;
+                string Fault = txtFault.Text;
+                string CW = cmbCW.Text;
+                string DefectBMS = cmbDefects.Text;
+                string LocationOfBattery = txtLocationOfBattery.Text;
+                string ReplacementSend = cmbReplacementSend.Text;
+                string DateOfSendReplacement = DateOfReplacementSend.Value.ToShortDateString();
+                string Result = cmbResult.Text;
+                string ResultDescription = txtResultDescription.Text;
+                string ContactCompany = cmbContacts.Text;
+                string ContactLastName = txtContactLastName.Text;
+                string ContactFirstName = txtContactFirstName.Text;
+                string ContactEmail = txtContactEmail.Text;
+                string Contact = ContactCompany + ";" + ContactEmail + ";";
+                float Tariff_Repairman = float.Parse(numTariffRepairman.Text);
+                float Hours_Repairman = float.Parse(numHoursRepairman.Text);
+                float Tariff_Technician = float.Parse(numTariffTechnician.Text);
+                float Hours_Technician = float.Parse(numHoursTechnician.Text);
+                float Tariff_Administration = float.Parse(numTariffAdministration.Text);
+                float Hours_Administration = float.Parse(numHoursAdministration.Text);
+                float CostOfComponents = float.Parse(numCostOfComponents.Text);
+                string Note1 = txtNote1.Text;
+                string Note2 = txtNote2.Text;
+                float finalPrice = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + CostOfComponents;
 
+                SqlCommand cmd; 
+
+                conn.Open();
+                
+                if (Contact == ";;")
+                {
+                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components='" + CostOfComponents + "', Cost_Of_Repair='" + finalPrice + "', Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
+                }
+                else
+                {
+                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Contact='" + Contact + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components='" + CostOfComponents + "', Cost_Of_Repair='" + finalPrice + "', Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
+                }
+                int res = cmd.ExecuteNonQuery();
+                conn.Close();
+                if (res > 0)
+                {
+                    Main.ReloadData();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Editace nebyla úspěšná!");
+                }
             }
             catch (Exception ex)
             {
@@ -50,6 +107,43 @@ namespace Reklamace_Kion
 
         private void EditData_Load(object sender, EventArgs e)
         {
+            if (MyLevel >= 5)
+            {
+                if (MyLevel == 5 || MyLevel == 100) { numTariffRepairman.Enabled = true; numHoursRepairman.Enabled = true; }
+                if (MyLevel == 10 || MyLevel == 100) { numTariffAdministration.Enabled = true; numHoursAdministration.Enabled = true; }
+                if (MyLevel == 20 || MyLevel == 100) { numTariffTechnician.Enabled = true; numHoursTechnician.Enabled = true; }
+
+                numCostOfComponents.Enabled = true;
+            }
+            if (MyLevel >= 10)
+            {
+                cmbState.Enabled = true;
+                DateOfCustomerSend.Enabled = true;
+                DateOfSaftAcceptance.Enabled = true;
+                DateOfRepair.Enabled = true;
+                DateOfSaftSend.Enabled = true;
+                cmbReplacementSend.Enabled = true;
+                DateOfReplacementSend.Enabled = true;
+                txtFault.Enabled = true;
+                cmbCW.Enabled = true;
+                cmbDefects.Enabled = true;
+                txtLocationOfBattery.Enabled = true;
+                txtCustomerRequest.Enabled = true;
+                cmbResult.Enabled = true;
+                txtResultDescription.Enabled = true;
+                cmbContacts.Enabled = true;
+                txtNote1.Enabled = true;
+                txtNote2.Enabled = true;
+            }
+            if (MyLevel >= 100)
+            {
+                txtCLM.Enabled = true;
+                cmbPNBattery.Enabled = true; 
+                txtSNBattery.Enabled = true; txtSNBattery.ReadOnly = false;
+                cmbPNComponent.Enabled = true;
+                txtSNComponent.Enabled = true; txtSNComponent.ReadOnly = false;
+            }
+
             try
             {
                 conn.Open();
@@ -138,7 +232,16 @@ namespace Reklamace_Kion
                         txtSNComponent.Text = data.GetString(11);
                         txtFault.Text = data.GetString(12);
                         cmbCW.Text = data.GetString(13);
-                        cmbDefects.Text = data.GetString(14);
+
+                        if (data.GetString(14) == String.Empty)
+                        {
+                            cmbDefects.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            cmbDefects.Text = data.GetString(14);
+                        }
+                        
                         txtLocationOfBattery.Text = data.GetString(15);
                         cmbReplacementSend.Text = data.GetString(16);
 
@@ -177,9 +280,12 @@ namespace Reklamace_Kion
 
         private void btnClearDateSendFromCustomer_Click(object sender, EventArgs e)
         {
-            DateOfCustomerSend.Value = DateTimePicker.MinimumDateTime;
-            DateOfCustomerSend.CustomFormat = " ";
-            DateOfCustomerSend.Format = DateTimePickerFormat.Custom;
+            if (MyLevel == 10)
+            {
+                DateOfCustomerSend.Value = DateTimePicker.MinimumDateTime;
+                DateOfCustomerSend.CustomFormat = " ";
+                DateOfCustomerSend.Format = DateTimePickerFormat.Custom;
+            }
         }
 
         private void DateOfCustomerSend_ValueChanged(object sender, EventArgs e)
@@ -189,9 +295,12 @@ namespace Reklamace_Kion
 
         private void btnClearDateOfSaftAccept_Click(object sender, EventArgs e)
         {
-            DateOfSaftAcceptance.Value = DateTimePicker.MinimumDateTime;
-            DateOfSaftAcceptance.CustomFormat = " ";
-            DateOfSaftAcceptance.Format = DateTimePickerFormat.Custom;
+            if (MyLevel == 10)
+            {
+                DateOfSaftAcceptance.Value = DateTimePicker.MinimumDateTime;
+                DateOfSaftAcceptance.CustomFormat = " ";
+                DateOfSaftAcceptance.Format = DateTimePickerFormat.Custom;
+            }
         }
 
         private void DateOfSaftAcceptance_ValueChanged(object sender, EventArgs e)
@@ -201,9 +310,12 @@ namespace Reklamace_Kion
 
         private void btnClearDateOfRepair_Click(object sender, EventArgs e)
         {
-            DateOfRepair.Value = DateTimePicker.MinimumDateTime;
-            DateOfRepair.CustomFormat = " ";
-            DateOfRepair.Format = DateTimePickerFormat.Custom;
+            if (MyLevel == 10)
+            {
+                DateOfRepair.Value = DateTimePicker.MinimumDateTime;
+                DateOfRepair.CustomFormat = " ";
+                DateOfRepair.Format = DateTimePickerFormat.Custom;
+            }
         }
 
         private void DateOfRepair_ValueChanged(object sender, EventArgs e)
@@ -213,9 +325,12 @@ namespace Reklamace_Kion
 
         private void btnClearDateOfSaftSend_Click(object sender, EventArgs e)
         {
-            DateOfSaftSend.Value = DateTimePicker.MinimumDateTime;
-            DateOfSaftSend.CustomFormat = " ";
-            DateOfSaftSend.Format = DateTimePickerFormat.Custom;
+            if (MyLevel == 10)
+            {
+                DateOfSaftSend.Value = DateTimePicker.MinimumDateTime;
+                DateOfSaftSend.CustomFormat = " ";
+                DateOfSaftSend.Format = DateTimePickerFormat.Custom;
+            }
         }
 
         private void DateOfSaftSend_ValueChanged(object sender, EventArgs e)
@@ -225,9 +340,12 @@ namespace Reklamace_Kion
 
         private void btnClearDateOfReplacementSend_Click(object sender, EventArgs e)
         {
-            DateOfReplacementSend.Value = DateTimePicker.MinimumDateTime;
-            DateOfReplacementSend.CustomFormat = " ";
-            DateOfReplacementSend.Format = DateTimePickerFormat.Custom;
+            if (MyLevel == 10)
+            {
+                DateOfReplacementSend.Value = DateTimePicker.MinimumDateTime;
+                DateOfReplacementSend.CustomFormat = " ";
+                DateOfReplacementSend.Format = DateTimePickerFormat.Custom;
+            }
         }
 
         private void DateOfReplacementSend_ValueChanged(object sender, EventArgs e)
@@ -245,7 +363,10 @@ namespace Reklamace_Kion
 
         private void btnClearDefekt_Click(object sender, EventArgs e)
         {
-            cmbDefects.SelectedIndex = -1;
+            if (MyLevel == 10)
+            {
+                cmbDefects.SelectedIndex = -1;
+            }
         }
 
         private void cmbContacts_SelectedIndexChanged(object sender, EventArgs e)

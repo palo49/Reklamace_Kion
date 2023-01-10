@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // sadu atributů. Změnou hodnot těchto atributů se upraví informace
 // přidružené k sestavení.
 [assembly: AssemblyTitle("Reklamace_Kion")]
-[assembly: AssemblyDescription("Aplikace pro editaci dat pomocí SQL databáze.")]
+[assembly: AssemblyDescription("Aplikace pro editaci dat pomocí SQL databáze. V případě chyby aplikace kontaktujte Administrátora.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Reklamace_Kion")]
