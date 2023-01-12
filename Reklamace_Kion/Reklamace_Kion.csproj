@@ -81,9 +81,27 @@
     <Reference Include="MoreLinq, Version=3.3.2.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
       <HintPath>..\packages\morelinq.3.3.2\lib\net451\MoreLinq.dll</HintPath>
     </Reference>
+    <Reference Include="ScottPlot, Version=4.1.60.0, Culture=neutral, PublicKeyToken=86698dc10387c39e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScottPlot.4.1.60\lib\net462\ScottPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="ScottPlot.WinForms, Version=4.1.60.0, Culture=neutral, PublicKeyToken=5df1dfa5321e734b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ScottPlot.WinForms.4.1.60\lib\net472\ScottPlot.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.7.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -128,11 +146,23 @@
     <Compile Include="AdminPanel\AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\ErrorReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ErrorReports.Designer.cs">
+      <DependentUpon>ErrorReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="BlackBoxData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BlackBoxData.Designer.cs">
       <DependentUpon>BlackBoxData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoxDTPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoxDTPicker.Designer.cs">
+      <DependentUpon>BoxDTPicker.cs</DependentUpon>
     </Compile>
     <Compile Include="Contacts\AddContact.cs">
       <SubType>Form</SubType>
@@ -272,8 +302,14 @@
     <EmbeddedResource Include="AdminPanel\AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\ErrorReports.resx">
+      <DependentUpon>ErrorReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BlackBoxData.resx">
       <DependentUpon>BlackBoxData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoxDTPicker.resx">
+      <DependentUpon>BoxDTPicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\AddContact.resx">
       <DependentUpon>AddContact.cs</DependentUpon>

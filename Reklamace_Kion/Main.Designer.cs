@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,7 +46,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -54,9 +54,15 @@
             this.lblLoadingData = new System.Windows.Forms.Label();
             this.dataGrid1 = new ADGV.AdvancedDataGridView();
             this.CellContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripEditData = new System.Windows.Forms.ToolStripMenuItem();
+            this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripAddToAnalysis = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridOpravy = new ADGV.AdvancedDataGridView();
             this.cellContextRepairs = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.StripMenuOpenDataRepairs = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvAnalysis = new ADGV.AdvancedDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +88,7 @@
             this.Column_10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cellContextExpedition = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.RemoveValue = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.změnitHesloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,35 +107,28 @@
             this.chybovéKódyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.přidatKódToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.upravitKódyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oAplikaciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nahlásitChybuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oAplikaciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnDelData = new System.Windows.Forms.Button();
+            this.btnAddData = new System.Windows.Forms.Button();
+            this.btnReloadData = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblActionInfo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblActualDate = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.RefTime = new System.Windows.Forms.Timer(this.components);
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.nahlásitChybuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnResetFiltr = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.toolStripEditData = new System.Windows.Forms.ToolStripMenuItem();
-            this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripAddToAnalysis = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
-            this.StripMenuOpenDataRepairs = new System.Windows.Forms.ToolStripMenuItem();
-            this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
-            this.RemoveValue = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.btnDelData = new System.Windows.Forms.Button();
-            this.btnAddData = new System.Windows.Forms.Button();
-            this.btnReloadData = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -286,6 +286,39 @@
             this.CellContext.Size = new System.Drawing.Size(168, 92);
             this.CellContext.Opening += new System.ComponentModel.CancelEventHandler(this.CellContext_Opening);
             // 
+            // toolStripEditData
+            // 
+            this.toolStripEditData.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.toolStripEditData.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditData.Image")));
+            this.toolStripEditData.Name = "toolStripEditData";
+            this.toolStripEditData.Size = new System.Drawing.Size(167, 22);
+            this.toolStripEditData.Text = "Upravit záznam";
+            this.toolStripEditData.Click += new System.EventHandler(this.toolStripEditData_Click);
+            // 
+            // přidatKOpravámToolStripMenuItem
+            // 
+            this.přidatKOpravámToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("přidatKOpravámToolStripMenuItem.Image")));
+            this.přidatKOpravámToolStripMenuItem.Name = "přidatKOpravámToolStripMenuItem";
+            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.přidatKOpravámToolStripMenuItem.Text = "Přidat k opravám";
+            this.přidatKOpravámToolStripMenuItem.Click += new System.EventHandler(this.přidatKOpravámToolStripMenuItem_Click);
+            // 
+            // toolStripAddToAnalysis
+            // 
+            this.toolStripAddToAnalysis.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAddToAnalysis.Image")));
+            this.toolStripAddToAnalysis.Name = "toolStripAddToAnalysis";
+            this.toolStripAddToAnalysis.Size = new System.Drawing.Size(167, 22);
+            this.toolStripAddToAnalysis.Text = "Přidat k analýzam";
+            this.toolStripAddToAnalysis.Click += new System.EventHandler(this.toolStripAddToAnalysis_Click);
+            // 
+            // toolStripShowFolder
+            // 
+            this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
+            this.toolStripShowFolder.Name = "toolStripShowFolder";
+            this.toolStripShowFolder.Size = new System.Drawing.Size(167, 22);
+            this.toolStripShowFolder.Text = "Otevřit složku";
+            this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridOpravy);
@@ -346,6 +379,22 @@
             this.stripMenuOpenFolderRepairs});
             this.cellContextRepairs.Name = "contextMenuStrip1";
             this.cellContextRepairs.Size = new System.Drawing.Size(147, 48);
+            // 
+            // StripMenuOpenDataRepairs
+            // 
+            this.StripMenuOpenDataRepairs.Image = ((System.Drawing.Image)(resources.GetObject("StripMenuOpenDataRepairs.Image")));
+            this.StripMenuOpenDataRepairs.Name = "StripMenuOpenDataRepairs";
+            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(146, 22);
+            this.StripMenuOpenDataRepairs.Text = "Data opravy";
+            this.StripMenuOpenDataRepairs.Click += new System.EventHandler(this.StripMenuOpenDataRepairs_Click);
+            // 
+            // stripMenuOpenFolderRepairs
+            // 
+            this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
+            this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
+            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(146, 22);
+            this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
+            this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
             // 
             // tabPage3
             // 
@@ -501,6 +550,7 @@
             this.dgvExpedition.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpedition_CellContentClick);
             this.dgvExpedition.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvExpedition_CellMouseDown);
             this.dgvExpedition.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpedition_CellValueChanged);
+            this.dgvExpedition.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvExpedition_MouseDoubleClick);
             // 
             // Column_1
             // 
@@ -695,6 +745,14 @@
             this.cellContextExpedition.Name = "cellContextExpedition";
             this.cellContextExpedition.Size = new System.Drawing.Size(203, 26);
             // 
+            // RemoveValue
+            // 
+            this.RemoveValue.Image = ((System.Drawing.Image)(resources.GetObject("RemoveValue.Image")));
+            this.RemoveValue.Name = "RemoveValue";
+            this.RemoveValue.Size = new System.Drawing.Size(202, 22);
+            this.RemoveValue.Text = "Smazat vybranou buňku";
+            this.RemoveValue.Click += new System.EventHandler(this.RemoveValue_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
@@ -845,108 +903,12 @@
             this.upravitKódyToolStripMenuItem.Text = "Upravit kódy";
             this.upravitKódyToolStripMenuItem.Click += new System.EventHandler(this.upravitKódyToolStripMenuItem_Click);
             // 
-            // oAplikaciToolStripMenuItem
-            // 
-            this.oAplikaciToolStripMenuItem.Name = "oAplikaciToolStripMenuItem";
-            this.oAplikaciToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.oAplikaciToolStripMenuItem.Text = "O aplikaci";
-            this.oAplikaciToolStripMenuItem.Click += new System.EventHandler(this.oAplikaciToolStripMenuItem_Click);
-            // 
             // adminPanelToolStripMenuItem
             // 
             this.adminPanelToolStripMenuItem.Name = "adminPanelToolStripMenuItem";
             this.adminPanelToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.adminPanelToolStripMenuItem.Text = "Admin panel";
             this.adminPanelToolStripMenuItem.Click += new System.EventHandler(this.adminPanelToolStripMenuItem_Click);
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.ToolTipTitle = "Info";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(3, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1005, 2);
-            this.label1.TabIndex = 8;
-            // 
-            // lblActionInfo
-            // 
-            this.lblActionInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblActionInfo.AutoSize = true;
-            this.lblActionInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.lblActionInfo.Location = new System.Drawing.Point(167, 19);
-            this.lblActionInfo.Name = "lblActionInfo";
-            this.lblActionInfo.Size = new System.Drawing.Size(79, 16);
-            this.lblActionInfo.TabIndex = 9;
-            this.lblActionInfo.Text = "lblActionInfo";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(3, 636);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1005, 2);
-            this.label2.TabIndex = 10;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.panel1.Controls.Add(this.lblActualDate);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblActionInfo);
-            this.panel1.Location = new System.Drawing.Point(0, 636);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 61);
-            this.panel1.TabIndex = 11;
-            // 
-            // lblActualDate
-            // 
-            this.lblActualDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblActualDate.AutoSize = true;
-            this.lblActualDate.Location = new System.Drawing.Point(854, 19);
-            this.lblActualDate.Name = "lblActualDate";
-            this.lblActualDate.Size = new System.Drawing.Size(38, 16);
-            this.lblActualDate.TabIndex = 10;
-            this.lblActualDate.Text = "Time";
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.WorkerReportsProgress = true;
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
-            // RefTime
-            // 
-            this.RefTime.Enabled = true;
-            this.RefTime.Interval = 1000;
-            this.RefTime.Tick += new System.EventHandler(this.RefTime_Tick);
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(165, 32);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(60, 16);
-            this.lblSearch.TabIndex = 12;
-            this.lblSearch.Text = "Vyhledat";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(165, 51);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(625, 22);
-            this.txtSearch.TabIndex = 13;
-            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // nahlásitChybuToolStripMenuItem
             // 
@@ -955,43 +917,16 @@
             this.nahlásitChybuToolStripMenuItem.Text = "Nahlásit chybu";
             this.nahlásitChybuToolStripMenuItem.Click += new System.EventHandler(this.nahlásitChybuToolStripMenuItem_Click);
             // 
-            // btnSearch
+            // oAplikaciToolStripMenuItem
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(796, 43);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(94, 39);
-            this.btnSearch.TabIndex = 15;
-            this.btnSearch.Text = "Hledat";
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.oAplikaciToolStripMenuItem.Name = "oAplikaciToolStripMenuItem";
+            this.oAplikaciToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.oAplikaciToolStripMenuItem.Text = "O aplikaci";
+            this.oAplikaciToolStripMenuItem.Click += new System.EventHandler(this.oAplikaciToolStripMenuItem_Click);
             // 
-            // btnResetFiltr
+            // toolTip1
             // 
-            this.btnResetFiltr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResetFiltr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnResetFiltr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResetFiltr.FlatAppearance.BorderSize = 0;
-            this.btnResetFiltr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnResetFiltr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetFiltr.Image = ((System.Drawing.Image)(resources.GetObject("btnResetFiltr.Image")));
-            this.btnResetFiltr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResetFiltr.Location = new System.Drawing.Point(896, 43);
-            this.btnResetFiltr.Name = "btnResetFiltr";
-            this.btnResetFiltr.Size = new System.Drawing.Size(94, 39);
-            this.btnResetFiltr.TabIndex = 14;
-            this.btnResetFiltr.Text = "Reset";
-            this.btnResetFiltr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnResetFiltr.UseVisualStyleBackColor = false;
-            this.btnResetFiltr.Click += new System.EventHandler(this.btnResetFiltr_Click);
+            this.toolTip1.ToolTipTitle = "Info";
             // 
             // btnExport
             // 
@@ -1012,63 +947,6 @@
             this.toolTip1.SetToolTip(this.btnExport, "Exportuje právě aktivní tabulku do excelu.");
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // toolStripEditData
-            // 
-            this.toolStripEditData.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.toolStripEditData.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditData.Image")));
-            this.toolStripEditData.Name = "toolStripEditData";
-            this.toolStripEditData.Size = new System.Drawing.Size(167, 22);
-            this.toolStripEditData.Text = "Upravit záznam";
-            this.toolStripEditData.Click += new System.EventHandler(this.toolStripEditData_Click);
-            // 
-            // přidatKOpravámToolStripMenuItem
-            // 
-            this.přidatKOpravámToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("přidatKOpravámToolStripMenuItem.Image")));
-            this.přidatKOpravámToolStripMenuItem.Name = "přidatKOpravámToolStripMenuItem";
-            this.přidatKOpravámToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.přidatKOpravámToolStripMenuItem.Text = "Přidat k opravám";
-            this.přidatKOpravámToolStripMenuItem.Click += new System.EventHandler(this.přidatKOpravámToolStripMenuItem_Click);
-            // 
-            // toolStripAddToAnalysis
-            // 
-            this.toolStripAddToAnalysis.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAddToAnalysis.Image")));
-            this.toolStripAddToAnalysis.Name = "toolStripAddToAnalysis";
-            this.toolStripAddToAnalysis.Size = new System.Drawing.Size(167, 22);
-            this.toolStripAddToAnalysis.Text = "Přidat k analýzam";
-            this.toolStripAddToAnalysis.Click += new System.EventHandler(this.toolStripAddToAnalysis_Click);
-            // 
-            // toolStripShowFolder
-            // 
-            this.toolStripShowFolder.Image = ((System.Drawing.Image)(resources.GetObject("toolStripShowFolder.Image")));
-            this.toolStripShowFolder.Name = "toolStripShowFolder";
-            this.toolStripShowFolder.Size = new System.Drawing.Size(167, 22);
-            this.toolStripShowFolder.Text = "Otevřit složku";
-            this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
-            // 
-            // StripMenuOpenDataRepairs
-            // 
-            this.StripMenuOpenDataRepairs.Image = ((System.Drawing.Image)(resources.GetObject("StripMenuOpenDataRepairs.Image")));
-            this.StripMenuOpenDataRepairs.Name = "StripMenuOpenDataRepairs";
-            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(146, 22);
-            this.StripMenuOpenDataRepairs.Text = "Data opravy";
-            this.StripMenuOpenDataRepairs.Click += new System.EventHandler(this.StripMenuOpenDataRepairs_Click);
-            // 
-            // stripMenuOpenFolderRepairs
-            // 
-            this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
-            this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
-            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(146, 22);
-            this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
-            this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
-            // 
-            // RemoveValue
-            // 
-            this.RemoveValue.Image = ((System.Drawing.Image)(resources.GetObject("RemoveValue.Image")));
-            this.RemoveValue.Name = "RemoveValue";
-            this.RemoveValue.Size = new System.Drawing.Size(202, 22);
-            this.RemoveValue.Text = "Smazat vybranou buňku";
-            this.RemoveValue.Click += new System.EventHandler(this.RemoveValue_Click);
             // 
             // btnExit
             // 
@@ -1091,27 +969,6 @@
             this.toolTip1.SetToolTip(this.btnExit, "Ukonči aplikaci.");
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnReport
-            // 
-            this.btnReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
-            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport.Enabled = false;
-            this.btnReport.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(12, 548);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(148, 39);
-            this.btnReport.TabIndex = 3;
-            this.btnReport.Text = "Vytvořit report";
-            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnDelData
             // 
@@ -1173,6 +1030,60 @@
             this.btnReloadData.UseVisualStyleBackColor = false;
             this.btnReloadData.Click += new System.EventHandler(this.btnReloadData_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(3, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1005, 2);
+            this.label1.TabIndex = 8;
+            // 
+            // lblActionInfo
+            // 
+            this.lblActionInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblActionInfo.AutoSize = true;
+            this.lblActionInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.lblActionInfo.Location = new System.Drawing.Point(167, 19);
+            this.lblActionInfo.Name = "lblActionInfo";
+            this.lblActionInfo.Size = new System.Drawing.Size(79, 16);
+            this.lblActionInfo.TabIndex = 9;
+            this.lblActionInfo.Text = "lblActionInfo";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(3, 636);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1005, 2);
+            this.label2.TabIndex = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.panel1.Controls.Add(this.lblActualDate);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lblActionInfo);
+            this.panel1.Location = new System.Drawing.Point(0, 636);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1008, 61);
+            this.panel1.TabIndex = 11;
+            // 
+            // lblActualDate
+            // 
+            this.lblActualDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblActualDate.AutoSize = true;
+            this.lblActualDate.Location = new System.Drawing.Point(854, 19);
+            this.lblActualDate.Name = "lblActualDate";
+            this.lblActualDate.Size = new System.Drawing.Size(38, 16);
+            this.lblActualDate.TabIndex = 10;
+            this.lblActualDate.Text = "Time";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1184,6 +1095,96 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
+            // RefTime
+            // 
+            this.RefTime.Enabled = true;
+            this.RefTime.Interval = 1000;
+            this.RefTime.Tick += new System.EventHandler(this.RefTime_Tick);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(165, 32);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(60, 16);
+            this.lblSearch.TabIndex = 12;
+            this.lblSearch.Text = "Vyhledat";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Location = new System.Drawing.Point(165, 51);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(625, 22);
+            this.txtSearch.TabIndex = 13;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(796, 43);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(94, 39);
+            this.btnSearch.TabIndex = 15;
+            this.btnSearch.Text = "Hledat";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnResetFiltr
+            // 
+            this.btnResetFiltr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetFiltr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnResetFiltr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetFiltr.FlatAppearance.BorderSize = 0;
+            this.btnResetFiltr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnResetFiltr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetFiltr.Image = ((System.Drawing.Image)(resources.GetObject("btnResetFiltr.Image")));
+            this.btnResetFiltr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResetFiltr.Location = new System.Drawing.Point(896, 43);
+            this.btnResetFiltr.Name = "btnResetFiltr";
+            this.btnResetFiltr.Size = new System.Drawing.Size(94, 39);
+            this.btnResetFiltr.TabIndex = 14;
+            this.btnResetFiltr.Text = "Reset";
+            this.btnResetFiltr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnResetFiltr.UseVisualStyleBackColor = false;
+            this.btnResetFiltr.Click += new System.EventHandler(this.btnResetFiltr_Click);
+            // 
+            // btnReport
+            // 
+            this.btnReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.Enabled = false;
+            this.btnReport.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport.Location = new System.Drawing.Point(12, 548);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(148, 39);
+            this.btnReport.TabIndex = 3;
+            this.btnReport.Text = "Vytvořit report";
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // Main
             // 

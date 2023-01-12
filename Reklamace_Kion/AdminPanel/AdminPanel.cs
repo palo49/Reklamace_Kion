@@ -50,6 +50,19 @@ namespace Reklamace_Kion.AdminPanel
             }
         }
 
+        public int GetCountErrorReports()
+        {
+            conn.Open();
+            string sqlData = "SELECT COUNT(*) from ErrorReports";
+            SqlCommand cmdCount = new SqlCommand(sqlData, conn);
+
+            int dataCount = (int)cmdCount.ExecuteScalar();
+
+            conn.Close();
+
+            return dataCount;
+        }
+
         private void AdminPanel_Load(object sender, EventArgs e)
         {
             try
@@ -57,6 +70,8 @@ namespace Reklamace_Kion.AdminPanel
                 loading = true;
                 chckServiceMode.Checked = GetService("AppSettings", "Activated", "ServiceMode");
                 loading = false;
+
+                lblReportsCount.Text = GetCountErrorReports().ToString();
             }
             catch (Exception ex)
             {
@@ -75,6 +90,12 @@ namespace Reklamace_Kion.AdminPanel
             Users UF = new Users();
             UF.MyName = MyName;
             UF.Show();
+        }
+
+        private void btnShowReports_Click(object sender, EventArgs e)
+        {
+            ErrorReports ER = new ErrorReports();
+            ER.Show();
         }
     }
 }

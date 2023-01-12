@@ -141,7 +141,7 @@ namespace Reklamace_Kion
                             btnDelData.Visible = true;
                             btnReport.Visible = true;
 
-                            dataGrid1.ReadOnly = false;
+                            dataGrid1.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
                         else if (Level == "5")
                         {
@@ -151,7 +151,7 @@ namespace Reklamace_Kion
                             btnAddData.Visible = true;
                             btnReport.Visible = true;
 
-                            dataGridOpravy.ReadOnly = false;
+                            dataGridOpravy.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
                         else if (Level == "1")
                         {
@@ -223,9 +223,22 @@ namespace Reklamace_Kion
         {
             try
             {
-                Cursor.Current = Cursors.WaitCursor;
-                ReloadData();
-                Cursor.Current = Cursors.Default;
+                if (curTab == 2)
+                {
+                    loadDgvAnalysis();
+                    lblActionInfo.Text = "Data aktualizována.";
+                }
+                else if (curTab == 3)
+                {
+                    loadDgvExpedition();
+                    lblActionInfo.Text = "Data aktualizována.";
+                }
+                else
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    ReloadData();
+                    Cursor.Current = Cursors.Default;
+                }
             }
             catch (Exception ex)
             {
@@ -424,15 +437,19 @@ namespace Reklamace_Kion
             {
                 case 0:
                     curTab = 0;
+                    btnAddData.Enabled = true;
                     break;
                 case 1:
                     curTab = 1;
+                    btnAddData.Enabled = false;
                     break;
                 case 2:
                     curTab = 2;
+                    btnAddData.Enabled = false;
                     break;
                 case 3:
                     curTab = 3;
+                    btnAddData.Enabled = true;
                     break;
             }
         }
@@ -442,12 +459,12 @@ namespace Reklamace_Kion
             string exportName = string.Empty;
             DataGridView tabulka = new DataGridView();
 
-            if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "1")))
+            if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
             {
                 exportName = "DataMain_export_";
                 tabulka = dataGrid1;
             }
-            else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "5") || (Level == "1")))
+            else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
             {
                 exportName = "DataRepairs_export_";
                 tabulka = dataGridOpravy;
@@ -851,7 +868,7 @@ namespace Reklamace_Kion
 
         private void přidatKomponentuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10")) {
+            if ((Level == "100") || (Level == "20")) {
                 Komponenty.AddComponent addComponent = new Komponenty.AddComponent();
                 addComponent.Show();
             }
@@ -859,7 +876,7 @@ namespace Reklamace_Kion
 
         private void upravitKomponentyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            if ((Level == "100") || (Level == "20"))
             {
                 Komponenty.ListComponents listComponents = new Komponenty.ListComponents();
                 listComponents.Show();
@@ -932,8 +949,7 @@ namespace Reklamace_Kion
                     this.bindRepairData.Filter = "(CLM LIKE '%" + txtSearch.Text + "%') OR " +
                         "(BrandId_Speed LIKE '%" + txtSearch.Text + "%') OR " +
                         "(PN_Battery LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(SN_Battery LIKE '%" + txtSearch.Text + "%') OR " +
-                        "(TypeOfPalette LIKE '%" + txtSearch.Text + "%')";
+                        "(SN_Battery LIKE '%" + txtSearch.Text + "%')";
                 }
             }
             catch (Exception ex)
@@ -1018,7 +1034,7 @@ namespace Reklamace_Kion
 
         private void přidatKOpravámToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            if ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5"))
             {
                 try
                 {
@@ -1042,7 +1058,7 @@ namespace Reklamace_Kion
                             conn.Open();
                             SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '" + PNBattery + "', '" + SNBattery + "', '', '', " +
                                     "'','','','','','',''," +
-                                    "'','','','','')", conn);
+                                    "'','','')", conn);
                             if (cmd.ExecuteNonQuery() != 0)
                             {
                                 form.DataRepair.Clear();
@@ -1097,7 +1113,7 @@ namespace Reklamace_Kion
 
         private void přidatDefektToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            if ((Level == "100") || (Level == "20"))
             {
                 Defekty.AddDefect addDefectForm = new Defekty.AddDefect();
                 addDefectForm.Show();
@@ -1106,7 +1122,7 @@ namespace Reklamace_Kion
 
         private void upravitDefektyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            if ((Level == "100") || (Level == "20"))
             {
                 Defekty.ListDefects listDefectsForm = new Defekty.ListDefects();
                 listDefectsForm.Show();
@@ -1159,7 +1175,7 @@ namespace Reklamace_Kion
 
         private void přidatSoučástToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5"))
+            if ((Level == "100") || (Level == "20"))
             {
                 Opravy.AddComponentRepair addComponentRepair = new Opravy.AddComponentRepair();
                 addComponentRepair.Show();
@@ -1168,7 +1184,7 @@ namespace Reklamace_Kion
 
         private void upravitSoučástiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5"))
+            if ((Level == "100") || (Level == "20"))
             {
                 Opravy.ListComponentsRepair listComponentsRepair = new Opravy.ListComponentsRepair();
                 listComponentsRepair.Show();
@@ -1206,7 +1222,7 @@ namespace Reklamace_Kion
 
         private void toolStripAddToAnalysis_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            if ((Level == "100") || (Level == "20") || (Level == "5"))
             {
                 try
                 {
@@ -1421,7 +1437,7 @@ namespace Reklamace_Kion
 
         private void přidatKódToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            if ((Level == "100") || (Level == "20"))
             {
                 FaultCodes.AddFaultCode faultCodesAdd = new FaultCodes.AddFaultCode();
                 faultCodesAdd.Show();
@@ -1430,7 +1446,7 @@ namespace Reklamace_Kion
 
         private void upravitKódyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if ((Level == "100") || (Level == "20") || (Level == "10"))
+            if ((Level == "100") || (Level == "20"))
             {
                 FaultCodes.ListFaultCodes listFaultCodes = new FaultCodes.ListFaultCodes();
                 listFaultCodes.Show();
@@ -1599,6 +1615,30 @@ namespace Reklamace_Kion
             RE.MyFirstName = FirstName;
             RE.MyLastName = LastName;
             RE.Show();
+        }
+
+        public static void PutDate(int row, int col, string dt)
+        {
+            form.dgvExpedition.Rows[row].Cells[col].Value = dt;
+            form.btnReloadData.Focus();
+        }
+
+        private void dgvExpedition_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int rowIndex = dgvExpedition.CurrentCell.RowIndex;
+            int columnIndex = dgvExpedition.CurrentCell.ColumnIndex;
+            string columnName = dgvExpedition.Columns[columnIndex].Name;
+
+            if(Convert.ToInt16(Level) > 1)
+            {
+                if ((columnName == "Column_10" || columnName == "Column_11") && rowIndex != -1)
+                {
+                    BoxDTPicker dtp = new BoxDTPicker();
+                    dtp.row = rowIndex;
+                    dtp.col = columnIndex;
+                    dtp.Show();
+                }
+            }
         }
     }
 }

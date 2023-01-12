@@ -14,6 +14,10 @@ namespace Reklamace_Kion
 {
     public partial class Login : Form
     {
+
+        int ver = 0;
+        string version = string.Empty;
+
         public Login()
         {
             InitializeComponent();
@@ -47,7 +51,7 @@ namespace Reklamace_Kion
             SqlCommand cmd = new SqlCommand("select Password, Level from Users where Name='" + Name + "'", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             SqlCommand cmdService = new SqlCommand("select Activated from AppSettings where Name='ServiceMode'", conn);
-
+            SqlCommand cmdVersion = new SqlCommand("select Value from AppSettings where Name='Version'", conn);
 
             try
             {
@@ -55,7 +59,8 @@ namespace Reklamace_Kion
 
 
                 bool ServiceMode = Convert.ToBoolean(cmdService.ExecuteScalar());
-
+                string VersionSQL = cmdVersion.ExecuteScalar().ToString();
+                int verSQL = Convert.ToInt32(VersionSQL.Replace(".", ""));
 
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -104,12 +109,36 @@ namespace Reklamace_Kion
                             }
                             else
                             {
-                                Main MainForm = new Main();
+                                if (ver >= verSQL)
+                                {
+                                    Main MainForm = new Main();
 
-                                MainForm.MyName = Name;
-                                MainForm.DisableExit = false;
+                                    MainForm.MyName = Name;
+                                    MainForm.DisableExit = false;
 
-                                MainForm.Show();
+                                    MainForm.Show();
+                                }
+                                else
+                                {
+                                    var res = MessageBox.Show("Byla vydána nová verze aplikace a je potřeba ji aktualizovat.\n\nVaše verze je " + version + "\nNová verze je " + VersionSQL, "Verze aplikace", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                                    if (res == DialogResult.OK)
+                                    {
+                                        if (Convert.ToInt16(reader[1]) == 100) // User level == 100
+                                        {
+                                            Main MainForm = new Main();
+
+                                            MainForm.MyName = Name;
+                                            MainForm.DisableExit = false;
+
+                                            MainForm.Show();
+                                        }
+                                        else
+                                        {
+                                            conn.Close();
+                                            Environment.Exit(0);
+                                        }
+                                    }
+                                }
                             }
                         }
                         else
@@ -134,6 +163,11 @@ namespace Reklamace_Kion
         private void Login_Load(object sender, EventArgs e)
         {
             txtName.Text = Properties.Settings.Default.Name;
+
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+            version = fvi.FileVersion;
+            ver = Convert.ToInt32(version.Replace(".", ""));
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
