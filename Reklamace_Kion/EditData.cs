@@ -280,7 +280,7 @@ namespace Reklamace_Kion
 
         private void btnClearDateSendFromCustomer_Click(object sender, EventArgs e)
         {
-            if (MyLevel == 10)
+            if (MyLevel == 10 || MyLevel >= 100)
             {
                 DateOfCustomerSend.Value = DateTimePicker.MinimumDateTime;
                 DateOfCustomerSend.CustomFormat = " ";
@@ -295,7 +295,7 @@ namespace Reklamace_Kion
 
         private void btnClearDateOfSaftAccept_Click(object sender, EventArgs e)
         {
-            if (MyLevel == 10)
+            if (MyLevel == 10 || MyLevel >= 100)
             {
                 DateOfSaftAcceptance.Value = DateTimePicker.MinimumDateTime;
                 DateOfSaftAcceptance.CustomFormat = " ";
@@ -310,7 +310,7 @@ namespace Reklamace_Kion
 
         private void btnClearDateOfRepair_Click(object sender, EventArgs e)
         {
-            if (MyLevel == 10)
+            if (MyLevel == 10 || MyLevel >= 100)
             {
                 DateOfRepair.Value = DateTimePicker.MinimumDateTime;
                 DateOfRepair.CustomFormat = " ";
@@ -325,7 +325,7 @@ namespace Reklamace_Kion
 
         private void btnClearDateOfSaftSend_Click(object sender, EventArgs e)
         {
-            if (MyLevel == 10)
+            if (MyLevel == 10 || MyLevel >= 100)
             {
                 DateOfSaftSend.Value = DateTimePicker.MinimumDateTime;
                 DateOfSaftSend.CustomFormat = " ";
@@ -340,7 +340,7 @@ namespace Reklamace_Kion
 
         private void btnClearDateOfReplacementSend_Click(object sender, EventArgs e)
         {
-            if (MyLevel == 10)
+            if (MyLevel == 10 || MyLevel >= 100)
             {
                 DateOfReplacementSend.Value = DateTimePicker.MinimumDateTime;
                 DateOfReplacementSend.CustomFormat = " ";
@@ -363,7 +363,7 @@ namespace Reklamace_Kion
 
         private void btnClearDefekt_Click(object sender, EventArgs e)
         {
-            if (MyLevel == 10)
+            if (MyLevel == 10 || MyLevel >= 100)
             {
                 cmbDefects.SelectedIndex = -1;
             }

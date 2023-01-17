@@ -267,6 +267,12 @@
       <DependentUpon>SaveInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL.cs" />
+    <Compile Include="Statistics\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaveInfo.resx">
       <DependentUpon>SaveInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>

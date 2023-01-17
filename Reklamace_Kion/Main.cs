@@ -120,6 +120,7 @@ namespace Reklamace_Kion
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
                             btnReport.Visible = true;
+                            btnStatistics.Visible = true;
 
                             dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
@@ -1639,6 +1640,12 @@ namespace Reklamace_Kion
                     dtp.Show();
                 }
             }
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            Statistics.Statistics st = new Statistics.Statistics();
+            st.Show();
         }
     }
 }
