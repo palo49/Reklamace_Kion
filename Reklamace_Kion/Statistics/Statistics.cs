@@ -265,123 +265,224 @@ namespace Reklamace_Kion.Statistics
             indexChanged();
         }
 
+        class Accepted {
+            public string name;
+            public int value;
+        }
+
+        class Accepted_as_goodwill
+        {
+            public string name;
+            public int value;
+        }
+
+        class Not_accepted
+        {
+            public string name;
+            public int value;
+        }
+
+
+        /// <summary>
+        /// Rozdělí data do sloupcu podle accepted, accepted as goodwill a not accepted.
+        /// </summary>
+        /// <param name="data">Data z databáze.</param>
+        /// <param name="result">Hodnoty accepted apod.</param>
+        /// <param name="year">Rok z ComboBox.</param>
+        /// <param name="dbTable">Název databáze, do které se uloží výsledky.</param>
+        /// <param name="names">Název kategorii.</param>
+        private void RefreshData(List<string> data, List<string> result, int year, string dbTable, List<string> names)
+        {
+            var dataAccepted              = new List<Accepted>();
+            var dataAccepted_as_goodwill  = new List<Accepted_as_goodwill>();
+            var dataNot_accepted          = new List<Not_accepted>();
+
+            try
+            {
+                for (int i = 0; i < data.Count; i++)
+                {
+                    if (result[i] == "Accepted")
+                    {
+                        int index = dataAccepted.FindIndex(item => item.name == data[i]);
+                        if (index >= 0)
+                        {
+                            dataAccepted[index].value++;
+                        }
+                        else
+                        {
+                            Accepted accepted = new Accepted();
+                            accepted.name = data[i];
+                            accepted.value++;
+                            dataAccepted.Add(accepted);
+                        }
+                    }
+                    else if (result[i] == "Accepted_as_goodwill")
+                    {
+                        int index = dataAccepted_as_goodwill.FindIndex(item => item.name == data[i]);
+                        if (index >= 0)
+                        {
+                            dataAccepted_as_goodwill[index].value++;
+                        }
+                        else
+                        {
+                            Accepted_as_goodwill aag = new Accepted_as_goodwill();
+                            aag.name = data[i];
+                            aag.value++;
+                            dataAccepted_as_goodwill.Add(aag);
+                        }
+                    }
+                    else
+                    {
+                        int index = dataNot_accepted.FindIndex(item => item.name == data[i]);
+                        if (index >= 0)
+                        {
+                            dataNot_accepted[index].value++;
+                        }
+                        else
+                        {
+                            Not_accepted na = new Not_accepted();
+                            na.name = data[i];
+                            na.value++;
+                            dataNot_accepted.Add(na);
+                        }
+                    }
+                }
+
+                for (int i = 0; i < names.Count; i++)
+                {
+                    int davalue = 0;
+                    int aagvalue = 0;
+                    int navalue = 0;
+
+                    int indexda = dataAccepted.FindIndex(item => item.name == names[i]);
+                    if (indexda >= 0)
+                    {
+                        davalue = dataAccepted[indexda].value;
+                    }
+                    int indexaag = dataAccepted_as_goodwill.FindIndex(item => item.name == names[i]);
+                    if (indexaag >= 0)
+                    {
+                        aagvalue = dataAccepted_as_goodwill[indexaag].value;
+                    }
+                    int indexna = dataNot_accepted.FindIndex(item => item.name == names[i]);
+                    if (indexna >= 0)
+                    {
+                        navalue = dataNot_accepted[indexna].value;
+                    }
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO " + dbTable + " VALUES ('" + names[i] + "', " + davalue + ", " + navalue + ", " + aagvalue + ", " + (davalue + navalue + aagvalue) + ", " + year + ")", conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            List<string> CLM = new List<string>();
-            List<string> State = new List<string>();
-            List<string> PN_Battery = new List<string>();
-            List<string> PN_Claimed_Component = new List<string>();
-            List<string> Defect_BMS = new List<string>();
-            List<string> Result = new List<string>();
-
-            DialogResult res = MessageBox.Show("Tímto dojde k obnovení a znovu nahrání dat do databáze statistik, pro vybraný rok " + cmbYear.Text + ".\nPřejete si pokračovat?", "Upozornění", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (res == DialogResult.Yes)
+            if (Convert.ToInt32(cmbYear.Text) <= 2022)
             {
-                try
+                MessageBox.Show("Data z tohoto roku (" + cmbYear.Text + ") nelze tímto způsobem aktualizovat.");
+            }
+            else
+            {
+                List<string> CLM = new List<string>();
+                List<string> State = new List<string>();
+                List<string> PN_Battery = new List<string>();
+                List<string> PN_Claimed_Component = new List<string>();
+                List<string> Defect_BMS = new List<string>();
+                List<string> Result = new List<string>();
+
+                List<string> claimNames = new List<string>() { "BMS", "775369_A1", "774166_A2", "776445_B1", "774100_B2" };
+                List<string> PartsNames = new List<string>();
+                List<string> BMSFaultNames = new List<string>();
+
+                DialogResult res = MessageBox.Show("Tímto dojde k obnovení a znovu nahrání dat do databáze statistik, pro vybraný rok " + cmbYear.Text + ".\nPřejete si pokračovat?", "Upozornění", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (res == DialogResult.Yes)
                 {
-                    string year = cmbYear.Text.Substring(2, 2);
-                    string CLMYear = "CLM" + year;
-
-                    SqlCommand cmd = new SqlCommand("SELECT CLM, State, PN_Battery, PN_Claimed_Component, Defect_BMS, Result FROM DataMain WHERE CLM LIKE '%" + CLMYear + "%'", conn);
-                    conn.Open();
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
+                    try
                     {
-                        if (!reader.IsDBNull(0)) { CLM.Add(reader.GetString(0)); } else { CLM.Add(string.Empty); }
-                        if (!reader.IsDBNull(1)) { State.Add(reader.GetString(1)); } else { State.Add(string.Empty); }
-                        if (!reader.IsDBNull(2)) { PN_Battery.Add(reader.GetString(2)); } else { PN_Battery.Add(string.Empty); }
-                        if (!reader.IsDBNull(3)) { PN_Claimed_Component.Add(reader.GetString(3)); } else { PN_Claimed_Component.Add(string.Empty); }
-                        if (!reader.IsDBNull(4)) { Defect_BMS.Add(reader.GetString(4)); } else { Defect_BMS.Add(string.Empty); }
-                        if (!reader.IsDBNull(5)) { 
-                            if (reader.GetString(5) == "Not accepted") { Result.Add(reader.GetString(5).Replace(" ", "_")); }
-                            else if (reader.GetString(5) == "Accepted as goodwill") { Result.Add(reader.GetString(5).Replace(" ", "_")); }
-                            else { Result.Add(reader.GetString(5)); }
-                        } else { Result.Add(string.Empty); }
-                    }
-                    reader.Close();
+                        string year = cmbYear.Text.Substring(2, 2);
+                        string CLMYear = "CLM" + year;
 
-                    SqlCommand deleteClaims = new SqlCommand("DELETE FROM StatisticsClaims WHERE YearIn=" + cmbYear.Text, conn);
-                    SqlCommand deleteParts = new SqlCommand("DELETE FROM StatisticsParts WHERE YearIn=" + cmbYear.Text, conn);
-                    SqlCommand deleteBMSFault = new SqlCommand("DELETE FROM StatisticsBMSFault WHERE YearIn=" + cmbYear.Text, conn);
+                        SqlCommand cmd = new SqlCommand("SELECT CLM, State, PN_Battery, PN_Claimed_Component, Defect_BMS, Result FROM DataMain WHERE CLM LIKE '%" + CLMYear + "%'", conn);
+                        SqlCommand cmdParts = new SqlCommand("SELECT Name FROM DataComponents", conn);
+                        SqlCommand cmdBMSFaults = new SqlCommand("SELECT Name FROM DataDefects", conn);
+                        conn.Open();
 
-                    deleteClaims.ExecuteNonQuery();
-                    deleteParts.ExecuteNonQuery();
-                    deleteBMSFault.ExecuteNonQuery();
+                        SqlDataReader reader = cmd.ExecuteReader();
 
-                    if (PN_Battery.Count > 0)
-                    {
-                        int tmpBMS_Accepted                 = 0;
-                        int tmpBMS_Accepted_as_goodwill     = 0;
-                        int tmpBMS_Not_accepted             = 0;
-                        int tmpA1_Accepted                  = 0;
-                        int tmpA1_Accepted_as_goodwill      = 0;
-                        int tmpA1_Not_accepted              = 0;
-                        int tmpA2_Accepted                  = 0;
-                        int tmpA2_Accepted_as_goodwill      = 0;
-                        int tmpA2_Not_accepted              = 0;
-                        int tmpB1_Accepted                  = 0;
-                        int tmpB1_Accepted_as_goodwill      = 0;
-                        int tmpB1_Not_accepted              = 0;
-                        int tmpB2_Accepted                  = 0;
-                        int tmpB2_Accepted_as_goodwill      = 0;
-                        int tmpB2_Not_accepted              = 0;
-
-                        for (int i = 0; i < PN_Battery.Count; i++)
+                        while (reader.Read())
                         {
-                            if (PN_Battery[i].Contains("BMS"))  { 
-                                if (Result[i] == "Accepted") { tmpBMS_Accepted++; }
-                                else if (Result[i] == "Accepted_as_goodwill") { tmpBMS_Accepted_as_goodwill++; }
-                                else if (Result[i] == "Not_accepted") { tmpBMS_Not_accepted++; }
+                            if (!reader.IsDBNull(0)) { CLM.Add(reader.GetString(0)); } else { CLM.Add(string.Empty); }
+                            if (!reader.IsDBNull(1)) { State.Add(reader.GetString(1)); } else { State.Add(string.Empty); }
+                            if (!reader.IsDBNull(2)) { PN_Battery.Add(reader.GetString(2)); } else { PN_Battery.Add(string.Empty); }
+                            if (!reader.IsDBNull(3)) { PN_Claimed_Component.Add(reader.GetString(3)); } else { PN_Claimed_Component.Add(string.Empty); }
+                            if (!reader.IsDBNull(4)) { Defect_BMS.Add(reader.GetString(4)); } else { Defect_BMS.Add(string.Empty); }
+                            if (!reader.IsDBNull(5))
+                            {
+                                if (reader.GetString(5) == "Not accepted") { Result.Add(reader.GetString(5).Replace(" ", "_")); }
+                                else if (reader.GetString(5) == "Accepted as goodwill") { Result.Add(reader.GetString(5).Replace(" ", "_")); }
+                                else { Result.Add(reader.GetString(5)); }
                             }
-                            if (PN_Battery[i].Contains("A1"))   {
-                                if (Result[i] == "Accepted") { tmpA1_Accepted++; }
-                                else if (Result[i] == "Accepted_as_goodwill") { tmpA1_Accepted_as_goodwill++; }
-                                else if (Result[i] == "Not_accepted") { tmpA1_Not_accepted++; }
-                            }
-                            if (PN_Battery[i].Contains("A2"))   {
-                                if (Result[i] == "Accepted") { tmpA2_Accepted++; }
-                                else if (Result[i] == "Accepted_as_goodwill") { tmpA2_Accepted_as_goodwill++; }
-                                else if (Result[i] == "Not_accepted") { tmpA2_Not_accepted++; }
-                            }
-                            if (PN_Battery[i].Contains("B1"))   {
-                                if (Result[i] == "Accepted") { tmpB1_Accepted++; }
-                                else if (Result[i] == "Accepted_as_goodwill") { tmpB1_Accepted_as_goodwill++; }
-                                else if (Result[i] == "Not_accepted") { tmpB1_Not_accepted++; }
-                            }
-                            if (PN_Battery[i].Contains("B2"))   {
-                                if (Result[i] == "Accepted") { tmpB2_Accepted++; }
-                                else if (Result[i] == "Accepted_as_goodwill") { tmpB2_Accepted_as_goodwill++; }
-                                else if (Result[i] == "Not_accepted") { tmpB2_Not_accepted++; }
-                            }
+                            else { Result.Add(string.Empty); }
+                        }
+                        reader.Close();
+
+                        SqlDataReader rdrParts = cmdParts.ExecuteReader();
+
+                        while (rdrParts.Read())
+                        {
+                            PartsNames.Add(rdrParts.GetString(0));
+                        }
+                        rdrParts.Close();
+
+                        SqlDataReader rdrFaults = cmdBMSFaults.ExecuteReader();
+
+                        while (rdrFaults.Read())
+                        {
+                            BMSFaultNames.Add(rdrFaults.GetString(0));
+                        }
+                        rdrFaults.Close();
+
+                        SqlCommand deleteClaims = new SqlCommand("DELETE FROM StatisticsClaims WHERE YearIn=" + cmbYear.Text, conn);
+                        SqlCommand deleteParts = new SqlCommand("DELETE FROM StatisticsParts WHERE YearIn=" + cmbYear.Text, conn);
+                        SqlCommand deleteBMSFault = new SqlCommand("DELETE FROM StatisticsBMSFault WHERE YearIn=" + cmbYear.Text, conn);
+
+                        deleteClaims.ExecuteNonQuery();
+                        deleteParts.ExecuteNonQuery();
+                        deleteBMSFault.ExecuteNonQuery();
+
+                        if (PN_Battery.Count > 0)
+                        {
+                            RefreshData(PN_Battery, Result, Convert.ToInt32(cmbYear.Text), "StatisticsClaims", claimNames);
                         }
 
-                        SqlCommand uploadtmpBMS = new SqlCommand("INSERT INTO StatisticsClaims VALUES ('BMS', " + tmpBMS_Accepted + ", " + tmpBMS_Not_accepted + ", " + tmpBMS_Accepted_as_goodwill + ", " + (tmpBMS_Accepted+tmpBMS_Accepted_as_goodwill+tmpBMS_Not_accepted) + ", " + Convert.ToInt32(cmbYear.Text) + ")", conn);
-                        SqlCommand uploadtmpA1 = new SqlCommand("INSERT INTO StatisticsClaims VALUES ('A1 battery', " + tmpA1_Accepted + ", " + tmpA1_Not_accepted + ", " + tmpA1_Accepted_as_goodwill + ", " + (tmpA1_Accepted + tmpA1_Accepted_as_goodwill + tmpA1_Not_accepted) + ", " + Convert.ToInt32(cmbYear.Text) + ")", conn);
-                        SqlCommand uploadtmpA2 = new SqlCommand("INSERT INTO StatisticsClaims VALUES ('A2 battery', " + tmpA2_Accepted + ", " + tmpA2_Not_accepted + ", " + tmpA2_Accepted_as_goodwill + ", " + (tmpA2_Accepted + tmpA2_Accepted_as_goodwill + tmpA2_Not_accepted) + ", " + Convert.ToInt32(cmbYear.Text) + ")", conn);
-                        SqlCommand uploadtmpB1 = new SqlCommand("INSERT INTO StatisticsClaims VALUES ('B1 battery', " + tmpB1_Accepted + ", " + tmpB1_Not_accepted + ", " + tmpB1_Accepted_as_goodwill + ", " + (tmpB1_Accepted + tmpB1_Accepted_as_goodwill + tmpB1_Not_accepted) + ", " + Convert.ToInt32(cmbYear.Text) + ")", conn);
-                        SqlCommand uploadtmpB2 = new SqlCommand("INSERT INTO StatisticsClaims VALUES ('B2 battery', " + tmpB2_Accepted + ", " + tmpB2_Not_accepted + ", " + tmpB2_Accepted_as_goodwill + ", " + (tmpB2_Accepted + tmpB2_Accepted_as_goodwill + tmpB2_Not_accepted) + ", " + Convert.ToInt32(cmbYear.Text) + ")", conn);
+                        if (PN_Claimed_Component.Count > 0)
+                        {
+                            RefreshData(PN_Claimed_Component, Result, Convert.ToInt32(cmbYear.Text), "StatisticsParts", PartsNames);
+                        }
 
-                        uploadtmpBMS.ExecuteNonQuery();
-                        uploadtmpA1.ExecuteNonQuery();
-                        uploadtmpA2.ExecuteNonQuery();
-                        uploadtmpB1.ExecuteNonQuery();
-                        uploadtmpB2.ExecuteNonQuery();
-                    }
-                    
+                        if (Defect_BMS.Count > 0)
+                        {
+                            RefreshData(Defect_BMS, Result, Convert.ToInt32(cmbYear.Text), "StatisticsBMSFault", BMSFaultNames);
+                        }
 
-                    conn.Close();
-                    indexChanged();
-                }
-                catch (Exception ex)
-                {
-                    if (conn.State == ConnectionState.Open)
-                    {
                         conn.Close();
+                        indexChanged();
                     }
-                    MessageBox.Show(ex.Message);
+                    catch (Exception ex)
+                    {
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
