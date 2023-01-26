@@ -1217,8 +1217,11 @@ namespace Reklamace_Kion
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            Report.Report repForm = new Report.Report();
-            repForm.Show();
+            if (Level == "100")
+            {
+                CreateReport cr = new CreateReport();
+                cr.CreateDocument(MyName, FirstName, LastName);
+            }
         }
 
         private void toolStripAddToAnalysis_Click(object sender, EventArgs e)
