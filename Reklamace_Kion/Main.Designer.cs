@@ -58,11 +58,13 @@
             this.přidatKOpravámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripAddToAnalysis = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripShowFolder = new System.Windows.Forms.ToolStripMenuItem();
+            this.vytvořitReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridOpravy = new ADGV.AdvancedDataGridView();
             this.cellContextRepairs = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.StripMenuOpenDataRepairs = new System.Windows.Forms.ToolStripMenuItem();
             this.stripMenuOpenFolderRepairs = new System.Windows.Forms.ToolStripMenuItem();
+            this.vytvořitReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvAnalysis = new ADGV.AdvancedDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -282,9 +284,10 @@
             this.toolStripEditData,
             this.přidatKOpravámToolStripMenuItem,
             this.toolStripAddToAnalysis,
-            this.toolStripShowFolder});
+            this.toolStripShowFolder,
+            this.vytvořitReportToolStripMenuItem1});
             this.CellContext.Name = "contextMenuStrip1";
-            this.CellContext.Size = new System.Drawing.Size(168, 92);
+            this.CellContext.Size = new System.Drawing.Size(168, 114);
             this.CellContext.Opening += new System.ComponentModel.CancelEventHandler(this.CellContext_Opening);
             // 
             // toolStripEditData
@@ -319,6 +322,14 @@
             this.toolStripShowFolder.Size = new System.Drawing.Size(167, 22);
             this.toolStripShowFolder.Text = "Otevřit složku";
             this.toolStripShowFolder.Click += new System.EventHandler(this.toolStripShowFolder_Click);
+            // 
+            // vytvořitReportToolStripMenuItem1
+            // 
+            this.vytvořitReportToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("vytvořitReportToolStripMenuItem1.Image")));
+            this.vytvořitReportToolStripMenuItem1.Name = "vytvořitReportToolStripMenuItem1";
+            this.vytvořitReportToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
+            this.vytvořitReportToolStripMenuItem1.Text = "Vytvořit report";
+            this.vytvořitReportToolStripMenuItem1.Click += new System.EventHandler(this.vytvořitReportToolStripMenuItem1_Click);
             // 
             // tabPage2
             // 
@@ -377,15 +388,16 @@
             // 
             this.cellContextRepairs.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StripMenuOpenDataRepairs,
-            this.stripMenuOpenFolderRepairs});
+            this.stripMenuOpenFolderRepairs,
+            this.vytvořitReportToolStripMenuItem});
             this.cellContextRepairs.Name = "contextMenuStrip1";
-            this.cellContextRepairs.Size = new System.Drawing.Size(147, 48);
+            this.cellContextRepairs.Size = new System.Drawing.Size(151, 70);
             // 
             // StripMenuOpenDataRepairs
             // 
             this.StripMenuOpenDataRepairs.Image = ((System.Drawing.Image)(resources.GetObject("StripMenuOpenDataRepairs.Image")));
             this.StripMenuOpenDataRepairs.Name = "StripMenuOpenDataRepairs";
-            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(146, 22);
+            this.StripMenuOpenDataRepairs.Size = new System.Drawing.Size(150, 22);
             this.StripMenuOpenDataRepairs.Text = "Data opravy";
             this.StripMenuOpenDataRepairs.Click += new System.EventHandler(this.StripMenuOpenDataRepairs_Click);
             // 
@@ -393,9 +405,17 @@
             // 
             this.stripMenuOpenFolderRepairs.Image = ((System.Drawing.Image)(resources.GetObject("stripMenuOpenFolderRepairs.Image")));
             this.stripMenuOpenFolderRepairs.Name = "stripMenuOpenFolderRepairs";
-            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(146, 22);
+            this.stripMenuOpenFolderRepairs.Size = new System.Drawing.Size(150, 22);
             this.stripMenuOpenFolderRepairs.Text = "Otevřit složku";
             this.stripMenuOpenFolderRepairs.Click += new System.EventHandler(this.stripMenuOpenFolderRepairs_Click);
+            // 
+            // vytvořitReportToolStripMenuItem
+            // 
+            this.vytvořitReportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vytvořitReportToolStripMenuItem.Image")));
+            this.vytvořitReportToolStripMenuItem.Name = "vytvořitReportToolStripMenuItem";
+            this.vytvořitReportToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.vytvořitReportToolStripMenuItem.Text = "Vytvořit report";
+            this.vytvořitReportToolStripMenuItem.Click += new System.EventHandler(this.vytvořitReportToolStripMenuItem_Click);
             // 
             // tabPage3
             // 
@@ -1184,6 +1204,7 @@
             this.btnReport.Text = "Vytvořit report";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Visible = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnStatistics
@@ -1204,7 +1225,6 @@
             this.btnStatistics.Text = "Statistiky";
             this.btnStatistics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistics.UseVisualStyleBackColor = false;
-            this.btnStatistics.Visible = false;
             this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
             // Main
@@ -1349,5 +1369,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripEditData;
         private System.Windows.Forms.ToolStripMenuItem nahlásitChybuToolStripMenuItem;
         private System.Windows.Forms.Button btnStatistics;
+        private System.Windows.Forms.ToolStripMenuItem vytvořitReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vytvořitReportToolStripMenuItem1;
     }
 }

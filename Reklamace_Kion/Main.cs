@@ -119,7 +119,6 @@ namespace Reklamace_Kion
 
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
-                            btnReport.Visible = true;
                             btnStatistics.Visible = true;
 
                             dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
@@ -130,7 +129,6 @@ namespace Reklamace_Kion
 
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
-                            btnReport.Visible = true;
 
                             dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
@@ -140,7 +138,6 @@ namespace Reklamace_Kion
 
                             btnAddData.Visible = true;
                             btnDelData.Visible = true;
-                            btnReport.Visible = true;
 
                             dataGrid1.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
@@ -150,7 +147,6 @@ namespace Reklamace_Kion
 
                             btnDelData.Visible = true;
                             btnAddData.Visible = true;
-                            btnReport.Visible = true;
 
                             dataGridOpravy.ReadOnly = dgvExpedition.ReadOnly = false;
                         }
@@ -457,73 +453,81 @@ namespace Reklamace_Kion
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            string exportName = string.Empty;
-            DataGridView tabulka = new DataGridView();
-
-            if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
+            try
             {
-                exportName = "DataMain_export_";
-                tabulka = dataGrid1;
-            }
-            else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
-            {
-                exportName = "DataRepairs_export_";
-                tabulka = dataGridOpravy;
-            }
-            else if ((curTab == 3) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
-            {
-                exportName = "DataExpedition_export_";
-                tabulka = dgvExpedition;
-            }
-            else
-            {
-                return;
-            }
+                string exportName = string.Empty;
+                DataGridView tabulka = new DataGridView();
 
-            string fileName = exportName + DateTime.Now.ToString("yy:M:d_H:mm:ss") + ".xlsx";
-
-            string filePath = string.Empty;
-
-            FolderBrowserDialog SaveFileExport = new FolderBrowserDialog();
-
-            fileName = fileName.Replace(":", "");
-
-            DialogResult result = SaveFileExport.ShowDialog();
-            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(SaveFileExport.SelectedPath))
-            {
-                filePath = SaveFileExport.SelectedPath + "\\" + fileName;
-
-                SaveInfo saveDialog = new SaveInfo();
-                saveDialog.Show();
-
-                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
-                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-                app.Visible = false;
-                worksheet = workbook.ActiveSheet;
-                worksheet.Name = exportName;
-
-                for (int i = 1; i < tabulka.Columns.Count + 1; i++)
+                if ((curTab == 0) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
                 {
-                    worksheet.Cells[1, i] = tabulka.Columns[i - 1].HeaderText;
+                    exportName = "DataMain_export_";
+                    tabulka = dataGrid1;
+                }
+                else if ((curTab == 1) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
+                {
+                    exportName = "DataRepairs_export_";
+                    tabulka = dataGridOpravy;
+                }
+                else if ((curTab == 3) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5") || (Level == "1")))
+                {
+                    exportName = "DataExpedition_export_";
+                    tabulka = dgvExpedition;
+                }
+                else
+                {
+                    return;
                 }
 
-                for (int i = 0; i < tabulka.Rows.Count; i++)
+                string fileName = exportName + DateTime.Now.ToString("yy:M:d_H:mm:ss") + ".xlsx";
+
+                string filePath = string.Empty;
+
+                FolderBrowserDialog SaveFileExport = new FolderBrowserDialog();
+
+                fileName = fileName.Replace(":", "");
+
+                DialogResult result = SaveFileExport.ShowDialog();
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(SaveFileExport.SelectedPath))
                 {
-                    for (int j = 0; j < tabulka.Columns.Count; j++)
+                    filePath = SaveFileExport.SelectedPath + "\\" + fileName;
+
+                    SaveInfo saveDialog = new SaveInfo();
+                    saveDialog.Show();
+
+                    Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+                    Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+                    Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                    app.Visible = false;
+                    worksheet = workbook.ActiveSheet;
+                    worksheet.Name = exportName;
+
+                    for (int i = 1; i < tabulka.Columns.Count + 1; i++)
                     {
-                        worksheet.Cells[i + 2, j + 1] = tabulka.Rows[i].Cells[j].Value.ToString();
+                        worksheet.Cells[1, i] = tabulka.Columns[i - 1].HeaderText;
                     }
+
+                    for (int i = 0; i < tabulka.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < tabulka.Columns.Count; j++)
+                        {
+                            worksheet.Cells[i + 2, j + 1] = tabulka.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+
+                    workbook.SaveAs(filePath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                    app.Quit();
+
+                    saveDialog.Hide();
+
+                    lblActionInfo.ForeColor = Color.Black;
+                    lblActionInfo.Text = "Export dokončen.";
                 }
-
-                workbook.SaveAs(filePath, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                app.Quit();
-
-                saveDialog.Hide();
-
-                lblActionInfo.ForeColor = Color.Black;
-                lblActionInfo.Text = "Export dokončen.";
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void dataGrid1_SortStringChanged(object sender, EventArgs e)
@@ -1217,11 +1221,7 @@ namespace Reklamace_Kion
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            if (Level == "100")
-            {
-                CreateReport cr = new CreateReport();
-                cr.CreateDocument(MyName, FirstName, LastName);
-            }
+            
         }
 
         private void toolStripAddToAnalysis_Click(object sender, EventArgs e)
@@ -1649,6 +1649,32 @@ namespace Reklamace_Kion
         {
             Statistics.Statistics st = new Statistics.Statistics();
             st.Show();
+        }
+
+        private void vytvořitReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Level != "1")
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                string CLMValue = dataGridOpravy[1, actualCell.RowIndex].Value.ToString();
+
+                CreateReport cr = new CreateReport();
+                cr.CreateDocument(MyName, FirstName, LastName, CLMValue);
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void vytvořitReportToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (Level != "1")
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                string CLMValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
+
+                CreateReport cr = new CreateReport();
+                cr.CreateDocument(MyName, FirstName, LastName, CLMValue);
+                Cursor.Current = Cursors.Default;
+            }
         }
     }
 }

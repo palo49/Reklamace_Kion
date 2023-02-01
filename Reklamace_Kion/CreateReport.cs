@@ -1,18 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Microsoft.Office.Interop.Word;
 
 namespace Reklamace_Kion
 {
     internal class CreateReport
     {
-        public void CreateDocument(string MyName, string FN, string LN)
+        public void CreateDocument(string MyName, string FN, string LN, string CLM)
         {
             try
             {
+                List<string> DataMain = new List<string>();
+                List<int> DataBB = new List<int>();
+
+                SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
+                
+                conn.Open();
+
+                SqlCommand cmdDataMain = new SqlCommand("SELECT Contact, PN_Claimed_Component, Date_Of_Saft_Acceptance, Customer_Require, PN_Battery, SN_Battery FROM DataMain WHERE CLM='" + CLM + "'", conn);
+                SqlDataReader readerDataMain = cmdDataMain.ExecuteReader();
+                while (readerDataMain.Read())
+                {
+                    for (int x = 0; x < readerDataMain.FieldCount; x++)
+                    {
+                        DataMain.Add(readerDataMain.GetString(x));
+                    }
+                }
+                readerDataMain.Close();
+
+                SqlCommand cmdDataBB = new SqlCommand("SELECT Saft_Fault_Code_1, Kion_Fault_Code_1, Kion_DTC_1, Saft_Fault_Code_2, Kion_Fault_Code_2, Kion_DTC_2, Saft_Fault_Code_3, Kion_Fault_Code_3, Kion_DTC_3, Saft_Fault_Code_4, Kion_Fault_Code_4, Kion_DTC_4, Saft_Fault_Code_5, Kion_Fault_Code_5, Kion_DTC_5, Saft_Fault_Code_6, Kion_Fault_Code_6, Kion_DTC_6, Saft_Fault_Code_7, Kion_Fault_Code_7, Kion_DTC_7, Saft_Fault_Code_8, Kion_Fault_Code_8, Kion_DTC_8, Saft_Fault_Code_9, Kion_Fault_Code_9, Kion_DTC_9, Saft_Fault_Code_10, Kion_Fault_Code_10, Kion_DTC_10, Saft_Fault_Code_11, Kion_Fault_Code_11, Kion_DTC_11, Saft_Fault_Code_12, Kion_Fault_Code_12, Kion_DTC_12 FROM DataAnalysis_BB WHERE CLM='" + CLM + "'", conn);
+                SqlDataReader readerDataBB = cmdDataBB.ExecuteReader();
+                while (readerDataBB.Read())
+                {
+                    for (int x = 0; x < readerDataBB.FieldCount; x++)
+                    {
+                        DataBB.Add(readerDataBB.GetInt32(x));
+                    }
+                }
+                readerDataBB.Close();
+
+                conn.Close();
+
+
+
+
                 Microsoft.Office.Interop.Word.Application winword = new Microsoft.Office.Interop.Word.Application();
                 winword.ShowAnimation = false;
                 winword.Visible = false;
@@ -24,362 +60,341 @@ namespace Reklamace_Kion
                 {
                     Microsoft.Office.Interop.Word.Range headerRange = section.Headers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
                     headerRange.Fields.Add(headerRange, Microsoft.Office.Interop.Word.WdFieldType.wdFieldPage);
-                   
 
-                    headerRange.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
-                    headerRange.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlack;
-                    headerRange.Font.Size = 18;
-                    headerRange.Text = "Technical evaluation";
+                    headerRange.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdGray25;
+
+                    Table tableHeader = document.Tables.Add(headerRange, 1, 2, ref missing, ref missing);
+
+                    List<string> th = new List<string> { CLM };
+                    List<string> thData = new List<string> { "Technical evaulation" };
+
+                    int ith = 0;
+                    tableHeader.Borders.Enable = 0;
+                    foreach (Row row in tableHeader.Rows)
+                    {
+                        row.Height = 20;
+                        row.Cells[1].Range.Text = th[ith];
+                        row.Cells[2].Range.Text = thData[ith];
+                        ith++;
+
+                        foreach (Cell cell in row.Cells)
+                        {
+                            if (cell.ColumnIndex == 1)
+                            {
+                                cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                                cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            }
+                            else
+                            {
+                                cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                                cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                            }
+                        }
+                    }
                 }
 
-                
+               
+                winword.Selection.GoTo(Microsoft.Office.Interop.Word.WdGoToItem.wdGoToPage, Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToFirst, 1, missing);
 
-                /// Start of page 1
+                Microsoft.Office.Interop.Word.Paragraph para1 = document.Content.Paragraphs.Add(ref missing);;
+                //para1.Range.InsertParagraphAfter();
 
-                int col1Width = 200;
-                int col2Width = 540 - col1Width;
-                int col2StartPos = col1Width + 30;
+                Table firstTable = document.Tables.Add(para1.Range, 6, 2, ref missing, ref missing);
 
-                Microsoft.Office.Core.MsoTriState borderVisibility = Microsoft.Office.Core.MsoTriState.msoTrue;
-                Microsoft.Office.Core.MsoTriState fillVisibility = Microsoft.Office.Core.MsoTriState.msoFalse;
+                List<string> ft = new List<string> { "Department:", "Date:", "Issued by:", "Addresse:", "Subject:", "SAFT ref.:" };
+                List<string> ftData = new List<string> { "PDC", DateTime.Now.ToString("dd.MM.yyyy"), FN + " " + LN, DataMain[0], DataMain[1], CLM };
 
-                var txt1 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 80, col1Width, 25);
-                txt1.Fill.Visible = fillVisibility;
-                txt1.Line.Visible = borderVisibility;
-                txt1.TextFrame.TextRange.Text = "Department: ";
+                int i = 0;
+                firstTable.Borders.Enable = 1;
+                firstTable.Borders.OutsideColor = WdColor.wdColorGray25;
+                firstTable.Borders.InsideColor = WdColor.wdColorGray25;
+                foreach (Row row in firstTable.Rows)
+                {
+                    row.Height = 30;
+                    row.Cells[1].Range.Text = ft[i];
+                    row.Cells[2].Range.Text = ftData[i];
+                    i++;
 
-                var txt2 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 80, col2Width, 25);
-                txt2.Fill.Visible = fillVisibility;
-                txt2.Line.Visible = borderVisibility;
-                txt2.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt2.TextFrame.TextRange.Text = "PDC";
+                    foreach (Cell cell in row.Cells)
+                    {                             
+                        if (cell.ColumnIndex == 1)
+                        {
+                            //Center alignment for the Header cells  
+                            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
+                        else
+                        {
+                            //Center alignment for the Header cells  
+                            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
+                    }
+                }
+                firstTable.AllowAutoFit = true;
+                Microsoft.Office.Interop.Word.Column firstCol = firstTable.Columns[1];
+                firstCol.AutoFit(); // force fit sizing
+                Single firstColAutoWidth = firstCol.Width; // store autofit width
+                firstTable.AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitWindow); // fill page width
+                firstCol.SetWidth(firstColAutoWidth, Microsoft.Office.Interop.Word.WdRulerStyle.wdAdjustFirstColumn);
 
-                var txt1_2 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 105, col1Width, 25);
-                txt1_2.Fill.Visible = fillVisibility;
-                txt1_2.Line.Visible = borderVisibility;
-                txt1_2.TextFrame.TextRange.Text = "Date: ";
+                Microsoft.Office.Interop.Word.Paragraph para2 = document.Content.Paragraphs.Add(ref missing);
+                para2.Range.Font.Bold = 1;
+                para2.Range.Font.Size = 18;
+                para2.Range.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                para2.Range.Text = "\n1 Claim description";
+                para2.Range.InsertParagraphAfter();
 
-                var txt2_2 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 105, col2Width, 25);
-                txt2_2.Fill.Visible = fillVisibility;
-                txt2_2.Line.Visible = borderVisibility;
-                txt2_2.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt2_2.TextFrame.TextRange.Text = DateTime.Now.ToString("dd.MM.yyyy");
+                Microsoft.Office.Interop.Word.Paragraph para3 = document.Content.Paragraphs.Add(ref missing); ;
+                Table table2 = document.Tables.Add(para3.Range, 1, 2, ref missing, ref missing);
 
-                var txt3 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 130, col1Width, 25);
-                txt3.Fill.Visible = fillVisibility;
-                txt3.Line.Visible = borderVisibility;
-                txt3.TextFrame.TextRange.Text = "Issued by: ";
+                List<string> t2 = new List<string> { "Arrived at SAFT:" };
+                List<string> t2Data = new List<string> { DataMain[2] };
 
-                var txt4 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 130, col2Width, 25);
-                txt4.Fill.Visible = fillVisibility;
-                txt4.Line.Visible = borderVisibility;
-                txt4.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt4.TextFrame.TextRange.Text = FN + " " + LN;
+                int i2 = 0;
+                table2.Borders.Enable = 0;
+                foreach (Row row in table2.Rows)
+                {
+                    row.Height = 30;
+                    row.Cells[1].Range.Text = t2[i2];
+                    row.Cells[2].Range.Text = t2Data[i2];
+                    i2++;
 
-                var txt5 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 155, col1Width, 25);
-                txt5.Fill.Visible = fillVisibility;
-                txt5.Line.Visible = borderVisibility;
-                txt5.TextFrame.TextRange.Text = "Addresse: ";
+                    foreach (Cell cell in row.Cells)
+                    {
+                        if (cell.ColumnIndex == 1)
+                        {
+                            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
+                        else
+                        { 
+                            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                        }
+                    }
+                }
 
-                var txt6 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 155, col2Width, 25);
-                txt6.Fill.Visible = fillVisibility;
-                txt6.Line.Visible = borderVisibility;
-                txt6.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt6.TextFrame.TextRange.Text = "contact";
+                Microsoft.Office.Interop.Word.Paragraph para4 = document.Content.Paragraphs.Add(ref missing);
+                para4.Range.Font.Bold = 1;
+                para4.Range.Text = "\nCustomer description:";
+                para4.Range.InsertParagraphAfter();
 
-                var txt7 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 180, col1Width, 25);
-                txt7.Fill.Visible = fillVisibility;
-                txt7.Line.Visible = borderVisibility;
-                txt7.TextFrame.TextRange.Text = "Subject: ";
+                Microsoft.Office.Interop.Word.Paragraph para5 = document.Content.Paragraphs.Add(ref missing);
+                para5.Range.Text = DataMain[3];
+                para5.Range.InsertParagraphAfter();
 
-                var txt8 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 180, col2Width, 25);
-                txt8.Fill.Visible = fillVisibility;
-                txt8.Line.Visible = borderVisibility;
-                txt8.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt8.TextFrame.TextRange.Text = "PN_Claimed_Component";
+                Microsoft.Office.Interop.Word.Paragraph para6 = document.Content.Paragraphs.Add(ref missing);
+                para6.Range.Font.Bold = 1;
+                para6.Range.Text = "\nSubject:";
+                para6.Range.InsertParagraphAfter();
 
-                var txt9 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 205, col1Width, 25);
-                txt9.Fill.Visible = fillVisibility;
-                txt9.Line.Visible = borderVisibility;
-                txt9.TextFrame.TextRange.Text = "SAFT ref.:";
+                Microsoft.Office.Interop.Word.Paragraph para7 = document.Content.Paragraphs.Add(ref missing); ;
+                Table table3 = document.Tables.Add(para7.Range, 2, 2, ref missing, ref missing);
 
-                var txt10 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 205, col2Width, 25);
-                txt10.Fill.Visible = fillVisibility;
-                txt10.Line.Visible = borderVisibility;
-                txt10.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt10.TextFrame.TextRange.Text = "CLM";
+                List<string> t3 = new List<string> { "Battery PN:", "Battery SN:" };
+                List<string> t3Data = new List<string> { DataMain[4], DataMain[5] };
 
-                var txt11 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 255, 540, 30);
-                txt11.Fill.Visible = fillVisibility;
-                txt11.Line.Visible = Microsoft.Office.Core.MsoTriState.msoFalse;
-                txt11.TextFrame.TextRange.Font.Bold = 1;
-                txt11.TextFrame.TextRange.Font.Size = 18;
-                txt11.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt11.TextFrame.TextRange.Text = "1 Claim description";
+                int i3 = 0;
+                table3.Borders.Enable = 1;
+                table3.Borders.OutsideColor = WdColor.wdColorGray25;
+                table3.Borders.InsideColor = WdColor.wdColorGray25;
+                foreach (Row row in table3.Rows)
+                {
+                    row.Height = 30;
+                    row.Cells[1].Range.Text = t3[i3];
+                    row.Cells[2].Range.Text = t3Data[i3];
+                    i3++;
 
-                var txt12 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 285, col1Width, 25);
-                txt12.Fill.Visible = fillVisibility;
-                txt12.Line.Visible = borderVisibility;
-                txt12.TextFrame.TextRange.Text = "Arrived at SAFT: ";
+                    foreach (Cell cell in row.Cells)
+                    {
+                        if (cell.ColumnIndex == 1)
+                        {
+                            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                            cell.Shading.BackgroundPatternColor = WdColor.wdColorGray15;
+                        }
+                        else
+                        {
+                            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
+                    }
+                }
+                table3.AllowAutoFit = true;
+                Microsoft.Office.Interop.Word.Column firstColt3 = table3.Columns[1];
+                firstColt3.AutoFit(); // force fit sizing
+                Single firstColAutoWidtht3 = firstColt3.Width; // store autofit width
+                table3.AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitWindow); // fill page width
+                firstColt3.SetWidth(firstColAutoWidtht3, Microsoft.Office.Interop.Word.WdRulerStyle.wdAdjustFirstColumn);
 
-                var txt13 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 285, col2Width, 25);
-                txt13.Fill.Visible = fillVisibility;
-                txt13.Line.Visible = borderVisibility;
-                txt13.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt13.TextFrame.TextRange.Text = "Date_of_saft_acceptance";
+                Microsoft.Office.Interop.Word.Paragraph para8 = document.Content.Paragraphs.Add(ref missing);
+                para8.Range.Font.Bold = 1;
+                para8.Range.Text = "\nDetailed description of BMS received:";
+                para8.Range.InsertParagraphAfter();
 
-                var txt14 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 335, 540, 25);
-                txt14.Fill.Visible = fillVisibility;
-                txt14.Line.Visible = Microsoft.Office.Core.MsoTriState.msoFalse;
-                txt14.TextFrame.TextRange.Font.Bold = 1;
-                txt14.TextFrame.TextRange.Text = "Customer description:";
-
-                var txt15 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 360, 540, 80);
-                txt15.Fill.Visible = fillVisibility;
-                txt15.Line.Visible = borderVisibility;
-                txt15.TextFrame.TextRange.Text = "Customer require...";
-
-                var txt16 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 465, 540, 25);
-                txt16.Fill.Visible = fillVisibility;
-                txt16.Line.Visible = Microsoft.Office.Core.MsoTriState.msoFalse;
-                txt16.TextFrame.TextRange.Font.Bold = 1;
-                txt16.TextFrame.TextRange.Text = "Subject:";
-
-                var txt17 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 490, 75, 50);
-                txt17.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt17.Line.Visible = borderVisibility;
-                txt17.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt17.TextFrame.VerticalAnchor = Microsoft.Office.Core.MsoVerticalAnchor.msoAnchorMiddle;
-                txt17.TextFrame.MarginTop = 10;
-                txt17.TextFrame.TextRange.Text = "Battery";
-
-                var txt18 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 105, 490, 30, 25);
-                txt18.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt18.Line.Visible = borderVisibility;
-                txt18.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt18.TextFrame.TextRange.Text = "PN:";
-
-                var txt19 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 105, 515, 30, 25);
-                txt19.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt19.Line.Visible = borderVisibility;
-                txt19.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt19.TextFrame.TextRange.Text = "SN:";
-
-                var txt20 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 135, 490, 435, 25);
-                txt20.Fill.Visible = fillVisibility;
-                txt20.Line.Visible = borderVisibility;
-                txt20.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt20.TextFrame.TextRange.Text = "PN_battery";
-
-                var txt21 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 135, 515, 435, 25);
-                txt21.Fill.Visible = fillVisibility;
-                txt21.Line.Visible = borderVisibility;
-                txt21.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                txt21.TextFrame.TextRange.Text = "SN_battery";
-
-                var txt22 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 555, 540, 25);
-                txt22.Fill.Visible = fillVisibility;
-                txt22.Line.Visible = Microsoft.Office.Core.MsoTriState.msoFalse;
-                txt22.TextFrame.TextRange.Font.Bold = 1;
-                txt22.TextFrame.TextRange.Text = "Detailed description of BMS received:";
-
-                var txt23 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 580, 540, 80);
-                txt23.Fill.Visible = fillVisibility;
-                txt23.Line.Visible = borderVisibility;
-                txt23.TextFrame.TextRange.Text = "Some text here...";
+                Microsoft.Office.Interop.Word.Paragraph para9 = document.Content.Paragraphs.Add(ref missing);
+                para9.Range.Text = "Some text here...";
+                para9.Range.InsertParagraphAfter();
 
                 document.Words.Last.InsertBreak(Microsoft.Office.Interop.Word.WdBreakType.wdPageBreak);
-
-                /// End of page 1
-                /// Start of page 2
-
                 winword.Selection.GoTo(Microsoft.Office.Interop.Word.WdGoToItem.wdGoToPage, Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToFirst, 2, missing);
 
-                var txt24 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 80, 540, 30);
-                txt24.Fill.Visible = fillVisibility;
-                txt24.Line.Visible = Microsoft.Office.Core.MsoTriState.msoFalse;
-                txt24.TextFrame.TextRange.Font.Bold = 1;
-                txt24.TextFrame.TextRange.Font.Size = 18;
-                txt24.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt24.TextFrame.TextRange.Text = "2 Investigation";
+                Microsoft.Office.Interop.Word.Paragraph para10 = document.Content.Paragraphs.Add(ref missing);
+                para10.Range.Font.Bold = 1;
+                para10.Range.Font.Size = 18;
+                para10.Range.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                para10.Range.Text = "2 Investigation";
+                para10.Range.InsertParagraphAfter();
 
-                var txt24_1 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 110, 540, 215);
-                txt24_1.Fill.Visible = fillVisibility;
-                txt24_1.Line.Visible = borderVisibility;
-                txt24_1.TextFrame.TextRange.Text = "Some text here...";
+                Microsoft.Office.Interop.Word.Paragraph para11 = document.Content.Paragraphs.Add(ref missing);
+                para11.Range.Text = "Some text here...\n";
+                para11.Range.InsertParagraphAfter();
 
-                var txt25 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 350, 540, 25);
-                txt25.Fill.Visible = fillVisibility;
-                txt25.Line.Visible = Microsoft.Office.Core.MsoTriState.msoFalse;
-                txt25.TextFrame.TextRange.Font.Bold = 1;
-                txt25.TextFrame.TextRange.Text = "Error in blackbox:";
+                Microsoft.Office.Interop.Word.Paragraph para12 = document.Content.Paragraphs.Add(ref missing);
+                para12.Range.Font.Bold = 1;
+                para12.Range.Text = "\nError in blackbox:";
+                para12.Range.InsertParagraphAfter();
 
-                var txt26 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 375, 40, 75);
-                txt26.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt26.Line.Visible = borderVisibility;
-                txt26.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt26.TextFrame.TextRange.Orientation = WdTextOrientation.wdTextOrientationUpward;
-                txt26.TextFrame.MarginLeft = 15;
-                txt26.TextFrame.TextRange.Text = "SAFT FC";
+                Microsoft.Office.Interop.Word.Paragraph para13 = document.Content.Paragraphs.Add(ref missing); ;
+                Table table4 = document.Tables.Add(para13.Range, 13, 4, ref missing, ref missing);
 
-                var txt27 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 70, 375, 40, 75);
-                txt27.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt27.Line.Visible = borderVisibility;
-                txt27.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt27.TextFrame.TextRange.Orientation = WdTextOrientation.wdTextOrientationUpward;
-                txt27.TextFrame.MarginLeft = 15;
-                txt27.TextFrame.TextRange.Text = "Kion FC";
+                List<string> t4 = new List<string> { "SAFT FC", "Kion FC", "Kion DTC", "Description" };
+                List<string> t4Data = new List<string> { "000", "000", "000", "some text here..." };
 
-                var txt28 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 110, 375, 40, 75);
-                txt28.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt28.Line.Visible = borderVisibility;
-                txt28.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt28.TextFrame.TextRange.Orientation = WdTextOrientation.wdTextOrientationUpward;
-                txt28.TextFrame.MarginLeft = 15;
-                txt28.TextFrame.TextRange.Text = "Kion DTC";
+                int i4 = 0;
+                int i4_2 = 0;
+                table4.Borders.Enable = 1;
+                table4.Borders.OutsideColor = WdColor.wdColorGray25;
+                table4.Borders.InsideColor = WdColor.wdColorGray25;
+                foreach (Row row in table4.Rows)
+                {
+                    row.Height = 20;
 
-                var txt29 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 150, 375, 420, 75);
-                txt29.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt29.Line.Visible = borderVisibility;
-                txt29.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt29.TextFrame.VerticalAnchor = Microsoft.Office.Core.MsoVerticalAnchor.msoAnchorMiddle;
-                txt29.TextFrame.MarginTop = 10;
-                txt29.TextFrame.TextRange.Text = "Description";
+                    foreach (Cell cell in row.Cells)
+                    {
+                        if(cell.RowIndex == 1)
+                        {
+                            cell.Shading.BackgroundPatternColor = WdColor.wdColorGray15;
+                            cell.Range.Text = t4[i4];
+                            if (cell.ColumnIndex <= 3)
+                            {
+                                cell.Range.Orientation = WdTextOrientation.wdTextOrientationUpward;
+                            }
+                            i4++;
+                        }
+                        else
+                        {
+                            if (DataBB.Count > 0)
+                            {
+                                if (cell.ColumnIndex < 4)
+                                {
+                                    cell.Range.Text = DataBB[i4_2].ToString();
+                                    i4_2++;
+                                }
+                                else
+                                {
+                                    cell.Range.Text = String.Empty;
+                                }
+                            }
+                        }
 
-                var txt30 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 450, 40, 25);
-                txt30.Fill.Visible = fillVisibility;
-                txt30.Line.Visible = borderVisibility;
-                txt30.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt30.TextFrame.TextRange.Text = "000";
+                        cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
+                        cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                    }
+                    i4 = 0;
+                }
+                table4.AllowAutoFit = true;
 
-                var txt31 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 70, 450, 40, 25);
-                txt31.Fill.Visible = fillVisibility;
-                txt31.Line.Visible = borderVisibility;
-                txt31.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt31.TextFrame.TextRange.Text = "000";
+                for (int y = 0; y < 3; y++)
+                {
+                    Microsoft.Office.Interop.Word.Column firstColt4 = table4.Columns[y + 1];
+                    firstColt4.AutoFit(); // force fit sizing
+                    Single firstColAutoWidtht4 = firstColt4.Width; // store autofit width
+                    table4.AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitWindow); // fill page width
+                    firstColt4.SetWidth(firstColAutoWidtht4, Microsoft.Office.Interop.Word.WdRulerStyle.wdAdjustFirstColumn);
+                }
+                //table4.Columns[4].SetWidth(270, WdRulerStyle.wdAdjustSameWidth);
 
-                var txt32 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 110, 450, 40, 25);
-                txt32.Fill.Visible = fillVisibility;
-                txt32.Line.Visible = borderVisibility;
-                txt32.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt32.TextFrame.TextRange.Text = "000";
 
-                var txt33 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 150, 450, 420, 25);
-                txt33.Fill.Visible = fillVisibility;
-                txt33.Line.Visible = borderVisibility;
-                txt33.TextFrame.TextRange.Text = "Some text here...";
+                Microsoft.Office.Interop.Word.Paragraph para14 = document.Content.Paragraphs.Add(ref missing);
+                para14.Range.Font.Bold = 1;
+                para14.Range.Text = "\nList of tests:";
+                para14.Range.InsertParagraphAfter();
 
-                var txt34 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 500, 540, 25);
-                txt34.Fill.Visible = fillVisibility;
-                txt34.Line.Visible = Microsoft.Office.Core.MsoTriState.msoFalse;
-                txt34.TextFrame.TextRange.Font.Bold = 1;
-                txt34.TextFrame.TextRange.Text = "List of tests:";
+                Microsoft.Office.Interop.Word.Paragraph para15 = document.Content.Paragraphs.Add(ref missing);
+                Table table5 = document.Tables.Add(para15.Range, 3, 2, ref missing, ref missing);
 
-                var txt35 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 525, col1Width, 25);
-                txt35.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt35.Line.Visible = borderVisibility;
-                txt35.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt35.TextFrame.TextRange.Text = "Test performed";
+                List<string> t5 = new List<string> { "Test performed", "Result" };
+                List<string> t5Data = new List<string> { "Diagnostic", "BlackBox" };
 
-                var txt36 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 525, col2Width, 25);
-                txt36.Fill.Visible = Microsoft.Office.Core.MsoTriState.msoTrue;
-                txt36.Line.Visible = borderVisibility;
-                txt36.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt36.TextFrame.TextRange.Text = "Result";
-
-                var txt37 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 550, col1Width, 25);
-                txt37.Fill.Visible = fillVisibility;
-                txt37.Line.Visible = borderVisibility;
-                txt37.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt37.TextFrame.TextRange.Text = "Diagnostic";
-
-                var txt38 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 550, col2Width, 25);
-                txt38.Fill.Visible = fillVisibility;
-                txt38.Line.Visible = borderVisibility;
-                txt38.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-
-                var txt39 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 575, col1Width, 25);
-                txt39.Fill.Visible = fillVisibility;
-                txt39.Line.Visible = borderVisibility;
-                txt39.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt39.TextFrame.TextRange.Text = "BlackBox";
-
-                var txt40 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, col2StartPos, 575, col2Width, 25);
-                txt40.Fill.Visible = fillVisibility;
-                txt40.Line.Visible = borderVisibility;
-                txt40.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                int i5 = 0;
+                table5.Borders.Enable = 1;
+                table5.Borders.OutsideColor = WdColor.wdColorGray25;
+                table5.Borders.InsideColor = WdColor.wdColorGray25;
+                foreach (Row row in table5.Rows)
+                {
+                    row.Height = 30;
+                    if (row.Index == 1)
+                    {
+                        row.Cells[1].Range.Text = t5[0];
+                        row.Cells[2].Range.Text = t5[1];
+                    }
+                    else if (row.Index <= 3)
+                    {
+                        row.Cells[1].Range.Text = t5Data[i5];
+                        i5++;
+                    }
+                    
+                    foreach (Cell cell in row.Cells)
+                    {
+                        if (cell.RowIndex == 1)
+                        {
+                            cell.Shading.BackgroundPatternColor = WdColor.wdColorGray15;
+                        }
+                        cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                        cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                    }
+                }
+                table5.AllowAutoFit = true;
+                Microsoft.Office.Interop.Word.Column firstColt5 = table5.Columns[1];
+                firstColt5.AutoFit(); // force fit sizing
+                Single firstColAutoWidtht5 = firstColt5.Width; // store autofit width
+                table5.AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitWindow); // fill page width
+                firstColt5.SetWidth(firstColAutoWidtht5, Microsoft.Office.Interop.Word.WdRulerStyle.wdAdjustFirstColumn);
 
                 document.Words.Last.InsertBreak(Microsoft.Office.Interop.Word.WdBreakType.wdPageBreak);
-
-                /// Ënd of page 2
-                /// Start of page 3
-
                 winword.Selection.GoTo(Microsoft.Office.Interop.Word.WdGoToItem.wdGoToPage, Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToFirst, 3, missing);
 
-                var txt41 = document.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal, 30, 80, 540, 30);
-                txt41.Fill.Visible = fillVisibility;
-                txt41.Line.Visible = Microsoft.Office.Core.MsoTriState.msoFalse;
-                txt41.TextFrame.TextRange.Font.Bold = 1;
-                txt41.TextFrame.TextRange.Font.Size = 18;
-                txt41.TextFrame.TextRange.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-                txt41.TextFrame.TextRange.Text = "3 Conclusion";
+                Microsoft.Office.Interop.Word.Paragraph para16 = document.Content.Paragraphs.Add(ref missing);
+                para16.Range.Font.Bold = 1;
+                para16.Range.Font.Size = 18;
+                para16.Range.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                para16.Range.Text = "3 Conclusion";
+                para16.Range.InsertParagraphAfter();
 
-                /// End of page 3
 
-                //Add the footers into the document  
-                int pageNum = 1;
-                foreach (Microsoft.Office.Interop.Word.Section wordSection in document.Sections)
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = @"C:\";
+                saveFileDialog1.Title = "Ulož report do...";
+                saveFileDialog1.CheckPathExists = true;
+                saveFileDialog1.DefaultExt = "docx";
+                saveFileDialog1.Filter = "Word file (*.docx)|*.docx";
+                saveFileDialog1.RestoreDirectory = false;
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the footer range and add the footer details.  
-                    Microsoft.Office.Interop.Word.Range footerRange = wordSection.Footers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                    footerRange.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlack;
-                    footerRange.Font.Size = 10;
-                    footerRange.ParagraphFormat.Alignment = Microsoft.Office.Interop.Word.WdParagraphAlignment.wdAlignParagraphCenter;
-                    footerRange.Text = "Page " + pageNum.ToString();
-                    pageNum++;
+                    //Save the document  
+                    object filename = saveFileDialog1.FileName;
+                    document.SaveAs2(ref filename);
+                    document.Close(ref missing, ref missing, ref missing);
+                    document = null;
+                    winword.Quit(ref missing, ref missing, ref missing);
+                    winword = null;
                 }
-
-                //Create a 5X5 table and insert some dummy record  
-                //Table firstTable = document.Tables.Add(para1.Range, 5, 5, ref missing, ref missing);
-
-                //firstTable.Borders.Enable = 1;
-                //foreach (Row row in firstTable.Rows)
-                //{
-                //    foreach (Cell cell in row.Cells)
-                //    {
-                //        //Header row  
-                //        if (cell.RowIndex == 1)
-                //        {
-                //            cell.Range.Text = "Column " + cell.ColumnIndex.ToString();
-                //            cell.Range.Font.Bold = 1;
-                //            //other format properties goes here  
-                //            cell.Range.Font.Name = "verdana";
-                //            cell.Range.Font.Size = 10;
-                //            //cell.Range.Font.ColorIndex = WdColorIndex.wdGray25;                              
-                //            cell.Shading.BackgroundPatternColor = WdColor.wdColorGray25;
-                //            //Center alignment for the Header cells  
-                //            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
-                //            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
-
-                //        }
-                //        //Data row  
-                //        else
-                //        {
-                //            cell.Range.Text = (cell.RowIndex - 2 + cell.ColumnIndex).ToString();
-                //        }
-                //    }
-                //}
-
-                //Save the document  
-                object filename = @"C:\Users\wantulp\Desktop\Test\temp1.docx";
-                document.SaveAs2(ref filename);
-                document.Close(ref missing, ref missing, ref missing);
-                document = null;
-                winword.Quit(ref missing, ref missing, ref missing);
-                winword = null;
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 throw;
             }
         }
