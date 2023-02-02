@@ -291,5 +291,12 @@ namespace Reklamace_Kion
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void BlackBoxData_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
     }
 }

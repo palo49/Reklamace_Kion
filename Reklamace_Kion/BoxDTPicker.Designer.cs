@@ -70,6 +70,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vložit datum";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BoxDTPicker_FormClosed);
             this.ResumeLayout(false);
 
         }

@@ -78,6 +78,10 @@
             this.txtSNComponent = new System.Windows.Forms.TextBox();
             this.cmbPNBattery = new System.Windows.Forms.ComboBox();
             this.panelControls = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtNote1 = new System.Windows.Forms.TextBox();
+            this.txtNote2 = new System.Windows.Forms.TextBox();
             this.btnClearDefekt = new System.Windows.Forms.Button();
             this.btnClearDateOfReplacementSend = new System.Windows.Forms.Button();
             this.btnClearDateOfSaftSend = new System.Windows.Forms.Button();
@@ -103,10 +107,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtNote2 = new System.Windows.Forms.TextBox();
-            this.txtNote1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelControls.SuspendLayout();
@@ -662,6 +662,40 @@
             this.panelControls.Size = new System.Drawing.Size(377, 466);
             this.panelControls.TabIndex = 27;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(4, 1639);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 15);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Poznámka 2";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(4, 1513);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 15);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Poznámka 1";
+            // 
+            // txtNote1
+            // 
+            this.txtNote1.Location = new System.Drawing.Point(4, 1531);
+            this.txtNote1.Multiline = true;
+            this.txtNote1.Name = "txtNote1";
+            this.txtNote1.Size = new System.Drawing.Size(346, 90);
+            this.txtNote1.TabIndex = 33;
+            // 
+            // txtNote2
+            // 
+            this.txtNote2.Location = new System.Drawing.Point(3, 1657);
+            this.txtNote2.Multiline = true;
+            this.txtNote2.Name = "txtNote2";
+            this.txtNote2.Size = new System.Drawing.Size(346, 90);
+            this.txtNote2.TabIndex = 32;
+            // 
             // btnClearDefekt
             // 
             this.btnClearDefekt.BackColor = System.Drawing.Color.Brown;
@@ -961,40 +995,6 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Cena dílů";
             // 
-            // txtNote2
-            // 
-            this.txtNote2.Location = new System.Drawing.Point(3, 1657);
-            this.txtNote2.Multiline = true;
-            this.txtNote2.Name = "txtNote2";
-            this.txtNote2.Size = new System.Drawing.Size(346, 90);
-            this.txtNote2.TabIndex = 32;
-            // 
-            // txtNote1
-            // 
-            this.txtNote1.Location = new System.Drawing.Point(4, 1531);
-            this.txtNote1.Multiline = true;
-            this.txtNote1.Name = "txtNote1";
-            this.txtNote1.Size = new System.Drawing.Size(346, 90);
-            this.txtNote1.TabIndex = 33;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(4, 1513);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 15);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Poznámka 1";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 1639);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 15);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Poznámka 2";
-            // 
             // AddData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1016,6 +1016,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Přidej data";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddData_FormClosed);
             this.Load += new System.EventHandler(this.AddData_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

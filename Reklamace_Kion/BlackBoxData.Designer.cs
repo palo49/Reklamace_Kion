@@ -91,6 +91,11 @@
             this.txtPresence = new System.Windows.Forms.TextBox();
             this.txtWarranty = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtFunctionTest = new System.Windows.Forms.TextBox();
+            this.txtContiunityTest = new System.Windows.Forms.TextBox();
+            this.txtCapacityTest = new System.Windows.Forms.TextBox();
+            this.txtCBIT = new System.Windows.Forms.TextBox();
+            this.txtCriticalFault = new System.Windows.Forms.TextBox();
             this.txtReplacement = new System.Windows.Forms.TextBox();
             this.txtBMSTested = new System.Windows.Forms.TextBox();
             this.txtRTC = new System.Windows.Forms.TextBox();
@@ -100,12 +105,18 @@
             this.txtCRCofSW = new System.Windows.Forms.TextBox();
             this.txtActualCurr = new System.Windows.Forms.TextBox();
             this.txtWinDiag = new System.Windows.Forms.TextBox();
+            this.txtVisualState = new System.Windows.Forms.TextBox();
             this.txtFunctionalBMS = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbPresence24 = new System.Windows.Forms.ComboBox();
             this.cmbPresence12 = new System.Windows.Forms.ComboBox();
             this.cmbWarranty = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.cmbFunctionTest = new System.Windows.Forms.ComboBox();
+            this.cmbContiunityTest = new System.Windows.Forms.ComboBox();
+            this.cmbCapacityTest = new System.Windows.Forms.ComboBox();
+            this.cmbCBIT = new System.Windows.Forms.ComboBox();
+            this.cmbCriticalFault = new System.Windows.Forms.ComboBox();
             this.cmbReplacement = new System.Windows.Forms.ComboBox();
             this.cmbBMSTested = new System.Windows.Forms.ComboBox();
             this.cmbRTC = new System.Windows.Forms.ComboBox();
@@ -120,7 +131,10 @@
             this.cmbActualCurr = new System.Windows.Forms.ComboBox();
             this.cmbWinDiag = new System.Windows.Forms.ComboBox();
             this.cmbFunctBMS = new System.Windows.Forms.ComboBox();
+            this.cmbPrtScn = new System.Windows.Forms.ComboBox();
+            this.cmbVisualState = new System.Windows.Forms.ComboBox();
             this.cmbVoltage = new System.Windows.Forms.ComboBox();
+            this.txtBrandID = new System.Windows.Forms.TextBox();
             this.txtVoltage = new System.Windows.Forms.TextBox();
             this.lblNoD = new System.Windows.Forms.Label();
             this.lblNoM = new System.Windows.Forms.Label();
@@ -132,6 +146,11 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -150,30 +169,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label42 = new System.Windows.Forms.Label();
-            this.cmbVisualState = new System.Windows.Forms.ComboBox();
-            this.txtVisualState = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.cmbPrtScn = new System.Windows.Forms.ComboBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.txtBrandID = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.cmbCriticalFault = new System.Windows.Forms.ComboBox();
-            this.txtCriticalFault = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.cmbCBIT = new System.Windows.Forms.ComboBox();
-            this.txtCBIT = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.cmbCapacityTest = new System.Windows.Forms.ComboBox();
-            this.txtCapacityTest = new System.Windows.Forms.TextBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.cmbContiunityTest = new System.Windows.Forms.ComboBox();
-            this.txtContiunityTest = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.cmbFunctionTest = new System.Windows.Forms.ComboBox();
-            this.txtFunctionTest = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelData.SuspendLayout();
@@ -904,6 +904,46 @@
             this.txtStatus.Size = new System.Drawing.Size(268, 36);
             this.txtStatus.TabIndex = 23;
             // 
+            // txtFunctionTest
+            // 
+            this.txtFunctionTest.Location = new System.Drawing.Point(195, 1268);
+            this.txtFunctionTest.Multiline = true;
+            this.txtFunctionTest.Name = "txtFunctionTest";
+            this.txtFunctionTest.Size = new System.Drawing.Size(268, 36);
+            this.txtFunctionTest.TabIndex = 23;
+            // 
+            // txtContiunityTest
+            // 
+            this.txtContiunityTest.Location = new System.Drawing.Point(195, 1221);
+            this.txtContiunityTest.Multiline = true;
+            this.txtContiunityTest.Name = "txtContiunityTest";
+            this.txtContiunityTest.Size = new System.Drawing.Size(268, 36);
+            this.txtContiunityTest.TabIndex = 23;
+            // 
+            // txtCapacityTest
+            // 
+            this.txtCapacityTest.Location = new System.Drawing.Point(195, 1176);
+            this.txtCapacityTest.Multiline = true;
+            this.txtCapacityTest.Name = "txtCapacityTest";
+            this.txtCapacityTest.Size = new System.Drawing.Size(268, 36);
+            this.txtCapacityTest.TabIndex = 23;
+            // 
+            // txtCBIT
+            // 
+            this.txtCBIT.Location = new System.Drawing.Point(195, 1131);
+            this.txtCBIT.Multiline = true;
+            this.txtCBIT.Name = "txtCBIT";
+            this.txtCBIT.Size = new System.Drawing.Size(268, 36);
+            this.txtCBIT.TabIndex = 23;
+            // 
+            // txtCriticalFault
+            // 
+            this.txtCriticalFault.Location = new System.Drawing.Point(195, 1087);
+            this.txtCriticalFault.Multiline = true;
+            this.txtCriticalFault.Name = "txtCriticalFault";
+            this.txtCriticalFault.Size = new System.Drawing.Size(268, 36);
+            this.txtCriticalFault.TabIndex = 23;
+            // 
             // txtReplacement
             // 
             this.txtReplacement.Location = new System.Drawing.Point(195, 1044);
@@ -975,6 +1015,14 @@
             this.txtWinDiag.Name = "txtWinDiag";
             this.txtWinDiag.Size = new System.Drawing.Size(268, 58);
             this.txtWinDiag.TabIndex = 23;
+            // 
+            // txtVisualState
+            // 
+            this.txtVisualState.Location = new System.Drawing.Point(195, 82);
+            this.txtVisualState.Multiline = true;
+            this.txtVisualState.Name = "txtVisualState";
+            this.txtVisualState.Size = new System.Drawing.Size(268, 34);
+            this.txtVisualState.TabIndex = 23;
             // 
             // txtFunctionalBMS
             // 
@@ -1056,6 +1104,86 @@
             this.cmbStatus.Size = new System.Drawing.Size(84, 23);
             this.cmbStatus.TabIndex = 21;
             this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // cmbFunctionTest
+            // 
+            this.cmbFunctionTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbFunctionTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFunctionTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbFunctionTest.FormattingEnabled = true;
+            this.cmbFunctionTest.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbFunctionTest.Location = new System.Drawing.Point(105, 1276);
+            this.cmbFunctionTest.Name = "cmbFunctionTest";
+            this.cmbFunctionTest.Size = new System.Drawing.Size(84, 23);
+            this.cmbFunctionTest.TabIndex = 21;
+            this.cmbFunctionTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // cmbContiunityTest
+            // 
+            this.cmbContiunityTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbContiunityTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbContiunityTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbContiunityTest.FormattingEnabled = true;
+            this.cmbContiunityTest.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbContiunityTest.Location = new System.Drawing.Point(105, 1229);
+            this.cmbContiunityTest.Name = "cmbContiunityTest";
+            this.cmbContiunityTest.Size = new System.Drawing.Size(84, 23);
+            this.cmbContiunityTest.TabIndex = 21;
+            this.cmbContiunityTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // cmbCapacityTest
+            // 
+            this.cmbCapacityTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCapacityTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCapacityTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbCapacityTest.FormattingEnabled = true;
+            this.cmbCapacityTest.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbCapacityTest.Location = new System.Drawing.Point(105, 1184);
+            this.cmbCapacityTest.Name = "cmbCapacityTest";
+            this.cmbCapacityTest.Size = new System.Drawing.Size(84, 23);
+            this.cmbCapacityTest.TabIndex = 21;
+            this.cmbCapacityTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // cmbCBIT
+            // 
+            this.cmbCBIT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCBIT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCBIT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbCBIT.FormattingEnabled = true;
+            this.cmbCBIT.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbCBIT.Location = new System.Drawing.Point(105, 1139);
+            this.cmbCBIT.Name = "cmbCBIT";
+            this.cmbCBIT.Size = new System.Drawing.Size(84, 23);
+            this.cmbCBIT.TabIndex = 21;
+            this.cmbCBIT.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // cmbCriticalFault
+            // 
+            this.cmbCriticalFault.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCriticalFault.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCriticalFault.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbCriticalFault.FormattingEnabled = true;
+            this.cmbCriticalFault.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbCriticalFault.Location = new System.Drawing.Point(105, 1095);
+            this.cmbCriticalFault.Name = "cmbCriticalFault";
+            this.cmbCriticalFault.Size = new System.Drawing.Size(84, 23);
+            this.cmbCriticalFault.TabIndex = 21;
+            this.cmbCriticalFault.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
             // 
             // cmbReplacement
             // 
@@ -1281,6 +1409,38 @@
             this.cmbFunctBMS.TabIndex = 21;
             this.cmbFunctBMS.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
             // 
+            // cmbPrtScn
+            // 
+            this.cmbPrtScn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbPrtScn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPrtScn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbPrtScn.FormattingEnabled = true;
+            this.cmbPrtScn.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbPrtScn.Location = new System.Drawing.Point(105, 122);
+            this.cmbPrtScn.Name = "cmbPrtScn";
+            this.cmbPrtScn.Size = new System.Drawing.Size(84, 23);
+            this.cmbPrtScn.TabIndex = 21;
+            this.cmbPrtScn.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // cmbVisualState
+            // 
+            this.cmbVisualState.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbVisualState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVisualState.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbVisualState.FormattingEnabled = true;
+            this.cmbVisualState.Items.AddRange(new object[] {
+            "",
+            "NOK",
+            "OK"});
+            this.cmbVisualState.Location = new System.Drawing.Point(105, 86);
+            this.cmbVisualState.Name = "cmbVisualState";
+            this.cmbVisualState.Size = new System.Drawing.Size(84, 23);
+            this.cmbVisualState.TabIndex = 21;
+            this.cmbVisualState.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
             // cmbVoltage
             // 
             this.cmbVoltage.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1296,6 +1456,13 @@
             this.cmbVoltage.Size = new System.Drawing.Size(84, 23);
             this.cmbVoltage.TabIndex = 21;
             this.cmbVoltage.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
+            // 
+            // txtBrandID
+            // 
+            this.txtBrandID.Location = new System.Drawing.Point(105, 161);
+            this.txtBrandID.Name = "txtBrandID";
+            this.txtBrandID.Size = new System.Drawing.Size(358, 21);
+            this.txtBrandID.TabIndex = 20;
             // 
             // txtVoltage
             // 
@@ -1393,6 +1560,51 @@
             this.label35.TabIndex = 18;
             this.label35.Text = "Status";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label49
+            // 
+            this.label49.Location = new System.Drawing.Point(3, 1268);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(103, 36);
+            this.label49.TabIndex = 18;
+            this.label49.Text = "Function test";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label48
+            // 
+            this.label48.Location = new System.Drawing.Point(3, 1221);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(103, 36);
+            this.label48.TabIndex = 18;
+            this.label48.Text = "Contiunity test";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label47
+            // 
+            this.label47.Location = new System.Drawing.Point(3, 1176);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(103, 36);
+            this.label47.TabIndex = 18;
+            this.label47.Text = "Capacity test";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label46
+            // 
+            this.label46.Location = new System.Drawing.Point(3, 1131);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(103, 36);
+            this.label46.TabIndex = 18;
+            this.label46.Text = "Pofbit_CBIT";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label45
+            // 
+            this.label45.Location = new System.Drawing.Point(3, 1087);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(103, 36);
+            this.label45.TabIndex = 18;
+            this.label45.Text = "Critical fault";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label34
             // 
@@ -1556,6 +1768,33 @@
             this.label5.Text = "Module voltage";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label44
+            // 
+            this.label44.Location = new System.Drawing.Point(3, 158);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(96, 27);
+            this.label44.TabIndex = 18;
+            this.label44.Text = "Brand ID";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label43
+            // 
+            this.label43.Location = new System.Drawing.Point(3, 114);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(96, 37);
+            this.label43.TabIndex = 18;
+            this.label43.Text = "PrtScn overview";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label42
+            // 
+            this.label42.Location = new System.Drawing.Point(3, 88);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(96, 21);
+            this.label42.TabIndex = 18;
+            this.label42.Text = "Visual state";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnSave
             // 
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1580,245 +1819,6 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label42
-            // 
-            this.label42.Location = new System.Drawing.Point(3, 88);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(96, 21);
-            this.label42.TabIndex = 18;
-            this.label42.Text = "Visual state";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbVisualState
-            // 
-            this.cmbVisualState.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbVisualState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVisualState.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbVisualState.FormattingEnabled = true;
-            this.cmbVisualState.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbVisualState.Location = new System.Drawing.Point(105, 86);
-            this.cmbVisualState.Name = "cmbVisualState";
-            this.cmbVisualState.Size = new System.Drawing.Size(84, 23);
-            this.cmbVisualState.TabIndex = 21;
-            this.cmbVisualState.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // txtVisualState
-            // 
-            this.txtVisualState.Location = new System.Drawing.Point(195, 82);
-            this.txtVisualState.Multiline = true;
-            this.txtVisualState.Name = "txtVisualState";
-            this.txtVisualState.Size = new System.Drawing.Size(268, 34);
-            this.txtVisualState.TabIndex = 23;
-            // 
-            // label43
-            // 
-            this.label43.Location = new System.Drawing.Point(3, 114);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(96, 37);
-            this.label43.TabIndex = 18;
-            this.label43.Text = "PrtScn overview";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbPrtScn
-            // 
-            this.cmbPrtScn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbPrtScn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPrtScn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbPrtScn.FormattingEnabled = true;
-            this.cmbPrtScn.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbPrtScn.Location = new System.Drawing.Point(105, 122);
-            this.cmbPrtScn.Name = "cmbPrtScn";
-            this.cmbPrtScn.Size = new System.Drawing.Size(84, 23);
-            this.cmbPrtScn.TabIndex = 21;
-            this.cmbPrtScn.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // label44
-            // 
-            this.label44.Location = new System.Drawing.Point(3, 158);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(96, 27);
-            this.label44.TabIndex = 18;
-            this.label44.Text = "Brand ID";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtBrandID
-            // 
-            this.txtBrandID.Location = new System.Drawing.Point(105, 161);
-            this.txtBrandID.Name = "txtBrandID";
-            this.txtBrandID.Size = new System.Drawing.Size(358, 21);
-            this.txtBrandID.TabIndex = 20;
-            // 
-            // label45
-            // 
-            this.label45.Location = new System.Drawing.Point(3, 1087);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(103, 36);
-            this.label45.TabIndex = 18;
-            this.label45.Text = "Critical fault";
-            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbCriticalFault
-            // 
-            this.cmbCriticalFault.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbCriticalFault.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCriticalFault.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbCriticalFault.FormattingEnabled = true;
-            this.cmbCriticalFault.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbCriticalFault.Location = new System.Drawing.Point(105, 1095);
-            this.cmbCriticalFault.Name = "cmbCriticalFault";
-            this.cmbCriticalFault.Size = new System.Drawing.Size(84, 23);
-            this.cmbCriticalFault.TabIndex = 21;
-            this.cmbCriticalFault.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // txtCriticalFault
-            // 
-            this.txtCriticalFault.Location = new System.Drawing.Point(195, 1087);
-            this.txtCriticalFault.Multiline = true;
-            this.txtCriticalFault.Name = "txtCriticalFault";
-            this.txtCriticalFault.Size = new System.Drawing.Size(268, 36);
-            this.txtCriticalFault.TabIndex = 23;
-            // 
-            // label46
-            // 
-            this.label46.Location = new System.Drawing.Point(3, 1131);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(103, 36);
-            this.label46.TabIndex = 18;
-            this.label46.Text = "Pofbit_CBIT";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbCBIT
-            // 
-            this.cmbCBIT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbCBIT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCBIT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbCBIT.FormattingEnabled = true;
-            this.cmbCBIT.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbCBIT.Location = new System.Drawing.Point(105, 1139);
-            this.cmbCBIT.Name = "cmbCBIT";
-            this.cmbCBIT.Size = new System.Drawing.Size(84, 23);
-            this.cmbCBIT.TabIndex = 21;
-            this.cmbCBIT.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // txtCBIT
-            // 
-            this.txtCBIT.Location = new System.Drawing.Point(195, 1131);
-            this.txtCBIT.Multiline = true;
-            this.txtCBIT.Name = "txtCBIT";
-            this.txtCBIT.Size = new System.Drawing.Size(268, 36);
-            this.txtCBIT.TabIndex = 23;
-            // 
-            // label47
-            // 
-            this.label47.Location = new System.Drawing.Point(3, 1176);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(103, 36);
-            this.label47.TabIndex = 18;
-            this.label47.Text = "Capacity test";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbCapacityTest
-            // 
-            this.cmbCapacityTest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbCapacityTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCapacityTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbCapacityTest.FormattingEnabled = true;
-            this.cmbCapacityTest.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbCapacityTest.Location = new System.Drawing.Point(105, 1184);
-            this.cmbCapacityTest.Name = "cmbCapacityTest";
-            this.cmbCapacityTest.Size = new System.Drawing.Size(84, 23);
-            this.cmbCapacityTest.TabIndex = 21;
-            this.cmbCapacityTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // txtCapacityTest
-            // 
-            this.txtCapacityTest.Location = new System.Drawing.Point(195, 1176);
-            this.txtCapacityTest.Multiline = true;
-            this.txtCapacityTest.Name = "txtCapacityTest";
-            this.txtCapacityTest.Size = new System.Drawing.Size(268, 36);
-            this.txtCapacityTest.TabIndex = 23;
-            // 
-            // label48
-            // 
-            this.label48.Location = new System.Drawing.Point(3, 1221);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(103, 36);
-            this.label48.TabIndex = 18;
-            this.label48.Text = "Contiunity test";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbContiunityTest
-            // 
-            this.cmbContiunityTest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbContiunityTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbContiunityTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbContiunityTest.FormattingEnabled = true;
-            this.cmbContiunityTest.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbContiunityTest.Location = new System.Drawing.Point(105, 1229);
-            this.cmbContiunityTest.Name = "cmbContiunityTest";
-            this.cmbContiunityTest.Size = new System.Drawing.Size(84, 23);
-            this.cmbContiunityTest.TabIndex = 21;
-            this.cmbContiunityTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // txtContiunityTest
-            // 
-            this.txtContiunityTest.Location = new System.Drawing.Point(195, 1221);
-            this.txtContiunityTest.Multiline = true;
-            this.txtContiunityTest.Name = "txtContiunityTest";
-            this.txtContiunityTest.Size = new System.Drawing.Size(268, 36);
-            this.txtContiunityTest.TabIndex = 23;
-            // 
-            // label49
-            // 
-            this.label49.Location = new System.Drawing.Point(3, 1268);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(103, 36);
-            this.label49.TabIndex = 18;
-            this.label49.Text = "Function test";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cmbFunctionTest
-            // 
-            this.cmbFunctionTest.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbFunctionTest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFunctionTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbFunctionTest.FormattingEnabled = true;
-            this.cmbFunctionTest.Items.AddRange(new object[] {
-            "",
-            "NOK",
-            "OK"});
-            this.cmbFunctionTest.Location = new System.Drawing.Point(105, 1276);
-            this.cmbFunctionTest.Name = "cmbFunctionTest";
-            this.cmbFunctionTest.Size = new System.Drawing.Size(84, 23);
-            this.cmbFunctionTest.TabIndex = 21;
-            this.cmbFunctionTest.SelectedIndexChanged += new System.EventHandler(this.cmbChanged);
-            // 
-            // txtFunctionTest
-            // 
-            this.txtFunctionTest.Location = new System.Drawing.Point(195, 1268);
-            this.txtFunctionTest.Multiline = true;
-            this.txtFunctionTest.Name = "txtFunctionTest";
-            this.txtFunctionTest.Size = new System.Drawing.Size(268, 36);
-            this.txtFunctionTest.TabIndex = 23;
-            // 
             // BlackBoxData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1838,6 +1838,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BlackBoxData";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BlackBoxData_FormClosed);
             this.Load += new System.EventHandler(this.BlackBoxData_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

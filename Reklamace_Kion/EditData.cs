@@ -423,5 +423,12 @@ namespace Reklamace_Kion
         {
             UpdateFinalPrice();
         }
+
+        private void EditData_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
     }
 }

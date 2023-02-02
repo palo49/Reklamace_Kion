@@ -486,5 +486,17 @@ namespace Reklamace_Kion.Statistics
                 }
             }
         }
+
+        private void Statistics_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Statistics_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
     }
 }

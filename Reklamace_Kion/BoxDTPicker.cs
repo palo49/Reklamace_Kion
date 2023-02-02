@@ -28,5 +28,12 @@ namespace Reklamace_Kion
             Main.PutDate(row, col, dt);
             this.Close();
         }
+
+        private void BoxDTPicker_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
     }
 }

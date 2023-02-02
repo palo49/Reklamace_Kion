@@ -367,5 +367,12 @@ namespace Reklamace_Kion
         {
             cmbDefects.SelectedIndex = -1;
         }
+
+        private void AddData_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
     }
 }

@@ -85,5 +85,12 @@ namespace Reklamace_Kion
         {
             this.Close();
         }
+
+        private void AddUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
     }
 }
