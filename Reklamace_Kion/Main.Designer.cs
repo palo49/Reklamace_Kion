@@ -819,7 +819,7 @@
             // změnitHesloToolStripMenuItem
             // 
             this.změnitHesloToolStripMenuItem.Name = "změnitHesloToolStripMenuItem";
-            this.změnitHesloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.změnitHesloToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.změnitHesloToolStripMenuItem.Text = "Změnit heslo";
             this.změnitHesloToolStripMenuItem.Click += new System.EventHandler(this.změnitHesloToolStripMenuItem_Click);
             // 
@@ -829,7 +829,7 @@
             this.přidatKomponentuToolStripMenuItem,
             this.upravitKomponentyToolStripMenuItem});
             this.komponentyToolStripMenuItem.Name = "komponentyToolStripMenuItem";
-            this.komponentyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.komponentyToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.komponentyToolStripMenuItem.Text = "Komponenty";
             // 
             // přidatKomponentuToolStripMenuItem
@@ -852,7 +852,7 @@
             this.přidatDefektToolStripMenuItem,
             this.upravitDefektyToolStripMenuItem});
             this.defektyToolStripMenuItem.Name = "defektyToolStripMenuItem";
-            this.defektyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defektyToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.defektyToolStripMenuItem.Text = "Defekty";
             // 
             // přidatDefektToolStripMenuItem
@@ -875,7 +875,7 @@
             this.přidatSoučástToolStripMenuItem,
             this.upravitSoučástiToolStripMenuItem});
             this.opravyToolStripMenuItem.Name = "opravyToolStripMenuItem";
-            this.opravyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opravyToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.opravyToolStripMenuItem.Text = "Opravy";
             // 
             // přidatSoučástToolStripMenuItem
@@ -898,7 +898,7 @@
             this.přidatKontaktToolStripMenuItem,
             this.upravitKontaktyToolStripMenuItem});
             this.kontaktyToolStripMenuItem.Name = "kontaktyToolStripMenuItem";
-            this.kontaktyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kontaktyToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.kontaktyToolStripMenuItem.Text = "Kontakty";
             // 
             // přidatKontaktToolStripMenuItem
@@ -921,7 +921,7 @@
             this.přidatKódToolStripMenuItem,
             this.upravitKódyToolStripMenuItem});
             this.chybovéKódyToolStripMenuItem.Name = "chybovéKódyToolStripMenuItem";
-            this.chybovéKódyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.chybovéKódyToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.chybovéKódyToolStripMenuItem.Text = "Chybové kódy";
             // 
             // přidatKódToolStripMenuItem
@@ -969,7 +969,7 @@
             this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExport.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(131)))), ((int)(((byte)(84)))));
             this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
             this.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -982,6 +982,8 @@
             this.toolTip1.SetToolTip(this.btnExport, "Exportuje právě aktivní tabulku do excelu.");
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.btnExport.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.btnExport.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // btnExit
             // 
@@ -1011,7 +1013,7 @@
             this.btnDelData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnDelData.FlatAppearance.BorderSize = 0;
-            this.btnDelData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnDelData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(131)))), ((int)(((byte)(84)))));
             this.btnDelData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelData.Image = ((System.Drawing.Image)(resources.GetObject("btnDelData.Image")));
             this.btnDelData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1024,6 +1026,8 @@
             this.toolTip1.SetToolTip(this.btnDelData, "Smaže vybrané data ze serveru.");
             this.btnDelData.UseVisualStyleBackColor = false;
             this.btnDelData.Click += new System.EventHandler(this.btnDelData_Click);
+            this.btnDelData.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.btnDelData.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // btnAddData
             // 
@@ -1031,7 +1035,7 @@
             this.btnAddData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnAddData.FlatAppearance.BorderSize = 0;
-            this.btnAddData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnAddData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(131)))), ((int)(((byte)(84)))));
             this.btnAddData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddData.Image = ((System.Drawing.Image)(resources.GetObject("btnAddData.Image")));
             this.btnAddData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1044,6 +1048,8 @@
             this.toolTip1.SetToolTip(this.btnAddData, "Přídá data na server.");
             this.btnAddData.UseVisualStyleBackColor = false;
             this.btnAddData.Click += new System.EventHandler(this.btnAddData_Click);
+            this.btnAddData.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.btnAddData.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // btnReloadData
             // 
@@ -1051,7 +1057,7 @@
             this.btnReloadData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReloadData.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnReloadData.FlatAppearance.BorderSize = 0;
-            this.btnReloadData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnReloadData.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(131)))), ((int)(((byte)(84)))));
             this.btnReloadData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReloadData.Image = ((System.Drawing.Image)(resources.GetObject("btnReloadData.Image")));
             this.btnReloadData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1064,6 +1070,8 @@
             this.toolTip1.SetToolTip(this.btnReloadData, "Znovu načte data ze serveru.");
             this.btnReloadData.UseVisualStyleBackColor = false;
             this.btnReloadData.Click += new System.EventHandler(this.btnReloadData_Click);
+            this.btnReloadData.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.btnReloadData.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // label1
             // 
@@ -1168,7 +1176,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(131)))), ((int)(((byte)(84)))));
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1180,6 +1188,8 @@
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.btnSearch.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // btnResetFiltr
             // 
@@ -1187,7 +1197,7 @@
             this.btnResetFiltr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
             this.btnResetFiltr.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResetFiltr.FlatAppearance.BorderSize = 0;
-            this.btnResetFiltr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnResetFiltr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(131)))), ((int)(((byte)(84)))));
             this.btnResetFiltr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResetFiltr.Image = ((System.Drawing.Image)(resources.GetObject("btnResetFiltr.Image")));
             this.btnResetFiltr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1199,6 +1209,8 @@
             this.btnResetFiltr.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnResetFiltr.UseVisualStyleBackColor = false;
             this.btnResetFiltr.Click += new System.EventHandler(this.btnResetFiltr_Click);
+            this.btnResetFiltr.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.btnResetFiltr.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // btnReport
             // 
@@ -1207,7 +1219,7 @@
             this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReport.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(131)))), ((int)(((byte)(84)))));
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1220,6 +1232,8 @@
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Visible = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            this.btnReport.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.btnReport.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // btnStatistics
             // 
@@ -1228,7 +1242,7 @@
             this.btnStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStatistics.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnStatistics.FlatAppearance.BorderSize = 0;
-            this.btnStatistics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(237)))), ((int)(((byte)(205)))));
+            this.btnStatistics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(131)))), ((int)(((byte)(84)))));
             this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistics.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistics.Image")));
             this.btnStatistics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1240,6 +1254,8 @@
             this.btnStatistics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistics.UseVisualStyleBackColor = false;
             this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
+            this.btnStatistics.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.btnStatistics.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // Main
             // 

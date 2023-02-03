@@ -68,6 +68,12 @@ namespace Reklamace_Kion
                 string Note2 = txtNote2.Text;
                 float finalPrice = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + CostOfComponents;
 
+                if (DateOfCustomerSend.Value.ToShortDateString() == "01.01.1753") { DateOfCustomerSendVal = string.Empty; }
+                if (DateOfSaftAcceptance.Value.ToShortDateString() == "01.01.1753") { DateOfSaftAcceptanceVal = string.Empty; }
+                if (DateOfRepair.Value.ToShortDateString() == "01.01.1753") { DateOfRepairVal = string.Empty; }
+                if (DateOfSaftSend.Value.ToShortDateString() == "01.01.1753") { DateOfSaftSendVal = string.Empty; }
+                if (DateOfReplacementSend.Value.ToShortDateString() == "01.01.1753") { DateOfSendReplacement = string.Empty; }
+
                 SqlCommand cmd; 
 
                 conn.Open();
@@ -275,6 +281,17 @@ namespace Reklamace_Kion
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+
+            // Disable mouse wheel on comboboxes and numerics
+            foreach (ComboBox cmb in panelControls.Controls.OfType<ComboBox>())
+            {
+                cmb.MouseWheel += (o, ee) => ((HandledMouseEventArgs)ee).Handled = true;
+            }
+
+            foreach (NumericUpDown num in panelControls.Controls.OfType<NumericUpDown>())
+            {
+                num.MouseWheel += (o, ee) => ((HandledMouseEventArgs)ee).Handled = true;
             }
         }
 

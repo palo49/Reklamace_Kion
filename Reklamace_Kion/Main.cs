@@ -869,6 +869,9 @@ namespace Reklamace_Kion
 
             dataGrid1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridOpravy.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            dataGrid1.Columns[1].Frozen = true;
+            dataGridOpravy.Columns[1].Frozen = true;
         }
 
         private void přidatKomponentuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1675,6 +1678,20 @@ namespace Reklamace_Kion
                 cr.CreateDocument(MyName, FirstName, LastName, CLMValue);
                 Cursor.Current = Cursors.Default;
             }
+        }
+
+        private void btnEnter(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.FromArgb(255, 239, 131, 84);
+            btn.ForeColor = Color.WhiteSmoke;
+        }
+
+        private void btnLeave(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.FromArgb(255, 206, 212, 218);
+            btn.ForeColor = Color.Black;
         }
     }
 }

@@ -37,6 +37,7 @@
             this.txtTitleRight = new System.Windows.Forms.TextBox();
             this.txtContentRight = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSolve = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -48,6 +49,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(212)))), ((int)(((byte)(218)))));
+            this.panel1.Controls.Add(this.btnSolve);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-2, 421);
@@ -80,9 +82,8 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.panelTitle);
             this.panel2.Location = new System.Drawing.Point(-4, -5);
@@ -114,7 +115,8 @@
             // 
             // txtContentRight
             // 
-            this.txtContentRight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtContentRight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContentRight.Location = new System.Drawing.Point(6, 41);
             this.txtContentRight.Multiline = true;
@@ -137,6 +139,20 @@
             this.panel3.Size = new System.Drawing.Size(869, 425);
             this.panel3.TabIndex = 29;
             // 
+            // btnSolve
+            // 
+            this.btnSolve.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSolve.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSolve.Enabled = false;
+            this.btnSolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolve.Location = new System.Drawing.Point(976, 13);
+            this.btnSolve.Name = "btnSolve";
+            this.btnSolve.Size = new System.Drawing.Size(96, 35);
+            this.btnSolve.TabIndex = 11;
+            this.btnSolve.Text = "Vyřešit";
+            this.btnSolve.UseVisualStyleBackColor = true;
+            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
+            // 
             // ErrorReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -153,6 +169,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ErrorReports";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ErrorReports_FormClosed);
             this.Load += new System.EventHandler(this.ErrorReports_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -174,5 +191,6 @@
         private System.Windows.Forms.TextBox txtTitleRight;
         private System.Windows.Forms.TextBox txtContentRight;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnSolve;
     }
 }

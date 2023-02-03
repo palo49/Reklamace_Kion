@@ -51,6 +51,16 @@ namespace Reklamace_Kion
                 cmbContacts.SelectedIndex = -1;
                 txtContactId.Text = "";
             }
+
+            // Disable mouse wheel on comboboxes and numerics
+            foreach (ComboBox cmb in panelControls.Controls.OfType<ComboBox>())
+            {
+                cmb.MouseWheel += (o, ee) => ((HandledMouseEventArgs)ee).Handled = true;
+            }
+            foreach (NumericUpDown num in panelControls.Controls.OfType<NumericUpDown>())
+            {
+                num.MouseWheel += (o, ee) => ((HandledMouseEventArgs)ee).Handled = true;
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -93,6 +103,12 @@ namespace Reklamace_Kion
             float CostOfComponents = float.Parse(numCostOfComponents.Text);
             string Note1 = txtNote1.Text;
             string Note2 = txtNote2.Text;
+
+            if (DateOfCustomerSend.Value.ToShortDateString() == "01.01.1753") { DateOfCustomerSendVal = string.Empty; }
+            if (DateOfSaftAcceptance.Value.ToShortDateString() == "01.01.1753") { DateOfSaftAcceptanceVal = string.Empty; }
+            if (DateOfRepair.Value.ToShortDateString() == "01.01.1753") { DateOfRepairVal = string.Empty; }
+            if (DateOfSaftSend.Value.ToShortDateString() == "01.01.1753") { DateOfSaftSendVal = string.Empty; }
+            if (DateOfReplacementSend.Value.ToShortDateString() == "01.01.1753") { DateOfSendReplacement = string.Empty; }
 
             float finalPrice = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + CostOfComponents;
 

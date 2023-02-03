@@ -25,7 +25,7 @@ namespace Reklamace_Kion.AdminPanel
         {
             try
             {
-                string query = "SELECT Title, Login, FirstName, LastName, Date_time, ID FROM ErrorReports ORDER BY ID DESC";
+                string query = "SELECT Title, Login, FirstName, LastName, Date_time, ID, Solved FROM ErrorReports ORDER BY ID DESC";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 conn.Open();
@@ -35,6 +35,14 @@ namespace Reklamace_Kion.AdminPanel
 
                 while (reader.Read())
                 {
+                    string solved = "Nevyřízené";
+                    Color color = Color.Red;
+
+                    if (reader.GetInt32(6) == 1) { 
+                        solved = "Vyřízené";
+                        color = Color.Green;
+                    }
+
                     Panel p = new Panel();
                     p.Size = new Size(206,55);
                     p.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -43,6 +51,8 @@ namespace Reklamace_Kion.AdminPanel
                     p.Cursor = Cursors.Hand;
                     p.Click += new EventHandler(this.ShowContent);
                     p.Name = reader.GetInt32(5).ToString();
+                    p.MouseEnter += (sender, e) => onEnter(p);
+                    p.MouseLeave += (sender, e) => onLeave(p);
                     panelTitle.Controls.Add(p);
 
                     Label title = new Label();
@@ -53,6 +63,10 @@ namespace Reklamace_Kion.AdminPanel
                     title.Cursor = Cursors.Hand;
                     title.Click += new EventHandler(this.ShowContent);
                     title.Name = reader.GetInt32(5).ToString();
+                    title.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
+                    title.BackColor = Color.Transparent;
+                    title.MouseEnter += (sender, e) => onEnter(p);
+                    title.MouseLeave += (sender, e) => onLeave(p);
                     p.Controls.Add(title);
 
                     Label date_time = new Label();
@@ -64,18 +78,24 @@ namespace Reklamace_Kion.AdminPanel
                     date_time.Cursor = Cursors.Hand;
                     date_time.Click += new EventHandler(this.ShowContent);
                     date_time.Name = reader.GetInt32(5).ToString();
+                    date_time.BackColor = Color.Transparent;
+                    date_time.MouseEnter += (sender, e) => onEnter(p);
+                    date_time.MouseLeave += (sender, e) => onLeave(p);
                     p.Controls.Add(date_time);
 
-                    Label login = new Label();
-                    login.Text = reader.GetString(1);
-                    login.Anchor = AnchorStyles.Left | AnchorStyles.Top;
-                    login.Location = new Point(0, 36);
-                    login.Size = new Size(195, 15);
-                    login.ForeColor = SystemColors.ControlDark;
-                    login.Cursor = Cursors.Hand;
-                    login.Click += new EventHandler(this.ShowContent);
-                    login.Name = reader.GetInt32(5).ToString();
-                    p.Controls.Add(login);
+                    Label slv = new Label();
+                    slv.Text = solved;
+                    slv.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+                    slv.Location = new Point(0, 36);
+                    slv.Size = new Size(195, 15);
+                    slv.ForeColor = color;
+                    slv.Cursor = Cursors.Hand;
+                    slv.Click += new EventHandler(this.ShowContent);
+                    slv.Name = reader.GetInt32(5).ToString();
+                    slv.BackColor = Color.Transparent;
+                    slv.MouseEnter += (sender, e) => onEnter(p);
+                    slv.MouseLeave += (sender, e) => onLeave(p);
+                    p.Controls.Add(slv);
 
                     y += 57;
                 }
@@ -87,6 +107,18 @@ namespace Reklamace_Kion.AdminPanel
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void onEnter(Panel panel)
+        {
+            panel.BackColor = Color.AliceBlue;
+        }
+
+        private void onLeave(Panel panel)
+        {
+            panel.BackColor = Color.FromArgb(255, 206, 212, 218);
+        }
+
+        int actualID = -1;
 
         void ShowContent(object sender, EventArgs e)
         {
@@ -101,7 +133,8 @@ namespace Reklamace_Kion.AdminPanel
             }
             
             int id = Convert.ToInt32(idstring);
-            string query = "SELECT Title, Content FROM ErrorReports WHERE ID="+id+"";
+            actualID = id;
+            string query = "SELECT Title, Content, Solved FROM ErrorReports WHERE ID="+id+"";
             SqlCommand cmd = new SqlCommand(query, conn);
 
             conn.Open();
@@ -111,6 +144,17 @@ namespace Reklamace_Kion.AdminPanel
             {
                 txtTitleRight.Text = reader.GetString(0);
                 txtContentRight.Text = reader.GetString(1);
+
+                if (reader.GetInt32(2) == 0)
+                {
+                    btnSolve.Text = "Vyřešit";
+                    btnSolve.Enabled = true;
+                }
+                else
+                {
+                    btnSolve.Text = "Vyřešeno";
+                    btnSolve.Enabled = false;
+                }
             }
             reader.Close();
             conn.Close();
@@ -119,6 +163,29 @@ namespace Reklamace_Kion.AdminPanel
         private void ErrorReports_Load(object sender, EventArgs e)
         {
             ListRows();
+        }
+
+        private void btnSolve_Click(object sender, EventArgs e)
+        {
+            string query = "UPDATE ErrorReports SET Solved=1 WHERE ID=" + actualID + "";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            int res = cmd.ExecuteNonQuery();
+            if (res == 0)
+            {
+                MessageBox.Show("Zápis do databáze se nepodařilo provést.");
+                conn.Close();
+            }
+            else
+            {
+                conn.Close();
+                this.Close();
+            }
+        }
+
+        private void ErrorReports_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
         }
     }
 }
