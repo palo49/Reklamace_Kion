@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,8 +49,6 @@ namespace Reklamace_Kion
                 conn.Close();
 
 
-
-
                 Microsoft.Office.Interop.Word.Application winword = new Microsoft.Office.Interop.Word.Application();
                 winword.ShowAnimation = false;
                 winword.Visible = false;
@@ -66,7 +66,7 @@ namespace Reklamace_Kion
                     Table tableHeader = document.Tables.Add(headerRange, 1, 2, ref missing, ref missing);
 
                     List<string> th = new List<string> { CLM };
-                    List<string> thData = new List<string> { "Technical evaulation" };
+                    List<string> thData = new List<string> { "" };
 
                     int ith = 0;
                     tableHeader.Borders.Enable = 0;
@@ -96,10 +96,42 @@ namespace Reklamace_Kion
                
                 winword.Selection.GoTo(Microsoft.Office.Interop.Word.WdGoToItem.wdGoToPage, Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToFirst, 1, missing);
 
+                var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
+                var logoimage = Path.Combine(outPutDirectory, "img\\saft_report_logo.jpg");
+
+                Microsoft.Office.Interop.Word.Paragraph paraImg = document.Content.Paragraphs.Add(ref missing);
+                paraImg.Range.InsertParagraphAfter();
+                Table tableLogo = document.Tables.Add(paraImg.Range, 1, 2, ref missing, ref missing);
+
+                tableLogo.Borders.Enable = 0;
+                foreach (Row row in tableLogo.Rows)
+                {
+                    row.Height = 50;
+                    row.Cells[1].Range.InlineShapes.AddPicture(logoimage);
+                    row.Cells[2].Range.Text = "Technical evaulation";
+
+                    foreach (Cell cell in row.Cells)
+                    {
+                        if (cell.ColumnIndex == 1)
+                        {
+                            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                        }
+                        else
+                        {
+                            cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
+                            cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
+                            cell.Range.Font.Size = 26;
+                        }
+                    }
+                }
+
+
+
                 Microsoft.Office.Interop.Word.Paragraph para1 = document.Content.Paragraphs.Add(ref missing);;
                 //para1.Range.InsertParagraphAfter();
 
-                Table firstTable = document.Tables.Add(para1.Range, 6, 2, ref missing, ref missing);
+                Table firstTable = document.Tables.Add(para1.Range, 5, 2, ref missing, ref missing);
 
                 List<string> ft = new List<string> { "Department:", "Date:", "Issued by:", "Addresse:", "Subject:", "SAFT ref.:" };
                 List<string> ftData = new List<string> { "PDC", DateTime.Now.ToString("dd.MM.yyyy"), FN + " " + LN, DataMain[0], DataMain[1], CLM };
@@ -234,7 +266,7 @@ namespace Reklamace_Kion
                 para8.Range.InsertParagraphAfter();
 
                 Microsoft.Office.Interop.Word.Paragraph para9 = document.Content.Paragraphs.Add(ref missing);
-                para9.Range.Text = "Some text here...";
+                para9.Range.Text = "The  arrived at SAFT in order.\nThe delivery date of the BMS was ????????\nOther components were not included.\nThe inviolability stickers were not broken down.\nThe BMS was not possible to switch on.\n";
                 para9.Range.InsertParagraphAfter();
 
                 document.Words.Last.InsertBreak(Microsoft.Office.Interop.Word.WdBreakType.wdPageBreak);
@@ -248,7 +280,7 @@ namespace Reklamace_Kion
                 para10.Range.InsertParagraphAfter();
 
                 Microsoft.Office.Interop.Word.Paragraph para11 = document.Content.Paragraphs.Add(ref missing);
-                para11.Range.Text = "Some text here...\n";
+                para11.Range.Text = "The BMS arrived at SAFT for analysis. Cannot turn on during BMS test, see picture 1 These errors have been discovered, see.error in blackbox. An overvoltage can cause the truck to be over 209. For this reason, the D78,D76 and F1 components were destroyed. The cause of the malfunctionning battery was a defective BMS due to external overvoltage from truck or charger.\n";
                 para11.Range.InsertParagraphAfter();
 
                 Microsoft.Office.Interop.Word.Paragraph para12 = document.Content.Paragraphs.Add(ref missing);
@@ -372,6 +404,10 @@ namespace Reklamace_Kion
                 para16.Range.Paragraphs.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
                 para16.Range.Text = "3 Conclusion";
                 para16.Range.InsertParagraphAfter();
+
+                Microsoft.Office.Interop.Word.Paragraph para17 = document.Content.Paragraphs.Add(ref missing);
+                para17.Range.Text = "Based on these facts, we dont accept the claim BMS.\n";
+                para17.Range.InsertParagraphAfter();
 
 
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();

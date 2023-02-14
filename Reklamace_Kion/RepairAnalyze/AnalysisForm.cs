@@ -416,7 +416,7 @@ namespace Reklamace_Kion.RepairAnalyze
                     cmb.Name = "cmbComponent_" + _i;
                     cmb.Location = new Point(30, (btn.Location.Y) + _i * 40);
                     mysql.OpenConection();
-                    cmb.DataSource = mysql.DataTable("SELECT Name FROM RepairComponents");
+                    cmb.DataSource = mysql.DataTable("SELECT Name FROM RepairComponents ORDER BY Name ASC");
                     mysql.CloseConnection();
                     cmb.DisplayMember = "Name";
                     cmb.ValueMember = "Name";

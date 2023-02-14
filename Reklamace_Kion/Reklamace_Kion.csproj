@@ -458,6 +458,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="analytics_analysis_data_business_charts_document_report_icon_188743.ico" />
+    <Content Include="img\saft_report_logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\saft_report_logo.jpg" />
     <None Include="Reklamace_Kion_TemporaryKey.pfx" />
     <None Include="RepairAnalyze\Images\19.png" />
     <None Include="RepairAnalyze\Images\18.png" />
