@@ -164,6 +164,7 @@ namespace Reklamace_Kion.RepairAnalyze
                 lblModule1.Text = "MODULE-23-VL41M-SFP-7S5P (Bottom position) SN";
                 panelB.Controls.Add(btnAddComponent);
                 panelB.Controls.Add(btnDelComponent);
+                panelB.Controls.Add(tlpComponents);
                 btnAddComponent.Location = new Point(btnAddComponent.Location.X, 700);
                 btnDelComponent.Location = new Point(btnDelComponent.Location.X, 700);
 
@@ -182,6 +183,10 @@ namespace Reklamace_Kion.RepairAnalyze
                     LoadData(PNChar, CLM, textBoxesB1);
                 }
             }
+
+            tlpComponents.Location = new Point(btnAddComponent.Location.X, btnAddComponent.Location.Y + 50);
+            tlpComponents.Width = 400;
+            //tlpComponents.BackColor = Color.LightCoral;
         }
 
         private void LoadData(string PN, string CLM, TextBox[] boxes)
@@ -416,26 +421,100 @@ namespace Reklamace_Kion.RepairAnalyze
                     cmb.DisplayMember = "Name";
                     cmb.ValueMember = "Name";
                     cmb.DropDownStyle = ComboBoxStyle.DropDownList;
-                    p.Controls.Add(cmb);
+                    cmb.Dock = DockStyle.Fill;
+                    //p.Controls.Add(cmb);
                     Label lbl = new Label();
                     lbl.Text = "Počet:";
                     lbl.Name = "lbl_" + _i;
                     lbl.Location = new Point(160, cmb.Location.Y + 3);
-                    lbl.Width = 55;
-                    p.Controls.Add(lbl);
+                    lbl.Dock = DockStyle.Fill;
+                    lbl.AutoSize = false;
+                    lbl.TextAlign = ContentAlignment.MiddleCenter;
+                    //p.Controls.Add(lbl);
                     TextBox txt = new TextBox();
                     txt.Name = "txtComponent_" + _i;
                     txt.Location = new Point(220, cmb.Location.Y + 2);
                     txt.Width = 50;
-                    p.Controls.Add(txt);
-                    txt.Text = count;
+                    txt.Dock = DockStyle.Fill;
+                    //p.Controls.Add(txt);
+                    
+                    
+                    Button btnDel = new Button();
+                    btnDel.Name = "btnDel_" + _i;
+                    btnDel.Location = new Point(300, cmb.Location.Y + 2);
+                    btnDel.Width = 75;
+                    btnDel.Text = "Delete";
+                    btnDel.Cursor = Cursors.Hand;
+                    btnDel.Dock = DockStyle.Fill;
+                    btnDel.Click += new EventHandler(this.BtnDel_Click);
+                    //p.Controls.Add(btnDel);
+
+                    tlpComponents.SuspendLayout();
+                    tlpComponents.RowCount++;
+                    //tlpComponents.RowStyles.Add(new RowStyle(SizeType.Absolute, 30));
+                    tlpComponents.Controls.Add(cmb, 0, tlpComponents.RowCount - 1);
+                    tlpComponents.Controls.Add(lbl, 1, tlpComponents.RowCount - 1);
+                    tlpComponents.Controls.Add(txt, 2, tlpComponents.RowCount - 1);
+                    tlpComponents.Controls.Add(btnDel, 3, tlpComponents.RowCount - 1);
+                    tlpComponents.ResumeLayout(true);
+
                     cmb.SelectedIndex = cmb.FindStringExact(value);
+                    txt.Text = count;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        Control selectedParent = null;
+        private void BtnDel_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            string str = btn.Name.ToString();
+            int num = Convert.ToInt32(str.Substring(str.Length - 1));
+
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    tlpComponents.Controls.Remove(tlpComponents.GetControlFromPosition(i, num - 1));
+            //}
+            //tlpComponents.RowCount--;
+            //tlpComponents.Height -= 30;
+
+            TLPRemoveRow(tlpComponents, btn);
+        }
+
+        private void TLPRemoveRow(TableLayoutPanel tlp, Control control)
+        {
+            int ctlRow = tlp.GetRow(control);
+            TLPRemoveRow(tlp, ctlRow);
+        }
+
+        private void TLPRemoveRow(TableLayoutPanel tlp, int row)
+        {
+            if (row < tlp.RowCount - 1)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    tlp.Controls.Remove(tlp.GetControlFromPosition(i, row));
+                }
+                for (int i = row; i < tlp.RowCount - 1; i++)
+                {
+                    for (int y = 0; y < 4; y++)
+                    {
+                        tlp.SetRow(tlp.GetControlFromPosition(y, i + 1), i);
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    tlp.Controls.Remove(tlp.GetControlFromPosition(i, row));
+                }
+            }
+            tlp.RowCount -= 1;
         }
 
         private void btnAddComponent_Click(object sender, EventArgs e)
@@ -641,7 +720,7 @@ namespace Reklamace_Kion.RepairAnalyze
                     }
 
 
-                    foreach (Control item in p.Controls.OfType<Control>().ToList())
+                    foreach (Control item in tlpComponents.Controls.OfType<Control>().ToList())
                     {
 
                         if (item.Name.Contains("cmbComponent_"))

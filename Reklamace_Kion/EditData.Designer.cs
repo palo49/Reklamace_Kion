@@ -400,6 +400,7 @@
             // 
             // numCostOfComponents
             // 
+            this.numCostOfComponents.DecimalPlaces = 2;
             this.numCostOfComponents.Enabled = false;
             this.numCostOfComponents.Location = new System.Drawing.Point(4, 1432);
             this.numCostOfComponents.Maximum = new decimal(new int[] {
@@ -547,6 +548,7 @@
             this.cmbResult.Enabled = false;
             this.cmbResult.FormattingEnabled = true;
             this.cmbResult.Items.AddRange(new object[] {
+            " ",
             "Accepted",
             "Accepted as goodwill",
             "Not accepted"});

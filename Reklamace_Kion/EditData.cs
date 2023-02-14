@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,17 +58,17 @@ namespace Reklamace_Kion
                 string ContactFirstName = txtContactFirstName.Text;
                 string ContactEmail = txtContactEmail.Text;
                 string Contact = ContactCompany + ";" + ContactEmail + ";";
-                float Tariff_Repairman = float.Parse(numTariffRepairman.Text);
-                float Hours_Repairman = float.Parse(numHoursRepairman.Text);
-                float Tariff_Technician = float.Parse(numTariffTechnician.Text);
-                float Hours_Technician = float.Parse(numHoursTechnician.Text);
-                float Tariff_Administration = float.Parse(numTariffAdministration.Text);
-                float Hours_Administration = float.Parse(numHoursAdministration.Text);
-                float CostOfComponents = float.Parse(numCostOfComponents.Text);
+                decimal Tariff_Repairman = decimal.Parse(numTariffRepairman.Text);
+                decimal Hours_Repairman = decimal.Parse(numHoursRepairman.Text);
+                decimal Tariff_Technician = decimal.Parse(numTariffTechnician.Text);
+                decimal Hours_Technician = decimal.Parse(numHoursTechnician.Text);
+                decimal Tariff_Administration = decimal.Parse(numTariffAdministration.Text);
+                decimal Hours_Administration = decimal.Parse(numHoursAdministration.Text);
+                decimal CostOfComponents = Convert.ToDecimal(numCostOfComponents.Text, CultureInfo.CurrentCulture);
                 string Note1 = txtNote1.Text;
                 string Note2 = txtNote2.Text;
-                float finalPrice = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + CostOfComponents;
-
+                decimal finalPrice = (Tariff_Repairman * Hours_Repairman) + (Tariff_Technician * Hours_Technician) + (Tariff_Administration * Hours_Administration) + CostOfComponents;
+                
                 if (DateOfCustomerSend.Value.ToShortDateString() == "01.01.1753") { DateOfCustomerSendVal = string.Empty; }
                 if (DateOfSaftAcceptance.Value.ToShortDateString() == "01.01.1753") { DateOfSaftAcceptanceVal = string.Empty; }
                 if (DateOfRepair.Value.ToShortDateString() == "01.01.1753") { DateOfRepairVal = string.Empty; }
@@ -80,12 +81,15 @@ namespace Reklamace_Kion
                 
                 if (Contact == ";;")
                 {
-                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components='" + CostOfComponents + "', Cost_Of_Repair='" + finalPrice + "', Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
+                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', PN_Battery='" + PNBattery + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components=@components, Cost_Of_Repair=@finalPrice, Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
                 }
                 else
                 {
-                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Contact='" + Contact + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components='" + CostOfComponents + "', Cost_Of_Repair='" + finalPrice + "', Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
+                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', PN_Battery='" + PNBattery + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Contact='" + Contact + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components=@components, Cost_Of_Repair=@finalPrice, Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
                 }
+
+                cmd.Parameters.Add("@components", SqlDbType.Decimal).Value = CostOfComponents;
+                cmd.Parameters.Add("@finalPrice", SqlDbType.Decimal).Value = finalPrice;
                 int res = cmd.ExecuteNonQuery();
                 conn.Close();
                 if (res > 0)
@@ -269,8 +273,8 @@ namespace Reklamace_Kion
                         numHoursTechnician.Value = Convert.ToInt32(data.GetDouble(24));
                         numTariffAdministration.Value = Convert.ToInt32(data.GetDouble(25));
                         numHoursAdministration.Value = Convert.ToInt32(data.GetDouble(26));
-                        numCostOfComponents.Value = Convert.ToInt32(data.GetDouble(27));
-                        txtCostOfRepair.Text = data.GetDouble(28).ToString();
+                        numCostOfComponents.Value = data.GetDecimal(27);
+                        txtCostOfRepair.Text = data.GetDecimal(28).ToString();
                         txtNote1.Text = data.GetString(29);
                         txtNote2.Text = data.GetString(30);
                     }
@@ -280,6 +284,10 @@ namespace Reklamace_Kion
             }
             catch (Exception ex)
             {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
                 MessageBox.Show(ex.Message);
             }
 

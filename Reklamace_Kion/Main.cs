@@ -178,7 +178,7 @@ namespace Reklamace_Kion
             {
                 
                 connection.Open();
-                SqlCommand getDataMain = new SqlCommand("SELECT * FROM DataMain", connection);
+                SqlCommand getDataMain = new SqlCommand("SELECT * FROM DataMain ORDER BY DataId DESC", connection);
                 SqlDataAdapter daDataMain = new SqlDataAdapter(getDataMain);
 
                 daDataMain.Fill(dt);
@@ -200,7 +200,7 @@ namespace Reklamace_Kion
             {
 
                 connection.Open();
-                SqlCommand getDataRepairs = new SqlCommand("SELECT * FROM DataRepairs", connection);
+                SqlCommand getDataRepairs = new SqlCommand("SELECT * FROM DataRepairs ORDER BY RepairId DESC", connection);
                 SqlDataAdapter daDataRepairs = new SqlDataAdapter(getDataRepairs);
 
                 daDataRepairs.Fill(dt);
@@ -248,9 +248,9 @@ namespace Reklamace_Kion
             form.DataMain.Clear();
             form.DataRepair.Clear();
             form.conn.Open();
-            SqlCommand getDataMain = new SqlCommand("SELECT * FROM DataMain", form.conn);
+            SqlCommand getDataMain = new SqlCommand("SELECT * FROM DataMain ORDER BY DataId DESC", form.conn);
             SqlDataAdapter daDataMain = new SqlDataAdapter(getDataMain);
-            SqlCommand getDataRepair = new SqlCommand("SELECT * FROM DataRepairs", form.conn);
+            SqlCommand getDataRepair = new SqlCommand("SELECT * FROM DataRepairs ORDER BY RepairId DESC", form.conn);
             SqlDataAdapter daDataRepair = new SqlDataAdapter(getDataRepair);
 
             daDataMain.Fill(form.DataMain);
@@ -264,6 +264,9 @@ namespace Reklamace_Kion
 
             form.lblActionInfo.ForeColor = Color.Black;
             form.lblActionInfo.Text = "Data aktualizována.";
+
+            form.dataGrid1.Columns[27].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            form.dataGrid1.Columns[28].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void btnAddData_Click(object sender, EventArgs e)
@@ -828,7 +831,7 @@ namespace Reklamace_Kion
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             conn.Open();
-            SqlCommand getDataMain = new SqlCommand("SELECT * FROM DataMain", conn);
+            SqlCommand getDataMain = new SqlCommand("SELECT * FROM DataMain ORDER BY DataId DESC", conn);
             SqlDataAdapter daDataMain = new SqlDataAdapter(getDataMain);
 
             daDataMain.Fill(DataMain);
@@ -836,13 +839,13 @@ namespace Reklamace_Kion
             conn.Close();
             dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
             bindMainData.DataSource = DataMain;
-
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             dataGrid1.DataSource = bindMainData;
-            dataGrid1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            // for better performance use DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGrid1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             for (int i = 0; i <= dataGrid1.Columns.Count - 1; i++)
             {
                 // Store Auto Sized Widths:
@@ -872,6 +875,9 @@ namespace Reklamace_Kion
 
             dataGrid1.Columns[1].Frozen = true;
             dataGridOpravy.Columns[1].Frozen = true;
+
+            dataGrid1.Columns[27].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGrid1.Columns[28].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void přidatKomponentuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1070,7 +1076,7 @@ namespace Reklamace_Kion
                             if (cmd.ExecuteNonQuery() != 0)
                             {
                                 form.DataRepair.Clear();
-                                SqlCommand getDataRepair = new SqlCommand("SELECT * FROM DataRepairs", form.conn);
+                                SqlCommand getDataRepair = new SqlCommand("SELECT * FROM DataRepairs ORDER BY RepairId DESC", form.conn);
                                 SqlDataAdapter daDataRepair = new SqlDataAdapter(getDataRepair);
 
                                 daDataRepair.Fill(form.DataRepair);
@@ -1339,7 +1345,7 @@ namespace Reklamace_Kion
             dgvAnalysis.Rows.Clear();
             conn.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM DataAnalysis", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM DataAnalysis ORDER BY AnalysisId DESC", conn);
             using (SqlDataReader rdr = cmd.ExecuteReader())
             {
                 while (rdr.Read())
@@ -1357,7 +1363,7 @@ namespace Reklamace_Kion
             dgvExpedition.Rows.Clear();
             conn.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM DataExpedition", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM DataExpedition ORDER BY Expedition_Id DESC", conn);
             using (SqlDataReader rdr = cmd.ExecuteReader())
             {
                 while (rdr.Read())

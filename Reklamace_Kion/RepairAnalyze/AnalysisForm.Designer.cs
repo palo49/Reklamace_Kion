@@ -40,6 +40,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label63 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tlpComponents = new System.Windows.Forms.TableLayoutPanel();
             this.btnDelComponent = new System.Windows.Forms.Button();
             this.btnAddComponent = new System.Windows.Forms.Button();
             this.secondPanel = new System.Windows.Forms.Panel();
@@ -350,7 +351,12 @@
             this.txt2 = new System.Windows.Forms.TextBox();
             this.txt63 = new System.Windows.Forms.TextBox();
             this.panelB = new System.Windows.Forms.Panel();
+            this.label152 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
             this.panelB2 = new System.Windows.Forms.Panel();
+            this.label177 = new System.Windows.Forms.Label();
+            this.label191 = new System.Windows.Forms.Label();
+            this.BtxtVoltageSum2 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.Btxt88 = new System.Windows.Forms.TextBox();
             this.label188 = new System.Windows.Forms.Label();
@@ -498,6 +504,41 @@
             this.Btxt156 = new System.Windows.Forms.TextBox();
             this.Btxt157 = new System.Windows.Forms.TextBox();
             this.Btxt158 = new System.Windows.Forms.TextBox();
+            this.BtxtV36 = new System.Windows.Forms.TextBox();
+            this.BtxtV37 = new System.Windows.Forms.TextBox();
+            this.BtxtV38 = new System.Windows.Forms.TextBox();
+            this.BtxtV39 = new System.Windows.Forms.TextBox();
+            this.BtxtV40 = new System.Windows.Forms.TextBox();
+            this.BtxtV41 = new System.Windows.Forms.TextBox();
+            this.BtxtV42 = new System.Windows.Forms.TextBox();
+            this.BtxtV43 = new System.Windows.Forms.TextBox();
+            this.BtxtV44 = new System.Windows.Forms.TextBox();
+            this.BtxtV45 = new System.Windows.Forms.TextBox();
+            this.BtxtV46 = new System.Windows.Forms.TextBox();
+            this.BtxtV47 = new System.Windows.Forms.TextBox();
+            this.BtxtV48 = new System.Windows.Forms.TextBox();
+            this.BtxtV49 = new System.Windows.Forms.TextBox();
+            this.BtxtV50 = new System.Windows.Forms.TextBox();
+            this.BtxtV51 = new System.Windows.Forms.TextBox();
+            this.BtxtV52 = new System.Windows.Forms.TextBox();
+            this.BtxtV53 = new System.Windows.Forms.TextBox();
+            this.BtxtV54 = new System.Windows.Forms.TextBox();
+            this.BtxtV55 = new System.Windows.Forms.TextBox();
+            this.BtxtV56 = new System.Windows.Forms.TextBox();
+            this.BtxtV57 = new System.Windows.Forms.TextBox();
+            this.BtxtV58 = new System.Windows.Forms.TextBox();
+            this.BtxtV59 = new System.Windows.Forms.TextBox();
+            this.BtxtV60 = new System.Windows.Forms.TextBox();
+            this.BtxtV61 = new System.Windows.Forms.TextBox();
+            this.BtxtV62 = new System.Windows.Forms.TextBox();
+            this.BtxtV63 = new System.Windows.Forms.TextBox();
+            this.BtxtV64 = new System.Windows.Forms.TextBox();
+            this.BtxtV65 = new System.Windows.Forms.TextBox();
+            this.BtxtV66 = new System.Windows.Forms.TextBox();
+            this.BtxtV67 = new System.Windows.Forms.TextBox();
+            this.BtxtV68 = new System.Windows.Forms.TextBox();
+            this.BtxtV69 = new System.Windows.Forms.TextBox();
+            this.BtxtV70 = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.Btxt17 = new System.Windows.Forms.TextBox();
             this.lblModule1 = new System.Windows.Forms.Label();
@@ -645,6 +686,41 @@
             this.Btxt85 = new System.Windows.Forms.TextBox();
             this.Btxt86 = new System.Windows.Forms.TextBox();
             this.Btxt87 = new System.Windows.Forms.TextBox();
+            this.BtxtV1 = new System.Windows.Forms.TextBox();
+            this.BtxtV2 = new System.Windows.Forms.TextBox();
+            this.BtxtV3 = new System.Windows.Forms.TextBox();
+            this.BtxtV4 = new System.Windows.Forms.TextBox();
+            this.BtxtV5 = new System.Windows.Forms.TextBox();
+            this.BtxtV6 = new System.Windows.Forms.TextBox();
+            this.BtxtV7 = new System.Windows.Forms.TextBox();
+            this.BtxtV8 = new System.Windows.Forms.TextBox();
+            this.BtxtV9 = new System.Windows.Forms.TextBox();
+            this.BtxtV10 = new System.Windows.Forms.TextBox();
+            this.BtxtV11 = new System.Windows.Forms.TextBox();
+            this.BtxtV12 = new System.Windows.Forms.TextBox();
+            this.BtxtV13 = new System.Windows.Forms.TextBox();
+            this.BtxtV14 = new System.Windows.Forms.TextBox();
+            this.BtxtV15 = new System.Windows.Forms.TextBox();
+            this.BtxtV16 = new System.Windows.Forms.TextBox();
+            this.BtxtV17 = new System.Windows.Forms.TextBox();
+            this.BtxtV18 = new System.Windows.Forms.TextBox();
+            this.BtxtV19 = new System.Windows.Forms.TextBox();
+            this.BtxtV20 = new System.Windows.Forms.TextBox();
+            this.BtxtV21 = new System.Windows.Forms.TextBox();
+            this.BtxtV22 = new System.Windows.Forms.TextBox();
+            this.BtxtV23 = new System.Windows.Forms.TextBox();
+            this.BtxtV24 = new System.Windows.Forms.TextBox();
+            this.BtxtV25 = new System.Windows.Forms.TextBox();
+            this.BtxtV26 = new System.Windows.Forms.TextBox();
+            this.BtxtV27 = new System.Windows.Forms.TextBox();
+            this.BtxtV28 = new System.Windows.Forms.TextBox();
+            this.BtxtV29 = new System.Windows.Forms.TextBox();
+            this.BtxtV30 = new System.Windows.Forms.TextBox();
+            this.BtxtV31 = new System.Windows.Forms.TextBox();
+            this.BtxtV32 = new System.Windows.Forms.TextBox();
+            this.BtxtV33 = new System.Windows.Forms.TextBox();
+            this.BtxtV34 = new System.Windows.Forms.TextBox();
+            this.BtxtV35 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelB1 = new System.Windows.Forms.TableLayoutPanel();
             this.Btxt1 = new System.Windows.Forms.TextBox();
             this.Btxt2 = new System.Windows.Forms.TextBox();
@@ -701,82 +777,7 @@
             this.label285 = new System.Windows.Forms.Label();
             this.label286 = new System.Windows.Forms.Label();
             this.label287 = new System.Windows.Forms.Label();
-            this.BtxtV1 = new System.Windows.Forms.TextBox();
-            this.BtxtV2 = new System.Windows.Forms.TextBox();
-            this.BtxtV3 = new System.Windows.Forms.TextBox();
-            this.BtxtV4 = new System.Windows.Forms.TextBox();
-            this.BtxtV5 = new System.Windows.Forms.TextBox();
-            this.BtxtV6 = new System.Windows.Forms.TextBox();
-            this.BtxtV7 = new System.Windows.Forms.TextBox();
-            this.BtxtV8 = new System.Windows.Forms.TextBox();
-            this.BtxtV9 = new System.Windows.Forms.TextBox();
-            this.BtxtV10 = new System.Windows.Forms.TextBox();
-            this.BtxtV11 = new System.Windows.Forms.TextBox();
-            this.BtxtV12 = new System.Windows.Forms.TextBox();
-            this.BtxtV13 = new System.Windows.Forms.TextBox();
-            this.BtxtV14 = new System.Windows.Forms.TextBox();
-            this.BtxtV15 = new System.Windows.Forms.TextBox();
-            this.BtxtV16 = new System.Windows.Forms.TextBox();
-            this.BtxtV17 = new System.Windows.Forms.TextBox();
-            this.BtxtV18 = new System.Windows.Forms.TextBox();
-            this.BtxtV19 = new System.Windows.Forms.TextBox();
-            this.BtxtV20 = new System.Windows.Forms.TextBox();
-            this.BtxtV21 = new System.Windows.Forms.TextBox();
-            this.BtxtV22 = new System.Windows.Forms.TextBox();
-            this.BtxtV23 = new System.Windows.Forms.TextBox();
-            this.BtxtV24 = new System.Windows.Forms.TextBox();
-            this.BtxtV25 = new System.Windows.Forms.TextBox();
-            this.BtxtV26 = new System.Windows.Forms.TextBox();
-            this.BtxtV27 = new System.Windows.Forms.TextBox();
-            this.BtxtV28 = new System.Windows.Forms.TextBox();
-            this.BtxtV29 = new System.Windows.Forms.TextBox();
-            this.BtxtV30 = new System.Windows.Forms.TextBox();
-            this.BtxtV31 = new System.Windows.Forms.TextBox();
-            this.BtxtV32 = new System.Windows.Forms.TextBox();
-            this.BtxtV33 = new System.Windows.Forms.TextBox();
-            this.BtxtV34 = new System.Windows.Forms.TextBox();
-            this.BtxtV35 = new System.Windows.Forms.TextBox();
-            this.BtxtV36 = new System.Windows.Forms.TextBox();
-            this.BtxtV37 = new System.Windows.Forms.TextBox();
-            this.BtxtV38 = new System.Windows.Forms.TextBox();
-            this.BtxtV39 = new System.Windows.Forms.TextBox();
-            this.BtxtV40 = new System.Windows.Forms.TextBox();
-            this.BtxtV41 = new System.Windows.Forms.TextBox();
-            this.BtxtV42 = new System.Windows.Forms.TextBox();
-            this.BtxtV43 = new System.Windows.Forms.TextBox();
-            this.BtxtV44 = new System.Windows.Forms.TextBox();
-            this.BtxtV45 = new System.Windows.Forms.TextBox();
-            this.BtxtV46 = new System.Windows.Forms.TextBox();
-            this.BtxtV47 = new System.Windows.Forms.TextBox();
-            this.BtxtV48 = new System.Windows.Forms.TextBox();
-            this.BtxtV49 = new System.Windows.Forms.TextBox();
-            this.BtxtV50 = new System.Windows.Forms.TextBox();
-            this.BtxtV51 = new System.Windows.Forms.TextBox();
-            this.BtxtV52 = new System.Windows.Forms.TextBox();
-            this.BtxtV53 = new System.Windows.Forms.TextBox();
-            this.BtxtV54 = new System.Windows.Forms.TextBox();
-            this.BtxtV55 = new System.Windows.Forms.TextBox();
-            this.BtxtV56 = new System.Windows.Forms.TextBox();
-            this.BtxtV57 = new System.Windows.Forms.TextBox();
-            this.BtxtV58 = new System.Windows.Forms.TextBox();
-            this.BtxtV59 = new System.Windows.Forms.TextBox();
-            this.BtxtV60 = new System.Windows.Forms.TextBox();
-            this.BtxtV61 = new System.Windows.Forms.TextBox();
-            this.BtxtV62 = new System.Windows.Forms.TextBox();
-            this.BtxtV63 = new System.Windows.Forms.TextBox();
-            this.BtxtV64 = new System.Windows.Forms.TextBox();
-            this.BtxtV65 = new System.Windows.Forms.TextBox();
-            this.BtxtV66 = new System.Windows.Forms.TextBox();
-            this.BtxtV67 = new System.Windows.Forms.TextBox();
-            this.BtxtV68 = new System.Windows.Forms.TextBox();
-            this.BtxtV69 = new System.Windows.Forms.TextBox();
-            this.BtxtV70 = new System.Windows.Forms.TextBox();
-            this.label151 = new System.Windows.Forms.Label();
             this.BtxtVoltageSum1 = new System.Windows.Forms.TextBox();
-            this.label152 = new System.Windows.Forms.Label();
-            this.label177 = new System.Windows.Forms.Label();
-            this.label191 = new System.Windows.Forms.Label();
-            this.BtxtVoltageSum2 = new System.Windows.Forms.TextBox();
             this.TipVoltage = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -915,6 +916,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.tlpComponents);
             this.panel1.Controls.Add(this.btnDelComponent);
             this.panel1.Controls.Add(this.btnAddComponent);
             this.panel1.Controls.Add(this.secondPanel);
@@ -931,9 +933,26 @@
             this.panel1.Controls.Add(this.txt63);
             this.panel1.Location = new System.Drawing.Point(2, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 110);
+            this.panel1.Size = new System.Drawing.Size(940, 440);
             this.panel1.TabIndex = 28;
             this.panel1.Visible = false;
+            // 
+            // tlpComponents
+            // 
+            this.tlpComponents.AutoSize = true;
+            this.tlpComponents.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tlpComponents.ColumnCount = 4;
+            this.tlpComponents.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpComponents.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpComponents.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpComponents.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpComponents.Location = new System.Drawing.Point(383, 663);
+            this.tlpComponents.MinimumSize = new System.Drawing.Size(100, 20);
+            this.tlpComponents.Name = "tlpComponents";
+            this.tlpComponents.RowCount = 1;
+            this.tlpComponents.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpComponents.Size = new System.Drawing.Size(100, 20);
+            this.tlpComponents.TabIndex = 32;
             // 
             // btnDelComponent
             // 
@@ -944,6 +963,7 @@
             this.btnDelComponent.TabIndex = 31;
             this.btnDelComponent.Text = "Smazat komponentu";
             this.btnDelComponent.UseVisualStyleBackColor = true;
+            this.btnDelComponent.Visible = false;
             this.btnDelComponent.Click += new System.EventHandler(this.btnDelComponent_Click);
             // 
             // btnAddComponent
@@ -2612,7 +2632,7 @@
             this.panel3.Location = new System.Drawing.Point(4, 177);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(913, 53);
+            this.panel3.Size = new System.Drawing.Size(878, 53);
             this.panel3.TabIndex = 26;
             // 
             // txt20
@@ -4977,11 +4997,29 @@
             this.panelB.Controls.Add(this.tableLayoutPanelB2);
             this.panelB.Controls.Add(this.tableLayoutPanelB1);
             this.panelB.Controls.Add(this.BtxtVoltageSum1);
-            this.panelB.Location = new System.Drawing.Point(2, 169);
+            this.panelB.Location = new System.Drawing.Point(2, 496);
             this.panelB.Name = "panelB";
-            this.panelB.Size = new System.Drawing.Size(940, 540);
+            this.panelB.Size = new System.Drawing.Size(940, 213);
             this.panelB.TabIndex = 28;
             this.panelB.Visible = false;
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(214, 659);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(16, 16);
+            this.label152.TabIndex = 32;
+            this.label152.Text = "V";
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Location = new System.Drawing.Point(16, 659);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(97, 16);
+            this.label151.TabIndex = 31;
+            this.label151.Text = "Celkové napětí";
             // 
             // panelB2
             // 
@@ -4995,6 +5033,32 @@
             this.panelB2.Size = new System.Drawing.Size(920, 461);
             this.panelB2.TabIndex = 30;
             this.panelB2.Visible = false;
+            // 
+            // label177
+            // 
+            this.label177.AutoSize = true;
+            this.label177.Location = new System.Drawing.Point(214, 430);
+            this.label177.Name = "label177";
+            this.label177.Size = new System.Drawing.Size(16, 16);
+            this.label177.TabIndex = 35;
+            this.label177.Text = "V";
+            // 
+            // label191
+            // 
+            this.label191.AutoSize = true;
+            this.label191.Location = new System.Drawing.Point(16, 430);
+            this.label191.Name = "label191";
+            this.label191.Size = new System.Drawing.Size(97, 16);
+            this.label191.TabIndex = 34;
+            this.label191.Text = "Celkové napětí";
+            // 
+            // BtxtVoltageSum2
+            // 
+            this.BtxtVoltageSum2.Location = new System.Drawing.Point(119, 426);
+            this.BtxtVoltageSum2.Name = "BtxtVoltageSum2";
+            this.BtxtVoltageSum2.Size = new System.Drawing.Size(89, 21);
+            this.BtxtVoltageSum2.TabIndex = 33;
+            this.BtxtVoltageSum2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel6
             // 
@@ -6754,6 +6818,356 @@
             this.Btxt158.TabIndex = 1;
             this.Btxt158.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // BtxtV36
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV36, 2);
+            this.BtxtV36.Location = new System.Drawing.Point(3, 82);
+            this.BtxtV36.Name = "BtxtV36";
+            this.BtxtV36.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV36.TabIndex = 1;
+            this.BtxtV36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV36, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV37
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV37, 2);
+            this.BtxtV37.Location = new System.Drawing.Point(91, 82);
+            this.BtxtV37.Name = "BtxtV37";
+            this.BtxtV37.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV37.TabIndex = 1;
+            this.BtxtV37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV37, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV38
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV38, 2);
+            this.BtxtV38.Location = new System.Drawing.Point(179, 82);
+            this.BtxtV38.Name = "BtxtV38";
+            this.BtxtV38.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV38.TabIndex = 1;
+            this.BtxtV38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV38, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV39
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV39, 2);
+            this.BtxtV39.Location = new System.Drawing.Point(267, 82);
+            this.BtxtV39.Name = "BtxtV39";
+            this.BtxtV39.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV39.TabIndex = 1;
+            this.BtxtV39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV39, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV40
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV40, 2);
+            this.BtxtV40.Location = new System.Drawing.Point(355, 82);
+            this.BtxtV40.Name = "BtxtV40";
+            this.BtxtV40.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV40.TabIndex = 1;
+            this.BtxtV40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV40, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV41
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV41, 2);
+            this.BtxtV41.Location = new System.Drawing.Point(443, 82);
+            this.BtxtV41.Name = "BtxtV41";
+            this.BtxtV41.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV41.TabIndex = 1;
+            this.BtxtV41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV41, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV42
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV42, 2);
+            this.BtxtV42.Location = new System.Drawing.Point(531, 82);
+            this.BtxtV42.Name = "BtxtV42";
+            this.BtxtV42.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV42.TabIndex = 1;
+            this.BtxtV42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV42, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV43
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV43, 2);
+            this.BtxtV43.Location = new System.Drawing.Point(619, 82);
+            this.BtxtV43.Name = "BtxtV43";
+            this.BtxtV43.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV43.TabIndex = 1;
+            this.BtxtV43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV43, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV44
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV44, 2);
+            this.BtxtV44.Location = new System.Drawing.Point(707, 82);
+            this.BtxtV44.Name = "BtxtV44";
+            this.BtxtV44.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV44.TabIndex = 1;
+            this.BtxtV44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV44, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV45
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV45, 2);
+            this.BtxtV45.Location = new System.Drawing.Point(795, 82);
+            this.BtxtV45.Name = "BtxtV45";
+            this.BtxtV45.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV45.TabIndex = 1;
+            this.BtxtV45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV45, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV46
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV46, 2);
+            this.BtxtV46.Location = new System.Drawing.Point(3, 154);
+            this.BtxtV46.Name = "BtxtV46";
+            this.BtxtV46.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV46.TabIndex = 1;
+            this.BtxtV46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV46, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV47
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV47, 2);
+            this.BtxtV47.Location = new System.Drawing.Point(91, 154);
+            this.BtxtV47.Name = "BtxtV47";
+            this.BtxtV47.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV47.TabIndex = 1;
+            this.BtxtV47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV47, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV48
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV48, 2);
+            this.BtxtV48.Location = new System.Drawing.Point(179, 154);
+            this.BtxtV48.Name = "BtxtV48";
+            this.BtxtV48.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV48.TabIndex = 1;
+            this.BtxtV48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV48, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV49
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV49, 2);
+            this.BtxtV49.Location = new System.Drawing.Point(267, 154);
+            this.BtxtV49.Name = "BtxtV49";
+            this.BtxtV49.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV49.TabIndex = 1;
+            this.BtxtV49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV49, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV50
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV50, 2);
+            this.BtxtV50.Location = new System.Drawing.Point(355, 154);
+            this.BtxtV50.Name = "BtxtV50";
+            this.BtxtV50.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV50.TabIndex = 1;
+            this.BtxtV50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV50, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV51
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV51, 2);
+            this.BtxtV51.Location = new System.Drawing.Point(443, 154);
+            this.BtxtV51.Name = "BtxtV51";
+            this.BtxtV51.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV51.TabIndex = 1;
+            this.BtxtV51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV51, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV52
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV52, 2);
+            this.BtxtV52.Location = new System.Drawing.Point(531, 154);
+            this.BtxtV52.Name = "BtxtV52";
+            this.BtxtV52.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV52.TabIndex = 1;
+            this.BtxtV52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV52, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV53
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV53, 2);
+            this.BtxtV53.Location = new System.Drawing.Point(619, 154);
+            this.BtxtV53.Name = "BtxtV53";
+            this.BtxtV53.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV53.TabIndex = 1;
+            this.BtxtV53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV53, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV54
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV54, 2);
+            this.BtxtV54.Location = new System.Drawing.Point(707, 154);
+            this.BtxtV54.Name = "BtxtV54";
+            this.BtxtV54.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV54.TabIndex = 1;
+            this.BtxtV54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV54, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV55
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV55, 2);
+            this.BtxtV55.Location = new System.Drawing.Point(795, 154);
+            this.BtxtV55.Name = "BtxtV55";
+            this.BtxtV55.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV55.TabIndex = 1;
+            this.BtxtV55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV55, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV56
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV56, 2);
+            this.BtxtV56.Location = new System.Drawing.Point(3, 226);
+            this.BtxtV56.Name = "BtxtV56";
+            this.BtxtV56.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV56.TabIndex = 1;
+            this.BtxtV56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV56, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV57
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV57, 2);
+            this.BtxtV57.Location = new System.Drawing.Point(91, 226);
+            this.BtxtV57.Name = "BtxtV57";
+            this.BtxtV57.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV57.TabIndex = 1;
+            this.BtxtV57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV57, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV58
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV58, 2);
+            this.BtxtV58.Location = new System.Drawing.Point(179, 226);
+            this.BtxtV58.Name = "BtxtV58";
+            this.BtxtV58.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV58.TabIndex = 1;
+            this.BtxtV58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV58, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV59
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV59, 2);
+            this.BtxtV59.Location = new System.Drawing.Point(267, 226);
+            this.BtxtV59.Name = "BtxtV59";
+            this.BtxtV59.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV59.TabIndex = 1;
+            this.BtxtV59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV59, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV60
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV60, 2);
+            this.BtxtV60.Location = new System.Drawing.Point(355, 226);
+            this.BtxtV60.Name = "BtxtV60";
+            this.BtxtV60.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV60.TabIndex = 1;
+            this.BtxtV60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV60, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV61
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV61, 2);
+            this.BtxtV61.Location = new System.Drawing.Point(443, 226);
+            this.BtxtV61.Name = "BtxtV61";
+            this.BtxtV61.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV61.TabIndex = 1;
+            this.BtxtV61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV61, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV62
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV62, 2);
+            this.BtxtV62.Location = new System.Drawing.Point(531, 226);
+            this.BtxtV62.Name = "BtxtV62";
+            this.BtxtV62.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV62.TabIndex = 1;
+            this.BtxtV62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV62, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV63
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV63, 2);
+            this.BtxtV63.Location = new System.Drawing.Point(619, 226);
+            this.BtxtV63.Name = "BtxtV63";
+            this.BtxtV63.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV63.TabIndex = 1;
+            this.BtxtV63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV63, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV64
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV64, 2);
+            this.BtxtV64.Location = new System.Drawing.Point(707, 226);
+            this.BtxtV64.Name = "BtxtV64";
+            this.BtxtV64.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV64.TabIndex = 1;
+            this.BtxtV64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV64, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV65
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV65, 2);
+            this.BtxtV65.Location = new System.Drawing.Point(795, 226);
+            this.BtxtV65.Name = "BtxtV65";
+            this.BtxtV65.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV65.TabIndex = 1;
+            this.BtxtV65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV65, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV66
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV66, 2);
+            this.BtxtV66.Location = new System.Drawing.Point(223, 298);
+            this.BtxtV66.Name = "BtxtV66";
+            this.BtxtV66.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV66.TabIndex = 1;
+            this.BtxtV66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV66, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV67
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV67, 2);
+            this.BtxtV67.Location = new System.Drawing.Point(311, 298);
+            this.BtxtV67.Name = "BtxtV67";
+            this.BtxtV67.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV67.TabIndex = 1;
+            this.BtxtV67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV67, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV68
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV68, 2);
+            this.BtxtV68.Location = new System.Drawing.Point(399, 298);
+            this.BtxtV68.Name = "BtxtV68";
+            this.BtxtV68.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV68.TabIndex = 1;
+            this.BtxtV68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV68, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV69
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV69, 2);
+            this.BtxtV69.Location = new System.Drawing.Point(487, 298);
+            this.BtxtV69.Name = "BtxtV69";
+            this.BtxtV69.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV69.TabIndex = 1;
+            this.BtxtV69.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV69, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV70
+            // 
+            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV70, 2);
+            this.BtxtV70.Location = new System.Drawing.Point(575, 298);
+            this.BtxtV70.Name = "BtxtV70";
+            this.BtxtV70.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV70.TabIndex = 1;
+            this.BtxtV70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV70, "Napětí na článku ve voltech.");
+            // 
             // panel9
             // 
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -8512,6 +8926,356 @@
             this.Btxt87.TabIndex = 1;
             this.Btxt87.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // BtxtV1
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV1, 2);
+            this.BtxtV1.Location = new System.Drawing.Point(3, 98);
+            this.BtxtV1.Name = "BtxtV1";
+            this.BtxtV1.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV1.TabIndex = 1;
+            this.BtxtV1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV1, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV2
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV2, 2);
+            this.BtxtV2.Location = new System.Drawing.Point(91, 98);
+            this.BtxtV2.Name = "BtxtV2";
+            this.BtxtV2.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV2.TabIndex = 1;
+            this.BtxtV2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV2, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV3
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV3, 2);
+            this.BtxtV3.Location = new System.Drawing.Point(179, 98);
+            this.BtxtV3.Name = "BtxtV3";
+            this.BtxtV3.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV3.TabIndex = 1;
+            this.BtxtV3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV3, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV4
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV4, 2);
+            this.BtxtV4.Location = new System.Drawing.Point(267, 98);
+            this.BtxtV4.Name = "BtxtV4";
+            this.BtxtV4.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV4.TabIndex = 1;
+            this.BtxtV4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV4, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV5
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV5, 2);
+            this.BtxtV5.Location = new System.Drawing.Point(355, 98);
+            this.BtxtV5.Name = "BtxtV5";
+            this.BtxtV5.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV5.TabIndex = 1;
+            this.BtxtV5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV5, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV6
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV6, 2);
+            this.BtxtV6.Location = new System.Drawing.Point(443, 98);
+            this.BtxtV6.Name = "BtxtV6";
+            this.BtxtV6.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV6.TabIndex = 1;
+            this.BtxtV6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV6, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV7
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV7, 2);
+            this.BtxtV7.Location = new System.Drawing.Point(531, 98);
+            this.BtxtV7.Name = "BtxtV7";
+            this.BtxtV7.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV7.TabIndex = 1;
+            this.BtxtV7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV7, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV8
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV8, 2);
+            this.BtxtV8.Location = new System.Drawing.Point(619, 98);
+            this.BtxtV8.Name = "BtxtV8";
+            this.BtxtV8.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV8.TabIndex = 1;
+            this.BtxtV8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV8, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV9
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV9, 2);
+            this.BtxtV9.Location = new System.Drawing.Point(707, 98);
+            this.BtxtV9.Name = "BtxtV9";
+            this.BtxtV9.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV9.TabIndex = 1;
+            this.BtxtV9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV9, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV10
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV10, 2);
+            this.BtxtV10.Location = new System.Drawing.Point(795, 98);
+            this.BtxtV10.Name = "BtxtV10";
+            this.BtxtV10.Size = new System.Drawing.Size(84, 21);
+            this.BtxtV10.TabIndex = 1;
+            this.BtxtV10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV10, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV11
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV11, 2);
+            this.BtxtV11.Location = new System.Drawing.Point(3, 179);
+            this.BtxtV11.Name = "BtxtV11";
+            this.BtxtV11.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV11.TabIndex = 1;
+            this.BtxtV11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV11, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV12
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV12, 2);
+            this.BtxtV12.Location = new System.Drawing.Point(91, 179);
+            this.BtxtV12.Name = "BtxtV12";
+            this.BtxtV12.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV12.TabIndex = 1;
+            this.BtxtV12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV12, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV13
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV13, 2);
+            this.BtxtV13.Location = new System.Drawing.Point(179, 179);
+            this.BtxtV13.Name = "BtxtV13";
+            this.BtxtV13.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV13.TabIndex = 1;
+            this.BtxtV13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV13, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV14
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV14, 2);
+            this.BtxtV14.Location = new System.Drawing.Point(267, 179);
+            this.BtxtV14.Name = "BtxtV14";
+            this.BtxtV14.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV14.TabIndex = 1;
+            this.BtxtV14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV14, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV15
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV15, 2);
+            this.BtxtV15.Location = new System.Drawing.Point(355, 179);
+            this.BtxtV15.Name = "BtxtV15";
+            this.BtxtV15.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV15.TabIndex = 1;
+            this.BtxtV15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV15, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV16
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV16, 2);
+            this.BtxtV16.Location = new System.Drawing.Point(443, 179);
+            this.BtxtV16.Name = "BtxtV16";
+            this.BtxtV16.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV16.TabIndex = 1;
+            this.BtxtV16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV16, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV17
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV17, 2);
+            this.BtxtV17.Location = new System.Drawing.Point(531, 179);
+            this.BtxtV17.Name = "BtxtV17";
+            this.BtxtV17.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV17.TabIndex = 1;
+            this.BtxtV17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV17, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV18
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV18, 2);
+            this.BtxtV18.Location = new System.Drawing.Point(619, 179);
+            this.BtxtV18.Name = "BtxtV18";
+            this.BtxtV18.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV18.TabIndex = 1;
+            this.BtxtV18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV18, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV19
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV19, 2);
+            this.BtxtV19.Location = new System.Drawing.Point(707, 179);
+            this.BtxtV19.Name = "BtxtV19";
+            this.BtxtV19.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV19.TabIndex = 1;
+            this.BtxtV19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV19, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV20
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV20, 2);
+            this.BtxtV20.Location = new System.Drawing.Point(795, 179);
+            this.BtxtV20.Name = "BtxtV20";
+            this.BtxtV20.Size = new System.Drawing.Size(84, 21);
+            this.BtxtV20.TabIndex = 1;
+            this.BtxtV20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV20, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV21
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV21, 2);
+            this.BtxtV21.Location = new System.Drawing.Point(3, 260);
+            this.BtxtV21.Name = "BtxtV21";
+            this.BtxtV21.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV21.TabIndex = 1;
+            this.BtxtV21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV21, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV22
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV22, 2);
+            this.BtxtV22.Location = new System.Drawing.Point(91, 260);
+            this.BtxtV22.Name = "BtxtV22";
+            this.BtxtV22.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV22.TabIndex = 1;
+            this.BtxtV22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV22, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV23
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV23, 2);
+            this.BtxtV23.Location = new System.Drawing.Point(179, 260);
+            this.BtxtV23.Name = "BtxtV23";
+            this.BtxtV23.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV23.TabIndex = 1;
+            this.BtxtV23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV23, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV24
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV24, 2);
+            this.BtxtV24.Location = new System.Drawing.Point(267, 260);
+            this.BtxtV24.Name = "BtxtV24";
+            this.BtxtV24.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV24.TabIndex = 1;
+            this.BtxtV24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV24, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV25
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV25, 2);
+            this.BtxtV25.Location = new System.Drawing.Point(355, 260);
+            this.BtxtV25.Name = "BtxtV25";
+            this.BtxtV25.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV25.TabIndex = 1;
+            this.BtxtV25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV25, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV26
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV26, 2);
+            this.BtxtV26.Location = new System.Drawing.Point(443, 260);
+            this.BtxtV26.Name = "BtxtV26";
+            this.BtxtV26.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV26.TabIndex = 1;
+            this.BtxtV26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV26, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV27
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV27, 2);
+            this.BtxtV27.Location = new System.Drawing.Point(531, 260);
+            this.BtxtV27.Name = "BtxtV27";
+            this.BtxtV27.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV27.TabIndex = 1;
+            this.BtxtV27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV27, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV28
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV28, 2);
+            this.BtxtV28.Location = new System.Drawing.Point(619, 260);
+            this.BtxtV28.Name = "BtxtV28";
+            this.BtxtV28.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV28.TabIndex = 1;
+            this.BtxtV28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV28, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV29
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV29, 2);
+            this.BtxtV29.Location = new System.Drawing.Point(707, 260);
+            this.BtxtV29.Name = "BtxtV29";
+            this.BtxtV29.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV29.TabIndex = 1;
+            this.BtxtV29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV29, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV30
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV30, 2);
+            this.BtxtV30.Location = new System.Drawing.Point(795, 260);
+            this.BtxtV30.Name = "BtxtV30";
+            this.BtxtV30.Size = new System.Drawing.Size(84, 21);
+            this.BtxtV30.TabIndex = 1;
+            this.BtxtV30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV30, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV31
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV31, 2);
+            this.BtxtV31.Location = new System.Drawing.Point(223, 341);
+            this.BtxtV31.Name = "BtxtV31";
+            this.BtxtV31.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV31.TabIndex = 1;
+            this.BtxtV31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV31, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV32
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV32, 2);
+            this.BtxtV32.Location = new System.Drawing.Point(311, 341);
+            this.BtxtV32.Name = "BtxtV32";
+            this.BtxtV32.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV32.TabIndex = 1;
+            this.BtxtV32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV32, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV33
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV33, 2);
+            this.BtxtV33.Location = new System.Drawing.Point(399, 341);
+            this.BtxtV33.Name = "BtxtV33";
+            this.BtxtV33.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV33.TabIndex = 1;
+            this.BtxtV33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV33, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV34
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV34, 2);
+            this.BtxtV34.Location = new System.Drawing.Point(487, 341);
+            this.BtxtV34.Name = "BtxtV34";
+            this.BtxtV34.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV34.TabIndex = 1;
+            this.BtxtV34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV34, "Napětí na článku ve voltech.");
+            // 
+            // BtxtV35
+            // 
+            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV35, 2);
+            this.BtxtV35.Location = new System.Drawing.Point(575, 341);
+            this.BtxtV35.Name = "BtxtV35";
+            this.BtxtV35.Size = new System.Drawing.Size(82, 21);
+            this.BtxtV35.TabIndex = 1;
+            this.BtxtV35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TipVoltage.SetToolTip(this.BtxtV35, "Napětí na článku ve voltech.");
+            // 
             // tableLayoutPanelB1
             // 
             this.tableLayoutPanelB1.ColumnCount = 16;
@@ -9243,715 +10007,6 @@
             this.label287.Text = "14B";
             this.label287.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BtxtV1
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV1, 2);
-            this.BtxtV1.Location = new System.Drawing.Point(3, 98);
-            this.BtxtV1.Name = "BtxtV1";
-            this.BtxtV1.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV1.TabIndex = 1;
-            this.BtxtV1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV1, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV2
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV2, 2);
-            this.BtxtV2.Location = new System.Drawing.Point(91, 98);
-            this.BtxtV2.Name = "BtxtV2";
-            this.BtxtV2.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV2.TabIndex = 1;
-            this.BtxtV2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV2, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV3
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV3, 2);
-            this.BtxtV3.Location = new System.Drawing.Point(179, 98);
-            this.BtxtV3.Name = "BtxtV3";
-            this.BtxtV3.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV3.TabIndex = 1;
-            this.BtxtV3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV3, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV4
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV4, 2);
-            this.BtxtV4.Location = new System.Drawing.Point(267, 98);
-            this.BtxtV4.Name = "BtxtV4";
-            this.BtxtV4.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV4.TabIndex = 1;
-            this.BtxtV4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV4, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV5
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV5, 2);
-            this.BtxtV5.Location = new System.Drawing.Point(355, 98);
-            this.BtxtV5.Name = "BtxtV5";
-            this.BtxtV5.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV5.TabIndex = 1;
-            this.BtxtV5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV5, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV6
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV6, 2);
-            this.BtxtV6.Location = new System.Drawing.Point(443, 98);
-            this.BtxtV6.Name = "BtxtV6";
-            this.BtxtV6.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV6.TabIndex = 1;
-            this.BtxtV6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV6, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV7
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV7, 2);
-            this.BtxtV7.Location = new System.Drawing.Point(531, 98);
-            this.BtxtV7.Name = "BtxtV7";
-            this.BtxtV7.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV7.TabIndex = 1;
-            this.BtxtV7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV7, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV8
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV8, 2);
-            this.BtxtV8.Location = new System.Drawing.Point(619, 98);
-            this.BtxtV8.Name = "BtxtV8";
-            this.BtxtV8.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV8.TabIndex = 1;
-            this.BtxtV8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV8, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV9
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV9, 2);
-            this.BtxtV9.Location = new System.Drawing.Point(707, 98);
-            this.BtxtV9.Name = "BtxtV9";
-            this.BtxtV9.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV9.TabIndex = 1;
-            this.BtxtV9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV9, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV10
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV10, 2);
-            this.BtxtV10.Location = new System.Drawing.Point(795, 98);
-            this.BtxtV10.Name = "BtxtV10";
-            this.BtxtV10.Size = new System.Drawing.Size(84, 21);
-            this.BtxtV10.TabIndex = 1;
-            this.BtxtV10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV10, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV11
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV11, 2);
-            this.BtxtV11.Location = new System.Drawing.Point(3, 179);
-            this.BtxtV11.Name = "BtxtV11";
-            this.BtxtV11.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV11.TabIndex = 1;
-            this.BtxtV11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV11, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV12
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV12, 2);
-            this.BtxtV12.Location = new System.Drawing.Point(91, 179);
-            this.BtxtV12.Name = "BtxtV12";
-            this.BtxtV12.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV12.TabIndex = 1;
-            this.BtxtV12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV12, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV13
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV13, 2);
-            this.BtxtV13.Location = new System.Drawing.Point(179, 179);
-            this.BtxtV13.Name = "BtxtV13";
-            this.BtxtV13.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV13.TabIndex = 1;
-            this.BtxtV13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV13, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV14
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV14, 2);
-            this.BtxtV14.Location = new System.Drawing.Point(267, 179);
-            this.BtxtV14.Name = "BtxtV14";
-            this.BtxtV14.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV14.TabIndex = 1;
-            this.BtxtV14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV14, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV15
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV15, 2);
-            this.BtxtV15.Location = new System.Drawing.Point(355, 179);
-            this.BtxtV15.Name = "BtxtV15";
-            this.BtxtV15.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV15.TabIndex = 1;
-            this.BtxtV15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV15, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV16
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV16, 2);
-            this.BtxtV16.Location = new System.Drawing.Point(443, 179);
-            this.BtxtV16.Name = "BtxtV16";
-            this.BtxtV16.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV16.TabIndex = 1;
-            this.BtxtV16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV16, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV17
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV17, 2);
-            this.BtxtV17.Location = new System.Drawing.Point(531, 179);
-            this.BtxtV17.Name = "BtxtV17";
-            this.BtxtV17.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV17.TabIndex = 1;
-            this.BtxtV17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV17, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV18
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV18, 2);
-            this.BtxtV18.Location = new System.Drawing.Point(619, 179);
-            this.BtxtV18.Name = "BtxtV18";
-            this.BtxtV18.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV18.TabIndex = 1;
-            this.BtxtV18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV18, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV19
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV19, 2);
-            this.BtxtV19.Location = new System.Drawing.Point(707, 179);
-            this.BtxtV19.Name = "BtxtV19";
-            this.BtxtV19.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV19.TabIndex = 1;
-            this.BtxtV19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV19, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV20
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV20, 2);
-            this.BtxtV20.Location = new System.Drawing.Point(795, 179);
-            this.BtxtV20.Name = "BtxtV20";
-            this.BtxtV20.Size = new System.Drawing.Size(84, 21);
-            this.BtxtV20.TabIndex = 1;
-            this.BtxtV20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV20, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV21
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV21, 2);
-            this.BtxtV21.Location = new System.Drawing.Point(3, 260);
-            this.BtxtV21.Name = "BtxtV21";
-            this.BtxtV21.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV21.TabIndex = 1;
-            this.BtxtV21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV21, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV22
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV22, 2);
-            this.BtxtV22.Location = new System.Drawing.Point(91, 260);
-            this.BtxtV22.Name = "BtxtV22";
-            this.BtxtV22.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV22.TabIndex = 1;
-            this.BtxtV22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV22, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV23
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV23, 2);
-            this.BtxtV23.Location = new System.Drawing.Point(179, 260);
-            this.BtxtV23.Name = "BtxtV23";
-            this.BtxtV23.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV23.TabIndex = 1;
-            this.BtxtV23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV23, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV24
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV24, 2);
-            this.BtxtV24.Location = new System.Drawing.Point(267, 260);
-            this.BtxtV24.Name = "BtxtV24";
-            this.BtxtV24.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV24.TabIndex = 1;
-            this.BtxtV24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV24, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV25
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV25, 2);
-            this.BtxtV25.Location = new System.Drawing.Point(355, 260);
-            this.BtxtV25.Name = "BtxtV25";
-            this.BtxtV25.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV25.TabIndex = 1;
-            this.BtxtV25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV25, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV26
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV26, 2);
-            this.BtxtV26.Location = new System.Drawing.Point(443, 260);
-            this.BtxtV26.Name = "BtxtV26";
-            this.BtxtV26.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV26.TabIndex = 1;
-            this.BtxtV26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV26, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV27
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV27, 2);
-            this.BtxtV27.Location = new System.Drawing.Point(531, 260);
-            this.BtxtV27.Name = "BtxtV27";
-            this.BtxtV27.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV27.TabIndex = 1;
-            this.BtxtV27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV27, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV28
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV28, 2);
-            this.BtxtV28.Location = new System.Drawing.Point(619, 260);
-            this.BtxtV28.Name = "BtxtV28";
-            this.BtxtV28.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV28.TabIndex = 1;
-            this.BtxtV28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV28, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV29
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV29, 2);
-            this.BtxtV29.Location = new System.Drawing.Point(707, 260);
-            this.BtxtV29.Name = "BtxtV29";
-            this.BtxtV29.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV29.TabIndex = 1;
-            this.BtxtV29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV29, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV30
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV30, 2);
-            this.BtxtV30.Location = new System.Drawing.Point(795, 260);
-            this.BtxtV30.Name = "BtxtV30";
-            this.BtxtV30.Size = new System.Drawing.Size(84, 21);
-            this.BtxtV30.TabIndex = 1;
-            this.BtxtV30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV30, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV31
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV31, 2);
-            this.BtxtV31.Location = new System.Drawing.Point(223, 341);
-            this.BtxtV31.Name = "BtxtV31";
-            this.BtxtV31.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV31.TabIndex = 1;
-            this.BtxtV31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV31, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV32
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV32, 2);
-            this.BtxtV32.Location = new System.Drawing.Point(311, 341);
-            this.BtxtV32.Name = "BtxtV32";
-            this.BtxtV32.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV32.TabIndex = 1;
-            this.BtxtV32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV32, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV33
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV33, 2);
-            this.BtxtV33.Location = new System.Drawing.Point(399, 341);
-            this.BtxtV33.Name = "BtxtV33";
-            this.BtxtV33.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV33.TabIndex = 1;
-            this.BtxtV33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV33, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV34
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV34, 2);
-            this.BtxtV34.Location = new System.Drawing.Point(487, 341);
-            this.BtxtV34.Name = "BtxtV34";
-            this.BtxtV34.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV34.TabIndex = 1;
-            this.BtxtV34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV34, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV35
-            // 
-            this.tableLayoutPanelB2.SetColumnSpan(this.BtxtV35, 2);
-            this.BtxtV35.Location = new System.Drawing.Point(575, 341);
-            this.BtxtV35.Name = "BtxtV35";
-            this.BtxtV35.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV35.TabIndex = 1;
-            this.BtxtV35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV35, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV36
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV36, 2);
-            this.BtxtV36.Location = new System.Drawing.Point(3, 82);
-            this.BtxtV36.Name = "BtxtV36";
-            this.BtxtV36.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV36.TabIndex = 1;
-            this.BtxtV36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV36, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV37
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV37, 2);
-            this.BtxtV37.Location = new System.Drawing.Point(91, 82);
-            this.BtxtV37.Name = "BtxtV37";
-            this.BtxtV37.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV37.TabIndex = 1;
-            this.BtxtV37.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV37, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV38
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV38, 2);
-            this.BtxtV38.Location = new System.Drawing.Point(179, 82);
-            this.BtxtV38.Name = "BtxtV38";
-            this.BtxtV38.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV38.TabIndex = 1;
-            this.BtxtV38.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV38, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV39
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV39, 2);
-            this.BtxtV39.Location = new System.Drawing.Point(267, 82);
-            this.BtxtV39.Name = "BtxtV39";
-            this.BtxtV39.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV39.TabIndex = 1;
-            this.BtxtV39.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV39, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV40
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV40, 2);
-            this.BtxtV40.Location = new System.Drawing.Point(355, 82);
-            this.BtxtV40.Name = "BtxtV40";
-            this.BtxtV40.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV40.TabIndex = 1;
-            this.BtxtV40.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV40, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV41
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV41, 2);
-            this.BtxtV41.Location = new System.Drawing.Point(443, 82);
-            this.BtxtV41.Name = "BtxtV41";
-            this.BtxtV41.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV41.TabIndex = 1;
-            this.BtxtV41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV41, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV42
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV42, 2);
-            this.BtxtV42.Location = new System.Drawing.Point(531, 82);
-            this.BtxtV42.Name = "BtxtV42";
-            this.BtxtV42.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV42.TabIndex = 1;
-            this.BtxtV42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV42, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV43
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV43, 2);
-            this.BtxtV43.Location = new System.Drawing.Point(619, 82);
-            this.BtxtV43.Name = "BtxtV43";
-            this.BtxtV43.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV43.TabIndex = 1;
-            this.BtxtV43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV43, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV44
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV44, 2);
-            this.BtxtV44.Location = new System.Drawing.Point(707, 82);
-            this.BtxtV44.Name = "BtxtV44";
-            this.BtxtV44.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV44.TabIndex = 1;
-            this.BtxtV44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV44, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV45
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV45, 2);
-            this.BtxtV45.Location = new System.Drawing.Point(795, 82);
-            this.BtxtV45.Name = "BtxtV45";
-            this.BtxtV45.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV45.TabIndex = 1;
-            this.BtxtV45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV45, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV46
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV46, 2);
-            this.BtxtV46.Location = new System.Drawing.Point(3, 154);
-            this.BtxtV46.Name = "BtxtV46";
-            this.BtxtV46.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV46.TabIndex = 1;
-            this.BtxtV46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV46, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV47
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV47, 2);
-            this.BtxtV47.Location = new System.Drawing.Point(91, 154);
-            this.BtxtV47.Name = "BtxtV47";
-            this.BtxtV47.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV47.TabIndex = 1;
-            this.BtxtV47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV47, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV48
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV48, 2);
-            this.BtxtV48.Location = new System.Drawing.Point(179, 154);
-            this.BtxtV48.Name = "BtxtV48";
-            this.BtxtV48.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV48.TabIndex = 1;
-            this.BtxtV48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV48, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV49
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV49, 2);
-            this.BtxtV49.Location = new System.Drawing.Point(267, 154);
-            this.BtxtV49.Name = "BtxtV49";
-            this.BtxtV49.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV49.TabIndex = 1;
-            this.BtxtV49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV49, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV50
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV50, 2);
-            this.BtxtV50.Location = new System.Drawing.Point(355, 154);
-            this.BtxtV50.Name = "BtxtV50";
-            this.BtxtV50.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV50.TabIndex = 1;
-            this.BtxtV50.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV50, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV51
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV51, 2);
-            this.BtxtV51.Location = new System.Drawing.Point(443, 154);
-            this.BtxtV51.Name = "BtxtV51";
-            this.BtxtV51.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV51.TabIndex = 1;
-            this.BtxtV51.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV51, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV52
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV52, 2);
-            this.BtxtV52.Location = new System.Drawing.Point(531, 154);
-            this.BtxtV52.Name = "BtxtV52";
-            this.BtxtV52.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV52.TabIndex = 1;
-            this.BtxtV52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV52, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV53
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV53, 2);
-            this.BtxtV53.Location = new System.Drawing.Point(619, 154);
-            this.BtxtV53.Name = "BtxtV53";
-            this.BtxtV53.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV53.TabIndex = 1;
-            this.BtxtV53.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV53, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV54
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV54, 2);
-            this.BtxtV54.Location = new System.Drawing.Point(707, 154);
-            this.BtxtV54.Name = "BtxtV54";
-            this.BtxtV54.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV54.TabIndex = 1;
-            this.BtxtV54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV54, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV55
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV55, 2);
-            this.BtxtV55.Location = new System.Drawing.Point(795, 154);
-            this.BtxtV55.Name = "BtxtV55";
-            this.BtxtV55.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV55.TabIndex = 1;
-            this.BtxtV55.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV55, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV56
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV56, 2);
-            this.BtxtV56.Location = new System.Drawing.Point(3, 226);
-            this.BtxtV56.Name = "BtxtV56";
-            this.BtxtV56.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV56.TabIndex = 1;
-            this.BtxtV56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV56, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV57
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV57, 2);
-            this.BtxtV57.Location = new System.Drawing.Point(91, 226);
-            this.BtxtV57.Name = "BtxtV57";
-            this.BtxtV57.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV57.TabIndex = 1;
-            this.BtxtV57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV57, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV58
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV58, 2);
-            this.BtxtV58.Location = new System.Drawing.Point(179, 226);
-            this.BtxtV58.Name = "BtxtV58";
-            this.BtxtV58.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV58.TabIndex = 1;
-            this.BtxtV58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV58, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV59
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV59, 2);
-            this.BtxtV59.Location = new System.Drawing.Point(267, 226);
-            this.BtxtV59.Name = "BtxtV59";
-            this.BtxtV59.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV59.TabIndex = 1;
-            this.BtxtV59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV59, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV60
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV60, 2);
-            this.BtxtV60.Location = new System.Drawing.Point(355, 226);
-            this.BtxtV60.Name = "BtxtV60";
-            this.BtxtV60.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV60.TabIndex = 1;
-            this.BtxtV60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV60, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV61
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV61, 2);
-            this.BtxtV61.Location = new System.Drawing.Point(443, 226);
-            this.BtxtV61.Name = "BtxtV61";
-            this.BtxtV61.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV61.TabIndex = 1;
-            this.BtxtV61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV61, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV62
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV62, 2);
-            this.BtxtV62.Location = new System.Drawing.Point(531, 226);
-            this.BtxtV62.Name = "BtxtV62";
-            this.BtxtV62.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV62.TabIndex = 1;
-            this.BtxtV62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV62, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV63
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV63, 2);
-            this.BtxtV63.Location = new System.Drawing.Point(619, 226);
-            this.BtxtV63.Name = "BtxtV63";
-            this.BtxtV63.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV63.TabIndex = 1;
-            this.BtxtV63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV63, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV64
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV64, 2);
-            this.BtxtV64.Location = new System.Drawing.Point(707, 226);
-            this.BtxtV64.Name = "BtxtV64";
-            this.BtxtV64.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV64.TabIndex = 1;
-            this.BtxtV64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV64, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV65
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV65, 2);
-            this.BtxtV65.Location = new System.Drawing.Point(795, 226);
-            this.BtxtV65.Name = "BtxtV65";
-            this.BtxtV65.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV65.TabIndex = 1;
-            this.BtxtV65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV65, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV66
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV66, 2);
-            this.BtxtV66.Location = new System.Drawing.Point(223, 298);
-            this.BtxtV66.Name = "BtxtV66";
-            this.BtxtV66.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV66.TabIndex = 1;
-            this.BtxtV66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV66, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV67
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV67, 2);
-            this.BtxtV67.Location = new System.Drawing.Point(311, 298);
-            this.BtxtV67.Name = "BtxtV67";
-            this.BtxtV67.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV67.TabIndex = 1;
-            this.BtxtV67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV67, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV68
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV68, 2);
-            this.BtxtV68.Location = new System.Drawing.Point(399, 298);
-            this.BtxtV68.Name = "BtxtV68";
-            this.BtxtV68.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV68.TabIndex = 1;
-            this.BtxtV68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV68, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV69
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV69, 2);
-            this.BtxtV69.Location = new System.Drawing.Point(487, 298);
-            this.BtxtV69.Name = "BtxtV69";
-            this.BtxtV69.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV69.TabIndex = 1;
-            this.BtxtV69.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV69, "Napětí na článku ve voltech.");
-            // 
-            // BtxtV70
-            // 
-            this.tableLayoutPanelB2_2.SetColumnSpan(this.BtxtV70, 2);
-            this.BtxtV70.Location = new System.Drawing.Point(575, 298);
-            this.BtxtV70.Name = "BtxtV70";
-            this.BtxtV70.Size = new System.Drawing.Size(82, 21);
-            this.BtxtV70.TabIndex = 1;
-            this.BtxtV70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TipVoltage.SetToolTip(this.BtxtV70, "Napětí na článku ve voltech.");
-            // 
-            // label151
-            // 
-            this.label151.AutoSize = true;
-            this.label151.Location = new System.Drawing.Point(16, 659);
-            this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(97, 16);
-            this.label151.TabIndex = 31;
-            this.label151.Text = "Celkové napětí";
-            // 
             // BtxtVoltageSum1
             // 
             this.BtxtVoltageSum1.Location = new System.Drawing.Point(119, 655);
@@ -9959,41 +10014,6 @@
             this.BtxtVoltageSum1.Size = new System.Drawing.Size(89, 21);
             this.BtxtVoltageSum1.TabIndex = 1;
             this.BtxtVoltageSum1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label152
-            // 
-            this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(214, 659);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(16, 16);
-            this.label152.TabIndex = 32;
-            this.label152.Text = "V";
-            // 
-            // label177
-            // 
-            this.label177.AutoSize = true;
-            this.label177.Location = new System.Drawing.Point(214, 430);
-            this.label177.Name = "label177";
-            this.label177.Size = new System.Drawing.Size(16, 16);
-            this.label177.TabIndex = 35;
-            this.label177.Text = "V";
-            // 
-            // label191
-            // 
-            this.label191.AutoSize = true;
-            this.label191.Location = new System.Drawing.Point(16, 430);
-            this.label191.Name = "label191";
-            this.label191.Size = new System.Drawing.Size(97, 16);
-            this.label191.TabIndex = 34;
-            this.label191.Text = "Celkové napětí";
-            // 
-            // BtxtVoltageSum2
-            // 
-            this.BtxtVoltageSum2.Location = new System.Drawing.Point(119, 426);
-            this.BtxtVoltageSum2.Name = "BtxtVoltageSum2";
-            this.BtxtVoltageSum2.Size = new System.Drawing.Size(89, 21);
-            this.BtxtVoltageSum2.TabIndex = 33;
-            this.BtxtVoltageSum2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TipVoltage
             // 
@@ -10813,5 +10833,6 @@
         private System.Windows.Forms.TextBox BtxtVoltageSum2;
         private System.Windows.Forms.TextBox BtxtVoltageSum1;
         private System.Windows.Forms.ToolTip TipVoltage;
+        private System.Windows.Forms.TableLayoutPanel tlpComponents;
     }
 }

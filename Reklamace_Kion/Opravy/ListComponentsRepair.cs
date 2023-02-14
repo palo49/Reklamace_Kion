@@ -63,6 +63,9 @@ namespace Reklamace_Kion.Opravy
             string newValue = dgvComponents[e.ColumnIndex, e.RowIndex].Value.ToString();
 
             if (columnName == "Name") { CommandText = "UPDATE RepairComponents SET Name = @newval WHERE Id = @id"; }
+            if (columnName == "Article") { CommandText = "UPDATE RepairComponents SET Article = @newval WHERE Id = @id"; }
+            if (columnName == "PN") { CommandText = "UPDATE RepairComponents SET PN = @newval WHERE Id = @id"; }
+            if (columnName == "Category") { CommandText = "UPDATE RepairComponents SET Category = @newval WHERE Id = @id"; }
 
             try
             {
@@ -101,6 +104,12 @@ namespace Reklamace_Kion.Opravy
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnAddData_Click(object sender, EventArgs e)
+        {
+            AddComponentRepair addComponentRepair = new AddComponentRepair();
+            addComponentRepair.Show();
         }
     }
 }

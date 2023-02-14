@@ -129,7 +129,14 @@ namespace Reklamace_Kion.Statistics
                     dgvClaims.Rows.Add("Total claims", acceptedTotal.ToString(), notAcceptedTotal.ToString(), inProcTotal.ToString(), total.ToString());
                     dgvClaims.Rows.Add("Total claims battery", acceptedTotalBat.ToString(), notAcceptedTotalBat.ToString(), inProcTotalBat.ToString(), totalBat.ToString());
 
-                    UpdateGraph(formsPlot1, valsToChart, namesToChart, "KION claims " + year.ToString());
+                    if (acceptedTotal > 0 || acceptedTotalBat > 0)
+                    {
+                        UpdateGraph(formsPlot1, valsToChart, namesToChart, "KION claims " + year.ToString());
+                    }
+                    else
+                    {
+                        ClearGraph(formsPlot1);
+                    }
                 }
                 else
                 {
@@ -166,6 +173,8 @@ namespace Reklamace_Kion.Statistics
                 string[] namesToChart = new string[count];
                 double[] valsToChart = new double[count];
 
+                int totalAccepted = 0;
+
                 if (reader.HasRows)
                 {
                     lblNoData.Text = string.Empty;
@@ -176,11 +185,19 @@ namespace Reklamace_Kion.Statistics
 
                         namesToChart[i] = reader.GetString(1);
                         valsToChart[i] = reader.GetInt32(2);
+                        totalAccepted += reader.GetInt32(2);
 
                         i++;
                     }
 
-                    UpdateGraph(formsPlot2, valsToChart, namesToChart, "KION claims parts accepted " + year.ToString());
+                    if (totalAccepted > 0)
+                    {
+                        UpdateGraph(formsPlot2, valsToChart, namesToChart, "KION claims parts accepted " + year.ToString());
+                    }
+                    else
+                    {
+                        ClearGraph(formsPlot2);
+                    }
                 }
                 else
                 {
@@ -240,7 +257,15 @@ namespace Reklamace_Kion.Statistics
                         i++;
                     }
 
-                    UpdateGraph(formsPlot3, valsToChart, namesToChart, "KION BMS RCA accepted " + year.ToString());
+                    if (totalAccepted > 0)
+                    {
+                        UpdateGraph(formsPlot3, valsToChart, namesToChart, "KION BMS RCA accepted " + year.ToString());
+                    }
+                    else
+                    {
+                        ClearGraph(formsPlot3);
+                    }
+                    
                 }
                 else
                 {
