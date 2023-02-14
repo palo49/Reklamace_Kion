@@ -743,5 +743,12 @@ namespace Reklamace_Kion.RepairAnalyze
                 }
             }
         }
+
+        private void AnalysisForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
     }
 }
