@@ -1157,6 +1157,7 @@ namespace Reklamace_Kion
         {
             string actualCellValue = grid[1, actualCell.RowIndex].Value.ToString();
             string dir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\";
+            string oldDir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\";
 
             try
             {
@@ -1167,7 +1168,15 @@ namespace Reklamace_Kion
                 }
                 else
                 {
-                    MessageBox.Show("Pro tento záznam neexistuje složka.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string oldPath = oldDir + actualCellValue;
+                    if (Directory.Exists(oldPath))
+                    {
+                        Process.Start(oldPath);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Pro tento záznam neexistuje složka.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
             catch (Exception ex)

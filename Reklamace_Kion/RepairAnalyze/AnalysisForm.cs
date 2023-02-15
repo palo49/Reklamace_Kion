@@ -189,10 +189,21 @@ namespace Reklamace_Kion.RepairAnalyze
             //tlpComponents.BackColor = Color.LightCoral;
         }
 
+        private List<string> componentsPN = new List<string>();
+
         private void LoadData(string PN, string CLM, TextBox[] boxes)
         {
             try
             {
+                mysql.OpenConection();
+                string cmdPN = "SELECT PN FROM RepairComponents ORDER BY Name ASC";
+                SqlDataReader pnr = mysql.DataReader(cmdPN);
+                while (pnr.Read())
+                {
+                    componentsPN.Add(pnr.GetString(0));
+                }
+                mysql.CloseConnection();
+
                 string cmds = "SELECT * FROM " + PN + "_torques WHERE CLM='" + CLM + "'";
                 mysql.OpenConection();
                 int count = mysql.CountCols(PN + "_torques");
@@ -412,9 +423,17 @@ namespace Reklamace_Kion.RepairAnalyze
                     }
 
                     _i++;
+
+                    Label PN = new Label();
+                    PN.Text = "PN";
+                    PN.Name = "PN_" + _i;
+                    PN.Dock = DockStyle.Fill;
+                    PN.AutoSize = false;
+                    PN.TextAlign = ContentAlignment.MiddleCenter;
+
                     ComboBox cmb = new ComboBox();
                     cmb.Name = "cmbComponent_" + _i;
-                    cmb.Location = new Point(30, (btn.Location.Y) + _i * 40);
+                    //cmb.Location = new Point(30, (btn.Location.Y) + _i * 40);
                     mysql.OpenConection();
                     cmb.DataSource = mysql.DataTable("SELECT Name FROM RepairComponents ORDER BY Name ASC");
                     mysql.CloseConnection();
@@ -422,18 +441,20 @@ namespace Reklamace_Kion.RepairAnalyze
                     cmb.ValueMember = "Name";
                     cmb.DropDownStyle = ComboBoxStyle.DropDownList;
                     cmb.Dock = DockStyle.Fill;
+                    cmb.SelectedIndexChanged += (s, e) => { CmbOnChange(s, PN); };
                     //p.Controls.Add(cmb);
+
                     Label lbl = new Label();
                     lbl.Text = "Počet:";
                     lbl.Name = "lbl_" + _i;
-                    lbl.Location = new Point(160, cmb.Location.Y + 3);
+                    //lbl.Location = new Point(160, cmb.Location.Y + 3);
                     lbl.Dock = DockStyle.Fill;
                     lbl.AutoSize = false;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
                     //p.Controls.Add(lbl);
                     TextBox txt = new TextBox();
                     txt.Name = "txtComponent_" + _i;
-                    txt.Location = new Point(220, cmb.Location.Y + 2);
+                    //txt.Location = new Point(220, cmb.Location.Y + 2);
                     txt.Width = 50;
                     txt.Dock = DockStyle.Fill;
                     //p.Controls.Add(txt);
@@ -441,7 +462,7 @@ namespace Reklamace_Kion.RepairAnalyze
                     
                     Button btnDel = new Button();
                     btnDel.Name = "btnDel_" + _i;
-                    btnDel.Location = new Point(300, cmb.Location.Y + 2);
+                    //btnDel.Location = new Point(300, cmb.Location.Y + 2);
                     btnDel.Width = 75;
                     btnDel.Text = "Delete";
                     btnDel.Cursor = Cursors.Hand;
@@ -453,9 +474,10 @@ namespace Reklamace_Kion.RepairAnalyze
                     tlpComponents.RowCount++;
                     //tlpComponents.RowStyles.Add(new RowStyle(SizeType.Absolute, 30));
                     tlpComponents.Controls.Add(cmb, 0, tlpComponents.RowCount - 1);
-                    tlpComponents.Controls.Add(lbl, 1, tlpComponents.RowCount - 1);
-                    tlpComponents.Controls.Add(txt, 2, tlpComponents.RowCount - 1);
-                    tlpComponents.Controls.Add(btnDel, 3, tlpComponents.RowCount - 1);
+                    tlpComponents.Controls.Add(PN, 1, tlpComponents.RowCount - 1);
+                    tlpComponents.Controls.Add(lbl, 2, tlpComponents.RowCount - 1);
+                    tlpComponents.Controls.Add(txt, 3, tlpComponents.RowCount - 1);
+                    tlpComponents.Controls.Add(btnDel, 4, tlpComponents.RowCount - 1);
                     tlpComponents.ResumeLayout(true);
 
                     cmb.SelectedIndex = cmb.FindStringExact(value);
@@ -468,19 +490,21 @@ namespace Reklamace_Kion.RepairAnalyze
             }
         }
 
-        Control selectedParent = null;
+        private void CmbOnChange(object sender, Label pn)
+        {
+            ComboBox cmb = (ComboBox)sender;
+            int index = cmb.SelectedIndex;
+            if (index > -1)
+            {
+                pn.Text = componentsPN[index];
+            }
+        }
+
         private void BtnDel_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             string str = btn.Name.ToString();
             int num = Convert.ToInt32(str.Substring(str.Length - 1));
-
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    tlpComponents.Controls.Remove(tlpComponents.GetControlFromPosition(i, num - 1));
-            //}
-            //tlpComponents.RowCount--;
-            //tlpComponents.Height -= 30;
 
             TLPRemoveRow(tlpComponents, btn);
         }
@@ -495,13 +519,13 @@ namespace Reklamace_Kion.RepairAnalyze
         {
             if (row < tlp.RowCount - 1)
             {
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     tlp.Controls.Remove(tlp.GetControlFromPosition(i, row));
                 }
                 for (int i = row; i < tlp.RowCount - 1; i++)
                 {
-                    for (int y = 0; y < 4; y++)
+                    for (int y = 0; y < 5; y++)
                     {
                         tlp.SetRow(tlp.GetControlFromPosition(y, i + 1), i);
                     }
@@ -509,7 +533,7 @@ namespace Reklamace_Kion.RepairAnalyze
             }
             else
             {
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     tlp.Controls.Remove(tlp.GetControlFromPosition(i, row));
                 }
