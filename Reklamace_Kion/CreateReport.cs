@@ -410,22 +410,71 @@ namespace Reklamace_Kion
                 para17.Range.InsertParagraphAfter();
 
 
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.InitialDirectory = @"C:\";
-                saveFileDialog1.Title = "Ulož report do...";
-                saveFileDialog1.CheckPathExists = true;
-                saveFileDialog1.DefaultExt = "docx";
-                saveFileDialog1.Filter = "Word file (*.docx)|*.docx";
-                saveFileDialog1.RestoreDirectory = false;
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                //SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                //saveFileDialog1.InitialDirectory = @"C:\";
+                //saveFileDialog1.Title = "Ulož report do...";
+                //saveFileDialog1.CheckPathExists = true;
+                //saveFileDialog1.DefaultExt = "docx";
+                //saveFileDialog1.Filter = "Word file (*.docx)|*.docx";
+                //saveFileDialog1.RestoreDirectory = false;
+                //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                //{
+                //    //Save the document  
+                //    object filename = saveFileDialog1.FileName;
+                //    document.SaveAs2(ref filename);
+                //    document.Close(ref missing, ref missing, ref missing);
+                //    document = null;
+                //    winword.Quit(ref missing, ref missing, ref missing);
+                //    winword = null;
+                //}
+
+                //Save the document  
+                string now = DateTime.Now.ToString("yyMMddhhmms");
+                string filename = "Report_" + CLM + "_" + now;
+                object path = @"";
+                bool pathExist = true;
+                if (Directory.Exists(@"\\cz-ras-fs2\Applications\KION\10_Reklamace\" + CLM))
                 {
-                    //Save the document  
-                    object filename = saveFileDialog1.FileName;
-                    document.SaveAs2(ref filename);
+                    path = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\" + CLM + @"\" + filename;
+                }
+                else if (Directory.Exists(@"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\" + CLM))
+                {
+                    path = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\" + CLM + @"\" + filename;
+                }
+                else
+                {
+                    MessageBox.Show("Složka k tomuto CLM neexistuje. Můžete umístění vybrat manuálně.");
+                    pathExist = false;
+                }
+
+                if (pathExist)
+                {
+                    document.SaveAs2(ref path);
                     document.Close(ref missing, ref missing, ref missing);
                     document = null;
                     winword.Quit(ref missing, ref missing, ref missing);
                     winword = null;
+                    MessageBox.Show("Hotovo.");
+                }
+                else
+                {
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                    saveFileDialog1.InitialDirectory = @"C:\";
+                    saveFileDialog1.Title = "Ulož report do...";
+                    saveFileDialog1.CheckPathExists = true;
+                    saveFileDialog1.DefaultExt = "docx";
+                    saveFileDialog1.Filter = "Word file (*.docx)|*.docx";
+                    saveFileDialog1.RestoreDirectory = false;
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        //Save the document  
+                        object filename2 = saveFileDialog1.FileName;
+                        document.SaveAs2(ref filename2);
+                        document.Close(ref missing, ref missing, ref missing);
+                        document = null;
+                        winword.Quit(ref missing, ref missing, ref missing);
+                        winword = null;
+                    }
                 }
             }
             catch (Exception ex)

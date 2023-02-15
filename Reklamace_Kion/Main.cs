@@ -1156,6 +1156,13 @@ namespace Reklamace_Kion
         private void OpenFolderCLM(ADGV.AdvancedDataGridView grid)
         {
             string actualCellValue = grid[1, actualCell.RowIndex].Value.ToString();
+            if (grid.Name == "dataGridOpravy")
+            {
+                string temp = grid[1, actualCell.RowIndex].Value.ToString();
+                int index = temp.LastIndexOf("_");
+                if (index >= 0)
+                    actualCellValue = temp.Substring(0, index); // or index + 1 to keep symbol
+            }
             string dir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\KionApp\";
             string oldDir = @"\\cz-ras-fs2\Applications\KION\10_Reklamace\";
 
@@ -1674,7 +1681,11 @@ namespace Reklamace_Kion
             if (Level != "1")
             {
                 Cursor.Current = Cursors.WaitCursor;
-                string CLMValue = dataGridOpravy[1, actualCell.RowIndex].Value.ToString();
+                string CLMValue = string.Empty;
+                string temp = dataGridOpravy[1, actualCell.RowIndex].Value.ToString();
+                int index = temp.LastIndexOf("_");
+                if (index >= 0)
+                    CLMValue = temp.Substring(0, index); // or index + 1 to keep symbol
 
                 CreateReport cr = new CreateReport();
                 cr.CreateDocument(MyName, FirstName, LastName, CLMValue);
