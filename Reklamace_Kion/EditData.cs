@@ -37,6 +37,7 @@ namespace Reklamace_Kion
                 string CLM = txtCLM.Text;
                 string Status = cmbState.Text;
                 string CustomerRequire = txtCustomerRequest.Text;
+                string Pozadavek = txtPozadavek.Text;
                 string DateOfCustomerSendVal = DateOfCustomerSend.Value.ToShortDateString();
                 string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToShortDateString();
                 string DateOfRepairVal = DateOfRepair.Value.ToShortDateString();
@@ -81,17 +82,32 @@ namespace Reklamace_Kion
                 
                 if (Contact == ";;")
                 {
-                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', PN_Battery='" + PNBattery + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components=@components, Cost_Of_Repair=@finalPrice, Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
+                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Pozadavek='" + Pozadavek + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', PN_Battery='" + PNBattery + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components=@components, Cost_Of_Repair=@finalPrice, Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
                 }
                 else
                 {
-                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', PN_Battery='" + PNBattery + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Contact='" + Contact + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components=@components, Cost_Of_Repair=@finalPrice, Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
+                    cmd = new SqlCommand("UPDATE DataMain SET State='" + Status + "', Customer_Require='" + CustomerRequire + "', Pozadavek='" + Pozadavek + "', Date_Of_Customer_Send='" + DateOfCustomerSendVal + "', Date_Of_Saft_Acceptance='" + DateOfSaftAcceptanceVal + "', Date_Of_Repair='" + DateOfRepairVal + "', Date_Of_Saft_Send='" + DateOfSaftSendVal + "', PN_Battery='" + PNBattery + "', Fault='" + Fault + "', Type_CW='" + CW + "', Defect_BMS='" + DefectBMS + "', Location_Of_Battery='" + LocationOfBattery + "', Replacement_Send='" + ReplacementSend + "', Date_Of_Replacement_Send='" + DateOfSendReplacement + "', Result='" + Result + "', Result_Description='" + ResultDescription + "', Contact='" + Contact + "', Tariff_Repairman='" + Tariff_Repairman + "', Hours_Repairman='" + Hours_Repairman + "', Tariff_Technician='" + Tariff_Technician + "', Hours_Technician='" + Hours_Technician + "', Tariff_Administration='" + Tariff_Administration + "', Hours_Administration='" + Hours_Administration + "', Cost_Of_Components=@components, Cost_Of_Repair=@finalPrice, Note_1='" + Note1 + "', Note_2='" + Note2 + "'  WHERE CLM='" + CLM + "'", conn);
                 }
 
                 cmd.Parameters.Add("@components", SqlDbType.Decimal).Value = CostOfComponents;
                 cmd.Parameters.Add("@finalPrice", SqlDbType.Decimal).Value = finalPrice;
                 int res = cmd.ExecuteNonQuery();
+
                 conn.Close();
+
+                string strRepair = "SELECT COUNT(*) from DataRepairs where CLM like '" + CLM + "'";
+                SqlCommand cmdCount = new SqlCommand(strRepair, conn);
+
+                conn.Open();
+                int dataCount = (int)cmdCount.ExecuteScalar();
+
+                if (dataCount > 0)
+                {
+                    SqlCommand cmdRepair = new SqlCommand("UPDATE DataRepairs SET Pozadavek='" + Pozadavek + "' WHERE CLM='" + CLM + "'", conn);
+                    cmdRepair.ExecuteNonQuery();
+                }
+                conn.Close();
+
                 if (res > 0)
                 {
                     Main.ReloadData();
@@ -202,81 +218,82 @@ namespace Reklamace_Kion
                         txtCLM.Text = data.GetString(1);
                         cmbState.Text = data.GetString(2);
                         txtCustomerRequest.Text = data.GetString(3);
+                        txtPozadavek.Text = data.GetString(4);
 
-                        if (data.GetString(4) == String.Empty)
+                        if (data.GetString(5) == String.Empty)
                         {
                             EmptyDate(DateOfCustomerSend);
                         }
                         else
                         {
-                            DateOfCustomerSend.Value = Convert.ToDateTime(data.GetString(4));
+                            DateOfCustomerSend.Value = Convert.ToDateTime(data.GetString(5));
                         }
-                        if (data.GetString(5) == String.Empty)
+                        if (data.GetString(6) == String.Empty)
                         {
                             EmptyDate(DateOfSaftAcceptance);
                         }
                         else
                         {
-                            DateOfSaftAcceptance.Value = Convert.ToDateTime(data.GetString(5));
+                            DateOfSaftAcceptance.Value = Convert.ToDateTime(data.GetString(6));
                         }
-                        if (data.GetString(6) == String.Empty)
+                        if (data.GetString(7) == String.Empty)
                         {
                             EmptyDate(DateOfRepair);
                         }
                         else
                         {
-                            DateOfRepair.Value = Convert.ToDateTime(data.GetString(6));
+                            DateOfRepair.Value = Convert.ToDateTime(data.GetString(7));
                         }
-                        if (data.GetString(7) == String.Empty)
+                        if (data.GetString(8) == String.Empty)
                         {
                             EmptyDate(DateOfSaftSend);
                         }
                         else
                         {
-                            DateOfSaftSend.Value = Convert.ToDateTime(data.GetString(7));
+                            DateOfSaftSend.Value = Convert.ToDateTime(data.GetString(8));
                         }
 
-                        cmbPNBattery.Text = data.GetString(8);
-                        txtSNBattery.Text = data.GetString(9);
-                        cmbPNComponent.Text = data.GetString(10);
-                        txtSNComponent.Text = data.GetString(11);
-                        txtFault.Text = data.GetString(12);
-                        cmbCW.Text = data.GetString(13);
+                        cmbPNBattery.Text = data.GetString(9);
+                        txtSNBattery.Text = data.GetString(10);
+                        cmbPNComponent.Text = data.GetString(11);
+                        txtSNComponent.Text = data.GetString(12);
+                        txtFault.Text = data.GetString(13);
+                        cmbCW.Text = data.GetString(14);
 
-                        if (data.GetString(14) == String.Empty)
+                        if (data.GetString(15) == String.Empty)
                         {
                             cmbDefects.SelectedIndex = -1;
                         }
                         else
                         {
-                            cmbDefects.Text = data.GetString(14);
+                            cmbDefects.Text = data.GetString(15);
                         }
                         
-                        txtLocationOfBattery.Text = data.GetString(15);
-                        cmbReplacementSend.Text = data.GetString(16);
+                        txtLocationOfBattery.Text = data.GetString(16);
+                        cmbReplacementSend.Text = data.GetString(17);
 
-                        if (data.GetString(17) == String.Empty)
+                        if (data.GetString(18) == String.Empty)
                         {
                             EmptyDate(DateOfReplacementSend);
                         }
                         else
                         {
-                            DateOfReplacementSend.Value = Convert.ToDateTime(data.GetString(17));
+                            DateOfReplacementSend.Value = Convert.ToDateTime(data.GetString(18));
                         }
                         
-                        cmbResult.Text = data.GetString(18);
-                        txtResultDescription.Text = data.GetString(19);
+                        cmbResult.Text = data.GetString(19);
+                        txtResultDescription.Text = data.GetString(20);
                         //cmbContacts.Text = data.GetString(20);
-                        numTariffRepairman.Value = Convert.ToInt32(data.GetDouble(21));
-                        numHoursRepairman.Value = Convert.ToInt32(data.GetDouble(22));
-                        numTariffTechnician.Value = Convert.ToInt32(data.GetDouble(23));
-                        numHoursTechnician.Value = Convert.ToInt32(data.GetDouble(24));
-                        numTariffAdministration.Value = Convert.ToInt32(data.GetDouble(25));
-                        numHoursAdministration.Value = Convert.ToInt32(data.GetDouble(26));
-                        numCostOfComponents.Value = data.GetDecimal(27);
-                        txtCostOfRepair.Text = data.GetDecimal(28).ToString();
-                        txtNote1.Text = data.GetString(29);
-                        txtNote2.Text = data.GetString(30);
+                        numTariffRepairman.Value = Convert.ToInt32(data.GetDouble(22));
+                        numHoursRepairman.Value = Convert.ToInt32(data.GetDouble(23));
+                        numTariffTechnician.Value = Convert.ToInt32(data.GetDouble(24));
+                        numHoursTechnician.Value = Convert.ToInt32(data.GetDouble(25));
+                        numTariffAdministration.Value = Convert.ToInt32(data.GetDouble(26));
+                        numHoursAdministration.Value = Convert.ToInt32(data.GetDouble(27));
+                        numCostOfComponents.Value = data.GetDecimal(28);
+                        txtCostOfRepair.Text = data.GetDecimal(29).ToString();
+                        txtNote1.Text = data.GetString(30);
+                        txtNote2.Text = data.GetString(31);
                     }
                 }
 

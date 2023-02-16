@@ -73,6 +73,7 @@ namespace Reklamace_Kion
             string CLM = txtCLM.Text;
             string Status = cmbState.Text;
             string CustomerRequire = txtCustomerRequest.Text;
+            string Pozadavek = txtPozadavek.Text;
             string DateOfCustomerSendVal = DateOfCustomerSend.Value.ToShortDateString();
             string DateOfSaftAcceptanceVal = DateOfSaftAcceptance.Value.ToShortDateString();
             string DateOfRepairVal = DateOfRepair.Value.ToShortDateString();
@@ -128,7 +129,7 @@ namespace Reklamace_Kion
                     {
                         Cursor.Current = Cursors.WaitCursor;
 
-                        string sqlInsert = "INSERT INTO DataMain values('" + CLM + "','" + Status + "','" + CustomerRequire + "','" + DateOfCustomerSendVal + "','" + DateOfSaftAcceptanceVal + "'," +
+                        string sqlInsert = "INSERT INTO DataMain values('" + CLM + "','" + Status + "','" + CustomerRequire + "', '" + Pozadavek + "', '" + DateOfCustomerSendVal + "','" + DateOfSaftAcceptanceVal + "'," +
                             "'" + DateOfRepairVal + "','" + DateOfSaftSendVal + "','" + PNBattery + "','" + SNBattery + "','" + PNClaimedComponent + "','" + SNClaimedComponent + "'," +
                             "'" + Fault + "','" + CW + "','" + DefectBMS + "','" + LocationOfBattery + "','" + ReplacementSend + "'," +
                             "'" + DateOfSendReplacement + "','" + Result + "','" + ResultDescription + "','" + Contact + "','" + Tariff_Repairman + "','" + Hours_Repairman + "','" + Tariff_Technician + "','" + Hours_Technician + "','" + Tariff_Administration + "','" + Hours_Administration + "','" + CostOfComponents + "','" + finalPrice + "', '" + Note1 + "', '" + Note2 + "')";

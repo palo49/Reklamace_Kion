@@ -105,6 +105,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtPozadavek = new System.Windows.Forms.TextBox();
             this.panelControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numHoursAdministration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHoursTechnician)).BeginInit();
@@ -148,6 +150,7 @@
             this.panelControls.Controls.Add(this.txtSNBattery);
             this.panelControls.Controls.Add(this.txtResultDescription);
             this.panelControls.Controls.Add(this.lblReplacementSend);
+            this.panelControls.Controls.Add(this.txtPozadavek);
             this.panelControls.Controls.Add(this.txtCustomerRequest);
             this.panelControls.Controls.Add(this.label4);
             this.panelControls.Controls.Add(this.cmbResult);
@@ -159,6 +162,7 @@
             this.panelControls.Controls.Add(this.label3);
             this.panelControls.Controls.Add(this.lblResultDescription);
             this.panelControls.Controls.Add(this.lblDateOfSaftAcceptance);
+            this.panelControls.Controls.Add(this.label15);
             this.panelControls.Controls.Add(this.lblCustomerReq);
             this.panelControls.Controls.Add(this.label2);
             this.panelControls.Controls.Add(this.lblResult);
@@ -198,7 +202,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 1639);
+            this.label14.Location = new System.Drawing.Point(4, 1720);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(66, 13);
             this.label14.TabIndex = 35;
@@ -207,7 +211,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(4, 1513);
+            this.label13.Location = new System.Drawing.Point(4, 1594);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 13);
             this.label13.TabIndex = 34;
@@ -216,7 +220,7 @@
             // txtNote1
             // 
             this.txtNote1.Enabled = false;
-            this.txtNote1.Location = new System.Drawing.Point(4, 1531);
+            this.txtNote1.Location = new System.Drawing.Point(4, 1612);
             this.txtNote1.Multiline = true;
             this.txtNote1.Name = "txtNote1";
             this.txtNote1.Size = new System.Drawing.Size(346, 90);
@@ -225,7 +229,7 @@
             // txtNote2
             // 
             this.txtNote2.Enabled = false;
-            this.txtNote2.Location = new System.Drawing.Point(3, 1657);
+            this.txtNote2.Location = new System.Drawing.Point(3, 1738);
             this.txtNote2.Multiline = true;
             this.txtNote2.Name = "txtNote2";
             this.txtNote2.Size = new System.Drawing.Size(346, 90);
@@ -329,7 +333,7 @@
             // 
             // txtContactEmail
             // 
-            this.txtContactEmail.Location = new System.Drawing.Point(4, 1276);
+            this.txtContactEmail.Location = new System.Drawing.Point(4, 1376);
             this.txtContactEmail.Name = "txtContactEmail";
             this.txtContactEmail.ReadOnly = true;
             this.txtContactEmail.Size = new System.Drawing.Size(346, 20);
@@ -337,7 +341,7 @@
             // 
             // txtContactFirstName
             // 
-            this.txtContactFirstName.Location = new System.Drawing.Point(4, 1249);
+            this.txtContactFirstName.Location = new System.Drawing.Point(4, 1349);
             this.txtContactFirstName.Name = "txtContactFirstName";
             this.txtContactFirstName.ReadOnly = true;
             this.txtContactFirstName.Size = new System.Drawing.Size(346, 20);
@@ -345,7 +349,7 @@
             // 
             // txtContactId
             // 
-            this.txtContactId.Location = new System.Drawing.Point(4, 1193);
+            this.txtContactId.Location = new System.Drawing.Point(4, 1293);
             this.txtContactId.Name = "txtContactId";
             this.txtContactId.ReadOnly = true;
             this.txtContactId.Size = new System.Drawing.Size(37, 20);
@@ -353,7 +357,7 @@
             // 
             // txtContactLastName
             // 
-            this.txtContactLastName.Location = new System.Drawing.Point(4, 1222);
+            this.txtContactLastName.Location = new System.Drawing.Point(4, 1322);
             this.txtContactLastName.Name = "txtContactLastName";
             this.txtContactLastName.ReadOnly = true;
             this.txtContactLastName.Size = new System.Drawing.Size(346, 20);
@@ -364,7 +368,7 @@
             this.cmbContacts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbContacts.Enabled = false;
             this.cmbContacts.FormattingEnabled = true;
-            this.cmbContacts.Location = new System.Drawing.Point(47, 1193);
+            this.cmbContacts.Location = new System.Drawing.Point(47, 1293);
             this.cmbContacts.Name = "cmbContacts";
             this.cmbContacts.Size = new System.Drawing.Size(303, 21);
             this.cmbContacts.TabIndex = 28;
@@ -373,7 +377,7 @@
             // numHoursAdministration
             // 
             this.numHoursAdministration.Enabled = false;
-            this.numHoursAdministration.Location = new System.Drawing.Point(236, 1390);
+            this.numHoursAdministration.Location = new System.Drawing.Point(236, 1471);
             this.numHoursAdministration.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -387,7 +391,7 @@
             // numHoursTechnician
             // 
             this.numHoursTechnician.Enabled = false;
-            this.numHoursTechnician.Location = new System.Drawing.Point(120, 1390);
+            this.numHoursTechnician.Location = new System.Drawing.Point(120, 1471);
             this.numHoursTechnician.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -402,7 +406,7 @@
             // 
             this.numCostOfComponents.DecimalPlaces = 2;
             this.numCostOfComponents.Enabled = false;
-            this.numCostOfComponents.Location = new System.Drawing.Point(4, 1432);
+            this.numCostOfComponents.Location = new System.Drawing.Point(4, 1513);
             this.numCostOfComponents.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -416,7 +420,7 @@
             // numHoursRepairman
             // 
             this.numHoursRepairman.Enabled = false;
-            this.numHoursRepairman.Location = new System.Drawing.Point(4, 1390);
+            this.numHoursRepairman.Location = new System.Drawing.Point(4, 1471);
             this.numHoursRepairman.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -430,7 +434,7 @@
             // numTariffAdministration
             // 
             this.numTariffAdministration.Enabled = false;
-            this.numTariffAdministration.Location = new System.Drawing.Point(236, 1347);
+            this.numTariffAdministration.Location = new System.Drawing.Point(236, 1428);
             this.numTariffAdministration.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -444,7 +448,7 @@
             // numTariffTechnician
             // 
             this.numTariffTechnician.Enabled = false;
-            this.numTariffTechnician.Location = new System.Drawing.Point(120, 1347);
+            this.numTariffTechnician.Location = new System.Drawing.Point(120, 1428);
             this.numTariffTechnician.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -458,7 +462,7 @@
             // numTariffRepairman
             // 
             this.numTariffRepairman.Enabled = false;
-            this.numTariffRepairman.Location = new System.Drawing.Point(4, 1347);
+            this.numTariffRepairman.Location = new System.Drawing.Point(4, 1428);
             this.numTariffRepairman.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -508,7 +512,7 @@
             // txtResultDescription
             // 
             this.txtResultDescription.Enabled = false;
-            this.txtResultDescription.Location = new System.Drawing.Point(4, 1094);
+            this.txtResultDescription.Location = new System.Drawing.Point(4, 1194);
             this.txtResultDescription.Multiline = true;
             this.txtResultDescription.Name = "txtResultDescription";
             this.txtResultDescription.Size = new System.Drawing.Size(346, 72);
@@ -552,7 +556,7 @@
             "Accepted",
             "Accepted as goodwill",
             "Not accepted"});
-            this.cmbResult.Location = new System.Drawing.Point(4, 1043);
+            this.cmbResult.Location = new System.Drawing.Point(4, 1143);
             this.cmbResult.Name = "cmbResult";
             this.cmbResult.Size = new System.Drawing.Size(346, 21);
             this.cmbResult.TabIndex = 17;
@@ -597,7 +601,7 @@
             // 
             // txtCostOfRepair
             // 
-            this.txtCostOfRepair.Location = new System.Drawing.Point(4, 1474);
+            this.txtCostOfRepair.Location = new System.Drawing.Point(4, 1555);
             this.txtCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCostOfRepair.Name = "txtCostOfRepair";
             this.txtCostOfRepair.ReadOnly = true;
@@ -617,7 +621,7 @@
             // lblResultDescription
             // 
             this.lblResultDescription.AutoSize = true;
-            this.lblResultDescription.Location = new System.Drawing.Point(4, 1076);
+            this.lblResultDescription.Location = new System.Drawing.Point(4, 1176);
             this.lblResultDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResultDescription.Name = "lblResultDescription";
             this.lblResultDescription.Size = new System.Drawing.Size(78, 13);
@@ -656,7 +660,7 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(4, 1025);
+            this.lblResult.Location = new System.Drawing.Point(4, 1125);
             this.lblResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(50, 13);
@@ -686,7 +690,7 @@
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(4, 1175);
+            this.lblContact.Location = new System.Drawing.Point(4, 1275);
             this.lblContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(97, 13);
@@ -707,7 +711,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(236, 1372);
+            this.label11.Location = new System.Drawing.Point(236, 1453);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(102, 13);
@@ -717,7 +721,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(120, 1372);
+            this.label9.Location = new System.Drawing.Point(120, 1453);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 13);
@@ -727,7 +731,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 1372);
+            this.label7.Location = new System.Drawing.Point(4, 1453);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 13);
@@ -737,7 +741,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(236, 1329);
+            this.label10.Location = new System.Drawing.Point(236, 1410);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 13);
@@ -747,7 +751,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(120, 1329);
+            this.label8.Location = new System.Drawing.Point(120, 1410);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 13);
@@ -757,7 +761,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 1329);
+            this.label6.Location = new System.Drawing.Point(4, 1410);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
@@ -767,7 +771,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 1414);
+            this.label12.Location = new System.Drawing.Point(4, 1495);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 13);
@@ -777,7 +781,7 @@
             // lblCostOfRepair
             // 
             this.lblCostOfRepair.AutoSize = true;
-            this.lblCostOfRepair.Location = new System.Drawing.Point(4, 1456);
+            this.lblCostOfRepair.Location = new System.Drawing.Point(4, 1537);
             this.lblCostOfRepair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCostOfRepair.Name = "lblCostOfRepair";
             this.lblCostOfRepair.Size = new System.Drawing.Size(108, 13);
@@ -1013,6 +1017,24 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(4, 1009);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Požadavek na opravu";
+            // 
+            // txtPozadavek
+            // 
+            this.txtPozadavek.Location = new System.Drawing.Point(4, 1027);
+            this.txtPozadavek.Multiline = true;
+            this.txtPozadavek.Name = "txtPozadavek";
+            this.txtPozadavek.Size = new System.Drawing.Size(346, 95);
+            this.txtPozadavek.TabIndex = 3;
+            // 
             // EditData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1125,5 +1147,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.TextBox txtPozadavek;
+        private System.Windows.Forms.Label label15;
     }
 }

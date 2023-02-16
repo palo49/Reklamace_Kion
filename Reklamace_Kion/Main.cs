@@ -555,11 +555,14 @@ namespace Reklamace_Kion
         private void dataGridOpravy_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             string CommandText = string.Empty;
+            string CommandTextRepair = string.Empty;
             string columnName = dataGridOpravy.Columns[e.ColumnIndex].Name;
             int rowId = Convert.ToInt32(dataGridOpravy[0, e.RowIndex].Value);
             string newValue = dataGridOpravy[e.ColumnIndex, e.RowIndex].Value.ToString();
+            string CLM = dataGridOpravy[1, e.RowIndex].Value.ToString();
 
             if (columnName == "BrandId_Speed") { CommandText = "UPDATE DataRepairs SET BrandId_Speed = @newval WHERE RepairId = @id"; }
+            else if (columnName == "Pozadavek") { CommandText = "UPDATE DataRepairs SET Pozadavek = @newval WHERE RepairId = @id"; CommandTextRepair = "UPDATE DataMain SET Pozadavek = @newval WHERE CLM = '" + CLM + "'"; }
             else if (columnName == "WD") { CommandText = "UPDATE DataRepairs SET WD = @newval WHERE RepairId = @id"; }
             else if (columnName == "BB") { CommandText = "UPDATE DataRepairs SET BB = @newval WHERE RepairId = @id"; }
             else if (columnName == "ZD") { CommandText = "UPDATE DataRepairs SET ZD = @newval WHERE RepairId = @id"; }
@@ -590,6 +593,23 @@ namespace Reklamace_Kion
                     lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
                     //form.DataRepair.Clear();
                     //dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+
+                    if (CommandTextRepair != string.Empty)
+                    {
+                        string strRepair = "SELECT COUNT(*) from DataMain where CLM like '" + CLM + "'";
+                        SqlCommand cmdCount = new SqlCommand(strRepair, conn);
+
+                        conn.Open();
+                        int dataCount = (int)cmdCount.ExecuteScalar();
+
+                        if (dataCount > 0)
+                        {
+                            SqlCommand cmdMain = new SqlCommand(CommandTextRepair, conn);
+                            cmdMain.Parameters.AddWithValue("@newval", newValue);
+                            cmdMain.ExecuteNonQuery();
+                        }
+                        conn.Close();
+                    }
                 }
             }
             catch (Exception ex)
@@ -1053,8 +1073,9 @@ namespace Reklamace_Kion
                 try
                 {
                     string actualCellValue = dataGrid1[1, actualCell.RowIndex].Value.ToString();
-                    string PNBattery = dataGrid1[8, actualCell.RowIndex].Value.ToString();
-                    string SNBattery = dataGrid1[9, actualCell.RowIndex].Value.ToString();
+                    string PNBattery = dataGrid1[9, actualCell.RowIndex].Value.ToString();
+                    string SNBattery = dataGrid1[10, actualCell.RowIndex].Value.ToString();
+                    string Pozadavek = dataGrid1[4, actualCell.RowIndex].Value.ToString();
 
                     DialogResult resultBox = MessageBox.Show("Přidat k opravám " + actualCellValue + "?", "Přidat", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -1070,7 +1091,7 @@ namespace Reklamace_Kion
                         if (dataCount == 0)
                         {
                             conn.Open();
-                            SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '" + PNBattery + "', '" + SNBattery + "', '', '', " +
+                            SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '" + PNBattery + "', '" + SNBattery + "', '" + Pozadavek + "', '', '', " +
                                     "'','','','','','',''," +
                                     "'','','')", conn);
                             if (cmd.ExecuteNonQuery() != 0)
