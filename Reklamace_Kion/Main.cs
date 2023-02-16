@@ -206,6 +206,7 @@ namespace Reklamace_Kion
                 daDataRepairs.Fill(dt);
 
                 connection.Close();
+
                 src.DataSource = dt;
                 return src;
             }
@@ -373,6 +374,7 @@ namespace Reklamace_Kion
                         conn.Close();
                         form.DataRepair.Clear();
                         dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+
                     }
                 }
                 catch (Exception ex)
@@ -578,6 +580,7 @@ namespace Reklamace_Kion
             else if (columnName == "SOH") { CommandText = "UPDATE DataRepairs SET SOH = @newval WHERE RepairId = @id"; }
             else if (columnName == "CapacityTest") { CommandText = "UPDATE DataRepairs SET CapacityTest = @newval WHERE RepairId = @id"; }
             else if ((columnName == "CLM") || (columnName == "PN_Battery") || (columnName == "SN_Battery")) { CommandText = string.Empty; bindRepairData.CancelEdit(); dataGridOpravy.CancelEdit(); dataGridOpravy.EndEdit(); MessageBox.Show("Nelze upravit CLM, PN a SN."); }
+            else if (columnName == "State") { CommandText = "UPDATE DataRepairs SET State = @newval WHERE RepairId = @id"; }
 
             try
             {
@@ -1093,7 +1096,7 @@ namespace Reklamace_Kion
                             conn.Open();
                             SqlCommand cmd = new SqlCommand("INSERT INTO DataRepairs values('" + actualCellValue + "', '', '" + PNBattery + "', '" + SNBattery + "', '" + Pozadavek + "', '', '', " +
                                     "'','','','','','',''," +
-                                    "'','','')", conn);
+                                    "'','','','Pending')", conn);
                             if (cmd.ExecuteNonQuery() != 0)
                             {
                                 form.DataRepair.Clear();
@@ -1673,6 +1676,12 @@ namespace Reklamace_Kion
             form.btnReloadData.Focus();
         }
 
+        public static void PutRepairState(int row, int col, string dt)
+        {
+            form.dataGridOpravy.Rows[row].Cells[col].Value = dt;
+            form.btnReloadData.Focus();
+        }
+
         private void dgvExpedition_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int rowIndex = dgvExpedition.CurrentCell.RowIndex;
@@ -1739,6 +1748,56 @@ namespace Reklamace_Kion
             Button btn = (Button)sender;
             btn.BackColor = Color.FromArgb(255, 206, 212, 218);
             btn.ForeColor = Color.Black;
+        }
+
+        private void dataGridOpravy_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int rowIndex = dataGridOpravy.CurrentCell.RowIndex;
+            int columnIndex = dataGridOpravy.CurrentCell.ColumnIndex;
+            string columnName = dataGridOpravy.Columns[columnIndex].HeaderText;
+
+            if (Convert.ToInt16(Level) > 1)
+            {
+                if ((columnName == "State") && rowIndex != -1)
+                {
+                    PickerCmbRepairs p = new PickerCmbRepairs();
+                    p.row = rowIndex;
+                    p.col = columnIndex;
+                    p.Show();
+                }
+            }
+        }
+
+        private void RepairState()
+        {
+            foreach (DataGridViewRow row in dataGridOpravy.Rows)
+            {
+                if (row.Cells["State"].Value.ToString().Contains("Pending"))
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 0, 165, 207);
+                    row.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                    row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 0, 135, 177);
+                }
+                else if (row.Cells["State"].Value.ToString().Contains("Processing"))
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 243, 222, 44);
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                    row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 243, 182, 24);
+                    row.DefaultCellStyle.SelectionForeColor = Color.Black;
+                }
+                else if (row.Cells["State"].Value.ToString().Contains("Closed"))
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 188, 231, 132);
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                    row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 188, 191, 92);
+                    row.DefaultCellStyle.SelectionForeColor = Color.Black;
+                }
+            }
+        }
+
+        private void dataGridOpravy_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            RepairState();
         }
     }
 }

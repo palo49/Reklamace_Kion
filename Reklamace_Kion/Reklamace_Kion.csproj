@@ -213,6 +213,12 @@
     <Compile Include="Opravy\ListComponentsRepair.Designer.cs">
       <DependentUpon>ListComponentsRepair.cs</DependentUpon>
     </Compile>
+    <Compile Include="PickerCmbRepairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickerCmbRepairs.Designer.cs">
+      <DependentUpon>PickerCmbRepairs.cs</DependentUpon>
+    </Compile>
     <Compile Include="RepairAnalyze\AnalysisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Opravy\ListComponentsRepair.resx">
       <DependentUpon>ListComponentsRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickerCmbRepairs.resx">
+      <DependentUpon>PickerCmbRepairs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepairAnalyze\AnalysisForm.resx">
       <DependentUpon>AnalysisForm.cs</DependentUpon>
