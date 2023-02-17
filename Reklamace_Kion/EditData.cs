@@ -218,7 +218,7 @@ namespace Reklamace_Kion
                         txtCLM.Text = data.GetString(1);
                         cmbState.Text = data.GetString(2);
                         txtCustomerRequest.Text = data.GetString(3);
-                        txtPozadavek.Text = data.GetString(4);
+                        txtPozadavek.Text = data.GetString(4); 
 
                         if (data.GetString(5) == String.Empty)
                         {
@@ -253,9 +253,28 @@ namespace Reklamace_Kion
                             DateOfSaftSend.Value = Convert.ToDateTime(data.GetString(8));
                         }
 
-                        cmbPNBattery.Text = data.GetString(9);
+                        string pnstring = data.GetString(9);
+                        if (pnstring == "A1") { pnstring = "775369_A1"; }
+                        else if (pnstring == "A2") { pnstring = "774166_A2"; }
+                        else if (pnstring == "B1") { pnstring = "776445_B1"; }
+                        else if (pnstring == "B2") { pnstring = "774100_B2"; }
+                        if (cmbPNBattery.Items.Contains(pnstring))
+                        {
+                            cmbPNBattery.Text = pnstring;
+                        }
+                        else
+                        {
+                            cmbPNBattery.SelectedIndex = -1;
+                        }
                         txtSNBattery.Text = data.GetString(10);
-                        cmbPNComponent.Text = data.GetString(11);
+                        if (cmbPNComponent.Text.Contains(data.GetString(11)))
+                        {
+                            cmbPNComponent.Text = data.GetString(11);
+                        }
+                        else
+                        {
+                            cmbPNComponent.SelectedIndex = -1;
+                        }
                         txtSNComponent.Text = data.GetString(12);
                         txtFault.Text = data.GetString(13);
                         cmbCW.Text = data.GetString(14);

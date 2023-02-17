@@ -1795,9 +1795,41 @@ namespace Reklamace_Kion
             }
         }
 
+        private void MainState()
+        {
+            foreach (DataGridViewRow row in dataGrid1.Rows)
+            {
+                if (row.Cells["State"].Value.ToString().Contains("Open"))
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 0, 165, 207);
+                    row.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                    row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 0, 135, 177);
+                }
+                else if (row.Cells["State"].Value.ToString().Contains("In-process"))
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 243, 222, 44);
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                    row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 243, 182, 24);
+                    row.DefaultCellStyle.SelectionForeColor = Color.Black;
+                }
+                else if (row.Cells["State"].Value.ToString().Contains("Closed"))
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 188, 231, 132);
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                    row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 188, 191, 92);
+                    row.DefaultCellStyle.SelectionForeColor = Color.Black;
+                }
+            }
+        }
+
         private void dataGridOpravy_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             RepairState();
+        }
+
+        private void dataGrid1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            MainState();
         }
     }
 }
