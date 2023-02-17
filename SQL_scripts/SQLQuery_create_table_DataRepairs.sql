@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[DataRepairs] (
     [BrandId_Speed]    NVARCHAR (255) CONSTRAINT [DEFAULT_DataRepairs_BrandId_Speed] DEFAULT ('') NULL,
     [PN_Battery]       NVARCHAR (255) CONSTRAINT [DEFAULT_DataRepairs_PN_Battery] DEFAULT ('') NULL,
     [SN_Battery]       NVARCHAR (255) CONSTRAINT [DEFAULT_DataRepairs_SN_Battery] DEFAULT ('') NULL,
-    [Pozadavek]        TEXT           NULL,
+    [Pozadavek]        TEXT           CONSTRAINT [DEFAULT_DataRepairs_Pozadavek] DEFAULT ('') NULL,
     [WD]               BIT            CONSTRAINT [DEFAULT_DataRepairs_WD] DEFAULT ((0)) NULL,
     [BB]               BIT            CONSTRAINT [DEFAULT_DataRepairs_BB] DEFAULT ((0)) NULL,
     [ZD]               BIT            CONSTRAINT [DEFAULT_DataRepairs_ZD] DEFAULT ((0)) NULL,
@@ -24,6 +24,8 @@ CREATE TABLE [dbo].[DataRepairs] (
     [State]            NVARCHAR (50)  CONSTRAINT [DEFAULT_DataRepairs_State] DEFAULT ('Pending') NULL,
     PRIMARY KEY CLUSTERED ([RepairId] ASC)
 );
+
+
 
 
 GO
