@@ -431,17 +431,30 @@ namespace Reklamace_Kion.RepairAnalyze
                     PN.AutoSize = false;
                     PN.TextAlign = ContentAlignment.MiddleCenter;
 
+                    //SqlConnection conn = new SqlConnection(@"Data Source=CZ-RAS-SQL1\SQLEXPRESS;Initial Catalog=Reklamace_Kion;User ID=Kion_rekl;Password=Reklamace");
+                    //SqlDataAdapter daComp = new SqlDataAdapter("SELECT Name, PN, (Name + ' | ' + PN) AS Full FROM RepairComponents ORDER BY Name ASC", conn);
+                    //DataTable dtComp = new DataTable();
+
                     ComboBox cmb = new ComboBox();
                     cmb.Name = "cmbComponent_" + _i;
-                    //cmb.Location = new Point(30, (btn.Location.Y) + _i * 40);
+                    cmb.Location = new Point(30, (btn.Location.Y) + _i * 40);
                     mysql.OpenConection();
-                    cmb.DataSource = mysql.DataTable("SELECT Name FROM RepairComponents ORDER BY Name ASC");
+                    cmb.DataSource = mysql.DataTable("SELECT Name, PN, (Name + ' | ' + PN) AS txt FROM RepairComponents ORDER BY Name ASC");
                     mysql.CloseConnection();
-                    cmb.DisplayMember = "Name";
+                    cmb.DisplayMember = "txt";
                     cmb.ValueMember = "Name";
+
+                    //daComp.Fill(dtComp);
+                    //dtComp.DefaultView.Sort = "Name";
+                    //cmb.DataSource = dtComp;
+                    //cmb.DisplayMember = "Full";
+                    //cmb.ValueMember = "Name";
+
                     cmb.DropDownStyle = ComboBoxStyle.DropDownList;
                     cmb.Dock = DockStyle.Fill;
                     cmb.SelectedIndexChanged += (s, e) => { CmbOnChange(s, PN); };
+
+                    
                     //p.Controls.Add(cmb);
 
                     Label lbl = new Label();

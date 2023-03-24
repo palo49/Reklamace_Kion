@@ -47,27 +47,65 @@ namespace Reklamace_Kion
             
 
             // Double buffering can make DGV slow in remote desktop
+            //if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
+            //{
+            //    Type dgvType = dataGrid1.GetType();
+            //    PropertyInfo pi = dgvType.GetProperty("DoubleBuffered",
+            //      BindingFlags.Instance | BindingFlags.NonPublic);
+            //    pi.SetValue(dataGrid1, true, null);
+
+            //    Type dgvType2 = dataGridOpravy.GetType();
+            //    PropertyInfo pi2 = dgvType2.GetProperty("DoubleBuffered",
+            //      BindingFlags.Instance | BindingFlags.NonPublic);
+            //    pi2.SetValue(dataGridOpravy, true, null);
+
+            //    Type dgvType3 = dgvAnalysis.GetType();
+            //    PropertyInfo pi3 = dgvType3.GetProperty("DoubleBuffered",
+            //      BindingFlags.Instance | BindingFlags.NonPublic);
+            //    pi3.SetValue(dgvAnalysis, true, null);
+
+            //    Type dgvType4 = dgvExpedition.GetType();
+            //    PropertyInfo pi4 = dgvType4.GetProperty("DoubleBuffered",
+            //      BindingFlags.Instance | BindingFlags.NonPublic);
+            //    pi4.SetValue(dgvExpedition, true, null);
+
+            //    Type dgvType5 = dgvCinnost.GetType();
+            //    PropertyInfo pi5 = dgvType5.GetProperty("DoubleBuffered",
+            //      BindingFlags.Instance | BindingFlags.NonPublic);
+            //    pi5.SetValue(dgvCinnost, true, null);
+
+            //    Type dgvType6 = dgvScrap.GetType();
+            //    PropertyInfo pi6 = dgvType6.GetProperty("DoubleBuffered",
+            //      BindingFlags.Instance | BindingFlags.NonPublic);
+            //    pi6.SetValue(dgvScrap, true, null);
+
+            //    Type dgvType7 = dgvReplacements.GetType();
+            //    PropertyInfo pi7 = dgvType7.GetProperty("DoubleBuffered",
+            //      BindingFlags.Instance | BindingFlags.NonPublic);
+            //    pi7.SetValue(dgvReplacements, true, null);
+            //}
+
             if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
             {
-                Type dgvType = dataGrid1.GetType();
+                List<DataGridView> dataGridViews = new List<DataGridView>
+                    {
+                    dataGrid1, dataGridOpravy, dgvAnalysis, dgvExpedition,
+                    dgvCinnost, dgvScrap, dgvReplacements
+                    };
+
+                Type dgvType = typeof(DataGridView);
                 PropertyInfo pi = dgvType.GetProperty("DoubleBuffered",
-                  BindingFlags.Instance | BindingFlags.NonPublic);
-                pi.SetValue(dataGrid1, true, null);
+                    BindingFlags.Instance | BindingFlags.NonPublic);
 
-                Type dgvType2 = dataGridOpravy.GetType();
-                PropertyInfo pi2 = dgvType2.GetProperty("DoubleBuffered",
-                  BindingFlags.Instance | BindingFlags.NonPublic);
-                pi2.SetValue(dataGridOpravy, true, null);
+                foreach (DataGridView dgv in dataGridViews)
+                {
+                    bool doubleBuffered = (bool)pi.GetValue(dgv, null);
+                    if (!doubleBuffered)
+                    {
+                        pi.SetValue(dgv, true, null);
+                    }
+                }
 
-                Type dgvType3 = dgvAnalysis.GetType();
-                PropertyInfo pi3 = dgvType3.GetProperty("DoubleBuffered",
-                  BindingFlags.Instance | BindingFlags.NonPublic);
-                pi3.SetValue(dgvAnalysis, true, null);
-
-                Type dgvType4 = dgvExpedition.GetType();
-                PropertyInfo pi4 = dgvType4.GetProperty("DoubleBuffered",
-                  BindingFlags.Instance | BindingFlags.NonPublic);
-                pi4.SetValue(dgvExpedition, true, null);
             }
 
             form = this;
@@ -431,6 +469,81 @@ namespace Reklamace_Kion
                     MessageBox.Show(ex.Message);
                 }
             }
+            else if ((curTab == 4) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5")))
+            {
+                try
+                {
+                    int id = (int)dgvCinnost.CurrentRow.Cells[0].Value;
+
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s ID: " + id + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand delData = new SqlCommand("DELETE FROM ActivityReport WHERE Id=" + id + "", conn);
+                        delData.ExecuteNonQuery();
+
+                        conn.Close();
+
+                        loadDgvActivity();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else if ((curTab == 5) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5")))
+            {
+                try
+                {
+                    int id = (int)dgvScrap.CurrentRow.Cells[0].Value;
+
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s ID: " + id + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand delData = new SqlCommand("DELETE FROM BMSscrap WHERE Id=" + id + "", conn);
+                        delData.ExecuteNonQuery();
+
+                        conn.Close();
+
+                        loadDgvScrap();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else if ((curTab == 6) && ((Level == "100") || (Level == "20") || (Level == "10") || (Level == "5")))
+            {
+                try
+                {
+                    int id = (int)dgvReplacements.CurrentRow.Cells[0].Value;
+
+                    DialogResult dialogResult = MessageBox.Show("Opravdu chcete smazat záznam s ID: " + id + "?", "Smazat záznam", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        conn.Open();
+                        SqlCommand delData = new SqlCommand("DELETE FROM Replacements WHERE Id=" + id + "", conn);
+                        delData.ExecuteNonQuery();
+
+                        string dtNow = DateTime.Now.ToString("dd.MM.yyyy | HH:mm:ss");
+                        SqlCommand cmdUpdateDate = new SqlCommand("UPDATE AppSettings SET Value = @now WHERE Name = @name", conn);
+                        cmdUpdateDate.Parameters.AddWithValue("@now", dtNow);
+                        cmdUpdateDate.Parameters.AddWithValue("@name", "ReplacementsUpdate");
+                        cmdUpdateDate.ExecuteNonQuery();
+
+                        conn.Close();
+
+                        loadDgvReplacements();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -452,6 +565,18 @@ namespace Reklamace_Kion
                 case 3:
                     curTab = 3;
                     btnAddData.Enabled = true;
+                    break;
+                case 4:
+                    curTab = 4;
+                    btnAddData.Enabled = false;
+                    break;
+                case 5:
+                    curTab = 5;
+                    btnAddData.Enabled = false;
+                    break;
+                case 6:
+                    curTab = 6;
+                    btnAddData.Enabled = false;
                     break;
             }
         }
@@ -1373,6 +1498,18 @@ namespace Reklamace_Kion
                 {
                     loadDgvExpedition();
                 }
+                else if (tabControl1.SelectedTab == tabControl1.TabPages[4])
+                {
+                    loadDgvActivity();
+                }
+                else if (tabControl1.SelectedTab == tabControl1.TabPages[5])
+                {
+                    loadDgvScrap();
+                }
+                else if (tabControl1.SelectedTab == tabControl1.TabPages[6])
+                {
+                    loadDgvReplacements();
+                }
             }
             catch (Exception ex)
             {
@@ -1414,6 +1551,99 @@ namespace Reklamace_Kion
 
             conn.Close();
         }
+
+        private void loadDgvActivity()
+        {
+            dgvCinnost.Rows.Clear();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM ActivityReport ORDER BY Id ASC", conn);
+            using (SqlDataReader rdr = cmd.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    dgvCinnost.Rows.Add(rdr.GetValue(0), SafeGetString(rdr, 1), SafeGetString(rdr, 2), SafeGetString(rdr, 3));
+                }
+            }
+
+            conn.Close();
+        }
+
+        private void loadDgvScrap()
+        {
+            dgvScrap.Rows.Clear();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM BMSscrap ORDER BY Id ASC", conn);
+            using (SqlDataReader rdr = cmd.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    dgvScrap.Rows.Add(rdr.GetValue(0), SafeGetString(rdr, 1));
+                }
+            }
+
+            conn.Close();
+        }
+
+        private void loadDgvReplacements()
+        {
+            dgvReplacements.Rows.Clear();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Replacements ORDER BY Id ASC", conn);
+            using (SqlDataReader rdr = cmd.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    dgvReplacements.Rows.Add(rdr.GetValue(0), SafeGetString(rdr, 1), SafeGetString(rdr, 2), SafeGetString(rdr, 3), SafeGetString(rdr, 4), SafeGetString(rdr, 5), SafeGetString(rdr, 6), SafeGetString(rdr, 7), SafeGetString(rdr, 8));
+                }
+            }
+
+            SqlCommand cmdLastUpdate = new SqlCommand("SELECT Value FROM AppSettings WHERE Name = 'ReplacementsUpdate'", conn);
+            using (SqlDataReader rdr = cmdLastUpdate.ExecuteReader())
+            {
+                while (rdr.Read())
+                {
+                    lblReplacementsUpdate.Text = "Poslední aktualizace: " + SafeGetString(rdr, 0);
+                }
+            }
+
+            Label[] labels = { lblTotalB1, lblTotalB2, lblTotalA1, lblTotalA2, lblContainerB1, lblContainerB2, lblContainerA1, lblContainerA2, lblExternB1, lblExternB2, lblExternA1, lblExternA2 };
+
+            string[] cols = { "B1Container", "B2Container", "A1Container", "A2Container", "B1Extern", "B2Extern", "A1Extern", "A2Extern" };
+
+            List<int> values = new List<int>();
+
+            for (int i = 0; i < 8; i++)
+            {
+                SqlCommand cmdCount = new SqlCommand("SELECT Count(" + cols[i] + ") FROM Replacements", conn);
+                values.Add((Int32)cmdCount.ExecuteScalar());
+                labels[i + 4].Text = values[i].ToString();
+            }
+
+            int B1Total = values[0] + values[4];
+            int B2Total = values[1] + values[5];
+            int A1Total = values[2] + values[6];
+            int A2Total = values[3] + values[7];
+
+            lblTotalB1.Text = B1Total.ToString();
+            lblTotalB2.Text = B2Total.ToString();
+            lblTotalA1.Text = A1Total.ToString();
+            lblTotalA2.Text = A2Total.ToString();
+
+            conn.Close();
+
+            for (int i = 0; i < 4; i++)
+            {
+                dgvReplacements.Columns[i + 1].DefaultCellStyle.BackColor = Color.FromArgb(255, 204, 213, 174);
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                dgvReplacements.Columns[i + 5].DefaultCellStyle.BackColor = Color.FromArgb(255, 250, 237, 205);
+            }
+        }
+
 
         private void dgvAnalysis_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -1830,6 +2060,231 @@ namespace Reklamace_Kion
         private void dataGrid1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             MainState();
+        }
+
+        private void dgvCinnost_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabControl1.TabPages[4])
+            {
+                string CommandText = string.Empty;
+                string columnName = dgvCinnost.Columns[e.ColumnIndex].HeaderText;
+                string rowId = string.Empty;
+                if (dgvCinnost[0, e.RowIndex].Value != null) { rowId = dgvCinnost[0, e.RowIndex].Value.ToString(); }
+                string newValue = String.Empty;
+                if (dgvCinnost[e.ColumnIndex, e.RowIndex].Value == null)
+                {
+                    newValue = String.Empty;
+                }
+                else
+                {
+                    newValue = dgvCinnost[e.ColumnIndex, e.RowIndex].Value.ToString();
+                }
+
+                if (rowId == String.Empty)
+                {
+                    if (columnName == "Datum") { CommandText = "INSERT INTO ActivityReport (Date) VALUES (@newval)"; }
+                    else if (columnName == "Činnost") { CommandText = "INSERT INTO ActivityReport (Activity) VALUES (@newval)"; }
+                    else if (columnName == "Placeno / Neplaceno") { CommandText = "INSERT INTO ActivityReport (Paid) VALUES (@newval)"; }
+                }
+                else
+                {
+                    if (columnName == "Datum") { CommandText = "UPDATE ActivityReport SET Date = @newval WHERE Id = @id"; }
+                    else if (columnName == "Činnost") { CommandText = "UPDATE ActivityReport SET Activity = @newval WHERE Id = @id"; }
+                    else if (columnName == "Placeno / Neplaceno") { CommandText = "UPDATE ActivityReport SET Paid = @newval WHERE Id = @id"; }
+                }
+
+                try
+                {
+                    if (CommandText != string.Empty)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand(CommandText, conn);
+                        if (rowId == String.Empty)
+                        {
+                            cmd.Parameters.AddWithValue("@newval", newValue);
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("@newval", newValue);
+                            cmd.Parameters.AddWithValue("@id", rowId);
+                        }
+                            
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        lblActionInfo.ForeColor = Color.Green;
+                        lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
+
+                        if (rowId == String.Empty) loadDgvActivity();
+
+                        //form.DataRepair.Clear();
+                        //dataGridOpravy.DataSource = GetTableDataRepairs(conn, DataRepair, bindRepairData);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void dgvCinnost_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCinnost.Columns[e.ColumnIndex].HeaderText == "Placeno / Neplaceno" && e.RowIndex > -1)
+            {
+                string[] values = { " ", "Placeno", "Neplaceno" };
+
+                string rowId = string.Empty;
+                if (dgvCinnost[0, e.RowIndex].Value != null) { rowId = dgvCinnost[0, e.RowIndex].Value.ToString(); }
+
+                string actual = " ";
+                if (dgvCinnost[3, e.RowIndex].Value != null) { actual = dgvCinnost[3, e.RowIndex].Value.ToString(); }
+
+                int i = 0;
+                if (actual == " ") { i = 1; }
+                else if (actual == "Placeno") { i = 2; }
+                else if (actual == "Neplaceno") { i = 0; }
+
+                dgvCinnost[3, e.RowIndex].Value = values[i];
+                dgvCinnost.CurrentCell = dgvCinnost.Rows[e.RowIndex].Cells[0];
+            }
+        }
+
+        private void dgvScrap_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabControl1.TabPages[5])
+            {
+                string CommandText = string.Empty;
+                string columnName = dgvScrap.Columns[e.ColumnIndex].HeaderText;
+                string rowId = string.Empty;
+                if (dgvScrap[0, e.RowIndex].Value != null) { rowId = dgvScrap[0, e.RowIndex].Value.ToString(); }
+                string newValue = String.Empty;
+                if (dgvScrap[e.ColumnIndex, e.RowIndex].Value == null)
+                {
+                    newValue = String.Empty;
+                }
+                else
+                {
+                    newValue = dgvScrap[e.ColumnIndex, e.RowIndex].Value.ToString();
+                }
+
+                if (rowId == String.Empty)
+                {
+                    if (columnName == "Serial number") { CommandText = "INSERT INTO BMSscrap (SN) VALUES (@newval)"; }
+                }
+                else
+                {
+                    if (columnName == "Serial number") { CommandText = "UPDATE BMSscrap SET SN = @newval WHERE Id = @id"; }
+                }
+
+                try
+                {
+                    if (CommandText != string.Empty)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand(CommandText, conn);
+                        if (rowId == String.Empty)
+                        {
+                            cmd.Parameters.AddWithValue("@newval", newValue);
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("@newval", newValue);
+                            cmd.Parameters.AddWithValue("@id", rowId);
+                        }
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        lblActionInfo.ForeColor = Color.Green;
+                        lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
+
+                        if (rowId == String.Empty) loadDgvScrap();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void dgvReplacements_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabControl1.TabPages[6])
+            {
+                string CommandText = string.Empty;
+                string columnName = dgvReplacements.Columns[e.ColumnIndex].HeaderText;
+                string rowId = string.Empty;
+                if (dgvReplacements[0, e.RowIndex].Value != null) { rowId = dgvReplacements[0, e.RowIndex].Value.ToString(); }
+                string newValue = String.Empty;
+                if (dgvReplacements[e.ColumnIndex, e.RowIndex].Value == null)
+                {
+                    newValue = String.Empty;
+                }
+                else
+                {
+                    newValue = dgvReplacements[e.ColumnIndex, e.RowIndex].Value.ToString();
+                }
+
+                if (rowId == String.Empty)
+                {
+                    if (columnName == "Baterie B1 - kontejner") { CommandText = "INSERT INTO Replacements (B1Container) VALUES (@newval)"; }
+                    else if (columnName == "Baterie B2 - kontejner") { CommandText = "INSERT INTO Replacements (B2Container) VALUES (@newval)"; }
+                    else if (columnName == "Baterie A1 - kontejner") { CommandText = "INSERT INTO Replacements (A1Container) VALUES (@newval)"; }
+                    else if (columnName == "Baterie A2 - kontejner") { CommandText = "INSERT INTO Replacements (A2Container) VALUES (@newval)"; }
+                    else if (columnName == "Baterie B1 - externí sklad") { CommandText = "INSERT INTO Replacements (B1Extern) VALUES (@newval)"; }
+                    else if (columnName == "Baterie B2 - externí sklad") { CommandText = "INSERT INTO Replacements (B2Extern) VALUES (@newval)"; }
+                    else if (columnName == "Baterie A1 - externí sklad") { CommandText = "INSERT INTO Replacements (A1Extern) VALUES (@newval)"; }
+                    else if (columnName == "Baterie A2 - externí sklad") { CommandText = "INSERT INTO Replacements (A2Extern) VALUES (@newval)"; }
+                }
+                else
+                {
+                    if (columnName == "Baterie B1 - kontejner") { CommandText = "UPDATE Replacements SET B1Container = @newval WHERE Id = @id"; }
+                    else if (columnName == "Baterie B2 - kontejner") { CommandText = "UPDATE Replacements SET B2Container = @newval WHERE Id = @id"; }
+                    else if (columnName == "Baterie A1 - kontejner") { CommandText = "UPDATE Replacements SET A1Container = @newval WHERE Id = @id"; }
+                    else if (columnName == "Baterie A2 - kontejner") { CommandText = "UPDATE Replacements SET A2Container = @newval WHERE Id = @id"; }
+                    else if (columnName == "Baterie B1 - externí sklad") { CommandText = "UPDATE Replacements SET B1Extern = @newval WHERE Id = @id"; }
+                    else if (columnName == "Baterie B2 - externí sklad") { CommandText = "UPDATE Replacements SET B2Extern = @newval WHERE Id = @id"; }
+                    else if (columnName == "Baterie A1 - externí sklad") { CommandText = "UPDATE Replacements SET A1Extern = @newval WHERE Id = @id"; }
+                    else if (columnName == "Baterie A2 - externí sklad") { CommandText = "UPDATE Replacements SET A2Extern = @newval WHERE Id = @id"; }
+                }
+
+                try
+                {
+                    if (CommandText != string.Empty)
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand(CommandText, conn);
+                        if (rowId == String.Empty)
+                        {
+                            if (newValue == String.Empty) { cmd.Parameters.AddWithValue("@newval", DBNull.Value); }
+                            else { cmd.Parameters.AddWithValue("@newval", newValue); }
+                        }
+                        else
+                        {
+                            if (newValue == String.Empty) { cmd.Parameters.AddWithValue("@newval", DBNull.Value); }
+                            else { cmd.Parameters.AddWithValue("@newval", newValue); }
+                            cmd.Parameters.AddWithValue("@id", rowId);
+                        }
+
+                        cmd.ExecuteNonQuery();
+
+                        string dtNow = DateTime.Now.ToString("dd.MM.yyyy | HH:mm:ss");
+                        SqlCommand cmdUpdateDate = new SqlCommand("UPDATE AppSettings SET Value = @now WHERE Name = @name", conn);
+                        cmdUpdateDate.Parameters.AddWithValue("@now", dtNow);
+                        cmdUpdateDate.Parameters.AddWithValue("@name", "ReplacementsUpdate");
+                        cmdUpdateDate.ExecuteNonQuery();
+                        conn.Close();
+                        lblActionInfo.ForeColor = Color.Green;
+                        lblActionInfo.Text = "Data '" + columnName + "' úspěšně změněna pro ID = " + rowId + ".";
+
+                        loadDgvReplacements();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
