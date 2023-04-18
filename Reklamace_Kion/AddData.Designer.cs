@@ -100,6 +100,8 @@
             this.numTariffAdministration = new System.Windows.Forms.NumericUpDown();
             this.numTariffTechnician = new System.Windows.Forms.NumericUpDown();
             this.numTariffRepairman = new System.Windows.Forms.NumericUpDown();
+            this.txtPozadavek = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -107,8 +109,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtPozadavek = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelControls.SuspendLayout();
@@ -504,9 +504,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(61, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -929,6 +929,24 @@
             this.numTariffRepairman.TabIndex = 27;
             this.numTariffRepairman.ValueChanged += new System.EventHandler(this.numTariffRepairman_ValueChanged);
             // 
+            // txtPozadavek
+            // 
+            this.txtPozadavek.Location = new System.Drawing.Point(1, 1027);
+            this.txtPozadavek.Multiline = true;
+            this.txtPozadavek.Name = "txtPozadavek";
+            this.txtPozadavek.Size = new System.Drawing.Size(346, 137);
+            this.txtPozadavek.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(1, 1009);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(124, 15);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Požadavek na opravu";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -998,24 +1016,6 @@
             this.label12.Size = new System.Drawing.Size(59, 15);
             this.label12.TabIndex = 0;
             this.label12.Text = "Cena dílů";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1, 1009);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 15);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Požadavek na opravu";
-            // 
-            // txtPozadavek
-            // 
-            this.txtPozadavek.Location = new System.Drawing.Point(1, 1027);
-            this.txtPozadavek.Multiline = true;
-            this.txtPozadavek.Name = "txtPozadavek";
-            this.txtPozadavek.Size = new System.Drawing.Size(346, 137);
-            this.txtPozadavek.TabIndex = 3;
             // 
             // AddData
             // 

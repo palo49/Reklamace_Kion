@@ -97,7 +97,7 @@ namespace Reklamace_Kion
                 winword.Selection.GoTo(Microsoft.Office.Interop.Word.WdGoToItem.wdGoToPage, Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToFirst, 1, missing);
 
                 var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
-                var logoimage = Path.Combine(outPutDirectory, "img\\saft_report_logo.jpg");
+                var logoimage = Path.Combine(outPutDirectory, "img\\Saft_logo_new.png");
 
                 Microsoft.Office.Interop.Word.Paragraph paraImg = document.Content.Paragraphs.Add(ref missing);
                 paraImg.Range.InsertParagraphAfter();
@@ -108,7 +108,7 @@ namespace Reklamace_Kion
                 {
                     row.Height = 50;
                     row.Cells[1].Range.InlineShapes.AddPicture(logoimage);
-                    row.Cells[2].Range.Text = "Technical evaulation";
+                    row.Cells[2].Range.Text = "TECHNICAL EVALUATION";
 
                     foreach (Cell cell in row.Cells)
                     {
@@ -121,7 +121,7 @@ namespace Reklamace_Kion
                         {
                             cell.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalBottom;
                             cell.Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
-                            cell.Range.Font.Size = 26;
+                            cell.Range.Font.Size = 20;
                         }
                     }
                 }
@@ -143,6 +143,7 @@ namespace Reklamace_Kion
                 foreach (Row row in firstTable.Rows)
                 {
                     row.Height = 30;
+                    row.Cells[1].Range.Font.Bold = 1;
                     row.Cells[1].Range.Text = ft[i];
                     row.Cells[2].Range.Text = ftData[i];
                     i++;
@@ -209,6 +210,7 @@ namespace Reklamace_Kion
 
                 Microsoft.Office.Interop.Word.Paragraph para4 = document.Content.Paragraphs.Add(ref missing);
                 para4.Range.Font.Bold = 1;
+                para4.Range.Font.Size = 14;
                 para4.Range.Text = "\nCustomer description:";
                 para4.Range.InsertParagraphAfter();
 
@@ -218,6 +220,7 @@ namespace Reklamace_Kion
 
                 Microsoft.Office.Interop.Word.Paragraph para6 = document.Content.Paragraphs.Add(ref missing);
                 para6.Range.Font.Bold = 1;
+                para6.Range.Font.Size = 14;
                 para6.Range.Text = "\nSubject:";
                 para6.Range.InsertParagraphAfter();
 
@@ -262,6 +265,7 @@ namespace Reklamace_Kion
 
                 Microsoft.Office.Interop.Word.Paragraph para8 = document.Content.Paragraphs.Add(ref missing);
                 para8.Range.Font.Bold = 1;
+                para8.Range.Font.Size = 14;
                 para8.Range.Text = "\nDetailed description of BMS received:";
                 para8.Range.InsertParagraphAfter();
 
@@ -285,6 +289,7 @@ namespace Reklamace_Kion
 
                 Microsoft.Office.Interop.Word.Paragraph para12 = document.Content.Paragraphs.Add(ref missing);
                 para12.Range.Font.Bold = 1;
+                para12.Range.Font.Size = 14;
                 para12.Range.Text = "\nError in blackbox:";
                 para12.Range.InsertParagraphAfter();
 
@@ -351,6 +356,7 @@ namespace Reklamace_Kion
 
                 Microsoft.Office.Interop.Word.Paragraph para14 = document.Content.Paragraphs.Add(ref missing);
                 para14.Range.Font.Bold = 1;
+                para14.Range.Font.Size = 14;
                 para14.Range.Text = "\nList of tests:";
                 para14.Range.InsertParagraphAfter();
 

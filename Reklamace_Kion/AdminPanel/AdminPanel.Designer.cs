@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chckServiceMode = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -40,23 +41,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnShowReports = new System.Windows.Forms.Button();
+            this.lblReportsCount = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblReportsCount = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnShowReports = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,6 +82,17 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1088, 2);
             this.label1.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(36, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // chckServiceMode
             // 
@@ -191,6 +202,22 @@
             this.panel4.Size = new System.Drawing.Size(1085, 90);
             this.panel4.TabIndex = 29;
             // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(28, 34);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(130, 34);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "        Editovat";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -229,6 +256,52 @@
             this.panel5.Size = new System.Drawing.Size(1085, 90);
             this.panel5.TabIndex = 30;
             // 
+            // btnShowReports
+            // 
+            this.btnShowReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowReports.Image = ((System.Drawing.Image)(resources.GetObject("btnShowReports.Image")));
+            this.btnShowReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowReports.Location = new System.Drawing.Point(27, 35);
+            this.btnShowReports.Name = "btnShowReports";
+            this.btnShowReports.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnShowReports.Size = new System.Drawing.Size(130, 34);
+            this.btnShowReports.TabIndex = 13;
+            this.btnShowReports.Text = "         Zobrazit";
+            this.btnShowReports.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnShowReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnShowReports.UseVisualStyleBackColor = true;
+            this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
+            // 
+            // lblReportsCount
+            // 
+            this.lblReportsCount.AutoSize = true;
+            this.lblReportsCount.ForeColor = System.Drawing.Color.DimGray;
+            this.lblReportsCount.Location = new System.Drawing.Point(990, 39);
+            this.lblReportsCount.Name = "lblReportsCount";
+            this.lblReportsCount.Size = new System.Drawing.Size(32, 16);
+            this.lblReportsCount.TabIndex = 16;
+            this.lblReportsCount.Text = "num";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(893, 39);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 16);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "Počet hlášení:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label11.Location = new System.Drawing.Point(24, 4);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 16);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Chybová hlášení";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -249,79 +322,6 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(1086, 2);
             this.label9.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label11.Location = new System.Drawing.Point(24, 4);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 16);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Chybová hlášení";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(893, 39);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 16);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Počet hlášení:";
-            // 
-            // lblReportsCount
-            // 
-            this.lblReportsCount.AutoSize = true;
-            this.lblReportsCount.ForeColor = System.Drawing.Color.DimGray;
-            this.lblReportsCount.Location = new System.Drawing.Point(990, 39);
-            this.lblReportsCount.Name = "lblReportsCount";
-            this.lblReportsCount.Size = new System.Drawing.Size(32, 16);
-            this.lblReportsCount.TabIndex = 16;
-            this.lblReportsCount.Text = "num";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(28, 34);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(130, 34);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "        Editovat";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnShowReports
-            // 
-            this.btnShowReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowReports.Image = ((System.Drawing.Image)(resources.GetObject("btnShowReports.Image")));
-            this.btnShowReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowReports.Location = new System.Drawing.Point(27, 35);
-            this.btnShowReports.Name = "btnShowReports";
-            this.btnShowReports.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnShowReports.Size = new System.Drawing.Size(130, 34);
-            this.btnShowReports.TabIndex = 13;
-            this.btnShowReports.Text = "         Zobrazit";
-            this.btnShowReports.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShowReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnShowReports.UseVisualStyleBackColor = true;
-            this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
             // 
             // AdminPanel
             // 
@@ -344,6 +344,7 @@
             this.Text = "Admin panel";
             this.Load += new System.EventHandler(this.AdminPanel_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -352,7 +353,6 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

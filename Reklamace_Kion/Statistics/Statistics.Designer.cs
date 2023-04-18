@@ -134,9 +134,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(77, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -219,7 +219,7 @@
             this.dgvFaults.ReadOnly = true;
             this.dgvFaults.RowHeadersVisible = false;
             this.dgvFaults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFaults.Size = new System.Drawing.Size(699, 700);
+            this.dgvFaults.Size = new System.Drawing.Size(682, 700);
             this.dgvFaults.TabIndex = 4;
             this.dgvFaults.TimeFilter = false;
             // 
@@ -322,7 +322,7 @@
             this.dgvParts.ReadOnly = true;
             this.dgvParts.RowHeadersVisible = false;
             this.dgvParts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParts.Size = new System.Drawing.Size(699, 409);
+            this.dgvParts.Size = new System.Drawing.Size(682, 409);
             this.dgvParts.TabIndex = 4;
             this.dgvParts.TimeFilter = false;
             // 
@@ -554,7 +554,7 @@
             this.dgvClaims.ReadOnly = true;
             this.dgvClaims.RowHeadersVisible = false;
             this.dgvClaims.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClaims.Size = new System.Drawing.Size(699, 214);
+            this.dgvClaims.Size = new System.Drawing.Size(682, 214);
             this.dgvClaims.TabIndex = 0;
             this.dgvClaims.TimeFilter = false;
             // 
@@ -627,7 +627,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(294, 1300);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 1300);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // formsPlot3
@@ -635,7 +635,7 @@
             this.formsPlot3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formsPlot3.Location = new System.Drawing.Point(3, 869);
             this.formsPlot3.Name = "formsPlot3";
-            this.formsPlot3.Size = new System.Drawing.Size(288, 428);
+            this.formsPlot3.Size = new System.Drawing.Size(267, 428);
             this.formsPlot3.TabIndex = 2;
             // 
             // formsPlot2
@@ -643,7 +643,7 @@
             this.formsPlot2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formsPlot2.Location = new System.Drawing.Point(3, 436);
             this.formsPlot2.Name = "formsPlot2";
-            this.formsPlot2.Size = new System.Drawing.Size(288, 427);
+            this.formsPlot2.Size = new System.Drawing.Size(267, 427);
             this.formsPlot2.TabIndex = 1;
             // 
             // formsPlot1
@@ -652,7 +652,7 @@
             this.formsPlot1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.formsPlot1.Location = new System.Drawing.Point(3, 3);
             this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(288, 427);
+            this.formsPlot1.Size = new System.Drawing.Size(267, 427);
             this.formsPlot1.TabIndex = 0;
             // 
             // toolTip1

@@ -58,8 +58,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCLM = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtBrandSpeed = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSOH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCapacity)).BeginInit();
@@ -341,9 +341,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(77, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(88, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -407,6 +407,14 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             // 
+            // txtBrandSpeed
+            // 
+            this.txtBrandSpeed.Location = new System.Drawing.Point(17, 83);
+            this.txtBrandSpeed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtBrandSpeed.Name = "txtBrandSpeed";
+            this.txtBrandSpeed.Size = new System.Drawing.Size(181, 21);
+            this.txtBrandSpeed.TabIndex = 1;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -416,14 +424,6 @@
             this.label6.Size = new System.Drawing.Size(77, 15);
             this.label6.TabIndex = 0;
             this.label6.Text = "Brand speed";
-            // 
-            // txtBrandSpeed
-            // 
-            this.txtBrandSpeed.Location = new System.Drawing.Point(17, 83);
-            this.txtBrandSpeed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtBrandSpeed.Name = "txtBrandSpeed";
-            this.txtBrandSpeed.Size = new System.Drawing.Size(181, 21);
-            this.txtBrandSpeed.TabIndex = 1;
             // 
             // AddRepair
             // 

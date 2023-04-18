@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportErrors));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSend = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtContent = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnSend = new System.Windows.Forms.Button();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -65,6 +65,17 @@
             this.panel2.Size = new System.Drawing.Size(940, 62);
             this.panel2.TabIndex = 26;
             // 
+            // btnSend
+            // 
+            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSend.Location = new System.Drawing.Point(821, 12);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(99, 36);
+            this.btnSend.TabIndex = 11;
+            this.btnSend.Text = "Odeslat";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -79,10 +90,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(36, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(36, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(90, 36);
+            this.pictureBox2.Size = new System.Drawing.Size(90, 59);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -100,6 +111,15 @@
             this.panel1.Size = new System.Drawing.Size(940, 44);
             this.panel1.TabIndex = 27;
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(19, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(903, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Pokud jste zaznamenali chybu v běhu aplikace, prosím popiště do formuláře daný pr" +
+    "oblém.";
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -110,15 +130,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(941, 2);
             this.label1.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(19, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(903, 21);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Pokud jste zaznamenali chybu v běhu aplikace, prosím popiště do formuláře daný pr" +
-    "oblém.";
             // 
             // txtLogin
             // 
@@ -188,17 +199,6 @@
             this.label7.Size = new System.Drawing.Size(80, 15);
             this.label7.TabIndex = 29;
             this.label7.Text = "Obsah zprávy";
-            // 
-            // btnSend
-            // 
-            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSend.Location = new System.Drawing.Point(821, 12);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(99, 36);
-            this.btnSend.TabIndex = 11;
-            this.btnSend.Text = "Odeslat";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // txtTitle
             // 

@@ -44,47 +44,6 @@ namespace Reklamace_Kion
             btnDelData.Visible = false;
             btnReport.Visible = false;
 
-            
-
-            // Double buffering can make DGV slow in remote desktop
-            //if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
-            //{
-            //    Type dgvType = dataGrid1.GetType();
-            //    PropertyInfo pi = dgvType.GetProperty("DoubleBuffered",
-            //      BindingFlags.Instance | BindingFlags.NonPublic);
-            //    pi.SetValue(dataGrid1, true, null);
-
-            //    Type dgvType2 = dataGridOpravy.GetType();
-            //    PropertyInfo pi2 = dgvType2.GetProperty("DoubleBuffered",
-            //      BindingFlags.Instance | BindingFlags.NonPublic);
-            //    pi2.SetValue(dataGridOpravy, true, null);
-
-            //    Type dgvType3 = dgvAnalysis.GetType();
-            //    PropertyInfo pi3 = dgvType3.GetProperty("DoubleBuffered",
-            //      BindingFlags.Instance | BindingFlags.NonPublic);
-            //    pi3.SetValue(dgvAnalysis, true, null);
-
-            //    Type dgvType4 = dgvExpedition.GetType();
-            //    PropertyInfo pi4 = dgvType4.GetProperty("DoubleBuffered",
-            //      BindingFlags.Instance | BindingFlags.NonPublic);
-            //    pi4.SetValue(dgvExpedition, true, null);
-
-            //    Type dgvType5 = dgvCinnost.GetType();
-            //    PropertyInfo pi5 = dgvType5.GetProperty("DoubleBuffered",
-            //      BindingFlags.Instance | BindingFlags.NonPublic);
-            //    pi5.SetValue(dgvCinnost, true, null);
-
-            //    Type dgvType6 = dgvScrap.GetType();
-            //    PropertyInfo pi6 = dgvType6.GetProperty("DoubleBuffered",
-            //      BindingFlags.Instance | BindingFlags.NonPublic);
-            //    pi6.SetValue(dgvScrap, true, null);
-
-            //    Type dgvType7 = dgvReplacements.GetType();
-            //    PropertyInfo pi7 = dgvType7.GetProperty("DoubleBuffered",
-            //      BindingFlags.Instance | BindingFlags.NonPublic);
-            //    pi7.SetValue(dgvReplacements, true, null);
-            //}
-
             if (!System.Windows.Forms.SystemInformation.TerminalServerSession)
             {
                 List<DataGridView> dataGridViews = new List<DataGridView>
@@ -134,66 +93,108 @@ namespace Reklamace_Kion
 
             try
             {
+                //conn.Open();
+                //SqlCommand getUserData = new SqlCommand("SELECT FirstName, LastName, Level FROM Users WHERE Name='" + MyName + "'", conn);
+                //SqlDataAdapter da = new SqlDataAdapter(getUserData);
+
+                //using (SqlDataReader reader = getUserData.ExecuteReader())
+                //{
+                //    while (reader.Read())
+                //    {
+                //        FirstName = lblFirstName.Text = reader.GetString(0);
+                //        LastName = lblLastName.Text = reader.GetString(1);
+                //        Level = reader.GetString(2);
+                //    }
+
+                //    conn.Close();
+
+                //    if (Level != string.Empty)
+                //    {
+                //        if (Level == "100")
+                //        {
+                //            lblLevel.Text = "Administrátor";
+
+                //            btnAddData.Visible = true;
+                //            btnDelData.Visible = true;
+                //            btnStatistics.Visible = true;
+
+                //            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
+                //        }
+                //        else if (Level == "20")
+                //        {
+                //            lblLevel.Text = "Technik";
+
+                //            btnAddData.Visible = true;
+                //            btnDelData.Visible = true;
+
+                //            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
+                //        }
+                //        else if (Level == "10")
+                //        {
+                //            lblLevel.Text = "Příjem";
+
+                //            btnAddData.Visible = true;
+                //            btnDelData.Visible = true;
+
+                //            dataGrid1.ReadOnly = dgvExpedition.ReadOnly = false;
+                //        }
+                //        else if (Level == "5")
+                //        {
+                //            lblLevel.Text = "Opravář";
+
+                //            btnDelData.Visible = true;
+                //            btnAddData.Visible = true;
+
+                //            dataGridOpravy.ReadOnly = dgvExpedition.ReadOnly = false;
+                //        }
+                //        else if (Level == "1")
+                //        {
+                //            lblLevel.Text = "Pouze čtení";
+                //        }
+                //    }
+                //}  
+
                 conn.Open();
-                SqlCommand getUserData = new SqlCommand("SELECT FirstName, LastName, Level FROM Users WHERE Name='" + MyName + "'", conn);
-                SqlDataAdapter da = new SqlDataAdapter(getUserData);
+                SqlCommand getUserData = new SqlCommand("SELECT FirstName, LastName, Level FROM Users WHERE Name=@Name", conn);
+                getUserData.Parameters.AddWithValue("@Name", MyName);
 
                 using (SqlDataReader reader = getUserData.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (reader.Read())
                     {
-                        FirstName = lblFirstName.Text = reader.GetString(0);
-                        LastName = lblLastName.Text = reader.GetString(1);
+                        FirstName = reader.GetString(0);
+                        lblFirstName.Text = FirstName;
+                        LastName = reader.GetString(1);
+                        lblLastName.Text = LastName;
                         Level = reader.GetString(2);
-                    }
 
-                    conn.Close();
+                        conn.Close();
 
-                    if (Level != string.Empty)
-                    {
-                        if (Level == "100")
+                        Dictionary<string, Tuple<string, bool, bool>> levels = new Dictionary<string, Tuple<string, bool, bool>>
+                            {
+                                { "100", Tuple.Create("Administrátor", true, true) },
+                                { "20", Tuple.Create("Technik", true, true) },
+                                { "10", Tuple.Create("Příjem", true, false) },
+                                { "5", Tuple.Create("Opravář", false, true) },
+                                { "1", Tuple.Create("Pouze čtení", false, false) }
+                            };
+
+                        if (levels.ContainsKey(Level))
                         {
-                            lblLevel.Text = "Administrátor";
+                            lblLevel.Text = levels[Level].Item1;
 
-                            btnAddData.Visible = true;
-                            btnDelData.Visible = true;
-                            btnStatistics.Visible = true;
+                            btnAddData.Visible = levels[Level].Item2;
+                            btnDelData.Visible = levels[Level].Item2;
+                            btnStatistics.Visible = levels[Level].Item2;
 
-                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
-                        }
-                        else if (Level == "20")
-                        {
-                            lblLevel.Text = "Technik";
-
-                            btnAddData.Visible = true;
-                            btnDelData.Visible = true;
-
-                            dataGrid1.ReadOnly = dataGridOpravy.ReadOnly = dgvAnalysis.ReadOnly = dgvExpedition.ReadOnly = false;
-                        }
-                        else if (Level == "10")
-                        {
-                            lblLevel.Text = "Příjem";
-
-                            btnAddData.Visible = true;
-                            btnDelData.Visible = true;
-
-                            dataGrid1.ReadOnly = dgvExpedition.ReadOnly = false;
-                        }
-                        else if (Level == "5")
-                        {
-                            lblLevel.Text = "Opravář";
-
-                            btnDelData.Visible = true;
-                            btnAddData.Visible = true;
-
-                            dataGridOpravy.ReadOnly = dgvExpedition.ReadOnly = false;
-                        }
-                        else if (Level == "1")
-                        {
-                            lblLevel.Text = "Pouze čtení";
+                            dataGrid1.ReadOnly = levels[Level].Item2;
+                            dataGridOpravy.ReadOnly = levels[Level].Item3;
+                            dgvAnalysis.ReadOnly = levels[Level].Item2;
+                            dgvExpedition.ReadOnly = levels[Level].Item2;
                         }
                     }
-                }  
+                }
+
             }
             catch (Exception ex)
             {

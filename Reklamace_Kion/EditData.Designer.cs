@@ -58,6 +58,7 @@
             this.txtSNBattery = new System.Windows.Forms.TextBox();
             this.txtResultDescription = new System.Windows.Forms.TextBox();
             this.lblReplacementSend = new System.Windows.Forms.Label();
+            this.txtPozadavek = new System.Windows.Forms.TextBox();
             this.txtCustomerRequest = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbResult = new System.Windows.Forms.ComboBox();
@@ -69,6 +70,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblResultDescription = new System.Windows.Forms.Label();
             this.lblDateOfSaftAcceptance = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblCustomerReq = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
@@ -105,8 +107,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtPozadavek = new System.Windows.Forms.TextBox();
             this.panelControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numHoursAdministration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHoursTechnician)).BeginInit();
@@ -528,6 +528,14 @@
             this.lblReplacementSend.TabIndex = 0;
             this.lblReplacementSend.Text = "Náhrada odeslána";
             // 
+            // txtPozadavek
+            // 
+            this.txtPozadavek.Location = new System.Drawing.Point(4, 1027);
+            this.txtPozadavek.Multiline = true;
+            this.txtPozadavek.Name = "txtPozadavek";
+            this.txtPozadavek.Size = new System.Drawing.Size(346, 95);
+            this.txtPozadavek.TabIndex = 3;
+            // 
             // txtCustomerRequest
             // 
             this.txtCustomerRequest.Enabled = false;
@@ -637,6 +645,16 @@
             this.lblDateOfSaftAcceptance.Size = new System.Drawing.Size(98, 13);
             this.lblDateOfSaftAcceptance.TabIndex = 0;
             this.lblDateOfSaftAcceptance.Text = "Datum přijetí SAFT";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(4, 1009);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Požadavek na opravu";
             // 
             // lblCustomerReq
             // 
@@ -988,9 +1006,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1016,24 +1034,6 @@
             this.btnCancel.Text = "Zrušit";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 1009);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(112, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Požadavek na opravu";
-            // 
-            // txtPozadavek
-            // 
-            this.txtPozadavek.Location = new System.Drawing.Point(4, 1027);
-            this.txtPozadavek.Multiline = true;
-            this.txtPozadavek.Name = "txtPozadavek";
-            this.txtPozadavek.Size = new System.Drawing.Size(346, 95);
-            this.txtPozadavek.TabIndex = 3;
             // 
             // EditData
             // 
